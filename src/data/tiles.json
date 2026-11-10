@@ -1,7 +1,7 @@
 {
   "A1": {
     "coord": "A1",
-    "name": "Mausoleum Hadriani",
+    "name": "Lands End",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -9,9 +9,13 @@
         "id": "A1_1",
         "index": 1,
         "edges": {
-          "W": "green",
+          "W": "red",
           "S": "green",
-          "E": "green"
+          "E": "green",
+          "N": "red",
+          "NE": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -35,9 +39,13 @@
         "id": "A1_2",
         "index": 2,
         "edges": {
-          "W": "green",
+          "W": "red",
           "S": "legiones_2",
-          "E": "toll_2"
+          "E": "toll_2",
+          "N": "red",
+          "NE": "toll_2",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -61,10 +69,13 @@
         "id": "A1_3",
         "index": 3,
         "edges": {
-          "NW": "green",
-          "W": "soothsayer",
+          "NW": "red",
+          "W": "red",
           "S": "green",
-          "E": "green"
+          "E": "green",
+          "N": "red",
+          "NE": "toll_2",
+          "SW": "red"
         },
         "sells": [
           {
@@ -88,9 +99,13 @@
         "id": "A1_4",
         "index": 4,
         "edges": {
-          "W": "nefarii_2",
+          "W": "red",
           "S": "green",
-          "E": "red"
+          "E": "red",
+          "N": "red",
+          "NE": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -114,10 +129,13 @@
         "id": "A1_5",
         "index": 5,
         "edges": {
-          "NW": "green",
-          "W": "green",
+          "NW": "red",
+          "W": "red",
           "S": "toll_2",
-          "E": "legiones_1"
+          "E": "legiones_1",
+          "N": "toll_1",
+          "NE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -139,7 +157,11 @@
         "edges": {
           "W": "red",
           "S": "green",
-          "E": "green"
+          "E": "green",
+          "N": "toll_3",
+          "NE": "toll_2",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -163,10 +185,13 @@
         "id": "A1_7",
         "index": 7,
         "edges": {
-          "NW": "toll_2",
-          "W": "green",
+          "NW": "red",
+          "W": "red",
           "S": "patricii_1",
-          "E": "toll_2"
+          "E": "toll_2",
+          "N": "toll_2",
+          "NE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -190,9 +215,13 @@
         "id": "A1_8",
         "index": 8,
         "edges": {
-          "W": "green",
+          "W": "red",
           "S": "green",
-          "E": "nefarii_1"
+          "E": "nefarii_1",
+          "N": "toll_1",
+          "NE": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -216,9 +245,13 @@
         "id": "A1_9",
         "index": 9,
         "edges": {
-          "W": "green",
+          "W": "toll_10",
           "S": "green",
-          "E": "red"
+          "E": "red",
+          "N": "toll_1",
+          "NE": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -242,10 +275,13 @@
         "id": "A1_10",
         "index": 10,
         "edges": {
-          "NW": "green",
-          "W": "mob",
+          "NW": "red",
+          "W": "red",
           "S": "green",
-          "E": "green"
+          "E": "green",
+          "N": "red",
+          "NE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -269,9 +305,13 @@
         "id": "A1_11",
         "index": 11,
         "edges": {
-          "W": "green",
+          "W": "red",
           "S": "green",
-          "E": "mob"
+          "E": "mob",
+          "N": "red",
+          "NE": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -294,7 +334,13 @@
       {
         "id": "A1_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "N": "red",
+          "NE": "toll_2",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "mob",
@@ -308,7 +354,7 @@
   },
   "B1": {
     "coord": "B1",
-    "name": "Via Flaminia",
+    "name": "Presidio",
     "isGate": true,
     "isForum": false,
     "tiles": [
@@ -321,7 +367,9 @@
           "SE": "red",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -346,7 +394,9 @@
           "SE": "soothsayer",
           "S": "red",
           "SW": "legiones_2",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -366,12 +416,14 @@
         "id": "B1_3",
         "index": 3,
         "edges": {
-          "N": "legiones_1",
+          "N": "green",
           "E": "green",
           "SE": "nefarii_1",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -396,7 +448,9 @@
           "SE": "red",
           "S": "toll_2",
           "SW": "soothsayer",
-          "W": "legiones_1"
+          "W": "legiones_1",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -416,12 +470,14 @@
         "id": "B1_5",
         "index": 5,
         "edges": {
-          "N": "toll_2",
+          "N": "green",
           "E": "red",
           "SE": "legiones_2",
           "S": "green",
           "SW": "patricii_1",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -446,7 +502,9 @@
           "SE": "green",
           "S": "red",
           "SW": "toll_2",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -466,12 +524,14 @@
         "id": "B1_7",
         "index": 7,
         "edges": {
-          "N": "toll_2",
+          "N": "green",
           "E": "mob",
           "SE": "red",
           "S": "green",
           "SW": "green",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -491,12 +551,14 @@
         "id": "B1_8",
         "index": 8,
         "edges": {
-          "N": "nefarii_1",
+          "N": "green",
           "E": "toll_2",
           "SE": "patricii_1",
           "S": "toll_2",
           "SW": "theater",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -516,12 +578,14 @@
         "id": "B1_9",
         "index": 9,
         "edges": {
-          "N": "legiones_1",
+          "N": "green",
           "E": "green",
           "SE": "theater",
           "S": "red",
           "SW": "mob",
-          "W": "soothsayer"
+          "W": "soothsayer",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -541,12 +605,14 @@
         "id": "B1_10",
         "index": 10,
         "edges": {
-          "N": "mob",
+          "N": "green",
           "E": "red",
           "SE": "green",
           "S": "red",
           "SW": "nefarii_2",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -570,12 +636,14 @@
         "id": "B1_11",
         "index": 11,
         "edges": {
-          "N": "nefarii_2",
+          "N": "green",
           "E": "soothsayer",
           "SE": "red",
           "S": "green",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -598,7 +666,11 @@
       {
         "id": "B1_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "N": "green",
+          "NE": "red",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "legiones_1",
@@ -612,7 +684,7 @@
   },
   "C1": {
     "coord": "C1",
-    "name": "Mons Pincius",
+    "name": "Marina",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -620,12 +692,14 @@
         "id": "C1_1",
         "index": 1,
         "edges": {
-          "N": "green",
+          "N": "red",
           "E": "theater",
           "SE": "red",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NE": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -645,12 +719,14 @@
         "id": "C1_2",
         "index": 2,
         "edges": {
-          "N": "green",
+          "N": "red",
           "E": "green",
           "SE": "green",
           "S": "red",
           "SW": "nefarii_3",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -675,7 +751,9 @@
           "SE": "nefarii_1",
           "S": "green",
           "SW": "legiones_2",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -695,12 +773,14 @@
         "id": "C1_4",
         "index": 4,
         "edges": {
-          "N": "soothsayer",
+          "N": "toll_1",
           "E": "green",
           "SE": "red",
           "S": "toll_2",
           "SW": "red",
-          "W": "legiones_1"
+          "W": "legiones_1",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -720,12 +800,14 @@
         "id": "C1_5",
         "index": 5,
         "edges": {
-          "N": "patricii_1",
+          "N": "red",
           "E": "red",
           "SE": "legiones_2",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "toll_3"
         },
         "sells": [
           {
@@ -745,12 +827,14 @@
         "id": "C1_6",
         "index": 6,
         "edges": {
-          "N": "toll_2",
+          "N": "red",
           "E": "nefarii_2",
           "SE": "green",
           "S": "legiones_2",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -770,12 +854,14 @@
         "id": "C1_7",
         "index": 7,
         "edges": {
-          "N": "toll_2",
+          "N": "red",
           "E": "mob",
           "SE": "soothsayer",
           "S": "green",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "NW": "toll_3"
         },
         "sells": [
           {
@@ -795,12 +881,14 @@
         "id": "C1_8",
         "index": 8,
         "edges": {
-          "N": "mob",
+          "N": "red",
           "E": "toll_2",
           "SE": "theater",
           "S": "patricii_1",
           "SW": "green",
-          "W": "nefarii_1"
+          "W": "nefarii_1",
+          "NE": "toll_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -820,12 +908,14 @@
         "id": "C1_9",
         "index": 9,
         "edges": {
-          "N": "legiones_1",
+          "N": "red",
           "E": "green",
           "SE": "green",
           "S": "red",
           "SW": "mob",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -845,12 +935,14 @@
         "id": "C1_10",
         "index": 10,
         "edges": {
-          "N": "patricii_1",
+          "N": "red",
           "E": "red",
           "SE": "green",
           "S": "green",
           "SW": "nefarii_2",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -874,12 +966,14 @@
         "id": "C1_11",
         "index": 11,
         "edges": {
-          "N": "toll_2",
+          "N": "toll_1",
           "E": "soothsayer",
           "SE": "red",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -902,7 +996,11 @@
       {
         "id": "C1_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "N": "toll_2",
+          "NE": "toll_3",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "patricii_1",
@@ -916,7 +1014,7 @@
   },
   "D1": {
     "coord": "D1",
-    "name": "Horti Sallustiani",
+    "name": "Fisherman's Wharf",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -924,12 +1022,14 @@
         "id": "D1_1",
         "index": 1,
         "edges": {
-          "N": "legiones_1",
+          "N": "toll_1",
           "E": "green",
           "SE": "red",
           "S": "red",
           "SW": "theater",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -949,12 +1049,14 @@
         "id": "D1_2",
         "index": 2,
         "edges": {
-          "N": "red",
+          "N": "toll_1",
           "E": "green",
           "SE": "green",
           "S": "nefarii_2",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -974,12 +1076,14 @@
         "id": "D1_3",
         "index": 3,
         "edges": {
-          "N": "green",
+          "N": "red",
           "E": "legiones_2",
           "SE": "red",
           "S": "green",
           "SW": "nefarii_1",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -999,12 +1103,14 @@
         "id": "D1_4",
         "index": 4,
         "edges": {
-          "N": "toll_2",
+          "N": "toll_1",
           "E": "green",
           "SE": "soothsayer",
           "S": "green",
           "SW": "red",
-          "W": "legiones_2"
+          "W": "legiones_2",
+          "NE": "red",
+          "NW": "toll_3"
         },
         "sells": [
           {
@@ -1024,12 +1130,14 @@
         "id": "D1_5",
         "index": 5,
         "edges": {
-          "N": "nefarii_2",
+          "N": "toll_1",
           "E": "green",
           "SE": "green",
           "S": "green",
           "SW": "patricii_1",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1054,7 +1162,9 @@
           "SE": "green",
           "S": "red",
           "SW": "red",
-          "W": "nefarii_2"
+          "W": "nefarii_2",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1074,12 +1184,14 @@
         "id": "D1_7",
         "index": 7,
         "edges": {
-          "N": "toll_2",
+          "N": "red",
           "E": "mob",
           "SE": "theater",
           "S": "green",
           "SW": "red",
-          "W": "patricii_1"
+          "W": "patricii_1",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1099,12 +1211,14 @@
         "id": "D1_8",
         "index": 8,
         "edges": {
-          "N": "soothsayer",
+          "N": "toll_1",
           "E": "toll_2",
           "SE": "mob",
           "S": "red",
           "SW": "green",
-          "W": "nefarii_1"
+          "W": "nefarii_1",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1124,12 +1238,14 @@
         "id": "D1_9",
         "index": 9,
         "edges": {
-          "N": "nefarii_1",
+          "N": "toll_2",
           "E": "green",
           "SE": "green",
           "S": "patricii_1",
           "SW": "legiones_2",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1154,7 +1270,9 @@
           "SE": "green",
           "S": "green",
           "SW": "nefarii_2",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -1178,12 +1296,14 @@
         "id": "D1_11",
         "index": 11,
         "edges": {
-          "N": "green",
+          "N": "toll_1",
           "E": "red",
           "SE": "red",
           "S": "toll_2",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1206,7 +1326,11 @@
       {
         "id": "D1_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "N": "red",
+          "NE": "red",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "patricii_1",
@@ -1220,20 +1344,22 @@
   },
   "E1": {
     "coord": "E1",
-    "name": "Via Nomentana",
-    "isGate": true,
+    "name": "Embarcadero",
+    "isGate": false,
     "isForum": false,
     "tiles": [
       {
         "id": "E1_1",
         "index": 1,
         "edges": {
-          "N": "legiones_1",
+          "N": "toll_3",
           "E": "nefarii_1",
           "SE": "green",
           "S": "green",
           "SW": "toll_2",
-          "W": "mob"
+          "W": "mob",
+          "NE": "toll_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1253,12 +1379,14 @@
         "id": "E1_2",
         "index": 2,
         "edges": {
-          "N": "toll_2",
+          "N": "red",
           "E": "red",
           "SE": "red",
           "S": "nefarii_2",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1278,12 +1406,14 @@
         "id": "E1_3",
         "index": 3,
         "edges": {
-          "N": "green",
+          "N": "toll_2",
           "E": "legiones_2",
           "SE": "nefarii_1",
           "S": "green",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1303,12 +1433,14 @@
         "id": "E1_4",
         "index": 4,
         "edges": {
-          "N": "toll_2",
+          "N": "toll_3",
           "E": "green",
           "SE": "red",
           "S": "green",
           "SW": "soothsayer",
-          "W": "legiones_1"
+          "W": "legiones_1",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1328,12 +1460,14 @@
         "id": "E1_5",
         "index": 5,
         "edges": {
-          "N": "patricii_1",
+          "N": "toll_3",
           "E": "green",
           "SE": "legiones_2",
           "S": "green",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1353,12 +1487,14 @@
         "id": "E1_6",
         "index": 6,
         "edges": {
-          "N": "green",
+          "N": "red",
           "E": "nefarii_2",
           "SE": "green",
           "S": "legiones_2",
           "SW": "toll_2",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "NW": "toll_3"
         },
         "sells": [
           {
@@ -1378,12 +1514,14 @@
         "id": "E1_7",
         "index": 7,
         "edges": {
-          "N": "green",
+          "N": "toll_2",
           "E": "red",
           "SE": "green",
           "S": "green",
           "SW": "toll_2",
-          "W": "mob"
+          "W": "mob",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1403,12 +1541,14 @@
         "id": "E1_8",
         "index": 8,
         "edges": {
-          "N": "mob",
+          "N": "red",
           "E": "legiones_2",
           "SE": "theater",
           "S": "patricii_1",
           "SW": "green",
-          "W": "nefarii_1"
+          "W": "nefarii_1",
+          "NE": "toll_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1428,12 +1568,14 @@
         "id": "E1_9",
         "index": 9,
         "edges": {
-          "N": "nefarii_1",
+          "N": "red",
           "E": "legiones_2",
           "SE": "green",
           "S": "red",
           "SW": "theater",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1453,12 +1595,14 @@
         "id": "E1_10",
         "index": 10,
         "edges": {
-          "N": "patricii_1",
+          "N": "toll_2",
           "E": "red",
           "SE": "green",
           "S": "green",
           "SW": "toll_2",
-          "W": "nefarii_2"
+          "W": "nefarii_2",
+          "NE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1482,12 +1626,14 @@
         "id": "E1_11",
         "index": 11,
         "edges": {
-          "N": "green",
+          "N": "toll_1",
           "E": "soothsayer",
           "SE": "red",
           "S": "mob",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "NW": "toll_3"
         },
         "sells": [
           {
@@ -1510,7 +1656,11 @@
       {
         "id": "E1_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "N": "red",
+          "NE": "red",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "patricii_1",
@@ -1524,8 +1674,8 @@
   },
   "F1": {
     "coord": "F1",
-    "name": "Castra Praetoria",
-    "isGate": false,
+    "name": "Rincon Hill",
+    "isGate": true,
     "isForum": false,
     "tiles": [
       {
@@ -1535,7 +1685,11 @@
           "NE": "red",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1555,10 +1709,14 @@
         "id": "F1_2",
         "index": 2,
         "edges": {
-          "NE": "green",
+          "NE": "red",
           "S": "red",
           "SW": "nefarii_3",
-          "W": "green"
+          "W": "green",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1581,7 +1739,11 @@
           "NE": "red",
           "S": "green",
           "SW": "legiones_2",
-          "W": "green"
+          "W": "green",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1601,10 +1763,14 @@
         "id": "F1_4",
         "index": 4,
         "edges": {
-          "NE": "theater",
+          "NE": "red",
           "S": "toll_2",
           "SW": "red",
-          "W": "legiones_1"
+          "W": "legiones_1",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1624,10 +1790,14 @@
         "id": "F1_5",
         "index": 5,
         "edges": {
-          "NE": "toll_2",
+          "NE": "red",
           "S": "green",
           "SW": "theater",
-          "W": "green"
+          "W": "green",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1647,10 +1817,14 @@
         "id": "F1_6",
         "index": 6,
         "edges": {
-          "NE": "toll_2",
+          "NE": "red",
           "S": "legiones_2",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1670,10 +1844,14 @@
         "id": "F1_7",
         "index": 7,
         "edges": {
-          "NE": "toll_2",
+          "NE": "red",
           "S": "green",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1696,7 +1874,11 @@
           "NE": "red",
           "S": "patricii_1",
           "SW": "green",
-          "W": "nefarii_1"
+          "W": "nefarii_1",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1716,10 +1898,14 @@
         "id": "F1_9",
         "index": 9,
         "edges": {
-          "NE": "green",
+          "NE": "red",
           "S": "red",
           "SW": "mob",
-          "W": "toll_2"
+          "W": "toll_2",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1739,10 +1925,14 @@
         "id": "F1_10",
         "index": 10,
         "edges": {
-          "NE": "patricii_1",
+          "NE": "red",
           "S": "green",
           "SW": "nefarii_2",
-          "W": "toll_2"
+          "W": "toll_2",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1766,10 +1956,14 @@
         "id": "F1_11",
         "index": 11,
         "edges": {
-          "NE": "soothsayer",
+          "NE": "red",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "N": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1792,7 +1986,13 @@
       {
         "id": "F1_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "green",
+          "SE": "red",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "legiones_2",
@@ -1806,7 +2006,7 @@
   },
   "A2": {
     "coord": "A2",
-    "name": "Circus Agonalis",
+    "name": "Outer Richmond",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -1818,7 +2018,10 @@
           "E": "theater",
           "SE": "red",
           "S": "green",
-          "N": "soothsayer"
+          "N": "soothsayer",
+          "SW": "red",
+          "W": "toll_8",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1850,7 +2053,10 @@
           "E": "green",
           "SE": "soothsayer",
           "S": "red",
-          "N": "toll_2"
+          "N": "toll_2",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1882,7 +2088,10 @@
           "E": "green",
           "SE": "red",
           "S": "green",
-          "N": "green"
+          "N": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1910,7 +2119,10 @@
           "E": "green",
           "SE": "red",
           "S": "toll_2",
-          "N": "legiones_1"
+          "N": "legiones_1",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1938,7 +2150,10 @@
           "E": "red",
           "SE": "theater",
           "S": "green",
-          "N": "nefarii_1"
+          "N": "nefarii_1",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1966,7 +2181,10 @@
           "E": "nefarii_2",
           "SE": "green",
           "S": "red",
-          "N": "toll_2"
+          "N": "toll_2",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1994,7 +2212,10 @@
           "E": "mob",
           "SE": "red",
           "S": "green",
-          "N": "red"
+          "N": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -2022,7 +2243,10 @@
           "E": "theater",
           "SE": "red",
           "S": "patricii_1",
-          "N": "toll_2"
+          "N": "toll_2",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -2050,7 +2274,10 @@
           "E": "green",
           "SE": "theater",
           "S": "red",
-          "N": "legiones_2"
+          "N": "legiones_2",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -2078,7 +2305,10 @@
           "E": "red",
           "SE": "nefarii_2",
           "S": "red",
-          "N": "mob"
+          "N": "mob",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -2097,7 +2327,10 @@
           "E": "soothsayer",
           "SE": "red",
           "S": "toll_2",
-          "N": "red"
+          "N": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -2120,7 +2353,11 @@
       {
         "id": "A2_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "mob",
@@ -2134,7 +2371,7 @@
   },
   "B2": {
     "coord": "B2",
-    "name": "Thermae Neronianae",
+    "name": "Inner Richmond",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -2473,7 +2710,7 @@
   },
   "C2": {
     "coord": "C2",
-    "name": "Saepta Julia",
+    "name": "Pacific Heights",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -2799,7 +3036,7 @@
   },
   "D2": {
     "coord": "D2",
-    "name": "Collis Quirinalis",
+    "name": "North Beach",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -3125,7 +3362,7 @@
   },
   "E2": {
     "coord": "E2",
-    "name": "Subura",
+    "name": "Financial District",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -3451,7 +3688,7 @@
   },
   "F2": {
     "coord": "F2",
-    "name": "Collis Viminalis",
+    "name": "Ball Park",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -3461,10 +3698,12 @@
         "edges": {
           "NW": "patricii_1",
           "N": "green",
-          "E": "red",
+          "E": "toll_2",
           "S": "green",
           "SW": "nefarii_1",
-          "W": "theater"
+          "W": "theater",
+          "NE": "toll_3",
+          "SE": "red"
         },
         "sells": [
           {
@@ -3486,10 +3725,12 @@
         "edges": {
           "NW": "green",
           "N": "theater",
-          "E": "nefarii_2",
+          "E": "toll_1",
           "S": "red",
           "SW": "patricii_1",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -3511,10 +3752,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "red",
+          "E": "toll_2",
           "S": "green",
           "SW": "green",
-          "W": "legiones_2"
+          "W": "legiones_2",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -3536,10 +3779,12 @@
         "edges": {
           "NW": "theater",
           "N": "red",
-          "E": "green",
+          "E": "toll_2",
           "S": "toll_2",
           "SW": "red",
-          "W": "legiones_1"
+          "W": "legiones_1",
+          "NE": "red",
+          "SE": "toll_2"
         },
         "sells": [
           {
@@ -3561,10 +3806,12 @@
         "edges": {
           "NW": "toll_2",
           "N": "red",
-          "E": "red",
+          "E": "toll_1",
           "S": "green",
           "SW": "theater",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -3586,10 +3833,12 @@
         "edges": {
           "NW": "theater",
           "N": "green",
-          "E": "red",
+          "E": "toll_1",
           "S": "legiones_2",
           "SW": "red",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "red",
+          "SE": "toll_2"
         },
         "sells": [
           {
@@ -3611,10 +3860,12 @@
         "edges": {
           "NW": "green",
           "N": "legiones_2",
-          "E": "green",
+          "E": "toll_1",
           "S": "green",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "toll_2"
         },
         "sells": [
           {
@@ -3639,7 +3890,9 @@
           "E": "toll_2",
           "S": "patricii_1",
           "SW": "green",
-          "W": "nefarii_1"
+          "W": "nefarii_1",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -3661,10 +3914,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "red",
+          "E": "toll_3",
           "S": "red",
           "SW": "mob",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -3689,7 +3944,9 @@
           "E": "red",
           "S": "green",
           "SW": "nefarii_2",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -3715,10 +3972,12 @@
         "edges": {
           "NW": "red",
           "N": "green",
-          "E": "patricii_1",
+          "E": "red",
           "S": "green",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -3741,7 +4000,11 @@
       {
         "id": "F2_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "NE": "red",
+          "E": "toll_3",
+          "SE": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "patricii_1",
@@ -3755,7 +4018,7 @@
   },
   "A3": {
     "coord": "A3",
-    "name": "Theatrum Pompeii",
+    "name": "Golden Gate Park",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -3767,7 +4030,9 @@
           "NE": "green",
           "E": "theater",
           "S": "green",
-          "W": "green"
+          "W": "toll_8",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3799,7 +4064,9 @@
           "NE": "green",
           "E": "green",
           "S": "red",
-          "W": "toll_2"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3827,7 +4094,9 @@
           "NE": "legiones_2",
           "E": "green",
           "S": "green",
-          "W": "green"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3855,7 +4124,9 @@
           "NE": "green",
           "E": "green",
           "S": "toll_2",
-          "W": "legiones_2"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -3874,7 +4145,9 @@
           "NE": "red",
           "E": "theater",
           "S": "patricii_1",
-          "W": "nefarii_1"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3902,7 +4175,9 @@
           "NE": "green",
           "E": "nefarii_2",
           "S": "red",
-          "W": "green"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3930,7 +4205,9 @@
           "NE": "green",
           "E": "theater",
           "S": "green",
-          "W": "red"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3958,7 +4235,9 @@
           "NE": "green",
           "E": "legiones_2",
           "S": "patricii_1",
-          "W": "red"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3986,7 +4265,9 @@
           "NE": "red",
           "E": "green",
           "S": "red",
-          "W": "toll_2"
+          "W": "toll_8",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -4014,7 +4295,9 @@
           "NE": "red",
           "E": "red",
           "S": "mob",
-          "W": "red"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -4033,7 +4316,9 @@
           "NE": "soothsayer",
           "E": "red",
           "S": "toll_2",
-          "W": "red"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -4056,7 +4341,11 @@
       {
         "id": "A3_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "theater",
@@ -4070,7 +4359,7 @@
   },
   "B3": {
     "coord": "B3",
-    "name": "Circus Flaminius",
+    "name": "Haight-Ashbury",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -4399,9 +4688,9 @@
   },
   "C3": {
     "coord": "C3",
-    "name": "Forum Traiani",
+    "name": "Fillmore",
     "isGate": false,
-    "isForum": true,
+    "isForum": false,
     "tiles": [
       {
         "id": "C3_1",
@@ -4875,7 +5164,7 @@
   },
   "D3": {
     "coord": "D3",
-    "name": "Forum Augustum",
+    "name": "Tenderloin",
     "isGate": false,
     "isForum": true,
     "tiles": [
@@ -5363,9 +5652,9 @@
   },
   "E3": {
     "coord": "E3",
-    "name": "Thermae Traiani",
+    "name": "SoMa",
     "isGate": false,
-    "isForum": false,
+    "isForum": true,
     "tiles": [
       {
         "id": "E3_1",
@@ -5689,8 +5978,8 @@
   },
   "F3": {
     "coord": "F3",
-    "name": "Via Tiburtina",
-    "isGate": true,
+    "name": "Mission Bay",
+    "isGate": false,
     "isForum": false,
     "tiles": [
       {
@@ -5699,10 +5988,12 @@
         "edges": {
           "NW": "patricii_1",
           "N": "green",
-          "E": "green",
+          "E": "red",
           "S": "green",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -5724,10 +6015,12 @@
         "edges": {
           "NW": "green",
           "N": "theater",
-          "E": "nefarii_2",
+          "E": "toll_1",
           "S": "red",
           "SW": "patricii_1",
-          "W": "soothsayer"
+          "W": "soothsayer",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -5749,10 +6042,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "theater",
+          "E": "toll_1",
           "S": "green",
           "SW": "legiones_2",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -5774,10 +6069,12 @@
         "edges": {
           "NW": "theater",
           "N": "red",
-          "E": "green",
+          "E": "red",
           "S": "toll_2",
           "SW": "red",
-          "W": "legiones_1"
+          "W": "legiones_1",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -5799,10 +6096,12 @@
         "edges": {
           "NW": "toll_2",
           "N": "red",
-          "E": "legiones_1",
+          "E": "red",
           "S": "green",
           "SW": "theater",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -5824,10 +6123,12 @@
         "edges": {
           "NW": "theater",
           "N": "green",
-          "E": "patricii_1",
+          "E": "toll_3",
           "S": "legiones_2",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -5849,10 +6150,12 @@
         "edges": {
           "NW": "green",
           "N": "legiones_2",
-          "E": "nefarii_1",
+          "E": "toll_1",
           "S": "green",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -5877,7 +6180,9 @@
           "E": "toll_2",
           "S": "patricii_1",
           "SW": "green",
-          "W": "nefarii_1"
+          "W": "nefarii_1",
+          "NE": "red",
+          "SE": "toll_2"
         },
         "sells": [
           {
@@ -5899,10 +6204,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "green",
+          "E": "toll_2",
           "S": "red",
           "SW": "mob",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -5924,10 +6231,12 @@
         "edges": {
           "NW": "red",
           "N": "green",
-          "E": "green",
+          "E": "toll_2",
           "S": "green",
           "SW": "nefarii_2",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "toll_3",
+          "SE": "red"
         },
         "sells": [
           {
@@ -5953,10 +6262,12 @@
         "edges": {
           "NW": "red",
           "N": "green",
-          "E": "green",
+          "E": "red",
           "S": "green",
           "SW": "red",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NE": "red",
+          "SE": "toll_3"
         },
         "sells": [
           {
@@ -5979,7 +6290,11 @@
       {
         "id": "F3_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "NE": "red",
+          "E": "toll_3",
+          "SE": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "legiones_1",
@@ -5993,8 +6308,8 @@
   },
   "A4": {
     "coord": "A4",
-    "name": "Via Aurelia",
-    "isGate": true,
+    "name": "Sunset",
+    "isGate": false,
     "isForum": false,
     "tiles": [
       {
@@ -6004,7 +6319,9 @@
           "N": "green",
           "E": "theater",
           "S": "green",
-          "W": "green"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6027,7 +6344,9 @@
           "N": "red",
           "E": "green",
           "S": "red",
-          "W": "green"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6050,7 +6369,9 @@
           "N": "red",
           "E": "green",
           "S": "green",
-          "W": "green"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6073,7 +6394,9 @@
           "N": "soothsayer",
           "E": "green",
           "S": "toll_2",
-          "W": "legiones_1"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6096,7 +6419,9 @@
           "N": "patricii_1",
           "E": "red",
           "S": "green",
-          "W": "green"
+          "W": "toll_8",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6119,7 +6444,9 @@
           "N": "toll_2",
           "E": "nefarii_2",
           "S": "red",
-          "W": "green"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6142,7 +6469,9 @@
           "N": "toll_2",
           "E": "mob",
           "S": "green",
-          "W": "legiones_2"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6165,7 +6494,9 @@
           "N": "theater",
           "E": "toll_2",
           "S": "patricii_1",
-          "W": "nefarii_1"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6188,7 +6519,9 @@
           "N": "legiones_1",
           "E": "green",
           "S": "red",
-          "W": "toll_2"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6211,7 +6544,9 @@
           "N": "patricii_1",
           "E": "red",
           "S": "red",
-          "W": "toll_2"
+          "W": "toll_10",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6238,7 +6573,9 @@
           "N": "green",
           "E": "soothsayer",
           "S": "toll_2",
-          "W": "nefarii_2"
+          "W": "red",
+          "SW": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6261,7 +6598,11 @@
       {
         "id": "A4_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "SW": "red",
+          "W": "toll_8",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "legiones_1",
@@ -6275,7 +6616,7 @@
   },
   "B4": {
     "coord": "B4",
-    "name": "Trans Tiberim",
+    "name": "Twin Peaks",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -6583,7 +6924,7 @@
   },
   "C4": {
     "coord": "C4",
-    "name": "Mons Capitolinus",
+    "name": "Noe Valley",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -6909,7 +7250,7 @@
   },
   "D4": {
     "coord": "D4",
-    "name": "Forum Vespasiani",
+    "name": "Mission",
     "isGate": false,
     "isForum": true,
     "tiles": [
@@ -7397,7 +7738,7 @@
   },
   "E4": {
     "coord": "E4",
-    "name": "Amphitheatrum Flavium",
+    "name": "Potrero Hill",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -7738,7 +8079,7 @@
   },
   "F4": {
     "coord": "F4",
-    "name": "Collis Esquilinus",
+    "name": "Dogpatch",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -7748,10 +8089,12 @@
         "edges": {
           "NW": "patricii_1",
           "N": "green",
-          "E": "green",
+          "E": "toll_2",
           "S": "green",
           "SW": "soothsayer",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -7773,10 +8116,12 @@
         "edges": {
           "NW": "toll_2",
           "N": "theater",
-          "E": "nefarii_2",
+          "E": "red",
           "S": "red",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "toll_2"
         },
         "sells": [
           {
@@ -7798,10 +8143,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "theater",
+          "E": "toll_2",
           "S": "green",
           "SW": "legiones_2",
-          "W": "red"
+          "W": "red",
+          "NE": "toll_2",
+          "SE": "red"
         },
         "sells": [
           {
@@ -7823,10 +8170,12 @@
         "edges": {
           "NW": "mob",
           "N": "red",
-          "E": "green",
+          "E": "toll_2",
           "S": "toll_2",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "toll_2"
         },
         "sells": [
           {
@@ -7848,10 +8197,12 @@
         "edges": {
           "NW": "nefarii_2",
           "N": "red",
-          "E": "legiones_1",
+          "E": "toll_3",
           "S": "green",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "toll_3"
         },
         "sells": [
           {
@@ -7873,10 +8224,12 @@
         "edges": {
           "NW": "theater",
           "N": "soothsayer",
-          "E": "patricii_1",
+          "E": "red",
           "S": "legiones_2",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -7898,10 +8251,12 @@
         "edges": {
           "NW": "green",
           "N": "legiones_2",
-          "E": "nefarii_1",
+          "E": "toll_1",
           "S": "green",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -7923,10 +8278,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "toll_2",
+          "E": "red",
           "S": "patricii_1",
           "SW": "nefarii_1",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -7948,10 +8305,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "green",
+          "E": "toll_1",
           "S": "red",
           "SW": "mob",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -7973,10 +8332,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "toll_2",
+          "E": "red",
           "S": "green",
           "SW": "patricii_1",
-          "W": "red"
+          "W": "red",
+          "NE": "toll_2",
+          "SE": "red"
         },
         "sells": [
           {
@@ -8005,7 +8366,9 @@
           "E": "red",
           "S": "green",
           "SW": "theater",
-          "W": "red"
+          "W": "red",
+          "NE": "toll_2",
+          "SE": "red"
         },
         "sells": [
           {
@@ -8028,7 +8391,11 @@
       {
         "id": "F4_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "NE": "red",
+          "E": "toll_1",
+          "SE": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "patricii_1",
@@ -8042,8 +8409,8 @@
   },
   "A5": {
     "coord": "A5",
-    "name": "Horti Caesaris",
-    "isGate": false,
+    "name": "Merced",
+    "isGate": true,
     "isForum": false,
     "tiles": [
       {
@@ -8054,7 +8421,9 @@
           "NE": "green",
           "E": "theater",
           "S": "green",
-          "SW": "green"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8082,7 +8451,9 @@
           "NE": "toll_2",
           "E": "green",
           "S": "nefarii_2",
-          "SW": "green"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8110,7 +8481,9 @@
           "NE": "legiones_2",
           "E": "toll_2",
           "S": "green",
-          "SW": "green"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8134,7 +8507,9 @@
           "NE": "green",
           "E": "green",
           "S": "toll_2",
-          "SW": "legiones_1"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8162,7 +8537,9 @@
           "NE": "red",
           "E": "green",
           "S": "green",
-          "SW": "nefarii_2"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8190,7 +8567,9 @@
           "NE": "legiones_2",
           "E": "nefarii_2",
           "S": "red",
-          "SW": "red"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8214,7 +8593,9 @@
           "NE": "green",
           "E": "mob",
           "S": "green",
-          "SW": "legiones_2"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8242,7 +8623,9 @@
           "NE": "green",
           "E": "toll_2",
           "S": "patricii_1",
-          "SW": "red"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8266,7 +8649,9 @@
           "NE": "mob",
           "E": "green",
           "S": "red",
-          "SW": "red"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8290,7 +8675,9 @@
           "NE": "green",
           "E": "red",
           "S": "legiones_2",
-          "SW": "red"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8318,7 +8705,9 @@
           "NE": "red",
           "E": "soothsayer",
           "S": "red",
-          "SW": "toll_2"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8341,7 +8730,11 @@
       {
         "id": "A5_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "patricii_1",
@@ -8355,7 +8748,7 @@
   },
   "B5": {
     "coord": "B5",
-    "name": "Aventinus Major",
+    "name": "West Portal",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -8685,7 +9078,7 @@
   },
   "C5": {
     "coord": "C5",
-    "name": "Circus Maximus",
+    "name": "Glen Park",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -9000,7 +9393,7 @@
   },
   "D5": {
     "coord": "D5",
-    "name": "Mons Palatinus",
+    "name": "Bernal Heights",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -9326,7 +9719,7 @@
   },
   "E5": {
     "coord": "E5",
-    "name": "Sucusa",
+    "name": "Portola",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -9652,8 +10045,8 @@
   },
   "F5": {
     "coord": "F5",
-    "name": "Amphitheatrum Castrense",
-    "isGate": false,
+    "name": "Hunters Point",
+    "isGate": true,
     "isForum": false,
     "tiles": [
       {
@@ -9662,10 +10055,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "mob",
+          "E": "green",
           "S": "soothsayer",
           "SW": "patricii_1",
-          "W": "legiones_2"
+          "W": "legiones_2",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9690,7 +10085,9 @@
           "E": "green",
           "S": "red",
           "SW": "green",
-          "W": "nefarii_2"
+          "W": "nefarii_2",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9712,10 +10109,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "patricii_1",
+          "E": "green",
           "S": "green",
           "SW": "legiones_2",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9740,7 +10139,9 @@
           "E": "green",
           "S": "toll_2",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9762,10 +10163,12 @@
         "edges": {
           "NW": "nefarii_2",
           "N": "red",
-          "E": "legiones_1",
+          "E": "green",
           "S": "green",
           "SW": "green",
-          "W": "theater"
+          "W": "theater",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9787,10 +10190,12 @@
         "edges": {
           "NW": "legiones_2",
           "N": "green",
-          "E": "red",
+          "E": "green",
           "S": "theater",
           "SW": "patricii_1",
-          "W": "soothsayer"
+          "W": "soothsayer",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9812,10 +10217,12 @@
         "edges": {
           "NW": "green",
           "N": "soothsayer",
-          "E": "nefarii_1",
+          "E": "green",
           "S": "green",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9837,10 +10244,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "toll_2",
+          "E": "green",
           "S": "nefarii_1",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9862,10 +10271,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "E": "toll_2",
+          "E": "green",
           "S": "red",
           "SW": "mob",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9887,10 +10298,12 @@
         "edges": {
           "NW": "red",
           "N": "green",
-          "E": "toll_2",
+          "E": "green",
           "S": "green",
           "SW": "patricii_1",
-          "W": "green"
+          "W": "green",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9919,7 +10332,9 @@
           "E": "green",
           "S": "green",
           "SW": "theater",
-          "W": "nefarii_2"
+          "W": "nefarii_2",
+          "NE": "red",
+          "SE": "red"
         },
         "sells": [
           {
@@ -9942,7 +10357,11 @@
       {
         "id": "F5_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "NE": "red",
+          "E": "green",
+          "SE": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "mob",
@@ -9956,7 +10375,7 @@
   },
   "A6": {
     "coord": "A6",
-    "name": "Testaccio",
+    "name": "Daly City",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -9967,7 +10386,11 @@
           "N": "green",
           "NE": "green",
           "E": "nefarii_3",
-          "S": "green"
+          "S": "green",
+          "SE": "red",
+          "SW": "green",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -9994,7 +10417,11 @@
           "N": "red",
           "NE": "toll_2",
           "E": "green",
-          "S": "nefarii_2"
+          "S": "green",
+          "SE": "red",
+          "SW": "green",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10021,7 +10448,11 @@
           "N": "red",
           "NE": "legiones_2",
           "E": "toll_2",
-          "S": "green"
+          "S": "green",
+          "SE": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10044,7 +10475,11 @@
           "N": "soothsayer",
           "NE": "green",
           "E": "green",
-          "S": "toll_2"
+          "S": "green",
+          "SE": "green",
+          "SW": "green",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10071,7 +10506,11 @@
           "N": "patricii_1",
           "NE": "red",
           "E": "green",
-          "S": "green"
+          "S": "green",
+          "SE": "green",
+          "SW": "green",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10098,7 +10537,11 @@
           "N": "toll_2",
           "NE": "legiones_2",
           "E": "nefarii_2",
-          "S": "red"
+          "S": "green",
+          "SE": "green",
+          "SW": "green",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10121,7 +10564,11 @@
           "N": "toll_2",
           "NE": "green",
           "E": "mob",
-          "S": "green"
+          "S": "green",
+          "SE": "green",
+          "SW": "green",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10148,7 +10595,11 @@
           "N": "theater",
           "NE": "green",
           "E": "toll_2",
-          "S": "patricii_1"
+          "S": "green",
+          "SE": "green",
+          "SW": "green",
+          "W": "toll_10",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10171,7 +10622,11 @@
           "N": "legiones_1",
           "NE": "mob",
           "E": "green",
-          "S": "red"
+          "S": "green",
+          "SE": "green",
+          "SW": "green",
+          "W": "toll_10",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10194,7 +10649,11 @@
           "N": "patricii_1",
           "NE": "green",
           "E": "red",
-          "S": "toll_2"
+          "S": "green",
+          "SE": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10221,7 +10680,11 @@
           "N": "green",
           "NE": "red",
           "E": "soothsayer",
-          "S": "red"
+          "S": "green",
+          "SE": "red",
+          "SW": "green",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10244,7 +10707,13 @@
       {
         "id": "A6_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "SE": "green",
+          "S": "green",
+          "SW": "red",
+          "W": "toll_8",
+          "NW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "nefarii_1",
@@ -10258,8 +10727,8 @@
   },
   "B6": {
     "coord": "B6",
-    "name": "Via Ostiensis",
-    "isGate": true,
+    "name": "Ocean View",
+    "isGate": false,
     "isForum": false,
     "tiles": [
       {
@@ -10270,7 +10739,9 @@
           "NE": "green",
           "E": "theater",
           "S": "green",
-          "W": "green"
+          "W": "green",
+          "SE": "red",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10293,8 +10764,10 @@
           "N": "red",
           "NE": "green",
           "E": "green",
-          "S": "nefarii_1",
-          "W": "green"
+          "S": "green",
+          "W": "green",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10318,7 +10791,9 @@
           "NE": "legiones_2",
           "E": "green",
           "S": "green",
-          "W": "green"
+          "W": "green",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10341,8 +10816,10 @@
           "N": "soothsayer",
           "NE": "green",
           "E": "green",
-          "S": "toll_2",
-          "W": "legiones_1"
+          "S": "green",
+          "W": "legiones_1",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10366,7 +10843,9 @@
           "NE": "red",
           "E": "red",
           "S": "green",
-          "W": "green"
+          "W": "green",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10389,8 +10868,10 @@
           "N": "toll_2",
           "NE": "green",
           "E": "nefarii_2",
-          "S": "legiones_2",
-          "W": "green"
+          "S": "green",
+          "W": "green",
+          "SE": "green",
+          "SW": "toll_1"
         },
         "sells": [
           {
@@ -10414,7 +10895,9 @@
           "NE": "green",
           "E": "mob",
           "S": "green",
-          "W": "red"
+          "W": "red",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10437,7 +10920,9 @@
           "N": "mob",
           "NE": "green",
           "E": "toll_2",
-          "S": "patricii_1"
+          "S": "green",
+          "SE": "red",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10460,8 +10945,10 @@
           "N": "red",
           "NE": "mob",
           "E": "green",
-          "S": "legiones_1",
-          "W": "toll_2"
+          "S": "green",
+          "W": "toll_2",
+          "SE": "red",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10485,7 +10972,9 @@
           "NE": "green",
           "E": "red",
           "S": "green",
-          "W": "toll_2"
+          "W": "toll_2",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -10512,8 +11001,10 @@
           "N": "green",
           "NE": "red",
           "E": "soothsayer",
-          "S": "toll_2",
-          "W": "green"
+          "S": "red",
+          "W": "green",
+          "SE": "red",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10536,7 +11027,11 @@
       {
         "id": "B6_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "SE": "green",
+          "S": "green",
+          "SW": "green"
+        },
         "sells": [],
         "buys": [],
         "encounter": "legiones_1",
@@ -10550,7 +11045,7 @@
   },
   "C6": {
     "coord": "C6",
-    "name": "Aventinus Minor",
+    "name": "Ingleside",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -10561,9 +11056,11 @@
           "N": "green",
           "NE": "green",
           "E": "red",
-          "S": "red",
+          "S": "green",
           "W": "legiones_2",
-          "NW": "theater"
+          "NW": "theater",
+          "SE": "green",
+          "SW": "red"
         },
         "sells": [
           {
@@ -10586,9 +11083,11 @@
           "N": "green",
           "NE": "soothsayer",
           "E": "mob",
-          "S": "patricii_1",
+          "S": "toll_1",
           "W": "green",
-          "NW": "green"
+          "NW": "green",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -10611,9 +11110,11 @@
           "N": "green",
           "NE": "green",
           "E": "legiones_2",
-          "S": "red",
+          "S": "green",
           "W": "green",
-          "NW": "red"
+          "NW": "red",
+          "SE": "toll_1",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10636,9 +11137,11 @@
           "N": "patricii_1",
           "NE": "green",
           "E": "green",
-          "S": "toll_2",
+          "S": "green",
           "W": "green",
-          "NW": "soothsayer"
+          "NW": "soothsayer",
+          "SE": "green",
+          "SW": "red"
         },
         "sells": [
           {
@@ -10661,9 +11164,11 @@
           "N": "green",
           "NE": "mob",
           "E": "green",
-          "S": "green",
+          "S": "red",
           "W": "legiones_1",
-          "NW": "red"
+          "NW": "red",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10686,9 +11191,11 @@
           "N": "green",
           "NE": "red",
           "E": "patricii_1",
-          "S": "red",
+          "S": "green",
           "W": "green",
-          "NW": "nefarii_2"
+          "NW": "nefarii_2",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10711,9 +11218,11 @@
           "N": "soothsayer",
           "NE": "red",
           "E": "green",
-          "S": "red",
+          "S": "green",
           "W": "patricii_1",
-          "NW": "red"
+          "NW": "red",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10736,9 +11245,11 @@
           "N": "red",
           "NE": "toll_2",
           "E": "red",
-          "S": "legiones_2",
+          "S": "green",
           "W": "green",
-          "NW": "toll_2"
+          "NW": "toll_2",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10761,9 +11272,11 @@
           "N": "green",
           "NE": "legiones_2",
           "E": "red",
-          "S": "nefarii_2",
+          "S": "green",
           "W": "green",
-          "NW": "red"
+          "NW": "red",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -10788,7 +11301,9 @@
           "E": "green",
           "S": "green",
           "W": "soothsayer",
-          "NW": "green"
+          "NW": "green",
+          "SE": "green",
+          "SW": "toll_1"
         },
         "sells": [
           {
@@ -10815,9 +11330,11 @@
           "N": "theater",
           "NE": "soothsayer",
           "E": "legiones_2",
-          "S": "red",
+          "S": "green",
           "W": "green",
-          "NW": "green"
+          "NW": "green",
+          "SE": "green",
+          "SW": "toll_1"
         },
         "sells": [
           {
@@ -10840,7 +11357,11 @@
       {
         "id": "C6_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "SE": "green",
+          "S": "green",
+          "SW": "green"
+        },
         "sells": [],
         "buys": [],
         "encounter": "nefarii_2",
@@ -10854,8 +11375,8 @@
   },
   "D6": {
     "coord": "D6",
-    "name": "Thermae Antoninianae",
-    "isGate": false,
+    "name": "Outer Mission",
+    "isGate": true,
     "isForum": false,
     "tiles": [
       {
@@ -10867,7 +11388,9 @@
           "NE": "green",
           "E": "toll_2",
           "S": "green",
-          "W": "legiones_2"
+          "W": "legiones_2",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -10891,8 +11414,10 @@
           "N": "soothsayer",
           "NE": "green",
           "E": "green",
-          "S": "red",
-          "W": "red"
+          "S": "green",
+          "W": "red",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -10916,8 +11441,10 @@
           "N": "green",
           "NE": "toll_2",
           "E": "green",
-          "S": "red",
-          "W": "mob"
+          "S": "green",
+          "W": "mob",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -10941,8 +11468,10 @@
           "N": "legiones_2",
           "NE": "green",
           "E": "green",
-          "S": "toll_2",
-          "W": "green"
+          "S": "green",
+          "W": "green",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -10966,8 +11495,10 @@
           "N": "green",
           "NE": "nefarii_2",
           "E": "green",
-          "S": "red",
-          "W": "legiones_1"
+          "S": "green",
+          "W": "legiones_1",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -10991,8 +11522,10 @@
           "N": "green",
           "NE": "red",
           "E": "patricii_1",
-          "S": "red",
-          "W": "green"
+          "S": "green",
+          "W": "green",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11016,8 +11549,10 @@
           "N": "soothsayer",
           "NE": "red",
           "E": "green",
-          "S": "toll_2",
-          "W": "red"
+          "S": "green",
+          "W": "red",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11041,8 +11576,10 @@
           "N": "red",
           "NE": "soothsayer",
           "E": "green",
-          "S": "red",
-          "W": "green"
+          "S": "green",
+          "W": "green",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11066,8 +11603,10 @@
           "N": "theater",
           "NE": "nefarii_3",
           "E": "red",
-          "S": "legiones_2",
-          "W": "green"
+          "S": "green",
+          "W": "green",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11092,7 +11631,9 @@
           "NE": "green",
           "E": "green",
           "S": "green",
-          "W": "soothsayer"
+          "W": "soothsayer",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11120,8 +11661,10 @@
           "N": "green",
           "NE": "toll_2",
           "E": "legiones_2",
-          "S": "red",
-          "W": "green"
+          "S": "green",
+          "W": "green",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11144,7 +11687,11 @@
       {
         "id": "D6_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "SE": "red",
+          "S": "green",
+          "SW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "legiones_2",
@@ -11158,7 +11705,7 @@
   },
   "E6": {
     "coord": "E6",
-    "name": "Caeliolus",
+    "name": "Excelsior",
     "isGate": false,
     "isForum": false,
     "tiles": [
@@ -11171,7 +11718,9 @@
           "NE": "legiones_2",
           "E": "patricii_1",
           "S": "red",
-          "W": "toll_2"
+          "W": "toll_2",
+          "SE": "green",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11196,7 +11745,9 @@
           "NE": "mob",
           "E": "green",
           "S": "green",
-          "W": "green"
+          "W": "green",
+          "SE": "green",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11221,7 +11772,9 @@
           "NE": "green",
           "E": "nefarii_2",
           "S": "red",
-          "W": "red"
+          "W": "red",
+          "SE": "toll_1",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11245,8 +11798,10 @@
           "N": "nefarii_2",
           "NE": "red",
           "E": "green",
-          "S": "toll_2",
-          "W": "green"
+          "S": "green",
+          "W": "green",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11270,8 +11825,10 @@
           "N": "theater",
           "NE": "green",
           "E": "mob",
-          "S": "red",
-          "W": "green"
+          "S": "green",
+          "W": "green",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11296,7 +11853,9 @@
           "NE": "legiones_1",
           "E": "patricii_1",
           "S": "green",
-          "W": "mob"
+          "W": "mob",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11320,8 +11879,10 @@
           "N": "soothsayer",
           "NE": "red",
           "E": "green",
-          "S": "toll_2",
-          "W": "red"
+          "S": "green",
+          "W": "red",
+          "SE": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11346,7 +11907,9 @@
           "NE": "green",
           "E": "green",
           "S": "green",
-          "W": "green"
+          "W": "green",
+          "SE": "red",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11370,8 +11933,10 @@
           "N": "green",
           "NE": "toll_2",
           "E": "nefarii_1",
-          "S": "legiones_2",
-          "W": "green"
+          "S": "green",
+          "W": "green",
+          "SE": "green",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11395,8 +11960,10 @@
           "N": "green",
           "NE": "toll_2",
           "E": "green",
-          "S": "theater",
-          "W": "red"
+          "S": "green",
+          "W": "red",
+          "SE": "red",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11424,8 +11991,10 @@
           "N": "green",
           "NE": "green",
           "E": "legiones_2",
-          "S": "red",
-          "W": "toll_2"
+          "S": "green",
+          "W": "toll_2",
+          "SE": "red",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11448,7 +12017,11 @@
       {
         "id": "E6_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "SE": "red",
+          "S": "red",
+          "SW": "red"
+        },
         "sells": [],
         "buys": [],
         "encounter": "nefarii_2",
@@ -11462,8 +12035,8 @@
   },
   "F6": {
     "coord": "F6",
-    "name": "Via Tusculana",
-    "isGate": true,
+    "name": "Visitacion Valley",
+    "isGate": false,
     "isForum": false,
     "tiles": [
       {
@@ -11473,7 +12046,11 @@
           "NW": "legiones_2",
           "N": "green",
           "SE": "green",
-          "W": "mob"
+          "W": "mob",
+          "NE": "red",
+          "E": "toll_3",
+          "S": "green",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11495,8 +12072,12 @@
         "edges": {
           "NW": "theater",
           "N": "soothsayer",
-          "SE": "toll_2",
-          "W": "green"
+          "SE": "green",
+          "W": "green",
+          "NE": "red",
+          "E": "red",
+          "S": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11518,8 +12099,12 @@
         "edges": {
           "NW": "nefarii_2",
           "N": "green",
-          "SE": "green",
-          "W": "patricii_1"
+          "SE": "red",
+          "W": "patricii_1",
+          "NE": "red",
+          "E": "toll_2",
+          "S": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11541,8 +12126,12 @@
         "edges": {
           "NW": "mob",
           "N": "red",
-          "SE": "green",
-          "W": "green"
+          "SE": "red",
+          "W": "green",
+          "NE": "red",
+          "E": "red",
+          "S": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11564,8 +12153,12 @@
         "edges": {
           "NW": "nefarii_2",
           "N": "theater",
-          "SE": "legiones_1",
-          "W": "green"
+          "SE": "red",
+          "W": "green",
+          "NE": "red",
+          "E": "toll_1",
+          "S": "red",
+          "SW": "toll_1"
         },
         "sells": [
           {
@@ -11587,8 +12180,12 @@
         "edges": {
           "NW": "soothsayer",
           "N": "green",
-          "SE": "patricii_1",
-          "W": "legiones_2"
+          "SE": "red",
+          "W": "legiones_2",
+          "NE": "red",
+          "E": "toll_2",
+          "S": "green",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11610,8 +12207,12 @@
         "edges": {
           "NW": "green",
           "N": "green",
-          "SE": "soothsayer",
-          "W": "red"
+          "SE": "red",
+          "W": "red",
+          "NE": "red",
+          "E": "toll_1",
+          "S": "green",
+          "SW": "toll_1"
         },
         "sells": [
           {
@@ -11633,8 +12234,12 @@
         "edges": {
           "NW": "green",
           "N": "red",
-          "SE": "legiones_2",
-          "W": "green"
+          "SE": "green",
+          "W": "green",
+          "NE": "red",
+          "E": "red",
+          "S": "green",
+          "SW": "red"
         },
         "sells": [
           {
@@ -11656,8 +12261,12 @@
         "edges": {
           "NW": "nefarii_1",
           "N": "green",
-          "SE": "green",
-          "W": "toll_2"
+          "SE": "toll_1",
+          "W": "toll_2",
+          "NE": "red",
+          "E": "red",
+          "S": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11679,8 +12288,12 @@
         "edges": {
           "NW": "red",
           "N": "green",
-          "SE": "green",
-          "W": "red"
+          "SE": "toll_1",
+          "W": "red",
+          "NE": "toll_2",
+          "E": "red",
+          "S": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11706,8 +12319,12 @@
         "edges": {
           "NW": "red",
           "N": "green",
-          "SE": "theater",
-          "W": "nefarii_2"
+          "SE": "red",
+          "W": "nefarii_2",
+          "NE": "red",
+          "E": "toll_1",
+          "S": "green",
+          "SW": "green"
         },
         "sells": [
           {
@@ -11730,7 +12347,13 @@
       {
         "id": "F6_12",
         "index": 12,
-        "edges": {},
+        "edges": {
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "green",
+          "SW": "green"
+        },
         "sells": [],
         "buys": [],
         "encounter": "legiones_1",

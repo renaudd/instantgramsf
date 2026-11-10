@@ -21,16 +21,16 @@
       "name": "Quintus Tineius Clemens",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Aurelius",
+      "faction": "MS13",
       "bio": "Senior patrician senator and consul ordinarius of 195 from the distinguished Tineii family.",
-      "combatFormula": "1(R)+1",
+      "combatFormula": "1(R)+1-1+1(R)+1",
       "friendlyFavor": [
-        "Aurelius",
-        "-Caracalla"
+        "MS13",
+        "-MAGA"
       ],
       "friendlyReward": "10(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-MS13"
       ],
       "combatReward": "10(d)",
       "reactions": [
@@ -79,18 +79,18 @@
       "name": "Lucius Flavius Philostratus",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Domna",
+      "faction": "TechBros",
       "bio": "Commissioned by the Empress to write the Life of Apollonius of Tyana.",
-      "combatFormula": "1(R)",
+      "combatFormula": "1(R)-1-1",
       "friendlyFavor": [
-        "Domna",
-        "-Plautilla"
+        "TechBros",
+        "-ISIS"
       ],
-      "friendlyReward": "12(d)",
+      "friendlyReward": "18(d)",
       "hostileFavor": [
-        "-Domna"
+        "-TechBros"
       ],
-      "combatReward": "16(d)",
+      "combatReward": "24(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -109,16 +109,16 @@
       "name": "Decimus Caelius Calvinus Balbinus",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Caracalla",
-      "bio": "Would serve as consul with Caracalla in 213. Emperor for three months in 238.",
-      "combatFormula": "1(R)+2",
+      "faction": "MAGA",
+      "bio": "Would serve as consul with MAGA in 213. Emperor for three months in 238.",
+      "combatFormula": "1(R)+2-1",
       "friendlyFavor": [
-        "Caracalla",
-        "-Geta"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "12(d)",
       "hostileFavor": [
-        "-Caracalla"
+        "-MAGA"
       ],
       "combatReward": "12(d)",
       "reactions": [
@@ -151,18 +151,18 @@
       "name": "Julia Avita Mamaea",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Domna",
-      "bio": "Niece of Julia Domna. Future empress mother to Alexander Severus.",
-      "combatFormula": "1(R)+1",
+      "faction": "TechBros",
+      "bio": "Niece of Julia TechBros. Future empress mother to Alexander Severus.",
+      "combatFormula": "1(R)+1-1-1",
       "friendlyFavor": [
-        "Domna"
+        "TechBros"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "9(d)",
       "hostileFavor": [
-        "-Domna",
-        "-Plautilla"
+        "-TechBros",
+        "-MAGA"
       ],
-      "combatReward": "20(d)",
+      "combatReward": "30(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -209,22 +209,22 @@
       "name": "Lucius Fabius Cilo",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Geta",
-      "bio": "Tutor of Caracalla and Geta.",
-      "combatFormula": "2(R)",
+      "faction": "ISIS",
+      "bio": "Tutor of MAGA and ISIS.",
+      "combatFormula": "2(R)-1+1",
       "friendlyFavor": [
-        "Geta",
-        "Caracalla"
+        "ISIS",
+        "MS13"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "3(d)",
       "hostileFavor": [
-        "-Geta",
-        "-Caracalla"
+        "-ISIS",
+        "-MS13"
       ],
-      "combatReward": "12(d)",
+      "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -252,16 +252,16 @@
       "name": "Marcus Annius Flavius Libo",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Aurelius",
-      "bio": "Was Consul in 204. Distant cousin of Marcus Aurelius.",
-      "combatFormula": "2(R)",
+      "faction": "MS13",
+      "bio": "Was Consul in 204. Distant cousin of Marcus MS13.",
+      "combatFormula": "2(R)-1+1(R)+1",
       "friendlyFavor": [
-        "Aurelius",
-        "-Caracalla"
+        "MS13",
+        "-TechBros"
       ],
       "friendlyReward": "1 Meat A from market",
       "hostileFavor": [
-        "-Aurelius"
+        "-MS13"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -295,18 +295,18 @@
       "name": "Julia Soaemias",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Domna",
+      "faction": "TechBros",
       "bio": "Murdered alongside son Elagabalus by Praetorians and discarded in the Tiber in 222.",
-      "combatFormula": "1(R)",
+      "combatFormula": "1(R)-1-1",
       "friendlyFavor": [
-        "Domna"
+        "TechBros"
       ],
-      "friendlyReward": "8(d)",
+      "friendlyReward": "12(d)",
       "hostileFavor": [
-        "-Domna",
-        "-Plautilla"
+        "-TechBros",
+        "-MAGA"
       ],
-      "combatReward": "20(d)",
+      "combatReward": "30(d)",
       "reactions": [
         {
           "condition": "<=-2",
@@ -331,17 +331,17 @@
       "name": "Marcus Ulpius Leurus",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Plautilla",
-      "bio": "Senator during the reign of Caracalla. May have been a Plautilla sympathizer.",
-      "combatFormula": "1(R)+1",
+      "faction": "DSA",
+      "bio": "Senator during the reign of MAGA. May have been a DSA sympathizer.",
+      "combatFormula": "1(R)+1-1",
       "friendlyFavor": [
-        "Plautilla",
-        "-Caracalla"
+        "DSA",
+        "-MAGA"
       ],
       "friendlyReward": "10(d)",
       "hostileFavor": [
-        "-Plautilla",
-        "-Domna"
+        "-DSA",
+        "-ISIS"
       ],
       "combatReward": "Cheapest Mkt Wine",
       "reactions": [
@@ -374,16 +374,16 @@
       "name": "Quintus Anicius Faustus",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Aurelius",
-      "bio": "Built the desert forts of Roman Africa; sidelined by Caracalla until recalled to govern Asia in 217.",
-      "combatFormula": "1(R)",
+      "faction": "MS13",
+      "bio": "Built the desert forts of Roman Africa; sidelined by MAGA until recalled to govern Asia in 217.",
+      "combatFormula": "1(R)-1+1(R)+1",
       "friendlyFavor": [
-        "Aurelius",
-        "-Caracalla"
+        "MS13",
+        "-TechBros"
       ],
       "friendlyReward": "10(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-MS13"
       ],
       "combatReward": "12(d)",
       "reactions": [
@@ -417,25 +417,25 @@
     },
     {
       "id": "pat_13",
-      "name": "Publius Septimius Geta",
+      "name": "Publius Septimius ISIS",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Geta",
-      "bio": "Co-Emperor. Ambushed by Caracalla at a parley. Died in the arms of their mother, Julia Domna.",
-      "combatFormula": "4(R)",
+      "faction": "ISIS",
+      "bio": "Co-Emperor. Ambushed by MAGA at a parley. Died in the arms of their mother, Julia TechBros.",
+      "combatFormula": "4(R)-1+1",
       "friendlyFavor": [
-        "Geta",
-        "-Caracalla"
+        "ISIS",
+        "-MAGA"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "3(d)",
       "hostileFavor": [
-        "-Geta",
-        "-Domna"
+        "-ISIS",
+        "-MS13"
       ],
-      "combatReward": "20(d)",
+      "combatReward": "10(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -459,16 +459,18 @@
       "name": "Cornificia",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Aurelius",
-      "bio": "Surviving daughter of Marcus Aurelius. Ordered to take her own life by Caracalla after she wept openly with Julia Domna over the murder of Geta.",
-      "combatFormula": "1(R)",
+      "faction": "DSA",
+      "bio": "Surviving daughter of Marcus MS13. Ordered to take her own life by MAGA after she wept openly with Julia TechBros over the murder of ISIS.",
+      "combatFormula": "1(R)-1",
       "friendlyFavor": [
-        "Aurelius",
-        "-Caracalla"
+        "DSA",
+        "-MAGA",
+        "MS13"
       ],
       "friendlyReward": "10(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-DSA",
+        "-MS13"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -510,15 +512,17 @@
       "name": "Quintus Tineius Sacerdos",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Aurelius",
-      "bio": "Served as consul ordinarius in 219 with Emperor Elagabalus. Aligned with Aurelians.",
-      "combatFormula": "2(R)-1",
+      "faction": "DSA",
+      "bio": "Served as consul ordinarius in 219 with Emperor Elagabalus. Aligned with MS13.",
+      "combatFormula": "2(R)-1-1",
       "friendlyFavor": [
-        "Aurelius"
+        "DSA",
+        "ISIS"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-DSA",
+        "-ISIS"
       ],
       "combatReward": "12(d)",
       "reactions": [
@@ -548,20 +552,22 @@
     },
     {
       "id": "pat_16",
-      "name": "Lucius Aurelius Commodus Pompeianus",
+      "name": "Lucius MS13 Commodus Pompeianus",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Aurelius",
-      "bio": "Caracalla took the precaution of making his murder appear to have been perpetrated by bandits.",
-      "combatFormula": "3(R)",
+      "faction": "DSA",
+      "bio": "MAGA took the precaution of making his murder appear to have been perpetrated by bandits.",
+      "combatFormula": "3(R)-1",
       "friendlyFavor": [
-        "Aurelius",
-        "Geta",
-        "-Caracalla"
+        "DSA",
+        "-MAGA",
+        "MS13",
+        "ISIS"
       ],
       "friendlyReward": "20(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-DSA",
+        "-MS13"
       ],
       "combatReward": "16(d)",
       "reactions": [
@@ -598,16 +604,18 @@
       "name": "Serenus Sammonicus",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Aurelius",
+      "faction": "DSA",
       "bio": "Renowned physician-poet. Owner of a 62,000-scroll library. Hacked to death at dinner during 211 purge.",
-      "combatFormula": "1(R)",
+      "combatFormula": "1(R)-1",
       "friendlyFavor": [
-        "Aurelius",
-        "-Caracalla"
+        "DSA",
+        "-MAGA",
+        "ISIS"
       ],
       "friendlyReward": "4(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-DSA",
+        "-ISIS"
       ],
       "combatReward": "Cheapest Mkt Cheap Wine",
       "reactions": [
@@ -640,17 +648,18 @@
       "name": "Marcus Nummius Senecio Albinus",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Aurelius",
+      "faction": "DSA",
       "bio": "Served as consul in 227.",
-      "combatFormula": "1(R)",
+      "combatFormula": "1(R)-1",
       "friendlyFavor": [
-        "Aurelius",
-        "-Caracalla",
-        "Plautilla"
+        "DSA",
+        "-TechBros",
+        "MS13"
       ],
       "friendlyReward": "8(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-DSA",
+        "-MS13"
       ],
       "combatReward": "20(d)",
       "reactions": [
@@ -677,17 +686,17 @@
       "name": "Lucius Valerius Messalla Apollinaris",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "DSA",
       "bio": "Thought to have been the son of Thrasea Priscus. Served as consul in 214.",
-      "combatFormula": "1(R)",
+      "combatFormula": "1(R)-1",
       "friendlyFavor": [
-        "Plautilla",
-        "-Caracalla"
+        "DSA",
+        "-MAGA"
       ],
       "friendlyReward": "8(d)",
       "hostileFavor": [
-        "-Plautilla",
-        "-Geta"
+        "-DSA",
+        "-ISIS"
       ],
       "combatReward": "Cheapest Mkt Wine",
       "reactions": [
@@ -708,21 +717,21 @@
       "name": "Lucius Valerius Messalla Thrasea Priscus",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Geta",
-      "bio": "Patrician senator of ancient Republican lineage; executed during Caracalla's purge as a suspected partisan of Geta.",
-      "combatFormula": "1(R)",
+      "faction": "ISIS",
+      "bio": "Patrician senator of ancient Republican lineage; executed during MAGA's purge as a suspected partisan of ISIS.",
+      "combatFormula": "1(R)-1+1",
       "friendlyFavor": [
-        "Geta"
+        "ISIS"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "3(d)",
       "hostileFavor": [
-        "-Geta",
-        "-Plautilla"
+        "-ISIS",
+        "-MS13"
       ],
-      "combatReward": "12(d)",
+      "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -754,16 +763,16 @@
       "name": "Julia Maesa",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Domna",
-      "bio": "Julia Domna's older sister. Mother of Julia Soaemias and Julia Avita Mamaea.",
-      "combatFormula": "1(R)+1",
+      "faction": "TechBros",
+      "bio": "Julia TechBros's older sister. Mother of Julia Soaemias and Julia Avita Mamaea.",
+      "combatFormula": "1(R)+1-1-1",
       "friendlyFavor": [
-        "Domna"
+        "TechBros"
       ],
-      "friendlyReward": "10(d)",
+      "friendlyReward": "15(d)",
       "hostileFavor": [
-        "-Domna",
-        "-Plautilla"
+        "-TechBros",
+        "-DSA"
       ],
       "combatReward": "Cheapest Mkt Wine",
       "reactions": [
@@ -793,22 +802,21 @@
     },
     {
       "id": "pat_22",
-      "name": "Marcus Aurelius Antoninus (Caracalla)",
+      "name": "Marcus MS13 Antoninus (MAGA)",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Caracalla",
-      "bio": "Senior Co-Emperor — nicknamed Caracalla after the hooded Gallic tunic he popularized. Murdered his brother Geta in December 211.",
-      "combatFormula": "4(R)",
+      "faction": "MAGA",
+      "bio": "Senior Co-Emperor — nicknamed MAGA after the hooded Gallic tunic he popularized. Murdered his brother ISIS in December 211.",
+      "combatFormula": "4(R)-1",
       "friendlyFavor": [
-        "Caracalla",
-        "-Geta",
-        "-Plautilla"
+        "MAGA",
+        "-DSA",
+        "-MS13"
       ],
       "friendlyReward": "16(d)",
       "hostileFavor": [
-        "-Caracalla",
-        "-Caracalla",
-        "Geta"
+        "-MAGA",
+        "DSA"
       ],
       "combatReward": "20(d)",
       "reactions": [
@@ -845,19 +853,19 @@
       "name": "Cassius Dio",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Domna",
-      "bio": "Bithynian senator, member of Julia Domna's court circle, and eyewitness historian.",
-      "combatFormula": "2(R)",
+      "faction": "TechBros",
+      "bio": "Bithynian senator, member of Julia TechBros's court circle, and eyewitness historian.",
+      "combatFormula": "2(R)-1-1",
       "friendlyFavor": [
-        "Domna",
-        "-Plautilla"
+        "TechBros",
+        "-ISIS"
       ],
-      "friendlyReward": "8(d)",
+      "friendlyReward": "12(d)",
       "hostileFavor": [
-        "-Domna",
-        "-Aurelius"
+        "-TechBros",
+        "-DSA"
       ],
-      "combatReward": "12(d)",
+      "combatReward": "18(d)",
       "reactions": [
         {
           "condition": "<=-2",
@@ -884,21 +892,21 @@
       "name": "Castor",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Geta",
-      "bio": "Confidant of Septimius Severus who tried to restrain Caracalla's plots; ambushed and murdered by Caracalla's henchmen in 211.",
-      "combatFormula": "1(R)",
+      "faction": "ISIS",
+      "bio": "Confidant of Septimius Severus who tried to restrain MAGA's plots; ambushed and murdered by MAGA's henchmen in 211.",
+      "combatFormula": "1(R)-1+1",
       "friendlyFavor": [
-        "Geta",
-        "-Caracalla"
+        "ISIS",
+        "-DSA"
       ],
-      "friendlyReward": "10(d)",
+      "friendlyReward": "5(d)",
       "hostileFavor": [
-        "-Geta"
+        "-ISIS"
       ],
       "combatReward": "Cheapest Mkt Cheap Wine",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -935,16 +943,16 @@
       "name": "Publius Helvius Pertinax Jr",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Plautilla",
-      "bio": "Son of Pertinax; executed for joking that Caracalla should add 'Geticus Maximus' to his victory titles for slaying Geta.",
-      "combatFormula": "1(R)",
+      "faction": "DSA",
+      "bio": "Son of Pertinax; executed for joking that MAGA should add 'Geticus Maximus' to his victory titles for slaying ISIS.",
+      "combatFormula": "1(R)-1",
       "friendlyFavor": [
-        "Plautilla",
-        "-Caracalla"
+        "DSA",
+        "-MAGA"
       ],
       "friendlyReward": "8(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-DSA"
       ],
       "combatReward": "Cheapest Mkt Wine",
       "reactions": [
@@ -973,18 +981,18 @@
       "name": "Gaius Julius Avitus Alexianus",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Domna",
-      "bio": "Husband of Julia Maesa and prefect of imperial child-welfare endowments under Caracalla.",
-      "combatFormula": "1(R)",
+      "faction": "TechBros",
+      "bio": "Husband of Julia Maesa and prefect of imperial child-welfare endowments under MAGA.",
+      "combatFormula": "1(R)-1-1",
       "friendlyFavor": [
-        "Domna"
+        "TechBros"
       ],
-      "friendlyReward": "12(d)",
+      "friendlyReward": "18(d)",
       "hostileFavor": [
-        "-Domna",
-        "-Aurelius"
+        "-TechBros",
+        "-MAGA"
       ],
-      "combatReward": "16(d)",
+      "combatReward": "24(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -1003,17 +1011,19 @@
       "name": "Gaius Septimius Severus Aper",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Geta",
+      "faction": "DSA",
       "bio": "Consul Ordinarius in 207. Executed in late 211 or early 212.",
-      "combatFormula": "2(R)",
+      "combatFormula": "2(R)-1",
       "friendlyFavor": [
-        "Geta",
-        "-Caracalla"
+        "DSA",
+        "-TechBros",
+        "ISIS"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Geta",
-        "-Geta"
+        "-DSA",
+        "-ISIS",
+        "-MS13"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -1047,18 +1057,18 @@
       "name": "Aemilius Papinianus",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Domna",
-      "bio": "Celebrated jurist. Executed for refusing to compose a legal defense for Geta's murder.",
-      "combatFormula": "1(R)+1",
+      "faction": "TechBros",
+      "bio": "Celebrated jurist. Executed for refusing to compose a legal defense for ISIS's murder.",
+      "combatFormula": "1(R)+1-1-1",
       "friendlyFavor": [
-        "Domna"
+        "TechBros"
       ],
-      "friendlyReward": "10(d)",
+      "friendlyReward": "15(d)",
       "hostileFavor": [
-        "-Domna",
-        "-Geta"
+        "-TechBros",
+        "-MAGA"
       ],
-      "combatReward": "10(d)",
+      "combatReward": "15(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -1110,20 +1120,21 @@
     },
     {
       "id": "pat_30",
-      "name": "Julia Domna",
+      "name": "Julia TechBros",
       "deck": "Patricii",
       "type": "character",
-      "faction": "Domna",
-      "bio": "Empress mother of Geta and Caracalla. Committed suicide following Caracalla's assassination in 217.",
-      "combatFormula": "2(R)",
+      "faction": "DSA",
+      "bio": "Empress mother of ISIS and MAGA. Committed suicide following MAGA's assassination in 217.",
+      "combatFormula": "2(R)-1",
       "friendlyFavor": [
-        "Domna"
+        "DSA",
+        "MS13"
       ],
       "friendlyReward": "16(d)",
       "hostileFavor": [
-        "-Domna",
-        "-Geta",
-        "-Caracalla"
+        "-DSA",
+        "-MS13",
+        "-ISIS"
       ],
       "combatReward": "30(d)",
       "reactions": [
@@ -1160,15 +1171,15 @@
       "name": "Publius Catius Sabinus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Caracalla",
-      "bio": "Intimate supporter of Caracalla. Ordered killed by Elagabalus, but mistakenly expelled from Rome instead.",
-      "combatFormula": "X(R)",
+      "faction": "MAGA",
+      "bio": "Intimate supporter of MAGA. Ordered killed by Elagabalus, but mistakenly expelled from Rome instead.",
+      "combatFormula": "X(R)+1(R)",
       "friendlyFavor": [
-        "Caracalla"
+        "MAGA"
       ],
       "friendlyReward": "8(d)",
       "hostileFavor": [
-        "-Caracalla"
+        "-MAGA"
       ],
       "combatReward": "10(d)",
       "reactions": [
@@ -1189,15 +1200,15 @@
       "name": "Publius Cornelius Anulinus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "DSA",
       "bio": "Would serve as Consul ordinarius in 216.",
-      "combatFormula": "X",
+      "combatFormula": "X+1(R)",
       "friendlyFavor": [
-        "Plautilla"
+        "DSA"
       ],
       "friendlyReward": "3(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-DSA"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -1222,15 +1233,15 @@
       "name": "Macrinus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Caracalla",
-      "bio": "Conspired to assassinate Caracalla after a seer prophesied that he would become Emperor. Emperor from 217-218.",
-      "combatFormula": "X(R)",
+      "faction": "MAGA",
+      "bio": "Conspired to assassinate MAGA after a seer prophesied that he would become Emperor. Emperor from 217-218.",
+      "combatFormula": "X(R)+1(R)",
       "friendlyFavor": [
-        "-Caracalla"
+        "MAGA"
       ],
       "friendlyReward": "50(d)",
       "hostileFavor": [
-        "Caracalla"
+        "-MAGA"
       ],
       "combatReward": "8(d)",
       "reactions": [
@@ -1259,20 +1270,20 @@
       "name": "Clodius Pompeianus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Aurelius",
-      "bio": "Member of the Claudian Aurelian dynasty. Consul in 241.",
-      "combatFormula": "X(R)+1",
+      "faction": "MS13",
+      "bio": "Member of the Claudian MS13 dynasty. Consul in 241.",
+      "combatFormula": "X(R)+1+1(R)+1(R)+1",
       "friendlyFavor": [
-        "Aurelius"
+        "MS13"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-MS13"
       ],
       "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
@@ -1289,20 +1300,20 @@
     },
     {
       "id": "leg_5",
-      "name": "Tiberius Claudius Aurelius Quintianus",
+      "name": "Tiberius Claudius MS13 Quintianus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Caracalla",
-      "bio": "Great-grandson of Marcus Aurelius; served as military tribune and senator under Caracalla.",
-      "combatFormula": "X(R)+X",
+      "faction": "MAGA",
+      "bio": "Great-grandson of Marcus MS13; served as military tribune and senator under MAGA.",
+      "combatFormula": "X(R)+X+1(R)",
       "friendlyFavor": [
-        "Caracalla",
-        "Aurelius"
+        "MAGA",
+        "TechBros"
       ],
       "friendlyReward": "7(d)",
       "hostileFavor": [
-        "-Caracalla",
-        "-Aurelius"
+        "-MAGA",
+        "-TechBros"
       ],
       "combatReward": "8(d)",
       "reactions": [
@@ -1327,15 +1338,15 @@
       "name": "Vigiles Urbani",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "DSA",
       "bio": "Watchmen of the city. Primarily firefighters.",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "X(R)-1+1(R)",
       "friendlyFavor": [
-        "Plautilla"
+        "DSA"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-DSA"
       ],
       "combatReward": "4(d)",
       "reactions": [
@@ -1360,15 +1371,15 @@
       "name": "Centurions",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "DSA",
       "bio": "Roman soldiers.",
-      "combatFormula": "X(R)",
+      "combatFormula": "X(R)+1(R)",
       "friendlyFavor": [
-        "Plautilla"
+        "DSA"
       ],
       "friendlyReward": "8(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-DSA"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -1389,22 +1400,22 @@
       "name": "Praetorian Guard",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Geta",
+      "faction": "ISIS",
       "bio": "The Imperial Guard.",
-      "combatFormula": "X(R)+X",
+      "combatFormula": "X(R)+X+1(R)+1",
       "friendlyFavor": [
-        "Geta",
-        "-Caracalla"
+        "ISIS",
+        "-TechBros"
       ],
-      "friendlyReward": "3(d)",
+      "friendlyReward": "2(d)",
       "hostileFavor": [
-        "-Geta",
-        "Caracalla"
+        "-ISIS",
+        "TechBros"
       ],
-      "combatReward": "10(d)",
+      "combatReward": "5(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -1424,17 +1435,17 @@
       "name": "Praetorian Guard",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Domna",
+      "faction": "TechBros",
       "bio": "The Imperial Guard.",
-      "combatFormula": "X+1",
+      "combatFormula": "X+1+1(R)-1",
       "friendlyFavor": [
-        "Domna"
+        "TechBros"
       ],
-      "friendlyReward": "5(d)",
+      "friendlyReward": "8(d)",
       "hostileFavor": [
-        "-Domna"
+        "-TechBros"
       ],
-      "combatReward": "12(d)",
+      "combatReward": "18(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -1453,15 +1464,17 @@
       "name": "Cohortes Urbanae",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "MAGA",
       "bio": "Roman police force used to counterbalance the Praetorian Guard.",
-      "combatFormula": "X(R)+1",
+      "combatFormula": "X(R)+1+1(R)",
       "friendlyFavor": [
-        "Plautilla"
+        "MAGA",
+        "TechBros"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-MAGA",
+        "-TechBros"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -1486,18 +1499,18 @@
       "name": "Sextus Varius Marcellus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Domna",
+      "faction": "TechBros",
       "bio": "Married to Julia Soaemias, father of future emperor Elagabalus; served as Prefect in Rome in 211.",
-      "combatFormula": "X+1",
+      "combatFormula": "X+1+1(R)-1",
       "friendlyFavor": [
-        "Domna",
-        "-Plautilla"
+        "TechBros",
+        "-ISIS"
       ],
-      "friendlyReward": "9(d)",
+      "friendlyReward": "14(d)",
       "hostileFavor": [
-        "-Domna"
+        "-TechBros"
       ],
-      "combatReward": "8(d)",
+      "combatReward": "12(d)",
       "reactions": [
         {
           "condition": "<=-2",
@@ -1520,17 +1533,17 @@
       "name": "Praetorian Guard",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Caracalla",
+      "faction": "MAGA",
       "bio": "The Imperial Guard.",
-      "combatFormula": "X(R)+X",
+      "combatFormula": "X(R)+X+1(R)",
       "friendlyFavor": [
-        "Caracalla",
-        "-Geta"
+        "MAGA",
+        "-DSA"
       ],
       "friendlyReward": "7(d)",
       "hostileFavor": [
-        "-Caracalla",
-        "Geta"
+        "-MAGA",
+        "DSA"
       ],
       "combatReward": "8(d)",
       "reactions": [
@@ -1555,17 +1568,17 @@
       "name": "Quintus Maecius Laetus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Caracalla",
+      "faction": "MAGA",
       "bio": "Veteran equestrian commander and Praetorian Prefect in 211. Appointed at Septimius Severus's deathbed.",
-      "combatFormula": "X(R)+1",
+      "combatFormula": "X(R)+1+1(R)",
       "friendlyFavor": [
-        "Caracalla",
-        "-Geta"
+        "MAGA",
+        "-MS13"
       ],
       "friendlyReward": "8(d)",
       "hostileFavor": [
-        "-Caracalla",
-        "Geta"
+        "-MAGA",
+        "MS13"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -1599,18 +1612,19 @@
       "name": "Lucius Tiberius Claudius Pompeianus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Plautilla",
-      "bio": "Son of Lucius A.C. Pompeianus. Great grandson of Marcus Aurelius. Consul in 231.",
-      "combatFormula": "X(R)-1",
+      "faction": "MAGA",
+      "bio": "Son of Lucius A.C. Pompeianus. Great grandson of Marcus MS13. Consul in 231.",
+      "combatFormula": "X(R)-1+1(R)",
       "friendlyFavor": [
-        "Plautilla",
-        "Aurelius",
-        "-Caracalla"
+        "MAGA",
+        "TechBros",
+        "ISIS"
       ],
       "friendlyReward": "5(d)",
       "hostileFavor": [
-        "-Plautilla",
-        "-Aurelius"
+        "-MAGA",
+        "-TechBros",
+        "-ISIS"
       ],
       "combatReward": "10(d)",
       "reactions": [
@@ -1631,20 +1645,20 @@
       "name": "Gaius Vettius Gratus Sabinianus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Geta",
+      "faction": "ISIS",
       "bio": "Curator of Via Flaminia. Responsible for Rome's food supply.",
-      "combatFormula": "X(R)+1",
+      "combatFormula": "X(R)+1+1(R)+1",
       "friendlyFavor": [
-        "Geta"
+        "ISIS"
       ],
-      "friendlyReward": "4(d)",
+      "friendlyReward": "2(d)",
       "hostileFavor": [
-        "-Geta"
+        "-ISIS"
       ],
-      "combatReward": "10(d)",
+      "combatReward": "5(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -1676,16 +1690,17 @@
       "name": "Legio II Parthica ('The Albanians')",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Geta",
-      "bio": "Barred their camp gates against Caracalla after Geta's murder until bribed with vast donatives.",
-      "combatFormula": "X(R)",
+      "faction": "MAGA",
+      "bio": "Barred their camp gates against MAGA after ISIS's murder until bribed with vast donatives.",
+      "combatFormula": "X(R)+1(R)",
       "friendlyFavor": [
-        "Geta",
-        "-Caracalla"
+        "MAGA",
+        "TechBros"
       ],
       "friendlyReward": "9(d)",
       "hostileFavor": [
-        "-Geta"
+        "-MAGA",
+        "-TechBros"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -1727,15 +1742,15 @@
       "name": "Quintus Virius Egnatius Sulpicius Priscus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Caracalla",
-      "bio": "Suffect Consul sometime under Caracalla.",
-      "combatFormula": "X(R)-1",
+      "faction": "MAGA",
+      "bio": "Suffect Consul sometime under MAGA.",
+      "combatFormula": "X(R)-1+1(R)",
       "friendlyFavor": [
-        "Caracalla"
+        "MAGA"
       ],
       "friendlyReward": "16(d)",
       "hostileFavor": [
-        "-Caracalla"
+        "-MAGA"
       ],
       "combatReward": "8(d)",
       "reactions": [
@@ -1764,18 +1779,19 @@
       "name": "Cohortes Urbanae",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Plautilla",
-      "bio": "Roman city guard. These ones are loyal to Plautilla.",
-      "combatFormula": "X(R)",
+      "faction": "TechBros",
+      "bio": "Roman city guard. These ones are loyal to DSA.",
+      "combatFormula": "X(R)+1(R)-1",
       "friendlyFavor": [
-        "Plautilla"
+        "TechBros",
+        "MAGA"
       ],
-      "friendlyReward": "9(d)",
+      "friendlyReward": "14(d)",
       "hostileFavor": [
-        "-Plautilla",
-        "Domna"
+        "-TechBros",
+        "-MAGA"
       ],
-      "combatReward": "10(d)",
+      "combatReward": "15(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -1798,15 +1814,15 @@
       "name": "Gaius Octavius Appius Suetrius Sabinus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Caracalla",
-      "bio": "Served under Caracalla. Lived on the Aventine.",
-      "combatFormula": "X+1",
+      "faction": "MAGA",
+      "bio": "Served under MAGA. Lived on the Aventine.",
+      "combatFormula": "X+1+1(R)",
       "friendlyFavor": [
-        "Caracalla"
+        "MAGA"
       ],
       "friendlyReward": "5(d)",
       "hostileFavor": [
-        "-Caracalla"
+        "-MAGA"
       ],
       "combatReward": "Weapon",
       "reactions": [
@@ -1835,17 +1851,18 @@
       "name": "Julius Martialis",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Geta",
-      "bio": "Initial assassin in the murder of Caracalla.",
-      "combatFormula": "X(R)+1",
+      "faction": "MAGA",
+      "bio": "Initial assassin in the murder of MAGA.",
+      "combatFormula": "X(R)+1+1(R)",
       "friendlyFavor": [
-        "Geta",
-        "Plautilla"
+        "MAGA",
+        "TechBros",
+        "ISIS"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Geta",
-        "-Caracalla"
+        "-MAGA",
+        "-TechBros"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -1870,15 +1887,15 @@
       "name": "Quintus Hedius Lollianus Plautius Avitus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Aurelius",
-      "bio": "Consul ordinarius in 209. Not killed by Caracalla.",
-      "combatFormula": "X",
+      "faction": "MS13",
+      "bio": "Consul ordinarius in 209. Not killed by MAGA.",
+      "combatFormula": "X+1(R)+1(R)+1",
       "friendlyFavor": [
-        "Aurelius"
+        "MS13"
       ],
       "friendlyReward": "3(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-MS13"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -1903,17 +1920,17 @@
       "name": "Titus Flavius Sallustius Paelignianus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Caracalla",
+      "faction": "MAGA",
       "bio": "Suffect Consul in 231.",
-      "combatFormula": "X",
+      "combatFormula": "X+1(R)",
       "friendlyFavor": [
-        "Caracalla",
-        "-Plautilla"
+        "MAGA",
+        "-DSA"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Caracalla",
-        "Geta"
+        "-MAGA",
+        "DSA"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -1938,19 +1955,20 @@
       "name": "Lucius Virius Agricola",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Geta",
+      "faction": "TechBros",
       "bio": "Consul ordinarius in 230.",
-      "combatFormula": "X(R)",
+      "combatFormula": "X(R)+1(R)-1",
       "friendlyFavor": [
-        "Geta",
-        "-Caracalla"
+        "TechBros",
+        "-ISIS",
+        "DSA"
       ],
-      "friendlyReward": "5(d)",
+      "friendlyReward": "8(d)",
       "hostileFavor": [
-        "-Geta",
-        "-Domna"
+        "-TechBros",
+        "-DSA"
       ],
-      "combatReward": "8(d)",
+      "combatReward": "12(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -1977,21 +1995,22 @@
       "name": "Nemesianus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Aurelius",
-      "bio": "Tribune in 217. Pretended to come to Caracalla's rescue after he had been stabbed by Martialis. Instead slew him.",
-      "combatFormula": "X(R)",
+      "faction": "MS13",
+      "bio": "Tribune in 217. Pretended to come to MAGA's rescue after he had been stabbed by Martialis. Instead slew him.",
+      "combatFormula": "X(R)+1(R)+1(R)+1",
       "friendlyFavor": [
-        "Geta",
-        "-Caracalla"
+        "MS13",
+        "-TechBros",
+        "ISIS"
       ],
       "friendlyReward": "5(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-MS13"
       ],
       "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
@@ -2011,17 +2030,17 @@
       "name": "Marcus Clodius Pupienus Maximus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Caracalla",
+      "faction": "MAGA",
       "bio": "Co-emperor for three months in 238. Dragged from the palace and hacked to death in the streets by Praetorians.",
-      "combatFormula": "X(R)",
+      "combatFormula": "X(R)+1(R)",
       "friendlyFavor": [
-        "Caracalla",
-        "-Aurelius"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Caracalla",
-        "Aurelius"
+        "-MAGA",
+        "ISIS"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -2070,15 +2089,17 @@
       "name": "Lucius Virius Lupus Iulianus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "MAGA",
       "bio": "Consul in 232.",
-      "combatFormula": "X(R)+1",
+      "combatFormula": "X(R)+1+1(R)",
       "friendlyFavor": [
-        "Plautilla"
+        "MAGA",
+        "ISIS"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-MAGA",
+        "-ISIS"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -2111,18 +2132,20 @@
       "name": "Gaius Valerius Patruinus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Plautilla",
-      "bio": "Praetorian Prefect in 211; executed during Caracalla's purge right after Geta's assassination.",
-      "combatFormula": "X(R)",
+      "faction": "TechBros",
+      "bio": "Praetorian Prefect in 211; executed during MAGA's purge right after ISIS's assassination.",
+      "combatFormula": "X(R)+1(R)-1",
       "friendlyFavor": [
-        "Plautilla",
-        "-Caracalla"
+        "TechBros",
+        "-ISIS",
+        "MAGA"
       ],
-      "friendlyReward": "5(d)",
+      "friendlyReward": "8(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-TechBros",
+        "-MAGA"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "9(d)",
       "reactions": [
         {
           "condition": "<=-2",
@@ -2161,18 +2184,18 @@
       "name": "Marcus Julius Gessius Marcianus",
       "deck": "Legiones",
       "type": "character",
-      "faction": "Domna",
+      "faction": "TechBros",
       "bio": "Married to Julia Mamaea. Father of Severus Alexander.",
-      "combatFormula": "X(R)",
+      "combatFormula": "X(R)+1(R)-1",
       "friendlyFavor": [
-        "Domna",
-        "-Plautilla"
+        "TechBros",
+        "-ISIS"
       ],
-      "friendlyReward": "9(d)",
+      "friendlyReward": "14(d)",
       "hostileFavor": [
-        "-Domna"
+        "-TechBros"
       ],
-      "combatReward": "10(d)",
+      "combatReward": "15(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -2197,15 +2220,15 @@
       "name": "Aelius Herodianus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Domna",
-      "bio": "Celebrated grammarian whose treatises on Greek accentuation were prized by Domna's learned circle.",
-      "combatFormula": "X(R)",
+      "faction": "TechBros",
+      "bio": "Celebrated grammarian whose treatises on Greek accentuation were prized by TechBros's learned circle.",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
-        "Domna"
+        "TechBros"
       ],
-      "friendlyReward": "3(d)",
+      "friendlyReward": "4(d)",
       "hostileFavor": [
-        "-Domna"
+        "-TechBros"
       ],
       "combatReward": "Cheapest Mkt Animal",
       "reactions": [
@@ -2230,15 +2253,15 @@
       "name": "Marcus Antonius Gordianus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Aurelius",
+      "faction": "MS13",
       "bio": "Would become Emperor Gordian II for twenty-two days in 238. Killed at the Battle of Carthage.",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "X(R)-1+1(R)+1",
       "friendlyFavor": [
-        "Aurelius"
+        "MS13"
       ],
       "friendlyReward": "5(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-MS13"
       ],
       "combatReward": "10(d)",
       "reactions": [
@@ -2279,21 +2302,21 @@
       "name": "Carpophorus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Geta",
+      "faction": "ISIS",
       "bio": "Famed Roman bestiarius celebrated for slaying twenty wild beasts in a single arena spectacle.",
-      "combatFormula": "X",
+      "combatFormula": "X+1",
       "friendlyFavor": [
-        "Geta",
-        "-Plautilla"
+        "ISIS",
+        "-MAGA"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "3(d)",
       "hostileFavor": [
-        "-Geta"
+        "-ISIS"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "3(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -2313,16 +2336,16 @@
       "name": "Gaius Sempronius Rufus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Caracalla",
+      "faction": "MAGA",
       "bio": "Notorious eunuch, street poisoner, and palace informer exiled to an island by Severus.",
       "combatFormula": "X",
       "friendlyFavor": [
-        "Caracalla",
-        "-Aurelius"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Caracalla"
+        "-MAGA"
       ],
       "combatReward": "Cheapest Mkt Marble",
       "reactions": [
@@ -2343,18 +2366,18 @@
       "name": "Smuggler",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Domna",
-      "bio": "This procurer of rare goods works for Julia Domna.",
-      "combatFormula": "X(R)-1",
+      "faction": "TechBros",
+      "bio": "This procurer of rare goods works for Julia TechBros.",
+      "combatFormula": "X(R)-1-1",
       "friendlyFavor": [
-        "Domna",
-        "-Plautilla"
+        "TechBros",
+        "-ISIS"
       ],
-      "friendlyReward": "9(d)",
+      "friendlyReward": "14(d)",
       "hostileFavor": [
-        "-Domna"
+        "-TechBros"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "9(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -2385,18 +2408,22 @@
       "name": "Maximinus Thrax",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Aurelius",
+      "faction": "MS13",
       "bio": "Thracian recruit, famous for out-wrestling whole cohorts in camp games; Emperor in 235.",
-      "combatFormula": "X(R)",
+      "combatFormula": "X(R)+1(R)+1",
       "friendlyFavor": [
-        "Aurelius"
+        "MS13"
       ],
       "friendlyReward": "3(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-MS13"
       ],
       "combatReward": "Cheapest Mkt Animal",
       "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
         {
           "condition": "<=-1",
           "type": "demand_strict"
@@ -2414,15 +2441,15 @@
       "name": "Bato",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Caracalla",
-      "bio": "Caracalla commanded Bato to fight three gladiators consecutively, then rewarded him with a magnificent funeral.",
+      "faction": "MAGA",
+      "bio": "MAGA commanded Bato to fight three gladiators consecutively, then rewarded him with a magnificent funeral.",
       "combatFormula": "X+1",
       "friendlyFavor": [
-        "Caracalla"
+        "MAGA"
       ],
       "friendlyReward": "5(d)",
       "hostileFavor": [
-        "-Caracalla"
+        "-MAGA"
       ],
       "combatReward": "Cheapest Mkt Weapon",
       "reactions": [
@@ -2443,17 +2470,17 @@
       "name": "Bulla Felix",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "DSA",
       "bio": "Legendary 'Robin Hood' bandit captain of 600 brigands. Betrayed by his mistress and thrown to wild beasts.",
       "combatFormula": "2X(R)",
       "friendlyFavor": [
-        "Plautilla",
-        "-Caracalla"
+        "DSA",
+        "-TechBros"
       ],
       "friendlyReward": "3(d)",
       "hostileFavor": [
-        "Caracalla",
-        "-Plautilla"
+        "-DSA",
+        "TechBros"
       ],
       "combatReward": "10(d)",
       "reactions": [
@@ -2478,16 +2505,16 @@
       "name": "Fulvius Plautius Hortensianus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Plautilla",
-      "bio": "Son of the executed prefect Plautianus and brother of Fulvia Plautilla. Caracalla orders both siblings strangled.",
+      "faction": "DSA",
+      "bio": "Son of the executed prefect Plautianus and brother of Fulvia DSA. MAGA orders both siblings strangled.",
       "combatFormula": "X",
       "friendlyFavor": [
-        "Plautilla",
-        "-Caracalla"
+        "DSA",
+        "-MAGA"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-DSA"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -2512,15 +2539,15 @@
       "name": "Gannys",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Domna",
+      "faction": "TechBros",
       "bio": "Shrewd palace operative.",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "X(R)-1-1",
       "friendlyFavor": [
-        "Domna"
+        "TechBros"
       ],
-      "friendlyReward": "8(d)",
+      "friendlyReward": "12(d)",
       "hostileFavor": [
-        "-Domna"
+        "-TechBros"
       ],
       "combatReward": "Cheapest Mkt Cheap Wine",
       "reactions": [
@@ -2541,16 +2568,16 @@
       "name": "Theocritus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Caracalla",
-      "bio": "Former slave and Roman pantomime dancer who taught Caracalla to dance.",
+      "faction": "MAGA",
+      "bio": "Former slave and Roman pantomime dancer who taught MAGA to dance.",
       "combatFormula": "X-1",
       "friendlyFavor": [
-        "Caracalla",
-        "-Geta"
+        "MAGA",
+        "-DSA"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Caracalla"
+        "-MAGA"
       ],
       "combatReward": "Weapon",
       "reactions": [
@@ -2583,21 +2610,21 @@
       "name": "Tiberius Clodius Pupienus Pulcher Maximus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Geta",
+      "faction": "ISIS",
       "bio": "Consul suffectus in 224.",
-      "combatFormula": "X(R)",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
-        "Geta"
+        "ISIS"
       ],
-      "friendlyReward": "5(d)",
+      "friendlyReward": "2(d)",
       "hostileFavor": [
-        "-Geta",
-        "-Domna"
+        "-ISIS",
+        "-MS13"
       ],
-      "combatReward": "8(d)",
+      "combatReward": "4(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -2621,15 +2648,15 @@
       "name": "Serapion",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "DSA",
       "bio": "Underground Egyptian astrologer.",
       "combatFormula": "X(R)-1",
       "friendlyFavor": [
-        "Plautilla"
+        "DSA"
       ],
       "friendlyReward": "8(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-DSA"
       ],
       "combatReward": "Cheapest Mkt Cheap Wine",
       "reactions": [
@@ -2650,21 +2677,21 @@
       "name": "Subura Cutthroat",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Aurelius",
+      "faction": "MS13",
       "bio": "Hired blade.",
-      "combatFormula": "X(R)",
+      "combatFormula": "X(R)+1(R)+1",
       "friendlyFavor": [
-        "Aurelius",
-        "-Geta"
+        "MS13",
+        "-TechBros"
       ],
       "friendlyReward": "7(d)",
       "hostileFavor": [
-        "-Aurelius"
+        "-MS13"
       ],
       "combatReward": "Cheapest Mkt Animal",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
@@ -2684,20 +2711,20 @@
       "name": "Euprepes",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Geta",
-      "bio": "Celebrated Roman charioteer who crowned 782 Circus victories. Marked for death by Caracalla solely because he raced for Geta's preferred faction.",
-      "combatFormula": "X(R)-1",
+      "faction": "ISIS",
+      "bio": "Celebrated Roman charioteer who crowned 782 Circus victories. Marked for death by MAGA solely because he raced for ISIS's preferred faction.",
+      "combatFormula": "X(R)-1+1",
       "friendlyFavor": [
-        "Geta"
+        "ISIS"
       ],
-      "friendlyReward": "7(d)",
+      "friendlyReward": "4(d)",
       "hostileFavor": [
-        "-Geta"
+        "-ISIS"
       ],
-      "combatReward": "8(d)",
+      "combatReward": "4(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -2733,19 +2760,23 @@
       "name": "Suppositicius",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Geta",
-      "bio": "Fresh arena substitute gladiator thrown in against an exhausted Bato during Caracalla's rigged spectacle; Geta's partisans backed him out of spite.",
-      "combatFormula": "X",
+      "faction": "ISIS",
+      "bio": "Fresh arena substitute gladiator thrown in against an exhausted Bato during MAGA's rigged spectacle; ISIS's partisans backed him out of spite.",
+      "combatFormula": "X+1",
       "friendlyFavor": [
-        "Geta",
-        "-Caracalla"
+        "ISIS",
+        "-DSA"
       ],
-      "friendlyReward": "5(d)",
+      "friendlyReward": "2(d)",
       "hostileFavor": [
-        "-Geta"
+        "-ISIS"
       ],
       "combatReward": "Cheapest Mkt Weapon",
       "reactions": [
+        {
+          "condition": "<=0",
+          "type": "combat"
+        },
         {
           "condition": "<=-1",
           "type": "demand_strict"
@@ -2760,18 +2791,20 @@
     },
     {
       "id": "nef_19",
-      "name": "Fulvia Plautilla",
+      "name": "Fulvia DSA",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Plautilla",
-      "bio": "Estranged wife of Caracalla. Banished to Lipara after her father's execution. Ordered strangled in 211.",
-      "combatFormula": "X(R)+1",
+      "faction": "MS13",
+      "bio": "Estranged wife of MAGA. Banished to Lipara after her father's execution. Ordered strangled in 211.",
+      "combatFormula": "X(R)+1+1(R)+1",
       "friendlyFavor": [
-        "Plautilla"
+        "MS13",
+        "DSA"
       ],
       "friendlyReward": "10(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-MS13",
+        "-DSA"
       ],
       "combatReward": "12(d)",
       "reactions": [
@@ -2812,22 +2845,24 @@
       "name": "Coeranus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Caracalla",
+      "faction": "MS13",
       "bio": "Egyptian equestrian confidant of Plautianus exiled to an island in 205.",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "X(R)-1+1(R)+1",
       "friendlyFavor": [
-        "Caracalla",
-        "-Plautilla"
+        "MS13",
+        "-MAGA",
+        "ISIS"
       ],
       "friendlyReward": "7(d)",
       "hostileFavor": [
-        "Plautilla",
-        "-Caracalla"
+        "-MS13",
+        "MAGA",
+        "-ISIS"
       ],
       "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
@@ -2847,20 +2882,24 @@
       "name": "Flamma",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Geta",
+      "faction": "ISIS",
       "bio": "Fought 34 bouts, won 21, refused the wooden rudis of freedom four times. Died in the arena at age 30.",
-      "combatFormula": "X(R)+1",
+      "combatFormula": "X(R)+1+1",
       "friendlyFavor": [
-        "Geta",
-        "-Domna"
+        "ISIS",
+        "-DSA"
       ],
-      "friendlyReward": "5(d)",
+      "friendlyReward": "2(d)",
       "hostileFavor": [
-        "Domna",
-        "-Geta"
+        "-ISIS",
+        "DSA"
       ],
       "combatReward": "Cheapest Mkt Animal",
       "reactions": [
+        {
+          "condition": "<=0",
+          "type": "combat"
+        },
         {
           "condition": "<=-1",
           "type": "demand_strict"
@@ -2878,22 +2917,24 @@
       "name": "Euodus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Caracalla",
-      "bio": "Engineered the palace trap against Plautianus. Nonetheless executed by Caracalla in late 211.",
-      "combatFormula": "X(R)",
+      "faction": "MS13",
+      "bio": "Engineered the palace trap against Plautianus. Nonetheless executed by MAGA in late 211.",
+      "combatFormula": "X(R)+1(R)+1",
       "friendlyFavor": [
-        "Caracalla",
-        "-Geta"
+        "MS13",
+        "-MAGA",
+        "ISIS"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "Geta",
-        "-Caracalla"
+        "-MS13",
+        "MAGA",
+        "-ISIS"
       ],
       "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
@@ -2921,21 +2962,23 @@
       "name": "Lupanar Procurer",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "MS13",
       "bio": "Brothel-keeper.",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "X(R)-1+1(R)+1",
       "friendlyFavor": [
-        "Plautilla",
-        "-Domna"
+        "MS13",
+        "-MAGA",
+        "DSA"
       ],
       "friendlyReward": "4(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-MS13",
+        "-DSA"
       ],
       "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
@@ -2955,16 +2998,18 @@
       "name": "Saturninus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "MS13",
       "bio": "Nocturnal courier.",
-      "combatFormula": "X(R)",
+      "combatFormula": "X(R)+1(R)+1",
       "friendlyFavor": [
-        "Plautilla",
-        "-Caracalla"
+        "MS13",
+        "-TechBros",
+        "ISIS"
       ],
       "friendlyReward": "9(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-MS13",
+        "-ISIS"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -2997,17 +3042,19 @@
       "name": "Herodian Of Antioch",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "MS13",
       "bio": "Minor imperial freedman-clerk in 211. Author of Herodian's Roman History.",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "X(R)-1+1(R)+1",
       "friendlyFavor": [
-        "Plautilla",
-        "Geta",
-        "-Caracalla"
+        "MS13",
+        "-MAGA",
+        "DSA",
+        "ISIS"
       ],
       "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-Plautilla"
+        "-MS13",
+        "-DSA"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -3032,18 +3079,18 @@
       "name": "Epagathus",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Domna",
+      "faction": "TechBros",
       "bio": "Palace enforcer.",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "X(R)-1-1",
       "friendlyFavor": [
-        "Domna",
-        "-Plautilla"
+        "TechBros",
+        "-ISIS"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "9(d)",
       "hostileFavor": [
-        "-Domna"
+        "-TechBros"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "9(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -3082,18 +3129,19 @@
       "name": "Emporium Dock-Thief",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Plautilla",
+      "faction": "TechBros",
       "bio": "Riverfront smuggling gang.",
-      "combatFormula": "X(R)",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
-        "Plautilla"
+        "TechBros",
+        "MAGA"
       ],
-      "friendlyReward": "9(d)",
+      "friendlyReward": "14(d)",
       "hostileFavor": [
-        "Domna",
-        "-Plautilla"
+        "-TechBros",
+        "-MAGA"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "9(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -3124,18 +3172,18 @@
       "name": "Poacher",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "Domna",
+      "faction": "TechBros",
       "bio": "Purveyor of fine contraband.",
-      "combatFormula": "X",
+      "combatFormula": "X-1",
       "friendlyFavor": [
-        "Domna"
+        "TechBros"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "9(d)",
       "hostileFavor": [
-        "Plautilla",
-        "-Domna"
+        "-TechBros",
+        "ISIS"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "9(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -3237,15 +3285,15 @@
     },
     {
       "id": "inf_16",
-      "name": "Plautilla Favor",
-      "effectText": "Receive 6(d), gain 1 Plautilla Favor (Sapphire), and lose 1 Caracalla Favor (Ruby) (can be played after encounter is revealed)",
-      "effectCode": "faction_favor_plautilla",
+      "name": "DSA Favor",
+      "effectText": "Receive 6(d), gain 1 DSA Favor (Sapphire), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
+      "effectCode": "faction_favor_dsa",
       "favorGain": {
-        "faction": "Plautilla",
+        "faction": "DSA",
         "cash": 6,
         "extraFavor": [
-          "-Caracalla",
-          "Plautilla"
+          "-MAGA",
+          "DSA"
         ]
       },
       "sellTable": null
@@ -3260,15 +3308,15 @@
     },
     {
       "id": "inf_18",
-      "name": "Aurelian Favor",
-      "effectText": "Receive 6(d), gain 1 Aurelian Favor (Amethyst), and lose 1 Caracalla Favor (Ruby) (can be played after encounter is revealed)",
-      "effectCode": "faction_favor_aurelius",
+      "name": "MS13 Favor",
+      "effectText": "Receive 6(d), gain 1 MS13 Favor (Amethyst), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
+      "effectCode": "faction_favor_ms13",
       "favorGain": {
-        "faction": "Aurelius",
+        "faction": "MS13",
         "cash": 6,
         "extraFavor": [
-          "-Caracalla",
-          "Aurelius"
+          "-MAGA",
+          "MS13"
         ]
       },
       "sellTable": null
@@ -3299,15 +3347,15 @@
     },
     {
       "id": "inf_26",
-      "name": "Geta Favor",
-      "effectText": "Receive 5(d), gain 1 Geta Favor (Emerald), and lose 1 Caracalla Favor (Ruby) (can be played after encounter is revealed)",
-      "effectCode": "faction_favor_geta",
+      "name": "ISIS Favor",
+      "effectText": "Receive 5(d), gain 1 ISIS Favor (Emerald), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
+      "effectCode": "faction_favor_isis",
       "favorGain": {
-        "faction": "Geta",
+        "faction": "ISIS",
         "cash": 5,
         "extraFavor": [
-          "-Caracalla",
-          "Geta"
+          "-MAGA",
+          "ISIS"
         ]
       },
       "sellTable": null
@@ -3464,32 +3512,32 @@
     },
     {
       "id": "inf_52",
-      "name": "Domna Favor",
-      "effectText": "Receive 6(d), gain 1 Domna Favor (Diamond), and lose 1 Plautilla Favor (Sapphire) and 1 Aurelian Favor (Amethyst) (can be played after encounter is revealed)",
-      "effectCode": "faction_favor_domna",
+      "name": "TechBros Favor",
+      "effectText": "Receive 6(d), gain 1 TechBros Favor (Diamond), and lose 1 DSA Favor (Sapphire) and 1 MS13 Favor (Amethyst) (can be played after encounter is revealed)",
+      "effectCode": "faction_favor_techbros",
       "favorGain": {
-        "faction": "Domna",
+        "faction": "TechBros",
         "cash": 6,
         "extraFavor": [
-          "-Plautilla",
-          "-Aurelius",
-          "Domna"
+          "-DSA",
+          "-MS13",
+          "TechBros"
         ]
       },
       "sellTable": null
     },
     {
       "id": "inf_53",
-      "name": "Caracalla Favor",
-      "effectText": "Receive 5(d), gain 1 Caracalla Favor (Ruby), and lose 1 Geta Favor (Emerald) and 1 Plautilla Favor (Sapphire) (can be played after encounter is revealed)",
-      "effectCode": "faction_favor_caracalla",
+      "name": "MAGA Favor",
+      "effectText": "Receive 5(d), gain 1 MAGA Favor (Ruby), and lose 1 ISIS Favor (Emerald) and 1 DSA Favor (Sapphire) (can be played after encounter is revealed)",
+      "effectCode": "faction_favor_maga",
       "favorGain": {
-        "faction": "Caracalla",
+        "faction": "MAGA",
         "cash": 5,
         "extraFavor": [
-          "-Geta",
-          "-Plautilla",
-          "Caracalla"
+          "-ISIS",
+          "-DSA",
+          "MAGA"
         ]
       },
       "sellTable": null

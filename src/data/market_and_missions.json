@@ -2089,7 +2089,7 @@
         "mode": "any"
       },
       "favor": [
-        "Domna"
+        "TechBros"
       ],
       "text": "Sell Marble at -- Scarcity in D1 (Horti Sallustiani)."
     },
@@ -2131,13 +2131,13 @@
       "category": "Marble",
       "modifier": "+",
       "cell": "A1",
-      "rewardText": "Caracalla & Domna Favor",
+      "rewardText": "MAGA & TechBros Favor",
       "reward": {
         "type": "none"
       },
       "favor": [
-        "Caracalla",
-        "Domna"
+        "MAGA",
+        "TechBros"
       ],
       "text": "Sell Marble at + Scarcity in A1 (Mausoleum Hadriani)."
     },
@@ -2148,13 +2148,13 @@
       "category": "Cheap Wine",
       "modifier": "++",
       "cell": "D4",
-      "rewardText": "Geta Favor (-Domna)",
+      "rewardText": "ISIS Favor (-TechBros)",
       "reward": {
         "type": "none"
       },
       "favor": [
-        "-Domna",
-        "Geta"
+        "-TechBros",
+        "ISIS"
       ],
       "text": "Sell Cheap Wine at ++ Scarcity in D4 (Forum Vespasiani)."
     },
@@ -2171,7 +2171,7 @@
         "count": 1
       },
       "favor": [
-        "Plautilla"
+        "DSA"
       ],
       "text": "Sell Grain at = Scarcity in B4 (Trans Tiberim)."
     },
@@ -2188,7 +2188,7 @@
         "count": 1
       },
       "favor": [
-        "Plautilla"
+        "DSA"
       ],
       "text": "Sell Grain at -- Scarcity in E2 (Subura)."
     },
@@ -2205,7 +2205,7 @@
         "amount": 16
       },
       "favor": [
-        "Domna"
+        "TechBros"
       ],
       "text": "Expose 4 Patricii (4 individual saffron Patricii icons visible on exposed tiles)"
     },
@@ -2222,7 +2222,7 @@
         "count": 1
       },
       "favor": [
-        "Plautilla"
+        "DSA"
       ],
       "text": "Sell Cheap Wine at = Scarcity in C6 (Remuria / Aventinus Minor)."
     },
@@ -2277,8 +2277,8 @@
         "type": "top_good"
       },
       "favor": [
-        "Caracalla",
-        "Geta"
+        "MAGA",
+        "ISIS"
       ],
       "text": "Sell Exotic Animals at - Scarcity in A2 (Circus Agonalis)."
     },
@@ -2295,7 +2295,7 @@
         "count": 1
       },
       "favor": [
-        "Aurelius"
+        "MS13"
       ],
       "text": "Sell Meat Animals at + Scarcity in C2 (Saepta Julia)."
     },
@@ -2329,7 +2329,7 @@
         "mode": "cheapest"
       },
       "favor": [
-        "Geta"
+        "ISIS"
       ],
       "text": "Sell Meat Animals at - Scarcity in E1 (Via Nomentana)."
     },
@@ -2372,7 +2372,7 @@
         "mode": "cheapest"
       },
       "favor": [
-        "Aurelius"
+        "MS13"
       ],
       "text": "Sell Weapons at -- Scarcity in A4 (Via Aurelia)."
     },
@@ -2414,13 +2414,13 @@
       "category": "Exotic Animals",
       "modifier": "+",
       "cell": "B3",
-      "rewardText": "Caracalla & Geta Favor",
+      "rewardText": "MAGA & ISIS Favor",
       "reward": {
         "type": "none"
       },
       "favor": [
-        "Caracalla",
-        "Geta"
+        "MAGA",
+        "ISIS"
       ],
       "text": "Sell Exotic Animals at + Scarcity in B3 (Circus Flaminius)."
     },
@@ -2479,8 +2479,8 @@
         "mode": "cheapest"
       },
       "favor": [
-        "-Caracalla",
-        "Aurelius"
+        "-MAGA",
+        "MS13"
       ],
       "text": "Pick up Opimian (Fine Wine • 1■) in D3 (Forum Augustum), Deliver to B5 (Collis Aventinus). [Fenced Sell: 80/60/40/30/15]"
     },
@@ -2499,7 +2499,7 @@
         "mode": "any"
       },
       "favor": [
-        "Plautilla"
+        "DSA"
       ],
       "text": "Sell Weapons at - Scarcity in B1 (Via Flaminia)."
     },
@@ -2517,7 +2517,7 @@
         "mode": "any"
       },
       "favor": [
-        "Caracalla"
+        "MAGA"
       ],
       "text": "Kill a Nefarius in Combat"
     },
@@ -2575,8 +2575,8 @@
         "mode": "priciest"
       },
       "favor": [
-        "-Geta",
-        "Caracalla"
+        "-ISIS",
+        "MAGA"
       ],
       "text": "Pick up Imperial Porphyry (Marble • 2■) in F3 (Via Tiburtina), Deliver to B2 (Pantheum / Thermae Neronianae). [Fenced Sell: 76/52/31/23/13]"
     },
@@ -2594,8 +2594,8 @@
         "mode": "any"
       },
       "favor": [
-        "Caracalla",
-        "Geta"
+        "MAGA",
+        "ISIS"
       ],
       "text": "Sell Exotic Animals at = Scarcity in C5 (Circus Maximus)."
     },
@@ -2612,8 +2612,8 @@
         "amount": 40
       },
       "favor": [
-        "Caracalla",
-        "Geta"
+        "MAGA",
+        "ISIS"
       ],
       "text": "Expose 12 Legiones (12 individual red Legiones icons visible on exposed tiles)"
     },
@@ -2648,12 +2648,12 @@
       "category": "Marble",
       "modifier": "=",
       "cell": "D6",
-      "rewardText": "Caracalla Favor",
+      "rewardText": "MAGA Favor",
       "reward": {
         "type": "none"
       },
       "favor": [
-        "Caracalla"
+        "MAGA"
       ],
       "text": "Sell Marble at = Scarcity in D6 (Thermae Antoninianae)."
     },
@@ -2688,13 +2688,13 @@
       "category": "Weapons",
       "modifier": "++",
       "cell": "E4",
-      "rewardText": "Caracalla Favor (-Plautilla)",
+      "rewardText": "MAGA Favor (-DSA)",
       "reward": {
         "type": "none"
       },
       "favor": [
-        "-Plautilla",
-        "Caracalla"
+        "-DSA",
+        "MAGA"
       ],
       "text": "Sell Weapons at ++ Scarcity in E4 (Amphitheatrum Flavium)."
     },
@@ -2735,7 +2735,7 @@
         "amount": 6
       },
       "favor": [
-        "Geta"
+        "ISIS"
       ],
       "text": "Sell Meat Animals at = Scarcity in E6 (Caeliolus)."
     },
@@ -2752,8 +2752,8 @@
         "amount": 2
       },
       "favor": [
-        "-Caracalla",
-        "Geta"
+        "-MAGA",
+        "ISIS"
       ],
       "text": "Sell Grain at ++ Scarcity in D3 (Forum Augustum)."
     },
@@ -2761,13 +2761,13 @@
       "id": "mis_34",
       "name": "Regicide",
       "kind": "kill_emperor",
-      "description": "Kill the Emperor (Completed if either Geta or Caracalla is killed by any Player)",
+      "description": "Kill the Emperor (Completed if either ISIS or MAGA is killed by any Player)",
       "rewardText": "You Win The Game",
       "reward": {
         "type": "win_game"
       },
       "favor": [],
-      "text": "Kill the Emperor (Completed if either Geta or Caracalla is killed by any Player)"
+      "text": "Kill the Emperor (Completed if either ISIS or MAGA is killed by any Player)"
     },
     {
       "id": "mis_35",
@@ -2831,7 +2831,7 @@
         "mode": "cheapest"
       },
       "favor": [
-        "Plautilla"
+        "DSA"
       ],
       "text": "Kill a Legionary in Combat"
     },
@@ -2875,7 +2875,7 @@
         "mode": "cheapest"
       },
       "favor": [
-        "Aurelius"
+        "MS13"
       ],
       "text": "Sell Weapons at = Scarcity in B6 (Via Ostiensis)."
     },
@@ -2894,7 +2894,7 @@
         "mode": "cheapest"
       },
       "favor": [
-        "Aurelius"
+        "MS13"
       ],
       "text": "Sell Fine Wine at - Scarcity in A5 (Horti Caesaris)."
     },
@@ -2911,7 +2911,7 @@
         "amount": 26
       },
       "favor": [
-        "Plautilla"
+        "DSA"
       ],
       "text": "Expose 8 Nefarii (8 individual black Nefarii icons visible on exposed tiles)"
     },
@@ -2930,7 +2930,7 @@
         "mode": "any"
       },
       "favor": [
-        "Domna"
+        "TechBros"
       ],
       "text": "Sell Marble at - Scarcity in E3 (Thermae Traiani)."
     },
@@ -2972,7 +2972,7 @@
         "count": 1
       },
       "favor": [
-        "Aurelius"
+        "MS13"
       ],
       "text": "Sell Fine Wine at = Scarcity in F4 (Collis Esquilinus)."
     },
@@ -2991,7 +2991,7 @@
         "mode": "cheapest"
       },
       "favor": [
-        "Plautilla"
+        "DSA"
       ],
       "text": "Sell Weapons at + Scarcity in E5 (Sucusa)."
     },
@@ -3002,12 +3002,12 @@
       "category": "Fine Wine",
       "modifier": "+",
       "cell": "D5",
-      "rewardText": "Geta Favor",
+      "rewardText": "ISIS Favor",
       "reward": {
         "type": "none"
       },
       "favor": [
-        "Geta"
+        "ISIS"
       ],
       "text": "Sell Fine Wine at + Scarcity in D5 (Mons Palatinus)."
     },
@@ -3034,8 +3034,8 @@
         "mode": "cheapest"
       },
       "favor": [
-        "-Plautilla",
-        "Caracalla"
+        "-DSA",
+        "MAGA"
       ],
       "text": "Pick up Hadrianum (Fine Wine • 1■) in C3 (Forum Traiani), Deliver to F2 (Collis Viminalis). [Fenced Sell: 74/48/34/24/14]"
     },
@@ -3052,7 +3052,7 @@
         "amount": 2
       },
       "favor": [
-        "Geta"
+        "ISIS"
       ],
       "text": "Sell Cheap Wine at + Scarcity in A3 (Theatrum Pompeii)."
     },
@@ -3069,7 +3069,7 @@
         "count": 1
       },
       "favor": [
-        "Caracalla"
+        "MAGA"
       ],
       "text": "Kill a Patricius in Combat"
     },
@@ -3092,14 +3092,14 @@
       "id": "mis_51",
       "name": "Regime Change",
       "kind": "kill_emperor_cancel",
-      "description": "Kill the Emperor (Completed if either Geta or Caracalla is killed by any Player)",
+      "description": "Kill the Emperor (Completed if either ISIS or MAGA is killed by any Player)",
       "rewardText": "20(d) & Cancels all active regicide missions",
       "reward": {
         "type": "regime_change",
         "amount": 20
       },
       "favor": [],
-      "text": "Kill the Emperor (Completed if either Geta or Caracalla is killed by any Player)"
+      "text": "Kill the Emperor (Completed if either ISIS or MAGA is killed by any Player)"
     },
     {
       "id": "mis_52",
@@ -3153,8 +3153,8 @@
         "amount": 8
       },
       "favor": [
-        "Domna",
-        "Geta"
+        "TechBros",
+        "ISIS"
       ],
       "text": "Sell Marble at + Scarcity in A1 (Mausoleum Hadriani)."
     },
@@ -3181,7 +3181,7 @@
         "count": 1
       },
       "favor": [
-        "Caracalla"
+        "MAGA"
       ],
       "text": "Pick up Hadrianum (Fine Wine • 1■) in F5 (Amphitheatrum Castrense), Deliver to A1 (Mausoleum Hadriani). [Fenced Sell: 44/28/18/12/7]"
     }

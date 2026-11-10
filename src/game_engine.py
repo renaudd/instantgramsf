@@ -15,8 +15,20 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
 ROME_DIE_FACES = [0, 0, 1, 1, 2, 3]
 
-GATE_CELLS = ["B1", "E1", "F3", "F6", "B6", "A4"]
-FORUM_CELLS = ["C3", "D3", "D4"]
+# Free Parking: San Francisco has exactly five road entry points (the "gates").
+# Each gate cell's only off-board edge is its highway/bridge; every other
+# perimeter edge is a boat escape (or a free southern road out of town).
+GATE_CELLS = ["B1", "F1", "F5", "D6", "A5"]
+GATE_EXITS: Dict[str, Dict[str, str]] = {
+    "B1": {"dir": "N", "name": "Golden Gate Bridge"},
+    "F1": {"dir": "E", "name": "Bay Bridge"},
+    "F5": {"dir": "E", "name": "US-101"},
+    "D6": {"dir": "S", "name": "I-280"},
+    "A5": {"dir": "W", "name": "Highway 1"},
+}
+FORUM_CELLS = ["D3", "E3", "D4"]
+# Bots head for a gate or the southern (Peninsula) edge, where most exits are free.
+BOT_EXIT_TARGET_CELLS = GATE_CELLS + ["A6", "B6", "C6", "E6", "F6"]
 
 COLS = ["A", "B", "C", "D", "E", "F"]
 ROWS = ["1", "2", "3", "4", "5", "6"]
@@ -28,53 +40,40 @@ ALL_CELLS = [
     for c in COLS
 ]
 
-WEST_BANK_CELLS = {"A1", "A4", "B4", "A5"}
-TIBER_BRIDGE_NAMES = {
-    frozenset({"A1", "B1"}): "Pons Aelius",
-    frozenset({"A1", "A2"}): "Pons Neronianus",
-    frozenset({"A3", "A4"}): "Pons Agrippae",
-    frozenset({"B4", "C4"}): "Pons Fabricius",
-    frozenset({"B4", "B5"}): "Pons Aemilius",
-}
+# San Francisco has no Tiber: these stay empty so the legacy river helpers are no-ops.
+WEST_BANK_CELLS: set = set()
+TIBER_BRIDGE_NAMES: Dict[frozenset, str] = {}
 TIBER_BRIDGES = set(TIBER_BRIDGE_NAMES.keys())
 
-_B1_CANONICAL_WEST_ROUTES: Dict[int, str] = {
-    1: "green",
-    2: "toll_2",
-    3: "green",
-    4: "legiones_1",
-    5: "green",
-    6: "red",
-    7: "toll_2",
-    8: "green",
-    9: "soothsayer",
-    10: "green",
-    11: "red",
-}
+# Off-board escape labels by toll amount (in Denarii; 1 Denarius = 0.1 BTC).
+BOAT_ESCAPE_LABELS = {1: "Sailboat", 2: "Ferry", 3: "Cargo Ship"}
+SPEEDBOAT_MIN_TOLL = 6
 
-_A1_CANONICAL_EAST_ROUTES: Dict[int, str] = {
-    1: "green",
-    2: "toll_2",
-    3: "green",
-    4: "red",
-    5: "legiones_1",
-    6: "green",
-    7: "toll_2",
-    8: "nefarii_1",
-    9: "red",
-    10: "green",
-    11: "mob",
-}
+
+def describe_exit(from_cell: Optional[str], direction: Optional[str], edge_val: Optional[str]) -> str:
+    """Human-readable name for leaving San Francisco across an off-board edge."""
+    gate = GATE_EXITS.get(str(from_cell or ""))
+    if gate and (direction is None or direction == gate["dir"]):
+        return gate["name"]
+    m = re.match(r"^toll_(\d+)$", str(edge_val or ""))
+    if m:
+        amt = int(m.group(1))
+        if amt >= SPEEDBOAT_MIN_TOLL:
+            return "Speedboat"
+        return BOAT_ESCAPE_LABELS.get(amt, "Boat")
+    if direction in ("S", "SE", "SW"):
+        return "Peninsula Surface Streets"
+    return "Back Roads"
 
 MAX_GAMBLE_WAGER = 20
 
 NEIGHBORHOOD_NAMES = {
-    "A1": "Mausoleum Hadriani", "B1": "Via Flaminia", "C1": "Mons Pincius", "D1": "Horti Sallustiani", "E1": "Via Nomentana", "F1": "Castra Praetoria",
-    "A2": "Circus Agonalis", "B2": "Thermae Neronianae", "C2": "Saepta Julia", "D2": "Collis Quirinalis", "E2": "Subura", "F2": "Collis Viminalis",
-    "A3": "Theatrum Pompeii", "B3": "Circus Flaminius", "C3": "Forum Traiani", "D3": "Forum Augustum", "E3": "Thermae Traiani", "F3": "Via Tiburtina",
-    "A4": "Via Aurelia", "B4": "Trans Tiberim", "C4": "Mons Capitolinus", "D4": "Forum Vespasiani", "E4": "Amphitheatrum Flavium", "F4": "Collis Esquilinus",
-    "A5": "Horti Caesaris", "B5": "Aventinus Major", "C5": "Circus Maximus", "D5": "Mons Palatinus", "E5": "Sucusa", "F5": "Amphitheatrum Castrense",
-    "A6": "Mons Testaceus", "B6": "Via Ostiensis", "C6": "Aventinus Minor", "D6": "Thermae Antoninianae", "E6": "Caeliolus", "F6": "Via Tusculana",
+    "A1": "Lands End", "B1": "Presidio", "C1": "Marina", "D1": "Fisherman's Wharf", "E1": "Embarcadero", "F1": "Rincon Hill",
+    "A2": "Outer Richmond", "B2": "Inner Richmond", "C2": "Pacific Heights", "D2": "North Beach", "E2": "Financial District", "F2": "Ball Park",
+    "A3": "Golden Gate Park", "B3": "Haight-Ashbury", "C3": "Fillmore", "D3": "Tenderloin", "E3": "SoMa", "F3": "Mission Bay",
+    "A4": "Sunset", "B4": "Twin Peaks", "C4": "Noe Valley", "D4": "Mission", "E4": "Potrero Hill", "F4": "Dogpatch",
+    "A5": "Merced", "B5": "West Portal", "C5": "Glen Park", "D5": "Bernal Heights", "E5": "Portola", "F5": "Hunters Point",
+    "A6": "Daly City", "B6": "Ocean View", "C6": "Ingleside", "D6": "Outer Mission", "E6": "Excelsior", "F6": "Visitacion Valley",
 }
 
 DIR_DELTAS = {
@@ -217,11 +216,15 @@ def is_tiber_crossing_blocked(from_cell: Optional[str], target_cell: Optional[st
 
 
 def get_tiber_bridge_name(from_cell: Optional[str], target_cell: Optional[str]) -> Optional[str]:
+    """Free Parking: returns the Bridge/Freeway name when leaving SF through one of the
+    five gate exits (gate cells have no other off-board edges). Used by the ISIS
+    'Threat Level Red' checkpoint decree (isis_3)."""
     src = normalize_cell_id(from_cell)
     dst = normalize_cell_id(target_cell)
-    if not src or not dst:
+    if not src or dst:
         return None
-    return TIBER_BRIDGE_NAMES.get(frozenset({src, dst}))
+    gate = GATE_EXITS.get(src)
+    return gate["name"] if gate else None
 
 
 def get_effective_tile_edges(coord: str, tile: Optional[Dict[str, Any]]) -> Dict[str, Any]:
@@ -232,32 +235,6 @@ def get_effective_tile_edges(coord: str, tile: Optional[Dict[str, Any]]) -> Dict
     if tile.get("refresh") and idx == 12 and src not in FORUM_CELLS:
         return {}
     edges = dict(tile.get("edges") or {})
-    tid = str(tile.get("id") or "")
-    if tid in ("AII9", "AV9", "A2_9", "A5_9") and "W" in edges:
-        del edges["W"]
-    if tid in ("FVI4", "F6_4") and "S" in edges:
-        del edges["S"]
-    if src == "A2" and "NW" in edges:
-        edges["N"] = edges.pop("NW")
-    if src == "B1" and idx in _B1_CANONICAL_WEST_ROUTES and "W" not in edges:
-        edges["W"] = _B1_CANONICAL_WEST_ROUTES[idx]
-    if src == "A1":
-        if "N" in edges and "W" in edges:
-            del edges["N"]
-        if idx in _A1_CANONICAL_EAST_ROUTES and "SE" in tile.get("edges", {}):
-            # Upgrade legacy pre-Pons-Milvius saved tiles that had E: red + SE: red
-            edges["E"] = _A1_CANONICAL_EAST_ROUTES[idx]
-    if len(src) == 2 and src[0] in COLS and src[1] in ROWS:
-        ci = COLS.index(src[0])
-        ri = ROWS.index(src[1])
-        for d in ("NE", "SE", "SW", "NW"):
-            if d in edges:
-                nc = ci + DIR_DELTAS[d][0]
-                nr = ri + DIR_DELTAS[d][1]
-                if 0 <= nc < len(COLS) and 0 <= nr < len(ROWS):
-                    tc = f"{COLS[nc]}{ROWS[nr]}"
-                    if (src in WEST_BANK_CELLS) != (tc in WEST_BANK_CELLS):
-                        del edges[d]
     return edges
 
 
@@ -274,221 +251,215 @@ TURN_HOURS = [
     "Turn 10 — 5:00 A.M. - 6:00 A.M. (Sunrise)",
 ]
 
-FACTIONS = ["Caracalla", "Geta", "Domna", "Plautilla", "Aurelius"]
+FACTIONS = ["MAGA", "ISIS", "TechBros", "DSA", "MS13"]
 
 POLITICAL_CLIMATE_FACTORS: List[Dict[str, Any]] = [
-    {"id": "Caracalla", "label": "Caracalla", "gemName": "Ruby", "subtitle": "Severan Co-Emperor"},
-    {"id": "Geta", "label": "Geta", "gemName": "Emerald", "subtitle": "Rival Co-Emperor"},
-    {"id": "Domna", "label": "Julia Domna", "gemName": "Diamond", "subtitle": "Empress Mother"},
-    {"id": "Plautilla", "label": "Plautilla", "gemName": "Sapphire", "subtitle": "Exiled Augusta"},
-    {"id": "Aurelius", "label": "Aurelians", "gemName": "Amethyst", "subtitle": "Old Senate Dynasty"},
-    {"id": "Missions", "label": "Missions", "gemName": "Contracts", "subtitle": "Collegia & Patrons"},
+    {"id": "MAGA", "label": "MAGA", "gemName": "Ruby", "subtitle": "Make America Great Again"},
+    {"id": "ISIS", "label": "ISIS", "gemName": "Emerald", "subtitle": "Islamic State Sleeper Cells"},
+    {"id": "TechBros", "label": "Tech Bros", "gemName": "Diamond", "subtitle": "Silicon Valley Money"},
+    {"id": "DSA", "label": "DSA", "gemName": "Sapphire", "subtitle": "Democratic Socialists of America"},
+    {"id": "MS13", "label": "MS-13", "gemName": "Amethyst", "subtitle": "Mara Salvatrucha"},
+    {"id": "Missions", "label": "Gigs", "gemName": "Contracts", "subtitle": "Gig Economy"},
 ]
 
 POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
-    # Caracalla (Ruby)
     {
-        "id": "caracalla_1",
-        "factor": "Caracalla",
-        "factorLabel": "Caracalla",
+        "id": "maga_1",
+        "factor": "MAGA",
+        "factorLabel": "MAGA",
         "gemName": "Ruby",
         "optionNumber": 1,
         "timing": "endgame",
-        "title": "Imperial Proscription",
-        "shortText": "Least Caracalla favor is eliminated",
-        "description": "End of game: Least Caracalla favor is eliminated.",
+        "title": "Mass Deportation",
+        "shortText": "Least MAGA favor is eliminated",
+        "description": "End of game (resolves FIRST): the player with the Least MAGA favor is deported — eliminated.",
     },
     {
-        "id": "caracalla_2",
-        "factor": "Caracalla",
-        "factorLabel": "Caracalla",
+        "id": "maga_2",
+        "factor": "MAGA",
+        "factorLabel": "MAGA",
         "gemName": "Ruby",
         "optionNumber": 2,
         "timing": "endgame",
-        "title": "Praetorian Backlash",
+        "title": "Recall Election",
         "shortText": "-10d per +Ruby; +5d per -Ruby",
-        "description": "End of game: Lose 10d per +Ruby; gain 5d per -Ruby.",
+        "description": "End of game: San Francisco voters punish MAGA ties. Lose 10d per +Ruby; gain 5d per -Ruby.",
     },
     {
-        "id": "caracalla_3",
-        "factor": "Caracalla",
-        "factorLabel": "Caracalla",
+        "id": "maga_3",
+        "factor": "MAGA",
+        "factorLabel": "MAGA",
         "gemName": "Ruby",
         "optionNumber": 3,
         "timing": "midgame",
-        "title": "Army Pay Hike",
-        "shortText": "Legiones +2 CP; +1 CP per +Ruby",
-        "description": "Legiones gain +2 CP. Each +Ruby gives your Cart +1 CP.",
+        "title": "Back the Blue",
+        "shortText": "Cops +2 CP; +1 CP per +Ruby",
+        "description": "Cops gain +2 CP. Each +Ruby gives your SUV +1 CP in all combat.",
     },
-    # Geta (Emerald)
     {
-        "id": "geta_1",
-        "factor": "Geta",
-        "factorLabel": "Geta",
+        "id": "isis_1",
+        "factor": "ISIS",
+        "factorLabel": "ISIS",
         "gemName": "Emerald",
         "optionNumber": 1,
         "timing": "endgame",
-        "title": "Brother's Grudge",
-        "shortText": "Least Geta favor loses 25d",
-        "description": "End of game: Least Geta favor loses 25d.",
+        "title": "Fatwa",
+        "shortText": "Least ISIS favor loses 25d",
+        "description": "End of game: the player with the Least ISIS favor loses 25d.",
     },
     {
-        "id": "geta_2",
-        "factor": "Geta",
-        "factorLabel": "Geta",
+        "id": "isis_2",
+        "factor": "ISIS",
+        "factorLabel": "ISIS",
         "gemName": "Emerald",
         "optionNumber": 2,
         "timing": "endgame",
-        "title": "Jealous Brothers",
-        "shortText": "+15d/+Emerald if Caracalla ≤ 0, -10d if ≥ +1; -5d/-Emerald",
-        "description": "End of game: +15d per +Emerald if Caracalla ≤ 0, or -10d if ≥ +1; -5d per -Emerald.",
+        "title": "Infidel Tax",
+        "shortText": "+15d/+Emerald if MAGA ≤ 0, -10d if ≥ +1; -5d/-Emerald",
+        "description": "End of game: +15d per +Emerald if your MAGA favor is ≤ 0, or -10d per +Emerald if it is ≥ +1; -5d per -Emerald.",
     },
     {
-        "id": "geta_3",
-        "factor": "Geta",
-        "factorLabel": "Geta",
+        "id": "isis_3",
+        "factor": "ISIS",
+        "factorLabel": "ISIS",
         "gemName": "Emerald",
         "optionNumber": 3,
         "timing": "midgame",
-        "title": "Divided Tiber",
-        "shortText": "Tiber Bridges cost 4d toll, waived with +1 Emerald",
-        "description": "Tiber Bridges cost a 4d toll, waived with +1 Emerald or Shortcut.",
+        "title": "Threat Level Red",
+        "shortText": "Bridge & Freeway exits cost a 4d bribe, waived with +1 Emerald",
+        "description": "Leaving SF by a Bridge or Freeway costs a 4d checkpoint bribe, waived with +1 Emerald or Shortcut.",
     },
-    # Domna (Diamond)
     {
-        "id": "domna_1",
-        "factor": "Domna",
-        "factorLabel": "Julia Domna",
+        "id": "techbros_1",
+        "factor": "TechBros",
+        "factorLabel": "Tech Bros",
         "gemName": "Diamond",
         "optionNumber": 1,
         "timing": "endgame",
-        "title": "Imperial Patronage",
-        "shortText": "Most Domna favor gains +20% wealth",
-        "description": "End of game: Most Domna favor gains +20% wealth.",
+        "title": "Series A",
+        "shortText": "Most Tech Bros favor gains +20% wealth",
+        "description": "End of game: the player with the Most Tech Bros favor gains +20% wealth.",
     },
     {
-        "id": "domna_2",
-        "factor": "Domna",
-        "factorLabel": "Julia Domna",
+        "id": "techbros_2",
+        "factor": "TechBros",
+        "factorLabel": "Tech Bros",
         "gemName": "Diamond",
         "optionNumber": 2,
         "timing": "endgame",
-        "title": "Court Neutrality",
+        "title": "Conflict of Interest",
         "shortText": "-15d per +Diamond and -15d per -Diamond",
         "description": "End of game: Lose 15d per +Diamond and 15d per -Diamond.",
     },
     {
-        "id": "domna_3",
-        "factor": "Domna",
-        "factorLabel": "Julia Domna",
+        "id": "techbros_3",
+        "factor": "TechBros",
+        "factorLabel": "Tech Bros",
         "gemName": "Diamond",
         "optionNumber": 3,
         "timing": "midgame",
-        "title": "Empress Mediator",
-        "shortText": "Exchange +Diamonds 1-for-1 for +Rubies or +Emeralds",
-        "description": "Exchange +Diamonds 1-for-1 into +Rubies or +Emeralds anytime.",
+        "title": "Lobbying Blitz",
+        "shortText": "Exchange +Diamonds 1-for-1 for +Rubies or +Sapphires",
+        "description": "Exchange +Diamonds 1-for-1 into +Rubies (MAGA) or +Sapphires (DSA) anytime.",
     },
-    # Plautilla (Sapphire)
     {
-        "id": "plautilla_1",
-        "factor": "Plautilla",
-        "factorLabel": "Plautilla",
+        "id": "dsa_1",
+        "factor": "DSA",
+        "factorLabel": "DSA",
         "gemName": "Sapphire",
         "optionNumber": 1,
         "timing": "endgame",
-        "title": "Exile's Informants",
-        "shortText": "Most Plautilla favor steals 15d from wealthiest rival",
-        "description": "End of game: Most Plautilla favor steals 15d from the wealthiest rival.",
+        "title": "Billionaire Tax",
+        "shortText": "Most DSA favor takes 15d from the wealthiest rival",
+        "description": "End of game: the player with the Most DSA favor takes 15d from the wealthiest rival.",
     },
     {
-        "id": "plautilla_2",
-        "factor": "Plautilla",
-        "factorLabel": "Plautilla",
+        "id": "dsa_2",
+        "factor": "DSA",
+        "factorLabel": "DSA",
         "gemName": "Sapphire",
         "optionNumber": 2,
         "timing": "endgame",
-        "title": "Smuggled Dowry",
-        "shortText": "+10d per completed Plautilla Mission",
-        "description": "End of game: Gain 10d per completed Mission with +Sapphire or a Plautilla patron.",
+        "title": "Mutual Aid",
+        "shortText": "+10d per completed DSA Mission",
+        "description": "End of game: Gain 10d per completed Mission with +Sapphire or a DSA patron.",
     },
     {
-        "id": "plautilla_3",
-        "factor": "Plautilla",
-        "factorLabel": "Plautilla",
+        "id": "dsa_3",
+        "factor": "DSA",
+        "factorLabel": "DSA",
         "gemName": "Sapphire",
         "optionNumber": 3,
         "timing": "midgame",
-        "title": "Smuggler's Fence",
-        "shortText": "Fenced cargo +1 Scarcity and no Mission failure",
-        "description": "Fenced cargo sells +1 Scarcity step higher and does not fail the Mission.",
+        "title": "Rent Control",
+        "shortText": "Spend +Sapphires when selling for +1 Scarcity per gem",
+        "description": "Spend +Sapphires when selling a Good for +1 Scarcity step per gem.",
     },
-    # Aurelians (Amethyst)
     {
-        "id": "aurelius_1",
-        "factor": "Aurelius",
-        "factorLabel": "Aurelians",
+        "id": "ms13_1",
+        "factor": "MS13",
+        "factorLabel": "MS-13",
         "gemName": "Amethyst",
         "optionNumber": 1,
         "timing": "endgame",
-        "title": "Old Senate Purse",
-        "shortText": "Most Aurelian favor gains 25d",
-        "description": "End of game: Most Aurelian favor gains 25d.",
+        "title": "Protection Racket",
+        "shortText": "Most MS-13 favor gains 25d",
+        "description": "End of game: the player with the Most MS-13 favor gains 25d.",
     },
     {
-        "id": "aurelius_2",
-        "factor": "Aurelius",
-        "factorLabel": "Aurelians",
+        "id": "ms13_2",
+        "factor": "MS13",
+        "factorLabel": "MS-13",
         "gemName": "Amethyst",
         "optionNumber": 2,
         "timing": "endgame",
-        "title": "Choose a Side",
+        "title": "Plata o Plomo",
         "shortText": "+10d per +Amethyst and +10d per -Amethyst",
         "description": "End of game: Gain 10d per +Amethyst and 10d per -Amethyst.",
     },
     {
-        "id": "aurelius_3",
-        "factor": "Aurelius",
-        "factorLabel": "Aurelians",
+        "id": "ms13_3",
+        "factor": "MS13",
+        "factorLabel": "MS-13",
         "gemName": "Amethyst",
         "optionNumber": 3,
         "timing": "midgame",
-        "title": "Senatorial Privilege",
-        "shortText": "Spend +Amethysts when selling for +1 Scarcity per gem",
-        "description": "Spend +Amethysts when selling a Good for +1 Scarcity step per gem.",
+        "title": "Clique Fence",
+        "shortText": "Fenced cargo +1 Scarcity and no Mission failure",
+        "description": "Fenced cargo sells +1 Scarcity step higher and does not fail the Mission.",
     },
-    # Missions
     {
         "id": "missions_1",
         "factor": "Missions",
-        "factorLabel": "Missions",
+        "factorLabel": "Gigs",
         "gemName": "Contracts",
         "optionNumber": 1,
         "timing": "endgame",
-        "title": "Master Purveyor",
+        "title": "Five-Star Courier",
         "shortText": "Most completed Missions gains 30d",
         "description": "End of game: Most completed Missions gains 30d.",
     },
     {
         "id": "missions_2",
         "factor": "Missions",
-        "factorLabel": "Missions",
+        "factorLabel": "Gigs",
         "gemName": "Contracts",
         "optionNumber": 2,
         "timing": "endgame",
-        "title": "Guild Ledger",
+        "title": "Yelp Reviews",
         "shortText": "+10d per completed Mission; -10d per failed Mission",
         "description": "End of game: Gain 10d per completed Mission; lose 10d per failed or unfinished Mission.",
     },
     {
         "id": "missions_3",
         "factor": "Missions",
-        "factorLabel": "Missions",
+        "factorLabel": "Gigs",
         "gemName": "Contracts",
         "optionNumber": 3,
         "timing": "midgame",
-        "title": "Bonded Couriers",
+        "title": "Surge Pricing",
         "shortText": "Completed Missions pay 2× cash; failed Missions fine 10d",
-        "description": "Completed Missions pay 2× Denarii; failed or unfinished Missions fine 10d.",
+        "description": "Completed Missions pay 2× cash; failed or unfinished Missions fine 10d.",
     },
 ]
 
@@ -738,7 +709,7 @@ def _default_player_stats() -> Dict[str, Any]:
         "visitedNeighborhoods": [],
         "missionsCompleted": 0,
         "missionsFailed": 0,
-        "plautillaMissionsCompleted": 0,
+        "dsaMissionsCompleted": 0,
         "influencePlayed": 0,
         "encounters": {
             "patricii": 0,
@@ -830,7 +801,7 @@ def _format_player_stats_summary(player: Dict[str, Any]) -> Dict[str, Any]:
         "missionsCompleted": int(stats.get("missionsCompleted", 0) or 0),
         "missionsFailed": int(stats.get("missionsFailed", 0) or 0),
         "netMissions": int(stats.get("missionsCompleted", 0) or 0) - int(stats.get("missionsFailed", 0) or 0),
-        "plautillaMissionsCompleted": int(stats.get("plautillaMissionsCompleted", 0) or 0),
+        "dsaMissionsCompleted": int(stats.get("dsaMissionsCompleted", 0) or 0),
         "influencePlayed": int(stats.get("influencePlayed", 0) or 0),
         "endingFactionStandings": favor_snap,
         "encounters": {
@@ -906,8 +877,8 @@ def _record_mission_completion_event(
 ) -> None:
     _inc_player_stat(player, "missionsCompleted", 1)
     m_fav = mission.get("favor") or []
-    if "Plautilla" in m_fav or mission.get("patronFaction") == "Plautilla":
-        _inc_player_stat(player, "plautillaMissionsCompleted", 1)
+    if "DSA" in m_fav or mission.get("patronFaction") == "DSA":
+        _inc_player_stat(player, "dsaMissionsCompleted", 1)
     if state.get("phase") == "finished":
         state["finalStandings"] = _build_final_standings(state)
     if player.get("isBot"):
@@ -1144,10 +1115,10 @@ def compute_sell_price(
                 guard_bonus -= 1
         # Check Puffery influence effect (+1 rarity level = -1 index)
         puffery_bonus = -1 if player.get("turnEffects", {}).get("puffery") else 0
-        # Smuggler's Fence (plautilla_3): fenced Encounter Mission cargo sells 1 Scarcity step higher
-        fence_bonus = -1 if (card.get("isMissionCargo") and has_climate_modifier(state, "plautilla_3")) else 0
-        # Senatorial Privilege (aurelius_3): spend positive Amethysts (+1 Scarcity step per Amethyst)
-        amethyst_bonus = -max(0, int(spend_amethysts or 0)) if has_climate_modifier(state, "aurelius_3") else 0
+        # Clique Fence (ms13_3): fenced Encounter Mission cargo sells 1 Scarcity step higher
+        fence_bonus = -1 if (card.get("isMissionCargo") and has_climate_modifier(state, "ms13_3")) else 0
+        # Rent Control (dsa_3): spend positive DSA Sapphires (+1 Scarcity step per Sapphire)
+        amethyst_bonus = -max(0, int(spend_amethysts or 0)) if has_climate_modifier(state, "dsa_3") else 0
         final_idx = max(0, min(4, base_idx + delta + guard_bonus + puffery_bonus + fence_bonus + amethyst_bonus))
 
     sell_table = card.get("sell") or card.get("fencedSell") or [10, 7, 5, 4, 2]
@@ -1644,7 +1615,7 @@ def grant_reward(
         return notes
 
     cash_mult = 2 if (is_mission_reward and has_climate_modifier(state, "missions_3")) else 1
-    mult_tag = " (2× Bonded Couriers)" if cash_mult == 2 else ""
+    mult_tag = " (2× Surge Pricing)" if cash_mult == 2 else ""
 
     if reward and isinstance(reward, dict):
         rtype = reward.get("type")
@@ -2118,7 +2089,7 @@ def _fail_mission(
 ) -> List[str]:
     """Handles failing or voluntarily canceling a mission according to rulebook & Political Climate rules."""
     is_overflow = reason == "6th Soothsayer mission overflow"
-    fenced_exempt = (is_fenced or "fenced" in reason.lower()) and has_climate_modifier(state, "plautilla_3")
+    fenced_exempt = (is_fenced or "fenced" in reason.lower()) and has_climate_modifier(state, "ms13_3")
     counts_as_failure = (not is_overflow) and (not fenced_exempt)
     if counts_as_failure:
         _inc_player_stat(player, "missionsFailed", 1)
@@ -2138,10 +2109,10 @@ def _fail_mission(
         notes.extend(h_notes)
         _recycle_mission_cards(state, m)
         if fenced_exempt:
-            notes.append("Smuggler's Fence (not counted as Failed Mission)")
+            notes.append("Clique Fence (not counted as Failed Mission)")
             add_log(
                 state,
-                f"{player['name']} fenced cargo from Encounter Mission '{m.get('name', 'Mission')}' ({reason}) — Smuggler's Fence waives Mission failure! Reputational consequences: {' '.join(h_notes) or 'None'}.",
+                f"{player['name']} fenced cargo from Encounter Mission '{m.get('name', 'Mission')}' ({reason}) — Clique Fence waives Mission failure! Reputational consequences: {' '.join(h_notes) or 'None'}.",
                 "mission",
             )
         else:
@@ -2170,10 +2141,10 @@ def _fail_mission(
 
     if counts_as_failure and has_climate_modifier(state, "missions_3"):
         player["cash"] -= 10
-        notes.append("-10(d) Bonded Couriers Fine")
+        notes.append("-10(d) Surge Pricing Fine")
         add_log(
             state,
-            f"📜 Bonded Couriers Fine: {player['name']} paid -10(d) for failing Mission '{m.get('name', 'Mission')}'.",
+            f"📜 Surge Pricing Fine: {player['name']} paid -10(d) for failing Mission '{m.get('name', 'Mission')}'.",
             "penalty",
         )
     return notes
@@ -3133,11 +3104,11 @@ def _normalize_encounter_card_data(card: Optional[Dict[str, Any]]) -> None:
         return
     if card.get("id") == "nef_26" or (card.get("name") == "Clemens" and card.get("type") == "character"):
         if not card.get("faction"):
-            card["faction"] = "Aurelius"
+            card["faction"] = "MS13"
         if not card.get("friendlyFavor"):
-            card["friendlyFavor"] = ["Aurelius"]
-        if card.get("hostileFavor") in (None, [], ["-Caracalla"]):
-            card["hostileFavor"] = ["-Aurelius"]
+            card["friendlyFavor"] = ["MS13"]
+        if card.get("hostileFavor") in (None, [], ["-MAGA"]):
+            card["hostileFavor"] = ["-MS13"]
     m_sub = card.get("mission")
     act_str = str(card.get("actionText") or "")
     is_fixed_npc_sell = (
@@ -3767,7 +3738,7 @@ def _finalize_combat_after_post_roll(state: Dict[str, Any], player: Dict[str, An
         inferred_deck = "patricii" if cid_str.startswith("pat_") else "legiones" if cid_str.startswith("leg_") else "nefarii" if cid_str.startswith("nef_") else ""
         deck_name = card.get("deck") or c_state.get("deck") or inferred_deck
         cname = card.get("name", "")
-        is_emperor = any(emp in cname for emp in ("Bassianus", "Caracalla", "Geta"))
+        is_emperor = any(emp in cname for emp in ("Bassianus", "MAGA", "ISIS"))
         for m in list(player["missions"]):
             if m.get("completed"):
                 continue
@@ -4352,12 +4323,12 @@ def execute_combat(
     if init_flat_inf != 0:
         player_flat_mods.append({"label": "Influence Bonus", "value": init_flat_inf})
 
-    if has_climate_modifier(state, "caracalla_3"):
-        pos_rubies = max(0, int((player.get("favor") or {}).get("Caracalla", 0)))
+    if has_climate_modifier(state, "maga_3"):
+        pos_rubies = max(0, int((player.get("favor") or {}).get("MAGA", 0)))
         if pos_rubies > 0:
             player_flat += pos_rubies
-            player_flat_mods.append({"label": f"Army Pay Hike (+{pos_rubies} Ruby)", "value": pos_rubies})
-            equipment_notes.append(f"Army Pay Hike (+{pos_rubies} CP from Rubies)")
+            player_flat_mods.append({"label": f"Back the Blue (+{pos_rubies} Ruby)", "value": pos_rubies})
+            equipment_notes.append(f"Back the Blue (+{pos_rubies} CP from Rubies)")
 
     extra_player_dice = int(player.get("turnEffects", {}).get("combatDiceBonus", 0))
     opp_dice_mod = int(player.get("turnEffects", {}).get("oppDiceMod", 0))
@@ -4536,9 +4507,9 @@ def execute_combat(
         card.get("deck")
         or ("legiones" if cid_str.startswith("leg_") else "patricii" if cid_str.startswith("pat_") else "nefarii" if cid_str.startswith("nef_") else "")
     ).lower()
-    if has_climate_modifier(state, "caracalla_3") and eff_deck == "legiones":
+    if has_climate_modifier(state, "maga_3") and eff_deck == "legiones":
         opp_flat += 2
-        opp_flat_mods.append({"label": "Army Pay Hike (Legiones +2 CP)", "value": 2})
+        opp_flat_mods.append({"label": "Back the Blue (Legiones +2 CP)", "value": 2})
         opp_cp = sum(opp_rolls) + opp_flat
     opp_flat_inf = int(player.get("turnEffects", {}).get("oppFlatBonus", 0))
     if opp_flat_inf != 0:
@@ -4672,7 +4643,7 @@ def _find_combat_mission_for_encounter(player: Dict[str, Any], card: Dict[str, A
     or prescribed by an encounter) that requires engaging in combat with this encountered party.
     """
     cname = (card.get("name") or "").lower()
-    is_emperor = any(emp in cname for emp in ("bassianus", "caracalla", "geta"))
+    is_emperor = any(emp in cname for emp in ("bassianus", "maga", "isis"))
     dk_low = (deck_key or card.get("deck") or "").lower()
 
     for m in player.get("missions", []):
@@ -4766,7 +4737,7 @@ def _build_pending_encounter_state(
         "combatFlatBonus": player.get("turnEffects", {}).get("combatFlatBonus", 0),
         "combatDiceBonus": player.get("turnEffects", {}).get("combatDiceBonus", 0),
         "oppDiceMod": player.get("turnEffects", {}).get("oppDiceMod", 0),
-        "armyPayHikeActive": has_climate_modifier(state, "caracalla_3"),
+        "armyPayHikeActive": has_climate_modifier(state, "maga_3"),
     }
 
 
@@ -6611,7 +6582,7 @@ def _finish_pending_encounter_continuations(state: Dict[str, Any], player: Dict[
                 player["position"] = None
                 player["exitedRome"] = True
                 player["turnStep"] = "done"
-                add_log(state, f"{player['name']} exited Rome safely via {curr_cell} ({direction}) before Dawn!", "phase")
+                add_log(state, f"{player['name']} escaped San Francisco by {describe_exit(curr_cell, direction, None)} from {NEIGHBORHOOD_NAMES.get(curr_cell, curr_cell)} ({direction}) before Dawn!", "phase")
                 advance_delivery_turn(state)
                 return
             player["position"] = target_cell
@@ -6996,7 +6967,7 @@ def _resolve_pvp_combat_tiebreaker(
 ) -> Dict[str, Any]:
     """
     Resolves Combat between tied Players using Drivers (1®), Guards, Weapons, mandatory Exotic Animals,
-    Army Pay Hike Rubies (if active), and Combat Influence cards (when authorized via allowWinterPvpInfluence).
+    Back the Blue Rubies (if active), and Combat Influence cards (when authorized via allowWinterPvpInfluence).
     Pre-roll cards (Mercenary Ambush +2®, Distraction -1® deducted from rival's positive dice pool) resolve
     before dice are rolled; post-roll cards (Flying Chamber Pot +1 CP, Gladiator's Intervention +1® CP,
     Twist Of Fate re-roll) resolve reactively only when trailing or tied and mathematically able to tie/lead.
@@ -7006,7 +6977,7 @@ def _resolve_pvp_combat_tiebreaker(
     p1_gear = list(gear_map.get(p1["index"], p1.get("cart", [])))
     p2_gear = list(gear_map.get(p2["index"], p2.get("cart", [])))
     consumed_gear_ids: set = set()
-    army_hike = has_climate_modifier(state, "caracalla_3")
+    army_hike = has_climate_modifier(state, "maga_3")
     is_final_tiebreak = "Final Wealth" in context_label
 
     round_num = 0
@@ -7025,10 +6996,10 @@ def _resolve_pvp_combat_tiebreaker(
             flat_mods: List[Dict[str, Any]] = []
 
             if army_hike:
-                pos_rubies = max(0, int((fighter.get("favor") or {}).get("Caracalla", 0)))
+                pos_rubies = max(0, int((fighter.get("favor") or {}).get("MAGA", 0)))
                 if pos_rubies > 0:
                     flat_total += pos_rubies
-                    flat_mods.append({"label": f"Army Pay Hike (+{pos_rubies} Ruby)", "value": pos_rubies})
+                    flat_mods.append({"label": f"Back the Blue (+{pos_rubies} Ruby)", "value": pos_rubies})
 
             for g in fighter.get("guards", []):
                 cinfo = g.get("combat") or {}
@@ -7341,49 +7312,49 @@ def _resolve_multiway_pvp_loser(
     return loser
 
 
-def _bot_optimize_domna_diamonds_for_winter(state: Dict[str, Any]) -> None:
-    """When Empress Mediator (domna_3) is active, bots convert positive Diamonds into Rubies or Emeralds before Winter Reckoning if advantageous."""
-    if not has_climate_modifier(state, "domna_3"):
+def _bot_optimize_techbros_diamonds_for_winter(state: Dict[str, Any]) -> None:
+    """When Lobbying Blitz (techbros_3) is active, bots convert positive Diamonds into Rubies or Sapphires before Winter Reckoning if advantageous."""
+    if not has_climate_modifier(state, "techbros_3"):
         return
     players = state.get("players", [])
     for bot in players:
         if not bot.get("isBot"):
             continue
-        while int((bot.get("favor") or {}).get("Domna", 0)) > 0:
-            cur_car = int(bot["favor"].get("Caracalla", 0))
-            cur_get = int(bot["favor"].get("Geta", 0))
-            min_car = min((int((p.get("favor") or {}).get("Caracalla", 0)) for p in players), default=0)
-            min_get = min((int((p.get("favor") or {}).get("Geta", 0)) for p in players), default=0)
+        while int((bot.get("favor") or {}).get("TechBros", 0)) > 0:
+            cur_car = int(bot["favor"].get("MAGA", 0))
+            cur_get = int(bot["favor"].get("ISIS", 0))
+            min_car = min((int((p.get("favor") or {}).get("MAGA", 0)) for p in players), default=0)
+            min_get = min((int((p.get("favor") or {}).get("ISIS", 0)) for p in players), default=0)
 
             target_fac: Optional[str] = None
-            if has_climate_modifier(state, "caracalla_1") and cur_car <= min_car:
-                target_fac = "Caracalla"
-            elif has_climate_modifier(state, "geta_1") and cur_get <= min_get:
-                target_fac = "Geta"
-            elif has_climate_modifier(state, "geta_2") and cur_car <= 0:
-                target_fac = "Geta"
-            elif has_climate_modifier(state, "caracalla_3"):
-                target_fac = "Caracalla"
+            if has_climate_modifier(state, "maga_1") and cur_car <= min_car:
+                target_fac = "MAGA"
+            elif has_climate_modifier(state, "dsa_1"):
+                target_fac = "DSA"
+            elif has_climate_modifier(state, "dsa_3"):
+                target_fac = "DSA"
+            elif has_climate_modifier(state, "maga_3"):
+                target_fac = "MAGA"
 
             if not target_fac:
                 break
 
-            bot["favor"]["Domna"] -= 1
+            bot["favor"]["TechBros"] -= 1
             bot["favor"][target_fac] = int(bot["favor"].get(target_fac, 0)) + 1
             hist = bot.setdefault("favorHistory", {f: [] for f in FACTIONS})
-            hist.setdefault("Domna", []).append({
+            hist.setdefault("TechBros", []).append({
                 "delta": -1,
-                "reason": f"Empress Mediator exchange -> +1 {target_fac}",
-                "newTotal": bot["favor"]["Domna"],
+                "reason": f"Lobbying Blitz exchange -> +1 {target_fac}",
+                "newTotal": bot["favor"]["TechBros"],
             })
             hist.setdefault(target_fac, []).append({
                 "delta": 1,
-                "reason": "Empress Mediator exchange from 1 Diamond",
+                "reason": "Lobbying Blitz exchange from 1 Diamond",
                 "newTotal": bot["favor"][target_fac],
             })
             add_log(
                 state,
-                f"💎 {bot['name']} invoked Empress Mediator to exchange 1 Diamond for +1 {target_fac} Favor!",
+                f"💎 {bot['name']} invoked Lobbying Blitz to exchange 1 Diamond for +1 {target_fac} Favor!",
                 "action",
             )
 
@@ -7499,134 +7470,134 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
                 add_log(state, f"Winter Loan Settlement: 60(d) deducted from {p['name']} for unpaid Summer Loan.", "penalty")
             loan_map[p["index"]] = loan_ded
 
-        # Step 4: Allow bots to convert remaining positive Diamonds if Empress Mediator (domna_3) is active
-        _bot_optimize_domna_diamonds_for_winter(state)
+        # Step 4: Allow bots to convert remaining positive Diamonds if Lobbying Blitz (techbros_3) is active
+        _bot_optimize_techbros_diamonds_for_winter(state)
 
-        # Step 5: Caracalla Option 1 (Imperial Proscription) FIRST per Rulebook — Least Caracalla favor is ELIMINATED!
+        # Step 5: MAGA Option 1 (Mass Deportation) FIRST per Rulebook — Least MAGA favor is ELIMINATED!
         # An eliminated player cannot win or lose any subsequent Most/Least awards or steal Denarii.
-        if has_climate_modifier(state, "caracalla_1") and len(players) >= 2:
-            min_car = min(int((p.get("favor") or {}).get("Caracalla", 0)) for p in players)
-            tied_least_car = [p for p in players if int((p.get("favor") or {}).get("Caracalla", 0)) == min_car]
+        if has_climate_modifier(state, "maga_1") and len(players) >= 2:
+            min_car = min(int((p.get("favor") or {}).get("MAGA", 0)) for p in players)
+            tied_least_car = [p for p in players if int((p.get("favor") or {}).get("MAGA", 0)) == min_car]
             if len(tied_least_car) > 1:
                 add_log(
                     state,
-                    f"⚔️ Tie for Least Caracalla Favor ({min_car:+d}) between {', '.join(x['name'] for x in tied_least_car)} — PvP Combat to survive Caracalla's Purge!",
+                    f"⚔️ Tie for Least MAGA Favor ({min_car:+d}) between {', '.join(x['name'] for x in tied_least_car)} — PvP Combat to survive MAGA's Purge!",
                     "combat",
                 )
                 elim_p = _resolve_multiway_pvp_loser(
-                    state, tied_least_car, pvp_gear_snapshot, f"Survive Caracalla's Purge (Least Favor {min_car:+d})"
+                    state, tied_least_car, pvp_gear_snapshot, f"Survive MAGA's Purge (Least Favor {min_car:+d})"
                 )
-                elim_reason = f"Eliminated after losing PvP Tie-Break for Least Caracalla Favor ({min_car:+d})"
+                elim_reason = f"Eliminated after losing PvP Tie-Break for Least MAGA Favor ({min_car:+d})"
             else:
                 elim_p = tied_least_car[0]
-                elim_reason = f"Eliminated for holding Least Caracalla Favor ({min_car:+d})"
+                elim_reason = f"Eliminated for holding Least MAGA Favor ({min_car:+d})"
             elim_p["eliminated"] = True
             elim_p["eliminationReason"] = elim_reason
             climate_breakdown_map[elim_p["index"]].append({
-                "id": "caracalla_1",
-                "factor": "Caracalla",
-                "title": "Imperial Proscription",
+                "id": "maga_1",
+                "factor": "MAGA",
+                "title": "Mass Deportation",
                 "delta": 0,
                 "eliminated": True,
                 "detail": elim_reason,
             })
-            add_log(state, f"☠️ IMPERIAL PROSCRIPTION! {elim_p['name']} is purged by Caracalla ({elim_reason}) and excluded from all remaining Winter Reckoning awards!", "penalty")
+            add_log(state, f"☠️ IMPERIAL PROSCRIPTION! {elim_p['name']} is purged by MAGA ({elim_reason}) and excluded from all remaining Winter Reckoning awards!", "penalty")
 
         eligible_players = [p for p in players if not p.get("eliminated")]
 
         # Step 6: Apply flat Political Climate valuations & flat Most/Least awards (among surviving eligible_players)
-        # 6a. Caracalla Option 2: -10d per positive Ruby, +5d per negative Ruby
-        if has_climate_modifier(state, "caracalla_2"):
+        # 6a. MAGA Option 2: -10d per positive Ruby, +5d per negative Ruby
+        if has_climate_modifier(state, "maga_2"):
             for p in eligible_players:
-                car_v = int((p.get("favor") or {}).get("Caracalla", 0))
+                car_v = int((p.get("favor") or {}).get("MAGA", 0))
                 delta = (car_v * -10) if car_v > 0 else (abs(car_v) * 5)
-                det = f"Caracalla {car_v:+d} ({'-10d/+' if car_v > 0 else '+5d/-'} Ruby)" if car_v != 0 else "Caracalla 0 (0d)"
-                _record_climate_delta(p, "caracalla_2", "Caracalla", "Praetorian Backlash", delta, det)
+                det = f"MAGA {car_v:+d} ({'-10d/+' if car_v > 0 else '+5d/-'} Ruby)" if car_v != 0 else "MAGA 0 (0d)"
+                _record_climate_delta(p, "maga_2", "MAGA", "Recall Election", delta, det)
 
-        # 6b. Geta Option 1: Least Geta favor loses -25(d) (ties resolved by PvP Combat; loser pays -25d)
-        if has_climate_modifier(state, "geta_1") and eligible_players:
-            min_get = min(int((p.get("favor") or {}).get("Geta", 0)) for p in eligible_players)
-            tied_least_get = [p for p in eligible_players if int((p.get("favor") or {}).get("Geta", 0)) == min_get]
+        # 6b. ISIS Option 1: Least ISIS favor loses -25(d) (ties resolved by PvP Combat; loser pays -25d)
+        if has_climate_modifier(state, "isis_1") and eligible_players:
+            min_get = min(int((p.get("favor") or {}).get("ISIS", 0)) for p in eligible_players)
+            tied_least_get = [p for p in eligible_players if int((p.get("favor") or {}).get("ISIS", 0)) == min_get]
             if len(tied_least_get) > 1:
                 add_log(
                     state,
-                    f"⚔️ Tie for Least Geta Favor ({min_get:+d}) between {', '.join(x['name'] for x in tied_least_get)} — PvP Combat decides who suffers -25(d)!",
+                    f"⚔️ Tie for Least ISIS Favor ({min_get:+d}) between {', '.join(x['name'] for x in tied_least_get)} — PvP Combat decides who suffers -25(d)!",
                     "combat",
                 )
                 loser_get = _resolve_multiway_pvp_loser(
-                    state, tied_least_get, pvp_gear_snapshot, f"Least Geta Favor ({min_get:+d}) Penalty"
+                    state, tied_least_get, pvp_gear_snapshot, f"Least ISIS Favor ({min_get:+d}) Penalty"
                 )
-                det_g1 = f"Lost PvP Tie-Break for Least Geta Favor ({min_get:+d})"
+                det_g1 = f"Lost PvP Tie-Break for Least ISIS Favor ({min_get:+d})"
             else:
                 loser_get = tied_least_get[0]
-                det_g1 = f"Sole Least Geta Favor ({min_get:+d})"
-            _record_climate_delta(loser_get, "geta_1", "Geta", "Brother's Grudge", -25, det_g1)
-            add_log(state, f"Brother's Grudge: {loser_get['name']} suffers -25(d) ({det_g1}).", "penalty")
+                det_g1 = f"Sole Least ISIS Favor ({min_get:+d})"
+            _record_climate_delta(loser_get, "isis_1", "ISIS", "Fatwa", -25, det_g1)
+            add_log(state, f"Fatwa: {loser_get['name']} suffers -25(d) ({det_g1}).", "penalty")
 
-        # 6c. Geta Option 2 (Jealous Brothers): +15d/Emerald if Caracalla <= 0, -10d/Emerald if Caracalla >= +1; -5d per negative Emerald
-        if has_climate_modifier(state, "geta_2"):
+        # 6c. ISIS Option 2 (Infidel Tax): +15d/Emerald if MAGA <= 0, -10d/Emerald if MAGA >= +1; -5d per negative Emerald
+        if has_climate_modifier(state, "isis_2"):
             for p in eligible_players:
                 fav = p.get("favor") or {}
-                get_v = int(fav.get("Geta", 0))
-                car_v = int(fav.get("Caracalla", 0))
+                get_v = int(fav.get("ISIS", 0))
+                car_v = int(fav.get("MAGA", 0))
                 if get_v > 0:
                     rate = 15 if car_v <= 0 else -10
                     delta = get_v * rate
-                    det = f"+{get_v} Emerald × {rate:+d}d (Caracalla {car_v:+d})"
+                    det = f"+{get_v} Emerald × {rate:+d}d (MAGA {car_v:+d})"
                 elif get_v < 0:
                     delta = -5 * abs(get_v)
                     det = f"{get_v} Emerald × -5d"
                 else:
                     delta = 0
-                    det = "Geta 0 (0d)"
-                _record_climate_delta(p, "geta_2", "Geta", "Jealous Brothers", delta, det)
+                    det = "ISIS 0 (0d)"
+                _record_climate_delta(p, "isis_2", "ISIS", "Infidel Tax", delta, det)
 
-        # 6d. Domna Option 2 (Court Neutrality): -15d per positive Diamond AND -15d per negative Diamond
-        if has_climate_modifier(state, "domna_2"):
+        # 6d. TechBros Option 2 (Conflict of Interest): -15d per positive Diamond AND -15d per negative Diamond
+        if has_climate_modifier(state, "techbros_2"):
             for p in eligible_players:
-                dom_v = int((p.get("favor") or {}).get("Domna", 0))
+                dom_v = int((p.get("favor") or {}).get("TechBros", 0))
                 delta = -15 * abs(dom_v)
-                det = f"Domna {dom_v:+d} ({abs(dom_v)} × -15d)" if dom_v != 0 else "Domna 0 (0d — Neutrality Kept!)"
-                _record_climate_delta(p, "domna_2", "Domna", "Court Neutrality", delta, det)
+                det = f"TechBros {dom_v:+d} ({abs(dom_v)} × -15d)" if dom_v != 0 else "TechBros 0 (0d — Neutrality Kept!)"
+                _record_climate_delta(p, "techbros_2", "TechBros", "Conflict of Interest", delta, det)
 
-        # 6e. Plautilla Option 2 (Smuggled Dowry): +10d per completed Plautilla-linked mission
-        if has_climate_modifier(state, "plautilla_2"):
+        # 6e. DSA Option 2 (Mutual Aid): +10d per completed DSA-linked mission
+        if has_climate_modifier(state, "dsa_2"):
             for p in eligible_players:
                 st_p = _ensure_player_stats(p)
-                pla_m = int(st_p.get("plautillaMissionsCompleted", 0) or 0)
+                pla_m = int(st_p.get("dsaMissionsCompleted", 0) or 0)
                 delta = 10 * pla_m
-                det = f"{pla_m} Plautilla Mission{'s' if pla_m != 1 else ''} × +10d"
-                _record_climate_delta(p, "plautilla_2", "Plautilla", "Smuggled Dowry", delta, det)
+                det = f"{pla_m} DSA Mission{'s' if pla_m != 1 else ''} × +10d"
+                _record_climate_delta(p, "dsa_2", "DSA", "Mutual Aid", delta, det)
 
-        # 6f. Aurelius Option 1 (Old Senate Purse): Most Aurelian favor gains +25(d) (ties -> PvP Combat)
-        if has_climate_modifier(state, "aurelius_1") and eligible_players:
-            max_aur = max(int((p.get("favor") or {}).get("Aurelius", 0)) for p in eligible_players)
-            tied_aur = [p for p in eligible_players if int((p.get("favor") or {}).get("Aurelius", 0)) == max_aur]
+        # 6f. MS13 Option 1 (Protection Racket): Most MS13 favor gains +25(d) (ties -> PvP Combat)
+        if has_climate_modifier(state, "ms13_1") and eligible_players:
+            max_aur = max(int((p.get("favor") or {}).get("MS13", 0)) for p in eligible_players)
+            tied_aur = [p for p in eligible_players if int((p.get("favor") or {}).get("MS13", 0)) == max_aur]
             if len(tied_aur) > 1:
                 add_log(
                     state,
-                    f"⚔️ Tie for Most Aurelian Favor ({max_aur:+d}) between {', '.join(x['name'] for x in tied_aur)} — PvP Combat decides the +25(d) purse!",
+                    f"⚔️ Tie for Most MS13 Favor ({max_aur:+d}) between {', '.join(x['name'] for x in tied_aur)} — PvP Combat decides the +25(d) purse!",
                     "combat",
                 )
                 win_aur = _resolve_multiway_pvp_winner(
-                    state, tied_aur, pvp_gear_snapshot, f"Most Aurelian Favor ({max_aur:+d}) +25d"
+                    state, tied_aur, pvp_gear_snapshot, f"Most MS13 Favor ({max_aur:+d}) +25d"
                 )
-                det_a1 = f"Won PvP Tie-Break for Most Aurelian Favor ({max_aur:+d})"
+                det_a1 = f"Won PvP Tie-Break for Most MS13 Favor ({max_aur:+d})"
             else:
                 win_aur = tied_aur[0]
-                det_a1 = f"Sole Most Aurelian Favor ({max_aur:+d})"
-            _record_climate_delta(win_aur, "aurelius_1", "Aurelius", "Old Senate Purse", 25, det_a1)
-            add_log(state, f"Old Senate Purse: {win_aur['name']} claims +25(d) ({det_a1})!", "phase")
+                det_a1 = f"Sole Most MS13 Favor ({max_aur:+d})"
+            _record_climate_delta(win_aur, "ms13_1", "MS13", "Protection Racket", 25, det_a1)
+            add_log(state, f"Protection Racket: {win_aur['name']} claims +25(d) ({det_a1})!", "phase")
 
-        # 6g. Aurelius Option 2 (Choose a Side): +10d per positive Amethyst AND +10d per negative Amethyst
-        if has_climate_modifier(state, "aurelius_2"):
+        # 6g. MS13 Option 2 (Plata o Plomo): +10d per positive Amethyst AND +10d per negative Amethyst
+        if has_climate_modifier(state, "ms13_2"):
             for p in eligible_players:
-                aur_v = int((p.get("favor") or {}).get("Aurelius", 0))
+                aur_v = int((p.get("favor") or {}).get("MS13", 0))
                 delta = 10 * abs(aur_v)
-                det = f"Aurelius {aur_v:+d} ({abs(aur_v)} × +10d)" if aur_v != 0 else "Aurelius 0 (0d)"
-                _record_climate_delta(p, "aurelius_2", "Aurelius", "Choose a Side", delta, det)
+                det = f"MS13 {aur_v:+d} ({abs(aur_v)} × +10d)" if aur_v != 0 else "MS13 0 (0d)"
+                _record_climate_delta(p, "ms13_2", "MS13", "Plata o Plomo", delta, det)
 
-        # 6h. Missions Option 1 (Master Purveyor): Most completed missions gains +30(d) (ties -> PvP Combat)
+        # 6h. Missions Option 1 (Five-Star Courier): Most completed missions gains +30(d) (ties -> PvP Combat)
         if has_climate_modifier(state, "missions_1") and eligible_players:
             max_comp = max(int(_ensure_player_stats(p).get("missionsCompleted", 0) or 0) for p in eligible_players)
             tied_m1 = [p for p in eligible_players if int(_ensure_player_stats(p).get("missionsCompleted", 0) or 0) == max_comp]
@@ -7643,10 +7614,10 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
             else:
                 win_m1 = tied_m1[0]
                 det_m1 = f"Sole Most Completed Missions ({max_comp})"
-            _record_climate_delta(win_m1, "missions_1", "Missions", "Master Purveyor", 30, det_m1)
-            add_log(state, f"Master Purveyor: {win_m1['name']} claims +30(d) ({det_m1})!", "phase")
+            _record_climate_delta(win_m1, "missions_1", "Missions", "Five-Star Courier", 30, det_m1)
+            add_log(state, f"Five-Star Courier: {win_m1['name']} claims +30(d) ({det_m1})!", "phase")
 
-        # 6i. Missions Option 2 (Guild Ledger): +10d per completed mission and -10d per failed/unfulfilled mission (net negative allowed)
+        # 6i. Missions Option 2 (Yelp Reviews): +10d per completed mission and -10d per failed/unfulfilled mission (net negative allowed)
         if has_climate_modifier(state, "missions_2"):
             for p in eligible_players:
                 st_p = _ensure_player_stats(p)
@@ -7655,20 +7626,20 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
                 net_c = comp_c - fail_c
                 delta = 10 * net_c
                 det = f"{comp_c} Completed (+{comp_c * 10}d), {fail_c} Failed (-{fail_c * 10}d)"
-                _record_climate_delta(p, "missions_2", "Missions", "Guild Ledger", delta, det)
+                _record_climate_delta(p, "missions_2", "Missions", "Yelp Reviews", delta, det)
 
-        # Step 7: Plautilla Option 1 (Exile's Informants) — Most Plautilla favor steals 15(d) from the wealthiest surviving rival
-        if has_climate_modifier(state, "plautilla_1") and len(eligible_players) >= 2:
-            max_pla = max(int((p.get("favor") or {}).get("Plautilla", 0)) for p in eligible_players)
-            tied_pla = [p for p in eligible_players if int((p.get("favor") or {}).get("Plautilla", 0)) == max_pla]
+        # Step 7: DSA Option 1 (Billionaire Tax) — Most DSA favor steals 15(d) from the wealthiest surviving rival
+        if has_climate_modifier(state, "dsa_1") and len(eligible_players) >= 2:
+            max_pla = max(int((p.get("favor") or {}).get("DSA", 0)) for p in eligible_players)
+            tied_pla = [p for p in eligible_players if int((p.get("favor") or {}).get("DSA", 0)) == max_pla]
             if len(tied_pla) > 1:
                 add_log(
                     state,
-                    f"⚔️ Tie for Most Plautilla Favor ({max_pla:+d}) between {', '.join(x['name'] for x in tied_pla)} — PvP Combat decides who steals 15(d)!",
+                    f"⚔️ Tie for Most DSA Favor ({max_pla:+d}) between {', '.join(x['name'] for x in tied_pla)} — PvP Combat decides who steals 15(d)!",
                     "combat",
                 )
                 thief_p = _resolve_multiway_pvp_winner(
-                    state, tied_pla, pvp_gear_snapshot, f"Most Plautilla Favor ({max_pla:+d}) 15d Heist"
+                    state, tied_pla, pvp_gear_snapshot, f"Most DSA Favor ({max_pla:+d}) 15d Heist"
                 )
             else:
                 thief_p = tied_pla[0]
@@ -7683,63 +7654,63 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
                     "combat",
                 )
                 victim_p = _resolve_multiway_pvp_loser(
-                    state, tied_victims, pvp_gear_snapshot, f"Defend Purse vs. {thief_p['name']}'s Plautilla Heist"
+                    state, tied_victims, pvp_gear_snapshot, f"Defend Purse vs. {thief_p['name']}'s DSA Heist"
                 )
             else:
                 victim_p = tied_victims[0]
 
             _record_climate_delta(
                 victim_p,
-                "plautilla_1",
-                "Plautilla",
-                "Exile's Informants (Raided)",
+                "dsa_1",
+                "DSA",
+                "Billionaire Tax (Raided)",
                 -15,
-                f"15(d) stolen by {thief_p['name']} (Most Plautilla Favor)",
+                f"15(d) stolen by {thief_p['name']} (Most DSA Favor)",
             )
             _record_climate_delta(
                 thief_p,
-                "plautilla_1",
-                "Plautilla",
-                "Exile's Informants",
+                "dsa_1",
+                "DSA",
+                "Billionaire Tax",
                 15,
                 f"Stole 15(d) from wealthiest rival {victim_p['name']}",
             )
             add_log(
                 state,
-                f"Exile's Informants: {thief_p['name']} (Most Plautilla Favor {max_pla:+d}) stole 15(d) from wealthiest rival {victim_p['name']}!",
+                f"Billionaire Tax: {thief_p['name']} (Most DSA Favor {max_pla:+d}) stole 15(d) from wealthiest rival {victim_p['name']}!",
                 "phase",
             )
 
-        # Step 8: Domna Option 1 (Imperial Patronage) — Most Domna favor gains +20% of final wealth (after flat modifiers & steals)
-        if has_climate_modifier(state, "domna_1") and eligible_players:
-            max_dom = max(int((p.get("favor") or {}).get("Domna", 0)) for p in eligible_players)
-            tied_dom = [p for p in eligible_players if int((p.get("favor") or {}).get("Domna", 0)) == max_dom]
+        # Step 8: TechBros Option 1 (Series A) — Most TechBros favor gains +20% of final wealth (after flat modifiers & steals)
+        if has_climate_modifier(state, "techbros_1") and eligible_players:
+            max_dom = max(int((p.get("favor") or {}).get("TechBros", 0)) for p in eligible_players)
+            tied_dom = [p for p in eligible_players if int((p.get("favor") or {}).get("TechBros", 0)) == max_dom]
             if len(tied_dom) > 1:
                 add_log(
                     state,
-                    f"⚔️ Tie for Most Domna Favor ({max_dom:+d}) between {', '.join(x['name'] for x in tied_dom)} — PvP Combat decides the +20% Imperial Patronage!",
+                    f"⚔️ Tie for Most TechBros Favor ({max_dom:+d}) between {', '.join(x['name'] for x in tied_dom)} — PvP Combat decides the +20% Series A!",
                     "combat",
                 )
                 win_dom = _resolve_multiway_pvp_winner(
-                    state, tied_dom, pvp_gear_snapshot, f"Most Domna Favor ({max_dom:+d}) +20% Wealth"
+                    state, tied_dom, pvp_gear_snapshot, f"Most TechBros Favor ({max_dom:+d}) +20% Wealth"
                 )
-                det_d1_prefix = f"Won PvP Tie-Break for Most Domna Favor ({max_dom:+d})"
+                det_d1_prefix = f"Won PvP Tie-Break for Most TechBros Favor ({max_dom:+d})"
             else:
                 win_dom = tied_dom[0]
-                det_d1_prefix = f"Sole Most Domna Favor ({max_dom:+d})"
+                det_d1_prefix = f"Sole Most TechBros Favor ({max_dom:+d})"
             base_wealth = int(win_dom.get("cash", 0))
             dom_bonus = (base_wealth * 20 + 50) // 100 if base_wealth > 0 else 0
             _record_climate_delta(
                 win_dom,
-                "domna_1",
-                "Domna",
-                "Imperial Patronage",
+                "techbros_1",
+                "TechBros",
+                "Series A",
                 dom_bonus,
                 f"{det_d1_prefix}: +20% of {base_wealth}d = +{dom_bonus}d",
             )
             add_log(
                 state,
-                f"Imperial Patronage: {win_dom['name']} gains +{dom_bonus}(d) (+20% of {base_wealth}d)!",
+                f"Series A: {win_dom['name']} gains +{dom_bonus}(d) (+20% of {base_wealth}d)!",
                 "phase",
             )
 
@@ -7750,7 +7721,7 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
             comp_c = int(st_p.get("missionsCompleted", 0) or 0)
             fail_c = int(st_p.get("missionsFailed", 0) or 0)
             net_c = comp_c - fail_c
-            pla_c = int(st_p.get("plautillaMissionsCompleted", 0) or 0)
+            pla_c = int(st_p.get("dsaMissionsCompleted", 0) or 0)
             clim_items = climate_breakdown_map[idx_p]
             clim_delta = sum(int(x.get("delta", 0)) for x in clim_items)
             fac_bd = fac_breakdown_map[idx_p]
@@ -7768,7 +7739,7 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
                 "missionsCompleted": comp_c,
                 "missionsFailed": fail_c,
                 "netMissions": net_c,
-                "plautillaMissionsCompleted": pla_c,
+                "dsaMissionsCompleted": pla_c,
                 "missionBonus": m_bon,
                 "eliminated": bool(p.get("eliminated", False)),
                 "eliminationReason": p.get("eliminationReason"),
@@ -8199,45 +8170,45 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
         run_bots_until_human(state)
         return True, msg_pick
 
-    # 1A-2. Empress Mediator (Domna Option 3): Exchange positive Diamonds 1-for-1 into Rubies or Emeralds at any time
-    if act_type == "exchange_domna_diamond":
-        if not has_climate_modifier(state, "domna_3"):
-            return False, "Empress Mediator is not active in this game's Political Climate."
+    # 1A-2. Lobbying Blitz (TechBros Option 3): Exchange positive Diamonds 1-for-1 into Rubies or Sapphires at any time
+    if act_type == "exchange_techbros_diamond":
+        if not has_climate_modifier(state, "techbros_3"):
+            return False, "Lobbying Blitz is not active in this game's Political Climate."
         ex_player = next((p for p in state["players"] if not p["isBot"] and p.get("userId") == user_id), None)
         if not ex_player and human_count == 1:
             ex_player = next((p for p in state["players"] if not p["isBot"]), None)
         if not ex_player:
             return False, "Not authorized to exchange Diamonds."
         target_fac = str(action.get("targetFaction", "")).strip()
-        if target_fac not in ("Caracalla", "Geta"):
-            return False, "Diamonds may only be exchanged for Rubies (Caracalla) or Emeralds (Geta)."
+        if target_fac not in ("MAGA", "DSA"):
+            return False, "Diamonds may only be exchanged for Rubies (MAGA) or Sapphires (DSA)."
         try:
             cnt = int(action.get("count", 1) or 1)
         except (TypeError, ValueError):
             return False, "Invalid Diamond exchange count."
         if cnt < 1:
             return False, "Must exchange at least 1 positive Diamond."
-        cur_dom = int((ex_player.get("favor") or {}).get("Domna", 0))
+        cur_dom = int((ex_player.get("favor") or {}).get("TechBros", 0))
         if cur_dom < cnt:
             return False, f"You only have +{max(0, cur_dom)} positive Diamond(s) available to exchange."
-        ex_player["favor"]["Domna"] = cur_dom - cnt
+        ex_player["favor"]["TechBros"] = cur_dom - cnt
         ex_player["favor"][target_fac] = int(ex_player["favor"].get(target_fac, 0)) + cnt
         hist = ex_player.setdefault("favorHistory", {f: [] for f in FACTIONS})
-        gem_lbl = "Ruby" if target_fac == "Caracalla" else "Emerald"
-        gem_pl = "Rubies" if target_fac == "Caracalla" else "Emeralds"
-        hist.setdefault("Domna", []).append({
+        gem_lbl = "Ruby" if target_fac == "MAGA" else "Sapphire"
+        gem_pl = "Rubies" if target_fac == "MAGA" else "Sapphires"
+        hist.setdefault("TechBros", []).append({
             "delta": -cnt,
-            "reason": f"Empress Mediator exchange -> +{cnt} {gem_lbl if cnt == 1 else gem_pl} ({target_fac})",
-            "newTotal": ex_player["favor"]["Domna"],
+            "reason": f"Lobbying Blitz exchange -> +{cnt} {gem_lbl if cnt == 1 else gem_pl} ({target_fac})",
+            "newTotal": ex_player["favor"]["TechBros"],
         })
         hist.setdefault(target_fac, []).append({
             "delta": cnt,
-            "reason": f"Empress Mediator exchange from {cnt} Diamond{'s' if cnt != 1 else ''}",
+            "reason": f"Lobbying Blitz exchange from {cnt} Diamond{'s' if cnt != 1 else ''}",
             "newTotal": ex_player["favor"][target_fac],
         })
         add_log(
             state,
-            f"💎 {ex_player['name']} invoked Empress Mediator to exchange {cnt} Diamond{'s' if cnt != 1 else ''} for +{cnt} {target_fac} Favor!",
+            f"💎 {ex_player['name']} invoked Lobbying Blitz to exchange {cnt} Diamond{'s' if cnt != 1 else ''} for +{cnt} {target_fac} Favor!",
             "action",
         )
         # Refresh pending encounter reactions if the player just shifted Favor before making an encounter choice
@@ -8894,10 +8865,7 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
                 return False, "Invalid movement direction."
             target_cell = get_target_cell(curr_cell, direction)
             if is_tiber_crossing_blocked(curr_cell, target_cell):
-                return (
-                    False,
-                    "Cannot cross the Tiber River here — carts may only cross orthogonally via Rome's five stone bridges (A1↔B1 Pons Aelius, A1↔A2 Pons Neronianus, A3↔A4 Pons Agrippae, B4↔C4 Pons Fabricius, B4↔B5 Pons Aemilius).",
-                )
+                return False, "That crossing is blocked."
 
             rev_tile = state["romeBoard"][curr_cell].get("revealed")
             edges = get_effective_tile_edges(curr_cell, rev_tile)
@@ -8907,8 +8875,8 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
             shortcut_active = player.get("turnEffects", {}).get("shortcut", False)
             guard_friend_active = bool(player.get("friendInGuard") or player.get("turnEffects", {}).get("friendInGuard"))
             bridge_lbl = get_tiber_bridge_name(curr_cell, target_cell)
-            div_tiber_active = has_climate_modifier(state, "geta_3")
-            has_emerald = int((player.get("favor") or {}).get("Geta", 0)) >= 1
+            div_tiber_active = has_climate_modifier(state, "isis_3")
+            has_emerald = int((player.get("favor") or {}).get("ISIS", 0)) >= 1
             needed_shortcut = bool(
                 shortcut_active
                 and (
@@ -8924,9 +8892,9 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
                 total_toll_due = edge_toll_due + bridge_toll_due
                 if player["cash"] < total_toll_due:
                     if edge_toll_due > 0 and bridge_toll_due > 0:
-                        return False, f"Insufficient Denarii for the {edge_toll_due}(d) edge toll + 4(d) Divided Tiber bridge toll ({total_toll_due}d total)."
+                        return False, f"Insufficient funds for the {edge_toll_due}(d) edge toll + 4(d) Threat Level Red checkpoint fee ({total_toll_due}d total)."
                     if bridge_toll_due > 0:
-                        return False, f"Insufficient Denarii for the 4(d) Divided Tiber toll across {bridge_lbl} (waived with ≥ +1 Emerald)."
+                        return False, f"Insufficient funds for the 4(d) Threat Level Red checkpoint fee on the {bridge_lbl} (waived with ≥ +1 Emerald)."
                     return False, f"Insufficient Denarii for the {edge_toll_due}(d) edge toll."
                 if toll_amt is not None:
                     if guard_friend_active:
@@ -8936,10 +8904,10 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
                         add_log(state, f"{player['name']} paid {edge_toll_due}(d) toll to cross the {direction} edge of {curr_cell}.", "action")
                 if div_tiber_active and bridge_lbl:
                     if has_emerald:
-                        add_log(state, f"{player['name']} crossed {bridge_lbl} with the 4(d) Divided Tiber toll waived (+Emerald Favor)!", "action")
+                        add_log(state, f"{player['name']} was waved through the {bridge_lbl} checkpoint (+Emerald Favor)!", "action")
                     else:
                         player["cash"] -= 4
-                        add_log(state, f"{player['name']} paid 4(d) Divided Tiber toll to cross {bridge_lbl}.", "action")
+                        add_log(state, f"{player['name']} paid a 4(d) Threat Level Red checkpoint bribe on the {bridge_lbl}.", "action")
             else:
                 player["turnEffects"]["shortcut"] = False
                 sc_card = player["turnEffects"].pop("shortcutCard", None)
@@ -8981,10 +8949,10 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
                 player["position"] = None
                 player["exitedRome"] = True
                 player["turnStep"] = "done"
-                add_log(state, f"{player['name']} exited Rome safely via {curr_cell} ({direction}) before Dawn!", "phase")
+                add_log(state, f"{player['name']} escaped San Francisco by {describe_exit(curr_cell, direction, edge_val)} from {NEIGHBORHOOD_NAMES.get(curr_cell, curr_cell)} ({direction}) before Dawn!", "phase")
                 advance_delivery_turn(state)
                 run_bots_until_human(state)
-                return True, "Exited Rome safely!"
+                return True, "Escaped San Francisco safely!"
 
             player["position"] = target_cell
             if player.get("turnEffects", {}).get("makeHasteExtraTransact"):
@@ -9017,17 +8985,17 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
             try:
                 spend_amethysts = int(action.get("spendAmethysts", 0) or 0)
             except (TypeError, ValueError):
-                return False, "Invalid Amethyst spend amount."
+                return False, "Invalid Sapphire spend amount."
             if spend_amethysts < 0:
-                return False, "Invalid Amethyst spend amount."
+                return False, "Invalid Sapphire spend amount."
             if spend_amethysts > 0:
-                if not has_climate_modifier(state, "aurelius_3"):
-                    return False, "Senatorial Privilege is not active in this game's Political Climate."
+                if not has_climate_modifier(state, "dsa_3"):
+                    return False, "Rent Control is not active in this game's Political Climate."
                 if state.get("hourEffects", {}).get("priceEdict"):
-                    return False, "Cannot spend Amethysts to shift Scarcity while Price Edict is active this hour."
-                avail_am = int((player.get("favor") or {}).get("Aurelius", 0))
+                    return False, "Cannot spend Sapphires to shift Scarcity while Price Edict is active this hour."
+                avail_am = int((player.get("favor") or {}).get("DSA", 0))
                 if avail_am < spend_amethysts:
-                    return False, f"Insufficient Aurelian Amethysts (have +{max(0, avail_am)}, requested {spend_amethysts})."
+                    return False, f"Insufficient DSA Sapphires (have +{max(0, avail_am)}, requested {spend_amethysts})."
 
             # Find matching sell option on tile OR on an active Sell Mission for this cell
             tile_sells = rev_tile.get("sells", [])
@@ -9096,13 +9064,13 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
             am_log_note = ""
             if eff_spend_am > 0:
                 sale_desc = f"{len(items_to_sell)} Grain cards" if len(items_to_sell) > 1 else lead_item["name"]
-                player["favor"]["Aurelius"] = int(player["favor"].get("Aurelius", 0)) - eff_spend_am
-                player.setdefault("favorHistory", {f: [] for f in FACTIONS}).setdefault("Aurelius", []).append({
+                player["favor"]["DSA"] = int(player["favor"].get("DSA", 0)) - eff_spend_am
+                player.setdefault("favorHistory", {f: [] for f in FACTIONS}).setdefault("DSA", []).append({
                     "delta": -eff_spend_am,
-                    "reason": f"Senatorial Privilege sale of {sale_desc} in {curr_cell} ({base_sym} -> {sym})",
-                    "newTotal": player["favor"]["Aurelius"],
+                    "reason": f"Rent Control sale of {sale_desc} in {curr_cell} ({base_sym} -> {sym})",
+                    "newTotal": player["favor"]["DSA"],
                 })
-                am_log_note = f" [spent {eff_spend_am} Amethyst -> {sym}]"
+                am_log_note = f" [spent {eff_spend_am} Sapphire -> {sym}]"
 
             was_fenced = bool(lead_item.get("isMissionCargo")) and len(items_to_sell) == 1
             for it_sell in items_to_sell:
@@ -9883,7 +9851,7 @@ def _execute_influence_card(state: Dict[str, Any], player: Dict[str, Any], card:
     if "Shortcut" in cname:
         player["turnEffects"]["shortcut"] = True
         add_log(state, f"{player['name']} played '{cname}' — next passable/bridged edge this turn is treated as Green!", "action")
-        return True, "Next edge movement this turn ignores red blocks, tolls, and edge encounters (cannot cross unbridged Tiber borders)."
+        return True, "Next edge movement this turn ignores red blocks, tolls, and edge encounters."
     if "Make Haste" in cname:
         player["movesRemaining"] = player.get("movesRemaining", 0) + 1
         player["turnEffects"]["makeHasteExtraTransact"] = True
@@ -10069,7 +10037,7 @@ def _execute_influence_card(state: Dict[str, Any], player: Dict[str, Any], card:
 
 
 def _bot_grid_distance(src_cell: str, dst_cell: str, state: Optional[Dict[str, Any]] = None) -> int:
-    """BFS shortest step count on the 6x6 Rome grid respecting Tiber Bridges (and revealed impassable edges)."""
+    """BFS shortest step count on the 6x6 San Francisco grid (respecting revealed impassable edges)."""
     s = normalize_cell_id(src_cell)
     t = normalize_cell_id(dst_cell)
     if not s or not t:
@@ -10111,7 +10079,7 @@ def _bot_distance_to_exit(cell: str, state: Optional[Dict[str, Any]] = None) -> 
         for d, val in eff_edges.items():
             if val not in ("red", None, "none") and get_target_cell(c, d) is None:
                 return 1
-    return min((_bot_grid_distance(c, g, state) + 1 for g in GATE_CELLS), default=4)
+    return min((_bot_grid_distance(c, g, state) + 1 for g in BOT_EXIT_TARGET_CELLS), default=4)
 
 
 def run_bots_until_human(state: Dict[str, Any]) -> None:
@@ -10192,24 +10160,24 @@ def _run_bot_climate_pick(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
         neg_m = sum(1 for f in mission_favors if f == f"-{fac}")
 
         if strat == "aggressive":
-            if oid in ("caracalla_3", "caracalla_1", "aurelius_2", "geta_1"):
+            if oid in ("maga_3", "maga_1", "ms13_2", "isis_1"):
                 sc += 20
         elif strat == "luxury":
-            if oid in ("aurelius_3", "domna_1", "aurelius_1", "geta_2"):
+            if oid in ("dsa_3", "techbros_1", "ms13_1", "isis_2"):
                 sc += 20
         elif strat == "missions":
-            if oid in ("missions_3", "missions_1", "missions_2", "plautilla_2"):
+            if oid in ("missions_3", "missions_1", "missions_2", "dsa_2"):
                 sc += 22
         elif strat == "opportunist":
-            if oid in ("plautilla_3", "plautilla_1", "domna_3", "geta_3"):
+            if oid in ("ms13_3", "dsa_1", "techbros_3", "isis_3"):
                 sc += 20
         else:
-            if oid in ("missions_1", "missions_2", "domna_1", "aurelius_1", "geta_2", "domna_3"):
+            if oid in ("missions_1", "missions_2", "techbros_1", "ms13_1", "isis_2", "techbros_3"):
                 sc += 14
 
-        if pos_m > 0 and oid in ("domna_1", "plautilla_1", "plautilla_2", "aurelius_1", "aurelius_2", "aurelius_3", "geta_2", "geta_3", "caracalla_3", "domna_3"):
+        if pos_m > 0 and oid in ("techbros_1", "dsa_1", "dsa_2", "ms13_1", "ms13_2", "dsa_3", "isis_2", "isis_3", "maga_3", "techbros_3"):
             sc += 8 * pos_m
-        if neg_m > 0 and oid in ("caracalla_2", "aurelius_2"):
+        if neg_m > 0 and oid in ("maga_2", "ms13_2"):
             sc += 10 * neg_m
         return sc
 
@@ -10252,7 +10220,7 @@ def _run_bot_market_turn(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
     if bot["cash"] <= 6:
         for inf_c in list(bot.get("influence", [])):
             nm = str(inf_c.get("name", ""))
-            if "Patron" in nm or ("Favor" in nm and (inf_c.get("favorGain") or {}).get("faction") != "Geta"):
+            if "Patron" in nm or ("Favor" in nm and (inf_c.get("favorGain") or {}).get("faction") != "ISIS"):
                 _execute_influence_card(state, bot, inf_c, {})
                 add_npc_event(state, bot, "influence", f"Played '{nm}' in Ostia")
                 break
@@ -10489,7 +10457,7 @@ def _bot_try_proactive_self_influence(state: Dict[str, Any], bot: Dict[str, Any]
         if "Patron" in nm:
             _execute_influence_card(state, bot, c, {})
             add_npc_event(state, bot, "influence", f"Played '{nm}' (+8d)", cell=bot.get("position"), visual={"kind": "influence", "cardName": nm, "outcomeLabel": "🃏 +8d"})
-        elif "Favor" in nm and (c.get("favorGain") or {}).get("faction") != "Geta":
+        elif "Favor" in nm and (c.get("favorGain") or {}).get("faction") != "ISIS":
             _execute_influence_card(state, bot, c, {})
             add_npc_event(state, bot, "influence", f"Played '{nm}'", cell=bot.get("position"), visual={"kind": "influence", "cardName": nm, "outcomeLabel": f"🃏 {nm}"})
         elif "Thug" in nm and used_g + 1 <= max_g:
@@ -10578,8 +10546,8 @@ def _run_bot_delivery_turn(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
         rev_tile = state["romeBoard"][curr_cell].get("revealed") or {}
         edges = get_effective_tile_edges(curr_cell, rev_tile)
         guard_friend_active = bool(bot.get("friendInGuard") or bot.get("turnEffects", {}).get("friendInGuard"))
-        div_tiber_active = has_climate_modifier(state, "geta_3")
-        bot_has_emerald = int((bot.get("favor") or {}).get("Geta", 0)) >= 1
+        div_tiber_active = has_climate_modifier(state, "isis_3")
+        bot_has_emerald = int((bot.get("favor") or {}).get("ISIS", 0)) >= 1
 
         passable: List[Tuple[str, str]] = []
         for d, val in edges.items():
@@ -10630,7 +10598,7 @@ def _run_bot_delivery_turn(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
                     tcell = get_target_cell(curr_cell, d)
                     if not tcell:
                         continue
-                    d_gate = min(_bot_grid_distance(tcell, g, state) for g in GATE_CELLS)
+                    d_gate = min(_bot_grid_distance(tcell, g, state) for g in BOT_EXIT_TARGET_CELLS)
                     edge_pen = 0.0 if v == "green" else (0.4 if parse_edge_toll(v) is not None else 0.8)
                     if div_tiber_active and get_tiber_bridge_name(curr_cell, tcell) and not bot_has_emerald and not used_shortcut:
                         edge_pen += 0.9
@@ -10677,10 +10645,10 @@ def _run_bot_delivery_turn(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
         bridge_nm_pre = get_tiber_bridge_name(curr_cell, target_cell) if not used_shortcut else None
         if div_tiber_active and bridge_nm_pre:
             if bot_has_emerald:
-                add_log(state, f"{bot['name']} crossed {bridge_nm_pre} with the 4(d) Divided Tiber toll waived (+Emerald Favor)!", "action")
+                add_log(state, f"{bot['name']} was waved through the {bridge_nm_pre} checkpoint (+Emerald Favor)!", "action")
             else:
                 bot["cash"] -= 4
-                add_log(state, f"{bot['name']} paid 4(d) Divided Tiber toll to cross {bridge_nm_pre}.", "action")
+                add_log(state, f"{bot['name']} paid a 4(d) Threat Level Red checkpoint bribe on the {bridge_nm_pre}.", "action")
 
         # Edge encounter
         if not used_shortcut and chosen_val not in ("green", "red", None, "none") and toll_amt is None:
@@ -10710,7 +10678,7 @@ def _run_bot_delivery_turn(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
             bot["position"] = None
             bot["exitedRome"] = True
             bot["turnStep"] = "done"
-            add_log(state, f"{bot['name']} exited Rome safely via {curr_cell} ({chosen_dir})!", "phase")
+            add_log(state, f"{bot['name']} escaped San Francisco by {describe_exit(curr_cell, chosen_dir, chosen_val)} from {NEIGHBORHOOD_NAMES.get(curr_cell, curr_cell)} ({chosen_dir})!", "phase")
             add_npc_event(
                 state,
                 bot,
@@ -10757,9 +10725,9 @@ def _run_bot_delivery_turn(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
 
 def _bot_pick_amethyst_boost(state: Dict[str, Any], bot: Dict[str, Any], item: Dict[str, Any], modifier: str) -> Tuple[int, int, str]:
     base_p, base_sym = compute_sell_price(state, bot, item, modifier, spend_amethysts=0)
-    if not has_climate_modifier(state, "aurelius_3") or state.get("hourEffects", {}).get("priceEdict"):
+    if not has_climate_modifier(state, "dsa_3") or state.get("hourEffects", {}).get("priceEdict"):
         return 0, base_p, base_sym
-    avail_am = max(0, int((bot.get("favor") or {}).get("Aurelius", 0)))
+    avail_am = max(0, int((bot.get("favor") or {}).get("DSA", 0)))
     cur_idx = SCARCITY_SYMBOLS.index(base_sym) if base_sym in SCARCITY_SYMBOLS else 2
     max_s = min(avail_am, cur_idx)
     best_spend = 0
@@ -10810,13 +10778,13 @@ def _bot_try_transact(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
             total_p = sum(compute_sell_price(state, bot, it_s, m["modifier"], spend_amethysts=spend_am)[0] for it_s in items_sold)
             am_note = ""
             if spend_am > 0:
-                bot["favor"]["Aurelius"] = int(bot["favor"].get("Aurelius", 0)) - spend_am
-                bot.setdefault("favorHistory", {f: [] for f in FACTIONS}).setdefault("Aurelius", []).append({
+                bot["favor"]["DSA"] = int(bot["favor"].get("DSA", 0)) - spend_am
+                bot.setdefault("favorHistory", {f: [] for f in FACTIONS}).setdefault("DSA", []).append({
                     "delta": -spend_am,
-                    "reason": f"Senatorial Privilege sale of {lead_item['name']} in {curr_cell}",
-                    "newTotal": bot["favor"]["Aurelius"],
+                    "reason": f"Rent Control sale of {lead_item['name']} in {curr_cell}",
+                    "newTotal": bot["favor"]["DSA"],
                 })
-                am_note = f" [spent {spend_am} Amethyst -> {sym}]"
+                am_note = f" [spent {spend_am} Sapphire -> {sym}]"
             for it_s in items_sold:
                 _remove_cart_item(state, bot, it_s, reason=f"sold in {curr_cell} for Mission '{m['name']}'")
             bot["cash"] += total_p
@@ -10906,13 +10874,13 @@ def _bot_try_transact(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
             total_p = sum(compute_sell_price(state, bot, it_s, s["modifier"], spend_amethysts=spend_am)[0] for it_s in items_sold)
             am_note = ""
             if spend_am > 0:
-                bot["favor"]["Aurelius"] = int(bot["favor"].get("Aurelius", 0)) - spend_am
-                bot.setdefault("favorHistory", {f: [] for f in FACTIONS}).setdefault("Aurelius", []).append({
+                bot["favor"]["DSA"] = int(bot["favor"].get("DSA", 0)) - spend_am
+                bot.setdefault("favorHistory", {f: [] for f in FACTIONS}).setdefault("DSA", []).append({
                     "delta": -spend_am,
-                    "reason": f"Senatorial Privilege sale of {lead_item['name']} in {curr_cell}",
-                    "newTotal": bot["favor"]["Aurelius"],
+                    "reason": f"Rent Control sale of {lead_item['name']} in {curr_cell}",
+                    "newTotal": bot["favor"]["DSA"],
                 })
-                am_note = f" [spent {spend_am} Amethyst -> {sym}]"
+                am_note = f" [spent {spend_am} Sapphire -> {sym}]"
             for it_s in items_sold:
                 pr_s, _ = compute_sell_price(state, bot, it_s, s["modifier"], spend_amethysts=spend_am)
                 _remove_cart_item(state, bot, it_s, reason=f"sold in {curr_cell} for {pr_s}(d)")
@@ -11054,7 +11022,7 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
                 if "modifier" in b_entry:
                     b_entry["modifier"] = normalize_scarcity_modifier(str(b_entry["modifier"]))
             out_dirs = {}
-            div_tiber_active = has_climate_modifier(state, "geta_3")
+            div_tiber_active = has_climate_modifier(state, "isis_3")
             for d in DIR_DELTAS:
                 val = eff_edges.get(d)
                 t_cell = get_target_cell(coord, d)
@@ -11067,6 +11035,7 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
                         "edge": val,
                         "targetCell": t_cell,
                         "isExit": t_cell is None and val is not None,
+                        "exitLabel": describe_exit(coord, d, val) if (t_cell is None and val is not None) else None,
                         "tiberBlocked": tiber_blocked,
                         "bridgeName": bridge_name,
                         "tollCost": toll_cost,
@@ -11125,7 +11094,7 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
     }
     players_view = []
     viewer_player_index = None
-    aur_priv_active = has_climate_modifier(state, "aurelius_3") and not state.get("hourEffects", {}).get("priceEdict")
+    aur_priv_active = has_climate_modifier(state, "dsa_3") and not state.get("hourEffects", {}).get("priceEdict")
     for p in state["players"]:
         if p.get("color") in _legacy_color_map:
             p["color"] = _legacy_color_map[p["color"]]
@@ -11153,7 +11122,7 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
         p_copy["influenceBuyCost"] = get_influence_buy_price(p)
         curr_cell = normalize_cell_id(p.get("position"))
         p_copy["position"] = curr_cell
-        avail_amethysts = max(0, int((p.get("favor") or {}).get("Aurelius", 0))) if aur_priv_active else 0
+        avail_amethysts = max(0, int((p.get("favor") or {}).get("DSA", 0))) if aur_priv_active else 0
 
         def _build_amethyst_boosts(itm: Dict[str, Any], mod_val: str, base_pr: int, base_sym: str) -> List[Dict[str, Any]]:
             if avail_amethysts <= 0:
@@ -11293,7 +11262,7 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
         p_copy["missionsCompleted"] = int(st_live.get("missionsCompleted", 0) or 0)
         p_copy["missionsFailed"] = int(st_live.get("missionsFailed", 0) or 0)
         p_copy["netMissions"] = p_copy["missionsCompleted"] - p_copy["missionsFailed"]
-        p_copy["plautillaMissionsCompleted"] = int(st_live.get("plautillaMissionsCompleted", 0) or 0)
+        p_copy["dsaMissionsCompleted"] = int(st_live.get("dsaMissionsCompleted", 0) or 0)
 
         # Enrich cart items with live sell options + cost basis if player is on a Rome tile
         rev_tile = (rome_view.get(curr_cell or "") or {}).get("revealed") or {}

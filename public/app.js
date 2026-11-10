@@ -181,319 +181,324 @@ const MARKET_COLUMNS_META = [
 ];
 
 const ROME_LANDMARKS = {
-  A1: { icon: "🏛️", sub: "Mausoleum Hadriani (Hadrian's Tomb)" },
-  B1: { icon: "⛩️", sub: "Via Flaminia (North Entrance)" },
-  C1: { icon: "⛰️", sub: "Pincian Hill & Gardens" },
-  D1: { icon: "🌿", sub: "Gardens of Sallust" },
-  E1: { icon: "⛩️", sub: "Via Nomentana (NE Entrance)" },
-  F1: { icon: "🏰", sub: "Praetorian Fortress Camp" },
-  A2: { icon: "🏟️", sub: "Stadium of Domitian" },
-  B2: { icon: "🏛️", sub: "Pantheum & Thermae Neronianae" },
-  C2: { icon: "🏛️", sub: "Portico of Saepta Julia" },
-  D2: { icon: "⛰️", sub: "Quirinal Hill" },
-  E2: { icon: "🏘️", sub: "Subura Tenement Valley" },
-  F2: { icon: "⛰️", sub: "Viminal Hill" },
-  A3: { icon: "🎭", sub: "Stone Theater of Pompey" },
-  B3: { icon: "🏟️", sub: "Flaminian Circus" },
-  C3: { icon: "🏛️", sub: "Imperial Forum & Column" },
-  D3: { icon: "🏛️", sub: "Temple of Mars Ultor" },
-  E3: { icon: "♨️", sub: "Grand Baths of Trajan" },
-  F3: { icon: "⛩️", sub: "Via Tiburtina (East Entrance)" },
-  A4: { icon: "⛩️", sub: "Via Aurelia (West Entrance)" },
-  B4: { icon: "🌉", sub: "Tiber Island & Bridges" },
-  C4: { icon: "⛰️", sub: "Capitoline Hill & Jupiter Temple" },
-  D4: { icon: "🏛️", sub: "Temple of Peace (Forum)" },
-  E4: { icon: "🏟️", sub: "The Colosseum (Flavian)" },
-  F4: { icon: "⛰️", sub: "Esquiline Hill" },
-  A5: { icon: "🌿", sub: "Gardens of Julius Caesar" },
-  B5: { icon: "⛰️", sub: "Aventine Hill" },
-  C5: { icon: "🏇", sub: "Chariot Hippodrome" },
-  D5: { icon: "👑", sub: "Palatine Hill & Palaces" },
-  E5: { icon: "🏘️", sub: "Caelian Subura Slope" },
-  F5: { icon: "🏟️", sub: "Severan Amphitheater" },
-  A6: { icon: "🏺", sub: "Mons Testaceus Amphora Hill" },
-  B6: { icon: "⛩️", sub: "Via Ostiensis & Pyramid" },
-  C6: { icon: "⛰️", sub: "Lesser Aventine (Remuria)" },
-  D6: { icon: "♨️", sub: "Baths of Caracalla (Under Construction, 211 A.D.)" },
-  E6: { icon: "⛰️", sub: "Caelian Hill" },
-  F6: { icon: "⛩️", sub: "Via Tusculana (SE Entrance)" },
+  A1: { icon: "🌊", sub: "Lands End (Pacific cliffs — no exits)" },
+  B1: { icon: "🌉", sub: "Presidio (Golden Gate Bridge entrance)" },
+  C1: { icon: "⛵", sub: "Marina Harbor" },
+  D1: { icon: "🦭", sub: "Fisherman's Wharf & Pier 39" },
+  E1: { icon: "⛴️", sub: "Embarcadero & Ferry Building" },
+  F1: { icon: "🌉", sub: "Rincon Hill (Bay Bridge entrance)" },
+  A2: { icon: "🌫️", sub: "Outer Richmond" },
+  B2: { icon: "🥟", sub: "Inner Richmond" },
+  C2: { icon: "🏰", sub: "Pacific Heights Mansions" },
+  D2: { icon: "🍝", sub: "North Beach & Chinatown" },
+  E2: { icon: "🏦", sub: "Financial District Towers" },
+  F2: { icon: "⚾", sub: "Ball Park (Stadium)" },
+  A3: { icon: "🌳", sub: "Golden Gate Park" },
+  B3: { icon: "🌼", sub: "Haight-Ashbury" },
+  C3: { icon: "🎷", sub: "Fillmore Jazz District" },
+  D3: { icon: "💉", sub: "Tenderloin (Open-Air Market)" },
+  E3: { icon: "💻", sub: "SoMa Startups (Open-Air Market)" },
+  F3: { icon: "🧬", sub: "Mission Bay Biotech" },
+  A4: { icon: "🏄", sub: "Outer Sunset" },
+  B4: { icon: "📡", sub: "Twin Peaks & Sutro Tower" },
+  C4: { icon: "🍼", sub: "Noe Valley" },
+  D4: { icon: "🌯", sub: "Mission District (Open-Air Market)" },
+  E4: { icon: "🏭", sub: "Potrero Hill" },
+  F4: { icon: "🚢", sub: "Dogpatch Shipyards" },
+  A5: { icon: "🛣️", sub: "Merced (Highway 1 entrance)" },
+  B5: { icon: "🚋", sub: "West Portal" },
+  C5: { icon: "🌲", sub: "Glen Park Canyon" },
+  D5: { icon: "⛰️", sub: "Bernal Heights" },
+  E5: { icon: "🔧", sub: "Portola" },
+  F5: { icon: "🛣️", sub: "Hunters Point (US-101 entrance)" },
+  A6: { icon: "🏘️", sub: "Daly City Line" },
+  B6: { icon: "🌊", sub: "Ocean View" },
+  C6: { icon: "🏠", sub: "Ingleside" },
+  D6: { icon: "🛣️", sub: "Outer Mission (I-280 entrance)" },
+  E6: { icon: "🌮", sub: "Excelsior" },
+  F6: { icon: "🏚️", sub: "Visitacion Valley" },
 };
 
 const FACTION_META = [
   {
-    key: "Caracalla",
+    key: "MAGA",
+    label: "MAGA",
     gem: "/assets/icons/ruby.png",
     color: "#b91c1c",
     gemSingular: "ruby",
     gemPlural: "rubies",
-    title: "Emperor Marcus Aurelius Antoninus (Caracalla)",
-    bio: "Born Septimius Bassianus (later nicknamed Caracalla after the hooded Gallic tunic he favored), he is mercurial, ruthless, and enjoys the greatest favor with the Legiones. In December 211 he will purge Geta's supporters and reward his closest loyalists.",
-    alignedWith: ["Domna"],
-    hostileTo: ["Geta", "Plautilla", "Aurelius (passively hostile)"],
-    alignmentNote: "Caracalla is hostile to Geta and Plautilla, allied with Domna, and passively hostile to the Aurelians.",
-    defaultDeckCounts: { patricii: 2, legiones: 9, nefarii: 5, total: 16 },
+    title: "MAGA — Make America Great Again",
+    bio: "Red hats in a blue city. MAGA runs deep through the Cops (SFPD, DEA, FBI, ICE), with a few Criminals (pot farmers, the KKK) and one very loud Celebrity (Musk). Back the Blue makes every Cop hit harder.",
+    alignedWith: ["TechBros", "ISIS (sometimes)"],
+    hostileTo: ["MS13 (most hostile)", "DSA (hugely)", "ISIS (sometimes)"],
+    alignmentNote: "MAGA is primarily against MS-13 and hugely against the DSA, aligned with the Tech Bros, and sometimes aligned with, sometimes averse to ISIS.",
+    defaultDeckCounts: { patricii: 2, legiones: 14, nefarii: 3, total: 19 },
   },
   {
-    key: "Geta",
+    key: "ISIS",
+    label: "ISIS",
     gem: "/assets/icons/emerald.png",
     color: "#047857",
     gemSingular: "emerald",
     gemPlural: "emeralds",
-    title: "Co-Emperor Publius Septimius Geta",
-    bio: "Co-emperor Publius Septimius Geta will be murdered in his mother's arms on December 26, 211 A.D., and anyone openly linked to him faces damnatio memoriae. Geta is entitled and cheap during the year, while his Tiber Bridge tolls and Winter Reckoning stakes depend on the active Political Climate.",
-    alignedWith: ["Domna"],
-    hostileTo: ["Caracalla", "Plautilla (less so)", "Aurelius (less so)"],
-    alignmentNote: "Geta is hostile to Caracalla, and less so to Plautilla and the Aurelians, and is aligned with Domna.",
-    defaultDeckCounts: { patricii: 5, legiones: 5, nefarii: 5, total: 15 },
+    title: "ISIS — Sleeper Cells",
+    bio: "Poor, violent, and the rarest faction in the city. ISIS hides mostly among the Criminals, then the Celebrities, and only rarely the Cops. It hates every faction except MS-13.",
+    alignedWith: ["MS13"],
+    hostileTo: ["MAGA", "TechBros", "DSA"],
+    alignmentNote: "ISIS hates every faction except MS-13.",
+    defaultDeckCounts: { patricii: 4, legiones: 2, nefarii: 5, total: 11 },
   },
   {
-    key: "Domna",
+    key: "TechBros",
+    label: "Tech Bros",
     gem: "/assets/icons/diamond.png",
     color: "#475569",
     gemSingular: "diamond",
     gemPlural: "diamonds",
-    title: "Empress Mother Julia Domna",
-    bio: "Julia Domna, empress mother to Bassianus (Caracalla) and Geta, is remembered for her patronage of sophists, jurists, and scholars. Domna loves both of her sons, strives to mediate their feud, and shapes the imperial court's Political Climate.",
-    alignedWith: ["Caracalla", "Geta"],
-    hostileTo: ["Plautilla", "Aurelius"],
-    alignmentNote: "Domna is hostile to Plautilla and the Aurelians, and allied with Caracalla and Geta.",
-    defaultDeckCounts: { patricii: 8, legiones: 3, nefarii: 5, total: 16 },
+    title: "Tech Bros — Silicon Valley Money",
+    bio: "Very rich, very vulnerable, and enormously influential. Tech Bros turn up equally among Celebrities, Criminals, and Cops. Lurie, Zuckerberg, and their party-drug crowd.",
+    alignedWith: ["DSA (somewhat)", "MAGA (somewhat)"],
+    hostileTo: ["ISIS (somewhat)"],
+    alignmentNote: "Tech Bros are somewhat averse to ISIS, somewhat aligned with both the DSA and MAGA, and indifferent to MS-13.",
+    defaultDeckCounts: { patricii: 7, legiones: 6, nefarii: 6, total: 19 },
   },
   {
-    key: "Plautilla",
+    key: "DSA",
+    label: "DSA",
     gem: "/assets/icons/sapphire.png",
     color: "#0369a1",
     gemSingular: "sapphire",
     gemPlural: "sapphires",
-    title: "Exiled Augusta Fulvia Plautilla",
-    bio: "Exiled Augusta Fulvia Plautilla, daughter of Severus' executed prefect Plautianus. Rumored to sneak back into Rome at night in disguise through smuggler rings, Plautilla is loved by criminals and enjoys the greatest favor with the Nefarii.",
-    alignedWith: ["Aurelius"],
-    hostileTo: ["Caracalla (most hostile)", "Geta", "Domna"],
-    alignmentNote: "Plautilla is most hostile to Caracalla, but also to Geta and Domna, and is allied with the Aurelians.",
-    defaultDeckCounts: { patricii: 3, legiones: 8, nefarii: 8, total: 19 },
+    title: "DSA — Democratic Socialists of America",
+    bio: "Leftists, feminists, gays, natives, and locals. The DSA is best represented among the Celebrities, with some Criminals and very few Cops (the Firefighters).",
+    alignedWith: ["ISIS", "MS13"],
+    hostileTo: ["MAGA (most hostile)", "TechBros (somewhat)"],
+    alignmentNote: "The DSA is primarily averse to MAGA, sort of averse to the Tech Bros, and generally aligned with ISIS and MS-13.",
+    defaultDeckCounts: { patricii: 10, legiones: 3, nefarii: 3, total: 16 },
   },
   {
-    key: "Aurelius",
+    key: "MS13",
+    label: "MS-13",
     gem: "/assets/icons/amethyst.png",
     color: "#7e22ce",
     gemSingular: "amethyst",
     gemPlural: "amethysts",
-    title: "Lucius Aurelius Commodus Pompeianus (The Aurelians)",
-    bio: "Lucius Aurelius Commodus Pompeianus leads the old Claudio-Aurelian senatorial aristocracy that ruled Rome before the Severans. Revered by the Patricii, his faction rewards loyalists handsomely while risking Caracalla's suspicion.",
-    alignedWith: ["Plautilla"],
-    hostileTo: ["Caracalla", "Geta", "Domna (less so)"],
-    alignmentNote: "Hostile to Caracalla and Geta, less so to Domna, and allied with Plautilla.",
-    defaultDeckCounts: { patricii: 8, legiones: 3, nefarii: 3, total: 14 },
+    title: "MS-13 — Mara Salvatrucha",
+    bio: "The most indifferent faction in the city, and the most dangerous to cross. MS-13 lives among the Criminals and rarely shows up as a Celebrity or Cop. Less likely than ISIS to attack at 0 loyalty, but always attacks at -1 or lower, and is always very strong in combat.",
+    alignedWith: ["DSA (slightly)", "ISIS (slightly)"],
+    hostileTo: ["MAGA (somewhat)", "TechBros (a little)"],
+    alignmentNote: "MS-13 is somewhat opposed to MAGA, a little averse to the Tech Bros, and slightly aligned with the DSA and ISIS.",
+    defaultDeckCounts: { patricii: 3, legiones: 3, nefarii: 9, total: 15 },
   },
 ];
 
 const DEFAULT_POLITICAL_CLIMATE_FACTORS = [
-  { id: "Caracalla", label: "Caracalla", gemName: "Ruby", subtitle: "Severan Co-Emperor" },
-  { id: "Geta", label: "Geta", gemName: "Emerald", subtitle: "Rival Co-Emperor" },
-  { id: "Domna", label: "Julia Domna", gemName: "Diamond", subtitle: "Empress Mother" },
-  { id: "Plautilla", label: "Plautilla", gemName: "Sapphire", subtitle: "Exiled Augusta" },
-  { id: "Aurelius", label: "Aurelians", gemName: "Amethyst", subtitle: "Old Senate Dynasty" },
-  { id: "Missions", label: "Missions", gemName: "Contracts", subtitle: "Collegia & Patrons" },
+  { id: "MAGA", label: "MAGA", gemName: "Ruby", subtitle: "Make America Great Again" },
+  { id: "ISIS", label: "ISIS", gemName: "Emerald", subtitle: "Islamic State Sleeper Cells" },
+  { id: "TechBros", label: "Tech Bros", gemName: "Diamond", subtitle: "Silicon Valley Money" },
+  { id: "DSA", label: "DSA", gemName: "Sapphire", subtitle: "Democratic Socialists of America" },
+  { id: "MS13", label: "MS-13", gemName: "Amethyst", subtitle: "Mara Salvatrucha" },
+  { id: "Missions", label: "Gigs", gemName: "Contracts", subtitle: "Gig Economy" },
 ];
 
 const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
   {
-    id: "caracalla_1",
-    factor: "Caracalla",
-    factorLabel: "Caracalla",
+    id: "maga_1",
+    factor: "MAGA",
+    factorLabel: "MAGA",
     gemName: "Ruby",
     optionNumber: 1,
     timing: "endgame",
-    title: "Imperial Proscription",
-    shortText: "Least Caracalla favor is eliminated",
-    description: "End of game: Least Caracalla favor is eliminated.",
+    title: "Mass Deportation",
+    shortText: "Least MAGA favor is eliminated",
+    description: "End of game (resolves FIRST): the player with the Least MAGA favor is deported — eliminated.",
   },
   {
-    id: "caracalla_2",
-    factor: "Caracalla",
-    factorLabel: "Caracalla",
+    id: "maga_2",
+    factor: "MAGA",
+    factorLabel: "MAGA",
     gemName: "Ruby",
     optionNumber: 2,
     timing: "endgame",
-    title: "Praetorian Backlash",
+    title: "Recall Election",
     shortText: "-10d per +Ruby; +5d per -Ruby",
-    description: "End of game: Lose 10d per +Ruby; gain 5d per -Ruby.",
+    description: "End of game: San Francisco voters punish MAGA ties. Lose 10d per +Ruby; gain 5d per -Ruby.",
   },
   {
-    id: "caracalla_3",
-    factor: "Caracalla",
-    factorLabel: "Caracalla",
+    id: "maga_3",
+    factor: "MAGA",
+    factorLabel: "MAGA",
     gemName: "Ruby",
     optionNumber: 3,
     timing: "midgame",
-    title: "Army Pay Hike",
-    shortText: "Legiones +2 CP; +1 CP per +Ruby",
-    description: "Legiones gain +2 CP. Each +Ruby gives your Cart +1 CP.",
+    title: "Back the Blue",
+    shortText: "Cops +2 CP; +1 CP per +Ruby",
+    description: "Cops gain +2 CP. Each +Ruby gives your SUV +1 CP in all combat.",
   },
   {
-    id: "geta_1",
-    factor: "Geta",
-    factorLabel: "Geta",
+    id: "isis_1",
+    factor: "ISIS",
+    factorLabel: "ISIS",
     gemName: "Emerald",
     optionNumber: 1,
     timing: "endgame",
-    title: "Brother's Grudge",
-    shortText: "Least Geta favor loses 25d",
-    description: "End of game: Least Geta favor loses 25d.",
+    title: "Fatwa",
+    shortText: "Least ISIS favor loses 25d",
+    description: "End of game: the player with the Least ISIS favor loses 25d.",
   },
   {
-    id: "geta_2",
-    factor: "Geta",
-    factorLabel: "Geta",
+    id: "isis_2",
+    factor: "ISIS",
+    factorLabel: "ISIS",
     gemName: "Emerald",
     optionNumber: 2,
     timing: "endgame",
-    title: "Jealous Brothers",
-    shortText: "+15d/+Emerald if Caracalla ≤ 0, -10d if ≥ +1; -5d/-Emerald",
-    description: "End of game: +15d per +Emerald if Caracalla ≤ 0, or -10d if ≥ +1; -5d per -Emerald.",
+    title: "Infidel Tax",
+    shortText: "+15d/+Emerald if MAGA ≤ 0, -10d if ≥ +1; -5d/-Emerald",
+    description: "End of game: +15d per +Emerald if your MAGA favor is ≤ 0, or -10d per +Emerald if it is ≥ +1; -5d per -Emerald.",
   },
   {
-    id: "geta_3",
-    factor: "Geta",
-    factorLabel: "Geta",
+    id: "isis_3",
+    factor: "ISIS",
+    factorLabel: "ISIS",
     gemName: "Emerald",
     optionNumber: 3,
     timing: "midgame",
-    title: "Divided Tiber",
-    shortText: "Tiber Bridges cost 4d toll, waived with +1 Emerald",
-    description: "Tiber Bridges cost a 4d toll, waived with +1 Emerald or Shortcut.",
+    title: "Threat Level Red",
+    shortText: "Bridge & Freeway exits cost a 4d bribe, waived with +1 Emerald",
+    description: "Leaving SF by a Bridge or Freeway costs a 4d checkpoint bribe, waived with +1 Emerald or Shortcut.",
   },
   {
-    id: "domna_1",
-    factor: "Domna",
-    factorLabel: "Julia Domna",
+    id: "techbros_1",
+    factor: "TechBros",
+    factorLabel: "Tech Bros",
     gemName: "Diamond",
     optionNumber: 1,
     timing: "endgame",
-    title: "Imperial Patronage",
-    shortText: "Most Domna favor gains +20% wealth",
-    description: "End of game: Most Domna favor gains +20% wealth.",
+    title: "Series A",
+    shortText: "Most Tech Bros favor gains +20% wealth",
+    description: "End of game: the player with the Most Tech Bros favor gains +20% wealth.",
   },
   {
-    id: "domna_2",
-    factor: "Domna",
-    factorLabel: "Julia Domna",
+    id: "techbros_2",
+    factor: "TechBros",
+    factorLabel: "Tech Bros",
     gemName: "Diamond",
     optionNumber: 2,
     timing: "endgame",
-    title: "Court Neutrality",
+    title: "Conflict of Interest",
     shortText: "-15d per +Diamond and -15d per -Diamond",
     description: "End of game: Lose 15d per +Diamond and 15d per -Diamond.",
   },
   {
-    id: "domna_3",
-    factor: "Domna",
-    factorLabel: "Julia Domna",
+    id: "techbros_3",
+    factor: "TechBros",
+    factorLabel: "Tech Bros",
     gemName: "Diamond",
     optionNumber: 3,
     timing: "midgame",
-    title: "Empress Mediator",
-    shortText: "Exchange +Diamonds 1-for-1 for +Rubies or +Emeralds",
-    description: "Exchange +Diamonds 1-for-1 into +Rubies or +Emeralds anytime.",
+    title: "Lobbying Blitz",
+    shortText: "Exchange +Diamonds 1-for-1 for +Rubies or +Sapphires",
+    description: "Exchange +Diamonds 1-for-1 into +Rubies (MAGA) or +Sapphires (DSA) anytime.",
   },
   {
-    id: "plautilla_1",
-    factor: "Plautilla",
-    factorLabel: "Plautilla",
+    id: "dsa_1",
+    factor: "DSA",
+    factorLabel: "DSA",
     gemName: "Sapphire",
     optionNumber: 1,
     timing: "endgame",
-    title: "Exile's Informants",
-    shortText: "Most Plautilla favor steals 15d from wealthiest rival",
-    description: "End of game: Most Plautilla favor steals 15d from the wealthiest rival.",
+    title: "Billionaire Tax",
+    shortText: "Most DSA favor takes 15d from the wealthiest rival",
+    description: "End of game: the player with the Most DSA favor takes 15d from the wealthiest rival.",
   },
   {
-    id: "plautilla_2",
-    factor: "Plautilla",
-    factorLabel: "Plautilla",
+    id: "dsa_2",
+    factor: "DSA",
+    factorLabel: "DSA",
     gemName: "Sapphire",
     optionNumber: 2,
     timing: "endgame",
-    title: "Smuggled Dowry",
-    shortText: "+10d per completed Plautilla Mission",
-    description: "End of game: Gain 10d per completed Mission with +Sapphire or a Plautilla patron.",
+    title: "Mutual Aid",
+    shortText: "+10d per completed DSA Mission",
+    description: "End of game: Gain 10d per completed Mission with +Sapphire or a DSA patron.",
   },
   {
-    id: "plautilla_3",
-    factor: "Plautilla",
-    factorLabel: "Plautilla",
+    id: "dsa_3",
+    factor: "DSA",
+    factorLabel: "DSA",
     gemName: "Sapphire",
     optionNumber: 3,
     timing: "midgame",
-    title: "Smuggler's Fence",
-    shortText: "Fenced cargo +1 Scarcity and no Mission failure",
-    description: "Fenced cargo sells +1 Scarcity step higher and does not fail the Mission.",
+    title: "Rent Control",
+    shortText: "Spend +Sapphires when selling for +1 Scarcity per gem",
+    description: "Spend +Sapphires when selling a Good for +1 Scarcity step per gem.",
   },
   {
-    id: "aurelius_1",
-    factor: "Aurelius",
-    factorLabel: "Aurelians",
+    id: "ms13_1",
+    factor: "MS13",
+    factorLabel: "MS-13",
     gemName: "Amethyst",
     optionNumber: 1,
     timing: "endgame",
-    title: "Old Senate Purse",
-    shortText: "Most Aurelian favor gains 25d",
-    description: "End of game: Most Aurelian favor gains 25d.",
+    title: "Protection Racket",
+    shortText: "Most MS-13 favor gains 25d",
+    description: "End of game: the player with the Most MS-13 favor gains 25d.",
   },
   {
-    id: "aurelius_2",
-    factor: "Aurelius",
-    factorLabel: "Aurelians",
+    id: "ms13_2",
+    factor: "MS13",
+    factorLabel: "MS-13",
     gemName: "Amethyst",
     optionNumber: 2,
     timing: "endgame",
-    title: "Choose a Side",
+    title: "Plata o Plomo",
     shortText: "+10d per +Amethyst and +10d per -Amethyst",
     description: "End of game: Gain 10d per +Amethyst and 10d per -Amethyst.",
   },
   {
-    id: "aurelius_3",
-    factor: "Aurelius",
-    factorLabel: "Aurelians",
+    id: "ms13_3",
+    factor: "MS13",
+    factorLabel: "MS-13",
     gemName: "Amethyst",
     optionNumber: 3,
     timing: "midgame",
-    title: "Senatorial Privilege",
-    shortText: "Spend +Amethysts when selling for +1 Scarcity per gem",
-    description: "Spend +Amethysts when selling a Good for +1 Scarcity step per gem.",
+    title: "Clique Fence",
+    shortText: "Fenced cargo +1 Scarcity and no Mission failure",
+    description: "Fenced cargo sells +1 Scarcity step higher and does not fail the Mission.",
   },
   {
     id: "missions_1",
     factor: "Missions",
-    factorLabel: "Missions",
+    factorLabel: "Gigs",
     gemName: "Contracts",
     optionNumber: 1,
     timing: "endgame",
-    title: "Master Purveyor",
+    title: "Five-Star Courier",
     shortText: "Most completed Missions gains 30d",
     description: "End of game: Most completed Missions gains 30d.",
   },
   {
     id: "missions_2",
     factor: "Missions",
-    factorLabel: "Missions",
+    factorLabel: "Gigs",
     gemName: "Contracts",
     optionNumber: 2,
     timing: "endgame",
-    title: "Guild Ledger",
+    title: "Yelp Reviews",
     shortText: "+10d per completed Mission; -10d per failed Mission",
     description: "End of game: Gain 10d per completed Mission; lose 10d per failed or unfinished Mission.",
   },
   {
     id: "missions_3",
     factor: "Missions",
-    factorLabel: "Missions",
+    factorLabel: "Gigs",
     gemName: "Contracts",
     optionNumber: 3,
     timing: "midgame",
-    title: "Bonded Couriers",
+    title: "Surge Pricing",
     shortText: "Completed Missions pay 2× cash; failed Missions fine 10d",
-    description: "Completed Missions pay 2× Denarii; failed or unfinished Missions fine 10d.",
+    description: "Completed Missions pay 2× cash; failed or unfinished Missions fine 10d.",
   },
 ];
 
@@ -537,20 +542,10 @@ function formatEdgeLabel(edgeVal) {
   return String(edgeVal);
 }
 
-const WEST_BANK_CELLS = new Set(["A1", "A4", "B4", "A5"]);
+// San Francisco has no Tiber: river helpers below are no-ops.
+const WEST_BANK_CELLS = new Set();
 
-const TIBER_BRIDGES = {
-  "A1|B1": "Pons Aelius",
-  "B1|A1": "Pons Aelius",
-  "A1|A2": "Pons Neronianus",
-  "A2|A1": "Pons Neronianus",
-  "A3|A4": "Pons Agrippae",
-  "A4|A3": "Pons Agrippae",
-  "B4|C4": "Pons Fabricius",
-  "C4|B4": "Pons Fabricius",
-  "B4|B5": "Pons Aemilius",
-  "B5|B4": "Pons Aemilius",
-};
+const TIBER_BRIDGES = {};
 
 function getTiberBridgeName(fromCoord, toCoord) {
   if (!fromCoord || !toCoord) return null;
@@ -1318,11 +1313,11 @@ function formatMissionObjective(m) {
 }
 
 const FACTION_GEM_MAP = {
-  Caracalla: "/assets/icons/ruby.png",
-  Geta: "/assets/icons/emerald.png",
-  Domna: "/assets/icons/diamond.png",
-  Plautilla: "/assets/icons/sapphire.png",
-  Aurelius: "/assets/icons/amethyst.png",
+  MAGA: "/assets/icons/ruby.png",
+  ISIS: "/assets/icons/emerald.png",
+  TechBros: "/assets/icons/diamond.png",
+  DSA: "/assets/icons/sapphire.png",
+  MS13: "/assets/icons/amethyst.png",
 };
 
 function renderFactionGemNodes(favorList) {
@@ -1938,7 +1933,7 @@ function renderPhysicalMissionCardNode(m, opts = {}) {
               {
                 type: "button",
                 className: "mission-sell-amethyst-btn",
-                title: `Spend ${boost.spend} Aurelian Amethyst(s) to boost sale price to ${boost.price} Denarii and complete Mission "${m.name}"`,
+                title: `Spend ${boost.spend} DSA Sapphire(s) to boost sale price to ${boost.price} Denarii and complete Mission "${m.name}"`,
                 onClick: (e) => {
                   e.stopPropagation();
                   closeModal();
@@ -1952,7 +1947,7 @@ function renderPhysicalMissionCardNode(m, opts = {}) {
                 },
               },
               replaceDenariiTokens(
-                `🔮 Sell ${s.cardName} (-${boost.spend} Amethyst → ${boost.price}d)`
+                `🔮 Sell ${s.cardName} (-${boost.spend} Sapphire → ${boost.price}d)`
               )
             )
           );
@@ -2236,30 +2231,30 @@ function renderPhysicalMissionCardNode(m, opts = {}) {
 }
 
 const FACTION_FAVOR_INFLUENCE_SPECS = {
-  "Plautilla Favor": {
+  "DSA Favor": {
     effectText:
-      "Receive 6(d), gain 1 Plautilla Favor (Sapphire), and lose 1 Caracalla Favor (Ruby) (can be played after encounter is revealed)",
-    gems: ["Plautilla", "-Caracalla"],
+      "Receive 6(d), gain 1 DSA Favor (Sapphire), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
+    gems: ["DSA", "-MAGA"],
   },
-  "Aurelian Favor": {
+  "MS13 Favor": {
     effectText:
-      "Receive 6(d), gain 1 Aurelian Favor (Amethyst), and lose 1 Caracalla Favor (Ruby) (can be played after encounter is revealed)",
-    gems: ["Aurelius", "-Caracalla"],
+      "Receive 6(d), gain 1 MS13 Favor (Amethyst), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
+    gems: ["MS13", "-MAGA"],
   },
-  "Geta Favor": {
+  "ISIS Favor": {
     effectText:
-      "Receive 5(d), gain 1 Geta Favor (Emerald), and lose 1 Caracalla Favor (Ruby) (can be played after encounter is revealed)",
-    gems: ["Geta", "-Caracalla"],
+      "Receive 5(d), gain 1 ISIS Favor (Emerald), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
+    gems: ["ISIS", "-MAGA"],
   },
-  "Domna Favor": {
+  "TechBros Favor": {
     effectText:
-      "Receive 6(d), gain 1 Domna Favor (Diamond), and lose 1 Plautilla Favor (Sapphire) and 1 Aurelian Favor (Amethyst) (can be played after encounter is revealed)",
-    gems: ["Domna", "-Plautilla", "-Aurelius"],
+      "Receive 6(d), gain 1 TechBros Favor (Diamond), and lose 1 DSA Favor (Sapphire) and 1 MS13 Favor (Amethyst) (can be played after encounter is revealed)",
+    gems: ["TechBros", "-DSA", "-MS13"],
   },
-  "Caracalla Favor": {
+  "MAGA Favor": {
     effectText:
-      "Receive 5(d), gain 1 Caracalla Favor (Ruby), and lose 1 Geta Favor (Emerald) and 1 Plautilla Favor (Sapphire) (can be played after encounter is revealed)",
-    gems: ["Caracalla", "-Geta", "-Plautilla"],
+      "Receive 5(d), gain 1 MAGA Favor (Ruby), and lose 1 ISIS Favor (Emerald) and 1 DSA Favor (Sapphire) (can be played after encounter is revealed)",
+    gems: ["MAGA", "-ISIS", "-DSA"],
   },
 };
 
@@ -2285,7 +2280,7 @@ function getInfluenceCardFavorList(c) {
     return FACTION_FAVOR_INFLUENCE_SPECS[cname].gems;
   }
   if (cname.includes("Favor")) {
-    const fKey = cname.replace("Favor", "").replace("Aurelian", "Aurelius").trim();
+    const fKey = cname.replace("Favor", "").replace("MS13", "MS13").trim();
     return [fKey];
   }
   return [];
@@ -3355,7 +3350,7 @@ function openFinalScoringModal(standings, meta = {}) {
   const gameTitle = meta.gameName || (appState.gameSummary && appState.gameSummary.name) || "Roman Expedition";
   const winnerEntry = list.find((s) => s && s.won) || list.find((s) => s && !s.eliminated) || list[0] || null;
   const winnerName = meta.winnerName || (winnerEntry ? winnerEntry.name : "Unknown Merchant");
-  const factionOrder = ["Caracalla", "Geta", "Domna", "Plautilla", "Aurelius"];
+  const factionOrder = ["MAGA", "ISIS", "TechBros", "DSA", "MS13"];
 
   const formatSignedDenarii = (n) => {
     const v = Number(n) || 0;
@@ -3370,7 +3365,7 @@ function openFinalScoringModal(standings, meta = {}) {
     const totalCells = Number(stats.totalNeighborhoods) || 36;
     const wr = entry.winterReckoning || stats.winterReckoning || null;
     const isEliminated = Boolean(entry.eliminated || (wr && wr.eliminated));
-    const elimReason = entry.eliminationReason || (wr && wr.eliminationReason) || "Imperial Proscription";
+    const elimReason = entry.eliminationReason || (wr && wr.eliminationReason) || "Mass Deportation";
     const rankClass = !isEliminated && rankNum <= 3 ? `rank-${rankNum}` : "";
 
     const factionChips = factionOrder.map((fKey) => {
@@ -3507,17 +3502,17 @@ function openFinalScoringModal(standings, meta = {}) {
         );
       } else {
         const leaderNotes = [];
-        if (Number(wr.caracallaLeaderBonus) > 0) {
-          leaderNotes.push(`+${wr.caracallaLeaderBonus}(d) Imperial Contract (Caracalla)`);
+        if (Number(wr.magaLeaderBonus) > 0) {
+          leaderNotes.push(`+${wr.magaLeaderBonus}(d) Imperial Contract (MAGA)`);
         }
-        if (Number(wr.aureliusLeaderBonus) > 0) {
-          leaderNotes.push(`+${wr.aureliusLeaderBonus}(d) Senatorial Patronage (Aurelius)`);
+        if (Number(wr.ms13LeaderBonus) > 0) {
+          leaderNotes.push(`+${wr.ms13LeaderBonus}(d) Senatorial Patronage (MS13)`);
         }
-        if (Number(wr.plautillaLeaderBonus) > 0) {
-          leaderNotes.push(`+${wr.plautillaLeaderBonus}(d) Smuggler Ring (Plautilla)`);
+        if (Number(wr.dsaLeaderBonus) > 0) {
+          leaderNotes.push(`+${wr.dsaLeaderBonus}(d) Smuggler Ring (DSA)`);
         }
         if (Number(wr.missionBonus) > 0 && wr.missionRankLabel) {
-          leaderNotes.push(`+${wr.missionBonus}(d) Master Purveyor (${wr.missionRankLabel})`);
+          leaderNotes.push(`+${wr.missionBonus}(d) Five-Star Courier (${wr.missionRankLabel})`);
         }
         const mBonus = Number(wr.missionBonus) || 0;
         const wrCells = [
@@ -4595,7 +4590,7 @@ function renderGoogleUsernameSetupView() {
   const unameInput = el("input", {
     className: "form-input",
     type: "text",
-    placeholder: "e.g. marcus_aurelius",
+    placeholder: "e.g. marcus_ms13",
     maxLength: 34,
     autocomplete: "username",
     onInput: (e) => {
@@ -4715,7 +4710,7 @@ function renderAuthView() {
   const usernameInput = el("input", {
     className: "form-input",
     type: "text",
-    placeholder: isLogin ? "Username or email (e.g. marcus@ostia.it)" : "e.g. marcus_aurelius",
+    placeholder: isLogin ? "Username or email (e.g. marcus@ostia.it)" : "e.g. marcus_ms13",
     autocomplete: "username",
   });
   const emailInput = el("input", {
@@ -4809,7 +4804,7 @@ function renderAuthView() {
   };
 
   const pajouHoverTitle =
-    "Geta Dying in his Mother's Arms, Jacques-Augustin-Catherine Pajou, 1766–1828 (Staatsgalerie Stuttgart)";
+    "ISIS Dying in his Mother's Arms, Jacques-Augustin-Catherine Pajou, 1766–1828 (Staatsgalerie Stuttgart)";
 
   const showcaseCard = el(
     "section",
@@ -4828,14 +4823,14 @@ function renderAuthView() {
       },
       el("img", {
         className: "landing-pajou-img",
-        src: "/assets/rome_art/geta_dying_pajou.jpg",
+        src: "/assets/rome_art/isis_dying_pajou.jpg",
         alt: pajouHoverTitle,
         title: pajouHoverTitle,
       }),
       el(
         "figcaption",
         { className: "landing-pajou-caption" },
-        el("em", { text: "Geta Dying in his Mother's Arms" }),
+        el("em", { text: "ISIS Dying in his Mother's Arms" }),
         el("span", {
           text: " — Jacques-Augustin-Catherine Pajou, 1766–1828 (Staatsgalerie Stuttgart)",
         })
@@ -4846,11 +4841,11 @@ function renderAuthView() {
       { className: "landing-blurb-body" },
       el("p", {
         className: "landing-blurb-lead",
-        text: "Emperor Septimius Severus is dead in Britain, leaving Rome in the volatile grip of his feuding sons, Caracalla and Geta. By day, Julius Caesar's Lex Iulia Municipalis bars heavy freight wagons from the capital's streets. Only when dusk falls at 8:00 P.M. do the city gates swing open—and the Night Merchants roll in.",
+        text: "Emperor Septimius Severus is dead in Britain, leaving Rome in the volatile grip of his feuding sons, MAGA and ISIS. By day, Julius Caesar's Lex Iulia Municipalis bars heavy freight wagons from the capital's streets. Only when dusk falls at 8:00 P.M. do the city gates swing open—and the Night Merchants roll in.",
       }),
       el("p", {
         className: "landing-blurb-text",
-        text: "Bid for Grain, Wine, Marble, Weapons, and Exotic Beasts at Portus Ostiae, hire gladiators and guards, and thread 36 torchlit neighborhoods across five ancient stone bridges of the Tiber before the 6:00 A.M. sunrise curfew. Court five rival Severan factions—Empress Julia Domna, exiled Plautilla, the old Aurelian Senate, and the warring co-emperors—before December 211's bloody Winter Reckoning crowns Rome's wealthiest purveyor.",
+        text: "Bid for Grain, Wine, Marble, Weapons, and Exotic Beasts at Portus Ostiae, hire gladiators and guards, and thread 36 torchlit neighborhoods across five ancient stone bridges of the Tiber before the 6:00 A.M. sunrise curfew. Court five rival Severan factions—Empress Julia TechBros, exiled DSA, the old MS13 Senate, and the warring co-emperors—before December 211's bloody Winter Reckoning crowns Rome's wealthiest purveyor.",
       }),
       el(
         "div",
@@ -5198,7 +5193,7 @@ function renderPortalView() {
   const invitedUsernamesInput = el("input", {
     className: "form-input",
     type: "text",
-    placeholder: "e.g. marcus_aurelius, cornelia_severa",
+    placeholder: "e.g. marcus_ms13, cornelia_severa",
     value: appState.portalInvitedUsernames || "",
     onInput: (e) => {
       appState.portalInvitedUsernames = e.target.value;
@@ -6045,7 +6040,7 @@ function renderContextualPromptBanner(gs, viewer, activePlayer) {
     }
   } else if (gs.phase === "delivery_entry") {
     promptText =
-      "⛩️ Start of Night Delivery (8:00 P.M.): You must start at one of the six Via entrances highlighted in gold on the map (A4, B1, B6, E1, F3, or F6). You may optionally Scout 1 neighborhood stack or deck card first.";
+      "🚙 Start of Night Delivery (8:00 P.M.): You must roll into the city at one of the five road entry points highlighted in gold on the map: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Highway 1). You may optionally Scout 1 neighborhood stack or deck card first.";
     if (gs.activePlayerIndex === viewer.index) {
       extraActions.push(
         el("button", {
@@ -8101,13 +8096,13 @@ function renderPendingEncounterPanelCore(gs, viewer) {
   if (te.combatFlatBonus) activeCombatMods.push(`${formatSignedFlat(te.combatFlatBonus)} Merchant Flat CP`);
   if (te.oppDiceMod) activeCombatMods.push(`${formatSignedFlat(te.oppDiceMod)}(R) Opponent Dice`);
   if (te.oppFlatBonus) activeCombatMods.push(`${formatSignedFlat(te.oppFlatBonus)} Opponent Flat CP`);
-  if (pend.armyPayHikeActive || hasActiveClimateOption(gs, "caracalla_3")) {
-    const posRubies = Math.max(0, Number(encPlayer.favor && encPlayer.favor.Caracalla) || 0);
+  if (pend.armyPayHikeActive || hasActiveClimateOption(gs, "maga_3")) {
+    const posRubies = Math.max(0, Number(encPlayer.favor && encPlayer.favor.MAGA) || 0);
     if (posRubies > 0) {
-      activeCombatMods.push(`+${posRubies} Merchant CP (${posRubies} Caracalla Rub${posRubies === 1 ? "y" : "ies"})`);
+      activeCombatMods.push(`+${posRubies} Merchant CP (${posRubies} MAGA Rub${posRubies === 1 ? "y" : "ies"})`);
     }
     if (pend.deck === "legiones") {
-      activeCombatMods.push(`+2 Opponent CP (Legiones Army Pay Hike)`);
+      activeCombatMods.push(`+2 Opponent CP (Legiones Back the Blue)`);
     }
   }
 
@@ -9270,8 +9265,8 @@ function renderLoadedGoodPhysicalCardNode(item, gs, viewer, readOnly = false) {
         style: { width: "100%", padding: "0.18rem 0.3rem", fontSize: "0.7rem" },
         disabled: viewer.transactedThisTurn,
         title: sellOpt.isFencedCargo
-          ? hasActiveClimateOption(gs, "plautilla_3")
-            ? "Smuggler's Fence: Sells 1 Scarcity step higher & does NOT count as a Failed Mission (Patron Hostile Favor still applies)!"
+          ? hasActiveClimateOption(gs, "ms13_3")
+            ? "Clique Fence: Sells 1 Scarcity step higher & does NOT count as a Failed Mission (Patron Hostile Favor still applies)!"
             : "Fencing this Mission Cargo sells it for cash but immediately FAILS the Mission!"
           : `Sell ${item.name} in ${viewer.position}`,
         text: sellOpt.isFencedCargo
@@ -9318,10 +9313,10 @@ function renderLoadedGoodPhysicalCardNode(item, gs, viewer, readOnly = false) {
           type: "button",
           className: "btn btn-sm amethyst-boost-btn",
           style: { width: "100%", padding: "0.15rem 0.24rem", fontSize: "0.64rem" },
-          title: `Senatorial Privilege: Spend ${boost.spend} Amethyst${
+          title: `Rent Control: Spend ${boost.spend} Sapphire${
             boost.spend > 1 ? "s" : ""
-          } (Aurelius Favor) to boost sale to ${boost.scarcitySymbol} (${boost.price}d)`,
-          text: `🔮 -${boost.spend} Amethyst → ${boost.price}d (${boost.scarcitySymbol})`,
+          } (MS13 Favor) to boost sale to ${boost.scarcitySymbol} (${boost.price}d)`,
+          text: `🔮 -${boost.spend} Sapphire → ${boost.price}d (${boost.scarcitySymbol})`,
           onClick: () =>
             sendGameAction({
               type: "delivery_sell",
@@ -9540,13 +9535,13 @@ function openFactionFavorModal(gs, targetPlayer, factionKey) {
   const valStr = val > 0 ? `+${val}` : String(val);
   let summarySentence = "";
   if (historyParts.length > 0) {
-    summarySentence = `${valStr} ${fm.key} favor: ${historyParts.join(", ")}`;
+    summarySentence = `${valStr} ${fm.label || fm.key} favor: ${historyParts.join(", ")}`;
   } else if (val !== 0) {
     const absV = Math.abs(val);
     const gemWord = absV === 1 ? fm.gemSingular : fm.gemPlural;
-    summarySentence = `${valStr} ${fm.key} favor: ${val > 0 ? `+${absV}` : `-${absV}`} ${gemWord} recorded prior to ledger`;
+    summarySentence = `${valStr} ${fm.label || fm.key} favor: ${val > 0 ? `+${absV}` : `-${absV}`} ${gemWord} recorded prior to ledger`;
   } else {
-    summarySentence = `0 ${fm.key} favor: No ${fm.key} ${fm.gemPlural} gained or negated yet this game`;
+    summarySentence = `0 ${fm.label || fm.key} favor: No ${fm.label || fm.key} ${fm.gemPlural} gained or negated yet this game`;
   }
 
   const deckCounts =
@@ -9610,7 +9605,7 @@ function openFactionFavorModal(gs, targetPlayer, factionKey) {
           {},
           el("div", {
             style: { fontFamily: "Cinzel, Georgia, serif", fontSize: "1.05rem", fontWeight: "800", color: fm.color },
-            text: `${fm.key} — ${fm.title}`,
+            text: `${fm.label || fm.key} — ${fm.title}`,
           }),
           el("div", {
             style: { fontSize: "0.76rem", color: "var(--text-muted)" },
@@ -9640,7 +9635,7 @@ function openFactionFavorModal(gs, targetPlayer, factionKey) {
         el("div", { style: { fontSize: "0.68rem", color: "var(--text-muted)" }, text: "Current Favor" })
       )
     ),
-    fm.key === "Domna" &&
+    fm.key === "TechBros" &&
       gs &&
       Array.isArray(gs.players) &&
       targetPlayer.index === (typeof gs.viewerPlayerIndex === "number" ? gs.viewerPlayerIndex : 0)
@@ -9660,7 +9655,7 @@ function openFactionFavorModal(gs, targetPlayer, factionKey) {
       },
       el("div", {
         style: { fontFamily: "Cinzel, Georgia, serif", fontSize: "0.86rem", fontWeight: "800", color: "var(--gold-bright)", marginBottom: "0.35rem" },
-        text: `📊 ${targetPlayer.name}'s ${fm.key} Favor Breakdown`,
+        text: `📊 ${targetPlayer.name}'s ${fm.label || fm.key} Favor Breakdown`,
       }),
       el("div", {
         style: { fontSize: "0.88rem", fontWeight: "700", color: "var(--text-main)", lineHeight: "1.45" },
@@ -9776,7 +9771,7 @@ function openFactionFavorModal(gs, targetPlayer, factionKey) {
       },
       el("div", {
         style: { fontFamily: "Cinzel, Georgia, serif", fontSize: "0.86rem", fontWeight: "800", color: "var(--gold-bright)", marginBottom: "0.45rem" },
-        text: `🃏 Encounter Deck Cards Aligned to ${fm.key}`,
+        text: `🃏 Encounter Deck Cards Aligned to ${fm.label || fm.key}`,
       }),
       el(
         "div",
@@ -9814,7 +9809,7 @@ function openFactionFavorModal(gs, targetPlayer, factionKey) {
     )
   );
 
-  showModal(`💎 Imperial Faction Favor — ${fm.key}`, body);
+  showModal(`💎 Faction Favor — ${fm.label || fm.key}`, body);
 }
 
 function openPlayerCartModal(gs, targetPlayer, viewer) {
@@ -9948,11 +9943,11 @@ function openPlayerCartModal(gs, targetPlayer, viewer) {
           {
             className: "favor-box clickable-favor-box",
             style: { cursor: "pointer" },
-            title: `Click to view ${fm.key} Favor breakdown, alignments & deck counts`,
+            title: `Click to view ${fm.label || fm.key} Favor breakdown, alignments & deck counts`,
             onClick: () => openFactionFavorModal(gs, targetPlayer, fm.key),
           },
           el("img", { className: "favor-gem-img", src: fm.gem, alt: fm.key }),
-          el("div", { style: { fontWeight: "700", color: fm.color }, text: fm.key }),
+          el("div", { style: { fontWeight: "700", color: fm.color }, text: fm.label || fm.key }),
           el("div", { style: { fontWeight: "700" }, text: val > 0 ? `+${val}` : String(val) })
         );
       })
@@ -9970,14 +9965,14 @@ function openPlayerCartModal(gs, targetPlayer, viewer) {
 
 function renderDomnaMediatorExchangeBar(gs, viewer, closeModalOnAction = false) {
   if (!gs || !viewer) return null;
-  if (!hasActiveClimateOption(gs, "domna_3")) return null;
+  if (!hasActiveClimateOption(gs, "techbros_3")) return null;
   if (gs.phase === "finished" || gs.phase === "setup_discard" || gs.phase === "setup_climate") return null;
-  const posDiamonds = Math.max(0, Number(viewer.favor && viewer.favor.Domna) || 0);
+  const posDiamonds = Math.max(0, Number(viewer.favor && viewer.favor.TechBros) || 0);
   if (posDiamonds < 1) return null;
 
   const triggerExchange = async (targetFaction) => {
     await sendGameAction({
-      type: "exchange_domna_diamond",
+      type: "exchange_techbros_diamond",
       targetFaction,
       count: 1,
     });
@@ -9988,31 +9983,31 @@ function renderDomnaMediatorExchangeBar(gs, viewer, closeModalOnAction = false) 
 
   return el(
     "div",
-    { className: "domna-mediator-bar" },
+    { className: "techbros-mediator-bar" },
     el(
       "div",
-      { className: "domna-mediator-lbl" },
-      el("strong", { text: `💎 Empress Mediator (+${posDiamonds} Diamond${posDiamonds > 1 ? "s" : ""}): ` }),
+      { className: "techbros-mediator-lbl" },
+      el("strong", { text: `💎 Lobbying Blitz (+${posDiamonds} Diamond${posDiamonds > 1 ? "s" : ""}): ` }),
       el("span", { text: "Exchange 1-for-1 anytime" })
     ),
     el(
       "div",
-      { className: "domna-mediator-btns" },
+      { className: "techbros-mediator-btns" },
       el("button", {
         type: "button",
         className: "btn btn-sm",
         style: { borderColor: "#b91c1c", color: "#991b1b" },
-        title: "Spend 1 positive Diamond (-1 Domna) to gain +1 Ruby (+1 Caracalla)",
-        text: "→ +1 Ruby (Caracalla)",
-        onClick: () => triggerExchange("Caracalla"),
+        title: "Spend 1 positive Diamond (-1 TechBros) to gain +1 Ruby (+1 MAGA)",
+        text: "→ +1 Ruby (MAGA)",
+        onClick: () => triggerExchange("MAGA"),
       }),
       el("button", {
         type: "button",
         className: "btn btn-sm",
-        style: { borderColor: "#047857", color: "#065f46" },
-        title: "Spend 1 positive Diamond (-1 Domna) to gain +1 Emerald (+1 Geta)",
-        text: "→ +1 Emerald (Geta)",
-        onClick: () => triggerExchange("Geta"),
+        style: { borderColor: "#0369a1", color: "#075985" },
+        title: "Spend 1 positive Diamond (-1 Tech Bros) to gain +1 Sapphire (+1 DSA)",
+        text: "→ +1 Sapphire (DSA)",
+        onClick: () => triggerExchange("DSA"),
       })
     )
   );
@@ -10397,24 +10392,15 @@ function renderOstiaMarketBoard(gs, viewer) {
   );
 }
 
-const TIBER_UNBRIDGED_CELL_CLASSES = {
-  B3: ["tiber-block-S"],
-  B4: ["tiber-block-N"],
-  A5: ["tiber-block-E", "tiber-block-S"],
-  B5: ["tiber-block-W"],
-  A6: ["tiber-block-N"],
-};
+const TIBER_UNBRIDGED_CELL_CLASSES = {};
 
+// Free Parking: the five road entry/exit points into San Francisco.
 const TIBER_BRIDGE_BADGES_BY_CELL = {
-  A1: [
-    { pos: "E", label: "🌉 Pons Aelius" },
-    { pos: "S", label: "🌉 Pons Neronianus" },
-  ],
-  A4: [{ pos: "N", label: "🌉 Pons Agrippae" }],
-  B4: [
-    { pos: "E", label: "🌉 Pons Fabricius" },
-    { pos: "S", label: "🌉 Pons Aemilius" },
-  ],
+  B1: [{ pos: "N", label: "🌉 Golden Gate Bridge" }],
+  F1: [{ pos: "E", label: "🌉 Bay Bridge" }],
+  F5: [{ pos: "E", label: "🛣️ US-101" }],
+  D6: [{ pos: "S", label: "🛣️ I-280" }],
+  A5: [{ pos: "W", label: "🛣️ Hwy 1" }],
 };
 
 function positionRomeHoverTooltip(tooltipEl, clientX, clientY) {
@@ -10520,10 +10506,10 @@ function showRomeUnrevealedCellHoverTooltip(coord, cell, unrevealedCount, crossi
   const cellName = cell && cell.name ? cell.name : coord;
   const featureLines = [];
   if (cell && cell.isGate) {
-    featureLines.push("⛩️ Via City Gate Entrance & Exit (halves 6:00 A.M. Curfew Fine)");
+    featureLines.push("🛣️ Bridge / Freeway Entry Point & Exit (halves 6:00 A.M. Curfew Fine)");
   }
   if (cell && cell.isForum) {
-    featureLines.push("🏛️ Imperial Forum Market (purchase Goods when revealed)");
+    featureLines.push("💊 Open-Air Drug Market (purchase Goods when revealed)");
   }
   const bridgesHere = TIBER_BRIDGE_BADGES_BY_CELL[coord] || [];
   if (bridgesHere.length > 0) {
@@ -10702,8 +10688,8 @@ function renderRomeNightBoard(gs, viewer) {
 
       const cellTitleParts = [
         `This is ${coord} (${cell ? cell.name : coord})`,
-        cell && cell.isGate ? "Via City Gate Entrance/Exit" : null,
-        cell && cell.isForum ? "Imperial Forum Market" : null,
+        cell && cell.isGate ? "Bridge / Freeway Entry Point" : null,
+        cell && cell.isForum ? "Open-Air Drug Market" : null,
         rev
           ? "Revealed Tile"
           : scoutedTopTile
@@ -10946,7 +10932,7 @@ function renderRomeNightBoard(gs, viewer) {
           "div",
           {
             className: "via-start-reminder-bar",
-            title: "All merchants must enter Rome through one of the six Via City Gates: A4, B1, B6, E1, F3, or F6.",
+            title: "All dealers must enter San Francisco through one of the five road entry points: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Highway 1).",
           },
           el("span", { className: "via-start-reminder-icon", text: "⛩️" }),
           el(
@@ -10954,8 +10940,8 @@ function renderRomeNightBoard(gs, viewer) {
             {
               text:
                 gs.phase === "delivery_entry"
-                  ? "Start at a Via Entrance: Every merchant must enter Rome at one of the six gold-outlined Viae — A4 (Via Aurelia), B1 (Via Flaminia), B6 (Via Ostiensis), E1 (Via Nomentana), F3 (Via Tiburtina), or F6 (Via Tusculana)."
-                  : "8:00 P.M. Entry Hour: Merchants begin Night Delivery at one of Rome's six gold-outlined Via entrances (A4, B1, B6, E1, F3, F6).",
+                  ? "Start at an Entry Point: Every dealer must enter San Francisco at one of the five gold-outlined entry points — B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Highway 1)."
+                  : "8:00 P.M. Entry Hour: Dealers begin the night at one of San Francisco's five gold-outlined entry points (B1, F1, F5, D6, A5).",
             }
           )
         )
@@ -11075,7 +11061,7 @@ function renderCartNavigationWidget(gs, viewer) {
   const rev = isCartInRome && cell ? cell.revealed : null;
   const isMyDeliveryTurn = gs.phase === "delivery" && gs.activePlayerIndex === viewer.index && isCartInRome;
   const isMyGateEntryTurn = gs.phase === "delivery_entry" && gs.activePlayerIndex === viewer.index;
-  const landmark = ROME_LANDMARKS[navCoord] || { icon: "🏛️", sub: "Roman Quarter" };
+  const landmark = ROME_LANDMARKS[navCoord] || { icon: "🏙️", sub: "San Francisco Neighborhood" };
 
   const compassDirs = ["NW", "N", "NE", "W", "CENTER", "E", "SW", "S", "SE"];
   const outDirs = (rev && rev.outgoingDirections) || {};
@@ -11116,10 +11102,10 @@ function renderCartNavigationWidget(gs, viewer) {
     const shortcutActive = Boolean(viewer.turnEffects && viewer.turnEffects.shortcut);
     const passable = !riverBlocked && (info.passable || shortcutActive);
     const canClickMove = isMyDeliveryTurn && viewer.movesRemaining > 0 && passable;
-    const destLabel = info.isExit ? "🚪 EXIT ROME" : `→ ${info.targetCell}`;
-    const dividedTiberActive = Boolean(bridgeName && (Number(info.bridgeTollCost) > 0 || hasActiveClimateOption(gs, "geta_3")));
+    const destLabel = info.isExit ? `🚪 ESCAPE SF${info.exitLabel ? ` (${info.exitLabel})` : ""}` : `→ ${info.targetCell}`;
+    const dividedTiberActive = Boolean(bridgeName && (Number(info.bridgeTollCost) > 0 || hasActiveClimateOption(gs, "isis_3")));
     const bridgeTollWaived =
-      dividedTiberActive && (shortcutActive || (Number(viewer.favor && viewer.favor.Geta) || 0) >= 1);
+      dividedTiberActive && (shortcutActive || (Number(viewer.favor && viewer.favor.ISIS) || 0) >= 1);
     const bridgeTollNote = dividedTiberActive
       ? bridgeTollWaived
         ? " • 0d Bridge"
@@ -11169,7 +11155,7 @@ function renderCartNavigationWidget(gs, viewer) {
 
   const txButtons = [];
   if (isMyDeliveryTurn && rev) {
-    const smugglersFenceActive = hasActiveClimateOption(gs, "plautilla_3");
+    const smugglersFenceActive = hasActiveClimateOption(gs, "ms13_3");
     let anySellableShown = false;
     const shownBulkGrainKeys = new Set();
     for (const item of viewer.cart || []) {
@@ -11222,7 +11208,7 @@ function renderCartNavigationWidget(gs, viewer) {
         }
         const fenceTag = sOpt.isFencedCargo
           ? smugglersFenceActive
-            ? " [Smuggler's Fence]"
+            ? " [Clique Fence]"
             : " [Fails Mission]"
           : "";
         txButtons.push(
@@ -11251,7 +11237,7 @@ function renderCartNavigationWidget(gs, viewer) {
                 el("button", {
                   type: "button",
                   className: "btn btn-sm amethyst-boost-btn",
-                  text: `🔮 Spend ${boost.spend} Amethyst${boost.spend > 1 ? "s" : ""} → Sell ${item.name} (${boost.price}d @ ${boost.scarcitySymbol})`,
+                  text: `🔮 Spend ${boost.spend} Sapphire${boost.spend > 1 ? "s" : ""} → Sell ${item.name} (${boost.price}d @ ${boost.scarcitySymbol})`,
                   onClick: () =>
                     sendGameAction({
                       type: "delivery_sell",
@@ -11447,11 +11433,11 @@ function renderPlayerSidebar(gs, viewer) {
             {
               className: "favor-box clickable-favor-box",
               style: { cursor: "pointer" },
-              title: `Click to view ${fm.key} Favor breakdown, alignments & deck counts`,
+              title: `Click to view ${fm.label || fm.key} Favor breakdown, alignments & deck counts`,
               onClick: () => openFactionFavorModal(gs, viewer, fm.key),
             },
             el("img", { className: "favor-gem-img", src: fm.gem, alt: fm.key }),
-            el("div", { style: { fontWeight: "700", color: fm.color }, text: fm.key }),
+            el("div", { style: { fontWeight: "700", color: fm.color }, text: fm.label || fm.key }),
             el("div", {
               style: {
                 fontWeight: "800",
@@ -11471,7 +11457,7 @@ function renderPlayerSidebar(gs, viewer) {
                       "div",
                       {
                         className: "faction-standing-rival-line",
-                        title: `${rv.name}: ${rVal > 0 ? `+${rVal}` : rVal} ${fm.key}`,
+                        title: `${rv.name}: ${rVal > 0 ? `+${rVal}` : rVal} ${fm.label || fm.key}`,
                       },
                       el(
                         "span",
@@ -12135,9 +12121,9 @@ function openConfirmScoutNeighborhoodModal(gs, viewer, coord, cell, moveOpts = n
     } else if (isGateEntrance) {
       promptDescription = `${coord} (${cellName}) is an available Via Entrance into Rome (you have already used your Initial Scout this night). Move onto ${coord} to start Night Delivery.`;
     } else if (canScoutTile) {
-      promptDescription = `You may use your pre-night Initial Scout to peek at the top face-down tile of ${coord} (${cellName}) (${unrevealedCount} face-down tiles in stack) or a deck card. To enter Rome, select one of the six gold-outlined Via entrances (A4, B1, B6, E1, F3, or F6).`;
+      promptDescription = `You may use your pre-night Initial Scout to peek at the top face-down tile of ${coord} (${cellName}) (${unrevealedCount} face-down tiles in stack) or a deck card. To enter San Francisco, select one of the five gold-outlined entry points (B1, F1, F5, D6, or A5).`;
     } else {
-      promptDescription = `You have already used your Initial Scout before this night, and ${coord} (${cellName}) is not a Via entrance. Click one of the six gold-outlined Via entrances (A4, B1, B6, E1, F3, or F6) to start Night Delivery.`;
+      promptDescription = `You have already used your Initial Scout before this night, and ${coord} (${cellName}) is not an entry point. Click one of the five gold-outlined entry points (B1, F1, F5, D6, or A5) to start the night.`;
     }
   } else if (canMoveStep && canScoutTile) {
     modalTitle = `🧭 Adjacent Neighborhood ${coord} — ${cellName} (${moveDir})`;
@@ -14969,7 +14955,7 @@ const RULEBOOK_SECTIONS = [
     id: "overview",
     title: "1. Overview & Historical Setting (211 A.D.)",
     paragraphs: [
-      "Welcome to Night Merchant: All Roads Lead to Rome! The year is 211 A.D. Emperor Septimius Severus has died in Eboracum, leaving Rome in the volatile hands of his feuding sons Bassianus (known to history as Caracalla) and Geta. Under Julius Caesar's Lex Iulia Municipalis (45 B.C.), heavy merchant wagons are barred from Rome's streets by day (historically exempting only imperial public-works stone haulers, while private nocturnal marble consignments must still roll by night). Only at dusk (8:00 P.M.) do the six Via entrances open to the Collegium Mercatorum.",
+      "Welcome to Night Merchant: All Roads Lead to Rome! The year is 211 A.D. Emperor Septimius Severus has died in Eboracum, leaving Rome in the volatile hands of his feuding sons Bassianus (known to history as MAGA) and ISIS. Under Julius Caesar's Lex Iulia Municipalis (45 B.C.), heavy merchant wagons are barred from Rome's streets by day (historically exempting only imperial public-works stone haulers, while private nocturnal marble consignments must still roll by night). Only at dusk (8:00 P.M.) do the six Via entrances open to the Collegium Mercatorum.",
       "Across 3 Seasons (Spring, Summer, and Fall), 2 to 6 merchants buy Goods and hire Guards at Portus Ostiae by day, then navigate 36 nocturnal neighborhoods of Rome (A1–F6) across 10 hourly turns (8:00 P.M. to 5:00 A.M.) before the 6:00 A.M. Sunrise Curfew. After Fall Clean-Up, the December 211 Purge (Winter Reckoning) settles unfinished contracts, cart inventory, loans, and imperial faction alliances—crowning the wealthiest merchant in Denarii (d)!",
     ],
     bullets: [
@@ -14980,75 +14966,33 @@ const RULEBOOK_SECTIONS = [
   },
   {
     id: "factions",
-    title: "2. The Five Severan Factions of Rome (Uncapped Favor)",
+    title: "2. The Five Factions of San Francisco (Uncapped Favor)",
     paragraphs: [
-      "Five rival imperial figures command loyalty and fear across Rome in 211 A.D. Favor gems earned or lost from Missions, Encounters, and Influence cards are UNCAPPED (can reach ±5 or more!), determining whether a faction's agents treat you as a Friendly ally or a Hostile target and fueling the game's drafted Political Climate:",
+      "Five factions fight over the city after dark. Favor gems you earn or lose from Missions, Encounters, and Influence cards are UNCAPPED (they can reach ±5 or more). Your favor decides whether a faction's people treat you as a Friendly ally or a Hostile target, and it powers the Ballot Initiatives you draft:",
     ],
     iconGrid: [
-      {
-        img: "./assets/icons/ruby.png",
-        title: "Ruby — Caracalla",
-        desc: "Co-Emperor Marcus Aurelius Antoninus. Grants +1 CP per positive Ruby when Army Pay Hike is active.",
-      },
-      {
-        img: "./assets/icons/emerald.png",
-        title: "Emerald — Geta",
-        desc: "Co-Emperor Publius Septimius Geta. +1 Emerald waives the 4(d) Bridge Toll when Divided Tiber is active.",
-      },
-      {
-        img: "./assets/icons/diamond.png",
-        title: "Diamond — Julia Domna",
-        desc: "Empress Mother Julia Domna. Can be exchanged 1-for-1 into +Ruby or +Emerald when Empress Mediator is active.",
-      },
-      {
-        img: "./assets/icons/sapphire.png",
-        title: "Sapphire — Plautilla",
-        desc: "Exiled Augusta Fulvia Plautilla. Favored among nocturnal smugglers and the Nefarii underworld.",
-      },
-      {
-        img: "./assets/icons/amethyst.png",
-        title: "Amethyst — Aurelius",
-        desc: "Senatorial scion Pompeianus. Spend +Amethysts to boost sale scarcity by +1 step per gem with Senatorial Privilege.",
-      },
+      { img: "./assets/icons/ruby.png", title: "Ruby — MAGA", desc: "Huge among the Cops. With Back the Blue enacted, Cops gain +2 CP and each +Ruby gives your SUV +1 CP." },
+      { img: "./assets/icons/emerald.png", title: "Emerald — ISIS", desc: "Poor, violent, and rare. +1 Emerald waives the 4(d) Bridge & Freeway checkpoint bribe under Threat Level Red." },
+      { img: "./assets/icons/diamond.png", title: "Diamond — Tech Bros", desc: "Rich, vulnerable, and influential. With Lobbying Blitz enacted, +Diamonds trade 1-for-1 into +Rubies or +Sapphires." },
+      { img: "./assets/icons/sapphire.png", title: "Sapphire — DSA", desc: "Strongest among the Celebrities. With Rent Control enacted, spend +Sapphires to raise a sale's scarcity by 1 step per gem." },
+      { img: "./assets/icons/amethyst.png", title: "Amethyst — MS-13", desc: "Lives among the Criminals. Always attacks at -1 favor or lower, and always fights hard." },
       {
         imgs: ["./assets/icons/thumb_up.png", "./assets/icons/thumbs.png", "./assets/icons/thumb_down.png"],
         title: "Friendly / Neutral / Hostile",
-        desc: "Thumbs Up (Friendly, positive net Favor), Neutral (0 Favor), and Thumbs Down (Hostile, negative net Favor) govern NPC reactions.",
+        desc: "Thumbs Up (Friendly, positive net Favor), Neutral (0 Favor), and Thumbs Down (Hostile, negative net Favor) decide how NPCs react.",
       },
     ],
     table: {
-      headers: ["Faction & Gem", "Historical Role in 211 A.D.", "Alignments & Character"],
+      headers: ["Faction & Gem", "Where They Show Up", "Alignments"],
       rows: [
-        [
-          "Caracalla (Ruby)",
-          "Co-Emperor Marcus Aurelius Antoninus (born Bassianus)",
-          "Mercurial, ruthless, and favored by the Legiones. Allied with Domna; hostile to Geta, Plautilla, and the Aurelians.",
-        ],
-        [
-          "Geta (Emerald)",
-          "Co-Emperor Publius Septimius Geta",
-          "Entitled and penny-pinching, yet popular in the city—doomed to be murdered by Caracalla in late December 211 A.D. Allied with Domna; hostile to Caracalla.",
-        ],
-        [
-          "Domna (Diamond)",
-          "Empress Mother Julia Domna (mother to Bassianus and Geta)",
-          "Wealthy patroness of scholars and sophists who strives for peace between her sons. Allied with Caracalla & Geta; hostile to Plautilla & Aurelius.",
-        ],
-        [
-          "Plautilla (Sapphire)",
-          "Exiled Augusta Fulvia Plautilla",
-          "Banished wife of Caracalla sneaking through Rome in nocturnal disguise; loved by criminals and favored among the Nefarii. Allied with Aurelius; most hostile to Caracalla.",
-        ],
-        [
-          "Aurelius (Amethyst)",
-          "Lucius Aurelius Commodus Pompeianus (The Aurelians)",
-          "Scion of the old Claudio-Aurelian senatorial aristocracy; favored among the Patricii. Allied with Plautilla; hostile to Caracalla & Geta.",
-        ],
+        ["MAGA (Ruby)", "Huge in Cops; a few Criminals (pot farmers, KKK); one Celebrity (Musk)", "Aligned with the Tech Bros. Primarily against MS-13 and hugely against the DSA. On-and-off with ISIS."],
+        ["ISIS (Emerald)", "The rarest faction. Mostly Criminals, then Celebrities, then Cops", "Hates every faction except MS-13."],
+        ["Tech Bros (Diamond)", "Equally among Celebrities, Criminals, and Cops", "Somewhat aligned with the DSA and MAGA, somewhat averse to ISIS, indifferent to MS-13."],
+        ["DSA (Sapphire)", "Most among Celebrities; some Criminals; very few Cops (the Firefighters)", "Primarily averse to MAGA, sort of averse to the Tech Bros, aligned with ISIS and MS-13."],
+        ["MS-13 (Amethyst)", "Mostly Criminals; rarely Celebrities or Cops", "The most indifferent faction. Somewhat opposed to MAGA, a little averse to the Tech Bros, slightly aligned with the DSA and ISIS."],
       ],
     },
-    bullets: [
-      "Historical Note — Lucius Fabius Cilo (Tutor of Caracalla & Geta): Even amid Caracalla's bloody December 211 A.D. purge of Geta's supporters, personal ties could halt Praetorian steel. Romans were in outcry when soldiers sent to kill Cilo dragged him from his bath through the streets; Caracalla intervened—'Insult not my father, strike not my tutor!'—and had the arresting officer put to death.",
-    ],
+    bullets: [],
   },
   {
     id: "setup",
@@ -15056,7 +15000,7 @@ const RULEBOOK_SECTIONS = [
     bullets: [
       "Starting Treasury & Market: Each merchant begins Spring with 12(d) and 0 Favor across all five factions. 24 Goods/Guards are dealt onto the Portus Ostiae Market Board and left-aligned toward Precious (<<).",
       "Initial Hand & Speed Discard: Each merchant is dealt 5 distinct Starting Missions and 5 distinct Influence cards, then discards 2 Missions and 2 Influence cards (keeping 3 of each).",
-      "Political Climate Draft (6×3 Board): The FIRST merchant to finish discarding claims First Pick on the 6-column Political Climate Board (Caracalla, Geta, Domna, Plautilla, Aurelians, Missions — at most 1 Decree may be enacted per column).",
+      "Political Climate Draft (6×3 Board): The FIRST merchant to finish discarding claims First Pick on the 6-column Political Climate Board (MAGA, ISIS, TechBros, DSA, MS13, Missions — at most 1 Decree may be enacted per column).",
       "2-Player vs. 3+ Player Draft: In a 2-player game, 4 modifiers are enacted via snake draft (First Discarder → Rival → Rival → First Discarder — first pick and last pick!). In 3–6 player games, each merchant enacts 1 modifier in discard-completion order (up to all 6 columns).",
       "Normal Game Turn Order & 5th/6th Player Stipend: Once the Political Climate is set, the First Player Token goes to the merchant seated AFTER the First Discarder—so the merchant who claimed First Pick on the Political Climate acts LAST in normal turn order! In 5–6 player games, to offset late Spring Market position, the 5th merchant in Spring turn order receives +1(d) (starting at 13(d)) and the 6th merchant receives +2(d) (starting at 14(d)).",
     ],
@@ -15121,7 +15065,7 @@ const RULEBOOK_SECTIONS = [
     id: "delivery",
     title: "5. Phase II: Nocturnal Rome Delivery, Tile Icons, & The Tiber River",
     paragraphs: [
-      "At 8:00 P.M. (Turn 1), each merchant may take 1 Initial Scout (tile or deck card) and then enters Rome through one of the 6 Via City Gates: B1 (Via Flaminia), E1 (Via Nomentana), F3 (Via Tiburtina), F6 (Via Tusculana), B6 (Via Ostiensis), or A4 (Via Aurelia). Entering a Gate uses your Turn 1 movement.",
+      "At 8:00 P.M. (Turn 1), each dealer may take 1 Initial Scout (tile or deck card) and then enters San Francisco through one of the 5 road entry points: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Highway 1). Entering uses your Turn 1 movement. Leaving is different: the Pacific (west) edge has almost no way out except rare, expensive Speedboats; the Bay (north and east) edges offer cheaper boat escapes (Sailboat 1(d), Ferry 2(d), Cargo Ship 3(d)); and the Peninsula (south) edge has the most exits, usually free.",
       "Across Turns 1–10 (8:00 P.M. to 5:00 A.M.), each active merchant resolves their hourly turn in strict sequence:",
     ],
     iconGrid: [
@@ -15159,7 +15103,7 @@ const RULEBOOK_SECTIONS = [
     bullets: [
       "Step 1 — Optional Trash: Discard 1 Influence card to bury the top unexposed tile of any neighborhood or the top card of any deck to the bottom.",
       "Step 2 — Movement (1 Step (M)): Move along a passable outgoing edge to an adjacent neighborhood (revealing its top tile if face-down) or out an exterior perimeter edge to Exit Rome.",
-      "Step 3 — Edge Cost / Hazard: Pay any 2(d) road toll (plus +4(d) Bridge Toll if Divided Tiber is active and you hold < +1 Emerald) or resolve any Edge Encounter crossed.",
+      "Step 3 — Edge Cost / Hazard: Pay any 2(d) road toll (plus +4(d) Bridge Toll if Threat Level Red is active and you hold < +1 Emerald) or resolve any Edge Encounter crossed.",
       "Step 4 — Mission Cargo Pickup & Delivery: Upon arriving in a neighborhood—BEFORE any Center Tile Encounter triggers—you may load or deliver matching Mission Cargo!",
       "Step 5 — Center Tile Encounter: Resolve any Center Encounter on the tile (Patricii, Legiones, Nefarii, Angry Mob, Theater Troupe, or Soothsayer).",
       "Step 6 — One Transaction (1 Good/Hr (T), or Bulk Grain!): Sell AT MOST 1 Good card matching a buyer ('Buys:') on your current tile (or an active Sell Mission here) at its bold Green (SELL_SYM) price—EXCEPT for non-fenced GRAIN, where 1 hourly Transaction may sell ANY NUMBER (or all!) of your Grain cards together at the current Grain scarcity modifier! Alternatively, Purchase 1 Good at a Forum ('Sells:' at C3, D3, or D4) at its italic Red (BUY_SYM) price, OR Gamble once at a Stadium tile (up to 20(d) wager).",
@@ -15171,10 +15115,10 @@ const RULEBOOK_SECTIONS = [
     id: "missions",
     title: "6. Missions, Mission Cargo, & Regicide",
     bullets: [
-      "Starting Missions: Kept during Setup (3 per merchant). Can be canceled voluntarily without Favor penalty (unless Bonded Couriers is active, which fines -10(d) on any failed/canceled/unfinished mission!). Starting Mission Cargo can NEVER be sold or fenced.",
-      "Encounter Missions: Drawn from NPC encounters. Encounter Mission Cargo displays a bold Green (SELL_SYM) Fence price row—fencing it to a matching buyer sells 1 card for quick Denarii, applies Patron Hostile Favor, and FAILS the mission (unless Smuggler's Fence is active, which boosts Fence Scarcity by +1 step and prevents fencing from counting as a Failed Mission!).",
+      "Starting Missions: Kept during Setup (3 per merchant). Can be canceled voluntarily without Favor penalty (unless Surge Pricing is active, which fines -10(d) on any failed/canceled/unfinished mission!). Starting Mission Cargo can NEVER be sold or fenced.",
+      "Encounter Missions: Drawn from NPC encounters. Encounter Mission Cargo displays a bold Green (SELL_SYM) Fence price row—fencing it to a matching buyer sells 1 card for quick Denarii, applies Patron Hostile Favor, and FAILS the mission (unless Clique Fence is active, which boosts Fence Scarcity by +1 step and prevents fencing from counting as a Failed Mission!).",
       "Soothsayer Missions: Mandatory prophecies with 1(R) face-down Influence cards sealed underneath until completed. Cannot be voluntarily canceled unless holding 6 Soothsayer Missions simultaneously.",
-      "Regicide & Regime Change ('Any Player' Clauses): Two high-stakes Encounter Missions—Regicide (defeating Emperor Caracalla in combat) and Regime Change (defeating Co-Emperor Geta in combat)—trigger if ANY Player defeats that Emperor in combat while you hold the Mission! Completing Regicide immediately ends the game in an instant assassination victory for the Regicide holder; completing Regime Change awards 100(d) and +2 Rubies (+1 Diamond) while continuing the year.",
+      "Regicide & Regime Change ('Any Player' Clauses): Two high-stakes Encounter Missions—Regicide (defeating Emperor MAGA in combat) and Regime Change (defeating Co-Emperor ISIS in combat)—trigger if ANY Player defeats that Emperor in combat while you hold the Mission! Completing Regicide immediately ends the game in an instant assassination victory for the Regicide holder; completing Regime Change awards 100(d) and +2 Rubies (+1 Diamond) while continuing the year.",
     ],
   },
   {
@@ -15192,7 +15136,7 @@ const RULEBOOK_SECTIONS = [
       {
         img: "./assets/icons/legiones_icon.png",
         title: "Legiones Encounter",
-        desc: "Praetorian guards and urban cohorts. Heavily aligned with Caracalla; gain +2 CP when Army Pay Hike is active.",
+        desc: "Praetorian guards and urban cohorts. Heavily aligned with MAGA; gain +2 CP when Back the Blue is active.",
       },
       {
         imgs: ["./assets/icons/nefarii_icon.png", "./assets/icons/nefarii_3_icon.png"],
@@ -15237,7 +15181,7 @@ const RULEBOOK_SECTIONS = [
     ],
     bullets: [
       "Friendly vs. Hostile Encounters: Determined by your uncapped net Favor with the NPC's Faction. If you refuse a Demand to Fight and lose Combat, the NPC enforces their original Demand AND your turn ends immediately!",
-      "Combat Power (CP) & Cargo Gear: Both sides roll Rome Dice (R) plus Guards, Weapons, mandatory Exotic Animals (including Ostrich or negative-die beasts!), and Influence modifiers (plus +1 CP per positive Ruby & +2 CP to Legiones if Army Pay Hike is active). Note that crated Loricae body armor carries 0 CP in street ambushes (too slow to don mid-attack, compensated by lucrative trade margins). If Player CP ≥ Opponent CP against an NPC, you win!",
+      "Combat Power (CP) & Cargo Gear: Both sides roll Rome Dice (R) plus Guards, Weapons, mandatory Exotic Animals (including Ostrich or negative-die beasts!), and Influence modifiers (plus +1 CP per positive Ruby & +2 CP to Legiones if Back the Blue is active). Note that crated Loricae body armor carries 0 CP in street ambushes (too slow to don mid-attack, compensated by lucrative trade margins). If Player CP ≥ Opponent CP against an NPC, you win!",
       "Armor, Guards, & Driver Fate (Damage Deficit Note): If Opponent CP > Player CP, suffer Raw Wounds = (Opponent CP − Player CP). Note that wounds from combat are always determined by the signed damage deficit between the two sides—even when one or both CP totals are negative (for example, if your overall CP is -2 and your opponent's CP is -1, you suffer 1 Wound). Shields/Helmets reduce Wounds first; each remaining Wound kills 1 Guard. If an unblocked Wound reaches your Driver, roll 1(R) on the Driver Fate Chart: 0 = Dead (lose all Goods & your night ends); I = Left for dead (lose all Goods); II = Beaten & mugged (lose all Denarii); III = Begged for mercy (lose all Influence cards).",
       "1(R) Street Charts: Angry Mob (0: lose all Wine; I: lose all Grain; II: lose most expensive Good; III: safe), Theater Troupe (0: lose all positive Friendly Favor; I: lose all negative Hostile Favor; II: lose rest of turn & next turn; III: draw 1(R) Influence), Soothsayer (take mandatory Mission + seal 1(R) Influence cards).",
       "Stadium Gambling: On a tile with the Dice icon, wager 1(d) to 20(d) (capped at 20(d) per gamble action) and roll 1(R) to win Wager × Roll!",
@@ -15261,37 +15205,37 @@ const RULEBOOK_SECTIONS = [
       "Unless a merchant achieves instant victory via Regicide earlier in the year, the game concludes after Fall Clean-Up with Winter Reckoning, governed by the Political Climate modifiers drafted during Setup:",
     ],
     bullets: [
-      "Step 1 — Unfinished Missions Fail: Incomplete Missions fail first (applying Encounter Hostile Favor and -10(d) each if Bonded Couriers is active); remaining mission cargo is discarded.",
+      "Step 1 — Unfinished Missions Fail: Incomplete Missions fail first (applying Encounter Hostile Favor and -10(d) each if Surge Pricing is active); remaining mission cargo is discarded.",
       "Step 2 — Cart Liquidation & Loans: Remaining non-mission Goods liquidate at Abundant (>>) (SELL_SYM) Sell Price, then unpaid Spring (-45(d)) and Summer (-60(d)) Loans are deducted.",
-      "Step 3 — Imperial Proscription FIRST, Then Political Climate Settlement: If Imperial Proscription (Caracalla Option 1) is enacted, it resolves FIRST—eliminating the merchant with Least Caracalla Favor BEFORE any other Most/Least awards, penalties, steals, or percentages! Eliminated merchants cannot win or suffer subsequent Most/Least awards and rank below all survivors. Then resolve Flat Gem/Mission Modifiers & Least Penalties → Exile's Informants Steal → Domna +20% Wealth.",
+      "Step 3 — Mass Deportation FIRST, Then Political Climate Settlement: If Mass Deportation (MAGA Option 1) is enacted, it resolves FIRST—eliminating the merchant with Least MAGA Favor BEFORE any other Most/Least awards, penalties, steals, or percentages! Eliminated merchants cannot win or suffer subsequent Most/Least awards and rank below all survivors. Then resolve Flat Gem/Mission Modifiers & Least Penalties → Billionaire Tax Steal → TechBros +20% Wealth.",
       "Step 4 — PvP Combat Tie-Breakers (Strictly One Winner/Loser!): Every 'Most' and 'Least' modifier—as well as Final Score ties—awards its bonus or penalty to STRICTLY ONE merchant, even if tied at 0! Tied merchants fight PvP Combat: pre-roll cards (Mercenary Ambush, Distraction removing 1 positive die) apply before rolling, all dice roll simultaneously, and reactive post-roll cards (Twist Of Fate, Flying Chamber Pot, Gladiator's Intervention) trigger when they can overturn a deficit. For 'Most' awards, the combat winner claims the prize; for 'Least' penalties/elimination, the combat winner escapes and the combat LOSER suffers the penalty!",
     ],
     table: {
-      headers: ["Caracalla", "Geta", "Julia Domna", "Plautilla", "Aurelians", "Missions"],
+      headers: ["MAGA", "ISIS", "Julia TechBros", "DSA", "MS13", "Missions"],
       rows: [
         [
-          "Imperial Proscription: End of game (FIRST): Least Caracalla favor is eliminated.",
-          "Brother's Grudge: End of game: Least Geta favor loses 25(d).",
-          "Imperial Patronage: End of game: Most Domna favor gains +20% wealth.",
-          "Exile's Informants: End of game: Most Plautilla favor steals 15(d) from the wealthiest rival.",
-          "Old Senate Purse: End of game: Most Aurelian favor gains 25(d).",
-          "Master Purveyor: End of game: Most completed Missions gains 30(d).",
+          "Mass Deportation: End of game (FIRST): Least MAGA favor is eliminated.",
+          "Fatwa: End of game: Least ISIS favor loses 25(d).",
+          "Series A: End of game: Most TechBros favor gains +20% wealth.",
+          "Billionaire Tax: End of game: Most DSA favor steals 15(d) from the wealthiest rival.",
+          "Protection Racket: End of game: Most MS13 favor gains 25(d).",
+          "Five-Star Courier: End of game: Most completed Missions gains 30(d).",
         ],
         [
-          "Praetorian Backlash: End of game: Lose 10(d) per +Ruby; gain 5(d) per -Ruby.",
-          "Jealous Brothers: End of game: +15(d) per +Emerald if Caracalla ≤ 0, or -10(d) if ≥ +1; -5(d) per -Emerald.",
-          "Court Neutrality: End of game: Lose 15(d) per +Diamond and 15(d) per -Diamond.",
-          "Smuggled Dowry: End of game: Gain 10(d) per completed Mission with +Sapphire or a Plautilla patron.",
-          "Choose a Side: End of game: Gain 10(d) per +Amethyst and 10(d) per -Amethyst.",
-          "Guild Ledger: End of game: Gain 10(d) per completed Mission; lose 10(d) per failed or unfinished Mission.",
+          "Recall Election: End of game: Lose 10(d) per +Ruby; gain 5(d) per -Ruby.",
+          "Infidel Tax: End of game: +15(d) per +Emerald if MAGA ≤ 0, or -10(d) if ≥ +1; -5(d) per -Emerald.",
+          "Conflict of Interest: End of game: Lose 15(d) per +Diamond and 15(d) per -Diamond.",
+          "Mutual Aid: End of game: Gain 10(d) per completed Mission with +Sapphire or a DSA patron.",
+          "Plata o Plomo: End of game: Gain 10(d) per +Amethyst and 10(d) per -Amethyst.",
+          "Yelp Reviews: End of game: Gain 10(d) per completed Mission; lose 10(d) per failed or unfinished Mission.",
         ],
         [
-          "Army Pay Hike: Legiones gain +2 CP. Each +Ruby gives your Cart +1 CP.",
-          "Divided Tiber: Crossing any of the 5 Tiber Bridges costs a 4(d) toll, waived with +1 Emerald or Shortcut.",
-          "Empress Mediator: Exchange +Diamonds 1-for-1 into +Rubies or +Emeralds anytime.",
-          "Smuggler's Fence: Fenced cargo sells +1 Scarcity step higher and does not fail the Mission.",
-          "Senatorial Privilege: Spend +Amethysts when selling Goods (including Bulk Grain) for +1 Scarcity step per gem.",
-          "Bonded Couriers: Completed Missions pay 2× Denarii; failed or unfinished Missions fine 10(d).",
+          "Back the Blue: Legiones gain +2 CP. Each +Ruby gives your Cart +1 CP.",
+          "Threat Level Red: Crossing any of the 5 Tiber Bridges costs a 4(d) toll, waived with +1 Emerald or Shortcut.",
+          "Lobbying Blitz: Exchange +Diamonds 1-for-1 into +Rubies or +Emeralds anytime.",
+          "Clique Fence: Fenced cargo sells +1 Scarcity step higher and does not fail the Mission.",
+          "Rent Control: Spend +Amethysts when selling Goods (including Bulk Grain) for +1 Scarcity step per gem.",
+          "Surge Pricing: Completed Missions pay 2× Denarii; failed or unfinished Missions fine 10(d).",
         ],
       ],
     },
@@ -17355,7 +17299,7 @@ function installGlobalHotkeys() {
         if (gs.phase === "delivery_entry" && gs.activePlayerIndex === viewer.index && !viewer.position) {
           appState.cartPanelTab = "navigate";
           renderApp();
-          showToast("Choose a Via City Gate first to enter Rome, then steer with Numpad 1–9.");
+          showToast("Choose an entry point first to roll into San Francisco, then steer with Numpad 1–9.");
           return;
         }
         if (gs.phase !== "delivery" || gs.activePlayerIndex !== viewer.index || !viewer.position) {

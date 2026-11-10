@@ -2873,56 +2873,56 @@ button, input, select {
   color: #ffffff;
 }
 
-/* Aurelius -> Amethyst */
-.phys-enc-tiers-row.faction-aurelius {
+/* MS13 -> Amethyst */
+.phys-enc-tiers-row.faction-ms13 {
   background: linear-gradient(180deg, #9333ea 0%, #6b21a8 100%) !important;
   color: #ffffff;
 }
-.phys-enc-tiers-row.faction-aurelius .phys-enc-tier-cell.tier-active {
+.phys-enc-tiers-row.faction-ms13 .phys-enc-tier-cell.tier-active {
   background: linear-gradient(180deg, #a855f7 0%, #7e22ce 100%);
   box-shadow: inset 0 0 0 2px #ffffff, inset 0 0 0 3.5px #3b0764;
 }
 
-/* Caracalla -> Ruby */
-.phys-enc-tiers-row.faction-caracalla {
+/* MAGA -> Ruby */
+.phys-enc-tiers-row.faction-maga {
   background: linear-gradient(180deg, #dc2626 0%, #991b1b 100%) !important;
   color: #ffffff;
 }
-.phys-enc-tiers-row.faction-caracalla .phys-enc-tier-cell.tier-active {
+.phys-enc-tiers-row.faction-maga .phys-enc-tier-cell.tier-active {
   background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%);
   box-shadow: inset 0 0 0 2px #ffffff, inset 0 0 0 3.5px #450a0a;
 }
 
-/* Geta -> Emerald */
-.phys-enc-tiers-row.faction-geta {
+/* ISIS -> Emerald */
+.phys-enc-tiers-row.faction-isis {
   background: linear-gradient(180deg, #059669 0%, #065f46 100%) !important;
   color: #ffffff;
 }
-.phys-enc-tiers-row.faction-geta .phys-enc-tier-cell.tier-active {
+.phys-enc-tiers-row.faction-isis .phys-enc-tier-cell.tier-active {
   background: linear-gradient(180deg, #10b981 0%, #047857 100%);
   box-shadow: inset 0 0 0 2px #ffffff, inset 0 0 0 3.5px #022c22;
 }
 
-/* Domna -> Diamond */
-.phys-enc-tiers-row.faction-domna {
+/* TechBros -> Diamond */
+.phys-enc-tiers-row.faction-techbros {
   background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 100%) !important;
   color: #0f172a;
 }
-.phys-enc-tiers-row.faction-domna .phys-enc-tier-cell {
+.phys-enc-tiers-row.faction-techbros .phys-enc-tier-cell {
   border-right-color: rgba(15, 23, 42, 0.35);
   text-shadow: none;
 }
-.phys-enc-tiers-row.faction-domna .phys-enc-tier-cell.tier-active {
+.phys-enc-tiers-row.faction-techbros .phys-enc-tier-cell.tier-active {
   background: #ffffff;
   box-shadow: inset 0 0 0 2px #0f172a, inset 0 0 0 3.5px #94a3b8;
 }
 
-/* Plautilla -> Sapphire */
-.phys-enc-tiers-row.faction-plautilla {
+/* DSA -> Sapphire */
+.phys-enc-tiers-row.faction-dsa {
   background: linear-gradient(180deg, #2563eb 0%, #1e40af 100%) !important;
   color: #ffffff;
 }
-.phys-enc-tiers-row.faction-plautilla .phys-enc-tier-cell.tier-active {
+.phys-enc-tiers-row.faction-dsa .phys-enc-tier-cell.tier-active {
   background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
   box-shadow: inset 0 0 0 2px #ffffff, inset 0 0 0 3.5px #172554;
 }
@@ -5660,7 +5660,7 @@ button, input, select {
   color: var(--text-muted);
 }
 
-.domna-mediator-bar {
+.techbros-mediator-bar {
   margin-top: 0.45rem;
   padding: 0.45rem 0.6rem;
   border-radius: 5px;
@@ -5672,13 +5672,13 @@ button, input, select {
   gap: 0.35rem;
 }
 
-.domna-mediator-lbl {
+.techbros-mediator-lbl {
   font-size: 0.73rem;
   font-weight: 700;
   color: #1e293b;
 }
 
-.domna-mediator-btns {
+.techbros-mediator-btns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.35rem;
