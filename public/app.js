@@ -1,5 +1,5 @@
 /*
- * Night Merchant: Free Parking (reskin of Night Merchant: All Roads Lead to Rome)
+ * Night Merchant: InstantGram SF (reskin of Night Merchant: All Roads Lead to Rome)
  * Copyright (c) 2026 Dashiell Renaud.
  *
  * Licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
@@ -51,9 +51,9 @@ function getEffectiveFirebaseConfig() {
   const baseFb = cfg && cfg.firebaseConfig && typeof cfg.firebaseConfig === "object" ? cfg.firebaseConfig : {};
   const runtimeFb =
     typeof appState !== "undefined" &&
-    appState &&
-    appState.runtimeFirebaseConfig &&
-    typeof appState.runtimeFirebaseConfig === "object"
+      appState &&
+      appState.runtimeFirebaseConfig &&
+      typeof appState.runtimeFirebaseConfig === "object"
       ? appState.runtimeFirebaseConfig
       : {};
   const merged = { ...baseFb, ...runtimeFb };
@@ -94,7 +94,7 @@ async function initFirebaseClientIfConfigured() {
           await authMod.setPersistence(auth, authMod.indexedDBLocalPersistence);
         } catch (_persistErr) {
           if (typeof authMod.inMemoryPersistence !== "undefined") {
-            await authMod.setPersistence(auth, authMod.inMemoryPersistence).catch(() => {});
+            await authMod.setPersistence(auth, authMod.inMemoryPersistence).catch(() => { });
           }
         }
       }
@@ -163,7 +163,7 @@ async function signOutFirebaseClient() {
   if (!_fbAuthInstance || !_fbAuthModule) return;
   try {
     await _fbAuthModule.signOut(_fbAuthInstance);
-  } catch (_err) {}
+  } catch (_err) { }
 }
 
 const COLS = ["A", "B", "C", "D", "E", "F"];
@@ -229,7 +229,7 @@ const FACTION_META = [
     gemSingular: "ruby",
     gemPlural: "rubies",
     title: "MAGA — Make America Great Again",
-    bio: "Red hats in a blue city. MAGA runs deep through the Cops (SFPD, DEA, FBI, ICE), with a few Criminals (pot farmers, the KKK) and one very loud Celebrity (Musk). Back the Blue makes every Cop hit harder.",
+    bio: "Red hats in a blue city. MAGA runs deep through the Cops (SFPD, DEA, FBI, ICE), with few Criminals and Celebrities. Back the Blue makes every Cop hit harder.",
     alignedWith: ["TECH", "ISIS (sometimes)"],
     hostileTo: ["MS13 (most hostile)", "DSA (hugely)", "ISIS (sometimes)"],
     alignmentNote: "Working for MAGA makes everyone hate you; working against MAGA makes everyone like you. MS-13 mostly doesn't care.",
@@ -256,11 +256,11 @@ const FACTION_META = [
     color: "#475569",
     gemSingular: "diamond",
     gemPlural: "diamonds",
-    title: "Tech Bros — Silicon Valley Money",
+    title: "TECH — Silicon Valley Money",
     bio: "Very rich, very vulnerable, and enormously influential. Tech Bros turn up equally among Celebrities, Criminals, and Cops. Lurie, Zuckerberg, and their party-drug crowd.",
     alignedWith: ["DSA (somewhat)", "MAGA (somewhat)"],
     hostileTo: ["ISIS (somewhat)"],
-    alignmentNote: "Working for the Tech Bros often pleases MAGA and annoys the DSA; working against them angers MAGA and pleases the DSA.",
+    alignmentNote: "Working for TECH often pleases MAGA and annoys the DSA; working against them angers MAGA and pleases the DSA.",
     defaultDeckCounts: { patricii: 7, legiones: 8, nefarii: 4, total: 19 },
   },
   {
@@ -274,7 +274,7 @@ const FACTION_META = [
     bio: "Leftists, feminists, gays, natives, and locals. The DSA is best represented among the Celebrities, with some Criminals and very few Cops (the Firefighters).",
     alignedWith: ["ISIS", "MS13"],
     hostileTo: ["MAGA (most hostile)", "TECH (somewhat)"],
-    alignmentNote: "Working for the DSA sometimes pleases the Tech Bros and often angers ISIS and MAGA; working against the DSA sometimes pleases the Tech Bros or MAGA.",
+    alignmentNote: "Working for the DSA sometimes pleases TECH and often angers ISIS and MAGA; working against the DSA sometimes pleases TECH or MAGA.",
     defaultDeckCounts: { patricii: 9, legiones: 3, nefarii: 6, total: 18 },
   },
   {
@@ -288,7 +288,7 @@ const FACTION_META = [
     bio: "The most indifferent faction in the city, and the most dangerous to cross. MS-13 lives among the Criminals and rarely shows up as a Celebrity or Cop. Less likely than ISIS to attack at 0 loyalty, but always attacks at -1 or lower, and is always very strong in combat.",
     alignedWith: ["DSA (slightly)", "ISIS (slightly)"],
     hostileTo: ["MAGA (somewhat)", "TECH (a little)"],
-    alignmentNote: "MS-13 ignores what you do for or against anyone else. Working for MS-13 angers MAGA; working against MS-13 sometimes annoys the DSA and the Tech Bros.",
+    alignmentNote: "MS-13 ignores what you do for or against anyone else. Working for MS-13 angers MAGA; working against MS-13 sometimes annoys the DSA and TECH.",
     defaultDeckCounts: { patricii: 2, legiones: 2, nefarii: 6, total: 10 },
   },
 ];
@@ -296,9 +296,9 @@ const FACTION_META = [
 const DEFAULT_POLITICAL_CLIMATE_FACTORS = [
   { id: "MAGA", label: "MAGA", gemName: "Ruby", subtitle: "Make America Great Again" },
   { id: "ISIS", label: "ISIS", gemName: "Emerald", subtitle: "Islamic State Sleeper Cells" },
-  { id: "TECH", label: "TECH", gemName: "Diamond", subtitle: "Silicon Valley Money" },
+  { id: "TechBros", label: "Tech Bros", gemName: "Diamond", subtitle: "Silicon Valley Money" },
   { id: "DSA", label: "DSA", gemName: "Sapphire", subtitle: "Democratic Socialists of America" },
-  { id: "MS13", label: "MS13", gemName: "Amethyst", subtitle: "Mara Salvatrucha" },
+  { id: "MS13", label: "MS-13", gemName: "Amethyst", subtitle: "Mara Salvatrucha" },
   { id: "Missions", label: "Gigs", gemName: "Contracts", subtitle: "Gig Economy" },
 ];
 
@@ -343,9 +343,9 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
     gemName: "Emerald",
     optionNumber: 1,
     timing: "endgame",
-    title: "Fatwa",
-    shortText: "Least ISIS favor loses 25d",
-    description: "End of game: the player with the Least ISIS favor loses 25d.",
+    title: "Decapitation",
+    shortText: "Most ISIS favor loses 25d",
+    description: "End of game: the player with the Most ISIS favor loses 25d.",
   },
   {
     id: "isis_2",
@@ -354,7 +354,7 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
     gemName: "Emerald",
     optionNumber: 2,
     timing: "endgame",
-    title: "Infidel Tax",
+    title: "Fatwa",
     shortText: "+15d/+Emerald if MAGA ≤ 0, -10d if ≥ +1; -5d/-Emerald",
     description: "End of game: +15d per +Emerald if your MAGA favor is ≤ 0, or -10d per +Emerald if it is ≥ +1; -5d per -Emerald.",
   },
@@ -365,14 +365,14 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
     gemName: "Emerald",
     optionNumber: 3,
     timing: "midgame",
-    title: "Threat Level Red",
-    shortText: "Bridge & Freeway exits cost a 4d bribe, waived with +1 Emerald",
-    description: "Leaving SF by a Bridge or Freeway costs a 4d checkpoint bribe, waived with +1 Emerald or Shortcut.",
+    title: "Sanctuary City",
+    shortText: "All players start with a free Emerald",
+    description: "When enacted: every player immediately gains a free Emerald (+1 ISIS).",
   },
   {
-    id: "tech_1",
-    factor: "TECH",
-    factorLabel: "TECH",
+    id: "techbros_1",
+    factor: "TechBros",
+    factorLabel: "Tech Bros",
     gemName: "Diamond",
     optionNumber: 1,
     timing: "endgame",
@@ -381,9 +381,9 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
     description: "End of game: the player with the Most Tech Bros favor gains +20% wealth.",
   },
   {
-    id: "tech_2",
-    factor: "TECH",
-    factorLabel: "TECH",
+    id: "techbros_2",
+    factor: "TechBros",
+    factorLabel: "Tech Bros",
     gemName: "Diamond",
     optionNumber: 2,
     timing: "endgame",
@@ -392,9 +392,9 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
     description: "End of game: Lose 15d per +Diamond and 15d per -Diamond.",
   },
   {
-    id: "tech_3",
-    factor: "TECH",
-    factorLabel: "TECH",
+    id: "techbros_3",
+    factor: "TechBros",
+    factorLabel: "Tech Bros",
     gemName: "Diamond",
     optionNumber: 3,
     timing: "midgame",
@@ -438,7 +438,7 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
   {
     id: "ms13_1",
     factor: "MS13",
-    factorLabel: "MS13",
+    factorLabel: "MS-13",
     gemName: "Amethyst",
     optionNumber: 1,
     timing: "endgame",
@@ -449,7 +449,7 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
   {
     id: "ms13_2",
     factor: "MS13",
-    factorLabel: "MS13",
+    factorLabel: "MS-13",
     gemName: "Amethyst",
     optionNumber: 2,
     timing: "endgame",
@@ -460,7 +460,7 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
   {
     id: "ms13_3",
     factor: "MS13",
-    factorLabel: "MS13",
+    factorLabel: "MS-13",
     gemName: "Amethyst",
     optionNumber: 3,
     timing: "midgame",
@@ -486,9 +486,9 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
     gemName: "Contracts",
     optionNumber: 2,
     timing: "endgame",
-    title: "Yelp Reviews",
-    shortText: "+10d per completed Mission; -10d per failed Mission",
-    description: "End of game: Gain 10d per completed Mission; lose 10d per failed or unfinished Mission.",
+    title: "Full Time Employee",
+    shortText: "Receive (gems of one faction × missions done for it) ₿",
+    description: "End of game: every player receives A × B Bitcoin, where A = your gems of any one faction and B = the missions you completed for that faction (best faction counts).",
   },
   {
     id: "missions_3",
@@ -879,7 +879,7 @@ function navigateToMarketBoardForCategory(category) {
 const DENARIUS_SYM = "𐆖";
 
 /**
- * Free Parking currency: the engine keeps integer amounts where 1 unit = 1 Denarius = 0.1 Bitcoin.
+ * InstantGram SF currency: the engine keeps integer amounts where 1 unit = 1 Denarius = 0.1 Bitcoin.
  * Every displayed amount is shown in Bitcoin (e.g. 14 -> ₿1.4, 30 -> ₿3).
  */
 const BTC_SYM = "₿";
@@ -1174,7 +1174,7 @@ function createTransactionActionCircleNode(titleText = "Unused Transaction Actio
 }
 
 /**
- * Free Parking display reskin. Internal ids (goods tracks, deck keys) stay the
+ * InstantGram SF display reskin. Internal ids (goods tracks, deck keys) stay the
  * Night Merchant ones so the shared engine keeps working; every visible string
  * passes through here to show the San Francisco names instead.
  */
@@ -1224,6 +1224,15 @@ const SF_RESKIN_RULES = [
   [/\bImperial Forums?\b/g, "Open-Air Market"],
   [/\bForums?\b/g, "Open-Air Market"],
   [/\bVia (?:City )?Gates?\b/g, "Entry Point"],
+  [/\bSpring\b/g, "Thursday"],
+  [/\bSummer\b/g, "Friday"],
+  [/\bFall\b/g, "Saturday"],
+  [/\bWinter Reckoning\b/g, "Sunday Morning Reckoning"],
+  [/\bDecember 211(?: A\.D\.)?(?: Purge)?/g, "Sunday Morning"],
+  [/\bseasons\b/g, "nights"],
+  [/\bseason\b/g, "night"],
+  [/\bSeasons\b/g, "Nights"],
+  [/\bSeason\b/g, "Night"],
   [/\b(?:the )?end of 211 A\.D\./g, "the end of the year"],
   [/\b211 A\.D\./g, "2026"],
   [/\bProcession\b/g, "Street Fair"],
@@ -1546,8 +1555,8 @@ function renderDynamicTileCardNode(tile, coord, mode = "board") {
             s.category === "Exotic Animals"
               ? "Exotic"
               : s.category === "Meat Animals"
-              ? "Meat"
-              : s.category;
+                ? "Meat"
+                : s.category;
           const modText = formatTileModifier(s.modifier);
           return el(
             "span",
@@ -1579,18 +1588,17 @@ function renderDynamicTileCardNode(tile, coord, mode = "board") {
 
   const bottomRightNode = tile.gamble
     ? el(
-        "div",
-        { className: "dyn-tile-bottom-right" },
-        el("img", { className: "dyn-bottom-icon", src: "/assets/icons/dice.png", alt: "Gamble" })
-      )
+      "div",
+      { className: "dyn-tile-bottom-right" },
+      el("img", { className: "dyn-bottom-icon", src: "/assets/icons/dice.png", alt: "Gamble" })
+    )
     : null;
 
   return el(
     "div",
     {
-      className: `dyn-tile-card ${mode === "board" ? "board-overlay" : "inspector-preview"} ${
-        edges.SW ? "has-edge-sw" : ""
-      } ${edges.SE ? "has-edge-se" : ""}`.trim(),
+      className: `dyn-tile-card ${mode === "board" ? "board-overlay" : "inspector-preview"} ${edges.SW ? "has-edge-sw" : ""
+        } ${edges.SE ? "has-edge-se" : ""}`.trim(),
     },
     el("img", {
       className: "dyn-tile-monument-bg",
@@ -1884,35 +1892,35 @@ function renderPhysicalMissionCardNode(m, opts = {}) {
     m.underInfluenceCount !== undefined
       ? m.underInfluenceCount
       : Array.isArray(m.underInfluence)
-      ? m.underInfluence.length
-      : 0
+        ? m.underInfluence.length
+        : 0
   );
 
   const deliveryStatusBadgeNode =
     showStatusTag && m.kind === "delivery"
       ? el("span", {
-          style: {
-            fontSize: "0.55rem",
-            background: m.canDeliverCargo
-              ? "#15803d"
-              : m.pickedUp
+        style: {
+          fontSize: "0.55rem",
+          background: m.canDeliverCargo
+            ? "#15803d"
+            : m.pickedUp
               ? "#16a34a"
               : m.canLoadCargo
-              ? "#d97706"
-              : "rgba(74, 52, 32, 0.78)",
-            color: "#fff",
-            padding: "1px 4px",
-            borderRadius: "3px",
-            fontWeight: "800",
-          },
-          text: m.canDeliverCargo
-            ? `DELIVER @ ${m.deliverCell}`
-            : m.pickedUp
+                ? "#d97706"
+                : "rgba(74, 52, 32, 0.78)",
+          color: "#fff",
+          padding: "1px 4px",
+          borderRadius: "3px",
+          fontWeight: "800",
+        },
+        text: m.canDeliverCargo
+          ? `DELIVER @ ${m.deliverCell}`
+          : m.pickedUp
             ? `CARGO LOADED → ${m.deliverCell}`
             : m.canLoadCargo
-            ? `READY AT ${m.pickupCell}`
-            : `PICK UP @ ${m.pickupCell}`,
-        })
+              ? `READY AT ${m.pickupCell}`
+              : `PICK UP @ ${m.pickupCell}`,
+      })
       : null;
 
   const externalActions = [];
@@ -1972,9 +1980,8 @@ function renderPhysicalMissionCardNode(m, opts = {}) {
           {
             type: "button",
             className: "mission-sell-complete-btn",
-            title: `Bulk Grain Sale: Sell all ${bulkGrainSells.length} Grain cards in ${
-              m.cell || "this neighborhood"
-            } at ${relMod} (${totalBulkPrice} Denarii total) and complete Mission "${m.name}"`,
+            title: `Bulk Grain Sale: Sell all ${bulkGrainSells.length} Grain cards in ${m.cell || "this neighborhood"
+              } at ${relMod} (${totalBulkPrice} Denarii total) and complete Mission "${m.name}"`,
             onClick: (e) => {
               e.stopPropagation();
               closeModal();
@@ -2126,8 +2133,8 @@ function renderPhysicalMissionCardNode(m, opts = {}) {
               m.source === "soothsayer"
                 ? "Soothsayer Missio"
                 : m.source === "encounter" && !m.hasDrawnMissionCard && m.patronName
-                ? `Encounter (${m.patronName})`
-                : "Missio",
+                  ? `Encounter (${m.patronName})`
+                  : "Missio",
           }
         ),
         deliveryStatusBadgeNode
@@ -2162,9 +2169,8 @@ function renderPhysicalMissionCardNode(m, opts = {}) {
           el(
             "span",
             {
-              text: `: ${m.rewardText || "Special Reward"}${
-                m.patronRewardText ? ` + ${m.patronRewardText} (Patron)` : ""
-              }${m.source === "soothsayer" ? " + Buried Influence" : ""}`,
+              text: `: ${m.rewardText || "Special Reward"}${m.patronRewardText ? ` + ${m.patronRewardText} (Patron)` : ""
+                }${m.source === "soothsayer" ? " + Buried Influence" : ""}`,
             }
           )
         )
@@ -2177,30 +2183,30 @@ function renderPhysicalMissionCardNode(m, opts = {}) {
           { style: { display: "flex", alignItems: "center", gap: "3px" } },
           favorGemNodes.length > 0
             ? [
-                el("img", {
-                  className: "phys-inline-icon",
-                  src: "/assets/icons/thumb_up.png",
-                  alt: "Thumbs Up (Complete Mission)",
-                  title: "Friendly Favor for completing this mission",
-                }),
-                ...favorGemNodes,
-              ]
+              el("img", {
+                className: "phys-inline-icon",
+                src: "/assets/icons/thumb_up.png",
+                alt: "Thumbs Up (Complete Mission)",
+                title: "Friendly Favor for completing this mission",
+              }),
+              ...favorGemNodes,
+            ]
             : el("span", { style: { fontSize: "0.56rem", color: "#9ca3af", fontWeight: "600" }, text: "No Favor" })
         ),
         hostileGemNodes.length > 0
           ? el(
-              "div",
-              {
-                style: { display: "flex", alignItems: "center", gap: "3px" },
-                title: "Thumbs Down: Reputational penalty if canceled or failed",
-              },
-              el("img", {
-                className: "phys-inline-icon",
-                src: "/assets/icons/thumb_down.png",
-                alt: "Thumbs Down (Fail / Cancel Penalty)",
-              }),
-              ...hostileGemNodes
-            )
+            "div",
+            {
+              style: { display: "flex", alignItems: "center", gap: "3px" },
+              title: "Thumbs Down: Reputational penalty if canceled or failed",
+            },
+            el("img", {
+              className: "phys-inline-icon",
+              src: "/assets/icons/thumb_down.png",
+              alt: "Thumbs Down (Fail / Cancel Penalty)",
+            }),
+            ...hostileGemNodes
+          )
           : null
       )
     )
@@ -2241,9 +2247,8 @@ function renderPhysicalMissionCardNode(m, opts = {}) {
         "button",
         {
           type: "button",
-          className: `mission-stack-protruding-edge ${
-            isSwapped ? "edge-mission" : `edge-encounter deck-${encDeckKey}`
-          }`,
+          className: `mission-stack-protruding-edge ${isSwapped ? "edge-mission" : `edge-encounter deck-${encDeckKey}`
+            }`,
           title: isSwapped
             ? `Click side edge to bring Mission "${m.name || "Quest"}" to the top`
             : `Click protruding Encounter edge to inspect "${patronLabel}"`,
@@ -2287,9 +2292,8 @@ function renderPhysicalMissionCardNode(m, opts = {}) {
       "button",
       {
         type: "button",
-        className: `mission-stack-protruding-edge ${
-          isSwapped ? "edge-mission" : "edge-influence-stack"
-        }`,
+        className: `mission-stack-protruding-edge ${isSwapped ? "edge-mission" : "edge-influence-stack"
+          }`,
         title: isSwapped
           ? `Click side edge to bring Soothsayer Mission "${m.name || "Mission"}" back to the top`
           : "Click protruding Influence stack edge to check the exact number of buried Influence cards",
@@ -2479,8 +2483,8 @@ function formatHostileFavorPenaltyText(cardOrMission) {
     Array.isArray(cardOrMission?.hostileFavor) && cardOrMission.hostileFavor.length > 0
       ? cardOrMission.hostileFavor
       : cardOrMission?.faction
-      ? [`-${cardOrMission.faction}`]
-      : [];
+        ? [`-${cardOrMission.faction}`]
+        : [];
   if (raw.length === 0) return "No Favor Penalty";
   const counts = {};
   for (const entry of raw) {
@@ -2582,13 +2586,13 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
           },
           interactive && onFulfill
             ? el(
-                "div",
-                { style: { marginBottom: "4px" } },
-                el("span", {
-                  className: "enc-click-hint-pill fulfill",
-                  text: "👆 Click Card to Resolve Encounter",
-                })
-              )
+              "div",
+              { style: { marginBottom: "4px" } },
+              el("span", {
+                className: "enc-click-hint-pill fulfill",
+                text: "👆 Click Card to Resolve Encounter",
+              })
+            )
             : null,
           el("div", {
             className: "phys-card-action-text",
@@ -2633,12 +2637,12 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
     Array.isArray(card.tiers) && card.tiers.length > 0
       ? card.tiers
       : Array.isArray(card.reactions) && card.reactions.length > 0
-      ? card.reactions.map((r) => ({
+        ? card.reactions.map((r) => ({
           cond: formatReactionCondition(r.condition),
           effect: formatReactionTypeSymbol(r),
           text: r.actionText || null,
         }))
-      : [
+        : [
           { cond: "≤ -1", effect: "(COMBAT_ICON)" },
           { cond: "≥ 0", effect: formatReactionTypeSymbol(pend ? pend.reaction || pend.reactionType : "demand") },
         ];
@@ -2658,8 +2662,8 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
           ? "enc-clickable-section section-combat"
           : "enc-section-locked"
         : interactive && isActive && !combatMandatory
-        ? "enc-clickable-section section-fulfill"
-        : "";
+          ? "enc-clickable-section section-fulfill"
+          : "";
 
     return el(
       "div",
@@ -2670,8 +2674,8 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
             ? "Click to Fight in Combat!"
             : "Combat Locked (Not Threatened)"
           : isActive
-          ? "Your Active Reputation Tier — Click to Comply / Accept"
-          : `Reputation Tier (${t.cond})${t.text ? `: ${t.text}` : ""}`,
+            ? "Your Active Reputation Tier — Click to Comply / Accept"
+            : `Reputation Tier (${t.cond})${t.text ? `: ${t.text}` : ""}`,
         onClick: isCombatTier ? handleCombatClick : isActive && !combatMandatory ? handleFulfillClick : null,
       },
       el("div", { className: "phys-enc-tier-effect", text: eff }),
@@ -2712,8 +2716,8 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
       (hasDeckQuestDemand
         ? "!: Accept the top card of the Missiones deck (unseen) as a Mission."
         : hasDeckQuestOffer
-        ? "?: Accept the top card of the Missiones deck (unseen) as a Mission."
-        : "Encounter in the streets of Rome.");
+          ? "?: Accept the top card of the Missiones deck (unseen) as a Mission."
+          : "Encounter in the streets of Rome.");
   }
   defaultActionText = normalizeRelativeScarcityText(defaultActionText);
 
@@ -2765,9 +2769,8 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
           el(
             "div",
             {
-              className: `phys-card-cp-line ${
-                interactive ? (canFight ? "enc-clickable-section section-combat" : "enc-section-locked") : ""
-              }`,
+              className: `phys-card-cp-line ${interactive ? (canFight ? "enc-clickable-section section-combat" : "enc-section-locked") : ""
+                }`,
               style: { padding: "2px 4px", borderRadius: "4px" },
               title: canFight ? "Click to Fight in Combat!" : "Combat Locked (Not Threatened)",
               onClick: handleCombatClick,
@@ -2792,9 +2795,8 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
       el(
         "div",
         {
-          className: `phys-card-body ${
-            interactive && !combatMandatory ? "enc-clickable-section section-fulfill" : ""
-          }`,
+          className: `phys-card-body ${interactive && !combatMandatory ? "enc-clickable-section section-fulfill" : ""
+            }`,
           title:
             interactive && !combatMandatory
               ? "Click this section of the card to Comply / Accept Offer / Accept Mission"
@@ -2806,38 +2808,38 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
           {},
           interactive && !combatMandatory
             ? el(
-                "div",
-                { style: { marginBottom: "4px" } },
-                el("span", {
-                  className: "enc-click-hint-pill fulfill",
-                  text: "👆 Click Section to Comply / Accept",
-                })
-              )
+              "div",
+              { style: { marginBottom: "4px" } },
+              el("span", {
+                className: "enc-click-hint-pill fulfill",
+                text: "👆 Click Section to Comply / Accept",
+              })
+            )
             : null,
           hasDeckQuestDemand || hasDeckQuestOffer
             ? el(
-                "div",
-                {
-                  style: {
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "4px",
-                    padding: "2px 6px",
-                    borderRadius: "4px",
-                    background: hasDeckQuestDemand ? "rgba(180, 83, 9, 0.16)" : "rgba(21, 128, 61, 0.16)",
-                    border: hasDeckQuestDemand ? "1px solid rgba(180, 83, 9, 0.45)" : "1px solid rgba(21, 128, 61, 0.45)",
-                    fontSize: "0.62rem",
-                    fontWeight: "800",
-                    color: hasDeckQuestDemand ? "#92400e" : "#166534",
-                    marginBottom: "4px",
-                  },
+              "div",
+              {
+                style: {
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "4px",
+                  padding: "2px 6px",
+                  borderRadius: "4px",
+                  background: hasDeckQuestDemand ? "rgba(180, 83, 9, 0.16)" : "rgba(21, 128, 61, 0.16)",
+                  border: hasDeckQuestDemand ? "1px solid rgba(180, 83, 9, 0.45)" : "1px solid rgba(21, 128, 61, 0.45)",
+                  fontSize: "0.62rem",
+                  fontWeight: "800",
+                  color: hasDeckQuestDemand ? "#92400e" : "#166534",
+                  marginBottom: "4px",
                 },
-                el("span", {
-                  text: hasDeckQuestDemand
-                    ? "(DECK_ICON)(QUEST_ICON)! Deck Quest Demand"
-                    : "(DECK_ICON)(QUEST_ICON)? Optional Deck Quest Offer",
-                })
-              )
+              },
+              el("span", {
+                text: hasDeckQuestDemand
+                  ? "(DECK_ICON)(QUEST_ICON)! Deck Quest Demand"
+                  : "(DECK_ICON)(QUEST_ICON)? Optional Deck Quest Offer",
+              })
+            )
             : null,
           el("div", {
             style: { fontWeight: "700" },
@@ -2850,9 +2852,8 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
       el(
         "div",
         {
-          className: `phys-card-footer ${
-            interactive ? (canFight ? "enc-clickable-section section-combat" : "enc-section-locked") : ""
-          }`,
+          className: `phys-card-footer ${interactive ? (canFight ? "enc-clickable-section section-combat" : "enc-section-locked") : ""
+            }`,
           title: canFight
             ? "Click Combat Bar to Fight in Combat!"
             : "Combat Locked — Combat is not threatened by this party",
@@ -2865,9 +2866,9 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
           el("span", { text: `:${card.combatReward || "30(d)"}` }),
           interactive
             ? el("span", {
-                className: `enc-click-hint-pill ${canFight ? "combat" : "locked"}`,
-                text: canFight ? "(COMBAT_ICON) Click to Fight" : "🔒 No Combat",
-              })
+              className: `enc-click-hint-pill ${canFight ? "combat" : "locked"}`,
+              text: canFight ? "(COMBAT_ICON) Click to Fight" : "🔒 No Combat",
+            })
             : null
         ),
         el(
@@ -3099,7 +3100,7 @@ async function bootstrap() {
     if (rawGameParam && /^[A-Za-z0-9_-]{1,40}$/.test(rawGameParam)) {
       appState.pendingInviteGameId = rawGameParam;
     }
-  } catch (_e) {}
+  } catch (_e) { }
 
   await initFirebaseClientIfConfigured();
 
@@ -3121,7 +3122,7 @@ async function bootstrap() {
           if (synced && synced.user) {
             me = { authenticated: true, user: synced.user, csrfToken: synced.csrfToken || null };
           }
-        } catch (_syncErr) {}
+        } catch (_syncErr) { }
       }
     }
     if (me.authenticated && me.user) {
@@ -3252,7 +3253,7 @@ function persistSkipMissionCompletionPopups(skipFlag) {
         appState.user = res.user;
       }
     })
-    .catch(() => {});
+    .catch(() => { });
 }
 
 function openMissionCompletionModal(ev) {
@@ -3295,9 +3296,9 @@ function openMissionCompletionModal(ev) {
       }),
       ev.contextDetail
         ? el("div", {
-            style: { fontSize: "0.84rem", color: "#8c5612", marginTop: "0.25rem", fontWeight: "700" },
-            text: `Completed by ${ev.contextDetail}`,
-          })
+          style: { fontSize: "0.84rem", color: "#8c5612", marginTop: "0.25rem", fontWeight: "700" },
+          text: `Completed by ${ev.contextDetail}`,
+        })
         : null
     ),
     el(
@@ -3334,9 +3335,8 @@ function openMissionCompletionModal(ev) {
         { style: { display: "flex", alignItems: "center", gap: "0.45rem", fontSize: "0.86rem", color: "#15803d", fontWeight: "700", flexWrap: "wrap" } },
         el("img", { className: "phys-inline-icon", src: "/assets/icons/thumb_up.png", alt: "Favor" }),
         el("span", {
-          text: `Faction Favor: ${
-            favorNotes.length > 0 ? favorNotes.join(", ") : ev.favorSummary || "No Faction Favor change"
-          }`,
+          text: `Faction Favor: ${favorNotes.length > 0 ? favorNotes.join(", ") : ev.favorSummary || "No Faction Favor change"
+            }`,
         }),
         ...favorGems
       )
@@ -3487,13 +3487,13 @@ function openFinalScoringModal(standings, meta = {}) {
         el("span", { style: { color: valColor }, text: signed }),
         fDelta !== null && fDelta !== 0
           ? el("span", {
-              style: {
-                fontSize: "0.72rem",
-                marginLeft: "0.18rem",
-                color: fDelta > 0 ? "#15803d" : "#b91c1c",
-              },
-              text: `(${formatSignedDenarii(fDelta)})`,
-            })
+            style: {
+              fontSize: "0.72rem",
+              marginLeft: "0.18rem",
+              color: fDelta > 0 ? "#15803d" : "#b91c1c",
+            },
+            text: `(${formatSignedDenarii(fDelta)})`,
+          })
           : null
       );
     });
@@ -3564,36 +3564,36 @@ function openFinalScoringModal(standings, meta = {}) {
           ),
           wr.climateBreakdown.length > 0
             ? el(
-                "div",
-                { className: "climate-reckoning-breakdown" },
-                ...wr.climateBreakdown.map((cb) => {
-                  const cbElim = Boolean(cb.eliminated);
-                  const cbDelta = Number(cb.delta) || 0;
-                  const valText = cbElim ? "☠️ ELIMINATED" : formatSignedDenarii(cbDelta);
-                  const valClr = cbElim
-                    ? "#b91c1c"
-                    : cbDelta > 0
+              "div",
+              { className: "climate-reckoning-breakdown" },
+              ...wr.climateBreakdown.map((cb) => {
+                const cbElim = Boolean(cb.eliminated);
+                const cbDelta = Number(cb.delta) || 0;
+                const valText = cbElim ? "☠️ ELIMINATED" : formatSignedDenarii(cbDelta);
+                const valClr = cbElim
+                  ? "#b91c1c"
+                  : cbDelta > 0
                     ? "#15803d"
                     : cbDelta < 0
-                    ? "#b91c1c"
-                    : "var(--text-muted)";
-                  return el(
-                    "div",
-                    { className: "climate-reckoning-row" },
-                    el(
-                      "span",
-                      { className: "climate-reckoning-title" },
-                      el("strong", { text: `${cb.factor || "Climate"} — ${cb.title || cb.id}: ` }),
-                      el("span", { style: { color: "var(--text-muted)" }, text: cb.detail || "" })
-                    ),
-                    el("span", {
-                      className: "climate-reckoning-delta",
-                      style: { color: valClr, fontWeight: "800" },
-                      text: valText,
-                    })
-                  );
-                })
-              )
+                      ? "#b91c1c"
+                      : "var(--text-muted)";
+                return el(
+                  "div",
+                  { className: "climate-reckoning-row" },
+                  el(
+                    "span",
+                    { className: "climate-reckoning-title" },
+                    el("strong", { text: `${cb.factor || "Climate"} — ${cb.title || cb.id}: ` }),
+                    el("span", { style: { color: "var(--text-muted)" }, text: cb.detail || "" })
+                  ),
+                  el("span", {
+                    className: "climate-reckoning-delta",
+                    style: { color: valClr, fontWeight: "800" },
+                    text: valText,
+                  })
+                );
+              })
+            )
             : null
         );
       } else {
@@ -3629,8 +3629,8 @@ function openFinalScoringModal(standings, meta = {}) {
             Number(wr.factionDelta) > 0
               ? "#15803d"
               : Number(wr.factionDelta) < 0
-              ? "#b91c1c"
-              : "var(--text-muted)",
+                ? "#b91c1c"
+                : "var(--text-muted)",
           ],
           [
             `Missions (Net ${mNetStr})`,
@@ -3661,9 +3661,9 @@ function openFinalScoringModal(standings, meta = {}) {
           ),
           leaderNotes.length > 0
             ? el("div", {
-                style: { fontSize: "0.76rem", color: "#754208", fontWeight: "700" },
-                text: `🏛️ Reckoning Honors: ${leaderNotes.join(" • ")}`,
-              })
+              style: { fontSize: "0.76rem", color: "#754208", fontWeight: "700" },
+              text: `🏛️ Reckoning Honors: ${leaderNotes.join(" • ")}`,
+            })
             : null
         );
       }
@@ -3715,16 +3715,16 @@ function openFinalScoringModal(standings, meta = {}) {
             : null,
           isEliminated
             ? el("span", {
-                className: "eliminated-badge",
-                text: `☠️ Eliminated (${elimReason})`,
-              })
+              className: "eliminated-badge",
+              text: `☠️ Eliminated (${elimReason})`,
+            })
             : null,
           entry.won && !isEliminated
             ? el("span", {
-                className: "badge",
-                style: { borderColor: "#b45309", color: "#78350f", background: "#fef3c7" },
-                text: "👑 Victorious Night Merchant",
-              })
+              className: "badge",
+              style: { borderColor: "#b45309", color: "#78350f", background: "#fef3c7" },
+              text: "👑 Victorious Night Merchant",
+            })
             : null
         ),
         el("div", {
@@ -3958,10 +3958,10 @@ function renderCompletedGamesView() {
         const dateStr =
           g.completedAt && Number(g.completedAt) > 0
             ? new Date(Number(g.completedAt) * 1000).toLocaleDateString(undefined, {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              })
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })
             : "Anno Domini 211";
         const hasDetailedStats = Array.isArray(g.standings) && g.standings.length > 0;
         const players = Array.isArray(g.players) ? g.players : [];
@@ -3984,20 +3984,19 @@ function renderCompletedGamesView() {
                 }),
                 g.userWon
                   ? el("span", {
-                      className: "badge",
-                      style: { borderColor: "#b45309", color: "#78350f", background: "#fef3c7" },
-                      text: "🏆 Victory",
-                    })
+                    className: "badge",
+                    style: { borderColor: "#b45309", color: "#78350f", background: "#fef3c7" },
+                    text: "🏆 Victory",
+                  })
                   : el("span", {
-                      className: "badge",
-                      text: g.userRank ? `Rank #${g.userRank}` : "Completed",
-                    })
+                    className: "badge",
+                    text: g.userRank ? `Rank #${g.userRank}` : "Completed",
+                  })
               ),
               el("div", {
                 style: { fontSize: "0.78rem", color: "var(--text-muted)" },
-                text: `Completed ${dateStr}${g.season ? ` • Ended in ${g.season}` : ""}${
-                  g.winnerName ? ` • Winner: ${g.winnerName}` : ""
-                }`,
+                text: `Completed ${dateStr}${g.season ? ` • Ended in ${g.season}` : ""}${g.winnerName ? ` • Winner: ${g.winnerName}` : ""
+                  }`,
               })
             ),
             el(
@@ -4005,24 +4004,24 @@ function renderCompletedGamesView() {
               { style: { display: "flex", gap: "0.45rem", flexWrap: "wrap" } },
               hasDetailedStats
                 ? el("button", {
-                    type: "button",
-                    className: "btn btn-sm btn-primary",
-                    text: "📊 Full Stats & Rankings",
-                    onClick: () =>
-                      openFinalScoringModal(g.standings, {
-                        gameName: g.gameName,
-                        winnerName: g.winnerName,
-                        season: g.season,
-                      }),
-                  })
+                  type: "button",
+                  className: "btn btn-sm btn-primary",
+                  text: "📊 Full Stats & Rankings",
+                  onClick: () =>
+                    openFinalScoringModal(g.standings, {
+                      gameName: g.gameName,
+                      winnerName: g.winnerName,
+                      season: g.season,
+                    }),
+                })
                 : null,
               g.canReopenBoard
                 ? el("button", {
-                    type: "button",
-                    className: "btn btn-sm",
-                    text: "⚔️ Open Board",
-                    onClick: () => openGame(g.gameId),
-                  })
+                  type: "button",
+                  className: "btn btn-sm",
+                  text: "⚔️ Open Board",
+                  onClick: () => openGame(g.gameId),
+                })
                 : null
             )
           ),
@@ -4355,9 +4354,8 @@ function renderApp() {
     const gs = appState.gameState;
     const pend = gs && gs.pendingEncounter;
     if (pend) {
-      const encKey = `${appState.currentGameId || ""}:${pend.stage || "pre_decision"}:${
-        (pend.card && (pend.card.id || pend.card.name)) || pend.chartType || ""
-      }`;
+      const encKey = `${appState.currentGameId || ""}:${pend.stage || "pre_decision"}:${(pend.card && (pend.card.id || pend.card.name)) || pend.chartType || ""
+        }`;
       if (appState.lastAutoScrolledEncounterKey !== encKey) {
         appState.lastAutoScrolledEncounterKey = encKey;
         const encPanelEl = document.getElementById("pending-encounter-panel");
@@ -4486,7 +4484,7 @@ function renderTopbar() {
         onClick: async () => {
           try {
             await apiRequest("/api/auth/logout", "POST", {});
-          } catch (_e) {}
+          } catch (_e) { }
           await signOutFirebaseClient();
           appState.user = null;
           appState.csrfToken = null;
@@ -4524,7 +4522,7 @@ function renderTopbar() {
         { className: "brand-title" },
         el("span", { className: "brand-title-main", text: "Night Merchant:" }),
         " ",
-        el("span", { className: "brand-title-sub", text: "Free Parking" })
+        el("span", { className: "brand-title-sub", text: "InstantGram SF" })
       )
     ),
     el("nav", { className: "nav-tabs" }, ...navButtons),
@@ -4543,7 +4541,7 @@ async function handlePendingInviteDeepLink() {
       urlObj.searchParams.delete("game");
       window.history.replaceState({}, "", urlObj.pathname + urlObj.search + urlObj.hash);
     }
-  } catch (_e) {}
+  } catch (_e) { }
 
   const matching = (appState.games || []).find((g) => String(g.id) === targetGameId);
   if (matching) {
@@ -4908,7 +4906,7 @@ function renderAuthView() {
     el(
       "div",
       { className: "panel-title fresco-banner-header fresco-griffin" },
-      el("span", { text: "🚙 San Francisco, After Dark — Free Parking" }),
+      el("span", { text: "🚙 San Francisco, After Dark — InstantGram SF" }),
       el("span", { style: { fontSize: "0.78rem", color: "#fde6b0" }, text: "2–6 Merchants • Strategy Board Game" })
     ),
     el(
@@ -4972,20 +4970,20 @@ function renderAuthView() {
     }),
     appState.pendingInviteGameId
       ? el(
-          "div",
-          {
-            style: {
-              padding: "0.6rem 0.8rem",
-              marginBottom: "0.85rem",
-              borderRadius: "4px",
-              background: "rgba(180, 83, 9, 0.12)",
-              border: "1px solid var(--gold)",
-              fontSize: "0.84rem",
-              color: "var(--text-main)",
-            },
-            text: `✉️ Expedition Invitation (#${appState.pendingInviteGameId}): Sign in with your invited Collegium account to claim your seat.`,
-          }
-        )
+        "div",
+        {
+          style: {
+            padding: "0.6rem 0.8rem",
+            marginBottom: "0.85rem",
+            borderRadius: "4px",
+            background: "rgba(180, 83, 9, 0.12)",
+            border: "1px solid var(--gold)",
+            fontSize: "0.84rem",
+            color: "var(--text-main)",
+          },
+          text: `✉️ Expedition Invitation (#${appState.pendingInviteGameId}): Sign in with your invited Collegium account to claim your seat.`,
+        }
+      )
       : null,
     el("p", {
       style: { color: "var(--text-muted)", fontSize: "0.88rem", marginTop: "0" },
@@ -5051,16 +5049,16 @@ function renderAuthView() {
     ),
     !isFirebaseClientConfigured()
       ? el(
-          "div",
-          { style: { marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid var(--border-subtle)", textAlign: "center" } },
-          el("button", {
-            type: "button",
-            className: "btn btn-crimson",
-            style: { width: "100%" },
-            text: "⚡ Instant One-Click Local Sandbox Login",
-            onClick: handleQuickDemo,
-          })
-        )
+        "div",
+        { style: { marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid var(--border-subtle)", textAlign: "center" } },
+        el("button", {
+          type: "button",
+          className: "btn btn-crimson",
+          style: { width: "100%" },
+          text: "⚡ Instant One-Click Local Sandbox Login",
+          onClick: handleQuickDemo,
+        })
+      )
       : null
   );
 
@@ -5109,8 +5107,8 @@ function buildPortalLeaderboardNodes() {
   return appState.leaderboard.map((row, idx) => {
     const isCurrentUser = Boolean(
       appState.user &&
-        ((row.userId !== undefined && row.userId === appState.user.id) ||
-          row.displayName === appState.user.displayName)
+      ((row.userId !== undefined && row.userId === appState.user.id) ||
+        row.displayName === appState.user.displayName)
     );
     const scoreLabel = `${row.gamesWon}W / ${row.gamesPlayed}G | Best: ${row.bestWealth}(d)`;
     return el(
@@ -5125,17 +5123,17 @@ function buildPortalLeaderboardNodes() {
       ),
       isCurrentUser
         ? el("button", {
-            type: "button",
-            className: "wins-best-inline-link",
-            title: "Click to view your completed games & final scores",
-            text: scoreLabel,
-            onClick: () => openCompletedGamesPage(),
-          })
+          type: "button",
+          className: "wins-best-inline-link",
+          title: "Click to view your completed games & final scores",
+          text: scoreLabel,
+          onClick: () => openCompletedGamesPage(),
+        })
         : el(
-            "div",
-            { style: { fontSize: "0.78rem", color: "var(--text-muted)" } },
-            scoreLabel
-          )
+          "div",
+          { style: { fontSize: "0.78rem", color: "var(--text-muted)" } },
+          scoreLabel
+        )
     );
   });
 }
@@ -5582,48 +5580,48 @@ function renderLobbyItem(g) {
       renderCartIconNode(s.color, "", `${s.name}'s Cart`),
       isLobby && isHost && s.isBot
         ? el(
-            "select",
-            {
-              className: "form-input",
-              style: { padding: "0.1rem 0.35rem", fontSize: "0.74rem", width: "auto" },
-              title: "Change AI Bot Persona",
-              onChange: async (e) => {
-                try {
-                  await apiRequest(`/api/games/${g.id}/update-bot`, "POST", {
-                    seatIndex: s.seatIndex,
-                    strategy: e.target.value,
-                  });
-                  await refreshPortalOverview();
-                  renderApp();
-                } catch (err) {
-                  showToast(err.message, true);
-                }
-              },
-            },
-            ...personas.map((p) =>
-              el("option", {
-                value: p.strategy,
-                selected: p.strategy === s.botStrategy,
-                text: `${p.name} [${p.strategy}]`,
-              })
-            )
-          )
-        : el("span", { text: `${s.name}${s.isBot ? ` [AI: ${s.botStrategy}]` : ""}` }),
-      isLobby && isHost && s.seatIndex > 0
-        ? el("button", {
-            className: "btn btn-sm",
-            style: { padding: "0.05rem 0.35rem", marginLeft: "0.2rem" },
-            text: "✕",
-            onClick: async () => {
+          "select",
+          {
+            className: "form-input",
+            style: { padding: "0.1rem 0.35rem", fontSize: "0.74rem", width: "auto" },
+            title: "Change AI Bot Persona",
+            onChange: async (e) => {
               try {
-                await apiRequest(`/api/games/${g.id}/remove-seat`, "POST", { seatIndex: s.seatIndex });
+                await apiRequest(`/api/games/${g.id}/update-bot`, "POST", {
+                  seatIndex: s.seatIndex,
+                  strategy: e.target.value,
+                });
                 await refreshPortalOverview();
                 renderApp();
               } catch (err) {
                 showToast(err.message, true);
               }
             },
-          })
+          },
+          ...personas.map((p) =>
+            el("option", {
+              value: p.strategy,
+              selected: p.strategy === s.botStrategy,
+              text: `${p.name} [${p.strategy}]`,
+            })
+          )
+        )
+        : el("span", { text: `${s.name}${s.isBot ? ` [AI: ${s.botStrategy}]` : ""}` }),
+      isLobby && isHost && s.seatIndex > 0
+        ? el("button", {
+          className: "btn btn-sm",
+          style: { padding: "0.05rem 0.35rem", marginLeft: "0.2rem" },
+          text: "✕",
+          onClick: async () => {
+            try {
+              await apiRequest(`/api/games/${g.id}/remove-seat`, "POST", { seatIndex: s.seatIndex });
+              await refreshPortalOverview();
+              renderApp();
+            } catch (err) {
+              showToast(err.message, true);
+            }
+          },
+        })
         : null
     )
   );
@@ -5841,8 +5839,8 @@ function renderLobbyItem(g) {
           g.status === "lobby"
             ? `Lobby (${(g.seats || []).length}/${g.maxPlayers})`
             : g.status === "finished"
-            ? `Finished — Winner: ${g.winnerName || "N/A"}`
-            : `${g.season} • ${g.phase} • Turn ${g.turn}`,
+              ? `Finished — Winner: ${g.winnerName || "N/A"}`
+              : `${g.season} • ${g.phase} • Turn ${g.turn}`,
       })
     ),
     el("div", { className: "seat-pills" }, ...seatNodes),
@@ -5896,9 +5894,8 @@ function renderPendingUndoBanner(gs) {
       }),
       el("div", {
         style: { fontSize: "0.78rem", color: "#92400e", marginTop: "0.2rem", fontWeight: "600" },
-        text: `Awaiting approval from: ${reqNames.join(", ") || "Other players"}${
-          autoNames.length > 0 ? ` • Auto-approved by profile setting: ${autoNames.join(", ")}` : ""
-        }`,
+        text: `Awaiting approval from: ${reqNames.join(", ") || "Other players"}${autoNames.length > 0 ? ` • Auto-approved by profile setting: ${autoNames.join(", ")}` : ""
+          }`,
       })
     ),
     el(
@@ -5906,24 +5903,24 @@ function renderPendingUndoBanner(gs) {
       { style: { display: "flex", gap: "0.5rem", flexWrap: "wrap" } },
       needsMyApproval
         ? el("button", {
-            className: "btn btn-sm btn-primary",
-            text: "✓ Approve Undo",
-            onClick: () => sendGameAction({ type: "respond_undo_turn", decision: "approve" }),
-          })
+          className: "btn btn-sm btn-primary",
+          text: "✓ Approve Undo",
+          onClick: () => sendGameAction({ type: "respond_undo_turn", decision: "approve" }),
+        })
         : null,
       needsMyApproval
         ? el("button", {
-            className: "btn btn-sm btn-crimson",
-            text: "✕ Decline Undo",
-            onClick: () => sendGameAction({ type: "respond_undo_turn", decision: "reject" }),
-          })
+          className: "btn btn-sm btn-crimson",
+          text: "✕ Decline Undo",
+          onClick: () => sendGameAction({ type: "respond_undo_turn", decision: "reject" }),
+        })
         : null,
       isRequester
         ? el("button", {
-            className: "btn btn-sm",
-            text: "✕ Cancel Undo Request",
-            onClick: () => sendGameAction({ type: "cancel_undo_turn" }),
-          })
+          className: "btn btn-sm",
+          text: "✕ Cancel Undo Request",
+          onClick: () => sendGameAction({ type: "cancel_undo_turn" }),
+        })
         : null
     )
   );
@@ -5953,8 +5950,8 @@ function renderTabletopView() {
         gs.phase === "setup_climate"
           ? "climate"
           : gs.phase === "market"
-          ? "market"
-          : "rome";
+            ? "market"
+            : "rome";
     }
   }
 
@@ -6042,10 +6039,10 @@ function renderClockAndTurnBanner(gs, viewer, activePlayer) {
   const undoTooltip = undoPending
     ? "An Undo Turn request is currently awaiting approval."
     : !canUndo
-    ? "Nothing to undo yet — game is at the beginning of the initial turn."
-    : gs.undoTargetType === "current_turn"
-    ? `Revert to the beginning of the current turn (${gs.undoTargetLabel || ""})`
-    : `No actions taken yet this turn — revert to the beginning of the previous turn (${gs.undoTargetLabel || ""})`;
+      ? "Nothing to undo yet — game is at the beginning of the initial turn."
+      : gs.undoTargetType === "current_turn"
+        ? `Revert to the beginning of the current turn (${gs.undoTargetLabel || ""})`
+        : `No actions taken yet this turn — revert to the beginning of the previous turn (${gs.undoTargetLabel || ""})`;
 
   return el(
     "div",
@@ -6074,8 +6071,8 @@ function renderClockAndTurnBanner(gs, viewer, activePlayer) {
         text: undoPending
           ? "⏳ Undo Pending..."
           : canUndo && gs.undoTargetType === "previous_turn"
-          ? "↩️ Undo Turn (Prev)"
-          : "↩️ Undo Turn",
+            ? "↩️ Undo Turn (Prev)"
+            : "↩️ Undo Turn",
         onClick: () => sendGameAction({ type: "request_undo_turn" }),
       }),
       ...["auto", "rome", "market", "climate", "both"].map((mode) =>
@@ -6089,12 +6086,12 @@ function renderClockAndTurnBanner(gs, viewer, activePlayer) {
             mode === "auto"
               ? "Auto View"
               : mode === "rome"
-              ? "🗺️ Rome 211 A.D. Board"
-              : mode === "market"
-              ? "⚓ Ostia Port Market"
-              : mode === "climate"
-              ? `🏛️ Political Climate (${activeClimateCount})`
-              : "All Boards",
+                ? "🗺️ Rome 211 A.D. Board"
+                : mode === "market"
+                  ? "⚓ Ostia Port Market"
+                  : mode === "climate"
+                    ? `🏛️ Political Climate (${activeClimateCount})`
+                    : "All Boards",
           onClick: () => {
             appState.boardViewMode = mode;
             renderApp();
@@ -6153,13 +6150,11 @@ function renderContextualPromptBanner(gs, viewer, activePlayer) {
     const fineBase = gs.season === "Spring" ? 12 : gs.season === "Summer" ? 20 : 32;
     const fineGate = Math.floor(fineBase / 2);
     if (gs.turn === 1 && viewer.movesRemaining === 0) {
-      promptText = `Turn 1 (8:00 P.M.) at ${viewer.position || "Gate"}: ${
-        viewer.transactedThisTurn ? "Transacted ✓" : "1 Transaction available"
-      } • Scout (ends turn) or End Turn.`;
+      promptText = `Turn 1 (8:00 P.M.) at ${viewer.position || "Gate"}: ${viewer.transactedThisTurn ? "Transacted ✓" : "1 Transaction available"
+        } • Scout (ends turn) or End Turn.`;
     } else {
-      promptText = `Night Delivery (${gs.turnHourLabel}): ${viewer.movesRemaining} move left • ${
-        viewer.transactedThisTurn ? "Transacted ✓" : "1 Transaction available"
-      }. Exit before Turn 10 ends (${fineBase}d Curfew Fine; ${fineGate}d on a Gate).`;
+      promptText = `Night Delivery (${gs.turnHourLabel}): ${viewer.movesRemaining} move left • ${viewer.transactedThisTurn ? "Transacted ✓" : "1 Transaction available"
+        }. Exit before Turn 10 ends (${fineBase}d Curfew Fine; ${fineGate}d on a Gate).`;
     }
     if (gs.activePlayerIndex === viewer.index) {
       if (viewer.canReturnShortcut) {
@@ -6408,9 +6403,8 @@ function buildPoliticalClimateBoardGridNode(gs, viewer, interactiveDraft = false
         el(
           "div",
           {
-            className: `climate-option-card ${isSelected ? "is-active" : ""} ${isLockedOut ? "is-locked" : ""} ${
-              isSelectable ? "is-selectable" : ""
-            }`,
+            className: `climate-option-card ${isSelected ? "is-active" : ""} ${isLockedOut ? "is-locked" : ""} ${isSelectable ? "is-selectable" : ""
+              }`,
             style: { "--senate-col-accent": col.colColor },
             role: isSelectable ? "button" : undefined,
             tabIndex: isSelectable ? "0" : undefined,
@@ -6418,23 +6412,23 @@ function buildPoliticalClimateBoardGridNode(gs, viewer, interactiveDraft = false
             onClick: isSelectable ? enactOption : undefined,
             onKeyDown: isSelectable
               ? (e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    enactOption();
-                  }
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  enactOption();
                 }
+              }
               : undefined,
           },
           el("div", { className: "climate-option-title", text: opt.title }),
           el("div", { className: "climate-option-desc", text: opt.description }),
           isSelected
             ? el("div", {
-                className: "climate-option-status active",
-                text: "✓ Enacted",
-              })
+              className: "climate-option-status active",
+              text: "✓ Enacted",
+            })
             : isLockedOut
-            ? el("div", { className: "climate-option-status locked", text: "Locked" })
-            : null
+              ? el("div", { className: "climate-option-status locked", text: "Locked" })
+              : null
         )
       );
     }
@@ -6477,52 +6471,52 @@ function renderPoliticalClimateBoard(gs, viewer) {
         { style: { display: "flex", alignItems: "center", gap: "0.45rem", flexWrap: "wrap" } },
         isDraftPhase
           ? el("span", {
-              className: "badge",
-              style: isMyPick
-                ? { borderColor: "#16a34a", color: "#14532d", background: "#ecfdf5" }
-                : { borderColor: "#d97706", color: "#78350f", background: "#fffbeb" },
-              text: isMyPick ? "▶ Your Pick" : `Waiting on ${(gs.players[gs.activePlayerIndex] || {}).name || "Merchant"}`,
-            })
+            className: "badge",
+            style: isMyPick
+              ? { borderColor: "#16a34a", color: "#14532d", background: "#ecfdf5" }
+              : { borderColor: "#d97706", color: "#78350f", background: "#fffbeb" },
+            text: isMyPick ? "▶ Your Pick" : `Waiting on ${(gs.players[gs.activePlayerIndex] || {}).name || "Merchant"}`,
+          })
           : el("span", {
-              className: "badge",
-              style: { borderColor: "#deb86c", color: "#fde6b0", background: "rgba(32, 14, 8, 0.72)" },
-              text: `${activeCount} Enacted`,
-            }),
+            className: "badge",
+            style: { borderColor: "#deb86c", color: "#fde6b0", background: "rgba(32, 14, 8, 0.72)" },
+            text: `${activeCount} Enacted`,
+          }),
         !isDraftPhase && appState.boardViewMode === "climate"
           ? el("button", {
-              type: "button",
-              className: "btn btn-sm",
-              text: "↩️ Return to Active Board",
-              onClick: () => {
-                appState.boardViewMode = "auto";
-                renderApp();
-              },
-            })
+            type: "button",
+            className: "btn btn-sm",
+            text: "↩️ Return to Active Board",
+            onClick: () => {
+              appState.boardViewMode = "auto";
+              renderApp();
+            },
+          })
           : null
       )
     ),
     buildPoliticalClimateExplainerNode(gs),
     isDraftPhase && draftOrder.length > 0
       ? el(
-          "div",
-          { className: "climate-draft-order-bar" },
-          el("span", { className: "climate-draft-order-lbl", text: "Draft Order:" }),
-          ...draftOrder.map((pIdx, idx) => {
-            const pl = gs.players[pIdx] || { name: `P${pIdx + 1}`, color: "Z3" };
-            const pickDone = idx < draftStep;
-            const pickCurr = idx === draftStep;
-            const pickInfo = (pc.picks || [])[idx];
-            return el(
-              "span",
-              {
-                className: `climate-draft-chip ${pickDone ? "done" : pickCurr ? "current" : "upcoming"}`,
-                title: pickInfo ? `Picked ${pickInfo.factor}: ${pickInfo.title}` : `Pick #${idx + 1}`,
-              },
-              el("strong", { text: `#${idx + 1} ${pl.name}` }),
-              pickInfo ? el("span", { text: ` • ${pickInfo.factor}` }) : null
-            );
-          })
-        )
+        "div",
+        { className: "climate-draft-order-bar" },
+        el("span", { className: "climate-draft-order-lbl", text: "Draft Order:" }),
+        ...draftOrder.map((pIdx, idx) => {
+          const pl = gs.players[pIdx] || { name: `P${pIdx + 1}`, color: "Z3" };
+          const pickDone = idx < draftStep;
+          const pickCurr = idx === draftStep;
+          const pickInfo = (pc.picks || [])[idx];
+          return el(
+            "span",
+            {
+              className: `climate-draft-chip ${pickDone ? "done" : pickCurr ? "current" : "upcoming"}`,
+              title: pickInfo ? `Picked ${pickInfo.factor}: ${pickInfo.title}` : `Pick #${idx + 1}`,
+            },
+            el("strong", { text: `#${idx + 1} ${pl.name}` }),
+            pickInfo ? el("span", { text: ` • ${pickInfo.factor}` }) : null
+          );
+        })
+      )
       : null,
     buildPoliticalClimateBoardGridNode(gs, viewer, isDraftPhase)
   );
@@ -6876,9 +6870,9 @@ function renderInlineClickableDiceRow(pend, viewer, merchantLabel = "Your") {
     { style: { marginBottom: "0.75rem" } },
     canModifyAny
       ? el("div", {
-          style: { fontSize: "0.78rem", fontWeight: "700", color: "#8c5612", marginBottom: "0.35rem" },
-          text: "👆 Click Directly on Any Die Below to Re-Roll or Modify It:",
-        })
+        style: { fontSize: "0.78rem", fontWeight: "700", color: "#8c5612", marginBottom: "0.35rem" },
+        text: "👆 Click Directly on Any Die Below to Re-Roll or Modify It:",
+      })
       : null,
     el("div", { className: "inline-clickable-dice-bar" }, ...dieButtons)
   );
@@ -6911,9 +6905,9 @@ function buildConsumableWeaponPickerNodes(consumables, selectedSet, onChange) {
         }),
         it.isMissionCargo
           ? el("div", {
-              style: { fontSize: "0.76rem", color: "#b91c1c", fontWeight: "700", marginTop: "0.22rem" },
-              text: "⚠️ Mission Cargo: Using & destroying this cargo will require loading replacement cargo at its origin again!",
-            })
+            style: { fontSize: "0.76rem", color: "#b91c1c", fontWeight: "700", marginTop: "0.22rem" },
+            text: "⚠️ Mission Cargo: Using & destroying this cargo will require loading replacement cargo at its origin again!",
+          })
           : null
       ),
       el(
@@ -7012,10 +7006,10 @@ function buildCombatInfluenceCardActionNode(rc, encPlayerName, oppName, isOtherP
       nm === "Mercenary Ambush"
         ? "+2(R)"
         : nm === "Distraction"
-        ? "-1(R)"
-        : nm === "Gladiator's Intervention"
-        ? "+1(R)"
-        : "+1 CP";
+          ? "-1(R)"
+          : nm === "Gladiator's Intervention"
+            ? "+1(R)"
+            : "+1 CP";
     const defaultMerchantFirst = nm !== "Distraction";
     const btnPlayer = el("button", {
       className: `btn btn-sm ${defaultMerchantFirst ? "btn-primary" : ""}`,
@@ -7048,8 +7042,8 @@ function buildCombatInfluenceCardActionNode(rc, encPlayerName, oppName, isOtherP
       nm === "Casus Belli"
         ? "⚔️ Play Casus Belli"
         : needsThugSwap
-        ? `Play ${nm} (Fire Guard)`
-        : `Play ${nm}`,
+          ? `Play ${nm} (Fire Guard)`
+          : `Play ${nm}`,
     onClick: () => triggerInfluenceCardPlay(gsCurr, viewerCurr, rc),
   });
 }
@@ -7077,80 +7071,80 @@ function renderOpponentPublicCartSummaryNode(gs, encPlayer, viewer, theme = "lig
   const goodPills =
     cartItems.length === 0
       ? [
-          el("span", {
-            style: { fontSize: "0.78rem", fontStyle: "italic", color: isDark ? "#d6c5ab" : "var(--text-muted)" },
-            text: "None (Empty Cart)",
-          }),
-        ]
+        el("span", {
+          style: { fontSize: "0.78rem", fontStyle: "italic", color: isDark ? "#d6c5ab" : "var(--text-muted)" },
+          text: "None (Empty Cart)",
+        }),
+      ]
       : cartItems.map((it) => {
-          const blocks = Math.max(1, Number(it.blocks) || 1);
-          const track = it.track || it.category || "Good";
-          const sub = it.subcategory && it.subcategory !== track ? `${track} · ${it.subcategory}` : track;
-          const baseVal =
-            !it.isMissionCargo && Array.isArray(it.sell) && it.sell.length >= 3 ? `= ${it.sell[2]}(d)` : null;
-          const metaParts = [sub, `${blocks}■`];
-          if (baseVal) metaParts.push(baseVal);
-          if (it.isMissionCargo) metaParts.push("Mission Cargo");
-          if (it.combatText && it.track === "Weapons" && !String(it.combatText).includes("0 CP")) {
-            metaParts.push(it.combatText);
-          }
-          return el(
-            "span",
-            {
-              style: {
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.3rem",
-                padding: "0.18rem 0.5rem",
-                borderRadius: "4px",
-                background: pillBg,
-                border: `1px solid ${pillBorder}`,
-                color: pillColor,
-                fontSize: "0.77rem",
-                lineHeight: "1.25",
-              },
+        const blocks = Math.max(1, Number(it.blocks) || 1);
+        const track = it.track || it.category || "Good";
+        const sub = it.subcategory && it.subcategory !== track ? `${track} · ${it.subcategory}` : track;
+        const baseVal =
+          !it.isMissionCargo && Array.isArray(it.sell) && it.sell.length >= 3 ? `= ${it.sell[2]}(d)` : null;
+        const metaParts = [sub, `${blocks}■`];
+        if (baseVal) metaParts.push(baseVal);
+        if (it.isMissionCargo) metaParts.push("Mission Cargo");
+        if (it.combatText && it.track === "Weapons" && !String(it.combatText).includes("0 CP")) {
+          metaParts.push(it.combatText);
+        }
+        return el(
+          "span",
+          {
+            style: {
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.3rem",
+              padding: "0.18rem 0.5rem",
+              borderRadius: "4px",
+              background: pillBg,
+              border: `1px solid ${pillBorder}`,
+              color: pillColor,
+              fontSize: "0.77rem",
+              lineHeight: "1.25",
             },
-            el("strong", { text: it.name || it.item || "Good" }),
-            el("span", {
-              style: { color: subColor, fontSize: "0.72rem", fontWeight: "600" },
-              text: `(${metaParts.join(" • ")})`,
-            })
-          );
-        });
+          },
+          el("strong", { text: it.name || it.item || "Good" }),
+          el("span", {
+            style: { color: subColor, fontSize: "0.72rem", fontWeight: "600" },
+            text: `(${metaParts.join(" • ")})`,
+          })
+        );
+      });
 
   const guardPills =
     guardItems.length === 0
       ? [
-          el("span", {
-            style: { fontSize: "0.78rem", fontStyle: "italic", color: isDark ? "#d6c5ab" : "var(--text-muted)" },
-            text: "None",
-          }),
-        ]
+        el("span", {
+          style: { fontSize: "0.78rem", fontStyle: "italic", color: isDark ? "#d6c5ab" : "var(--text-muted)" },
+          text: "None",
+        }),
+      ]
       : guardItems.map((g) => {
-          const cText = g.combatText || "+CP • Absorbs 1 Wound";
-          return el(
-            "span",
-            {
-              style: {
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.3rem",
-                padding: "0.18rem 0.5rem",
-                borderRadius: "4px",
-                background: pillBg,
-                border: `1px solid ${pillBorder}`,
-                color: pillColor,
-                fontSize: "0.77rem",
-                lineHeight: "1.25",
-              },
+        const cText = g.combatText || "+CP • Absorbs 1 Wound";
+        return el(
+          "span",
+          {
+            style: {
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.3rem",
+              padding: "0.18rem 0.5rem",
+              borderRadius: "4px",
+              background: pillBg,
+              border: `1px solid ${pillBorder}`,
+              color: pillColor,
+              fontSize: "0.77rem",
+              lineHeight: "1.25",
             },
-            el("strong", { text: `🛡️ ${g.name || "Guard"}` }),
-            el("span", {
-              style: { color: subColor, fontSize: "0.72rem", fontWeight: "600" },
-              text: `(${cText})`,
-            })
-          );
-        });
+          },
+          el("strong", { text: `🛡️ ${g.name || "Guard"}` }),
+          el("span", {
+            style: { color: subColor, fontSize: "0.72rem", fontWeight: "600" },
+            text: `(${cText})`,
+          })
+        );
+      });
 
   return el(
     "div",
@@ -7199,22 +7193,22 @@ function renderOpponentPublicCartSummaryNode(gs, encPlayer, viewer, theme = "lig
         }),
         favorEntries.length > 0
           ? el("span", {
-              style: { fontSize: "0.74rem", fontWeight: "600", color: subColor },
-              text: `•  💎 Favor: ${favorEntries.join(", ")}`,
-            })
+            style: { fontSize: "0.74rem", fontWeight: "600", color: subColor },
+            text: `•  💎 Favor: ${favorEntries.join(", ")}`,
+          })
           : null
       ),
       gs
         ? el("button", {
-            type: "button",
-            className: "btn btn-sm",
-            style: { fontSize: "0.72rem", padding: "0.18rem 0.55rem" },
-            text: "🔍 Inspect Full Cart Mat",
-            onClick: (e) => {
-              e.stopPropagation();
-              openPlayerCartModal(gs, encPlayer, viewer);
-            },
-          })
+          type: "button",
+          className: "btn btn-sm",
+          style: { fontSize: "0.72rem", padding: "0.18rem 0.55rem" },
+          text: "🔍 Inspect Full Cart Mat",
+          onClick: (e) => {
+            e.stopPropagation();
+            openPlayerCartModal(gs, encPlayer, viewer);
+          },
+        })
         : null
     ),
     el(
@@ -7316,10 +7310,10 @@ function renderPendingEncounterPanelCore(gs, viewer) {
             { style: { display: "flex", gap: "0.55rem", flexWrap: "wrap", marginBottom: "0.75rem", fontSize: "0.82rem" } },
             pend.encounterSource
               ? el("span", {
-                  className: "badge",
-                  style: { borderColor: "#d97706", color: "#78350f", background: "#fffbeb" },
-                  text: `📍 ${pend.encounterSource}`,
-                })
+                className: "badge",
+                style: { borderColor: "#d97706", color: "#78350f", background: "#fffbeb" },
+                text: `📍 ${pend.encounterSource}`,
+              })
               : null,
             el("span", { className: "badge", text: `Merchant: ${encPlayer.name}` }),
             el("span", { className: "badge", text: `Deck: ${deckLabel}` }),
@@ -7350,16 +7344,16 @@ function renderPendingEncounterPanelCore(gs, viewer) {
           ),
           !isOtherPlayerEncounter
             ? el("button", {
-                type: "button",
-                className: "btn btn-primary",
-                style: { fontSize: "0.95rem", padding: "0.55rem 1.25rem" },
-                text: `▶ Resolve Encounter: "${card.name || "Continue"}"`,
-                onClick: () => sendGameAction({ type: "resolve_encounter", decision: "resolve_event" }),
-              })
+              type: "button",
+              className: "btn btn-primary",
+              style: { fontSize: "0.95rem", padding: "0.55rem 1.25rem" },
+              text: `▶ Resolve Encounter: "${card.name || "Continue"}"`,
+              onClick: () => sendGameAction({ type: "resolve_encounter", decision: "resolve_event" }),
+            })
             : el("div", {
-                style: { fontSize: "0.84rem", color: "var(--text-muted)" },
-                text: `Waiting for ${encPlayer.name} to acknowledge and resolve ${card.name}...`,
-              })
+              style: { fontSize: "0.84rem", color: "var(--text-muted)" },
+              text: `Waiting for ${encPlayer.name} to acknowledge and resolve ${card.name}...`,
+            })
         )
       )
     );
@@ -7372,26 +7366,26 @@ function renderPendingEncounterPanelCore(gs, viewer) {
       cType === "mob"
         ? "/assets/icons/angry_mob.png"
         : cType === "theater"
-        ? "/assets/icons/theater_masks.png"
-        : "/assets/icons/soothsayer_icon.png";
+          ? "/assets/icons/theater_masks.png"
+          : "/assets/icons/soothsayer_icon.png";
     const chartTitle =
       cType === "mob" ? "Angry Mob" : cType === "theater" ? "Theater Troupe" : "Soothsayer";
     const chartRows =
       cType === "mob"
         ? [
-            { roll: "0", color: "#991b1b", bg: "#fef2f2", border: "#dc2626", title: "Roll 0 — Wine Looted:", desc: "The mob drinks all Wine on your Cart!" },
-            { roll: "I", color: "#92400e", bg: "#fffbeb", border: "#d97706", title: "Roll I — Grain Looted:", desc: "The mob loots all Grain on your Cart!" },
-            { roll: "II", color: "#713f12", bg: "#fefce8", border: "#ca8a04", title: "Roll II — Cargo Seized:", desc: "Lose the single most expensive Good on your Cart." },
-            { roll: "III", color: "#15803d", bg: "#f0fdf4", border: "#16a34a", title: "Roll III — Clamors Noisily:", desc: "Safe passage! No cargo lost — your turn continues." },
-          ]
+          { roll: "0", color: "#991b1b", bg: "#fef2f2", border: "#dc2626", title: "Roll 0 — Wine Looted:", desc: "The mob drinks all Wine on your Cart!" },
+          { roll: "I", color: "#92400e", bg: "#fffbeb", border: "#d97706", title: "Roll I — Grain Looted:", desc: "The mob loots all Grain on your Cart!" },
+          { roll: "II", color: "#713f12", bg: "#fefce8", border: "#ca8a04", title: "Roll II — Cargo Seized:", desc: "Lose the single most expensive Good on your Cart." },
+          { roll: "III", color: "#15803d", bg: "#f0fdf4", border: "#16a34a", title: "Roll III — Clamors Noisily:", desc: "Safe passage! No cargo lost — your turn continues." },
+        ]
         : cType === "theater"
-        ? [
-            { roll: "0", color: "#991b1b", bg: "#fef2f2", border: "#dc2626", title: "Roll 0 — Mocked on Stage:", desc: "Lose all positive Friendly Favor with every faction." },
-            { roll: "I", color: "#15803d", bg: "#f0fdf4", border: "#16a34a", title: "Roll I — Satire Clears Your Name:", desc: "Clear all negative Hostile Favor back to 0!" },
+          ? [
+            { roll: "0", color: "#991b1b", bg: "#fef2f2", border: "#dc2626", title: "Roll 0 — Roasted:", desc: "Undo every gem change you got from Positive outcomes (satisfying demands, accepting offers, Influence cards, completed missions)." },
+            { roll: "I", color: "#15803d", bg: "#f0fdf4", border: "#16a34a", title: "Roll I — The Bit Clears Your Name:", desc: "Undo every gem change you got from Hostile outcomes (refused threats, combat, failed missions)." },
             { roll: "II", color: "#713f12", bg: "#fefce8", border: "#ca8a04", title: "Roll II — Blocked by Revelers:", desc: "Lose the rest of this turn AND skip your next turn." },
             { roll: "III", color: "#14532d", bg: "#ecfdf5", border: "#15803d", title: "Roll III — Inspired Patron:", desc: "Roll 1(R) and draw that many Influence cards!" },
           ]
-        : [
+          : [
             { roll: "0", color: "#991b1b", bg: "#fef2f2", border: "#dc2626", title: "Roll 0 — Bare Prophecy:", desc: "Accept the mandatory Mission (0 bonus Influence sealed)." },
             { roll: "I–II", color: "#92400e", bg: "#fffbeb", border: "#d97706", title: "Roll I or II — Fated Omen:", desc: "Accept the mandatory Mission + seal 1 or 2 Influence cards unlocked on completion." },
             { roll: "III", color: "#15803d", bg: "#f0fdf4", border: "#16a34a", title: "Roll III — Auspicious Vision:", desc: "Accept the mandatory Mission + seal 3 Influence cards unlocked on completion!" },
@@ -7399,11 +7393,11 @@ function renderPendingEncounterPanelCore(gs, viewer) {
 
     const preChartCards = !isOtherPlayerEncounter
       ? (viewer.influence || []).filter((c) => {
-          const nm = String(c.name || "");
-          if (cType === "mob" && nm === "Man Of The People") return true;
-          if (cType === "theater" && nm === "Dramaturge") return true;
-          return false;
-        })
+        const nm = String(c.name || "");
+        if (cType === "mob" && nm === "Man Of The People") return true;
+        if (cType === "theater" && nm === "Dramaturge") return true;
+        return false;
+      })
       : [];
     const autoTreatThree =
       (cType === "mob" && pend.ignoreMobActive) || (cType === "theater" && pend.ignoreTheaterActive);
@@ -7478,9 +7472,9 @@ function renderPendingEncounterPanelCore(gs, viewer) {
         }),
         !isOtherPlayerEncounter
           ? el("span", {
-              className: "enc-click-hint-pill fulfill",
-              text: autoTreatThree ? "👆 Click to Resolve as III" : "👆 Click to Roll 1(R)",
-            })
+            className: "enc-click-hint-pill fulfill",
+            text: autoTreatThree ? "👆 Click to Resolve as III" : "👆 Click to Roll 1(R)",
+          })
           : null
       )
     );
@@ -7510,10 +7504,10 @@ function renderPendingEncounterPanelCore(gs, viewer) {
           visualCardNode,
           cType === "soothsayer" && pend.soothsayerMission
             ? el(
-                "div",
-                { style: { width: "225px" } },
-                renderPhysicalMissionCardNode(pend.soothsayerMission, { showStatusTag: false })
-              )
+              "div",
+              { style: { width: "225px" } },
+              renderPhysicalMissionCardNode(pend.soothsayerMission, { showStatusTag: false })
+            )
             : null
         ),
         el(
@@ -7524,29 +7518,29 @@ function renderPendingEncounterPanelCore(gs, viewer) {
             { style: { display: "flex", gap: "0.55rem", flexWrap: "wrap", marginBottom: "0.75rem", fontSize: "0.82rem" } },
             pend.encounterSource
               ? el("span", {
-                  className: "badge",
-                  style: { borderColor: "#d97706", color: "#78350f", background: "#fffbeb" },
-                  text: `📍 ${pend.encounterSource}`,
-                })
+                className: "badge",
+                style: { borderColor: "#d97706", color: "#78350f", background: "#fffbeb" },
+                text: `📍 ${pend.encounterSource}`,
+              })
               : null,
             el("span", { className: "badge", text: `Merchant: ${encPlayer.name}` }),
             el("span", { className: "badge", text: `Encounter Type: ${chartTitle}` })
           ),
           autoTreatThree
             ? el("div", {
-                style: {
-                  padding: "0.55rem 0.8rem",
-                  background: "#f0fdf4",
-                  border: "1.5px solid #16a34a",
-                  borderRadius: "4px",
-                  color: "#14532d",
-                  fontSize: "0.84rem",
-                  fontWeight: "700",
-                  marginBottom: "0.75rem",
-                  boxShadow: "var(--bevel-sunken)",
-                },
-                text: `✨ Active Influence Protection: Your ${chartTitle} encounter will automatically resolve as Roll III!`,
-              })
+              style: {
+                padding: "0.55rem 0.8rem",
+                background: "#f0fdf4",
+                border: "1.5px solid #16a34a",
+                borderRadius: "4px",
+                color: "#14532d",
+                fontSize: "0.84rem",
+                fontWeight: "700",
+                marginBottom: "0.75rem",
+                boxShadow: "var(--bevel-sunken)",
+              },
+              text: `✨ Active Influence Protection: Your ${chartTitle} encounter will automatically resolve as Roll III!`,
+            })
             : null,
           el(
             "div",
@@ -7578,33 +7572,33 @@ function renderPendingEncounterPanelCore(gs, viewer) {
           ),
           preChartCards.length > 0 && !autoTreatThree
             ? el(
-                "div",
-                { style: { display: "flex", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.75rem" } },
-                ...preChartCards.map((rc) =>
-                  el("button", {
-                    type: "button",
-                    className: "btn btn-sm",
-                    style: { borderColor: "#15803d", color: "#14532d" },
-                    text: `✨ Play '${rc.name}' Before Rolling (Auto-Treat as III)`,
-                    onClick: () => sendGameAction({ type: "play_influence", cardId: rc.id }),
-                  })
-                )
+              "div",
+              { style: { display: "flex", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.75rem" } },
+              ...preChartCards.map((rc) =>
+                el("button", {
+                  type: "button",
+                  className: "btn btn-sm",
+                  style: { borderColor: "#15803d", color: "#14532d" },
+                  text: `✨ Play '${rc.name}' Before Rolling (Auto-Treat as III)`,
+                  onClick: () => sendGameAction({ type: "play_influence", cardId: rc.id }),
+                })
               )
+            )
             : null,
           !isOtherPlayerEncounter
             ? el("button", {
-                type: "button",
-                className: "btn btn-primary",
-                style: { fontSize: "0.95rem", padding: "0.55rem 1.25rem" },
-                text: autoTreatThree
-                  ? `✨ Resolve ${chartTitle} as Roll III`
-                  : `🎲 Roll ${chartTitle} Die (1®)`,
-                onClick: () => sendGameAction({ type: "resolve_encounter", decision: "roll_chart_encounter" }),
-              })
+              type: "button",
+              className: "btn btn-primary",
+              style: { fontSize: "0.95rem", padding: "0.55rem 1.25rem" },
+              text: autoTreatThree
+                ? `✨ Resolve ${chartTitle} as Roll III`
+                : `🎲 Roll ${chartTitle} Die (1®)`,
+              onClick: () => sendGameAction({ type: "resolve_encounter", decision: "roll_chart_encounter" }),
+            })
             : el("div", {
-                style: { fontSize: "0.84rem", color: "var(--text-muted)" },
-                text: `Waiting for ${encPlayer.name} to roll on the ${chartTitle} Chart...`,
-              })
+              style: { fontSize: "0.84rem", color: "var(--text-muted)" },
+              text: `Waiting for ${encPlayer.name} to roll on the ${chartTitle} Chart...`,
+            })
         )
       )
     );
@@ -7655,27 +7649,27 @@ function renderPendingEncounterPanelCore(gs, viewer) {
           ),
           !isOtherPlayerEncounter
             ? el("button", {
-                type: "button",
-                className: "btn btn-crimson",
-                style: { fontSize: "0.95rem", padding: "0.55rem 1.25rem" },
-                text:
-                  selectedSet.size > 0
-                    ? `⚔️ Use ${selectedSet.size} Weapon${selectedSet.size === 1 ? "" : "s"} (Destroyed) & Roll Combat Dice`
-                    : "🛡️ Keep Weapon(s) Safe on Cart & Roll Combat Dice",
-                onClick: () => {
-                  const chosenIds = Array.from(selectedSet);
-                  appState._stageConsumableSelection = null;
-                  sendGameAction({
-                    type: "resolve_encounter",
-                    decision: "confirm_consumables_and_roll",
-                    useConsumableIds: chosenIds,
-                  });
-                },
-              })
+              type: "button",
+              className: "btn btn-crimson",
+              style: { fontSize: "0.95rem", padding: "0.55rem 1.25rem" },
+              text:
+                selectedSet.size > 0
+                  ? `⚔️ Use ${selectedSet.size} Weapon${selectedSet.size === 1 ? "" : "s"} (Destroyed) & Roll Combat Dice`
+                  : "🛡️ Keep Weapon(s) Safe on Cart & Roll Combat Dice",
+              onClick: () => {
+                const chosenIds = Array.from(selectedSet);
+                appState._stageConsumableSelection = null;
+                sendGameAction({
+                  type: "resolve_encounter",
+                  decision: "confirm_consumables_and_roll",
+                  useConsumableIds: chosenIds,
+                });
+              },
+            })
             : el("div", {
-                style: { fontSize: "0.84rem", color: "var(--text-muted)" },
-                text: `Waiting for ${encPlayer.name} to choose whether to use their consumable weapon(s)...`,
-              })
+              style: { fontSize: "0.84rem", color: "var(--text-muted)" },
+              text: `Waiting for ${encPlayer.name} to choose whether to use their consumable weapon(s)...`,
+            })
         )
       )
     );
@@ -7698,8 +7692,8 @@ function renderPendingEncounterPanelCore(gs, viewer) {
       armorSources.length > 0
         ? armorSources.join(", ")
         : ignoreWounds > 0
-        ? `Armor (Ignore ${ignoreWounds} Wound${ignoreWounds === 1 ? "" : "s"})`
-        : "None";
+          ? `Armor (Ignore ${ignoreWounds} Wound${ignoreWounds === 1 ? "" : "s"})`
+          : "None";
     const equipNotes = Array.isArray(pend.equipmentNotes) ? pend.equipmentNotes : [];
 
     const postCards = (viewer.influence || []).filter((c) => {
@@ -7723,20 +7717,20 @@ function renderPendingEncounterPanelCore(gs, viewer) {
     const statusLabel = isVictory
       ? "VICTORY"
       : isTie
-      ? "TIE (SURVIVED — NO BONUS)"
-      : survivesByArmor
-      ? `SURVIVED (${armorLabelStr.toUpperCase()} BLOCKED WOUNDS)`
-      : survivesByGuard
-      ? "DEFEAT — SURVIVED (GUARD ABSORBED WOUND)"
-      : "DEFEAT (ROLL ON DEFEAT CHART)";
+        ? "TIE (SURVIVED — NO BONUS)"
+        : survivesByArmor
+          ? `SURVIVED (${armorLabelStr.toUpperCase()} BLOCKED WOUNDS)`
+          : survivesByGuard
+            ? "DEFEAT — SURVIVED (GUARD ABSORBED WOUND)"
+            : "DEFEAT (ROLL ON DEFEAT CHART)";
 
     const statusBorderColor = isVictory
       ? "#16a34a"
       : isTie || survivesByArmor
-      ? "#ca8a04"
-      : survivesByGuard
-      ? "#ea580c"
-      : "#dc2626";
+        ? "#ca8a04"
+        : survivesByGuard
+          ? "#ea580c"
+          : "#dc2626";
 
     let outcomeSummaryText = "";
     if (isVictory) {
@@ -7744,11 +7738,9 @@ function renderPendingEncounterPanelCore(gs, viewer) {
     } else if (isTie) {
       outcomeSummaryText = `⚖️ Current Outcome for ${encPlayer.name}: Tie (${pCP} CP vs. ${oCP} CP) — ${encPlayer.name} survives combat unharmed (no roll on the Defeat Chart), but does not receive the bonus for winning combat.`;
     } else if (survivesByArmor) {
-      outcomeSummaryText = `🛡️ Current Outcome for ${encPlayer.name}: Lost by ${rawWounds} point${
-        rawWounds === 1 ? "" : "s"
-      } (${pCP} CP vs. ${oCP} CP), but ${armorLabelStr} blocked all ${rawWounds} Wound${
-        rawWounds === 1 ? "" : "s"
-      }! ${encPlayer.name} survives combat and will NOT proceed to a roll on the Defeat Chart.`;
+      outcomeSummaryText = `🛡️ Current Outcome for ${encPlayer.name}: Lost by ${rawWounds} point${rawWounds === 1 ? "" : "s"
+        } (${pCP} CP vs. ${oCP} CP), but ${armorLabelStr} blocked all ${rawWounds} Wound${rawWounds === 1 ? "" : "s"
+        }! ${encPlayer.name} survives combat and will NOT proceed to a roll on the Defeat Chart.`;
     } else if (survivesByGuard) {
       outcomeSummaryText = `🛡️ Current Outcome for ${encPlayer.name}: Defeat (${pCP} CP vs. ${oCP} CP) — ${rawWounds} Raw Wound(s), ${ignoreWounds} Blocked by ${armorLabelStr}, ${netWounds} Absorbed by Hired Guard(s). Your Driver survives and will NOT proceed to a roll on the Defeat Chart!`;
     } else {
@@ -7762,9 +7754,8 @@ function renderPendingEncounterPanelCore(gs, viewer) {
         "h3",
         { className: "panel-title" },
         el("span", {
-          text: `⚔️ Combat Dice Rolled: ${encPlayer.name} (${pCP} CP) vs. ${card.name} (${oCP} CP) — ${statusLabel}${
-            isOtherPlayerEncounter ? " [Your Intervention Window]" : ""
-          }`,
+          text: `⚔️ Combat Dice Rolled: ${encPlayer.name} (${pCP} CP) vs. ${card.name} (${oCP} CP) — ${statusLabel}${isOtherPlayerEncounter ? " [Your Intervention Window]" : ""
+            }`,
         })
       ),
       el(
@@ -7775,8 +7766,8 @@ function renderPendingEncounterPanelCore(gs, viewer) {
             background: isVictory
               ? "#f0fdf4"
               : isTie || survivesByArmor
-              ? "#fefce8"
-              : "#fef2f2",
+                ? "#fefce8"
+                : "#fef2f2",
             border: `1.5px solid ${statusBorderColor}`,
             borderRadius: "4px",
             fontSize: "0.85rem",
@@ -7791,9 +7782,9 @@ function renderPendingEncounterPanelCore(gs, viewer) {
         }),
         pend.encounterSource
           ? el("div", {
-              style: { fontSize: "0.78rem", color: "#92400e", marginBottom: "0.25rem", fontWeight: "700" },
-              text: `📍 Triggered By: ${pend.encounterSource}`,
-            })
+            style: { fontSize: "0.78rem", color: "#92400e", marginBottom: "0.25rem", fontWeight: "700" },
+            text: `📍 Triggered By: ${pend.encounterSource}`,
+          })
           : null,
         el("div", {
           style: { fontSize: "0.78rem", color: "var(--text-main)" },
@@ -7803,49 +7794,49 @@ function renderPendingEncounterPanelCore(gs, viewer) {
         }),
         equipNotes.length > 0
           ? el("div", {
-              style: { fontSize: "0.78rem", color: "#78350f", marginTop: "0.3rem", fontWeight: "700" },
-              text: `🛡️⚔️ Active Guard & Weapon Effects: ${equipNotes.join(" • ")}`,
-            })
+            style: { fontSize: "0.78rem", color: "#78350f", marginTop: "0.3rem", fontWeight: "700" },
+            text: `🛡️⚔️ Active Guard & Weapon Effects: ${equipNotes.join(" • ")}`,
+          })
           : null
       ),
       renderInlineClickableDiceRow(pend, viewer, merchantLabel),
       buildArmedDieBannerNode() ? el("div", { style: { marginBottom: "0.7rem" } }, buildArmedDieBannerNode()) : null,
       postCards.length > 0
         ? el(
+          "div",
+          { style: { marginBottom: "0.9rem" } },
+          el("div", {
+            style: { fontSize: "0.84rem", fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.45rem" },
+            text: isOtherPlayerEncounter
+              ? `🃏 Intervene in ${encPlayer.name}'s Combat! Click a Die Above or Play a Post-Roll Influence Card:`
+              : "🃏 Post-Roll Combat Influence Cards Available (Click a Die Above to Re-Roll or Play a Card):",
+          }),
+          el(
             "div",
-            { style: { marginBottom: "0.9rem" } },
-            el("div", {
-              style: { fontSize: "0.84rem", fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.45rem" },
-              text: isOtherPlayerEncounter
-                ? `🃏 Intervene in ${encPlayer.name}'s Combat! Click a Die Above or Play a Post-Roll Influence Card:`
-                : "🃏 Post-Roll Combat Influence Cards Available (Click a Die Above to Re-Roll or Play a Card):",
-            }),
-            el(
-              "div",
-              { className: "phys-cards-grid compact-sidebar-grid" },
-              ...postCards.map((rc) => {
-                if (rc.name === "Twist Of Fate") {
-                  const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
-                  return renderPhysicalInfluenceCardNode(rc, {
-                    actionButton: el("button", {
-                      className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
-                      style: { width: "100%" },
-                      text: isArmed ? "👆 Click Any Die Above!" : "🎲 Click a Die Above to Re-Roll",
-                      onClick: () => armDieCardAction(rc, "reroll"),
-                    }),
-                  });
-                }
+            { className: "phys-cards-grid compact-sidebar-grid" },
+            ...postCards.map((rc) => {
+              if (rc.name === "Twist Of Fate") {
+                const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
                 return renderPhysicalInfluenceCardNode(rc, {
-                  actionButton: buildCombatInfluenceCardActionNode(
-                    rc,
-                    encPlayer.name,
-                    card.name,
-                    isOtherPlayerEncounter
-                  ),
+                  actionButton: el("button", {
+                    className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
+                    style: { width: "100%" },
+                    text: isArmed ? "👆 Click Any Die Above!" : "🎲 Click a Die Above to Re-Roll",
+                    onClick: () => armDieCardAction(rc, "reroll"),
+                  }),
                 });
-              })
-            )
+              }
+              return renderPhysicalInfluenceCardNode(rc, {
+                actionButton: buildCombatInfluenceCardActionNode(
+                  rc,
+                  encPlayer.name,
+                  card.name,
+                  isOtherPlayerEncounter
+                ),
+              });
+            })
           )
+        )
         : null,
       el(
         "div",
@@ -7855,14 +7846,14 @@ function renderPendingEncounterPanelCore(gs, viewer) {
           text: isOtherPlayerEncounter
             ? "✅ Pass Intervention / Confirm Combat Result"
             : isVictory
-            ? "✅ Confirm Combat Victory"
-            : isTie
-            ? "✅ Confirm Combat Tie (Survive, No Bonus)"
-            : survivesByArmor
-            ? `🛡️ Confirm Survival (${armorLabelStr} Blocked Wounds — No Defeat Roll)`
-            : survivesByGuard
-            ? "🛡️ Confirm Survival (Guard Absorbed Wound — No Defeat Roll)"
-            : "💀 Confirm Combat Result & Proceed to Driver Fate Roll",
+              ? "✅ Confirm Combat Victory"
+              : isTie
+                ? "✅ Confirm Combat Tie (Survive, No Bonus)"
+                : survivesByArmor
+                  ? `🛡️ Confirm Survival (${armorLabelStr} Blocked Wounds — No Defeat Roll)`
+                  : survivesByGuard
+                    ? "🛡️ Confirm Survival (Guard Absorbed Wound — No Defeat Roll)"
+                    : "💀 Confirm Combat Result & Proceed to Driver Fate Roll",
           onClick: () => sendGameAction({ type: "resolve_encounter", decision: "finalize_combat" }),
         })
       )
@@ -7897,10 +7888,8 @@ function renderPendingEncounterPanelCore(gs, viewer) {
           },
         },
         el("strong", { text: "⚔️ Unblocked Wound to Driver: " }),
-        `${encPlayer.name} lost combat (${pend.playerCP} CP vs. ${card.name}'s ${pend.oppCP} CP), suffering ${pend.rawWounds} wound(s) (${
-          pend.ignoreWounds || 0
-        } blocked by Armor${
-          pend.casualties && pend.casualties.length ? `, ${pend.casualties.join(", ")}` : ""
+        `${encPlayer.name} lost combat (${pend.playerCP} CP vs. ${card.name}'s ${pend.oppCP} CP), suffering ${pend.rawWounds} wound(s) (${pend.ignoreWounds || 0
+        } blocked by Armor${pend.casualties && pend.casualties.length ? `, ${pend.casualties.join(", ")}` : ""
         }). Roll 1 Rome Die (1(R)) on the Death Chart below to determine the Driver's fate!`
       ),
       el(
@@ -7941,9 +7930,9 @@ function renderPendingEncounterPanelCore(gs, viewer) {
       ),
       postChartCards.length > 0
         ? el("div", {
-            style: { fontSize: "0.82rem", color: "var(--gold-bright)", marginBottom: "0.75rem", fontWeight: "600" },
-            text: `🃏 You hold ${postChartCards.map((c) => `'${c.name}'`).join(", ")} — after rolling the Death Chart die, click directly on the rolled die to modify or re-roll it!`,
-          })
+          style: { fontSize: "0.82rem", color: "var(--gold-bright)", marginBottom: "0.75rem", fontWeight: "600" },
+          text: `🃏 You hold ${postChartCards.map((c) => `'${c.name}'`).join(", ")} — after rolling the Death Chart die, click directly on the rolled die to modify or re-roll it!`,
+        })
         : null,
       el("button", {
         className: "btn btn-crimson",
@@ -7977,12 +7966,10 @@ function renderPendingEncounterPanelCore(gs, viewer) {
         el("span", {
           text:
             stage === "driver_fate_post_roll"
-              ? `💀 ${encPlayer.name}'s Driver Fate (Death Chart) Roll: Rolled [${rom}]${
-                  isOtherPlayerEncounter ? " [Your Intervention Window]" : ""
-                }`
-              : `🎲 ${encPlayer.name}'s ${card.name || "Encounter"} Roll: Rolled [${rom}]${
-                  isOtherPlayerEncounter ? " [Your Intervention Window]" : ""
-                }`,
+              ? `💀 ${encPlayer.name}'s Driver Fate (Death Chart) Roll: Rolled [${rom}]${isOtherPlayerEncounter ? " [Your Intervention Window]" : ""
+              }`
+              : `🎲 ${encPlayer.name}'s ${card.name || "Encounter"} Roll: Rolled [${rom}]${isOtherPlayerEncounter ? " [Your Intervention Window]" : ""
+              }`,
         })
       ),
       el(
@@ -8006,51 +7993,51 @@ function renderPendingEncounterPanelCore(gs, viewer) {
       buildArmedDieBannerNode() ? el("div", { style: { marginBottom: "0.7rem" } }, buildArmedDieBannerNode()) : null,
       postChartCards.length > 0
         ? el(
+          "div",
+          { style: { marginBottom: "0.85rem" } },
+          el("div", {
+            style: { fontSize: "0.84rem", fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.45rem" },
+            text: isOtherPlayerEncounter
+              ? `🃏 Intervene on ${encPlayer.name}'s Roll! Click the Die Above or Play a Card:`
+              : "🃏 Post-Roll Influence Cards in Hand (Click the Die Above to Modify / Re-Roll!):",
+          }),
+          el(
             "div",
-            { style: { marginBottom: "0.85rem" } },
-            el("div", {
-              style: { fontSize: "0.84rem", fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.45rem" },
-              text: isOtherPlayerEncounter
-                ? `🃏 Intervene on ${encPlayer.name}'s Roll! Click the Die Above or Play a Card:`
-                : "🃏 Post-Roll Influence Cards in Hand (Click the Die Above to Modify / Re-Roll!):",
-            }),
-            el(
-              "div",
-              { className: "phys-cards-grid compact-sidebar-grid" },
-              ...postChartCards.map((rc) => {
-                if (rc.name === "Lucky Break") {
-                  const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
-                  return renderPhysicalInfluenceCardNode(rc, {
-                    actionButton: el("button", {
-                      className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
-                      style: { width: "100%" },
-                      text: isArmed ? "👆 Click Die Above for +1!" : "🍀 Click Die Above (+1)",
-                      onClick: () => armDieCardAction(rc, "plus_one"),
-                    }),
-                  });
-                }
-                if (rc.name === "Twist Of Fate") {
-                  const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
-                  return renderPhysicalInfluenceCardNode(rc, {
-                    actionButton: el("button", {
-                      className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
-                      style: { width: "100%" },
-                      text: isArmed ? "👆 Click Die Above to Re-Roll!" : "🎲 Click Die Above to Re-Roll",
-                      onClick: () => armDieCardAction(rc, "reroll"),
-                    }),
-                  });
-                }
+            { className: "phys-cards-grid compact-sidebar-grid" },
+            ...postChartCards.map((rc) => {
+              if (rc.name === "Lucky Break") {
+                const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
                 return renderPhysicalInfluenceCardNode(rc, {
                   actionButton: el("button", {
-                    className: "btn btn-sm btn-primary",
+                    className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
                     style: { width: "100%" },
-                    text: `✨ Play ${rc.name} (Treat as III)`,
-                    onClick: () => sendGameAction({ type: "play_influence", cardId: rc.id }),
+                    text: isArmed ? "👆 Click Die Above for +1!" : "🍀 Click Die Above (+1)",
+                    onClick: () => armDieCardAction(rc, "plus_one"),
                   }),
                 });
-              })
-            )
+              }
+              if (rc.name === "Twist Of Fate") {
+                const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
+                return renderPhysicalInfluenceCardNode(rc, {
+                  actionButton: el("button", {
+                    className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
+                    style: { width: "100%" },
+                    text: isArmed ? "👆 Click Die Above to Re-Roll!" : "🎲 Click Die Above to Re-Roll",
+                    onClick: () => armDieCardAction(rc, "reroll"),
+                  }),
+                });
+              }
+              return renderPhysicalInfluenceCardNode(rc, {
+                actionButton: el("button", {
+                  className: "btn btn-sm btn-primary",
+                  style: { width: "100%" },
+                  text: `✨ Play ${rc.name} (Treat as III)`,
+                  onClick: () => sendGameAction({ type: "play_influence", cardId: rc.id }),
+                }),
+              });
+            })
           )
+        )
         : null,
       el("button", {
         className: "btn btn-primary",
@@ -8074,12 +8061,10 @@ function renderPendingEncounterPanelCore(gs, viewer) {
         : gambleRolls.map((v) => toRomanDieSymbol(Number(v) || 0)).join(" + ");
     const titleStr =
       stage === "demand_post_roll"
-        ? `📜 ${encPlayer.name}'s ${card.name || "Encounter"} Demand Roll: Rolled [${romDisplay}]${
-            isOtherPlayerEncounter ? " [Your Intervention Window]" : ""
-          }`
-        : `🎲 ${encPlayer.name}'s Stadium Gambling (${pend.cell || "Rome"}): Rolled [${romDisplay}]${
-            isOtherPlayerEncounter ? " [Your Intervention Window]" : ""
-          }`;
+        ? `📜 ${encPlayer.name}'s ${card.name || "Encounter"} Demand Roll: Rolled [${romDisplay}]${isOtherPlayerEncounter ? " [Your Intervention Window]" : ""
+        }`
+        : `🎲 ${encPlayer.name}'s Stadium Gambling (${pend.cell || "Rome"}): Rolled [${romDisplay}]${isOtherPlayerEncounter ? " [Your Intervention Window]" : ""
+        }`;
 
     return el(
       "div",
@@ -8110,30 +8095,30 @@ function renderPendingEncounterPanelCore(gs, viewer) {
       buildArmedDieBannerNode() ? el("div", { style: { marginBottom: "0.7rem" } }, buildArmedDieBannerNode()) : null,
       twistCards.length > 0
         ? el(
+          "div",
+          { style: { marginBottom: "0.85rem" } },
+          el("div", {
+            style: { fontSize: "0.84rem", fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.45rem" },
+            text: isOtherPlayerEncounter
+              ? `🃏 Intervene on ${encPlayer.name}'s Roll! Click the Die Above to Force a Re-Roll:`
+              : "🃏 Click Directly on the Die Above to Re-Roll with Twist Of Fate:",
+          }),
+          el(
             "div",
-            { style: { marginBottom: "0.85rem" } },
-            el("div", {
-              style: { fontSize: "0.84rem", fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.45rem" },
-              text: isOtherPlayerEncounter
-                ? `🃏 Intervene on ${encPlayer.name}'s Roll! Click the Die Above to Force a Re-Roll:`
-                : "🃏 Click Directly on the Die Above to Re-Roll with Twist Of Fate:",
-            }),
-            el(
-              "div",
-              { className: "phys-cards-grid compact-sidebar-grid" },
-              ...twistCards.map((rc) => {
-                const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
-                return renderPhysicalInfluenceCardNode(rc, {
-                  actionButton: el("button", {
-                    className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
-                    style: { width: "100%" },
-                    text: isArmed ? "👆 Click a Die Above to Re-Roll!" : "🎲 Click a Die Above to Re-Roll",
-                    onClick: () => armDieCardAction(rc, "reroll"),
-                  }),
-                });
-              })
-            )
+            { className: "phys-cards-grid compact-sidebar-grid" },
+            ...twistCards.map((rc) => {
+              const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
+              return renderPhysicalInfluenceCardNode(rc, {
+                actionButton: el("button", {
+                  className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
+                  style: { width: "100%" },
+                  text: isArmed ? "👆 Click a Die Above to Re-Roll!" : "🎲 Click a Die Above to Re-Roll",
+                  onClick: () => armDieCardAction(rc, "reroll"),
+                }),
+              });
+            })
           )
+        )
         : null,
       el("button", {
         className: "btn btn-primary",
@@ -8269,8 +8254,8 @@ function renderPendingEncounterPanelCore(gs, viewer) {
       pend.combatUnlockReason === "mission"
         ? "Unlocked by your Active Combat Mission!"
         : pend.combatUnlockReason === "casus_belli"
-        ? "Unlocked by 'Casus Belli' Influence Card!"
-        : "Combat is threatened by this party (!!)";
+          ? "Unlocked by 'Casus Belli' Influence Card!"
+          : "Combat is threatened by this party (!!)";
     combatRuleBanner = el(
       "div",
       {
@@ -8343,228 +8328,227 @@ function renderPendingEncounterPanelCore(gs, viewer) {
           { style: { display: "flex", gap: "0.55rem", flexWrap: "wrap", marginBottom: "0.75rem", fontSize: "0.82rem" } },
           pend.encounterSource
             ? el("span", {
-                className: "badge",
-                style: { borderColor: "#d97706", color: "#78350f", background: "#fffbeb" },
-                text: `📍 ${pend.encounterSource}`,
-              })
+              className: "badge",
+              style: { borderColor: "#d97706", color: "#78350f", background: "#fffbeb" },
+              text: `📍 ${pend.encounterSource}`,
+            })
             : null,
           el("span", { className: "badge", text: `Merchant: ${encPlayer.name}` }),
           el("span", { className: "badge", text: `Faction: ${card.faction || "Unaligned"}` }),
           el("span", { className: "badge", text: `Effective Favor: ${pend.favorScore > 0 ? `+${pend.favorScore}` : pend.favorScore}` }),
           el("span", {
             className: "badge",
-            text: `Active Tier: ${
-              pend.matchedTier
-                ? `${formatReactionCondition(pend.matchedTier.condition || pend.matchedTier.cond)} → ${formatReactionTypeSymbol(pend.matchedTier)}`
-                : formatReactionTypeSymbol(pend.reaction || pend.reactionType)
-            }`,
+            text: `Active Tier: ${pend.matchedTier
+              ? `${formatReactionCondition(pend.matchedTier.condition || pend.matchedTier.cond)} → ${formatReactionTypeSymbol(pend.matchedTier)}`
+              : formatReactionTypeSymbol(pend.reaction || pend.reactionType)
+              }`,
           }),
           el("span", { className: "badge", text: `NPC Combat: ${card.combatFormula || "X(R)"} (X=${pend.xCount})` }),
           activeCombatMods.length > 0
             ? el("span", {
-                className: "badge",
-                style: { borderColor: "#16a34a", color: "#14532d", background: "#f0fdf4" },
-                text: `⚔️ Active Combat Mods: ${activeCombatMods.join(", ")}`,
-              })
+              className: "badge",
+              style: { borderColor: "#16a34a", color: "#14532d", background: "#f0fdf4" },
+              text: `⚔️ Active Combat Mods: ${activeCombatMods.join(", ")}`,
+            })
             : null,
           gearCombatEffects.length > 0
             ? el("span", {
-                className: "badge",
-                style: { borderColor: "var(--gold-bright)", color: "#78350f", background: "#fffbeb" },
-                text: `🛡️⚔️ Guard & Weapon Effects: ${gearCombatEffects.join(" • ")}`,
-              })
+              className: "badge",
+              style: { borderColor: "var(--gold-bright)", color: "#78350f", background: "#fffbeb" },
+              text: `🛡️⚔️ Guard & Weapon Effects: ${gearCombatEffects.join(" • ")}`,
+            })
             : null
         ),
         postRollCombatCardsHeld.length > 0 && canFight
           ? el("div", {
-              style: {
-                padding: "0.45rem 0.65rem",
-                background: "#fdfaf2",
-                border: "1px solid #c29b61",
-                borderRadius: "4px",
-                fontSize: "0.78rem",
-                color: "var(--gold-bright)",
-                marginBottom: "0.7rem",
-              },
-              text: `🃏 Post-Roll Combat Cards in Hand (${postRollCombatCardsHeld
-                .map((c) => c.name)
-                .join(", ")}): You will be prompted with the option to play these AFTER the combat dice are rolled!`,
-            })
+            style: {
+              padding: "0.45rem 0.65rem",
+              background: "#fdfaf2",
+              border: "1px solid #c29b61",
+              borderRadius: "4px",
+              fontSize: "0.78rem",
+              color: "var(--gold-bright)",
+              marginBottom: "0.7rem",
+            },
+            text: `🃏 Post-Roll Combat Cards in Hand (${postRollCombatCardsHeld
+              .map((c) => c.name)
+              .join(", ")}): You will be prompted with the option to play these AFTER the combat dice are rolled!`,
+          })
           : null,
         !isOtherPlayerEncounter
           ? el(
-              "div",
-              {
-                style: {
-                  padding: "0.7rem",
-                  background: "#fbf7ee",
-                  borderRadius: "4px",
-                  marginBottom: "0.85rem",
-                  border: "1px solid var(--border-subtle)",
-                  boxShadow: "var(--bevel-sunken)",
-                },
+            "div",
+            {
+              style: {
+                padding: "0.7rem",
+                background: "#fbf7ee",
+                borderRadius: "4px",
+                marginBottom: "0.85rem",
+                border: "1px solid var(--border-subtle)",
+                boxShadow: "var(--bevel-sunken)",
               },
-              el("div", {
-                style: { fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.35rem", fontSize: "0.85rem" },
-                text: "Interactive Card Section Guide:",
-              }),
-              !combatMandatory
-                ? el("div", {
-                    style: { fontSize: "0.8rem", marginBottom: "0.25rem", color: "#15803d", fontWeight: "600" },
-                    text: "• Click the Top Bar, Active Tier, or Middle Action Box on the card → Fulfill Demand / Accept Offer or Mission",
-                  })
-                : null,
-              el("div", {
-                style: { fontSize: "0.8rem", marginBottom: "0.25rem", color: canFight ? "#b91c1c" : "var(--text-muted)", fontWeight: canFight ? "600" : "400" },
-                text: canFight
-                  ? "• Click the Combat Formula or Bottom Combat Bar on the card → Initiate Combat!"
-                  : "• Combat Section Locked (Combat is not threatened; requires Combat Mission or 'Casus Belli')",
+            },
+            el("div", {
+              style: { fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.35rem", fontSize: "0.85rem" },
+              text: "Interactive Card Section Guide:",
+            }),
+            !combatMandatory
+              ? el("div", {
+                style: { fontSize: "0.8rem", marginBottom: "0.25rem", color: "#15803d", fontWeight: "600" },
+                text: "• Click the Top Bar, Active Tier, or Middle Action Box on the card → Fulfill Demand / Accept Offer or Mission",
               })
-            )
+              : null,
+            el("div", {
+              style: { fontSize: "0.8rem", marginBottom: "0.25rem", color: canFight ? "#b91c1c" : "var(--text-muted)", fontWeight: canFight ? "600" : "400" },
+              text: canFight
+                ? "• Click the Combat Formula or Bottom Combat Bar on the card → Initiate Combat!"
+                : "• Combat Section Locked (Combat is not threatened; requires Combat Mission or 'Casus Belli')",
+            })
+          )
           : null,
         el(
           "div",
           { style: { display: "flex", gap: "0.55rem", flexWrap: "wrap", marginBottom: "0.85rem" } },
           !isOtherPlayerEncounter && !combatMandatory
             ? el("button", {
-                className: "btn btn-primary",
-                text: (() => {
-                  const rType = pend.reaction || pend.reactionType || "";
-                  if (rType === "deck_quest_demand") {
-                    return "(DECK_ICON)(QUEST_ICON)! Accept Top Missiones Card (Unseen)";
-                  }
-                  if (rType === "deck_quest_offer") {
-                    return "(DECK_ICON)(QUEST_ICON)? Accept Top Missiones Card (Unseen)";
-                  }
-                  if (
-                    (rType === "mission_strict" ||
-                      rType === "mission_request" ||
-                      rType === "mission_offer" ||
-                      rType === "mission_bonus") &&
-                    card.mission
-                  ) {
-                    return `📜 Accept Mission: "${card.mission.name}"`;
-                  }
-                  if (card.mission && !rType.startsWith("demand")) {
-                    return `📜 Accept Mission: "${card.mission.name}"`;
-                  }
-                  return "✓ Comply / Accept Terms";
-                })(),
-                onClick: () => sendGameAction({ type: "resolve_encounter", decision: "fulfill" }),
-              })
+              className: "btn btn-primary",
+              text: (() => {
+                const rType = pend.reaction || pend.reactionType || "";
+                if (rType === "deck_quest_demand") {
+                  return "(DECK_ICON)(QUEST_ICON)! Accept Top Missiones Card (Unseen)";
+                }
+                if (rType === "deck_quest_offer") {
+                  return "(DECK_ICON)(QUEST_ICON)? Accept Top Missiones Card (Unseen)";
+                }
+                if (
+                  (rType === "mission_strict" ||
+                    rType === "mission_request" ||
+                    rType === "mission_offer" ||
+                    rType === "mission_bonus") &&
+                  card.mission
+                ) {
+                  return `📜 Accept Mission: "${card.mission.name}"`;
+                }
+                if (card.mission && !rType.startsWith("demand")) {
+                  return `📜 Accept Mission: "${card.mission.name}"`;
+                }
+                return "✓ Comply / Accept Terms";
+              })(),
+              onClick: () => sendGameAction({ type: "resolve_encounter", decision: "fulfill" }),
+            })
             : null,
           canFight
             ? el("button", {
-                className: "btn btn-crimson",
-                text: isOtherPlayerEncounter
-                  ? `🎲 Pass Intervention & Roll ${encPlayer.name}'s Combat Dice`
-                  : "⚔️ Fight! (Roll Combat Dice)",
-                onClick: () => {
-                  if (isOtherPlayerEncounter) {
-                    sendGameAction({ type: "resolve_encounter", decision: "fight" });
-                  } else {
-                    initiateCombatWithConsumablePrompt(viewer, { type: "resolve_encounter", decision: "fight" });
-                  }
-                },
-              })
+              className: "btn btn-crimson",
+              text: isOtherPlayerEncounter
+                ? `🎲 Pass Intervention & Roll ${encPlayer.name}'s Combat Dice`
+                : "⚔️ Fight! (Roll Combat Dice)",
+              onClick: () => {
+                if (isOtherPlayerEncounter) {
+                  sendGameAction({ type: "resolve_encounter", decision: "fight" });
+                } else {
+                  initiateCombatWithConsumablePrompt(viewer, { type: "resolve_encounter", decision: "fight" });
+                }
+              },
+            })
             : null,
           !isOtherPlayerEncounter && !combatMandatory
             ? el("button", {
-                className: "btn",
-                text: (() => {
-                  const rType = pend.reaction || pend.reactionType || "";
-                  const actTxt = String(card.actionText || "").trim();
-                  if (
-                    rType === "offer" ||
-                    rType === "mission_offer" ||
-                    rType === "mission_bonus" ||
-                    rType === "quest_optional" ||
-                    rType === "deck_quest_offer" ||
-                    rType === "cash_reward" ||
-                    (!rType && actTxt.startsWith("?"))
-                  ) {
-                    return "Decline / Pass Offer (No Penalty)";
-                  }
-                  if (rType === "demand_strict" || rType === "mission_strict" || pend.combatThreatened) {
-                    return "Refuse Threat (⚔️ Initiates Combat!)";
-                  }
-                  return `Refuse Request (Suffer ${formatHostileFavorPenaltyText(card)})`;
-                })(),
-                onClick: () => {
-                  const rType = pend.reaction || pend.reactionType || "";
-                  if (rType === "demand_strict" || rType === "mission_strict" || pend.combatThreatened) {
-                    initiateCombatWithConsumablePrompt(viewer, { type: "resolve_encounter", decision: "refuse" });
-                  } else {
-                    sendGameAction({ type: "resolve_encounter", decision: "refuse" });
-                  }
-                },
-              })
+              className: "btn",
+              text: (() => {
+                const rType = pend.reaction || pend.reactionType || "";
+                const actTxt = String(card.actionText || "").trim();
+                if (
+                  rType === "offer" ||
+                  rType === "mission_offer" ||
+                  rType === "mission_bonus" ||
+                  rType === "quest_optional" ||
+                  rType === "deck_quest_offer" ||
+                  rType === "cash_reward" ||
+                  (!rType && actTxt.startsWith("?"))
+                ) {
+                  return "Decline / Pass Offer (No Penalty)";
+                }
+                if (rType === "demand_strict" || rType === "mission_strict" || pend.combatThreatened) {
+                  return "Refuse Threat (⚔️ Initiates Combat!)";
+                }
+                return `Refuse Request (Suffer ${formatHostileFavorPenaltyText(card)})`;
+              })(),
+              onClick: () => {
+                const rType = pend.reaction || pend.reactionType || "";
+                if (rType === "demand_strict" || rType === "mission_strict" || pend.combatThreatened) {
+                  initiateCombatWithConsumablePrompt(viewer, { type: "resolve_encounter", decision: "refuse" });
+                } else {
+                  sendGameAction({ type: "resolve_encounter", decision: "refuse" });
+                }
+              },
+            })
             : null,
           !isOtherPlayerEncounter && !canFight && hasCasusBelli
             ? el("button", {
-                className: "btn btn-crimson",
-                text: "⚔️ Play 'Casus Belli' & Initiate Combat!",
-                onClick: () =>
-                  initiateCombatWithConsumablePrompt(viewer, {
-                    type: "resolve_encounter",
-                    decision: "use_casus_belli",
-                  }),
-              })
+              className: "btn btn-crimson",
+              text: "⚔️ Play 'Casus Belli' & Initiate Combat!",
+              onClick: () =>
+                initiateCombatWithConsumablePrompt(viewer, {
+                  type: "resolve_encounter",
+                  decision: "use_casus_belli",
+                }),
+            })
             : null,
           hasDog
             ? el("button", {
-                className: "btn",
-                text: "🐕 Use 'Trained Dog' (Satisfy Denarii Demand / Avoid)",
-                onClick: () => sendGameAction({ type: "resolve_encounter", decision: "use_dog" }),
-              })
+              className: "btn",
+              text: "🐕 Use 'Trained Dog' (Satisfy Denarii Demand / Avoid)",
+              onClick: () => sendGameAction({ type: "resolve_encounter", decision: "use_dog" }),
+            })
             : null,
           hasPlea
             ? el("button", {
-                className: "btn",
-                text: "🙏 Play 'Plea' (Cancel Encounter)",
-                onClick: () => sendGameAction({ type: "resolve_encounter", decision: "use_plea" }),
-              })
+              className: "btn",
+              text: "🙏 Play 'Plea' (Cancel Encounter)",
+              onClick: () => sendGameAction({ type: "resolve_encounter", decision: "use_plea" }),
+            })
             : null
         ),
         reactionInfluenceCards.length > 0
           ? el(
+            "div",
+            {},
+            el("div", {
+              style: { fontSize: "0.8rem", fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.4rem" },
+              text: isOtherPlayerEncounter
+                ? `🃏 Your Pre-Roll Combat Influence Cards (Target ${encPlayer.name} or ${card.name}):`
+                : "🃏 Pre-Roll & Reaction Influence Cards in Hand (Play Before Rolling):",
+            }),
+            el(
               "div",
-              {},
-              el("div", {
-                style: { fontSize: "0.8rem", fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.4rem" },
-                text: isOtherPlayerEncounter
-                  ? `🃏 Your Pre-Roll Combat Influence Cards (Target ${encPlayer.name} or ${card.name}):`
-                  : "🃏 Pre-Roll & Reaction Influence Cards in Hand (Play Before Rolling):",
-              }),
-              el(
-                "div",
-                { className: "phys-cards-grid compact-sidebar-grid" },
-                ...reactionInfluenceCards.map((rc) => {
-                  if (rc.name === "Casus Belli" && !canFight) {
-                    return renderPhysicalInfluenceCardNode(rc, {
-                      actionButton: el("button", {
-                        className: "btn btn-sm btn-primary",
-                        style: { width: "100%" },
-                        text: "⚔️ Play Casus Belli",
-                        onClick: () =>
-                          initiateCombatWithConsumablePrompt(viewer, {
-                            type: "resolve_encounter",
-                            decision: "use_casus_belli",
-                          }),
-                      }),
-                    });
-                  }
+              { className: "phys-cards-grid compact-sidebar-grid" },
+              ...reactionInfluenceCards.map((rc) => {
+                if (rc.name === "Casus Belli" && !canFight) {
                   return renderPhysicalInfluenceCardNode(rc, {
-                    actionButton: buildCombatInfluenceCardActionNode(
-                      rc,
-                      encPlayer.name,
-                      card.name,
-                      isOtherPlayerEncounter
-                    ),
+                    actionButton: el("button", {
+                      className: "btn btn-sm btn-primary",
+                      style: { width: "100%" },
+                      text: "⚔️ Play Casus Belli",
+                      onClick: () =>
+                        initiateCombatWithConsumablePrompt(viewer, {
+                          type: "resolve_encounter",
+                          decision: "use_casus_belli",
+                        }),
+                    }),
                   });
-                })
-              )
+                }
+                return renderPhysicalInfluenceCardNode(rc, {
+                  actionButton: buildCombatInfluenceCardActionNode(
+                    rc,
+                    encPlayer.name,
+                    card.name,
+                    isOtherPlayerEncounter
+                  ),
+                });
+              })
             )
+          )
           : null
       )
     )
@@ -8583,9 +8567,8 @@ function renderPendingNpcOfferPanel(gs, viewer) {
       "h3",
       { className: "panel-title" },
       el("span", {
-        text: `🤝 Active Offer from ${npcName}: ${
-          isBuy ? `Purchase 1 ${offer.category}` : `Sell 1 ${offer.category}`
-        }`,
+        text: `🤝 Active Offer from ${npcName}: ${isBuy ? `Purchase 1 ${offer.category}` : `Sell 1 ${offer.category}`
+          }`,
       }),
       el("button", {
         className: "btn btn-sm btn-primary",
@@ -8606,9 +8589,8 @@ function renderPendingNpcOfferPanel(gs, viewer) {
         },
       },
       el("span", {
-        text: `${npcName} (${offer.actionText || ""}) — Select which ${
-          offer.category
-        } card to ${isBuy ? "purchase" : "sell"}, or decline the offer.`,
+        text: `${npcName} (${offer.actionText || ""}) — Select which ${offer.category
+          } card to ${isBuy ? "purchase" : "sell"}, or decline the offer.`,
       }),
       el(
         "div",
@@ -8640,9 +8622,8 @@ function renderPendingMarketRewardPanel(gs, viewer) {
       "h3",
       { className: "panel-title" },
       el("span", {
-        text: `🎁 Market Board Reward Ready: Choose 1 ${catLabel}${
-          queue.length > 1 ? ` (${queue.length} rewards queued)` : ""
-        }`,
+        text: `🎁 Market Board Reward Ready: Choose 1 ${catLabel}${queue.length > 1 ? ` (${queue.length} rewards queued)` : ""
+          }`,
       }),
       el("button", {
         className: "btn btn-sm btn-primary",
@@ -8663,9 +8644,8 @@ function renderPendingMarketRewardPanel(gs, viewer) {
         },
       },
       el("span", {
-        text: `${rwd.sourceLabel || "Reward"} (${
-          rwd.rewardLabel || catLabel
-        }) — Select which ${catLabel} card on the Ostia Market Board to claim onto your Cart.`,
+        text: `${rwd.sourceLabel || "Reward"} (${rwd.rewardLabel || catLabel
+          }) — Select which ${catLabel} card on the Ostia Market Board to claim onto your Cart.`,
       }),
       el(
         "div",
@@ -8775,90 +8755,90 @@ function renderCleanupPhasePanel(gs, viewer) {
       }),
       gs.season === "Spring" && !viewer.loans.spring
         ? el("button", {
-            className: "btn",
-            text: "🏦 Take Spring Loan (+20d now; repay 30d in Summer or 45d in Fall)",
-            onClick: () => sendGameAction({ type: "cleanup_take_loan" }),
-          })
+          className: "btn",
+          text: "🏦 Take Spring Loan (+20d now; repay 30d in Summer or 45d in Fall)",
+          onClick: () => sendGameAction({ type: "cleanup_take_loan" }),
+        })
         : null,
       gs.season === "Summer" && !viewer.loans.summer
         ? el("button", {
-            className: "btn",
-            text: "🏦 Take Summer Loan (+40d now; repay 60d at end of Fall)",
-            onClick: () => sendGameAction({ type: "cleanup_take_loan" }),
-          })
+          className: "btn",
+          text: "🏦 Take Summer Loan (+40d now; repay 60d at end of Fall)",
+          onClick: () => sendGameAction({ type: "cleanup_take_loan" }),
+        })
         : null,
       gs.season === "Summer" && viewer.loans.spring && viewer.cash >= 30
         ? el("button", {
-            className: "btn",
-            text: "🏦 Repay Spring Loan (-30d)",
-            onClick: () => sendGameAction({ type: "cleanup_repay_loan", loanType: "spring" }),
-          })
+          className: "btn",
+          text: "🏦 Repay Spring Loan (-30d)",
+          onClick: () => sendGameAction({ type: "cleanup_repay_loan", loanType: "spring" }),
+        })
         : null,
       gs.season === "Fall" && viewer.loans.spring && viewer.cash >= 45
         ? el("button", {
-            className: "btn",
-            text: "🏦 Repay Spring Loan (-45d)",
-            onClick: () => sendGameAction({ type: "cleanup_repay_loan", loanType: "spring" }),
-          })
+          className: "btn",
+          text: "🏦 Repay Spring Loan (-45d)",
+          onClick: () => sendGameAction({ type: "cleanup_repay_loan", loanType: "spring" }),
+        })
         : null,
       gs.season === "Fall" && viewer.loans.summer && viewer.cash >= 60
         ? el("button", {
-            className: "btn",
-            text: "🏦 Repay Summer Loan (-60d)",
-            onClick: () => sendGameAction({ type: "cleanup_repay_loan", loanType: "summer" }),
-          })
+          className: "btn",
+          text: "🏦 Repay Summer Loan (-60d)",
+          onClick: () => sendGameAction({ type: "cleanup_repay_loan", loanType: "summer" }),
+        })
         : null
     ),
     viewer.guards.length > 0
       ? el(
-          "div",
-          { style: { marginBottom: "0.9rem" } },
-          el("div", { style: { fontWeight: "700", marginBottom: "0.4rem" }, text: "Select Guards to Retain (Pay Seasonal Upkeep):" }),
-          ...viewer.guards.map((g) => {
-            const keep = appState.cleanupKeepGuards.has(g.id);
-            return el(
-              "label",
-              { style: { display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.3rem", cursor: "pointer" } },
-              el("input", {
-                type: "checkbox",
-                checked: keep,
-                onChange: (e) => {
-                  if (e.target.checked) appState.cleanupKeepGuards.add(g.id);
-                  else appState.cleanupKeepGuards.delete(g.id);
-                },
-              }),
-              el("span", { text: `${g.name} (${g.combatText}) — Upkeep: ${g.upkeepCost}(d)` })
-            );
-          })
-        )
+        "div",
+        { style: { marginBottom: "0.9rem" } },
+        el("div", { style: { fontWeight: "700", marginBottom: "0.4rem" }, text: "Select Guards to Retain (Pay Seasonal Upkeep):" }),
+        ...viewer.guards.map((g) => {
+          const keep = appState.cleanupKeepGuards.has(g.id);
+          return el(
+            "label",
+            { style: { display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.3rem", cursor: "pointer" } },
+            el("input", {
+              type: "checkbox",
+              checked: keep,
+              onChange: (e) => {
+                if (e.target.checked) appState.cleanupKeepGuards.add(g.id);
+                else appState.cleanupKeepGuards.delete(g.id);
+              },
+            }),
+            el("span", { text: `${g.name} (${g.combatText}) — Upkeep: ${g.upkeepCost}(d)` })
+          );
+        })
+      )
       : null,
     gs.season === "Fall"
       ? el(
-          "label",
-          {
-            style: {
-              display: "flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              marginBottom: "0.85rem",
-              cursor: "pointer",
-              fontSize: "0.86rem",
-            },
+        "label",
+        {
+          style: {
+            display: "flex",
+            alignItems: "center",
+            gap: "0.5rem",
+            marginBottom: "0.85rem",
+            cursor: "pointer",
+            fontSize: "0.86rem",
           },
-          el("input", {
-            type: "checkbox",
-            checked:
-              appState.cleanupAllowWinterPvpInfluence !== undefined
-                ? Boolean(appState.cleanupAllowWinterPvpInfluence)
-                : viewer.allowWinterPvpInfluence !== false,
-            onChange: (e) => {
-              appState.cleanupAllowWinterPvpInfluence = Boolean(e.target.checked);
-            },
-          }),
-          el("span", {
-            text: "⚔️ Authorize Combat Influence cards in Winter Reckoning PvP Tie-Breakers (uncheck to save cards)",
-          })
-        )
+        },
+        el("input", {
+          type: "checkbox",
+          checked:
+            appState.cleanupAllowWinterPvpInfluence !== undefined
+              ? Boolean(appState.cleanupAllowWinterPvpInfluence)
+              : viewer.allowWinterPvpInfluence !== false,
+          onChange: (e) => {
+            appState.cleanupAllowWinterPvpInfluence = Boolean(e.target.checked);
+          },
+        }),
+        el("span", {
+          text: "⚔️ Authorize Combat Influence cards in Winter Reckoning PvP Tie-Breakers (uncheck to save cards)",
+        })
+      )
       : null,
     el("button", {
       className: "btn btn-crimson",
@@ -8883,14 +8863,14 @@ function renderGoodPriceTableNode(card, trackName, colIndex, isPriceIdxDirect = 
   const activePriceIdx = isPriceIdxDirect
     ? Math.max(0, Math.min(4, Number(colIndex) || 2))
     : colIndex === 0
-    ? 0
-    : colIndex === 1
-    ? 1
-    : colIndex <= 3
-    ? 2
-    : colIndex === 4
-    ? 3
-    : 4;
+      ? 0
+      : colIndex === 1
+        ? 1
+        : colIndex <= 3
+          ? 2
+          : colIndex === 4
+            ? 3
+            : 4;
   const symHeaders = ["<<", "<", "=", ">", ">>"];
   const sellArr = Array.isArray(card.sell) && card.sell.length >= 5 ? card.sell : null;
   const buyArr = Array.isArray(card.buy) && card.buy.length >= 5 && !card.isMissionCargo ? card.buy : null;
@@ -8914,37 +8894,37 @@ function renderGoodPriceTableNode(card, trackName, colIndex, isPriceIdxDirect = 
       ),
       sellArr
         ? el(
-            "tr",
-            {},
-            el(
-              "th",
-              { className: "price-row-label price-row-label-sell" },
-              createSellPriceSymbolNode(Boolean(card.isMissionCargo))
-            ),
-            ...sellArr.slice(0, 5).map((val, idx) =>
-              el("td", {
-                className: `${idx === 2 ? "price-eq-col" : ""} ${idx === activePriceIdx ? "active-price-cell" : ""}`,
-                text: formatBtc(val),
-              })
-            )
+          "tr",
+          {},
+          el(
+            "th",
+            { className: "price-row-label price-row-label-sell" },
+            createSellPriceSymbolNode(Boolean(card.isMissionCargo))
+          ),
+          ...sellArr.slice(0, 5).map((val, idx) =>
+            el("td", {
+              className: `${idx === 2 ? "price-eq-col" : ""} ${idx === activePriceIdx ? "active-price-cell" : ""}`,
+              text: formatBtc(val),
+            })
           )
+        )
         : null,
       buyArr
         ? el(
-            "tr",
-            {},
-            el(
-              "th",
-              { className: "price-row-label price-row-label-buy" },
-              createBuyPriceSymbolNode(trackName === "Guards")
-            ),
-            ...buyArr.slice(0, 5).map((val, idx) =>
-              el("td", {
-                className: `${idx === 2 ? "price-eq-col" : ""} ${idx === activePriceIdx ? "active-price-cell" : ""}`,
-                text: formatBtc(val),
-              })
-            )
+          "tr",
+          {},
+          el(
+            "th",
+            { className: "price-row-label price-row-label-buy" },
+            createBuyPriceSymbolNode(trackName === "Guards")
+          ),
+          ...buyArr.slice(0, 5).map((val, idx) =>
+            el("td", {
+              className: `${idx === 2 ? "price-eq-col" : ""} ${idx === activePriceIdx ? "active-price-cell" : ""}`,
+              text: formatBtc(val),
+            })
           )
+        )
         : null
     )
   );
@@ -8967,8 +8947,8 @@ function openCartGoodDetailModal(item, gs, viewer, readOnly = false) {
   const subtitleText = item.isMissionCargo
     ? `Mission Cargo → ${item.deliverCell || "Rome"}`
     : item.subtitle
-    ? `(${item.subtitle})`
-    : item.subcategory || item.category || trackName;
+      ? `(${item.subtitle})`
+      : item.subcategory || item.category || trackName;
 
   let combatLineText = null;
   if (trackName === "Weapons") {
@@ -8991,8 +8971,8 @@ function openCartGoodDetailModal(item, gs, viewer, readOnly = false) {
     sellOpt && !sellOpt.isFencedCargo
       ? Number(sellOpt.price)
       : currentScarcitySellPrice !== null
-      ? currentScarcitySellPrice
-      : null;
+        ? currentScarcitySellPrice
+        : null;
   const netProfit = hasPaidCost && refSellPrice !== null ? refSellPrice - Number(item.purchasePrice) : null;
 
   const fullCardNode = el(
@@ -9023,9 +9003,9 @@ function openCartGoodDetailModal(item, gs, viewer, readOnly = false) {
           hasSellTable
             ? renderGoodPriceTableNode(item, trackName, activeScarcityIdx, false)
             : el("div", {
-                className: "mission-cargo-no-sell-note",
-                text: `Deliver @ ${item.deliverCell || "Target"}`,
-              })
+              className: "mission-cargo-no-sell-note",
+              text: `Deliver @ ${item.deliverCell || "Target"}`,
+            })
         )
       )
     )
@@ -9062,9 +9042,8 @@ function openCartGoodDetailModal(item, gs, viewer, readOnly = false) {
         el("span", { className: "cart-good-detail-label", text: "Mission Delivery Target:" }),
         el("strong", {
           style: { color: "var(--gold-bright)" },
-          text: `Deliver to ${item.deliverCell || "Target"}${
-            currentScarcitySellPrice !== null ? ` (Fence @ ${meta.scarcitySymbol || "="}: ${currentScarcitySellPrice}(d))` : ""
-          }`,
+          text: `Deliver to ${item.deliverCell || "Target"}${currentScarcitySellPrice !== null ? ` (Fence @ ${meta.scarcitySymbol || "="}: ${currentScarcitySellPrice}(d))` : ""
+            }`,
         })
       )
     );
@@ -9112,11 +9091,10 @@ function openCartGoodDetailModal(item, gs, viewer, readOnly = false) {
           el("span", { text: `${item.purchasePrice}(d)` }),
           netProfit !== null
             ? el("span", {
-                style: { color: netProfit >= 0 ? "#15803d" : "#b91c1c", marginLeft: "0.35rem" },
-                text: `(${netProfit >= 0 ? `+${netProfit}` : netProfit}(d) net at ${
-                  sellOpt ? sellOpt.scarcitySymbol || "=" : meta.scarcitySymbol || "="
+              style: { color: netProfit >= 0 ? "#15803d" : "#b91c1c", marginLeft: "0.35rem" },
+              text: `(${netProfit >= 0 ? `+${netProfit}` : netProfit}(d) net at ${sellOpt ? sellOpt.scarcitySymbol || "=" : meta.scarcitySymbol || "="
                 })`,
-              })
+            })
             : null
         )
       )
@@ -9276,8 +9254,8 @@ function renderLoadedGoodPhysicalCardNode(item, gs, viewer, readOnly = false) {
   const subtitleText = item.isMissionCargo
     ? `Mission Cargo → ${item.deliverCell || "Rome"}`
     : item.subtitle
-    ? `(${item.subtitle})`
-    : item.subcategory || item.category || trackName;
+      ? `(${item.subtitle})`
+      : item.subcategory || item.category || trackName;
 
   let combatLineText = null;
   if (trackName === "Weapons") {
@@ -9330,9 +9308,9 @@ function renderLoadedGoodPhysicalCardNode(item, gs, viewer, readOnly = false) {
         hasSellTable
           ? renderGoodPriceTableNode(item, trackName, activeScarcityIdx, true)
           : el("div", {
-              className: "mission-cargo-no-sell-note",
-              text: `Deliver @ ${item.deliverCell || "Target"}`,
-            })
+            className: "mission-cargo-no-sell-note",
+            text: `Deliver @ ${item.deliverCell || "Target"}`,
+          })
       )
     )
   );
@@ -9346,9 +9324,9 @@ function renderLoadedGoodPhysicalCardNode(item, gs, viewer, readOnly = false) {
         el("span", { text: `Paid ${item.purchasePrice}d` }),
         netProfit !== null
           ? el("span", {
-              className: netProfit >= 0 ? "profit-pos" : "profit-neg",
-              text: ` • Net ${netProfit >= 0 ? `+${netProfit}` : netProfit}d`,
-            })
+            className: netProfit >= 0 ? "profit-pos" : "profit-neg",
+            text: ` • Net ${netProfit >= 0 ? `+${netProfit}` : netProfit}d`,
+          })
           : null
       )
     );
@@ -9409,9 +9387,8 @@ function renderLoadedGoodPhysicalCardNode(item, gs, viewer, readOnly = false) {
           type: "button",
           className: "btn btn-sm amethyst-boost-btn",
           style: { width: "100%", padding: "0.15rem 0.24rem", fontSize: "0.64rem" },
-          title: `Rent Control: Spend ${boost.spend} Sapphire${
-            boost.spend > 1 ? "s" : ""
-          } (MS13 Favor) to boost sale to ${boost.scarcitySymbol} (${boost.price}d)`,
+          title: `Rent Control: Spend ${boost.spend} Sapphire${boost.spend > 1 ? "s" : ""
+            } (MS13 Favor) to boost sale to ${boost.scarcitySymbol} (${boost.price}d)`,
           text: `🔮 -${boost.spend} Sapphire → ${boost.price}d (${boost.scarcitySymbol})`,
           onClick: () =>
             sendGameAction({
@@ -9759,43 +9736,43 @@ function openFactionFavorModal(gs, targetPlayer, factionKey) {
       }),
       rawHistory.length > 0
         ? el(
-            "div",
-            { style: { marginTop: "0.55rem", display: "flex", flexDirection: "column", gap: "0.3rem" } },
-            ...(() => {
-              let running = 0;
-              return rawHistory.map((entry, idx) => {
-                const d = Number(entry.delta) || 0;
-                running += d;
-                const tot = entry.newTotal !== undefined ? Number(entry.newTotal) : running;
-                const absD = Math.abs(d) || 1;
-                const gemWord = absD === 1 ? fm.gemSingular : fm.gemPlural;
-                return el(
-                  "div",
-                  {
-                    style: {
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      fontSize: "0.78rem",
-                      padding: "0.28rem 0.5rem",
-                      borderRadius: "4px",
-                      background: d >= 0 ? "#f0fdf4" : "#fef2f2",
-                      border: d >= 0 ? "1px solid #86efac" : "1px solid #fca5a5",
-                    },
+          "div",
+          { style: { marginTop: "0.55rem", display: "flex", flexDirection: "column", gap: "0.3rem" } },
+          ...(() => {
+            let running = 0;
+            return rawHistory.map((entry, idx) => {
+              const d = Number(entry.delta) || 0;
+              running += d;
+              const tot = entry.newTotal !== undefined ? Number(entry.newTotal) : running;
+              const absD = Math.abs(d) || 1;
+              const gemWord = absD === 1 ? fm.gemSingular : fm.gemPlural;
+              return el(
+                "div",
+                {
+                  style: {
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    fontSize: "0.78rem",
+                    padding: "0.28rem 0.5rem",
+                    borderRadius: "4px",
+                    background: d >= 0 ? "#f0fdf4" : "#fef2f2",
+                    border: d >= 0 ? "1px solid #86efac" : "1px solid #fca5a5",
                   },
-                  el(
-                    "span",
-                    { style: { color: d >= 0 ? "#14532d" : "#7f1d1d", fontWeight: "700" } },
-                    `${idx + 1}. ${d >= 0 ? `+${absD}` : `-${absD}`} ${gemWord} — ${entry.reason || "Encounter / Mission"}`
-                  ),
-                  el("span", {
-                    style: { color: "var(--text-muted)", fontSize: "0.72rem", flexShrink: "0", marginLeft: "0.5rem" },
-                    text: `→ Favor: ${tot > 0 ? `+${tot}` : tot}`,
-                  })
-                );
-              });
-            })()
-          )
+                },
+                el(
+                  "span",
+                  { style: { color: d >= 0 ? "#14532d" : "#7f1d1d", fontWeight: "700" } },
+                  `${idx + 1}. ${d >= 0 ? `+${absD}` : `-${absD}`} ${gemWord} — ${entry.reason || "Encounter / Mission"}`
+                ),
+                el("span", {
+                  style: { color: "var(--text-muted)", fontSize: "0.72rem", flexShrink: "0", marginLeft: "0.5rem" },
+                  text: `→ Favor: ${tot > 0 ? `+${tot}` : tot}`,
+                })
+              );
+            });
+          })()
+        )
         : null
     ),
     // Section 2: Faction Lore & Alignments
@@ -9949,13 +9926,12 @@ function openPlayerCartModal(gs, targetPlayer, viewer) {
           }),
           el("div", {
             style: { fontSize: "0.75rem", color: swatchColor, fontWeight: "700" },
-            text: `${colorLabel} Cart • ${
-              targetPlayer.position
-                ? `📍 In Rome at ${targetPlayer.position}`
-                : targetPlayer.exitedRome
+            text: `${colorLabel} Cart • ${targetPlayer.position
+              ? `📍 In Rome at ${targetPlayer.position}`
+              : targetPlayer.exitedRome
                 ? "✓ Exited Rome Safely"
                 : "⚓ At Portus Ostiae"
-            }`,
+              }`,
           })
         )
       ),
@@ -10220,15 +10196,15 @@ function renderOstiaMarketBoard(gs, viewer) {
           el("span", { className: "scarcity-pill", text: `Sells At: ${meta.scarcityLabel}` }),
           isForumSellingTrack
             ? el("span", {
-                className: "scarcity-pill",
-                style: {
-                  background: "rgba(34, 197, 94, 0.28)",
-                  borderColor: "#4ade80",
-                  color: "#bbf7d0",
-                  marginTop: "2px",
-                },
-                text: `🏛️ Forum ${forumSpec.cell}: Sells @ ${formatTileModifier(forumSpec.modifier)}`,
-              })
+              className: "scarcity-pill",
+              style: {
+                background: "rgba(34, 197, 94, 0.28)",
+                borderColor: "#4ade80",
+                color: "#bbf7d0",
+                marginTop: "2px",
+              },
+              text: `🏛️ Forum ${forumSpec.cell}: Sells @ ${formatTileModifier(forumSpec.modifier)}`,
+            })
             : null
         )
       )
@@ -10282,8 +10258,8 @@ function renderOstiaMarketBoard(gs, viewer) {
           isGuardTrack
             ? "Guard"
             : card.subtitle
-            ? `(${card.subtitle})`
-            : card.subcategory || card.category || trackName;
+              ? `(${card.subtitle})`
+              : card.subcategory || card.category || trackName;
 
         // Combat effect line without "Combat:" prefix
         let combatLineText = null;
@@ -10370,9 +10346,8 @@ function renderOstiaMarketBoard(gs, viewer) {
                 { className: "good-card-external-meta" },
                 el("button", {
                   type: "button",
-                  className: `btn btn-sm ${canBuy ? "btn-primary" : ""} ${
-                    canForumBuy ? "forum-buy-highlight-btn" : ""
-                  }`,
+                  className: `btn btn-sm ${canBuy ? "btn-primary" : ""} ${canForumBuy ? "forum-buy-highlight-btn" : ""
+                    }`,
                   style: { width: "100%", padding: "0.18rem 0.3rem", fontSize: "0.7rem" },
                   disabled: !canBuy,
                   title: buttonTooltip,
@@ -10431,47 +10406,45 @@ function renderOstiaMarketBoard(gs, viewer) {
     renderMarketNpcSpeechBubble(),
     forumSpec
       ? el(
-          "div",
-          {
-            style: {
-              padding: "0.55rem 0.85rem",
-              marginBottom: "0.65rem",
-              background: "#ecfdf5",
-              border: "1.5px solid #16a34a",
-              borderRadius: "6px",
-              fontSize: "0.84rem",
-              color: "#14532d",
-              fontWeight: "600",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              flexWrap: "wrap",
-              gap: "0.5rem",
-            },
+        "div",
+        {
+          style: {
+            padding: "0.55rem 0.85rem",
+            marginBottom: "0.65rem",
+            background: "#ecfdf5",
+            border: "1.5px solid #16a34a",
+            borderRadius: "6px",
+            fontSize: "0.84rem",
+            color: "#14532d",
+            fontWeight: "600",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: "0.5rem",
           },
-          el("span", {
-            text: `🏛️ Your Cart occupies Forum ${forumSpec.cell} (${forumSpec.cellName}), which sells ${
-              forumSpec.category
-            } (${formatTileModifier(forumSpec.modifier)})! ${
-              forumSpec.canTransactNow
-                ? `Highlighted '${forumSpec.category}' buttons below are ready to purchase.`
-                : viewer.transactedThisTurn
+        },
+        el("span", {
+          text: `🏛️ Your Cart occupies Forum ${forumSpec.cell} (${forumSpec.cellName}), which sells ${forumSpec.category
+            } (${formatTileModifier(forumSpec.modifier)})! ${forumSpec.canTransactNow
+              ? `Highlighted '${forumSpec.category}' buttons below are ready to purchase.`
+              : viewer.transactedThisTurn
                 ? "You have already completed your Transaction this turn."
                 : "Wait for your Delivery turn to purchase."
             }`,
-          }),
-          appState.boardViewMode === "market"
-            ? el("button", {
-                className: "btn btn-sm",
-                text: "🗺️ Return to Rome Board",
-                onClick: () => {
-                  appState.highlightedMarketTrack = null;
-                  appState.boardViewMode = gs.phase === "market" ? "rome" : "auto";
-                  renderApp();
-                },
-              })
-            : null
-        )
+        }),
+        appState.boardViewMode === "market"
+          ? el("button", {
+            className: "btn btn-sm",
+            text: "🗺️ Return to Rome Board",
+            onClick: () => {
+              appState.highlightedMarketTrack = null;
+              appState.boardViewMode = gs.phase === "market" ? "rome" : "auto";
+              renderApp();
+            },
+          })
+          : null
+      )
       : null,
     el(
       "div",
@@ -10490,7 +10463,7 @@ function renderOstiaMarketBoard(gs, viewer) {
 
 const TIBER_UNBRIDGED_CELL_CLASSES = {};
 
-// Free Parking: the five road entry/exit points into San Francisco.
+// InstantGram SF: the five road entry/exit points into San Francisco.
 const TIBER_BRIDGE_BADGES_BY_CELL = {
   B1: [{ pos: "N", label: "🌉 Golden Gate Bridge" }],
   F1: [{ pos: "E", label: "🌉 Bay Bridge" }],
@@ -10561,9 +10534,9 @@ function showRomeHoverTooltip(coord, cell, previewTile, isScoutedPreview, crossi
       centerParts.length > 0 ? el("div", { style: { color: "#fde68a" }, text: centerParts.join(" • ") }) : null,
       crossingSummary
         ? el("div", {
-            style: { marginTop: "0.22rem", paddingTop: "0.22rem", borderTop: "1px solid rgba(255,248,232,0.22)", fontWeight: "700", color: crossingSummary.color },
-            text: crossingSummary.text,
-          })
+          style: { marginTop: "0.22rem", paddingTop: "0.22rem", borderTop: "1px solid rgba(255,248,232,0.22)", fontWeight: "700", color: crossingSummary.color },
+          text: crossingSummary.text,
+        })
         : null
     )
   );
@@ -10630,9 +10603,9 @@ function showRomeUnrevealedCellHoverTooltip(coord, cell, unrevealedCount, crossi
       ...featureLines.map((line) => el("div", { style: { color: "#fde68a", marginTop: "0.18rem" }, text: line })),
       crossingSummary
         ? el("div", {
-            style: { marginTop: "0.22rem", paddingTop: "0.22rem", borderTop: "1px solid rgba(255,248,232,0.22)", fontWeight: "700", color: crossingSummary.color },
-            text: crossingSummary.text,
-          })
+          style: { marginTop: "0.22rem", paddingTop: "0.22rem", borderTop: "1px solid rgba(255,248,232,0.22)", fontWeight: "700", color: crossingSummary.color },
+          text: crossingSummary.text,
+        })
         : null,
       el("div", {
         style: { marginTop: "0.25rem", color: "#cbd5e1", fontSize: "0.68rem" },
@@ -10758,12 +10731,12 @@ function renderRomeNightBoard(gs, viewer) {
       const isCellPerimeter = cellOffDirs.length > 0;
       const unrevealedCount = cell
         ? Number(
-            cell.stackCount !== undefined
-              ? cell.stackCount
-              : cell.unrevealedCount !== undefined
+          cell.stackCount !== undefined
+            ? cell.stackCount
+            : cell.unrevealedCount !== undefined
               ? cell.unrevealedCount
               : 12
-          )
+        )
         : 0;
 
       const cellClasses = ["rome-cell"];
@@ -10789,8 +10762,8 @@ function renderRomeNightBoard(gs, viewer) {
         rev
           ? "Revealed Tile"
           : scoutedTopTile
-          ? `Scouted Unrevealed Stack (${unrevealedCount} tiles)`
-          : `Unrevealed Stack (${unrevealedCount} face-down tiles)`,
+            ? `Scouted Unrevealed Stack (${unrevealedCount} tiles)`
+            : `Unrevealed Stack (${unrevealedCount} face-down tiles)`,
         isCurrent ? "Your Cart is here" : null,
         isReachableMove ? `Reachable Move (${reachableDirsByCell[coord]})` : null,
         isCurrent || rev ? "Click for Up-Close Tile View" : "Click for Move, Scout, or End Turn options",
@@ -10910,34 +10883,33 @@ function renderRomeNightBoard(gs, viewer) {
       const exitDetailSuffix = shortcutBypass
         ? " (Shortcut active)"
         : hasExitToll
-        ? ` (Toll: ${exitTollAmt}d)`
-        : hasExitHazard
-        ? ` (Encounter: ${formatEdgeLabel(exitEdgeVal)})`
-        : "";
+          ? ` (Toll: ${exitTollAmt}d)`
+          : hasExitHazard
+            ? ` (Encounter: ${formatEdgeLabel(exitEdgeVal)})`
+            : "";
       const exitEdgeStripNode =
         isCurrent &&
-        isMyDeliveryTurn &&
-        viewer.movesRemaining > 0 &&
-        passableExitDir &&
-        !gs.pendingEncounter &&
-        !viewer.pendingNpcOffer &&
-        !((viewer.pendingCartOverflow || []).length > 0) &&
-        !((viewer.pendingMarketReward || []).length > 0)
+          isMyDeliveryTurn &&
+          viewer.movesRemaining > 0 &&
+          passableExitDir &&
+          !gs.pendingEncounter &&
+          !viewer.pendingNpcOffer &&
+          !((viewer.pendingCartOverflow || []).length > 0) &&
+          !((viewer.pendingMarketReward || []).length > 0)
           ? el(
-              "button",
-              {
-                type: "button",
-                className: `rome-exit-edge-strip exit-dir-${passableExitDir.toLowerCase()}${
-                  hasExitHazard ? " has-exit-encounter" : hasExitToll ? " has-exit-toll" : ""
+            "button",
+            {
+              type: "button",
+              className: `rome-exit-edge-strip exit-dir-${passableExitDir.toLowerCase()}${hasExitHazard ? " has-exit-encounter" : hasExitToll ? " has-exit-toll" : ""
                 }`,
-                title: `Click to Exit Rome via ${passableExitDir}${exitDetailSuffix}`,
-                onClick: (e) => {
-                  triggerPerimeterMapEdgeExit(e);
-                },
+              title: `Click to Exit Rome via ${passableExitDir}${exitDetailSuffix}`,
+              onClick: (e) => {
+                triggerPerimeterMapEdgeExit(e);
               },
-              ...exitHazardNodes,
-              el("span", { text: `🚪 Exit (${passableExitDir})` })
-            )
+            },
+            ...exitHazardNodes,
+            el("span", { text: `🚪 Exit (${passableExitDir})` })
+          )
           : null;
 
       const bridgeBadgeNodes = (TIBER_BRIDGE_BADGES_BY_CELL[coord] || []).map((bSpec) =>
@@ -10962,10 +10934,10 @@ function renderRomeNightBoard(gs, viewer) {
           rev ? renderDynamicTileCardNode(rev, coord, "board") : null,
           !rev && scoutedTopTile
             ? el("span", {
-                className: "cell-scouted-badge",
-                title: `You have scouted the top unrevealed tile of ${coord} (${cell ? cell.name : coord})`,
-                text: "👁️ Scouted",
-              })
+              className: "cell-scouted-badge",
+              title: `You have scouted the top unrevealed tile of ${coord} (${cell ? cell.name : coord})`,
+              text: "👁️ Scouted",
+            })
             : null,
           ...bridgeBadgeNodes,
           exitEdgeStripNode,
@@ -10976,33 +10948,31 @@ function renderRomeNightBoard(gs, viewer) {
           }),
           playersHere.length > 0
             ? el(
-                "div",
-                {
-                  className: `cart-tokens-row ${playersHere.length > 1 ? "is-stacked" : ""} ${
-                    rev && rev.edges && rev.edges.S && !["green", "red", "none"].includes(rev.edges.S)
-                      ? "has-south-badge"
-                      : ""
+              "div",
+              {
+                className: `cart-tokens-row ${playersHere.length > 1 ? "is-stacked" : ""} ${rev && rev.edges && rev.edges.S && !["green", "red", "none"].includes(rev.edges.S)
+                  ? "has-south-badge"
+                  : ""
                   }`.trim(),
-                  title: playersHere.map((p) => `${p.name}'s Cart (${getCartColorLabel(p.color)})`).join(" • "),
-                },
-                ...playersHere.map((p, idx) => {
-                  const isOutsideGate = Boolean(npcReplay.waitingOutsideGateByPlayer[p.index] && cell && cell.isGate);
-                  const isActiveNpcHere = Boolean(
-                    appState.activeNpcEvent &&
-                      appState.activeNpcEvent.phase !== "market" &&
-                      appState.activeNpcEvent.playerIndex === p.index
-                  );
-                  return renderCartIconNode(
-                    p.color,
-                    `cart-icon-board cart-stack-item-${idx}${isOutsideGate ? " is-waiting-outside-gate" : ""}${
-                      isActiveNpcHere ? " is-active-npc-cart" : ""
-                    }`,
-                    isOutsideGate
-                      ? `${p.name}'s Cart (${getCartColorLabel(p.color)}) — Poised outside Gate ${coord} (enters on Turn 1)`
-                      : `${p.name}'s Cart (${getCartColorLabel(p.color)})`
-                  );
-                })
-              )
+                title: playersHere.map((p) => `${p.name}'s Cart (${getCartColorLabel(p.color)})`).join(" • "),
+              },
+              ...playersHere.map((p, idx) => {
+                const isOutsideGate = Boolean(npcReplay.waitingOutsideGateByPlayer[p.index] && cell && cell.isGate);
+                const isActiveNpcHere = Boolean(
+                  appState.activeNpcEvent &&
+                  appState.activeNpcEvent.phase !== "market" &&
+                  appState.activeNpcEvent.playerIndex === p.index
+                );
+                return renderCartIconNode(
+                  p.color,
+                  `cart-icon-board cart-stack-item-${idx}${isOutsideGate ? " is-waiting-outside-gate" : ""}${isActiveNpcHere ? " is-active-npc-cart" : ""
+                  }`,
+                  isOutsideGate
+                    ? `${p.name}'s Cart (${getCartColorLabel(p.color)}) — Poised outside Gate ${coord} (enters on Turn 1)`
+                    : `${p.name}'s Cart (${getCartColorLabel(p.color)})`
+                );
+              })
+            )
             : null
         )
       );
@@ -11025,22 +10995,22 @@ function renderRomeNightBoard(gs, viewer) {
     { className: "rome-layout" },
     showViaStartBanner
       ? el(
-          "div",
+        "div",
+        {
+          className: "via-start-reminder-bar",
+          title: "All dealers must enter San Francisco through one of the five road entry points: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Route 1).",
+        },
+        el("span", { className: "via-start-reminder-icon", text: "⛩️" }),
+        el(
+          "span",
           {
-            className: "via-start-reminder-bar",
-            title: "All dealers must enter San Francisco through one of the five road entry points: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Route 1).",
-          },
-          el("span", { className: "via-start-reminder-icon", text: "⛩️" }),
-          el(
-            "span",
-            {
-              text:
-                gs.phase === "delivery_entry"
-                  ? "Start at an Entry Point: Every dealer must enter San Francisco at one of the five gold-outlined entry points — B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Route 1)."
-                  : "8:00 P.M. Entry Hour: Dealers begin the night at one of San Francisco's five gold-outlined entry points (B1, F1, F5, D6, A5).",
-            }
-          )
+            text:
+              gs.phase === "delivery_entry"
+                ? "Start at an Entry Point: Every dealer must enter San Francisco at one of the five gold-outlined entry points — B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Route 1)."
+                : "8:00 P.M. Entry Hour: Dealers begin the night at one of San Francisco's five gold-outlined entry points (B1, F1, F5, D6, A5).",
+          }
         )
+      )
       : null,
     el(
       "div",
@@ -11210,8 +11180,8 @@ function renderCartNavigationWidget(gs, viewer) {
     const subLabel = riverBlocked
       ? "🌊 Tiber River"
       : bridgeName
-      ? `🌉 ${bridgeName} • ${formatEdgeLabel(info.edge)}${bridgeTollNote}`
-      : formatEdgeLabel(info.edge);
+        ? `🌉 ${bridgeName} • ${formatEdgeLabel(info.edge)}${bridgeTollNote}`
+        : formatEdgeLabel(info.edge);
     return el(
       "button",
       {
@@ -11230,20 +11200,20 @@ function renderCartNavigationWidget(gs, viewer) {
   const locationStatusText = isCartInRome
     ? `📍 Cart at ${viewer.position} — ${cell ? cell.name : ""}`
     : viewer.exitedRome
-    ? "✓ Cart Exited Rome Safely"
-    : isMyGateEntryTurn
-    ? "🚪 At City Gates — Choose Entry Gate"
-    : "⚓ Cart at Portus Ostiae";
+      ? "✓ Cart Exited Rome Safely"
+      : isMyGateEntryTurn
+        ? "🚪 At City Gates — Choose Entry Gate"
+        : "⚓ Cart at Portus Ostiae";
 
   const movesStatusText = isCartInRome
     ? gs.phase === "delivery" && gs.turn === 1 && viewer.movesRemaining === 0
       ? "Turn 1 Move Used"
       : `Moves Left: ${viewer.movesRemaining ?? 0}`
     : isMyGateEntryTurn
-    ? "Turn 1 Entry"
-    : gs.phase === "delivery"
-    ? "Waiting"
-    : "—";
+      ? "Turn 1 Entry"
+      : gs.phase === "delivery"
+        ? "Waiting"
+        : "—";
 
   const gateCoords = Object.keys(gs.romeBoard || {}).filter(
     (coord) => gs.romeBoard[coord] && gs.romeBoard[coord].isGate
@@ -11282,9 +11252,8 @@ function renderCartNavigationWidget(gs, viewer) {
               type: "button",
               className: "btn btn-sm btn-primary",
               disabled: viewer.transactedThisTurn,
-              text: `🌾 Bulk Sell All ${sOpt.bulkGrainCount} Grain (${sOpt.bulkGrainTotalPrice}d @ ${sOpt.scarcitySymbol}) [Net ${bulkNetStr}]${
-                sOpt.isMission ? " [Mission]" : ""
-              }`,
+              text: `🌾 Bulk Sell All ${sOpt.bulkGrainCount} Grain (${sOpt.bulkGrainTotalPrice}d @ ${sOpt.scarcitySymbol}) [Net ${bulkNetStr}]${sOpt.isMission ? " [Mission]" : ""
+                }`,
               onClick: () =>
                 sendGameAction({
                   type: "delivery_sell",
@@ -11312,9 +11281,8 @@ function renderCartNavigationWidget(gs, viewer) {
             type: "button",
             className: `btn btn-sm ${sOpt.isFencedCargo ? "btn-crimson" : "btn-primary"}`,
             disabled: viewer.transactedThisTurn,
-            text: `${sOpt.isFencedCargo ? "🕵️ Fence" : "💰 Sell"} ${item.name} (${sOpt.price}d @ ${sOpt.scarcitySymbol})${profitSuffix}${
-              sOpt.isMission ? " [Mission]" : fenceTag
-            }`,
+            text: `${sOpt.isFencedCargo ? "🕵️ Fence" : "💰 Sell"} ${item.name} (${sOpt.price}d @ ${sOpt.scarcitySymbol})${profitSuffix}${sOpt.isMission ? " [Mission]" : fenceTag
+              }`,
             onClick: () =>
               sendGameAction({
                 type: "delivery_sell",
@@ -11393,51 +11361,51 @@ function renderCartNavigationWidget(gs, viewer) {
     ),
     isMyGateEntryTurn
       ? el(
-          "div",
-          {
-            style: {
-              marginBottom: "0.6rem",
-              padding: "0.5rem 0.6rem",
-              borderRadius: "7px",
-              background: "rgba(216, 169, 75, 0.1)",
-              border: "1px solid rgba(216, 169, 75, 0.35)",
-            },
+        "div",
+        {
+          style: {
+            marginBottom: "0.6rem",
+            padding: "0.5rem 0.6rem",
+            borderRadius: "7px",
+            background: "rgba(216, 169, 75, 0.1)",
+            border: "1px solid rgba(216, 169, 75, 0.35)",
           },
-          el("div", {
-            style: { fontSize: "0.74rem", fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.35rem" },
-            text: "🚪 Enter Rome via a City Gate:",
-          }),
-          el(
-            "div",
-            { style: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.35rem" } },
-            ...gateCoords.map((gCoord) =>
-              el("button", {
-                type: "button",
-                className: "btn btn-sm btn-primary",
-                text: `🚪 ${gCoord}`,
-                title: `Move onto Gate ${gCoord}`,
-                onClick: () => sendGameAction({ type: "select_gate", gate: gCoord }),
-              })
-            )
+        },
+        el("div", {
+          style: { fontSize: "0.74rem", fontWeight: "700", color: "var(--gold-bright)", marginBottom: "0.35rem" },
+          text: "🚪 Enter Rome via a City Gate:",
+        }),
+        el(
+          "div",
+          { style: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.35rem" } },
+          ...gateCoords.map((gCoord) =>
+            el("button", {
+              type: "button",
+              className: "btn btn-sm btn-primary",
+              text: `🚪 ${gCoord}`,
+              title: `Move onto Gate ${gCoord}`,
+              onClick: () => sendGameAction({ type: "select_gate", gate: gCoord }),
+            })
           )
         )
+      )
       : null,
     isCartInRome ? el("div", { className: "compass-grid" }, ...compassNodes) : null,
     txButtons.length > 0
       ? el(
-          "div",
-          {
-            style: {
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.42rem",
-              marginTop: "0.55rem",
-              paddingTop: "0.48rem",
-              borderTop: "1px solid rgba(110, 82, 50, 0.28)",
-            },
+        "div",
+        {
+          style: {
+            display: "flex",
+            flexDirection: "column",
+            gap: "0.42rem",
+            marginTop: "0.55rem",
+            paddingTop: "0.48rem",
+            borderTop: "1px solid rgba(110, 82, 50, 0.28)",
           },
-          ...txButtons
-        )
+        },
+        ...txButtons
+      )
       : null
   );
 }
@@ -11544,35 +11512,35 @@ function renderPlayerSidebar(gs, viewer) {
             }),
             rivals.length > 0
               ? el(
-                  "div",
-                  { className: "faction-standings-rivals" },
-                  ...rivals.map((rv) => {
-                    const rVal = (rv.favor && rv.favor[fm.key]) || 0;
-                    const rShort = String(rv.name || "Rival").split(" ")[0];
-                    return el(
-                      "div",
-                      {
-                        className: "faction-standing-rival-line",
-                        title: `${rv.name}: ${rVal > 0 ? `+${rVal}` : rVal} ${fm.label || fm.key}`,
+                "div",
+                { className: "faction-standings-rivals" },
+                ...rivals.map((rv) => {
+                  const rVal = (rv.favor && rv.favor[fm.key]) || 0;
+                  const rShort = String(rv.name || "Rival").split(" ")[0];
+                  return el(
+                    "div",
+                    {
+                      className: "faction-standing-rival-line",
+                      title: `${rv.name}: ${rVal > 0 ? `+${rVal}` : rVal} ${fm.label || fm.key}`,
+                    },
+                    el(
+                      "span",
+                      { className: "faction-standing-rival-name" },
+                      el("span", {
+                        className: "faction-standing-swatch",
+                        style: { background: resolveDieSwatchColor(rv.color, "player") },
+                      }),
+                      el("span", { text: rShort })
+                    ),
+                    el("strong", {
+                      style: {
+                        color: rVal > 0 ? "#15803d" : rVal < 0 ? "#b91c1c" : "var(--text-muted)",
                       },
-                      el(
-                        "span",
-                        { className: "faction-standing-rival-name" },
-                        el("span", {
-                          className: "faction-standing-swatch",
-                          style: { background: resolveDieSwatchColor(rv.color, "player") },
-                        }),
-                        el("span", { text: rShort })
-                      ),
-                      el("strong", {
-                        style: {
-                          color: rVal > 0 ? "#15803d" : rVal < 0 ? "#b91c1c" : "var(--text-muted)",
-                        },
-                        text: rVal > 0 ? `+${rVal}` : String(rVal),
-                      })
-                    );
-                  })
-                )
+                      text: rVal > 0 ? `+${rVal}` : String(rVal),
+                    })
+                  );
+                })
+              )
               : null
           );
         })
@@ -11730,36 +11698,35 @@ function renderPlayerSidebar(gs, viewer) {
           ),
           soothsayerMissions.length > 5
             ? el("span", {
-                style: {
-                  fontSize: "0.72rem",
-                  background: "#b45309",
-                  color: "#fff",
-                  padding: "2px 6px",
-                  borderRadius: "4px",
-                  fontWeight: "700",
-                },
-                text: "⚠️ 6 Soothsayer Missions — Cancel 1 Free!",
-              })
+              style: {
+                fontSize: "0.72rem",
+                background: "#b45309",
+                color: "#fff",
+                padding: "2px 6px",
+                borderRadius: "4px",
+                fontWeight: "700",
+              },
+              text: "⚠️ 6 Soothsayer Missions — Cancel 1 Free!",
+            })
             : el("span", {
-                style: {
-                  fontSize: "0.72rem",
-                  color: viewerNetMissions > 0 ? "#15803d" : viewerNetMissions < 0 ? "#b91c1c" : "var(--text-muted)",
-                  fontWeight: "700",
-                },
-                title: "Tracks Missions Completed (✓) vs Missions Failed (✕) — including unfinished missions at Winter Reckoning",
-                text: `✓${viewerMissionsDone} • ✕${viewerMissionsFail} (Net ${
-                  viewerNetMissions >= 0 ? `+${viewerNetMissions}` : viewerNetMissions
+              style: {
+                fontSize: "0.72rem",
+                color: viewerNetMissions > 0 ? "#15803d" : viewerNetMissions < 0 ? "#b91c1c" : "var(--text-muted)",
+                fontWeight: "700",
+              },
+              title: "Tracks Missions Completed (✓) vs Missions Failed (✕) — including unfinished missions at Winter Reckoning",
+              text: `✓${viewerMissionsDone} • ✕${viewerMissionsFail} (Net ${viewerNetMissions >= 0 ? `+${viewerNetMissions}` : viewerNetMissions
                 })`,
-              })
+            })
         ),
         gs.phase === "setup_discard" && !viewer.setupDiscarded
           ? el("div", {
-              className: "mission-section-empty",
-              text: "Select 2 of your 5 Starting Missions to discard in the Setup panel.",
-            })
+            className: "mission-section-empty",
+            text: "Select 2 of your 5 Starting Missions to discard in the Setup panel.",
+          })
           : allMissions.length === 0
-          ? el("div", { className: "mission-section-empty", text: "No active missions." })
-          : el(
+            ? el("div", { className: "mission-section-empty", text: "No active missions." })
+            : el(
               "div",
               {
                 className: "missions-single-row",
@@ -11776,12 +11743,12 @@ function renderPlayerSidebar(gs, viewer) {
       el("h3", { className: "panel-title", text: `🃏 Influence Cards (${(viewer.influence || []).length})` }),
       gs.phase === "setup_discard" && !viewer.setupDiscarded
         ? el("div", {
-            style: { fontSize: "0.8rem", color: "var(--text-muted)" },
-            text: "Select 2 of your 5 Starting Influence cards to discard in the Setup panel.",
-          })
+          style: { fontSize: "0.8rem", color: "var(--text-muted)" },
+          text: "Select 2 of your 5 Starting Influence cards to discard in the Setup panel.",
+        })
         : (viewer.influence || []).length === 0
-        ? el("div", { style: { fontSize: "0.8rem", color: "var(--text-muted)" }, text: "No Influence cards in hand." })
-        : el(
+          ? el("div", { style: { fontSize: "0.8rem", color: "var(--text-muted)" }, text: "No Influence cards in hand." })
+          : el(
             "div",
             { className: "phys-cards-grid compact-sidebar-grid" },
             ...(viewer.influence || []).map((c) => {
@@ -11819,14 +11786,14 @@ function renderPlayerSidebar(gs, viewer) {
                 (pend.playerIndex === viewer.index || pend.interveningPlayerIndex === viewer.index) &&
                 (cName === "Twist Of Fate"
                   ? [
-                      "combat_post_roll",
-                      "driver_fate_post_roll",
-                      "chart_post_roll",
-                      "demand_post_roll",
-                      "gamble_post_roll",
-                    ].includes(pendStage)
+                    "combat_post_roll",
+                    "driver_fate_post_roll",
+                    "chart_post_roll",
+                    "demand_post_roll",
+                    "gamble_post_roll",
+                  ].includes(pendStage)
                   : ["driver_fate_post_roll", "chart_post_roll"].includes(pendStage) &&
-                    pend.chartType !== "soothsayer");
+                  pend.chartType !== "soothsayer");
 
               let actionNode = null;
               if (
@@ -11894,24 +11861,24 @@ function renderPlayerSidebar(gs, viewer) {
                     cName === "Casus Belli"
                       ? "⚔️ Play Casus Belli"
                       : isTop3Card
-                      ? "👁️ Inspect & Reorder Top 3"
-                      : isProcurerCard
-                      ? "🛒 Choose Good @ Common (>)"
-                      : isProphecyCard
-                      ? "🔮 Summon Soothsayer..."
-                      : isSurpriseShipmentCard
-                      ? "🚢 Shift Category Scarcity..."
-                      : isShortcutCard
-                      ? "🛣️ Ready Shortcut for Move"
-                      : isReactiveOnly
-                      ? isArmedCard
-                        ? "👆 Click Any Die to Apply"
-                        : "🎲 Click a Die to Apply"
-                      : needsThugSwap
-                      ? "▶ Play Card (Fire Guard)"
-                      : needsWineForgerSwap
-                      ? "▶ Play Card (Swap Good)"
-                      : "▶ Play Card",
+                        ? "👁️ Inspect & Reorder Top 3"
+                        : isProcurerCard
+                          ? "🛒 Choose Good @ Common (>)"
+                          : isProphecyCard
+                            ? "🔮 Summon Soothsayer..."
+                            : isSurpriseShipmentCard
+                              ? "🚢 Shift Category Scarcity..."
+                              : isShortcutCard
+                                ? "🛣️ Ready Shortcut for Move"
+                                : isReactiveOnly
+                                  ? isArmedCard
+                                    ? "👆 Click Any Die to Apply"
+                                    : "🎲 Click a Die to Apply"
+                                  : needsThugSwap
+                                    ? "▶ Play Card (Fire Guard)"
+                                    : needsWineForgerSwap
+                                      ? "▶ Play Card (Swap Good)"
+                                      : "▶ Play Card",
                   onClick: (e) => {
                     e.stopPropagation();
                     if (isTop3Card) {
@@ -11936,34 +11903,34 @@ function renderPlayerSidebar(gs, viewer) {
           ),
       (viewer.scoutedInfo || []).length > 0
         ? el(
-            "div",
-            { style: { marginTop: "0.75rem", paddingTop: "0.6rem", borderTop: "1px solid var(--border-subtle)" } },
-            el("div", { style: { fontWeight: "700", fontSize: "0.82rem", color: "#0369a1", marginBottom: "0.35rem" }, text: "👁️ Scouted Intelligence (Click to View):" }),
-            ...(viewer.scoutedInfo || []).slice(-5).map((si) =>
-              el(
-                "div",
-                {
-                  style: {
-                    fontSize: "0.74rem",
-                    marginBottom: "0.3rem",
-                    color: "var(--text-main)",
-                    padding: "0.3rem 0.45rem",
-                    borderRadius: "5px",
-                    background: "#f0f9ff",
-                    border: "1px solid #7dd3fc",
-                    cursor: "pointer",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    gap: "0.4rem",
-                  },
-                  onClick: () => openScoutResultModal(si),
+          "div",
+          { style: { marginTop: "0.75rem", paddingTop: "0.6rem", borderTop: "1px solid var(--border-subtle)" } },
+          el("div", { style: { fontWeight: "700", fontSize: "0.82rem", color: "#0369a1", marginBottom: "0.35rem" }, text: "👁️ Scouted Intelligence (Click to View):" }),
+          ...(viewer.scoutedInfo || []).slice(-5).map((si) =>
+            el(
+              "div",
+              {
+                style: {
+                  fontSize: "0.74rem",
+                  marginBottom: "0.3rem",
+                  color: "var(--text-main)",
+                  padding: "0.3rem 0.45rem",
+                  borderRadius: "5px",
+                  background: "#f0f9ff",
+                  border: "1px solid #7dd3fc",
+                  cursor: "pointer",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "0.4rem",
                 },
-                el("span", { text: `• ${si.label}: ${si.summary}` }),
-                el("span", { style: { color: "#0369a1", fontWeight: "700", flexShrink: "0" }, text: "🔍 View" })
-              )
+                onClick: () => openScoutResultModal(si),
+              },
+              el("span", { text: `• ${si.label}: ${si.summary}` }),
+              el("span", { style: { color: "#0369a1", fontWeight: "700", flexShrink: "0" }, text: "🔍 View" })
             )
           )
+        )
         : null
     ),
 
@@ -12018,10 +11985,10 @@ function openFaceUpTileUpCloseModal(gs, viewer, coord, cell, tileData, moveOpts 
       : null;
   const centerParts = rev
     ? [
-        rev.encounter ? formatEdgeLabel(rev.encounter) : "No Center Encounter",
-        rev.gamble ? "Stadium Gambling (≤20(d))" : null,
-        rev.persistent ? "Persistent (⤹)" : rev.refresh ? "Refresh (↻)" : "Standard Tile",
-      ].filter(Boolean)
+      rev.encounter ? formatEdgeLabel(rev.encounter) : "No Center Encounter",
+      rev.gamble ? "Stadium Gambling (≤20(d))" : null,
+      rev.persistent ? "Persistent (⤹)" : rev.refresh ? "Refresh (↻)" : "Standard Tile",
+    ].filter(Boolean)
     : [];
 
   showModal(
@@ -12031,79 +11998,79 @@ function openFaceUpTileUpCloseModal(gs, viewer, coord, cell, tileData, moveOpts 
       { style: { display: "flex", flexDirection: "column", alignItems: "center", gap: "0.85rem" } },
       occupants.length > 0
         ? el(
-            "div",
-            {
-              style: {
-                display: "flex",
-                gap: "0.45rem",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                alignItems: "center",
-              },
+          "div",
+          {
+            style: {
+              display: "flex",
+              gap: "0.45rem",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
             },
-            ...occupants.map((p) =>
-              el(
-                "span",
-                {
-                  className: "badge",
-                  style:
-                    viewer && p.index === viewer.index
-                      ? { borderColor: "var(--gold-bright)", background: "#fefce8", color: "#713f12", fontWeight: "800" }
-                      : {},
-                },
-                renderCartIconNode(p.color, "cart-icon-xs", `${p.name}'s Cart`),
-                el("span", {
-                  style: { marginLeft: "0.3rem" },
-                  text: viewer && p.index === viewer.index ? `${p.name} (Your Cart)` : p.name,
-                })
-              )
+          },
+          ...occupants.map((p) =>
+            el(
+              "span",
+              {
+                className: "badge",
+                style:
+                  viewer && p.index === viewer.index
+                    ? { borderColor: "var(--gold-bright)", background: "#fefce8", color: "#713f12", fontWeight: "800" }
+                    : {},
+              },
+              renderCartIconNode(p.color, "cart-icon-xs", `${p.name}'s Cart`),
+              el("span", {
+                style: { marginLeft: "0.3rem" },
+                text: viewer && p.index === viewer.index ? `${p.name} (Your Cart)` : p.name,
+              })
             )
           )
+        )
         : null,
       rev
         ? el(
-            "div",
-            { style: { width: "280px", maxWidth: "100%", margin: "0 auto" } },
-            renderDynamicTileCardNode(rev, coord, "inspector")
-          )
+          "div",
+          { style: { width: "280px", maxWidth: "100%", margin: "0 auto" } },
+          renderDynamicTileCardNode(rev, coord, "inspector")
+        )
         : el("p", {
-            style: { fontSize: "0.88rem", color: "var(--text-muted)", margin: "0.25rem 0" },
-            text: `No face-up tile is currently exposed on ${coord} (${cellName}).`,
-          }),
+          style: { fontSize: "0.88rem", color: "var(--text-muted)", margin: "0.25rem 0" },
+          text: `No face-up tile is currently exposed on ${coord} (${cellName}).`,
+        }),
       rev
         ? el(
-            "div",
-            {
-              style: {
-                width: "100%",
-                padding: "0.65rem 0.85rem",
-                borderRadius: "6px",
-                background: "#fbf7ee",
-                border: "1.5px solid #a88d6b",
-                boxShadow: "var(--bevel-sunken)",
-                fontSize: "0.84rem",
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.25rem",
-              },
+          "div",
+          {
+            style: {
+              width: "100%",
+              padding: "0.65rem 0.85rem",
+              borderRadius: "6px",
+              background: "#fbf7ee",
+              border: "1.5px solid #a88d6b",
+              boxShadow: "var(--bevel-sunken)",
+              fontSize: "0.84rem",
+              display: "flex",
+              flexDirection: "column",
+              gap: "0.25rem",
             },
-            el(
+          },
+          el(
+            "div",
+            {},
+            el("strong", { style: { color: "var(--gold-bright)" }, text: "Neighborhood: " }),
+            `${coord} — ${cellName}${isCurrent ? " (Your Current Tile)" : ""}`
+          ),
+          el("div", {}, el("strong", { style: { color: "var(--gold-bright)" }, text: "Buys: " }), sellsStr),
+          buysStr ? el("div", {}, el("strong", { style: { color: "#0369a1" }, text: "Forum Sells: " }), buysStr) : null,
+          centerParts.length > 0
+            ? el(
               "div",
               {},
-              el("strong", { style: { color: "var(--gold-bright)" }, text: "Neighborhood: " }),
-              `${coord} — ${cellName}${isCurrent ? " (Your Current Tile)" : ""}`
-            ),
-            el("div", {}, el("strong", { style: { color: "var(--gold-bright)" }, text: "Buys: " }), sellsStr),
-            buysStr ? el("div", {}, el("strong", { style: { color: "#0369a1" }, text: "Forum Sells: " }), buysStr) : null,
-            centerParts.length > 0
-              ? el(
-                  "div",
-                  {},
-                  el("strong", { style: { color: "var(--gold-bright)" }, text: "Properties: " }),
-                  centerParts.join(" • ")
-                )
-              : null
-          )
+              el("strong", { style: { color: "var(--gold-bright)" }, text: "Properties: " }),
+              centerParts.join(" • ")
+            )
+            : null
+        )
         : null,
       el(
         "div",
@@ -12141,22 +12108,22 @@ function openConfirmScoutNeighborhoodModal(gs, viewer, coord, cell, moveOpts = n
   const cellName = cell ? cell.name : coord;
   const unrevealedCount = cell
     ? Number(
-        cell.stackCount !== undefined
-          ? cell.stackCount
-          : cell.unrevealedCount !== undefined
+      cell.stackCount !== undefined
+        ? cell.stackCount
+        : cell.unrevealedCount !== undefined
           ? cell.unrevealedCount
           : 12
-      )
+    )
     : 0;
   const isEntryPhase = gs.phase === "delivery_entry";
   const isDeliveryPhase = gs.phase === "delivery";
   const isMyTurn = Boolean(
     gs &&
-      viewer &&
-      gs.activePlayerIndex === viewer.index &&
-      (isEntryPhase || isDeliveryPhase) &&
-      !viewer.exitedRome &&
-      !viewer.nightEnded
+    viewer &&
+    gs.activePlayerIndex === viewer.index &&
+    (isEntryPhase || isDeliveryPhase) &&
+    !viewer.exitedRome &&
+    !viewer.nightEnded
   );
   const isGateCell = Boolean(cell && cell.isGate);
   const isGateEntrance = Boolean(isEntryPhase && isGateCell && isMyTurn);
@@ -12166,10 +12133,10 @@ function openConfirmScoutNeighborhoodModal(gs, viewer, coord, cell, moveOpts = n
   const adjInfo = (moveOpts && moveOpts.adjInfo) || null;
   const canMoveStep = Boolean(
     !isEntryPhase &&
-      isDeliveryPhase &&
-      isMyTurn &&
-      moveDir &&
-      Number(viewer.movesRemaining || 0) > 0
+    isDeliveryPhase &&
+    isMyTurn &&
+    moveDir &&
+    Number(viewer.movesRemaining || 0) > 0
   );
   const canMoveHere = Boolean(canMoveStep || isGateEntrance);
   const canEndTurnHere = Boolean(!isEntryPhase && isDeliveryPhase && isMyTurn);
@@ -12266,8 +12233,8 @@ function openConfirmScoutNeighborhoodModal(gs, viewer, coord, cell, moveOpts = n
   const moveBtnLabel = isEntryPhase
     ? `🚪 Move to Gate ${coord}`
     : moveDir
-    ? `🛒 Move to ${coord} (${moveDir})`
-    : `🛒 Move to ${coord}`;
+      ? `🛒 Move to ${coord} (${moveDir})`
+      : `🛒 Move to ${coord}`;
 
   showModal(
     modalTitle,
@@ -12280,18 +12247,18 @@ function openConfirmScoutNeighborhoodModal(gs, viewer, coord, cell, moveOpts = n
       }),
       crossingNote
         ? el("p", {
-            style: {
-              fontSize: "0.82rem",
-              fontWeight: "700",
-              color: "#6e2119",
-              background: "#f8f1e1",
-              border: "1px solid #c7af88",
-              borderRadius: "5px",
-              padding: "0.4rem 0.65rem",
-              marginTop: "0.45rem",
-            },
-            text: replaceDenariiTokens(crossingNote),
-          })
+          style: {
+            fontSize: "0.82rem",
+            fontWeight: "700",
+            color: "#6e2119",
+            background: "#f8f1e1",
+            border: "1px solid #c7af88",
+            borderRadius: "5px",
+            padding: "0.4rem 0.65rem",
+            marginTop: "0.45rem",
+          },
+          text: replaceDenariiTokens(crossingNote),
+        })
         : null,
       el(
         "div",
@@ -12387,27 +12354,27 @@ function openConfirmScoutNeighborhoodModal(gs, viewer, coord, cell, moveOpts = n
           },
           unusedIndicatorItems.length > 0
             ? el(
-                "div",
-                {
-                  className: "unused-turn-actions-indicator",
-                  style: {
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "0.45rem",
-                    padding: "0.2rem 0.5rem",
-                    borderRadius: "999px",
-                    background: "#fbf3df",
-                    border: "1px solid #b59257",
-                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.65)",
-                  },
-                  title: "Unused Move (Cart in circle) and/or Transaction (Denarius in circle) actions remaining this turn",
+              "div",
+              {
+                className: "unused-turn-actions-indicator",
+                style: {
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.45rem",
+                  padding: "0.2rem 0.5rem",
+                  borderRadius: "999px",
+                  background: "#fbf3df",
+                  border: "1px solid #b59257",
+                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.65)",
                 },
-                el("span", {
-                  style: { fontSize: "0.68rem", fontWeight: "800", textTransform: "uppercase", letterSpacing: "0.04em", color: "#6e2119" },
-                  text: "Unused:",
-                }),
-                ...unusedIndicatorItems
-              )
+                title: "Unused Move (Cart in circle) and/or Transaction (Denarius in circle) actions remaining this turn",
+              },
+              el("span", {
+                style: { fontSize: "0.68rem", fontWeight: "800", textTransform: "uppercase", letterSpacing: "0.04em", color: "#6e2119" },
+                text: "Unused:",
+              }),
+              ...unusedIndicatorItems
+            )
             : null,
           el("button", {
             id: "modal-end-turn-btn",
@@ -12590,24 +12557,24 @@ function openNpcOfferModal(gs, viewer) {
       ),
       candidateCards.length === 0
         ? el("p", {
-            style: { color: "var(--text-muted)" },
-            text: `No matching ${offer.category} cards are currently available.`,
-          })
+          style: { color: "var(--text-muted)" },
+          text: `No matching ${offer.category} cards are currently available.`,
+        })
         : el(
-            "div",
-            {
-              style: {
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "0.75rem",
-                maxHeight: "56vh",
-                overflowY: "auto",
-                padding: "0.25rem",
-                justifyContent: "center",
-              },
+          "div",
+          {
+            style: {
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "0.75rem",
+              maxHeight: "56vh",
+              overflowY: "auto",
+              padding: "0.25rem",
+              justifyContent: "center",
             },
-            ...candidateCards
-          ),
+          },
+          ...candidateCards
+        ),
       el(
         "div",
         {
@@ -12674,8 +12641,8 @@ function openMarketRewardModal(gs, viewer) {
     const btnText = fitsInCart
       ? `🎁 Claim ${c.name || catLabel}`
       : canSwap
-      ? `🎁 Claim ${c.name || catLabel} (Swap)`
-      : `Cart Full (${reqBlocks}■)`;
+        ? `🎁 Claim ${c.name || catLabel} (Swap)`
+        : `Cart Full (${reqBlocks}■)`;
 
     return el(
       "div",
@@ -12750,9 +12717,8 @@ function openMarketRewardModal(gs, viewer) {
                 bonusBlocks,
                 bonusGuards,
                 title: `🎁 Cart Space Full — Make Room for ${c.name || catLabel}`,
-                subtitle: `Claiming "${c.name || catLabel}" (${
-                  isGuard ? `${reqGuards}▲` : `${reqBlocks}■`
-                }) from the Ostia Market Board is free, but your Cart is full. Select item(s) to discard so it fits, or go back to choose another card.`,
+                subtitle: `Claiming "${c.name || catLabel}" (${isGuard ? `${reqGuards}▲` : `${reqBlocks}■`
+                  }) from the Ostia Market Board is free, but your Cart is full. Select item(s) to discard so it fits, or go back to choose another card.`,
                 confirmLabelPrefix: `Claim ${c.name || catLabel}`,
                 cancelLabel: "← Back to Market Choices",
                 onConfirm: (discardCartIds, fireGuardIds) => {
@@ -12797,31 +12763,30 @@ function openMarketRewardModal(gs, viewer) {
         }),
         el("div", {
           style: { fontSize: "0.8rem", color: "var(--text-main)" },
-          text: `Cart Space: ${usedBlocks}/${maxBlocks}■ Goods  •  Guards: ${usedGuards}/${maxGuards}▲${
-            queue.length > 1 ? `  •  (${queue.length} Market rewards queued)` : ""
-          }`,
+          text: `Cart Space: ${usedBlocks}/${maxBlocks}■ Goods  •  Guards: ${usedGuards}/${maxGuards}▲${queue.length > 1 ? `  •  (${queue.length} Market rewards queued)` : ""
+            }`,
         })
       ),
       candidateCards.length === 0
         ? el("p", {
-            style: { color: "var(--text-muted)" },
-            text: `No matching ${catLabel} cards are currently on the Ostia Market Board.`,
-          })
+          style: { color: "var(--text-muted)" },
+          text: `No matching ${catLabel} cards are currently on the Ostia Market Board.`,
+        })
         : el(
-            "div",
-            {
-              style: {
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "0.75rem",
-                maxHeight: "56vh",
-                overflowY: "auto",
-                padding: "0.25rem",
-                justifyContent: "center",
-              },
+          "div",
+          {
+            style: {
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "0.75rem",
+              maxHeight: "56vh",
+              overflowY: "auto",
+              padding: "0.25rem",
+              justifyContent: "center",
             },
-            ...candidateCards
-          ),
+          },
+          ...candidateCards
+        ),
       el(
         "div",
         {
@@ -13011,14 +12976,14 @@ function openScoutResultModal(si) {
         }),
         canEndTurnFromScout
           ? el("button", {
-              type: "button",
-              className: "btn btn-primary",
-              text: "⏭️ End Turn",
-              onClick: () => {
-                closeModal();
-                sendGameAction({ type: "delivery_end_turn" });
-              },
-            })
+            type: "button",
+            className: "btn btn-primary",
+            text: "⏭️ End Turn",
+            onClick: () => {
+              closeModal();
+              sendGameAction({ type: "delivery_end_turn" });
+            },
+          })
           : null
       )
     )
@@ -13046,13 +13011,13 @@ function openLoadCargoPromptModal(m, viewer) {
       ),
       !hasSpace
         ? el("p", {
-            style: { color: "#92400e", fontSize: "0.84rem", fontWeight: "700" },
-            text: `Your Cart currently has ${viewer.usedBlocks}/${viewer.maxBlocks}■ used and needs ${reqBlocks}■ to load this cargo. You may discard Goods on your Cart right now to make room, or leave the cargo on the Mission card (and sell Goods first if you wish).`,
-          })
+          style: { color: "#92400e", fontSize: "0.84rem", fontWeight: "700" },
+          text: `Your Cart currently has ${viewer.usedBlocks}/${viewer.maxBlocks}■ used and needs ${reqBlocks}■ to load this cargo. You may discard Goods on your Cart right now to make room, or leave the cargo on the Mission card (and sell Goods first if you wish).`,
+        })
         : el("p", {
-            style: { color: "var(--text-muted)", fontSize: "0.8rem" },
-            text: "If you choose not to load the cargo right now, you can still click the \"📦 Load Cargo\" button directly on this Mission card at any time while your cart remains in this neighborhood.",
-          }),
+          style: { color: "var(--text-muted)", fontSize: "0.8rem" },
+          text: "If you choose not to load the cargo right now, you can still click the \"📦 Load Cargo\" button directly on this Mission card at any time while your cart remains in this neighborhood.",
+        }),
       el(
         "div",
         { style: { display: "flex", gap: "0.6rem", justifyContent: "flex-end", marginTop: "1rem", flexWrap: "wrap" } },
@@ -13064,13 +13029,13 @@ function openLoadCargoPromptModal(m, viewer) {
         }),
         canSwap
           ? el("button", {
-              type: "button",
-              className: "btn btn-primary",
-              text: hasSpace ? `📦 Yes, Load Cargo (${reqBlocks}■)` : `📦 Discard Goods & Load Cargo (${reqBlocks}■)`,
-              onClick: () => {
-                triggerMissionCargoLoadWithOverflow(m, viewer);
-              },
-            })
+            type: "button",
+            className: "btn btn-primary",
+            text: hasSpace ? `📦 Yes, Load Cargo (${reqBlocks}■)` : `📦 Discard Goods & Load Cargo (${reqBlocks}■)`,
+            onClick: () => {
+              triggerMissionCargoLoadWithOverflow(m, viewer);
+            },
+          })
           : null
       )
     )
@@ -13153,17 +13118,17 @@ function openCancelMissionConfirmModal(m, soothsayerTotalCount = 0) {
       el("p", { style: { fontSize: "0.9rem", color: "var(--text-main)", marginTop: "0" }, text: ruleExplanation }),
       cargoWarning
         ? el("p", {
-            style: {
-              fontSize: "0.84rem",
-              color: "#7f1d1d",
-              fontWeight: "700",
-              background: "#fef2f2",
-              border: "1.5px solid #dc2626",
-              padding: "0.5rem 0.65rem",
-              borderRadius: "6px",
-            },
-            text: cargoWarning,
-          })
+          style: {
+            fontSize: "0.84rem",
+            color: "#7f1d1d",
+            fontWeight: "700",
+            background: "#fef2f2",
+            border: "1.5px solid #dc2626",
+            padding: "0.5rem 0.65rem",
+            borderRadius: "6px",
+          },
+          text: cargoWarning,
+        })
         : null,
       el(
         "div",
@@ -13206,94 +13171,94 @@ function openProcurerGoodModal(gs, viewer, card) {
       availableGoods.length === 0
         ? el("div", { style: { color: "var(--text-muted)", fontSize: "0.85rem" }, text: "No Goods remain in the Goods deck." })
         : el(
-            "div",
-            {
-              style: {
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-                gap: "0.55rem",
-                maxHeight: "380px",
-                overflowY: "auto",
-                padding: "0.2rem",
-              },
+          "div",
+          {
+            style: {
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+              gap: "0.55rem",
+              maxHeight: "380px",
+              overflowY: "auto",
+              padding: "0.2rem",
             },
-            ...availableGoods.map((g) => {
-              const buyPrices = Array.isArray(g.buy) ? g.buy : [];
-              const commonPrice = buyPrices.length >= 4 ? Number(buyPrices[3]) : Number(buyPrices[buyPrices.length - 1] || 20);
-              const blocks = Math.max(1, Number(g.blocks) || 1);
-              const hasCash = (Number(viewer.cash) || 0) >= commonPrice;
-              const fitsDirectly = freeBlocks >= blocks;
-              const canSwap = fitsDirectly || (Array.isArray(viewer.cart) && viewer.cart.length > 0);
-              const canSelect = hasCash && canSwap;
-              return el(
-                "div",
-                {
-                  style: {
-                    padding: "0.55rem 0.7rem",
-                    borderRadius: "6px",
-                    background: "#fbf7ee",
-                    border: "1.5px solid #a88d6b",
-                    boxShadow: "var(--bevel-sunken)",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    gap: "0.4rem",
-                  },
+          },
+          ...availableGoods.map((g) => {
+            const buyPrices = Array.isArray(g.buy) ? g.buy : [];
+            const commonPrice = buyPrices.length >= 4 ? Number(buyPrices[3]) : Number(buyPrices[buyPrices.length - 1] || 20);
+            const blocks = Math.max(1, Number(g.blocks) || 1);
+            const hasCash = (Number(viewer.cash) || 0) >= commonPrice;
+            const fitsDirectly = freeBlocks >= blocks;
+            const canSwap = fitsDirectly || (Array.isArray(viewer.cart) && viewer.cart.length > 0);
+            const canSelect = hasCash && canSwap;
+            return el(
+              "div",
+              {
+                style: {
+                  padding: "0.55rem 0.7rem",
+                  borderRadius: "6px",
+                  background: "#fbf7ee",
+                  border: "1.5px solid #a88d6b",
+                  boxShadow: "var(--bevel-sunken)",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  gap: "0.4rem",
                 },
-                el(
-                  "div",
-                  {},
-                  el("div", { style: { fontWeight: "800", color: "var(--gold-bright)", fontSize: "0.86rem" }, text: `${g.name} (${blocks}■)` }),
-                  el("div", { style: { fontSize: "0.74rem", color: "var(--text-muted)" }, text: `${g.track} • Common (>) Price: ${commonPrice}(d)` })
-                ),
-                el("button", {
-                  type: "button",
-                  className: "btn btn-sm btn-primary",
-                  disabled: !canSelect,
-                  text: !hasCash
-                    ? `Needs ${commonPrice}(d)`
-                    : fitsDirectly
+              },
+              el(
+                "div",
+                {},
+                el("div", { style: { fontWeight: "800", color: "var(--gold-bright)", fontSize: "0.86rem" }, text: `${g.name} (${blocks}■)` }),
+                el("div", { style: { fontSize: "0.74rem", color: "var(--text-muted)" }, text: `${g.track} • Common (>) Price: ${commonPrice}(d)` })
+              ),
+              el("button", {
+                type: "button",
+                className: "btn btn-sm btn-primary",
+                disabled: !canSelect,
+                text: !hasCash
+                  ? `Needs ${commonPrice}(d)`
+                  : fitsDirectly
                     ? `🛒 Buy ${g.name} for ${commonPrice}(d)`
                     : `🛒 Buy for ${commonPrice}(d) (Swap)`,
-                  onClick: () => {
-                    if (fitsDirectly) {
-                      closeModal();
-                      sendGameAction({
-                        type: "play_influence",
-                        cardId: card.id,
-                        goodCardId: g.id,
-                        targetGood: g.name,
-                      });
-                    } else {
-                      openCartReplacementModal(viewer, {
-                        itemType: "good",
-                        incomingCard: g,
-                        reqBlocks: blocks,
-                        reqGuards: 0,
-                        bonusBlocks: 0,
-                        bonusGuards: 0,
-                        title: `🛒 Cart Full — Discard Goods to Procure ${g.name}`,
-                        subtitle: `Purchasing "${g.name}" (${blocks}■) via Procurer costs ${commonPrice}(d). Select Goods on your Cart to discard so it fits, or cancel without playing Procurer.`,
-                        confirmLabelPrefix: `Buy ${g.name} for ${commonPrice}(d)`,
-                        cancelLabel: "← Back to Goods List",
-                        onConfirm: (discardCartIds, fireGuardIds) => {
-                          sendGameAction({
-                            type: "play_influence",
-                            cardId: card.id,
-                            goodCardId: g.id,
-                            targetGood: g.name,
-                            discardCartIds,
-                            fireGuardIds,
-                          });
-                        },
-                        onCancel: () => openProcurerGoodModal(gs, viewer, card),
-                      });
-                    }
-                  },
-                })
-              );
-            })
-          ),
+                onClick: () => {
+                  if (fitsDirectly) {
+                    closeModal();
+                    sendGameAction({
+                      type: "play_influence",
+                      cardId: card.id,
+                      goodCardId: g.id,
+                      targetGood: g.name,
+                    });
+                  } else {
+                    openCartReplacementModal(viewer, {
+                      itemType: "good",
+                      incomingCard: g,
+                      reqBlocks: blocks,
+                      reqGuards: 0,
+                      bonusBlocks: 0,
+                      bonusGuards: 0,
+                      title: `🛒 Cart Full — Discard Goods to Procure ${g.name}`,
+                      subtitle: `Purchasing "${g.name}" (${blocks}■) via Procurer costs ${commonPrice}(d). Select Goods on your Cart to discard so it fits, or cancel without playing Procurer.`,
+                      confirmLabelPrefix: `Buy ${g.name} for ${commonPrice}(d)`,
+                      cancelLabel: "← Back to Goods List",
+                      onConfirm: (discardCartIds, fireGuardIds) => {
+                        sendGameAction({
+                          type: "play_influence",
+                          cardId: card.id,
+                          goodCardId: g.id,
+                          targetGood: g.name,
+                          discardCartIds,
+                          fireGuardIds,
+                        });
+                      },
+                      onCancel: () => openProcurerGoodModal(gs, viewer, card),
+                    });
+                  }
+                },
+              })
+            );
+          })
+        ),
       el(
         "div",
         { style: { display: "flex", justifyContent: "flex-end" } },
@@ -13412,9 +13377,9 @@ function openCartReplacementModal(viewer, opts) {
         }),
         opts.subtitle
           ? el("div", {
-              style: { fontSize: "0.82rem", color: "var(--text-main)", marginTop: "0.45rem" },
-              text: opts.subtitle,
-            })
+            style: { fontSize: "0.82rem", color: "var(--text-main)", marginTop: "0.45rem" },
+            text: opts.subtitle,
+          })
           : null
       ),
       el(
@@ -13422,17 +13387,15 @@ function openCartReplacementModal(viewer, opts) {
         { className: `cart-swap-status-pill ${proj.isValid ? "is-ready" : "is-deficit"}` },
         isGuardIncoming || selectedGuardIds.size > 0
           ? el("div", {
-              text: `Guards: ${proj.projUsedGuards}/${proj.projMaxGuards}▲${
-                proj.guardsDeficit > 0 ? ` (Fire ${proj.guardsDeficit}▲ more)` : " ✓"
+            text: `Guards: ${proj.projUsedGuards}/${proj.projMaxGuards}▲${proj.guardsDeficit > 0 ? ` (Fire ${proj.guardsDeficit}▲ more)` : " ✓"
               }`,
-            })
+          })
           : null,
         !isGuardIncoming || proj.blocksDeficit > 0 || selectedCartIds.size > 0
           ? el("div", {
-              text: `Goods: ${proj.projUsedBlocks}/${proj.projMaxBlocks}■${
-                proj.blocksDeficit > 0 ? ` (Discard ${proj.blocksDeficit}■ more)` : " ✓"
+            text: `Goods: ${proj.projUsedBlocks}/${proj.projMaxBlocks}■${proj.blocksDeficit > 0 ? ` (Discard ${proj.blocksDeficit}■ more)` : " ✓"
               }`,
-            })
+          })
           : null
       )
     );
@@ -13459,8 +13422,8 @@ function openCartReplacementModal(viewer, opts) {
             Number(g.bonusGuards) > 0
               ? `⚠️ Grants +${g.bonusGuards}▲ Guard Slot — firing removes that extra slot!`
               : Number(g.bonusBlocks) > 0
-              ? `⚠️ Grants +${g.bonusBlocks}■ Cart Space — firing reduces max Goods capacity!`
-              : null;
+                ? `⚠️ Grants +${g.bonusBlocks}■ Cart Space — firing reduces max Goods capacity!`
+                : null;
 
           gGrid.appendChild(
             el(
@@ -13487,9 +13450,8 @@ function openCartReplacementModal(viewer, opts) {
               ),
               el("div", {
                 className: "cart-swap-card-meta",
-                text: `${g.combatText || "Guard"}${
-                  String(g.id || "").startsWith("thug_") ? " • Discarded on fire" : " • Returns to bottom of Market deck"
-                }`,
+                text: `${g.combatText || "Guard"}${String(g.id || "").startsWith("thug_") ? " • Discarded on fire" : " • Returns to bottom of Market deck"
+                  }`,
               }),
               extraNote
                 ? el("div", { className: "cart-swap-warning", text: extraNote })
@@ -13526,8 +13488,8 @@ function openCartReplacementModal(viewer, opts) {
             Array.isArray(item.sell) && item.sell.length > 0
               ? `Sell Table: ${item.sell.join("/")}`
               : item.isMissionCargo
-              ? "Mission Cargo (Unsellable)"
-              : item.track || "Good";
+                ? "Mission Cargo (Unsellable)"
+                : item.track || "Good";
 
           cGrid.appendChild(
             el(
@@ -13576,8 +13538,8 @@ function openCartReplacementModal(viewer, opts) {
     const confirmText = proj.isValid
       ? `✓ ${summaryParts.length > 0 ? `${summaryParts.join(" & ")} → ` : ""}${opts.confirmLabelPrefix || "Confirm"}`
       : proj.guardsDeficit > 0
-      ? `Select ${proj.guardsDeficit}▲ Guard(s) to Fire`
-      : `Select ${proj.blocksDeficit}■ More Goods to Discard`;
+        ? `Select ${proj.guardsDeficit}▲ Guard(s) to Fire`
+        : `Select ${proj.blocksDeficit}■ More Goods to Discard`;
 
     rootContainer.appendChild(
       el(
@@ -13595,11 +13557,11 @@ function openCartReplacementModal(viewer, opts) {
         },
         opts.showInspectBoardBtn
           ? el("button", {
-              type: "button",
-              className: "btn",
-              text: "Inspect Board First",
-              onClick: closeModal,
-            })
+            type: "button",
+            className: "btn",
+            text: "Inspect Board First",
+            onClick: closeModal,
+          })
           : null,
         el("button", {
           type: "button",
@@ -13906,46 +13868,46 @@ function renderDeckCardBackPickerGrid(gs, deckSpecs, onSelectDeck, tapPillLabel 
       const countText = typeof rem === "number" ? `${rem} card${rem === 1 ? "" : "s"}` : "Deck";
       const cardVisual = spec.img
         ? el(
+          "div",
+          { className: "scout-deck-card-wrap" },
+          el("img", {
+            className: "scout-deck-card-img",
+            src: spec.img,
+            alt: `${spec.label} Deck Card Back`,
+          })
+        )
+        : el(
+          "div",
+          { className: "scout-deck-card-wrap" },
+          el(
             "div",
-            { className: "scout-deck-card-wrap" },
-            el("img", {
+            {
               className: "scout-deck-card-img",
-              src: spec.img,
-              alt: `${spec.label} Deck Card Back`,
+              style: {
+                width: "126px",
+                height: "176px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.35rem",
+                padding: "0.55rem",
+                textAlign: "center",
+                background:
+                  spec.key === "missiones"
+                    ? "radial-gradient(circle at 50% 35%, #5b3a1d, #241509)"
+                    : "radial-gradient(circle at 50% 35%, #4c1d4b, #1d0c24)",
+                border: "3px double #d4af37",
+                color: "#fef08a",
+              },
+            },
+            el("div", { style: { fontSize: "1.6rem" }, text: spec.icon || "📜" }),
+            el("div", {
+              style: { fontFamily: "Cinzel, Georgia, serif", fontWeight: "800", fontSize: "0.8rem", letterSpacing: "0.06em" },
+              text: spec.label.toUpperCase(),
             })
           )
-        : el(
-            "div",
-            { className: "scout-deck-card-wrap" },
-            el(
-              "div",
-              {
-                className: "scout-deck-card-img",
-                style: {
-                  width: "126px",
-                  height: "176px",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "0.35rem",
-                  padding: "0.55rem",
-                  textAlign: "center",
-                  background:
-                    spec.key === "missiones"
-                      ? "radial-gradient(circle at 50% 35%, #5b3a1d, #241509)"
-                      : "radial-gradient(circle at 50% 35%, #4c1d4b, #1d0c24)",
-                  border: "3px double #d4af37",
-                  color: "#fef08a",
-                },
-              },
-              el("div", { style: { fontSize: "1.6rem" }, text: spec.icon || "📜" }),
-              el("div", {
-                style: { fontFamily: "Cinzel, Georgia, serif", fontWeight: "800", fontSize: "0.8rem", letterSpacing: "0.06em" },
-                text: spec.label.toUpperCase(),
-              })
-            )
-          );
+        );
 
       return el(
         "button",
@@ -14194,24 +14156,24 @@ function openForumBuyModal(gs, viewer, bSpec) {
       trackCards.length === 0
         ? el("p", { text: `No ${bSpec.category} cards are currently on the Ostia Market track.` })
         : el(
-            "div",
-            { className: "item-list" },
-            ...trackCards.map((c, idx) =>
-              el(
-                "div",
-                { className: `item-row good-card-row ${resolveGoodTrackClass(bSpec.category)}` },
-                el("span", { text: `Col ${idx + 1}: ${c.name} (Base Buy: ${c.currentBuyPrice}d)` }),
-                el("button", {
-                  className: "btn btn-sm btn-primary",
-                  text: "Purchase at Forum",
-                  onClick: () => {
-                    closeModal();
-                    sendGameAction({ type: "delivery_forum_buy", colIndex: idx });
-                  },
-                })
-              )
+          "div",
+          { className: "item-list" },
+          ...trackCards.map((c, idx) =>
+            el(
+              "div",
+              { className: `item-row good-card-row ${resolveGoodTrackClass(bSpec.category)}` },
+              el("span", { text: `Col ${idx + 1}: ${c.name} (Base Buy: ${c.currentBuyPrice}d)` }),
+              el("button", {
+                className: "btn btn-sm btn-primary",
+                text: "Purchase at Forum",
+                onClick: () => {
+                  closeModal();
+                  sendGameAction({ type: "delivery_forum_buy", colIndex: idx });
+                },
+              })
             )
           )
+        )
     )
   );
 }
@@ -14261,20 +14223,20 @@ function openGambleModal(viewer) {
       }),
       isMatchFixingActive
         ? el("div", {
-            style: {
-              padding: "0.45rem 0.65rem",
-              background: "#ecfdf5",
-              border: "1.5px solid #16a34a",
-              borderRadius: "6px",
-              color: "#14532d",
-              fontSize: "0.82rem",
-              fontWeight: "700",
-              marginBottom: "0.65rem",
-            },
-            text: "✓ 'Match Fixing' Active: +1(R) Bonus Die will be added to your Gambling roll!",
-          })
+          style: {
+            padding: "0.45rem 0.65rem",
+            background: "#ecfdf5",
+            border: "1.5px solid #16a34a",
+            borderRadius: "6px",
+            color: "#14532d",
+            fontSize: "0.82rem",
+            fontWeight: "700",
+            marginBottom: "0.65rem",
+          },
+          text: "✓ 'Match Fixing' Active: +1(R) Bonus Die will be added to your Gambling roll!",
+        })
         : matchFixingCard
-        ? el(
+          ? el(
             "div",
             {
               style: {
@@ -14307,7 +14269,7 @@ function openGambleModal(viewer) {
               },
             })
           )
-        : null,
+          : null,
       el(
         "div",
         { className: "form-group" },
@@ -14348,9 +14310,9 @@ function openScoutModal(gs, _viewer) {
       {},
       !isEntryPhase
         ? el("p", {
-            style: { fontSize: "0.82rem", color: "var(--text-muted)", marginTop: "0", marginBottom: "0.75rem" },
-            text: "Committing to your Scout action immediately advances the turn so the next merchant in sequence can begin while you examine the scouted card or tile.",
-          })
+          style: { fontSize: "0.82rem", color: "var(--text-muted)", marginTop: "0", marginBottom: "0.75rem" },
+          text: "Committing to your Scout action immediately advances the turn so the next merchant in sequence can begin while you examine the scouted card or tile.",
+        })
         : null,
       el(
         "div",
@@ -14842,10 +14804,10 @@ function renderProfileView() {
           ),
           user.isAdmin
             ? el("span", {
-                className: "badge",
-                style: { borderColor: "var(--gold-bright)", color: "var(--gold-bright)" },
-                text: "🦅 Collegium Admin",
-              })
+              className: "badge",
+              style: { borderColor: "var(--gold-bright)", color: "var(--gold-bright)" },
+              text: "🦅 Collegium Admin",
+            })
             : null
         )
       )
@@ -15068,7 +15030,7 @@ const RULEBOOK_SECTIONS = [
     ],
     iconGrid: [
       { img: "./assets/icons/ruby.png", title: "Ruby — MAGA", desc: "Huge among the Cops. With Back the Blue enacted, Cops gain +2 CP and each +Ruby gives your SUV +1 CP." },
-      { img: "./assets/icons/emerald.png", title: "Emerald — ISIS", desc: "Poor, violent, and rare. +1 Emerald waives the 4(d) Bridge & Freeway checkpoint bribe under Threat Level Red." },
+      { img: "./assets/icons/emerald.png", title: "Emerald — ISIS", desc: "Poor, violent, and rare. With Sanctuary City enacted, every player starts with a free Emerald." },
       { img: "./assets/icons/diamond.png", title: "Diamond — Tech Bros", desc: "Rich, vulnerable, and influential. With Lobbying Blitz enacted, +Diamonds trade 1-for-1 into +Rubies or +Sapphires." },
       { img: "./assets/icons/sapphire.png", title: "Sapphire — DSA", desc: "Strongest among the Celebrities. With Rent Control enacted, spend +Sapphires to raise a sale's scarcity by 1 step per gem." },
       { img: "./assets/icons/amethyst.png", title: "Amethyst — MS-13", desc: "Lives among the Criminals. Always attacks at -1 favor or lower, and always fights hard." },
@@ -15081,11 +15043,11 @@ const RULEBOOK_SECTIONS = [
     table: {
       headers: ["Faction & Gem", "Where They Show Up", "Alignments"],
       rows: [
-        ["MAGA (Ruby)", "Huge in Cops; a few Criminals (pot farmers, KKK); one Celebrity (Musk)", "Aligned with the Tech Bros. Primarily against MS-13 and hugely against the DSA. On-and-off with ISIS."],
+        ["MAGA (Ruby)", "Huge in Cops; few in Criminals and Celebrities", "Aligned with TECH. Primarily against MS-13 and hugely against the DSA. On-and-off with ISIS."],
         ["ISIS (Emerald)", "The rarest faction. Mostly Criminals, then Celebrities, then Cops", "Hates every faction except MS-13."],
-        ["Tech Bros (Diamond)", "Equally among Celebrities, Criminals, and Cops", "Somewhat aligned with the DSA and MAGA, somewhat averse to ISIS, indifferent to MS-13."],
-        ["DSA (Sapphire)", "Most among Celebrities; some Criminals; very few Cops (the Firefighters)", "Primarily averse to MAGA, sort of averse to the Tech Bros, aligned with ISIS and MS-13."],
-        ["MS-13 (Amethyst)", "Mostly Criminals; rarely Celebrities or Cops", "The most indifferent faction. Somewhat opposed to MAGA, a little averse to the Tech Bros, slightly aligned with the DSA and ISIS."],
+        ["TECH (Diamond)", "Equally among Celebrities, Criminals, and Cops", "Somewhat aligned with the DSA and MAGA, somewhat averse to ISIS, indifferent to MS-13."],
+        ["DSA (Sapphire)", "Most among Celebrities; some Criminals; very few Cops (the Firefighters)", "Primarily averse to MAGA, sort of averse to TECH, aligned with ISIS and MS-13."],
+        ["MS-13 (Amethyst)", "Mostly Criminals; rarely Celebrities or Cops", "The most indifferent faction. Somewhat opposed to MAGA, a little averse to TECH, slightly aligned with the DSA and ISIS."],
       ],
     },
     bullets: [],
@@ -15199,7 +15161,7 @@ const RULEBOOK_SECTIONS = [
     bullets: [
       "Step 1 — Optional Trash: Discard 1 Influence card to bury the top unexposed tile of any neighborhood or the top card of any deck to the bottom.",
       "Step 2 — Movement (1 Step (M)): Move along a passable outgoing edge to an adjacent neighborhood (revealing its top tile if face-down) or out an exterior perimeter edge to Exit Rome.",
-      "Step 3 — Edge Cost / Hazard: Pay any 2(d) road toll (plus +4(d) Bridge Toll if Threat Level Red is active and you hold < +1 Emerald) or resolve any Edge Encounter crossed.",
+      "Step 3 — Edge Cost / Hazard: Pay any 2(d) road toll or resolve any Edge Encounter crossed.",
       "Step 4 — Mission Cargo Pickup & Delivery: Upon arriving in a neighborhood—BEFORE any Center Tile Encounter triggers—you may load or deliver matching Mission Cargo!",
       "Step 5 — Center Tile Encounter: Resolve any Center Encounter on the tile (Patricii, Legiones, Nefarii, Angry Mob, Theater Troupe, or Soothsayer).",
       "Step 6 — One Transaction (1 Good/Hr (T), or Bulk Grain!): Sell AT MOST 1 Good card matching a buyer ('Buys:') on your current tile (or an active Sell Mission here) at its bold Green (SELL_SYM) price—EXCEPT for non-fenced GRAIN, where 1 hourly Transaction may sell ANY NUMBER (or all!) of your Grain cards together at the current Grain scarcity modifier! Alternatively, Purchase 1 Good at a Forum ('Sells:' at C3, D3, or D4) at its italic Red (BUY_SYM) price, OR Gamble once at a Stadium tile (up to 20(d) wager).",
@@ -15279,7 +15241,7 @@ const RULEBOOK_SECTIONS = [
       "Friendly vs. Hostile Encounters: Determined by your uncapped net Favor with the NPC's Faction. If you refuse a Demand to Fight and lose Combat, the NPC enforces their original Demand AND your turn ends immediately!",
       "Combat Power (CP) & Cargo Gear: Both sides roll Rome Dice (R) plus Guards, Weapons, mandatory Exotic Animals (including Ostrich or negative-die beasts!), and Influence modifiers (plus +1 CP per positive Ruby & +2 CP to Legiones if Back the Blue is active). Note that crated Loricae body armor carries 0 CP in street ambushes (too slow to don mid-attack, compensated by lucrative trade margins). If Player CP ≥ Opponent CP against an NPC, you win!",
       "Armor, Guards, & Driver Fate (Damage Deficit Note): If Opponent CP > Player CP, suffer Raw Wounds = (Opponent CP − Player CP). Note that wounds from combat are always determined by the signed damage deficit between the two sides—even when one or both CP totals are negative (for example, if your overall CP is -2 and your opponent's CP is -1, you suffer 1 Wound). Shields/Helmets reduce Wounds first; each remaining Wound kills 1 Guard. If an unblocked Wound reaches your Driver, roll 1(R) on the Driver Fate Chart: 0 = Dead (lose all Goods & your night ends); I = Left for dead (lose all Goods); II = Beaten & mugged (lose all Denarii); III = Begged for mercy (lose all Influence cards).",
-      "1(R) Street Charts: Angry Mob (0: lose all Wine; I: lose all Grain; II: lose most expensive Good; III: safe), Theater Troupe (0: lose all positive Friendly Favor; I: lose all negative Hostile Favor; II: lose rest of turn & next turn; III: draw 1(R) Influence), Soothsayer (take mandatory Mission + seal 1(R) Influence cards).",
+      "1(R) Street Charts: Angry Mob (0: lose all Wine; I: lose all Grain; II: lose most expensive Good; III: safe), Theater Troupe (0: undo all Positive-outcome gem changes; I: undo all Hostile-outcome gem changes; II: lose rest of turn & next turn; III: draw 1(R) Influence), Soothsayer (take mandatory Mission + seal 1(R) Influence cards).",
       "Stadium Gambling: On a tile with the Dice icon, wager 1(d) to 20(d) (capped at 20(d) per gamble action) and roll 1(R) to win Wager × Roll!",
     ],
   },
@@ -15319,15 +15281,15 @@ const RULEBOOK_SECTIONS = [
         ],
         [
           "Recall Election: End of game: Lose 10(d) per +Ruby; gain 5(d) per -Ruby.",
-          "Infidel Tax: End of game: +15(d) per +Emerald if MAGA ≤ 0, or -10(d) if ≥ +1; -5(d) per -Emerald.",
+          "Fatwa: End of game: +15(d) per +Emerald if MAGA ≤ 0, or -10(d) if ≥ +1; -5(d) per -Emerald.",
           "Conflict of Interest: End of game: Lose 15(d) per +Diamond and 15(d) per -Diamond.",
           "Mutual Aid: End of game: Gain 10(d) per completed Mission with +Sapphire or a DSA patron.",
           "Plata o Plomo: End of game: Gain 10(d) per +Amethyst and 10(d) per -Amethyst.",
-          "Yelp Reviews: End of game: Gain 10(d) per completed Mission; lose 10(d) per failed or unfinished Mission.",
+          "Full Time Employee: End of game: receive A × B Bitcoin (A = your gems of one faction, B = missions completed for that faction).",
         ],
         [
           "Back the Blue: Legiones gain +2 CP. Each +Ruby gives your Cart +1 CP.",
-          "Threat Level Red: Crossing any of the 5 Tiber Bridges costs a 4(d) toll, waived with +1 Emerald or Shortcut.",
+          "Sanctuary City: When enacted, every player gains a free Emerald (+1 ISIS).",
           "Lobbying Blitz: Exchange +Diamonds 1-for-1 into +Rubies or +Emeralds anytime.",
           "Clique Fence: Fenced cargo sells +1 Scarcity step higher and does not fail the Mission.",
           "Rent Control: Spend +Amethysts when selling Goods (including Bulk Grain) for +1 Scarcity step per gem.",
@@ -15519,18 +15481,18 @@ function buildRulebookSectionNodes(searchQuery) {
   const q = (searchQuery || "").trim().toLowerCase();
   const filtered = q
     ? RULEBOOK_SECTIONS.filter(
-        (sec) =>
-          sec.title.toLowerCase().includes(q) ||
-          (sec.paragraphs || []).some((p) => p.toLowerCase().includes(q)) ||
-          (sec.bullets || []).some((b) => b.toLowerCase().includes(q)) ||
-          (sec.iconGrid || []).some(
-            (ic) =>
-              (ic.title || "").toLowerCase().includes(q) ||
-              (ic.desc || "").toLowerCase().includes(q) ||
-              (ic.badgeText || "").toLowerCase().includes(q)
-          ) ||
-          (sec.table && sec.table.rows.some((r) => r.some((cell) => cell.toLowerCase().includes(q))))
-      )
+      (sec) =>
+        sec.title.toLowerCase().includes(q) ||
+        (sec.paragraphs || []).some((p) => p.toLowerCase().includes(q)) ||
+        (sec.bullets || []).some((b) => b.toLowerCase().includes(q)) ||
+        (sec.iconGrid || []).some(
+          (ic) =>
+            (ic.title || "").toLowerCase().includes(q) ||
+            (ic.desc || "").toLowerCase().includes(q) ||
+            (ic.badgeText || "").toLowerCase().includes(q)
+        ) ||
+        (sec.table && sec.table.rows.some((r) => r.some((cell) => cell.toLowerCase().includes(q))))
+    )
     : RULEBOOK_SECTIONS;
 
   if (filtered.length === 0) {
@@ -15551,51 +15513,51 @@ function buildRulebookSectionNodes(searchQuery) {
       ...(sec.paragraphs || []).map((p) => el("p", { className: "rulebook-paragraph", text: p })),
       sec.iconGrid
         ? el(
-            "div",
-            { className: "rulebook-icon-grid" },
-            ...sec.iconGrid.map((item) =>
+          "div",
+          { className: "rulebook-icon-grid" },
+          ...sec.iconGrid.map((item) =>
+            el(
+              "div",
+              { className: "rulebook-icon-card" },
+              renderRulebookIconVisualNode(item),
               el(
                 "div",
-                { className: "rulebook-icon-card" },
-                renderRulebookIconVisualNode(item),
-                el(
-                  "div",
-                  { className: "rulebook-icon-copy" },
-                  el("div", { className: "rulebook-icon-title", text: item.title }),
-                  el("div", { className: "rulebook-icon-desc", text: item.desc })
-                )
+                { className: "rulebook-icon-copy" },
+                el("div", { className: "rulebook-icon-title", text: item.title }),
+                el("div", { className: "rulebook-icon-desc", text: item.desc })
               )
             )
           )
+        )
         : null,
       sec.bullets
         ? el(
-            "ul",
-            { className: "rulebook-bullet-list" },
-            ...sec.bullets.map((b) => renderRulebookFormattedBulletNode(b))
-          )
+          "ul",
+          { className: "rulebook-bullet-list" },
+          ...sec.bullets.map((b) => renderRulebookFormattedBulletNode(b))
+        )
         : null,
       sec.table
         ? el(
-            "div",
-            { className: "rulebook-table-wrap" },
+          "div",
+          { className: "rulebook-table-wrap" },
+          el(
+            "table",
+            { className: "rulebook-table" },
             el(
-              "table",
-              { className: "rulebook-table" },
-              el(
-                "thead",
-                {},
-                el("tr", {}, ...sec.table.headers.map((h) => el("th", { text: h })))
-              ),
-              el(
-                "tbody",
-                {},
-                ...sec.table.rows.map((row) =>
-                  el("tr", {}, ...row.map((cellText) => el("td", { text: cellText })))
-                )
+              "thead",
+              {},
+              el("tr", {}, ...sec.table.headers.map((h) => el("th", { text: h })))
+            ),
+            el(
+              "tbody",
+              {},
+              ...sec.table.rows.map((row) =>
+                el("tr", {}, ...row.map((cellText) => el("td", { text: cellText })))
               )
             )
           )
+        )
         : null
     )
   );
@@ -15625,18 +15587,18 @@ function renderRulebookView() {
     el("h3", { className: "panel-title", text: "📜 Codex Regulae" }),
     !appState.user
       ? el(
-          "button",
-          {
-            type: "button",
-            className: "btn btn-primary",
-            style: { width: "100%", marginBottom: "0.75rem" },
-            onClick: () => {
-              appState.activeTab = "portal";
-              renderApp();
-            },
+        "button",
+        {
+          type: "button",
+          className: "btn btn-primary",
+          style: { width: "100%", marginBottom: "0.75rem" },
+          onClick: () => {
+            appState.activeTab = "portal";
+            renderApp();
           },
-          "← Back to Welcome & Sign In"
-        )
+        },
+        "← Back to Welcome & Sign In"
+      )
       : null,
     el("div", { className: "form-group", style: { marginBottom: "0.75rem" } }, searchInput),
     ...RULEBOOK_SECTIONS.map((sec) =>
@@ -15672,7 +15634,7 @@ function renderRulebookView() {
         el(
           "div",
           { className: "panel-title fresco-banner-header fresco-merchants" },
-          el("span", { text: "📜 Night Merchant: Free Parking — Rulebook" }),
+          el("span", { text: "📜 Night Merchant: InstantGram SF — Rulebook" }),
           el("span", { style: { fontSize: "0.8rem", color: "#fde6b0" }, text: "Complete HTML Edition" })
         ),
         sectionsContainer
@@ -16044,9 +16006,9 @@ function build3DDieCube(die, group, dieIdx, isRolling, tickCount) {
       onClick:
         !isRolling && clickMeta && clickMeta.clickable && typeof clickMeta.onClick === "function"
           ? (e) => {
-              e.stopPropagation();
-              clickMeta.onClick();
-            }
+            e.stopPropagation();
+            clickMeta.onClick();
+          }
           : null,
     },
     el(
@@ -16300,8 +16262,8 @@ function buildDiceOverlayInteractiveControls() {
           nm === "Mercenary Ambush"
             ? "+2(R)"
             : nm === "Gladiator's Intervention"
-            ? "+1(R)"
-            : "+1 CP";
+              ? "+1(R)"
+              : "+1 CP";
         cardButtons.push(
           el(
             "div",
@@ -16343,12 +16305,12 @@ function buildDiceOverlayInteractiveControls() {
         text: isOtherPlayerEncounter
           ? "✅ Pass Intervention / Confirm Combat Result"
           : isVictory
-          ? "✅ Confirm Combat Victory"
-          : isTie
-          ? "✅ Confirm Combat Tie (Survive, No Bonus)"
-          : survivesByArmorOrGuard
-          ? "🛡️ Confirm Survival (No Roll on Defeat Chart)"
-          : "✅ Confirm Combat Result & Roll Defeat Chart",
+            ? "✅ Confirm Combat Victory"
+            : isTie
+              ? "✅ Confirm Combat Tie (Survive, No Bonus)"
+              : survivesByArmorOrGuard
+                ? "🛡️ Confirm Survival (No Roll on Defeat Chart)"
+                : "✅ Confirm Combat Result & Roll Defeat Chart",
         onClick: async () => {
           if (appState.diceRollQueue.length === 0) {
             dismissDiceOverlay();
@@ -16401,32 +16363,32 @@ function buildDiceOverlayInteractiveControls() {
       buildArmedDieBannerNode(),
       postChartCards.length > 0
         ? el(
-            "div",
-            { style: { display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center" } },
-            ...postChartCards.map((rc) => {
-              if (rc.name === "Lucky Break") {
-                const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
-                return el("button", {
-                  className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
-                  text: isArmed ? "👆 Click Die Above for +1 (Lucky Break Armed)" : "🍀 Lucky Break (+1) — Click Die Above",
-                  onClick: () => armDieCardAction(rc, "plus_one"),
-                });
-              }
-              if (rc.name === "Twist Of Fate") {
-                const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
-                return el("button", {
-                  className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
-                  text: isArmed ? "👆 Click Die Above to Re-Roll (Twist Of Fate Armed)" : "🎲 Twist Of Fate — Click Die Above to Re-Roll",
-                  onClick: () => armDieCardAction(rc, "reroll"),
-                });
-              }
+          "div",
+          { style: { display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center" } },
+          ...postChartCards.map((rc) => {
+            if (rc.name === "Lucky Break") {
+              const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
               return el("button", {
-                className: "btn btn-sm btn-primary",
-                text: `✨ Play ${rc.name} (Treat as III)`,
-                onClick: () => sendGameAction({ type: "play_influence", cardId: rc.id }),
+                className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
+                text: isArmed ? "👆 Click Die Above for +1 (Lucky Break Armed)" : "🍀 Lucky Break (+1) — Click Die Above",
+                onClick: () => armDieCardAction(rc, "plus_one"),
               });
-            })
-          )
+            }
+            if (rc.name === "Twist Of Fate") {
+              const isArmed = Boolean(appState.armedDieAction && appState.armedDieAction.cardId === rc.id);
+              return el("button", {
+                className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
+                text: isArmed ? "👆 Click Die Above to Re-Roll (Twist Of Fate Armed)" : "🎲 Twist Of Fate — Click Die Above to Re-Roll",
+                onClick: () => armDieCardAction(rc, "reroll"),
+              });
+            }
+            return el("button", {
+              className: "btn btn-sm btn-primary",
+              text: `✨ Play ${rc.name} (Treat as III)`,
+              onClick: () => sendGameAction({ type: "play_influence", cardId: rc.id }),
+            });
+          })
+        )
         : null,
       el("button", {
         className: "btn btn-sm btn-primary",
@@ -16468,16 +16430,16 @@ function buildDiceOverlayInteractiveControls() {
       buildArmedDieBannerNode(),
       firstTwist
         ? el(
-            "div",
-            { style: { display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center" } },
-            el("button", {
-              className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
-              text: isArmed
-                ? "👆 Click Any Die Above to Re-Roll (Twist Of Fate Armed)"
-                : "🎲 Twist Of Fate — Click a Die Above to Re-Roll",
-              onClick: () => armDieCardAction(firstTwist, "reroll"),
-            })
-          )
+          "div",
+          { style: { display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center" } },
+          el("button", {
+            className: `btn btn-sm ${isArmed ? "btn-crimson" : "btn-primary"}`,
+            text: isArmed
+              ? "👆 Click Any Die Above to Re-Roll (Twist Of Fate Armed)"
+              : "🎲 Twist Of Fate — Click a Die Above to Re-Roll",
+            onClick: () => armDieCardAction(firstTwist, "reroll"),
+          })
+        )
         : null,
       el("button", {
         className: "btn btn-sm btn-primary",
@@ -16514,7 +16476,7 @@ function buildDiceOutcomeCard(ev, isRolling) {
     !isRolling && detailText
       ? el("div", { className: "dice-outcome-detail", text: detailText })
       : isRolling
-      ? el("div", {
+        ? el("div", {
           className: "dice-outcome-detail",
           style: { color: "#d4af37", fontStyle: "italic" },
           text:
@@ -16522,29 +16484,29 @@ function buildDiceOutcomeCard(ev, isRolling) {
               ? "All combat dice for both sides are tumbling simultaneously..."
               : "6-sided Roman numeral dice (0, I, II, III) in motion...",
         })
-      : null,
+        : null,
     interactiveControls,
     !isRolling
       ? el(
-          "div",
-          { className: "dice-outcome-actions" },
-          el("button", {
-            className: "dice-continue-btn",
-            text: queueRemaining > 0 ? `NEXT ROLL (${queueRemaining}) ▶` : "CLOSE DICE OVERLAY",
-            onClick: async () => {
-              const pend = appState.gameState?.pendingEncounter;
-              dismissDiceOverlay();
-              if (
-                queueRemaining === 0 &&
-                pend &&
-                pend.stage === "combat_post_roll" &&
-                pend.interveningPlayerIndex == null
-              ) {
-                await sendGameAction({ type: "resolve_encounter", decision: "finalize_combat" });
-              }
-            },
-          })
-        )
+        "div",
+        { className: "dice-outcome-actions" },
+        el("button", {
+          className: "dice-continue-btn",
+          text: queueRemaining > 0 ? `NEXT ROLL (${queueRemaining}) ▶` : "CLOSE DICE OVERLAY",
+          onClick: async () => {
+            const pend = appState.gameState?.pendingEncounter;
+            dismissDiceOverlay();
+            if (
+              queueRemaining === 0 &&
+              pend &&
+              pend.stage === "combat_post_roll" &&
+              pend.interveningPlayerIndex == null
+            ) {
+              await sendGameAction({ type: "resolve_encounter", decision: "finalize_combat" });
+            }
+          },
+        })
+      )
       : null
   );
 }
@@ -16672,7 +16634,7 @@ function playSfx(kind) {
       _nmAudioCtx = new AudioCtx();
     }
     if (_nmAudioCtx.state === "suspended") {
-      _nmAudioCtx.resume().catch(() => {});
+      _nmAudioCtx.resume().catch(() => { });
     }
     const now = _nmAudioCtx.currentTime;
     if (kind === "dice") {
@@ -16933,8 +16895,8 @@ function buildNpcSpeechBubbleVisualNodes(ev) {
       vis.chartType === "mob"
         ? "/assets/icons/angry_mob.png"
         : vis.chartType === "theater"
-        ? "/assets/icons/theater_masks.png"
-        : "/assets/icons/soothsayer_icon.png";
+          ? "/assets/icons/theater_masks.png"
+          : "/assets/icons/soothsayer_icon.png";
     thumbs.push(
       el(
         "div",
@@ -16966,8 +16928,8 @@ function buildNpcSpeechBubbleVisualNodes(ev) {
     vis.card && vis.card.name
       ? vis.card.name
       : vis.item && vis.item.name
-      ? vis.item.name
-      : replaceDenariiTokens(ev.summary || "");
+        ? vis.item.name
+        : replaceDenariiTokens(ev.summary || "");
 
   return el(
     "div",
@@ -17125,7 +17087,7 @@ function isViewerActionRequired(gs) {
 }
 
 function updateTabTurnTitle() {
-  const baseTitle = "Night Merchant: Free Parking";
+  const baseTitle = "Night Merchant: InstantGram SF";
   if (appState.activeTab !== "tabletop" || !appState.gameState) {
     document.title = baseTitle;
     appState._wasViewerTurn = false;

@@ -1,6 +1,6 @@
-# Night Merchant: Free Parking — Design Document
+# Night Merchant: InstantGram SF — Design Document
 
-Night Merchant: Free Parking is a reskin of **Night Merchant: All Roads Lead to Rome**. It keeps the
+Night Merchant: InstantGram SF is a reskin of **Night Merchant: All Roads Lead to Rome**. It keeps the
 Rome edition's rules and engine. This document lists what changes. Anything not listed here works
 the same as in the Rome edition.
 
@@ -8,7 +8,7 @@ the same as in the Rome edition.
 
 ## 1. Goods (Market layout, top to bottom)
 
-| Row | Free Parking | Rome track (internal id) | Contents | Notes |
+| Row | InstantGram SF | Rome track (internal id) | Contents | Notes |
 | :-- | :--- | :--- | :--- | :--- |
 | 1 | **Weed** (+ hallucinogens) | Grain | Dime bags, pre-rolls, shrooms, LSD, edibles | Easy to sell, low risk, low violence, low profit. Can be sold in bulk. |
 | 2 | **Party** | Marble | Molly, ketamine, GHB, 2C-B, tusi | Profitable, but a high price floor and limited demand. Safer. |
@@ -18,7 +18,7 @@ the same as in the Rome edition.
 | 6 | **Henchmen** | Guards | Big Mike, Lil' Tony, Rosa "La Flaca"… | Almost unchanged. |
 
 > Implementation note: the engine keeps the Rome track ids. A display layer (`sfReskinText` in
-> `app.js`) shows the Free Parking names everywhere in the UI.
+> `app.js`) shows the InstantGram SF names everywhere in the UI.
 
 ## 2. Art Direction
 
@@ -33,7 +33,7 @@ the same as in the Rome edition.
 
 ## 3. Factions (short names: MAGA, ISIS, DSA, TECH, MS13)
 
-| Rome faction (gem) | Free Parking | Celebrities / Cops / Criminals |
+| Rome faction (gem) | InstantGram SF | Celebrities / Cops / Criminals |
 | :--- | :--- | :--- |
 | Caracalla (Ruby) | **MAGA** | 3 / **14** / 2 |
 | Geta (Emerald) | **ISIS** (rarest) | 4 / 1 / 4 |
@@ -101,7 +101,7 @@ player. **Witness Protection** (was Regime Change) cancels it.
 
 ## 6. Encounter Decks
 
-| Rome | Free Parking |
+| Rome | InstantGram SF |
 | :--- | :--- |
 | Patricii | **Celebrities** |
 | Nefarii | **Criminals** |
@@ -155,15 +155,15 @@ See the in-game board. The Rome mechanics stay, retitled for the new factions:
 | Faction | Option 1 | Option 2 | Option 3 |
 | :--- | :--- | :--- | :--- |
 | MAGA | Mass Deportation | Recall Election | Back the Blue |
-| ISIS | Fatwa | Infidel Tax | Threat Level Red |
+| ISIS | Decapitation (Most ISIS favor loses ₿2.5) | Fatwa (was Infidel Tax) | Sanctuary City (everyone starts with a free Emerald) |
 | TECH | Series A | Conflict of Interest | Lobbying Blitz (Diamonds → Rubies or Sapphires) |
 | DSA | Billionaire Tax | Mutual Aid | Rent Control |
 | MS13 | Protection Racket | Plata o Plomo | Clique Fence |
-| Gigs | Five-Star Courier | Yelp Reviews | Surge Pricing |
+| Gigs | Five-Star Courier | Full Time Employee (receive A × B ₿: A = your gems of one faction, B = missions completed for it) | Surge Pricing |
 
 ## 8. Currency
 
-**1 Denarius = 0.1 Bitcoin (₿).** The ₿ display is not built yet.
+**1 Denarius = 0.1 Bitcoin (₿).** All amounts are shown in ₿. Physical edition tokens: about 100 × ₿0.1, about 100 × ₿1, and 10 × ₿10.
 
 ## 9. The Map (6×6, north at the top)
 
@@ -187,3 +187,58 @@ See the in-game board. The Rome mechanics stay, retitled for the new factions:
 - **West (Pacific):** essentially no exits; a rare, expensive Speedboat (8–10).
 - **North & East (Bay):** more and cheaper boats: Sailboat (1), Ferry (2), Cargo Ship (3).
 - **South (Peninsula):** the most exits by far, generally free.
+
+
+## 10. Days, Boards & Card Styles
+
+- **Days replace seasons:** Spring becomes **Thursday**, Summer **Friday**, Fall **Saturday**. Winter Reckoning becomes **Sunday Morning Reckoning**.
+- **Ballot Initiatives board:** styled after **Civic Center** (City Hall dome, ballot-measure placards).
+- **Clock board:** styled as a **parking meter**, with the 10 night hours as the meter's time scale.
+- **Mission cards:** look like emails, text messages, contracts, dossiers, or handwritten notes.
+- **Influence cards:** look like Instagram posts, TikTok posts, YouTube pages, Facebook profiles, or LinkedIn profiles.
+- **Card titles:** forms and strains go in helper text under the name, e.g. **OG Kush** with *Flower* underneath.
+
+## 11. SUV Space
+
+| Category | SUV space |
+| :-- | :-- |
+| Weed | 1–2 ■ |
+| Party | 1–2 ■ (reduced) |
+| Pill Uppers | 1 ■ |
+| Powder Uppers | 1–2 ■ (reduced) |
+| Opiates | 1 ■ |
+| Weapons | 1–3 ■ |
+
+## 12. Contraband Threats (Cops & Criminals)
+
+| Cargo | Threats | Notes |
+| :-- | :-- | :-- |
+| Opiates | **20** | 16 are attacks if you are carrying (on the strongest cards); 4 are threats to take it all |
+| Weapons | 16 | |
+| Uppers | 14 | |
+| Party | 5 | |
+| Weed | 2 | |
+| Henchmen | 1 | **ICE** takes all of your Henchmen |
+
+- One ISIS Celebrity (**Radicalized YouTuber**) attacks at neutral, so zero standing is *almost* safe with Celebrities.
+
+## 13. Henchmen
+
+- The Henchmen who add a henchman seat (+▲) or raise sale prices are women: **Big Tina** (+▲), **Rosa "La Flaca"** (Street Opiates sell +1 step), and **Nurse Keisha** (Pill Uppers sell +1 step).
+- **Felicia** is the strongest Henchman: 3(R) +1 CP and ignores 1 wound (a nod to *The Wire*).
+
+## 14. Positive vs Hostile Outcomes (Stand-Up Comic)
+
+Every gem change is tagged by how it happened.
+
+| Outcome type | What counts |
+| :-- | :-- |
+| **Positive** | Satisfying demands, accepting offers, buying or selling with NPCs, playing Influence cards, completing missions |
+| **Hostile** | Refusing threats or demands, combat, being unable to pay, failing or abandoning missions |
+
+The Stand-Up Comic table now works on outcomes, not on gem signs:
+
+| Roll | Effect |
+| :-- | :-- |
+| **0 (Roasted)** | Undo every gem change from **Positive outcomes** |
+| **I (The Bit)** | Undo every gem change from **Hostile outcomes** |

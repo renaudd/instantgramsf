@@ -1,4 +1,4 @@
-"""Render Free Parking goods cards: card art + traits & price overlay.
+"""Render InstantGram SF goods cards: card art + traits & price overlay.
 
 The card art carries a light title banner at the top and a large blank light panel in the
 lower half. This script finds both areas automatically, then draws on them:
@@ -135,9 +135,7 @@ def draw_title(img, d, zone, card):
     d.rectangle((x0 + 2, y0 + 2, x1 - 2, y1 - 2), fill=fill)
     h = y1 - y0
     name = card["name"].upper()
-    sub = None
-    if "(" in name and name.endswith(")"):
-        name, sub = name[: name.index("(")].strip(), name[name.index("(") + 1:-1]
+    sub = (card.get("subtitle") or "").upper() or None
     title_font = fit_font(F_TITLE, name, (x1 - x0) * 0.9, int(h * 0.58))
     cat = category_label(card) + (f"  \u2022  {sub}" if sub else "")
     cat_font = fit_font(F_BOLD, cat, (x1 - x0) * 0.9, int(h * 0.17))
@@ -223,8 +221,8 @@ def render(card, art, out):
 
 
 MOCKUPS = {
-    "grn_?": ("OG Kush (Flower)", "weed_humboldt_indoor.png"),
-    "mrb_?": ("Champagne Molly (MDMA Crystal)", "party_pure_mdma_crystal.png"),
+    "grn_?": ("OG Kush", "weed_humboldt_indoor.png"),
+    "mrb_?": ("Champagne Molly", "party_pure_mdma_crystal.png"),
     "ea_?": ("Peruvian Flake", "uppers_peruvian_flake.png"),
     "cw_?": ("China White", "opiates_china_white.png"),
     "wpn_?": ("Glock 19", "weapons_glock_19.png"),

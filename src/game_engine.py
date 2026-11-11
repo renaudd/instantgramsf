@@ -15,7 +15,7 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
 ROME_DIE_FACES = [0, 0, 1, 1, 2, 3]
 
-# Free Parking: San Francisco has exactly five road entry points (the "gates").
+# InstantGram SF: San Francisco has exactly five road entry points (the "gates").
 # Each gate cell's only off-board edge is its highway/bridge; every other
 # perimeter edge is a boat escape (or a free southern road out of town).
 GATE_CELLS = ["B1", "F1", "F5", "D6", "A5"]
@@ -217,15 +217,10 @@ def is_tiber_crossing_blocked(from_cell: Optional[str], target_cell: Optional[st
 
 
 def get_tiber_bridge_name(from_cell: Optional[str], target_cell: Optional[str]) -> Optional[str]:
-    """Free Parking: returns the Bridge/Freeway name when leaving SF through one of the
+    """InstantGram SF: returns the Bridge/Freeway name when leaving SF through one of the
     five gate exits (gate cells have no other off-board edges). Used by the ISIS
     'Threat Level Red' checkpoint decree (isis_3)."""
-    src = normalize_cell_id(from_cell)
-    dst = normalize_cell_id(target_cell)
-    if not src or dst:
-        return None
-    gate = GATE_EXITS.get(src)
-    return gate["name"] if gate else None
+    return None  # no checkpoint decree in InstantGram SF (Threat Level Red was replaced by Sanctuary City)
 
 
 def get_effective_tile_edges(coord: str, tile: Optional[Dict[str, Any]]) -> Dict[str, Any]:
@@ -257,9 +252,9 @@ FACTIONS = ["MAGA", "ISIS", "TECH", "DSA", "MS13"]
 POLITICAL_CLIMATE_FACTORS: List[Dict[str, Any]] = [
     {"id": "MAGA", "label": "MAGA", "gemName": "Ruby", "subtitle": "Make America Great Again"},
     {"id": "ISIS", "label": "ISIS", "gemName": "Emerald", "subtitle": "Islamic State Sleeper Cells"},
-    {"id": "TECH", "label": "TECH", "gemName": "Diamond", "subtitle": "Silicon Valley Money"},
+    {"id": "TechBros", "label": "Tech Bros", "gemName": "Diamond", "subtitle": "Silicon Valley Money"},
     {"id": "DSA", "label": "DSA", "gemName": "Sapphire", "subtitle": "Democratic Socialists of America"},
-    {"id": "MS13", "label": "MS13", "gemName": "Amethyst", "subtitle": "Mara Salvatrucha"},
+    {"id": "MS13", "label": "MS-13", "gemName": "Amethyst", "subtitle": "Mara Salvatrucha"},
     {"id": "Missions", "label": "Gigs", "gemName": "Contracts", "subtitle": "Gig Economy"},
 ]
 
@@ -304,9 +299,9 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "gemName": "Emerald",
         "optionNumber": 1,
         "timing": "endgame",
-        "title": "Fatwa",
-        "shortText": "Least ISIS favor loses 25d",
-        "description": "End of game: the player with the Least ISIS favor loses 25d.",
+        "title": "Decapitation",
+        "shortText": "Most ISIS favor loses 25d",
+        "description": "End of game: the player with the Most ISIS favor loses 25d.",
     },
     {
         "id": "isis_2",
@@ -315,7 +310,7 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "gemName": "Emerald",
         "optionNumber": 2,
         "timing": "endgame",
-        "title": "Infidel Tax",
+        "title": "Fatwa",
         "shortText": "+15d/+Emerald if MAGA ≤ 0, -10d if ≥ +1; -5d/-Emerald",
         "description": "End of game: +15d per +Emerald if your MAGA favor is ≤ 0, or -10d per +Emerald if it is ≥ +1; -5d per -Emerald.",
     },
@@ -326,14 +321,14 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "gemName": "Emerald",
         "optionNumber": 3,
         "timing": "midgame",
-        "title": "Threat Level Red",
-        "shortText": "Bridge & Freeway exits cost a 4d bribe, waived with +1 Emerald",
-        "description": "Leaving SF by a Bridge or Freeway costs a 4d checkpoint bribe, waived with +1 Emerald or Shortcut.",
+        "title": "Sanctuary City",
+        "shortText": "All players start with a free Emerald",
+        "description": "When enacted: every player immediately gains a free Emerald (+1 ISIS).",
     },
     {
-        "id": "tech_1",
-        "factor": "TECH",
-        "factorLabel": "TECH",
+        "id": "techbros_1",
+        "factor": "TechBros",
+        "factorLabel": "Tech Bros",
         "gemName": "Diamond",
         "optionNumber": 1,
         "timing": "endgame",
@@ -342,9 +337,9 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "description": "End of game: the player with the Most Tech Bros favor gains +20% wealth.",
     },
     {
-        "id": "tech_2",
-        "factor": "TECH",
-        "factorLabel": "TECH",
+        "id": "techbros_2",
+        "factor": "TechBros",
+        "factorLabel": "Tech Bros",
         "gemName": "Diamond",
         "optionNumber": 2,
         "timing": "endgame",
@@ -353,9 +348,9 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "description": "End of game: Lose 15d per +Diamond and 15d per -Diamond.",
     },
     {
-        "id": "tech_3",
-        "factor": "TECH",
-        "factorLabel": "TECH",
+        "id": "techbros_3",
+        "factor": "TechBros",
+        "factorLabel": "Tech Bros",
         "gemName": "Diamond",
         "optionNumber": 3,
         "timing": "midgame",
@@ -399,7 +394,7 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
     {
         "id": "ms13_1",
         "factor": "MS13",
-        "factorLabel": "MS13",
+        "factorLabel": "MS-13",
         "gemName": "Amethyst",
         "optionNumber": 1,
         "timing": "endgame",
@@ -410,7 +405,7 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
     {
         "id": "ms13_2",
         "factor": "MS13",
-        "factorLabel": "MS13",
+        "factorLabel": "MS-13",
         "gemName": "Amethyst",
         "optionNumber": 2,
         "timing": "endgame",
@@ -421,7 +416,7 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
     {
         "id": "ms13_3",
         "factor": "MS13",
-        "factorLabel": "MS13",
+        "factorLabel": "MS-13",
         "gemName": "Amethyst",
         "optionNumber": 3,
         "timing": "midgame",
@@ -447,9 +442,9 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "gemName": "Contracts",
         "optionNumber": 2,
         "timing": "endgame",
-        "title": "Yelp Reviews",
-        "shortText": "+10d per completed Mission; -10d per failed Mission",
-        "description": "End of game: Gain 10d per completed Mission; lose 10d per failed or unfinished Mission.",
+        "title": "Full Time Employee",
+        "shortText": "Receive (gems of one faction × missions done for it) ₿",
+        "description": "End of game: every player receives A × B Bitcoin, where A = your gems of any one faction and B = the missions you completed for that faction (best faction counts).",
     },
     {
         "id": "missions_3",
@@ -671,6 +666,45 @@ def calculate_faction_favor(player: Dict[str, Any], faction: Optional[str]) -> i
     return player.get("favor", {}).get(faction, 0) + player.get("tempFavor", 0)
 
 
+_HOSTILE_OUTCOME_KEYS = ("refus", "unable", "having no", "shaking down", "combat with", "fail", "cancel", "fenced", "abandon")
+_FRIENDLY_OUTCOME_KEYS = ("complet", "satisf", "paying", "giving", "selling", "buying", "accepting", "patronage", "influence card", "reward")
+
+
+def classify_favor_outcome(reason: str) -> Optional[str]:
+    """InstantGram SF: tags each Favor change as a 'friendly' (Positive) or 'hostile' outcome.
+
+    Positive outcomes: satisfying demands, accepting offers, playing Influence cards, completing missions.
+    Hostile outcomes: refusing threats/demands, combat, failing or abandoning missions.
+    """
+    r = str(reason or "").lower()
+    if any(k in r for k in _FRIENDLY_OUTCOME_KEYS):
+        return "friendly"
+    if any(k in r for k in _HOSTILE_OUTCOME_KEYS):
+        return "hostile"
+    return None
+
+
+def strip_favor_outcomes(player: Dict[str, Any], outcome: str, reason: str) -> Dict[str, int]:
+    """Reverses every not-yet-reverted Favor change of the given outcome type ('friendly' or 'hostile').
+
+    Losing all Hostile outcomes does not mean losing all negative gems: it undoes whatever gems were
+    gained or lost through hostile outcomes. Likewise for Positive (friendly) outcomes.
+    """
+    hist = player.setdefault("favorHistory", {f: [] for f in FACTIONS})
+    changes: Dict[str, int] = {}
+    for fac in FACTIONS:
+        net = 0
+        for entry in hist.get(fac, []):
+            if entry.get("outcome") == outcome and not entry.get("reverted"):
+                net += int(entry.get("delta", 0))
+                entry["reverted"] = True
+        if net:
+            player["favor"][fac] = int(player["favor"].get(fac, 0)) - net
+            hist.setdefault(fac, []).append({"delta": -net, "reason": reason, "newTotal": player["favor"][fac]})
+            changes[fac] = -net
+    return changes
+
+
 def apply_favor_list(player: Dict[str, Any], favor_list: List[str], reason: str = "") -> List[str]:
     applied = []
     fac_deltas: Dict[str, int] = {}
@@ -697,6 +731,7 @@ def apply_favor_list(player: Dict[str, Any], favor_list: List[str], reason: str 
                     "delta": delta,
                     "reason": reason or "Encounter / Mission consequence",
                     "newTotal": player["favor"][fac],
+                    "outcome": classify_favor_outcome(reason),
                 })
     return applied
 
@@ -878,6 +913,10 @@ def _record_mission_completion_event(
 ) -> None:
     _inc_player_stat(player, "missionsCompleted", 1)
     m_fav = mission.get("favor") or []
+    m_fac = mission.get("patronFaction") or next((f.lstrip("+") for f in m_fav if f and not f.startswith("-")), None)
+    if m_fac in FACTIONS:
+        by_fac = _ensure_player_stats(player).setdefault("missionsByFaction", {})
+        by_fac[m_fac] = int(by_fac.get(m_fac, 0)) + 1
     if "DSA" in m_fav or mission.get("patronFaction") == "DSA":
         _inc_player_stat(player, "dsaMissionsCompleted", 1)
     if state.get("phase") == "finished":
@@ -1530,6 +1569,11 @@ def _apply_climate_option_pick(state: Dict[str, Any], player: Dict[str, Any], op
 
     pc.setdefault("activeIds", []).append(option_id)
     pc.setdefault("activeByFactor", {})[fac] = option_id
+    if option_id == "isis_3":
+        # Sanctuary City: every player starts with a free Emerald
+        for p_sc in state["players"]:
+            apply_favor_list(p_sc, ["ISIS"], reason="Sanctuary City (free Emerald)")
+        add_log(state, "🏙️ Sanctuary City enacted: every player receives a free Emerald (+1 ISIS).", "phase")
     pc.setdefault("picks", []).append({
         "step": step + 1,
         "playerIndex": player["index"],
@@ -1746,7 +1790,7 @@ def grant_reward(
     # Fallback string parser for string rewards like "40(d)", "Cheapest Mkt Wine", "1 Meat A from market", "Weapon"
     rt_raw = (reward_text or "").strip()
 
-    # Free Parking compound rewards, e.g. "8(d) & 1 Influence" or "Cheapest Opiates & +1 TECH Favor"
+    # InstantGram SF compound rewards, e.g. "8(d) & 1 Influence" or "Cheapest Opiates & +1 TECH Favor"
     if "&" in rt_raw:
         for part in [p.strip() for p in rt_raw.split("&") if p.strip()]:
             notes.extend(grant_reward(state, player, None, part, is_mission_reward=is_mission_reward))
@@ -2691,7 +2735,7 @@ def _get_chart_roll_preview(
         return f"Rolled {r_rom} (III) → The crowd clamors noisily as {player['name']} passes safely!"
     if chart_type == "theater":
         if r_clamped == 0:
-            return f"Rolled {r_rom} (0) → Mocked on stage! Lose all positive Friendly Favor!"
+            return f"Rolled {r_rom} (0) → Roasted on stage! Lose all Positive encounter outcomes!"
         if r_clamped == 1:
             return f"Rolled {r_rom} (I) → Satire clears your name! Lose all negative Hostile Favor!"
         if r_clamped == 2:
@@ -3067,23 +3111,15 @@ def _apply_table_encounter_outcome(
         dice_shown = [{"value": r, "roman": r_rom, "sign": 1, "label": "Troupe ®", "color": player["color"]}]
         th_lbl = "🎭 Troupe"
         if r == 0:
-            fav_hist = player.setdefault("favorHistory", {f: [] for f in FACTIONS})
-            for f in FACTIONS:
-                old_val = player["favor"].get(f, 0)
-                if old_val > 0:
-                    player["favor"][f] = 0
-                    fav_hist.setdefault(f, []).append({"delta": -old_val, "reason": "Theater Troupe (mocked on stage: lost Friendly Favor)"})
-            msg = f"Theater Troupe (rolled ®={r_rom})! {player['name']} was mocked on stage and lost all positive Friendly Favor!"
-            th_lbl = "👎 Lost Friendly Favor"
+            ch = strip_favor_outcomes(player, "friendly", "Stand-Up Comic (roasted: lost all Positive outcomes)")
+            det = ", ".join(f"{'+' if v > 0 else ''}{v} {k}" for k, v in ch.items()) or "no change"
+            msg = f"Theater Troupe (rolled ®={r_rom})! {player['name']} got roasted and lost all Positive encounter outcomes ({det})!"
+            th_lbl = "👎 Lost Positive Outcomes"
         elif r == 1:
-            fav_hist = player.setdefault("favorHistory", {f: [] for f in FACTIONS})
-            for f in FACTIONS:
-                old_val = player["favor"].get(f, 0)
-                if old_val < 0:
-                    player["favor"][f] = 0
-                    fav_hist.setdefault(f, []).append({"delta": -old_val, "reason": "Theater Troupe (satire cleared Hostile Favor)"})
-            msg = f"Theater Troupe (rolled ®={r_rom})! Satire cleared {player['name']}'s name — lost all negative Hostile Favor!"
-            th_lbl = "✨ Cleared Hostile Favor"
+            ch = strip_favor_outcomes(player, "hostile", "Stand-Up Comic (bit cleared all Hostile outcomes)")
+            det = ", ".join(f"{'+' if v > 0 else ''}{v} {k}" for k, v in ch.items()) or "no change"
+            msg = f"Theater Troupe (rolled ®={r_rom})! The bit cleared {player['name']}'s name: all Hostile encounter outcomes undone ({det})!"
+            th_lbl = "✨ Cleared Hostile Outcomes"
         elif r == 2:
             player["skipTurns"] = player.get("skipTurns", 0) + 1
             player["turnStep"] = "done"
@@ -3107,7 +3143,7 @@ def _apply_table_encounter_outcome(
                 state,
                 kind="table_encounter",
                 title=f"🎭 THEATER TROUPE ENCOUNTER — {player['name']}",
-                subtitle="0: Lose Friendly Favor • I: Lose Hostile Favor • II: Lose Turn • III: Draw ® Influence",
+                subtitle="0: Lose Positive Outcomes • I: Lose Hostile Outcomes • II: Lose Turn • III: Draw ® Influence",
                 groups=[{
                     "rollerName": player["name"],
                     "rollerType": "player",
@@ -3261,7 +3297,7 @@ def resolve_table_encounter(
                 card_nm = "Angry Mob"
             elif enc_type == "theater":
                 title_str = f"🎭 THEATER TROUPE ENCOUNTER — {player['name']}"
-                sub_str = "0: Lose Friendly Favor • I: Lose Hostile Favor • II: Lose Turn • III: Draw ® Influence"
+                sub_str = "0: Lose Positive Outcomes • I: Lose Hostile Outcomes • II: Lose Turn • III: Draw ® Influence"
                 die_lbl = "Troupe ®"
                 card_nm = "Theater Troupe"
             else:
@@ -4733,7 +4769,7 @@ def _build_pending_encounter_state(
     reactions = card.get("reactions", [])
     for idx_r, r_item in enumerate(reactions):
         cond_str = str(r_item.get("condition", ">=0")).strip()
-        # Free Parking: conditional tiers only apply if the player is carrying that contraband
+        # InstantGram SF: conditional tiers only apply if the player is carrying that contraband
         carry_req = r_item.get("ifCarrying")
         if carry_req and not any(
             matches_category(c, str(carry_req)) for c in player.get("cart", []) if not c.get("isMissionCargo")
@@ -4746,7 +4782,7 @@ def _build_pending_encounter_state(
             if not (cond_str.startswith(">") or cond_str.startswith("≥")):
                 break
 
-    # Free Parking: a reputation tier may carry its own action text / mission / reward
+    # InstantGram SF: a reputation tier may carry its own action text / mission / reward
     if isinstance(matched_tier_obj, dict) and any(k in matched_tier_obj for k in ("actionText", "mission")):
         base_card = card
         card = dict(card)
@@ -6044,7 +6080,7 @@ def resolve_pending_encounter_choice(
             add_log(state, f"{player['name']} played 'Plea' to satisfy {card['name']}'s demand for Goods! {' '.join(f_notes)}", "encounter")
             return True, "Played 'Plea' to satisfy demand."
 
-    # Free Parking payoff tier: a vulnerable NPC pays the player off. Resolve as if the player
+    # InstantGram SF payoff tier: a vulnerable NPC pays the player off. Resolve as if the player
     # had beaten them in combat: collect the combat reward and take the hostile consequences.
     if reaction == "payoff":
         pay = matched_tier.get("reward") or card.get("combatReward") or "4(d)"
@@ -6515,6 +6551,22 @@ def resolve_pending_encounter_choice(
             )
             msg = f"{player['name']} had less than {amt}(d) for {card['name']} ({' '.join(h_notes)})."
             add_log(state, msg, "encounter")
+        return True, msg
+
+    # InstantGram SF: "Give me all of your Guards" (Henchmen), e.g. the ICE card
+    if "guard" in primary_low or "henchm" in primary_low:
+        crew = list(player.get("guards", []))
+        if not crew:
+            add_log(state, f"{player['name']} has no Henchmen for {card['name']} to take — demand ignored.", "encounter")
+            return True, "No Henchmen — demand ignored."
+        for g_card in crew:
+            if g_card in player["guards"]:
+                player["guards"].remove(g_card)
+                state["decks"]["market"].append(g_card)
+        names = ", ".join(g["name"] for g in crew)
+        f_notes = apply_favor_list(player, card.get("friendlyFavor", []), reason=f"giving {names} to {card['name']}")
+        msg = f"{card['name']} took {player['name']}'s Henchmen: {names}. {' '.join(f_notes)}"
+        add_log(state, msg, "encounter")
         return True, msg
 
     # Goods demand (e.g., Fine Wine, Wine, Grain, Exotic Animals, Weapons, Marble, Meat Animals, cheapest/most valuable)
@@ -7588,25 +7640,25 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
 
         # 6b. ISIS Option 1: Least ISIS favor loses -25(d) (ties resolved by PvP Combat; loser pays -25d)
         if has_climate_modifier(state, "isis_1") and eligible_players:
-            min_get = min(int((p.get("favor") or {}).get("ISIS", 0)) for p in eligible_players)
-            tied_least_get = [p for p in eligible_players if int((p.get("favor") or {}).get("ISIS", 0)) == min_get]
-            if len(tied_least_get) > 1:
+            max_isis = max(int((p.get("favor") or {}).get("ISIS", 0)) for p in eligible_players)
+            tied_most_isis = [p for p in eligible_players if int((p.get("favor") or {}).get("ISIS", 0)) == max_isis]
+            if len(tied_most_isis) > 1:
                 add_log(
                     state,
-                    f"⚔️ Tie for Least ISIS Favor ({min_get:+d}) between {', '.join(x['name'] for x in tied_least_get)} — PvP Combat decides who suffers -25(d)!",
+                    f"⚔️ Tie for Most ISIS Favor ({max_isis:+d}) between {', '.join(x['name'] for x in tied_most_isis)} — PvP Combat decides who suffers -25(d)!",
                     "combat",
                 )
                 loser_get = _resolve_multiway_pvp_loser(
-                    state, tied_least_get, pvp_gear_snapshot, f"Least ISIS Favor ({min_get:+d}) Penalty"
+                    state, tied_most_isis, pvp_gear_snapshot, f"Most ISIS Favor ({max_isis:+d}) Penalty"
                 )
-                det_g1 = f"Lost PvP Tie-Break for Least ISIS Favor ({min_get:+d})"
+                det_g1 = f"Lost PvP Tie-Break for Most ISIS Favor ({max_isis:+d})"
             else:
-                loser_get = tied_least_get[0]
-                det_g1 = f"Sole Least ISIS Favor ({min_get:+d})"
-            _record_climate_delta(loser_get, "isis_1", "ISIS", "Fatwa", -25, det_g1)
-            add_log(state, f"Fatwa: {loser_get['name']} suffers -25(d) ({det_g1}).", "penalty")
+                loser_get = tied_most_isis[0]
+                det_g1 = f"Sole Most ISIS Favor ({max_isis:+d})"
+            _record_climate_delta(loser_get, "isis_1", "ISIS", "Decapitation", -25, det_g1)
+            add_log(state, f"Decapitation: {loser_get['name']} suffers -25(d) ({det_g1}).", "penalty")
 
-        # 6c. ISIS Option 2 (Infidel Tax): +15d/Emerald if MAGA <= 0, -10d/Emerald if MAGA >= +1; -5d per negative Emerald
+        # 6c. ISIS Option 2 (Fatwa): +15d/Emerald if MAGA <= 0, -10d/Emerald if MAGA >= +1; -5d per negative Emerald
         if has_climate_modifier(state, "isis_2"):
             for p in eligible_players:
                 fav = p.get("favor") or {}
@@ -7622,7 +7674,7 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
                 else:
                     delta = 0
                     det = "ISIS 0 (0d)"
-                _record_climate_delta(p, "isis_2", "ISIS", "Infidel Tax", delta, det)
+                _record_climate_delta(p, "isis_2", "ISIS", "Fatwa", delta, det)
 
         # 6d. TECH Option 2 (Conflict of Interest): -15d per positive Diamond AND -15d per negative Diamond
         if has_climate_modifier(state, "tech_2"):
@@ -7689,16 +7741,23 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
             _record_climate_delta(win_m1, "missions_1", "Missions", "Five-Star Courier", 30, det_m1)
             add_log(state, f"Five-Star Courier: {win_m1['name']} claims +30(d) ({det_m1})!", "phase")
 
-        # 6i. Missions Option 2 (Yelp Reviews): +10d per completed mission and -10d per failed/unfulfilled mission (net negative allowed)
+        # 6i. Missions Option 2 (Full Time Employee): A x B Bitcoin (gems of one faction x missions done for it)
         if has_climate_modifier(state, "missions_2"):
+            # Full Time Employee: each player receives A x B Bitcoin, where A = gems of one faction and
+            # B = missions completed for that faction (best faction for the player). 1 BTC = 10 units.
             for p in eligible_players:
                 st_p = _ensure_player_stats(p)
-                comp_c = int(st_p.get("missionsCompleted", 0) or 0)
-                fail_c = int(st_p.get("missionsFailed", 0) or 0)
-                net_c = comp_c - fail_c
-                delta = 10 * net_c
-                det = f"{comp_c} Completed (+{comp_c * 10}d), {fail_c} Failed (-{fail_c * 10}d)"
-                _record_climate_delta(p, "missions_2", "Missions", "Yelp Reviews", delta, det)
+                by_fac = st_p.get("missionsByFaction") or {}
+                best_fac, best_val = None, 0
+                for fac_k in FACTIONS:
+                    gems = int((p.get("favor") or {}).get(fac_k, 0))
+                    val = max(0, gems) * int(by_fac.get(fac_k, 0) or 0)
+                    if val > best_val:
+                        best_fac, best_val = fac_k, val
+                if best_fac:
+                    gems = int(p["favor"].get(best_fac, 0))
+                    det = f"{best_fac}: {gems} gems × {int(by_fac.get(best_fac, 0))} missions"
+                    _record_climate_delta(p, "missions_2", "Missions", "Full Time Employee", best_val * 10, det)
 
         # Step 7: DSA Option 1 (Billionaire Tax) — Most DSA favor steals 15(d) from the wealthiest surviving rival
         if has_climate_modifier(state, "dsa_1") and len(eligible_players) >= 2:

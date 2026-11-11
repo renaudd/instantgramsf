@@ -2,7 +2,7 @@
   "market": [
     {
       "id": "grn_1",
-      "name": "Pineapple Express (Cartridge)",
+      "name": "Pineapple Express",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -21,11 +21,12 @@
         3,
         3,
         2
-      ]
+      ],
+      "subtitle": "Cartridge"
     },
     {
       "id": "grn_2",
-      "name": "Golden Teacher (Shrooms)",
+      "name": "Golden Teacher",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -44,11 +45,12 @@
         3,
         3,
         2
-      ]
+      ],
+      "subtitle": "Shrooms"
     },
     {
       "id": "grn_3",
-      "name": "Brick Weed (Flower)",
+      "name": "Brick Weed",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -67,11 +69,12 @@
         2,
         1,
         1
-      ]
+      ],
+      "subtitle": "Flower"
     },
     {
       "id": "grn_4",
-      "name": "Granddaddy Purple (Hash)",
+      "name": "Granddaddy Purple",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -90,11 +93,12 @@
         4,
         3,
         2
-      ]
+      ],
+      "subtitle": "Hash"
     },
     {
       "id": "grn_5",
-      "name": "Mescaline (Peyote Buttons)",
+      "name": "Mescaline",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -113,11 +117,12 @@
         4,
         3,
         2
-      ]
+      ],
+      "subtitle": "Peyote Buttons"
     },
     {
       "id": "grn_6",
-      "name": "Northern Lights (Flower)",
+      "name": "Northern Lights",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -136,11 +141,12 @@
         2,
         1,
         1
-      ]
+      ],
+      "subtitle": "Flower"
     },
     {
       "id": "grn_7",
-      "name": "Gorilla Glue #4 (Shatter)",
+      "name": "Gorilla Glue #4",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -159,11 +165,12 @@
         4,
         3,
         2
-      ]
+      ],
+      "subtitle": "Shatter"
     },
     {
       "id": "grn_8",
-      "name": "Wedding Cake (Live Rosin)",
+      "name": "Wedding Cake",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -182,11 +189,12 @@
         4,
         3,
         2
-      ]
+      ],
+      "subtitle": "Live Rosin"
     },
     {
       "id": "grn_9",
-      "name": "Blue Dream (Flower)",
+      "name": "Blue Dream",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -205,11 +213,12 @@
         3,
         2,
         1
-      ]
+      ],
+      "subtitle": "Flower"
     },
     {
       "id": "grn_10",
-      "name": "Felix the Cat (LSD Blotter)",
+      "name": "Felix the Cat",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -228,11 +237,12 @@
         4,
         3,
         2
-      ]
+      ],
+      "subtitle": "LSD Blotter"
     },
     {
       "id": "grn_11",
-      "name": "Sour Diesel (Edibles)",
+      "name": "Sour Diesel",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -251,11 +261,12 @@
         3,
         2,
         2
-      ]
+      ],
+      "subtitle": "Edibles"
     },
     {
       "id": "grn_12",
-      "name": "OG Kush (Flower)",
+      "name": "OG Kush",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -274,11 +285,12 @@
         3,
         3,
         2
-      ]
+      ],
+      "subtitle": "Flower"
     },
     {
       "id": "cw_1",
-      "name": "Apache (Pure Fentanyl)",
+      "name": "Apache",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -297,7 +309,8 @@
         10,
         6,
         5
-      ]
+      ],
+      "subtitle": "Pure Fentanyl"
     },
     {
       "id": "cw_2",
@@ -324,7 +337,7 @@
     },
     {
       "id": "cw_3",
-      "name": "Brown Sugar (Heroin)",
+      "name": "Brown Sugar",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -343,11 +356,12 @@
         6,
         4,
         2
-      ]
+      ],
+      "subtitle": "Heroin"
     },
     {
       "id": "cw_4",
-      "name": "Reds (Barbiturates)",
+      "name": "Reds",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -366,11 +380,12 @@
         8,
         5,
         4
-      ]
+      ],
+      "subtitle": "Barbiturates"
     },
     {
       "id": "cw_5",
-      "name": "Number 4 (Afghan Heroin)",
+      "name": "Number 4",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -389,11 +404,12 @@
         8,
         6,
         5
-      ]
+      ],
+      "subtitle": "Afghan Heroin"
     },
     {
       "id": "cw_6",
-      "name": "Tranq (Xylazine Dope)",
+      "name": "Tranq",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -412,11 +428,12 @@
         5,
         4,
         2
-      ]
+      ],
+      "subtitle": "Xylazine Dope"
     },
     {
       "id": "cw_7",
-      "name": "Chiva (Black Tar)",
+      "name": "Chiva",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -435,11 +452,12 @@
         6,
         4,
         2
-      ]
+      ],
+      "subtitle": "Black Tar"
     },
     {
       "id": "cw_8",
-      "name": "Purple Drank (Lean)",
+      "name": "Purple Drank",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -458,11 +476,12 @@
         7,
         5,
         4
-      ]
+      ],
+      "subtitle": "Lean"
     },
     {
       "id": "cw_9",
-      "name": "Blues (M30 Fentanyl)",
+      "name": "Blues",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -481,11 +500,12 @@
         7,
         5,
         4
-      ]
+      ],
+      "subtitle": "M30 Fentanyl"
     },
     {
       "id": "fw_1",
-      "name": "Tussin (Codeine Syrup)",
+      "name": "Tussin",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -504,11 +524,12 @@
         16,
         10,
         8
-      ]
+      ],
+      "subtitle": "Codeine Syrup"
     },
     {
       "id": "fw_2",
-      "name": "Trammies (Tramadol)",
+      "name": "Trammies",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -527,11 +548,12 @@
         17,
         12,
         8
-      ]
+      ],
+      "subtitle": "Tramadol"
     },
     {
       "id": "fw_3",
-      "name": "Vikes (Vicodin)",
+      "name": "Vikes",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -550,11 +572,12 @@
         17,
         12,
         9
-      ]
+      ],
+      "subtitle": "Vicodin"
     },
     {
       "id": "fw_4",
-      "name": "Percs (Percocet)",
+      "name": "Percs",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -573,11 +596,12 @@
         18,
         13,
         9
-      ]
+      ],
+      "subtitle": "Percocet"
     },
     {
       "id": "fw_5",
-      "name": "Juice (Methadone)",
+      "name": "Juice",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -596,11 +620,12 @@
         20,
         14,
         9
-      ]
+      ],
+      "subtitle": "Methadone"
     },
     {
       "id": "fw_6",
-      "name": "Red Devils (Seconal)",
+      "name": "Red Devils",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -619,11 +644,12 @@
         21,
         14,
         9
-      ]
+      ],
+      "subtitle": "Seconal"
     },
     {
       "id": "fw_7",
-      "name": "Miss Emma (Morphine)",
+      "name": "Miss Emma",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -642,11 +668,12 @@
         22,
         15,
         10
-      ]
+      ],
+      "subtitle": "Morphine"
     },
     {
       "id": "fw_8",
-      "name": "OC 80s (OxyContin)",
+      "name": "OC 80s",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -665,11 +692,12 @@
         23,
         16,
         10
-      ]
+      ],
+      "subtitle": "OxyContin"
     },
     {
       "id": "fw_9",
-      "name": "Hospital Heroin (Dilaudid)",
+      "name": "Hospital Heroin",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -688,11 +716,12 @@
         24,
         16,
         12
-      ]
+      ],
+      "subtitle": "Dilaudid"
     },
     {
       "id": "ma_1",
-      "name": "Mini-Thins (Ephedrine)",
+      "name": "Mini-Thins",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -711,11 +740,12 @@
         4,
         3,
         3
-      ]
+      ],
+      "subtitle": "Ephedrine"
     },
     {
       "id": "ma_2",
-      "name": "Bennies (Benzedrine)",
+      "name": "Bennies",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -734,11 +764,12 @@
         5,
         4,
         3
-      ]
+      ],
+      "subtitle": "Benzedrine"
     },
     {
       "id": "ma_3",
-      "name": "Black Beauties (Diet Pills)",
+      "name": "Black Beauties",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -757,15 +788,16 @@
         4,
         3,
         3
-      ]
+      ],
+      "subtitle": "Diet Pills"
     },
     {
       "id": "ma_4",
-      "name": "Abu Hilalain (Captagon)",
+      "name": "Abu Hilalain",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         29,
@@ -780,15 +812,16 @@
         8,
         6,
         5
-      ]
+      ],
+      "subtitle": "Captagon"
     },
     {
       "id": "ma_5",
-      "name": "Blue Addys (Brand Adderall)",
+      "name": "Blue Addys",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         38,
@@ -803,11 +836,12 @@
         9,
         7,
         6
-      ]
+      ],
+      "subtitle": "Brand Adderall"
     },
     {
       "id": "ma_6",
-      "name": "Dexies (Dexedrine)",
+      "name": "Dexies",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -826,11 +860,12 @@
         6,
         5,
         4
-      ]
+      ],
+      "subtitle": "Dexedrine"
     },
     {
       "id": "ma_7",
-      "name": "Kiddie Coke (Ritalin)",
+      "name": "Kiddie Coke",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -849,15 +884,16 @@
         5,
         4,
         4
-      ]
+      ],
+      "subtitle": "Ritalin"
     },
     {
       "id": "ma_8",
-      "name": "Addys (Adderall)",
+      "name": "Addys",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         31,
@@ -872,11 +908,12 @@
         8,
         6,
         5
-      ]
+      ],
+      "subtitle": "Adderall"
     },
     {
       "id": "ma_9",
-      "name": "Moda (Modafinil)",
+      "name": "Moda",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -895,15 +932,16 @@
         6,
         5,
         4
-      ]
+      ],
+      "subtitle": "Modafinil"
     },
     {
       "id": "ea_1",
-      "name": "Crank (Bathtub Speed)",
+      "name": "Crank",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         34,
@@ -920,15 +958,16 @@
         6
       ],
       "combatText": null,
-      "combat": null
+      "combat": null,
+      "subtitle": "Bathtub Speed"
     },
     {
       "id": "ea_2",
-      "name": "Flakka (Bath Salts)",
+      "name": "Flakka",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
-      "blocks": 3,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         44,
@@ -945,15 +984,16 @@
         7
       ],
       "combatText": null,
-      "combat": null
+      "combat": null,
+      "subtitle": "Bath Salts"
     },
     {
       "id": "ea_3",
-      "name": "Shake-n-Bake (Meth)",
+      "name": "Shake-n-Bake",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
-      "blocks": 3,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         45,
@@ -975,15 +1015,16 @@
         "negDice": 0,
         "flat": -1,
         "mandatory": true
-      }
+      },
+      "subtitle": "Meth"
     },
     {
       "id": "ea_4",
-      "name": "Yayo (Cocaine)",
+      "name": "Yayo",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         60,
@@ -1005,7 +1046,8 @@
         "negDice": 1,
         "flat": 1,
         "mandatory": true
-      }
+      },
+      "subtitle": "Cocaine"
     },
     {
       "id": "ea_5",
@@ -1013,7 +1055,7 @@
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         48,
@@ -1039,11 +1081,11 @@
     },
     {
       "id": "ea_6",
-      "name": "Rock (Crack)",
+      "name": "Rock",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
-      "blocks": 4,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         55,
@@ -1065,15 +1107,16 @@
         "negDice": 1,
         "flat": 2,
         "mandatory": true
-      }
+      },
+      "subtitle": "Crack"
     },
     {
       "id": "ea_7",
-      "name": "Glass (Crystal Meth)",
+      "name": "Glass",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
-      "blocks": 4,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         56,
@@ -1095,7 +1138,8 @@
         "negDice": 1,
         "flat": 0,
         "mandatory": true
-      }
+      },
+      "subtitle": "Crystal Meth"
     },
     {
       "id": "ea_8",
@@ -1103,7 +1147,7 @@
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
-      "blocks": 4,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         74,
@@ -1129,11 +1173,11 @@
     },
     {
       "id": "ea_9",
-      "name": "Fish Scale (Cocaine)",
+      "name": "Fish Scale",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
-      "blocks": 4,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         84,
@@ -1155,7 +1199,8 @@
         "negDice": 0,
         "flat": -4,
         "mandatory": true
-      }
+      },
+      "subtitle": "Cocaine"
     },
     {
       "id": "wpn_1",
@@ -1511,11 +1556,11 @@
     },
     {
       "id": "mrb_1",
-      "name": "Rush (Poppers)",
+      "name": "Rush",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         32,
@@ -1530,15 +1575,16 @@
         12,
         12,
         11
-      ]
+      ],
+      "subtitle": "Poppers"
     },
     {
       "id": "mrb_2",
-      "name": "Liquid G (GHB)",
+      "name": "Liquid G",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 3,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         42,
@@ -1553,15 +1599,16 @@
         14,
         14,
         13
-      ]
+      ],
+      "subtitle": "GHB"
     },
     {
       "id": "mrb_3",
-      "name": "Whippets (Nitrous)",
+      "name": "Whippets",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         35,
@@ -1576,15 +1623,16 @@
         13,
         13,
         12
-      ]
+      ],
+      "subtitle": "Nitrous"
     },
     {
       "id": "mrb_4",
-      "name": "Tusi (Pink Cocaine)",
+      "name": "Tusi",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 3,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         45,
@@ -1599,7 +1647,8 @@
         15,
         15,
         14
-      ]
+      ],
+      "subtitle": "Pink Cocaine"
     },
     {
       "id": "mrb_5",
@@ -1607,7 +1656,7 @@
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         37,
@@ -1626,11 +1675,11 @@
     },
     {
       "id": "mrb_6",
-      "name": "Blue Punishers (Ecstasy)",
+      "name": "Blue Punishers",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 3,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         48,
@@ -1645,15 +1694,16 @@
         17,
         16,
         14
-      ]
+      ],
+      "subtitle": "Ecstasy"
     },
     {
       "id": "mrb_7",
-      "name": "Pink Teslas (Ecstasy)",
+      "name": "Pink Teslas",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         39,
@@ -1668,15 +1718,16 @@
         15,
         15,
         13
-      ]
+      ],
+      "subtitle": "Ecstasy"
     },
     {
       "id": "mrb_8",
-      "name": "Red Mitsubishis (Ecstasy)",
+      "name": "Red Mitsubishis",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 3,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         51,
@@ -1691,15 +1742,16 @@
         18,
         17,
         15
-      ]
+      ],
+      "subtitle": "Ecstasy"
     },
     {
       "id": "mrb_9",
-      "name": "Special K (Ketamine)",
+      "name": "Special K",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         42,
@@ -1714,15 +1766,16 @@
         15,
         15,
         14
-      ]
+      ],
+      "subtitle": "Ketamine"
     },
     {
       "id": "mrb_10",
-      "name": "Blue Dolphins (Ecstasy)",
+      "name": "Blue Dolphins",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 3,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         54,
@@ -1737,15 +1790,16 @@
         18,
         18,
         16
-      ]
+      ],
+      "subtitle": "Ecstasy"
     },
     {
       "id": "mrb_11",
-      "name": "Nexus (2C-B)",
+      "name": "Nexus",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 2,
+      "blocks": 1,
       "guards": 0,
       "sell": [
         45,
@@ -1760,15 +1814,16 @@
         17,
         16,
         15
-      ]
+      ],
+      "subtitle": "2C-B"
     },
     {
       "id": "mrb_12",
-      "name": "Champagne Molly (MDMA Crystal)",
+      "name": "Champagne Molly",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
-      "blocks": 3,
+      "blocks": 2,
       "guards": 0,
       "sell": [
         58,
@@ -1783,7 +1838,8 @@
         20,
         19,
         18
-      ]
+      ],
+      "subtitle": "MDMA Crystal"
     },
     {
       "id": "grd_1",
@@ -1812,7 +1868,7 @@
     },
     {
       "id": "grd_2",
-      "name": "Lil' Tony",
+      "name": "Big Tina",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -2023,7 +2079,7 @@
     },
     {
       "id": "grd_11",
-      "name": "Pharmacist Kim",
+      "name": "Nurse Keisha",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -2047,7 +2103,7 @@
     },
     {
       "id": "grd_12",
-      "name": "Cuz",
+      "name": "Felicia",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -2055,17 +2111,18 @@
       "guards": 1,
       "sell": null,
       "buy": [
-        8,
-        6,
-        4,
-        3,
-        3
+        24,
+        18,
+        13,
+        11,
+        10
       ],
-      "combatText": "(R) CP",
+      "combatText": "3(R) +1 CP & Ignore 1 Wound",
       "combat": {
-        "dice": 1,
+        "dice": 3,
         "negDice": 0,
-        "flat": 0
+        "flat": 1,
+        "ignoreWoundsFlat": 1
       }
     }
   ],

@@ -1030,7 +1030,7 @@ def run_server(host: str = "127.0.0.1", port: int = 8080) -> None:
     else:
         bind_host = "127.0.0.1"
     httpd = ThreadingHTTPServer((bind_host, port), NightMerchantHandler)
-    print(f"Night Merchant: Free Parking server listening on http://{bind_host}:{port}")
+    print(f"Night Merchant: InstantGram SF server listening on http://{bind_host}:{port}")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
