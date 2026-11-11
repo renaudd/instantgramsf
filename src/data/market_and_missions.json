@@ -1205,7 +1205,6 @@
     {
       "id": "wpn_1",
       "name": "Brass Knuckles",
-      "subtitle": "Arrows",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1225,13 +1224,12 @@
         4,
         3
       ],
-      "combatText": "Brass, 4-finger, 8 oz. No combat bonus",
+      "combatText": null,
       "combat": null
     },
     {
       "id": "wpn_2",
       "name": "Riot Shield",
-      "subtitle": "Shields",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1262,7 +1260,6 @@
     {
       "id": "wpn_3",
       "name": "Switchblade",
-      "subtitle": "Daggers",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1292,7 +1289,6 @@
     {
       "id": "wpn_4",
       "name": "Glock 19",
-      "subtitle": "Shortswords",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1322,7 +1318,6 @@
     {
       "id": "wpn_5",
       "name": "AR-15",
-      "subtitle": "Spears",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1352,7 +1347,6 @@
     {
       "id": "wpn_6",
       "name": "Desert Eagle",
-      "subtitle": "Swords",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1382,7 +1376,6 @@
     {
       "id": "wpn_7",
       "name": "Stab Vest",
-      "subtitle": "Armguards",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1413,7 +1406,6 @@
     {
       "id": "wpn_8",
       "name": "Kevlar Helmet",
-      "subtitle": "Helmets",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1444,7 +1436,6 @@
     {
       "id": "wpn_9",
       "name": "Hunting Rifle",
-      "subtitle": "Bows",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1474,7 +1465,6 @@
     {
       "id": "wpn_10",
       "name": "Molotov Cocktail",
-      "subtitle": "Javelins",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1494,7 +1484,7 @@
         4,
         3
       ],
-      "combatText": "Glass bottle, 1 L gasoline, rag wick. 1 CP (destroyed if used)",
+      "combatText": "1 CP (single use)",
       "combat": {
         "dice": 0,
         "negDice": 0,
@@ -1505,7 +1495,6 @@
     {
       "id": "wpn_11",
       "name": "Pipe Bomb",
-      "subtitle": "Javelins",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1525,13 +1514,12 @@
         7,
         5
       ],
-      "combatText": "Steel pipe, end caps, fuse. Unusable in a street fight: 0 CP",
+      "combatText": null,
       "combat": null
     },
     {
       "id": "wpn_12",
       "name": "Kevlar Vest",
-      "subtitle": "Body Armor",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
@@ -1551,7 +1539,7 @@
         12,
         10
       ],
-      "combatText": "NIJ Level IIIA soft armor (crated). 0 CP in a street ambush",
+      "combatText": null,
       "combat": null
     },
     {

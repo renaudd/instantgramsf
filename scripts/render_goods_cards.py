@@ -143,71 +143,99 @@ def draw_title(img, d, zone, card):
     center_text(d, (x0, y0 + h * 0.68, x1, y1 - h * 0.06), cat, cat_font, (176, 60, 20))
 
 
-def draw_symbols(d, cx, cy, size, blocks, guards):
+F_SYM = "/System/Library/Fonts/SFNS.ttf"  # has the Bitcoin glyph
+
+
+def draw_symbols(d, x_left, cy, size, blocks, guards):
+    """SUV space counters, anchored to the left edge of the traits line."""
     items = [("sq", INK)] * blocks + [("tri", (196, 150, 20))] * guards
-    if not items:
-        return
-    gap = size * 0.45
-    total = len(items) * size + (len(items) - 1) * gap
-    x = cx - total / 2
+    gap = size * 0.40
+    x = x_left
     for kind, col in items:
         if kind == "sq":
             d.rectangle((x, cy - size / 2, x + size, cy + size / 2), fill=col)
         else:
             d.polygon([(x, cy + size / 2), (x + size / 2, cy - size / 2), (x + size, cy + size / 2)], fill=col, outline=INK)
         x += size + gap
+    return x
 
 
-def draw_panel(d, zone, card):
+def trait_text(card):
+    """Only mechanically relevant text: CP formulas and special abilities (none = no combat effect)."""
+    if card.get("track") == "Guards":
+        return card.get("combatText")
+    if card.get("combat") or card.get("rarityBonus"):
+        return card.get("combatText")
+    return None
+
+
+def price_label(img, box, kind):
+    """Bold green +₿ (sell) or italic red -₿ (buy/hire), as in the online game."""
+    x0, y0, x1, y1 = box
+    w, h = int(x1 - x0), int(y1 - y0)
+    txt = "+\u20bf" if kind == "sell" else "-\u20bf"
+    col = SELL_GREEN if kind == "sell" else BUY_RED
+    layer = Image.new("RGBA", (w * 2, h), (0, 0, 0, 0))
+    ld = ImageDraw.Draw(layer)
+    f = ImageFont.truetype(F_SYM, int(h * 0.62))
+    try:
+        f.set_variation_by_name("Bold" if kind == "sell" else "Semibold")
+    except Exception:
+        pass
+    center_text(ld, (0, 0, w * 2, h), txt, f, col)
+    if kind == "buy":  # italic via shear
+        layer = layer.transform(layer.size, Image.AFFINE, (1, 0.22, -h * 0.11, 0, 1, 0), resample=Image.BICUBIC)
+    layer = layer.crop((w // 2, 0, w // 2 + w, h))
+    img.paste(layer, (int(x0), int(y0)), layer)
+
+
+def draw_panel(img, d, zone, card):
     x0, y0, x1, y1 = zone
     w, h = x1 - x0, y1 - y0
     pad = w * 0.05
-    combat = card.get("combatText")
-    if card.get("track") == "Guards" and card.get("bonusBlocks"):
-        combat = combat  # already describes the bonus space
-    rows_h = h * 0.16
-    y = y0 + h * 0.04
-    if combat:
-        f = fit_font(F_BOLD, combat, w - 2 * pad, int(rows_h * 0.62))
-        center_text(d, (x0, y, x1, y + rows_h), combat, f, INK)
-    y += rows_h
-    draw_symbols(d, (x0 + x1) / 2, y + rows_h * 0.45, rows_h * 0.5, int(card.get("blocks") or 0), int(card.get("guards") or 0))
-    y += rows_h
+    # Traits line: SUV space (left) + combat/abilities (right)
+    line_h = h * 0.20
+    cy = y0 + h * 0.04 + line_h / 2
+    sym = line_h * 0.42
+    x_after = draw_symbols(d, x0 + pad, cy, sym, int(card.get("blocks") or 0), int(card.get("guards") or 0))
+    tt = trait_text(card)
+    if tt:
+        avail = (x1 - pad) - (x_after + pad)
+        f = fit_font(F_BOLD, tt, avail, int(line_h * 0.50))
+        bb = d.textbbox((0, 0), tt, font=f)
+        d.text((x1 - pad - (bb[2] - bb[0]) - bb[0], cy - (bb[3] - bb[1]) / 2 - bb[1]), tt, font=f, fill=INK)
     # Price table
     tx0, tx1 = x0 + pad, x1 - pad
-    label_w = (tx1 - tx0) * 0.10
-    col_w = (tx1 - tx0 - label_w) / 5
-    ty0 = y + h * 0.02
+    ty0 = y0 + h * 0.04 + line_h + h * 0.03
     ty1 = y1 - h * 0.05
     sell, buy = card.get("sell"), card.get("buy")
-    rows = [("hdr", None)] + ([("SELL", sell)] if sell else []) + [("HIRE" if card.get("track") == "Guards" else "BUY", buy)]
-    rh = (ty1 - ty0) / len(rows)
+    rows = ([("sell", sell)] if sell else []) + [("buy", buy)]
+    hdr_ratio = 0.55
+    unit = (ty1 - ty0) / (len(rows) + hdr_ratio)
+    hdr_h = unit * hdr_ratio
+    label_w = (tx1 - tx0) * 0.12
+    col_w = (tx1 - tx0 - label_w) / 5
     d.rectangle((tx0, ty0, tx1, ty1), outline=SELL_GREEN, width=3)
-    for ri, (lbl, vals) in enumerate(rows):
-        ry0 = ty0 + ri * rh
+    # header
+    for ci in range(5):
+        cx0 = tx0 + label_w + ci * col_w
+        f = ImageFont.truetype(F_BOLD, int(hdr_h * 0.62))
+        center_text(d, (cx0, ty0, cx0 + col_w, ty0 + hdr_h), SCARCITY[ci], f, SCARCITY_COLORS[ci])
+    d.line((tx0, ty0 + hdr_h, tx1, ty0 + hdr_h), fill=SELL_GREEN, width=2)
+    for ri, (kind, vals) in enumerate(rows):
+        ry0 = ty0 + hdr_h + ri * unit
         if ri:
             d.line((tx0, ry0, tx1, ry0), fill=SELL_GREEN, width=2)
-        # label column
-        lab_col = SELL_GREEN if lbl == "SELL" else (BUY_RED if lbl in ("BUY", "HIRE") else (230, 230, 225))
-        d.rectangle((tx0 + 1, ry0 + 1, tx0 + label_w, ry0 + rh - 1), fill=lab_col)
-        if lbl != "hdr":
-            lf = ImageFont.truetype(F_BOLD, max(10, int(min(label_w * 0.32, rh * 0.30))))
-            txt = Image.new("RGBA", (int(rh), int(label_w)), (0, 0, 0, 0))
-            td = ImageDraw.Draw(txt)
-            center_text(td, (0, 0, int(rh), int(label_w)), lbl, lf, (255, 255, 255))
-            d._image.paste(txt.rotate(90, expand=True), (int(tx0 + 1), int(ry0)), txt.rotate(90, expand=True))
+        price_label(img, (tx0, ry0, tx0 + label_w, ry0 + unit), kind)
         for ci in range(5):
             cx0 = tx0 + label_w + ci * col_w
-            d.line((cx0, ty0, cx0, ty1), fill=SELL_GREEN, width=2)
-            box = (cx0, ry0, cx0 + col_w, ry0 + rh)
-            if lbl == "hdr":
-                f = ImageFont.truetype(F_BOLD, int(rh * 0.55))
-                center_text(d, box, SCARCITY[ci], f, SCARCITY_COLORS[ci])
-            else:
-                v = btc(vals[ci])
-                bold = lbl in ("BUY", "HIRE") and ci == 2
-                f = fit_font(F_NUM, v, col_w * 0.86, int(rh * (0.70 if bold else 0.60)))
-                center_text(d, box, v, f, INK if not bold else (0, 0, 0))
+            v = btc(vals[ci])
+            bold = kind == "buy" and ci == 2
+            f = fit_font(F_NUM, v, col_w * 0.86, int(unit * (0.62 if bold else 0.52)))
+            center_text(d, (cx0, ry0, cx0 + col_w, ry0 + unit), v, f, INK)
+    for ci in range(6):
+        cx = tx0 + label_w + ci * col_w
+        d.line((cx, ty0, cx, ty1), fill=SELL_GREEN, width=2)
 
 
 def render(card, art, out):
@@ -215,7 +243,7 @@ def render(card, art, out):
     title_zone, panel_zone = find_zones(img)
     d = ImageDraw.Draw(img)
     draw_title(img, d, title_zone, card)
-    draw_panel(d, panel_zone, card)
+    draw_panel(img, d, panel_zone, card)
     img.save(out)
     return title_zone, panel_zone
 
