@@ -2903,16 +2903,16 @@ button, input, select {
   box-shadow: inset 0 0 0 2px #ffffff, inset 0 0 0 3.5px #022c22;
 }
 
-/* TechBros -> Diamond */
-.phys-enc-tiers-row.faction-techbros {
+/* TECH -> Diamond */
+.phys-enc-tiers-row.faction-tech {
   background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 100%) !important;
   color: #0f172a;
 }
-.phys-enc-tiers-row.faction-techbros .phys-enc-tier-cell {
+.phys-enc-tiers-row.faction-tech .phys-enc-tier-cell {
   border-right-color: rgba(15, 23, 42, 0.35);
   text-shadow: none;
 }
-.phys-enc-tiers-row.faction-techbros .phys-enc-tier-cell.tier-active {
+.phys-enc-tiers-row.faction-tech .phys-enc-tier-cell.tier-active {
   background: #ffffff;
   box-shadow: inset 0 0 0 2px #0f172a, inset 0 0 0 3.5px #94a3b8;
 }
@@ -5660,7 +5660,7 @@ button, input, select {
   color: var(--text-muted);
 }
 
-.techbros-mediator-bar {
+.tech-mediator-bar {
   margin-top: 0.45rem;
   padding: 0.45rem 0.6rem;
   border-radius: 5px;
@@ -5672,13 +5672,13 @@ button, input, select {
   gap: 0.35rem;
 }
 
-.techbros-mediator-lbl {
+.tech-mediator-lbl {
   font-size: 0.73rem;
   font-weight: 700;
   color: #1e293b;
 }
 
-.techbros-mediator-btns {
+.tech-mediator-btns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.35rem;

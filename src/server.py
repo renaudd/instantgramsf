@@ -80,6 +80,11 @@ def _allowed_origins() -> Set[str]:
         for o in os.getenv("NIGHTMERCHANT_ALLOWED_ORIGINS", "").split(",")
         if o.strip()
     }
+    # Always allow loopback origins for the port this server is actually bound to
+    # (e.g. PORT=8081 for local testing alongside Night Merchant on 8080).
+    port = (os.getenv("PORT") or os.getenv("NIGHTMERCHANT_PORT") or "").strip()
+    if port.isdigit():
+        extra |= {f"http://127.0.0.1:{port}", f"http://localhost:{port}"}
     return DEFAULT_ALLOWED_ORIGINS | extra
 
 
@@ -1025,7 +1030,7 @@ def run_server(host: str = "127.0.0.1", port: int = 8080) -> None:
     else:
         bind_host = "127.0.0.1"
     httpd = ThreadingHTTPServer((bind_host, port), NightMerchantHandler)
-    print(f"Night Merchant: All Roads Lead to Rome (211 A.D.) server listening on http://{bind_host}:{port}")
+    print(f"Night Merchant: Free Parking server listening on http://{bind_host}:{port}")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

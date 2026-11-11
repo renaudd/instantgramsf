@@ -1,166 +1,181 @@
 # Night Merchant: Free Parking — Design Document
 
-*Working titles from the notes: "Night Merchant: San Francisco" / "Free Parking SF".*
-
 Night Merchant: Free Parking is a reskin of **Night Merchant: All Roads Lead to Rome**. It keeps the
-rules, mechanics, and code of the Rome edition. This document lists what changes. Anything not listed
-here stays the same.
-
-> Transcription notes: Text in *[brackets]* marks a word that is hard to read in the handwritten pages,
-> or a gap that the editor filled in. Each one is labeled.
+Rome edition's rules and engine. This document lists what changes. Anything not listed here works
+the same as in the Rome edition.
 
 ---
 
-## 1. Goods → Drugs
+## 1. Goods (Market layout, top to bottom)
 
-| Rome category | Free Parking category | Contents | Design notes (verbatim intent) |
-| :--- | :--- | :--- | :--- |
-| **Grain** | **Weed** (+ hallucinogens) | Weed, hallucinogens | Easy to sell, low risk, low violence, low profit. |
-| **Animals** | **Uppers** | Cocaine, crack, meth, speed | Like exotic animals, they **affect the players in combat**, for better or worse. |
-| **Wine** | **Opiates** | Heroin, fentanyl, barbiturates | Highest price margins and the most dangerous. They have the **largest difference between the Abundant purchase price and the Precious sale price**. Demand is in the dangerous parts of town. **Biggest enforcement.** |
-| **Weapons** | **Weapons** | (unchanged category) | Almost nothing changes. The **bulletproof vest** has a high purchase floor and very low profitability (it replaces the *Lorica*). **Unusable weapons (a bomb)** are very profitable. |
-| **Marble** | **Party Drugs** | Molly, ketamine | Profitable but a high price floor and limited demand. Safer. |
-| **Guards** | **Henchmen** | — | Almost nothing changes. |
+| Row | Free Parking | Rome track (internal id) | Contents | Notes |
+| :-- | :--- | :--- | :--- | :--- |
+| 1 | **Weed** (+ hallucinogens) | Grain | Dime bags, pre-rolls, shrooms, LSD, edibles | Easy to sell, low risk, low violence, low profit. Can be sold in bulk. |
+| 2 | **Party** | Marble | Molly, ketamine, GHB, 2C-B, tusi | Profitable, but a high price floor and limited demand. Safer. |
+| 3 | **Uppers** — *Pill* / *Powder* | Animals (Meat / Exotic) | Adderall, Captagon… / coke, crack, meth, speed | Powder Uppers affect combat, for better or worse (like Exotic Animals). |
+| 4 | **Opiates** — *Street* / *Pharma* | Wine (Cheap / Fine) | Heroin, tranq, fentanyl… / Oxy, Dilaudid, fentanyl patches | Highest margins: the **largest gap between the Abundant buy price and the Precious sell price**. Most dangerous; biggest enforcement. |
+| 5 | **Weapons** | Weapons | Brass knuckles … AR-15 | Almost unchanged. The **Kevlar Vest** has a high purchase floor and very low profitability. The **Pipe Bomb** can't be used in combat (0 CP) but is very profitable. |
+| 6 | **Henchmen** | Guards | Big Mike, Lil' Tony, Rosa "La Flaca"… | Almost unchanged. |
 
----
+> Implementation note: the engine keeps the Rome track ids. A display layer (`sfReskinText` in
+> `app.js`) shows the Free Parking names everywhere in the UI.
 
-## 2. Card & Board Art Direction
+## 2. Art Direction
 
-- **Market board** looks like a **briefcase**.
-- **Drug cards**: Each card's border makes it look like a **life-size bag of that drug**, in the
-  container or form the drug normally comes in, fitted to a square.
-- **Weapon cards**: The borders have **fine-text details about the weapon's specifications**
-  (generally firearms).
-- **Henchman cards** look like a **California driver's license**.
-- **Cart board → SUV board** *(added note)*: Replace the cart mat with a board that looks like a
-  **large black SUV** seen from above.
-  - **Henchman storage** = the **front seats** (replaces the 2 Guard seats `▲`).
-  - **Drug & weapon storage** = the **back seats and trunk** (replaces the 6 Cargo blocks `■`).
-- **Overall art style**: A uniform board-game look that recalls **Dope Wars**: gritty
-  late-'90s/2000s street style, bold flat colors, heavy ink outlines, a slightly pixel-retro feel.
+- **Market board:** a **briefcase**.
+- **Drug cards:** each border looks like a life-size bag of the drug, in the container or form it
+  normally comes in, fitted to a square.
+- **Weapon cards:** the borders carry fine-print spec details for the weapon.
+- **Henchman cards:** look like a California driver's license.
+- **SUV board** (replaces the cart mat): a large black SUV seen from above. Henchmen ride in the
+  **front seats**; drugs and weapons go in the **back seats and trunk**.
+- **Style:** a uniform board-game look in the spirit of Dope Wars.
 
----
+## 3. Factions (short names: MAGA, ISIS, DSA, TECH, MS13)
 
-## 3. Factions
-
-The new factions only loosely follow the Rome factions. Each one keeps the old faction's gem and decree column.
-
-| Rome faction (gem) | Free Parking faction | Favored goods | Deck representation (Celebrities / Cops / Criminals) |
-| :--- | :--- | :--- | :--- |
-| Caracalla (Ruby) | **MAGA** | Uppers | 2 / **14** / 3 — huge among Cops; a tiny bit of Celebrity (Musk); low among Criminals (pot farmers, KKK) |
-| Geta (Emerald) | **ISIS** | Weapons | 4 / 2 / 5 — **the rarest faction**; mostly Criminals, then Celebrities, then Cops |
-| Domna (Diamond) | **Tech Bros** | Party Drugs | 7 / 6 / 6 — equal across all three decks |
-| Plautilla (Sapphire) | **DSA** | Weed | **10** / 3 / 3 — mostly Celebrities, some Criminals, very few Cops (the Firefighters) |
-| Aurelius (Amethyst) | **MS-13** | Opiates | 3 / 3 / **9** — mostly Criminals; lowest among Celebrities and Cops |
-
-**Members:** DSA: leftists, feminists, gays, natives, locals. Tech Bros: Lurie, Zuckerberg.
-
-### Alignments
-
-| Faction | Aligned with | Averse to |
+| Rome faction (gem) | Free Parking | Celebrities / Cops / Criminals |
 | :--- | :--- | :--- |
-| **MAGA** | Tech Bros; ISIS sometimes | MS-13 (primarily), DSA (hugely); ISIS sometimes |
-| **ISIS** | MS-13 | Every other faction |
-| **Tech Bros** | DSA and MAGA (somewhat) | ISIS (somewhat); indifferent to MS-13 |
-| **DSA** | ISIS and MS-13 | MAGA (primarily), Tech Bros (sort of) |
-| **MS-13** | DSA and ISIS (slightly) | MAGA (somewhat), Tech Bros (a little). The most indifferent faction. |
+| Caracalla (Ruby) | **MAGA** | 3 / **14** / 2 |
+| Geta (Emerald) | **ISIS** | 4 / 1 / **8** |
+| Domna (Diamond) | **TECH** (Tech Bros) | 7 / 8 / 4 |
+| Plautilla (Sapphire) | **DSA** | **10** / 3 / 6 |
+| Aurelius (Amethyst) | **MS13** | 2 / 2 / **6** |
+
+### Alignment consequences
+
+"Work for" means a positive encounter outcome. "Work against" means a negative one. These are applied to
+encounter outcomes and to mission completion and failure.
+
+| Faction | Work **for** them | Work **against** them |
+| :--- | :--- | :--- |
+| **ISIS** | Sometimes makes everyone except MS13 like you | Sometimes the DSA dislikes you; MAGA often likes you |
+| **MS13** | MAGA likely dislikes you | Sometimes the DSA and the Tech Bros dislike you |
+| **TECH** | MAGA often likes you; the DSA often dislikes you | MAGA dislikes you; the DSA likes you |
+| **MAGA** | **Everyone hates you** | **Everyone likes you** |
+| **DSA** | TECH sometimes likes you; ISIS and MAGA often hate you | TECH sometimes likes you; MAGA sometimes likes you |
+
+- Work for DSA, TECH, or MAGA → ISIS likely hates you (−Emerald).
+- What you do for or against anyone except MS13 usually doesn't change how MS13 feels.
 
 ### Behavior
 
-- **MAGA:** Back the Blue gives Cops +2 CP and the player +1 CP per positive Ruby.
-- **ISIS:** Poor and violent. ISIS characters attack at 0 favor or lower, and their cash rewards are halved.
-- **Tech Bros:** Very rich, vulnerable, and influential. Rewards are ×1.5 and combat is −1 CP.
-- **MS-13:** Less likely than ISIS to attack at 0 favor, but always attacks at −1 or lower. Always very strong in combat (+1(R)+1 CP).
+| Faction | Attacks when your favor is | Notes |
+| :--- | :--- | :--- |
+| MS13 | ≤ −1 | Never attacks at 0 |
+| ISIS | ≤ 0 | Poor: cash rewards ×0.6 |
+| MAGA | ≤ −1 | |
+| DSA | ≤ −2 | |
+| TECH | ≤ −2 | Rich: cash rewards ×1.5 |
 
----
+## 4. Combat Strength
 
-## 4. Political Climate (Decree) Board → **Ballot Initiatives**
+**By faction:**
 
-The board is now **Ballot Initiatives**. It keeps the 6×3 layout and draft rules, but the decrees have been updated for the new factions.
+| Faction | Typical combat formula |
+| :--- | :--- |
+| TECH | Weakest: `XR−1` (meter maid), `XR−X` (traffic cop), `X` (rookie). Billionaires with bodyguards are outliers at `4XR` to `6XR`. |
+| DSA | Next weakest: usually `XR`, sometimes ±1 |
+| MAGA & ISIS | All over the map, but more often positive (`XR+1`, `XR+2`, `XR+X`) |
+| MS13 | Always strong. `XR+X` by default; leaders `2X–3X` |
 
-| Column | Option 1 *(End-Game)* | Option 2 *(End-Game)* | Option 3 *(Mid-Game)* |
+**By tier:** Leader / Top use 3× dice, Tier 1 uses 2×, Tier 2 uses 1×, and Tier 3 uses 1× with −1.
+
+**By deck:** Cops +1 CP per icon (tougher than Criminals). Celebrities −1 (more vulnerable).
+**Lurie** (`6XR+1`), **Musk** (`6XR+X`), and **Zuckerberg** (`6XR`) are the strongest NPCs in the
+game.
+
+## 5. Mission Trends & Rewards
+
+Each list runs from most likely to least likely.
+
+| Faction | Missions | Rewards |
+| :--- | :--- | :--- |
+| **DSA** | Sell Weed at a discount, sell Party at a discount, deliveries, kill Celebrities, kill Cops | Influence, Henchmen, Weapons |
+| **MAGA** | Sell Uppers at a premium, sell Opiates at a discount, sell Weed at a premium, kill Criminals, kill Celebrities | Weapons, Uppers, Opiates, cash |
+| **TECH** | Sell Party at a premium, sell Uppers at a premium, sell Weed at a premium, deliveries, kill Celebrities | Cash, faction standing, Influence, Party, Weed |
+| **MS13** | Sell Opiates at a premium, kill Cops, kill Criminals, kill Celebrities, sell Uppers at a premium, sell Weed, sell Party, deliveries | Opiates, Uppers, Party, Henchmen, cash, Weapons |
+| **ISIS** | Sell Weapons at a premium, deliver Weapons, kill Celebrities, kill Cops, deliver Opiates, deliver Weed | Opiates, cash, Weed, Henchmen, Weapons, Influence |
+
+**Regime Change** (was Regicide): completed if Donald Trump or Jared Kushner is defeated by any
+player. **Witness Protection** (was Regime Change) cancels it.
+
+## 6. Encounter Decks
+
+| Rome | Free Parking |
+| :--- | :--- |
+| Patricii | **Celebrities** |
+| Nefarii | **Criminals** |
+| Legiones | **Cops** |
+| Angry Mob | **Protesters** |
+| Theatre Troupe | **Stand-Up Comic** |
+| Soothsayer | **Schizophrenic** |
+
+### Celebrities
+
+| Faction | Characters |
+| :--- | :--- |
+| TECH | Mark Zuckerberg *(Leader)*, Brian Chesky *(T1)*, Dario Amodei *(T2)*, Daniela Amodei *(T2)*, Crypto Influencer, Startup Founder, AI Ethicist |
+| MAGA | Donald Trump *(Leader)*, Elon Musk *(T1)*, Peter Thiel *(T1)* |
+| DSA | DSA/ISIS)*, Jensen Huang *(T2)*, Bernie Sanders, Cornel West, Drag Queen, Tenured Professor, Indie Podcaster, Burning Man Artist, Muralist, Climate Activist |
+| MS13 | Steph Curry *(T1)*, Chesa Boudin |
+| ISIS | Alice Huang *(T1)*, Dr. Oz, Edgelord Streamer, Radicalized YouTuber |
+
+### Cops
+
+| Faction | Characters |
+| :--- | :--- |
+| TECH | Mayor Lurie *(Top)*, Scott Wiener *(T2)*, Paul Graham, FBI, CIA, Meter Maid, Traffic Cop, Rookie |
+| MS13 | Nayib Bukele *(Leader)*, Dirty Cop |
+| ISIS | Jared Kushner *(Leader)* |
+| DSA | Ocasio-Cortez *(Leader)*, Dean Preston, Firefighters |
+| MAGA | Harmeet Dhillon, Vivek Ramaswamy, Rudy Giuliani, SFPD, DEA, ICE, Homeland Security, SFPD Narcotics Unit, DEA Task Force, ICE Raid Team, Border Patrol, CHP Trooper, Sheriff's Deputy, Muni Fare Inspector |
+
+### Criminals
+
+| Faction | Characters |
+| :--- | :--- |
+| TECH | Sam Altman *(Top)*, Palmer Luckey, VC Capitalist, Crypto Scammer |
+| MAGA | KKK *(T1)*, Pot Farmers *(T3)* |
+| ISIS | International Terrorist *(T1)*, Domestic Terrorist *(T2)*, Hamas, Hezbollah, Houthis, Iran, Bashar al-Assad, Abu Bakr al-Baghdadi |
+| DSA | Pimp *(T1)*, London Breed, Homeless *(T2)*, Illegal *(T2)*, Unhoused *(T3)*, Undocumented *(T3)* |
+| MS13 | Elmer Rodriguez *(Top)*, Clique Enforcer, Sicario, Gang Banger, Bad Hombre, Coyote |
+
+## 7. Ballot Initiatives (was Political Climate)
+
+See the in-game board. The Rome mechanics stay, retitled for the new factions:
+
+| Faction | Option 1 | Option 2 | Option 3 |
 | :--- | :--- | :--- | :--- |
-| **MAGA (Ruby)** | **Mass Deportation:** Least MAGA favor is eliminated (resolves first). | **Recall Election:** −10d per +Ruby; +5d per −Ruby. | **Back the Blue:** Cops +2 CP; +1 CP per +Ruby. |
-| **ISIS (Emerald)** | **Fatwa:** Least ISIS favor loses 25d. | **Infidel Tax:** +15d per +Emerald if MAGA ≤ 0, else −10d per +Emerald; −5d per −Emerald. | **Threat Level Red:** Leaving SF by a Bridge or Freeway costs a 4d checkpoint bribe, waived with +1 Emerald or Shortcut. *(Replaces Divided Tiber.)* |
-| **Tech Bros (Diamond)** | **Series A:** Most Tech Bros favor gains +20% wealth. | **Conflict of Interest:** −15d per ±Diamond. | **Lobbying Blitz:** Trade +Diamonds 1-for-1 into +Rubies (MAGA) or **+Sapphires (DSA)**. |
-| **DSA (Sapphire)** | **Billionaire Tax:** Most DSA favor takes 15d from the wealthiest rival. | **Mutual Aid:** +10d per completed DSA mission. | **Rent Control:** Spend +Sapphires when selling for +1 Scarcity step per gem. *(Was Senatorial Privilege.)* |
-| **MS-13 (Amethyst)** | **Protection Racket:** Most MS-13 favor gains 25d. | **Plata o Plomo:** +10d per ±Amethyst. | **Clique Fence:** Fenced cargo sells +1 Scarcity step higher and doesn't fail the mission. *(Was Smuggler's Fence.)* |
-| **Gigs** | **Five-Star Courier:** Most completed missions +30d. | **Yelp Reviews:** +10d per completed / −10d per failed mission. | **Surge Pricing:** Missions pay 2×; failed missions fine 10d. |
+| MAGA | Mass Deportation | Recall Election | Back the Blue |
+| ISIS | Fatwa | Infidel Tax | Threat Level Red |
+| TECH | Series A | Conflict of Interest | Lobbying Blitz (Diamonds → Rubies or Sapphires) |
+| DSA | Billionaire Tax | Mutual Aid | Rent Control |
+| MS13 | Protection Racket | Plata o Plomo | Clique Fence |
+| Gigs | Five-Star Courier | Yelp Reviews | Surge Pricing |
 
----
+## 8. Currency
 
-## 5. Currency: Denarius → Bitcoin
+**1 Denarius = 0.1 Bitcoin (₿).** The ₿ display is not built yet.
 
-**1 Denarius = 0.1 Bitcoin (₿).** All prices, tolls, wagers, fines, loans, and scores are shown in
-₿ at one tenth of their Denarius value. For example, the 12(d) starting cash becomes **₿1.2**.
+## 9. The Map (6×6, north at the top)
 
----
+| | A | B | C | D | E | F |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| **1** | Land's End (+Celeb +Cop) | **Presidio** 🌉 GG Bridge | Marina (++Celeb) | Wharf (+Celeb +Cop +Crim) | Telegraph (+Celeb +Cop) | **Embarcadero** 🌉 Bay Bridge |
+| **2** | Richmond (+Cop) | Laurel (+Celeb) | Pac Heights (++Celeb) | Nob Hill (++Crim) | Chinatown (++Cop) | Ballpark (++Cop +Celeb, stadium gambling) |
+| **3** | GG Park (+Crim +Celeb +Cop) | Fillmore (+Celeb +Cop) | **Tenderloin** 💊 market | **Civic Center** 💊 market | SoMa (++Crim) | Potrero (+Celeb) |
+| **4** | Sunset (+Cop) | Haight (+Celeb) | Diamond (++Celeb) | **Castro** 💊 market | Mission (++Crim) | Dogpatch (+Crim) |
+| **5** | **Merced** 🛣 Route 1 | Ingleside (+Crim) | Miraloma (+Crim) | Noe (+Celeb +Cop) | Bernal (+Crim) | **Hunter's** 🛣 US-101 |
+| **6** | Daly City (+Crim) | Crocker (+Crim) | Balboa (+Crim +Cop) | **Glen Park** 🛣 I-280 (+Crim +Cop) | Portola (+Celeb +Crim) | Bayview (++Crim) |
 
-## 6. Encounter Decks & Tables
+### Neighborhood markers
 
-| Rome | Free Parking | Members |
-| :--- | :--- | :--- |
-| **Patricii** | **Celebrities** | Billionaires, politicians, academics, YouTubers |
-| **Nefarii** | **Criminals** | Drug dealers, pimps, gang members, VC capitalists |
-| **Legiones** | **Cops** | SFPD, DEA, FBI, ICE |
-| Angry Mob | **Protesters** | No change |
-| Theatre Troupe | **Stand-Up** | No change |
-| Soothsayer | **Schizophrenic** | No change |
+- **+ / ++ / +++:** the share of the cell's 12 tiles that carry that encounter type (3, 5, or 7 tiles). More pluses also allow higher encounter multipliers.
+- **💊 Open-air markets** follow the Rome Forum rules. Their edges carry **+++ Criminals** and **++ Cops**.
 
-**Balance changes:**
-- **Cops** are **significantly more dangerous** than the Rome Legiones.
-- **Celebrities** are **slightly less dangerous** than the Patricii.
+### Entry points and escape routes
 
----
-
-## 7. The Map: San Francisco (6×6)
-
-The hand-drawn grid, north at the top and the Bay on the right. Columns run west→east, rows run
-north→south. Cells in *italics* were blank in the sketch, and the editor filled them with the real
-neighborhood in that spot.
-
-| | 1 (West) | 2 | 3 | 4 | 5 | 6 (East / Bay) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Row 1** | Lands End | **Presidio** 🌉 | Marina | Wharf | Embarcadero | **Rincon** 🌉 |
-| **Row 2** | Outer Richmond | *Inner Richmond* | Pac Heights | *North Beach* | *Financial District* | Ball Park |
-| **Row 3** | GG Park | *Haight-Ashbury* | Fillmore | *Tenderloin* | *SoMa* | Mission Bay |
-| **Row 4** | Sunset | *Twin Peaks* | Noe | *Mission* | Potrero | Dogpatch *[reading uncertain]* |
-| **Row 5** | **Merced** 🛣 | *West Portal* | Glen Park | *Bernal Heights* | *Portola* *[sketch shows a crossed-out "Excelsior"]* | **Hunters Point** 🛣 |
-| **Row 6** | Daly City | *Ocean View* | *Ingleside* | **Outer Mission** 🛣 | Excelsior | Visitacion Valley |
-
-### Entry Points & Escape Routes
-
-San Francisco has exactly **5 road entry points**. Every player must start the night at one of them. The entry cell's highway edge is always open and free, and its other outside edges are closed.
-
-| Entry point | Edge | Cell |
-| :--- | :--- | :--- |
-| **Golden Gate Bridge** | North | Presidio (B1) |
-| **Bay Bridge** | East | Rincon Hill (F1) |
-| **US-101** | East | Hunters Point (F5) |
-| **I-280** | South | Outer Mission (D6) |
-| **Highway 1** | West | Merced (A5) |
-
-Every other outside edge is an **escape route** whose cost depends on the side of the city:
-
-| Side | Escapes | Cost |
-| :--- | :--- | :--- |
-| **West (Pacific)** | Essentially none. About 1 in 8 tiles has a **Speedboat** | 8–10d (₿0.8–1.0) |
-| **North & East (Bay)** | More and cheaper boats: **Sailboat**, **Ferry**, **Cargo Ship** (about 45% of tiles) | 1d / 2d / 3d |
-| **South (Peninsula)** | **The most exits by far.** About 80% of tiles are open | Generally free (some 1d) |
-
-Bots aim for the entry points or the southern edge when heading home.
-
---- | :--- | :--- |
-| **Golden Gate Bridge** | North edge | Presidio (R1C2) |
-| **Bay Bridge** | East edge | Rincon (R1C6) |
-| **US-101** | East edge | Hunters Point (R5C6) |
-| **I-280** | South edge | Outer Mission (R6C4) |
-| **CA-1 (Hwy 1)** | West edge | Merced (R5C1) |
-
----
-
-## 8. Unchanged
-
-Rules, phases, the market scarcity system, missions, influence cards, combat, the Roman-numeral die,
-loans, dawn fines, and Winter Reckoning keep their Rome-edition mechanics unless a section above
-changes them.
+- Players enter only at the 5 entry points: Presidio, Embarcadero, Merced, Hunter's, and Glen Park.
+- **West (Pacific):** essentially no exits; a rare, expensive Speedboat (8–10).
+- **North & East (Bay):** more and cheaper boats: Sailboat (1), Ferry (2), Cargo Ship (3).
+- **South (Peninsula):** the most exits by far, generally free.

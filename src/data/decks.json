@@ -18,45 +18,46 @@
     },
     {
       "id": "pat_2",
-      "name": "Quintus Tineius Clemens",
+      "name": "Mark Zuckerberg",
       "deck": "Patricii",
       "type": "character",
-      "faction": "MS13",
-      "bio": "Senior patrician senator and consul ordinarius of 195 from the distinguished Tineii family.",
-      "combatFormula": "1(R)+1-1+1(R)+1",
+      "faction": "TECH",
+      "bio": "“He’s actually quite likeable.”",
+      "combatFormula": "6X(R)",
       "friendlyFavor": [
-        "MS13",
+        "TECH",
+        "-ISIS",
+        "MAGA"
+      ],
+      "friendlyReward": "45(d) & +1 Influence",
+      "hostileFavor": [
+        "-TECH",
         "-MAGA"
       ],
-      "friendlyReward": "10(d)",
-      "hostileFavor": [
-        "-MS13"
-      ],
-      "combatReward": "10(d)",
+      "combatReward": "44(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
           "condition": ">=0",
           "type": "mission_request"
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Falernian at + in C5",
+      "actionText": "Kill a Celebrity in Combat",
       "mission": {
-        "kind": "sell",
-        "item": "Falernian",
+        "kind": "kill",
+        "item": null,
         "pickupCell": null,
-        "deliverCell": "C5",
-        "category": "Fancy Wine",
-        "modifier": "+",
-        "target": null
-      }
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "Mark Zuckerberg’s Job"
+      },
+      "tier": "leader"
     },
     {
       "id": "pat_3",
@@ -76,21 +77,26 @@
     },
     {
       "id": "pat_4",
-      "name": "Lucius Flavius Philostratus",
+      "name": "Donald Trump",
       "deck": "Patricii",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "Commissioned by the Empress to write the Life of Apollonius of Tyana.",
-      "combatFormula": "1(R)-1-1",
+      "faction": "MAGA",
+      "bio": "“‘They let you do it.’”",
+      "combatFormula": "5X(R)+X-1",
       "friendlyFavor": [
-        "TechBros",
-        "-ISIS"
+        "MAGA",
+        "-ISIS",
+        "-DSA",
+        "-TECH",
+        "-MS13"
       ],
-      "friendlyReward": "18(d)",
+      "friendlyReward": "34(d) & Cheapest Weapon",
       "hostileFavor": [
-        "-TechBros"
+        "-MAGA",
+        "ISIS",
+        "TECH"
       ],
-      "combatReward": "24(d)",
+      "combatReward": "33(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -98,29 +104,43 @@
         },
         {
           "condition": ">=0",
-          "type": "deck_quest_demand"
+          "type": "mission_request"
         }
       ],
-      "actionText": "!: Accept the top card of the Missiones deck (unseen) as a Mission.",
-      "mission": null
+      "actionText": "Sell Grain at ++ in D3",
+      "mission": {
+        "kind": "sell",
+        "item": "Grain",
+        "pickupCell": null,
+        "deliverCell": "D3",
+        "category": "Grain",
+        "modifier": "++",
+        "target": null,
+        "name": "Donald Trump’s Job"
+      },
+      "tier": "leader"
     },
     {
       "id": "pat_5",
-      "name": "Decimus Caelius Calvinus Balbinus",
+      "name": "Elon Musk",
       "deck": "Patricii",
       "type": "character",
       "faction": "MAGA",
-      "bio": "Would serve as consul with MAGA in 213. Emperor for three months in 238.",
-      "combatFormula": "1(R)+2-1",
+      "bio": "“At one point the wealthiest man in the world.”",
+      "combatFormula": "6X(R)+X",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS"
+        "-ISIS",
+        "-DSA",
+        "-TECH"
       ],
-      "friendlyReward": "12(d)",
+      "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
-        "-MAGA"
+        "-MAGA",
+        "ISIS",
+        "TECH"
       ],
-      "combatReward": "12(d)",
+      "combatReward": "14(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -144,25 +164,30 @@
         "category": "Fancy Wine",
         "modifier": "<",
         "target": "Market or Deck"
-      }
+      },
+      "tier": "t1"
     },
     {
       "id": "pat_6",
-      "name": "Julia Avita Mamaea",
+      "name": "Peter Thiel",
       "deck": "Patricii",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "Niece of Julia TechBros. Future empress mother to Alexander Severus.",
-      "combatFormula": "1(R)+1-1-1",
+      "faction": "MAGA",
+      "bio": "“Bets on contrarians. Collects citizenships.”",
+      "combatFormula": "2X(R)+1-1",
       "friendlyFavor": [
-        "TechBros"
+        "MAGA",
+        "-ISIS",
+        "-DSA",
+        "-TECH"
       ],
-      "friendlyReward": "9(d)",
+      "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
-        "-TechBros",
-        "-MAGA"
+        "-MAGA",
+        "DSA",
+        "TECH"
       ],
-      "combatReward": "30(d)",
+      "combatReward": "15(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -186,7 +211,8 @@
         "category": "Fancy Wine",
         "modifier": "+",
         "target": null
-      }
+      },
+      "tier": "t1"
     },
     {
       "id": "pat_7",
@@ -206,25 +232,28 @@
     },
     {
       "id": "pat_8",
-      "name": "Lucius Fabius Cilo",
+      "name": "Brian Chesky",
       "deck": "Patricii",
       "type": "character",
-      "faction": "ISIS",
-      "bio": "Tutor of MAGA and ISIS.",
-      "combatFormula": "2(R)-1+1",
+      "faction": "TECH",
+      "bio": "“Spent the $100 million on city parks.”",
+      "combatFormula": "4X(R)-1",
       "friendlyFavor": [
-        "ISIS",
-        "MS13"
-      ],
-      "friendlyReward": "3(d)",
-      "hostileFavor": [
+        "TECH",
         "-ISIS",
-        "-MS13"
+        "MAGA",
+        "-DSA"
       ],
-      "combatReward": "6(d)",
+      "friendlyReward": "28(d)",
+      "hostileFavor": [
+        "-TECH",
+        "-MAGA",
+        "DSA"
+      ],
+      "combatReward": "22(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
@@ -245,69 +274,71 @@
         "category": "Any",
         "modifier": "14(d)",
         "target": "Goods deck"
-      }
+      },
+      "tier": "t1"
     },
     {
       "id": "pat_9",
-      "name": "Marcus Annius Flavius Libo",
+      "name": "Dario Amodei",
       "deck": "Patricii",
       "type": "character",
-      "faction": "MS13",
-      "bio": "Was Consul in 204. Distant cousin of Marcus MS13.",
-      "combatFormula": "2(R)-1+1(R)+1",
+      "faction": "TECH",
+      "bio": "“Builds the AI that worries about AI.”",
+      "combatFormula": "X-1",
       "friendlyFavor": [
-        "MS13",
-        "-TechBros"
+        "TECH",
+        "-ISIS",
+        "-DSA"
       ],
-      "friendlyReward": "1 Meat A from market",
+      "friendlyReward": "17(d)",
       "hostileFavor": [
-        "-MS13"
+        "-TECH",
+        "DSA"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "12(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_offer"
+          "condition": "<=0",
+          "type": "demand_strict"
         },
         {
-          "condition": ">=2",
-          "type": "cash_reward",
-          "reward": "6(d)"
+          "condition": ">=1",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Grain at - in B4",
-      "mission": {
-        "kind": "sell",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": "B4",
-        "category": "Grain",
-        "modifier": "-",
-        "target": null
-      }
+      "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)",
+      "mission": null,
+      "tier": "t2"
     },
     {
       "id": "pat_10",
-      "name": "Julia Soaemias",
+      "name": "Daniela Amodei",
       "deck": "Patricii",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "Murdered alongside son Elagabalus by Praetorians and discarded in the Tiber in 222.",
-      "combatFormula": "1(R)-1-1",
+      "faction": "TECH",
+      "bio": "“Keeps the safety team’s lights on.”",
+      "combatFormula": "X(R)-1-1",
       "friendlyFavor": [
-        "TechBros"
+        "TECH",
+        "-ISIS",
+        "-DSA"
       ],
-      "friendlyReward": "12(d)",
+      "friendlyReward": "19(d)",
       "hostileFavor": [
-        "-TechBros",
-        "-MAGA"
+        "-TECH",
+        "-MAGA",
+        "DSA"
       ],
-      "combatReward": "30(d)",
+      "combatReward": "14(d)",
       "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
         {
           "condition": "<=-2",
           "type": "cash_reward",
@@ -324,26 +355,26 @@
         }
       ],
       "actionText": "?: Accept the top card of the Missiones deck (unseen) as a Mission.",
-      "mission": null
+      "mission": null,
+      "tier": "t2"
     },
     {
       "id": "pat_11",
-      "name": "Marcus Ulpius Leurus",
+      "name": "Steph Curry",
       "deck": "Patricii",
       "type": "character",
-      "faction": "DSA",
-      "bio": "Senator during the reign of MAGA. May have been a DSA sympathizer.",
-      "combatFormula": "1(R)+1-1",
+      "faction": "MS13",
+      "bio": "“Not his fault that he has fans.”",
+      "combatFormula": "2X(R)+2X-1",
       "friendlyFavor": [
-        "DSA",
-        "-MAGA"
+        "MS13"
       ],
-      "friendlyReward": "10(d)",
+      "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
-        "-DSA",
-        "-ISIS"
+        "-MS13",
+        "-TECH"
       ],
-      "combatReward": "Cheapest Mkt Wine",
+      "combatReward": "13(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -367,212 +398,164 @@
         "category": "Meat Animal",
         "modifier": "+",
         "target": null
-      }
+      },
+      "tier": "t1"
     },
     {
       "id": "pat_12",
-      "name": "Quintus Anicius Faustus",
+      "name": "Chesa Boudin",
       "deck": "Patricii",
       "type": "character",
       "faction": "MS13",
-      "bio": "Built the desert forts of Roman Africa; sidelined by MAGA until recalled to govern Asia in 217.",
-      "combatFormula": "1(R)-1+1(R)+1",
+      "bio": "“Recalled, but not forgotten.”",
+      "combatFormula": "X(R)+X-1",
       "friendlyFavor": [
         "MS13",
-        "-TechBros"
+        "-MAGA"
       ],
-      "friendlyReward": "10(d)",
+      "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
-        "-MS13"
+        "-MS13",
+        "-TECH"
       ],
-      "combatReward": "12(d)",
+      "combatReward": "8(d)",
       "reactions": [
         {
           "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": ">=0",
+          "condition": ">=1",
           "type": "mission_request"
         }
       ],
-      "actionText": "Pick up Buffalo in F5 and Deliver to C2",
+      "actionText": "Kill a Celebrity in Combat",
       "mission": {
-        "kind": "delivery",
-        "item": "Buffalo",
-        "pickupCell": "F5",
-        "deliverCell": "C2",
-        "category": "Meat Animal",
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
         "modifier": null,
         "target": null,
-        "cargoSize": 2,
-        "payoutTable": [
-          19,
-          14,
-          10,
-          7,
-          4
-        ]
-      }
+        "targetDeck": "Patricii",
+        "name": "Chesa Boudin’s Job"
+      },
+      "tier": "t2"
     },
     {
       "id": "pat_13",
-      "name": "Publius Septimius ISIS",
+      "name": "Alice Huang",
       "deck": "Patricii",
       "type": "character",
       "faction": "ISIS",
-      "bio": "Co-Emperor. Ambushed by MAGA at a parley. Died in the arms of their mother, Julia TechBros.",
-      "combatFormula": "4(R)-1+1",
+      "bio": "“Nobody is quite sure how she got on the list.”",
+      "combatFormula": "2X(R)+2-1",
       "friendlyFavor": [
-        "ISIS",
-        "-MAGA"
+        "ISIS"
       ],
-      "friendlyReward": "3(d)",
+      "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
         "-ISIS",
-        "-MS13"
+        "-DSA",
+        "MAGA"
       ],
-      "combatReward": "10(d)",
+      "combatReward": "9(d)",
       "reactions": [
         {
           "condition": "<=0",
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_strict"
+          "condition": ">=1",
+          "type": "mission_request"
         }
       ],
-      "actionText": "Sell Marble at -- in C6",
-      "mission": {
-        "kind": "sell",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": "C6",
-        "category": "Marble",
-        "modifier": "--",
-        "target": null
-      }
-    },
-    {
-      "id": "pat_14",
-      "name": "Cornificia",
-      "deck": "Patricii",
-      "type": "character",
-      "faction": "DSA",
-      "bio": "Surviving daughter of Marcus MS13. Ordered to take her own life by MAGA after she wept openly with Julia TechBros over the murder of ISIS.",
-      "combatFormula": "1(R)-1",
-      "friendlyFavor": [
-        "DSA",
-        "-MAGA",
-        "MS13"
-      ],
-      "friendlyReward": "10(d)",
-      "hostileFavor": [
-        "-DSA",
-        "-MS13"
-      ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": ">=0",
-          "type": "mission_strict"
-        },
-        {
-          "condition": ">=2",
-          "type": "cash_reward",
-          "reward": "3(d)"
-        }
-      ],
-      "actionText": "Pick up Falernian in E6, Deliver to D2",
+      "actionText": "Pick up a shoebox of fentanyl in C3 and Deliver to D4",
       "mission": {
         "kind": "delivery",
-        "item": "Falernian",
-        "pickupCell": "E6",
-        "deliverCell": "D2",
-        "category": "Fancy Wine",
+        "item": "a shoebox of fentanyl",
+        "pickupCell": "C3",
+        "deliverCell": "D4",
+        "category": "Wine",
         "modifier": null,
         "target": null,
         "cargoSize": 1,
         "payoutTable": [
           54,
-          42,
-          32,
-          22,
-          16
-        ]
-      }
+          37,
+          23,
+          17,
+          13
+        ],
+        "name": "Alice Huang’s Job"
+      },
+      "tier": "t1"
     },
     {
-      "id": "pat_15",
-      "name": "Quintus Tineius Sacerdos",
+      "id": "pat_14",
+      "name": "Dr. Oz",
       "deck": "Patricii",
       "type": "character",
-      "faction": "DSA",
-      "bio": "Served as consul ordinarius in 219 with Emperor Elagabalus. Aligned with MS13.",
-      "combatFormula": "2(R)-1-1",
+      "faction": "ISIS",
+      "bio": "“Miracle cures, now with a studio audience.”",
+      "combatFormula": "X(R)+2-1",
       "friendlyFavor": [
-        "DSA",
         "ISIS"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
-        "-DSA",
-        "-ISIS"
+        "-ISIS",
+        "-DSA"
       ],
-      "combatReward": "12(d)",
+      "combatReward": "5(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=0",
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
-          "type": "offer"
+          "condition": ">=1",
+          "type": "mission_request"
         }
       ],
-      "actionText": "?: Will Sell one Animal from Market or Deck at > Scarcity",
+      "actionText": "Kill a Celebrity in Combat",
       "mission": {
-        "kind": "buy_from_npc",
+        "kind": "kill",
         "item": null,
         "pickupCell": null,
         "deliverCell": null,
-        "category": "Animal",
-        "modifier": ">",
-        "target": "Market or Deck"
-      }
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "Dr. Oz’s Job"
+      },
+      "tier": "t2"
     },
     {
       "id": "pat_16",
-      "name": "Lucius MS13 Commodus Pompeianus",
+      "name": "Jensen Huang",
       "deck": "Patricii",
       "type": "character",
       "faction": "DSA",
-      "bio": "MAGA took the precaution of making his murder appear to have been perpetrated by bandits.",
-      "combatFormula": "3(R)-1",
+      "bio": "“Leather jacket, trillion-dollar chips.”",
+      "combatFormula": "X(R)-1-1",
       "friendlyFavor": [
         "DSA",
-        "-MAGA",
-        "MS13",
-        "ISIS"
+        "-ISIS",
+        "TECH",
+        "-MAGA"
       ],
-      "friendlyReward": "20(d)",
+      "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-DSA",
-        "-MS13"
+        "TECH"
       ],
-      "combatReward": "16(d)",
+      "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
@@ -580,47 +563,40 @@
           "type": "mission_request"
         }
       ],
-      "actionText": "Pick up Cipollino in F2 and Deliver to B5",
+      "actionText": "Kill a Celebrity in Combat",
       "mission": {
-        "kind": "delivery",
-        "item": "Cipollino",
-        "pickupCell": "F2",
-        "deliverCell": "B5",
-        "category": "Marble",
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
         "modifier": null,
         "target": null,
-        "cargoSize": 3,
-        "payoutTable": [
-          80,
-          60,
-          36,
-          24,
-          12
-        ]
-      }
+        "targetDeck": "Patricii",
+        "name": "Jensen Huang’s Job"
+      },
+      "tier": "t2"
     },
     {
       "id": "pat_17",
-      "name": "Serenus Sammonicus",
+      "name": "Bernie Sanders",
       "deck": "Patricii",
       "type": "character",
       "faction": "DSA",
-      "bio": "Renowned physician-poet. Owner of a 62,000-scroll library. Hacked to death at dinner during 211 purge.",
-      "combatFormula": "1(R)-1",
+      "bio": "“Once again asking.”",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
         "DSA",
-        "-MAGA",
-        "ISIS"
+        "-MAGA"
       ],
-      "friendlyReward": "4(d)",
+      "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-DSA",
-        "-ISIS"
+        "-DSA"
       ],
-      "combatReward": "Cheapest Mkt Cheap Wine",
+      "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
@@ -641,28 +617,31 @@
         "category": "Any",
         "modifier": "10(d)",
         "target": "Goods deck"
-      }
+      },
+      "tier": "t2"
     },
     {
       "id": "pat_18",
-      "name": "Marcus Nummius Senecio Albinus",
+      "name": "Cornel West",
       "deck": "Patricii",
       "type": "character",
       "faction": "DSA",
-      "bio": "Served as consul in 227.",
-      "combatFormula": "1(R)-1",
+      "bio": "“Philosopher, preacher, perennial candidate.”",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
         "DSA",
-        "-TechBros",
-        "MS13"
+        "-MAGA"
       ],
-      "friendlyReward": "8(d)",
+      "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
-        "-DSA",
-        "-MS13"
+        "-DSA"
       ],
-      "combatReward": "20(d)",
+      "combatReward": "9(d)",
       "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
         {
           "condition": "<=-2",
           "type": "cash_reward",
@@ -679,26 +658,27 @@
         }
       ],
       "actionText": "?: Accept the top card of the Missiones deck (unseen) as a Mission.",
-      "mission": null
+      "mission": null,
+      "tier": "t2"
     },
     {
       "id": "pat_19",
-      "name": "Lucius Valerius Messalla Apollinaris",
+      "name": "Drag Queen",
       "deck": "Patricii",
       "type": "character",
       "faction": "DSA",
-      "bio": "Thought to have been the son of Thrasea Priscus. Served as consul in 214.",
-      "combatFormula": "1(R)-1",
+      "bio": "“Story hour starts at midnight.”",
+      "combatFormula": "X(R)-1-1",
       "friendlyFavor": [
         "DSA",
+        "-ISIS",
         "-MAGA"
       ],
-      "friendlyReward": "8(d)",
+      "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
-        "-DSA",
-        "-ISIS"
+        "-DSA"
       ],
-      "combatReward": "Cheapest Mkt Wine",
+      "combatReward": "6(d)",
       "reactions": [
         {
           "condition": "<=-2",
@@ -710,28 +690,30 @@
         }
       ],
       "actionText": "?: Accept the top card of the Missiones deck (unseen) as a Mission.",
-      "mission": null
+      "mission": null,
+      "tier": "gen"
     },
     {
       "id": "pat_20",
-      "name": "Lucius Valerius Messalla Thrasea Priscus",
+      "name": "Tenured Professor",
       "deck": "Patricii",
       "type": "character",
-      "faction": "ISIS",
-      "bio": "Patrician senator of ancient Republican lineage; executed during MAGA's purge as a suspected partisan of ISIS.",
-      "combatFormula": "1(R)-1+1",
+      "faction": "DSA",
+      "bio": "“Has a theory about you.”",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
-        "ISIS"
+        "DSA",
+        "-ISIS"
       ],
-      "friendlyReward": "3(d)",
+      "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-ISIS",
-        "-MS13"
+        "-DSA",
+        "MAGA"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "7(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
@@ -739,45 +721,41 @@
           "type": "mission_request"
         }
       ],
-      "actionText": "Pick up Lion in B3 and Deliver to D5",
+      "actionText": "Kill a Celebrity in Combat",
       "mission": {
-        "kind": "delivery",
-        "item": "Lion",
-        "pickupCell": "B3",
-        "deliverCell": "D5",
-        "category": "Exotic Animal",
-        "modifier": "2(R)-1 CP",
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
         "target": null,
-        "cargoSize": 2,
-        "payoutTable": [
-          33,
-          25,
-          17,
-          12,
-          9
-        ]
-      }
+        "targetDeck": "Patricii",
+        "name": "Tenured Professor’s Job"
+      },
+      "tier": "gen"
     },
     {
       "id": "pat_21",
-      "name": "Julia Maesa",
+      "name": "Indie Podcaster",
       "deck": "Patricii",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "Julia TechBros's older sister. Mother of Julia Soaemias and Julia Avita Mamaea.",
-      "combatFormula": "1(R)+1-1-1",
+      "faction": "DSA",
+      "bio": "“This episode is sponsored by you.”",
+      "combatFormula": "X(R)+1-1",
       "friendlyFavor": [
-        "TechBros"
+        "DSA",
+        "-ISIS",
+        "-MAGA"
       ],
-      "friendlyReward": "15(d)",
+      "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-TechBros",
         "-DSA"
       ],
-      "combatReward": "Cheapest Mkt Wine",
+      "combatReward": "7(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
@@ -798,309 +776,292 @@
         "category": "Marble",
         "modifier": "+",
         "target": null
-      }
+      },
+      "tier": "gen"
     },
     {
       "id": "pat_22",
-      "name": "Marcus MS13 Antoninus (MAGA)",
+      "name": "Burning Man Artist",
       "deck": "Patricii",
       "type": "character",
-      "faction": "MAGA",
-      "bio": "Senior Co-Emperor — nicknamed MAGA after the hooded Gallic tunic he popularized. Murdered his brother ISIS in December 211.",
-      "combatFormula": "4(R)-1",
+      "faction": "DSA",
+      "bio": "“Still finding playa dust.”",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
-        "MAGA",
+        "DSA",
+        "TECH",
+        "-MAGA"
+      ],
+      "friendlyReward": "+1 Influence",
+      "hostileFavor": [
         "-DSA",
-        "-MS13"
+        "MAGA"
       ],
-      "friendlyReward": "16(d)",
-      "hostileFavor": [
-        "-MAGA",
-        "DSA"
-      ],
-      "combatReward": "20(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": ">=0",
-          "type": "mission_strict"
-        }
-      ],
-      "actionText": "Pick up Oysters in A6 and Deliver to F1 by 5 a.m. next season",
-      "mission": {
-        "kind": "delivery",
-        "item": "Oysters",
-        "pickupCell": "A6",
-        "deliverCell": "F1",
-        "category": "Meat Animals",
-        "modifier": "by 5 a.m. next season",
-        "target": null,
-        "cargoSize": 1,
-        "payoutTable": [
-          32,
-          24,
-          16,
-          10,
-          7
-        ]
-      }
-    },
-    {
-      "id": "pat_23",
-      "name": "Cassius Dio",
-      "deck": "Patricii",
-      "type": "character",
-      "faction": "TechBros",
-      "bio": "Bithynian senator, member of Julia TechBros's court circle, and eyewitness historian.",
-      "combatFormula": "2(R)-1-1",
-      "friendlyFavor": [
-        "TechBros",
-        "-ISIS"
-      ],
-      "friendlyReward": "12(d)",
-      "hostileFavor": [
-        "-TechBros",
-        "-DSA"
-      ],
-      "combatReward": "18(d)",
+      "combatReward": "6(d)",
       "reactions": [
         {
           "condition": "<=-2",
           "type": "combat"
         },
         {
-          "condition": ">=-1",
-          "type": "mission_offer"
+          "condition": ">=0",
+          "type": "mission_request"
         }
       ],
-      "actionText": "Sell Fine Wine in A3 at + Scarcity",
+      "actionText": "Pick up a cooler of molly in D2 and Deliver to B2",
       "mission": {
-        "kind": "sell",
-        "item": "Fine Wine",
-        "pickupCell": null,
-        "deliverCell": "A3",
-        "category": "Wine",
-        "modifier": "+",
-        "target": null
-      }
+        "kind": "delivery",
+        "item": "a cooler of molly",
+        "pickupCell": "D2",
+        "deliverCell": "B2",
+        "category": "Marble",
+        "modifier": null,
+        "target": null,
+        "cargoSize": 1,
+        "payoutTable": [
+          80,
+          61,
+          46,
+          35,
+          26
+        ],
+        "name": "Burning Man Artist’s Job"
+      },
+      "tier": "gen"
+    },
+    {
+      "id": "pat_23",
+      "name": "Muralist",
+      "deck": "Patricii",
+      "type": "character",
+      "faction": "DSA",
+      "bio": "“Painted your face on a wall. You’re welcome.”",
+      "combatFormula": "X(R)-1",
+      "friendlyFavor": [
+        "DSA",
+        "-ISIS",
+        "TECH",
+        "-MAGA"
+      ],
+      "friendlyReward": "+1 Influence",
+      "hostileFavor": [
+        "-DSA",
+        "MAGA"
+      ],
+      "combatReward": "5(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)",
+      "mission": null,
+      "tier": "gen"
     },
     {
       "id": "pat_24",
-      "name": "Castor",
+      "name": "Climate Activist",
+      "deck": "Patricii",
+      "type": "character",
+      "faction": "DSA",
+      "bio": "“Glued to the Bay Bridge since Tuesday.”",
+      "combatFormula": "X(R)-1-1",
+      "friendlyFavor": [
+        "DSA",
+        "-ISIS",
+        "TECH",
+        "-MAGA"
+      ],
+      "friendlyReward": "Cheapest Henchman",
+      "hostileFavor": [
+        "-DSA",
+        "MAGA"
+      ],
+      "combatReward": "7(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "!!: Give me two Influence Cards (Can give all cards to take thumbs-down and no Combat)",
+      "mission": null,
+      "tier": "gen"
+    },
+    {
+      "id": "pat_25",
+      "name": "Crypto Influencer",
+      "deck": "Patricii",
+      "type": "character",
+      "faction": "TECH",
+      "bio": "“This is not financial advice.”",
+      "combatFormula": "X(R)-X-1",
+      "friendlyFavor": [
+        "TECH",
+        "-ISIS",
+        "MAGA"
+      ],
+      "friendlyReward": "+1 TECH Favor",
+      "hostileFavor": [
+        "-TECH",
+        "-MAGA"
+      ],
+      "combatReward": "10(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Sell Marble at + in F4",
+      "mission": {
+        "kind": "sell",
+        "item": "Marble",
+        "pickupCell": null,
+        "deliverCell": "F4",
+        "category": "Marble",
+        "modifier": "+",
+        "target": null,
+        "name": "Crypto Influencer’s Job"
+      },
+      "tier": "gen"
+    },
+    {
+      "id": "pat_26",
+      "name": "Startup Founder",
+      "deck": "Patricii",
+      "type": "character",
+      "faction": "TECH",
+      "bio": "“It’s like Uber, but for you.”",
+      "combatFormula": "X(R)-1-1",
+      "friendlyFavor": [
+        "TECH",
+        "-ISIS",
+        "MAGA",
+        "-DSA"
+      ],
+      "friendlyReward": "Cheapest Party Drugs",
+      "hostileFavor": [
+        "-TECH",
+        "DSA"
+      ],
+      "combatReward": "12(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Sell Grain at + in F4",
+      "mission": {
+        "kind": "sell",
+        "item": "Grain",
+        "pickupCell": null,
+        "deliverCell": "F4",
+        "category": "Grain",
+        "modifier": "+",
+        "target": null,
+        "name": "Startup Founder’s Job"
+      },
+      "tier": "gen"
+    },
+    {
+      "id": "pat_27",
+      "name": "AI Ethicist",
+      "deck": "Patricii",
+      "type": "character",
+      "faction": "TECH",
+      "bio": "“Concerned, professionally.”",
+      "combatFormula": "X(R)-X-1",
+      "friendlyFavor": [
+        "TECH"
+      ],
+      "friendlyReward": "+1 Influence",
+      "hostileFavor": [
+        "-TECH"
+      ],
+      "combatReward": "12(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Sell Marble at + in D3",
+      "mission": {
+        "kind": "sell",
+        "item": "Marble",
+        "pickupCell": null,
+        "deliverCell": "D3",
+        "category": "Marble",
+        "modifier": "+",
+        "target": null,
+        "name": "AI Ethicist’s Job"
+      },
+      "tier": "gen"
+    },
+    {
+      "id": "pat_28",
+      "name": "Edgelord Streamer",
       "deck": "Patricii",
       "type": "character",
       "faction": "ISIS",
-      "bio": "Confidant of Septimius Severus who tried to restrain MAGA's plots; ambushed and murdered by MAGA's henchmen in 211.",
-      "combatFormula": "1(R)-1+1",
+      "bio": "“Smash that like button.”",
+      "combatFormula": "X(R)-1-1",
       "friendlyFavor": [
-        "ISIS",
-        "-DSA"
+        "ISIS"
       ],
-      "friendlyReward": "5(d)",
+      "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-ISIS"
       ],
-      "combatReward": "Cheapest Mkt Cheap Wine",
+      "combatReward": "5(d)",
       "reactions": [
         {
           "condition": "<=0",
           "type": "combat"
         },
         {
-          "condition": "=0",
-          "type": "mission_request"
+          "condition": "<=0",
+          "type": "demand_strict"
         },
         {
           "condition": ">=1",
-          "type": "mission_offer"
-        }
-      ],
-      "actionText": "Pick up Imperial Porphyry in D5 and Deliver to A1",
-      "mission": {
-        "name": "Severus's Funerary Urn",
-        "kind": "delivery",
-        "item": "Imperial Porphyry",
-        "pickupCell": "D5",
-        "deliverCell": "A1",
-        "category": "Marble",
-        "modifier": null,
-        "target": null,
-        "cargoSize": 2,
-        "payoutTable": [
-          42,
-          30,
-          19,
-          14,
-          8
-        ]
-      }
-    },
-    {
-      "id": "pat_25",
-      "name": "Publius Helvius Pertinax Jr",
-      "deck": "Patricii",
-      "type": "character",
-      "faction": "DSA",
-      "bio": "Son of Pertinax; executed for joking that MAGA should add 'Geticus Maximus' to his victory titles for slaying ISIS.",
-      "combatFormula": "1(R)-1",
-      "friendlyFavor": [
-        "DSA",
-        "-MAGA"
-      ],
-      "friendlyReward": "8(d)",
-      "hostileFavor": [
-        "-DSA"
-      ],
-      "combatReward": "Cheapest Mkt Wine",
-      "reactions": [
-        {
-          "condition": "<=-2",
-          "type": "combat"
-        },
-        {
-          "condition": ">=-1",
-          "type": "mission_offer"
-        }
-      ],
-      "actionText": "Sell Oysters at + in B6",
-      "mission": {
-        "kind": "sell",
-        "item": "Oysters",
-        "pickupCell": null,
-        "deliverCell": "B6",
-        "category": "Meat Animals",
-        "modifier": "+",
-        "target": null
-      }
-    },
-    {
-      "id": "pat_26",
-      "name": "Gaius Julius Avitus Alexianus",
-      "deck": "Patricii",
-      "type": "character",
-      "faction": "TechBros",
-      "bio": "Husband of Julia Maesa and prefect of imperial child-welfare endowments under MAGA.",
-      "combatFormula": "1(R)-1-1",
-      "friendlyFavor": [
-        "TechBros"
-      ],
-      "friendlyReward": "18(d)",
-      "hostileFavor": [
-        "-TechBros",
-        "-MAGA"
-      ],
-      "combatReward": "24(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": ">=0",
-          "type": "deck_quest_demand"
-        }
-      ],
-      "actionText": "!: Accept the top card of the Missiones deck (unseen) as a Mission.",
-      "mission": null
-    },
-    {
-      "id": "pat_27",
-      "name": "Gaius Septimius Severus Aper",
-      "deck": "Patricii",
-      "type": "character",
-      "faction": "DSA",
-      "bio": "Consul Ordinarius in 207. Executed in late 211 or early 212.",
-      "combatFormula": "2(R)-1",
-      "friendlyFavor": [
-        "DSA",
-        "-TechBros",
-        "ISIS"
-      ],
-      "friendlyReward": "6(d)",
-      "hostileFavor": [
-        "-DSA",
-        "-ISIS",
-        "-MS13"
-      ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": ">=0",
-          "type": "mission_strict"
-        },
-        {
-          "condition": ">=2",
-          "type": "cash_reward",
-          "reward": "3(d)"
-        }
-      ],
-      "actionText": "Sell Opimian at + in C5",
-      "mission": {
-        "kind": "sell",
-        "item": "Opimian",
-        "pickupCell": null,
-        "deliverCell": "C5",
-        "category": "Fancy Wine",
-        "modifier": "+",
-        "target": null
-      }
-    },
-    {
-      "id": "pat_28",
-      "name": "Aemilius Papinianus",
-      "deck": "Patricii",
-      "type": "character",
-      "faction": "TechBros",
-      "bio": "Celebrated jurist. Executed for refusing to compose a legal defense for ISIS's murder.",
-      "combatFormula": "1(R)+1-1-1",
-      "friendlyFavor": [
-        "TechBros"
-      ],
-      "friendlyReward": "15(d)",
-      "hostileFavor": [
-        "-TechBros",
-        "-MAGA"
-      ],
-      "combatReward": "15(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": ">=0",
-          "type": "mission_request"
-        },
-        {
-          "condition": ">=2",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Pick up Opimian in C1 and deliver to F2",
-      "mission": {
-        "kind": "delivery",
-        "item": "Opimian",
-        "pickupCell": "C1",
-        "deliverCell": "F2",
-        "category": "Fancy Wine",
-        "modifier": null,
-        "target": null,
-        "cargoSize": 1,
-        "payoutTable": [
-          60,
-          44,
-          36,
-          28,
-          18
-        ]
-      }
+      "actionText": "!!: Give me two Influence Cards (Can give all cards to take thumbs-down and no Combat)",
+      "mission": null,
+      "tier": "gen"
     },
     {
       "id": "pat_29",
@@ -1120,100 +1081,239 @@
     },
     {
       "id": "pat_30",
-      "name": "Julia TechBros",
+      "name": "Radicalized YouTuber",
       "deck": "Patricii",
       "type": "character",
-      "faction": "DSA",
-      "bio": "Empress mother of ISIS and MAGA. Committed suicide following MAGA's assassination in 217.",
-      "combatFormula": "2(R)-1",
+      "faction": "ISIS",
+      "bio": "“Did his own research.”",
+      "combatFormula": "X(R)+1-1",
       "friendlyFavor": [
-        "DSA",
-        "MS13"
+        "ISIS"
       ],
-      "friendlyReward": "16(d)",
+      "friendlyReward": "Cheapest Weed",
       "hostileFavor": [
-        "-DSA",
-        "-MS13",
         "-ISIS"
       ],
-      "combatReward": "30(d)",
+      "combatReward": "4(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "cash_reward",
-          "reward": "4(d)"
+          "condition": "<=0",
+          "type": "combat"
         },
         {
-          "condition": ">=-1",
-          "type": "mission_offer"
-        },
-        {
-          "condition": ">=2",
-          "type": "cash_reward",
-          "reward": "12(d)"
+          "condition": ">=1",
+          "type": "mission_request"
         }
       ],
-      "actionText": "Sell Marble at = in B2",
+      "actionText": "Sell Weapons at + in D4",
       "mission": {
         "kind": "sell",
-        "item": null,
+        "item": "Weapons",
         "pickupCell": null,
-        "deliverCell": "B2",
-        "category": "Marble",
-        "modifier": "=",
-        "target": null
-      }
+        "deliverCell": "D4",
+        "category": "Weapons",
+        "modifier": "+",
+        "target": null,
+        "name": "Radicalized YouTuber’s Job"
+      },
+      "tier": "gen"
     }
   ],
   "legiones": [
     {
       "id": "leg_1",
-      "name": "Publius Catius Sabinus",
+      "name": "Mayor Lurie",
       "deck": "Legiones",
       "type": "character",
-      "faction": "MAGA",
-      "bio": "Intimate supporter of MAGA. Ordered killed by Elagabalus, but mistakenly expelled from Rome instead.",
-      "combatFormula": "X(R)+1(R)",
+      "faction": "TECH",
+      "bio": "“Let’s go, San Francisco.”",
+      "combatFormula": "6X(R)+1",
       "friendlyFavor": [
+        "TECH",
+        "-ISIS",
         "MAGA"
       ],
-      "friendlyReward": "8(d)",
+      "friendlyReward": "37(d) & +1 TECH Favor",
       "hostileFavor": [
-        "-MAGA"
+        "-TECH",
+        "-MAGA",
+        "DSA"
       ],
-      "combatReward": "10(d)",
+      "combatReward": "36(d)",
       "reactions": [
         {
-          "condition": "<=-1",
-          "type": "demand_strict"
+          "condition": "<=-2",
+          "type": "combat"
         },
         {
           "condition": ">=0",
-          "type": "deck_quest_demand"
+          "type": "mission_request"
         }
       ],
-      "actionText": "!!: Give me (R) x 4(d) (Can give all (d) and take thumbs-down and no Combat)",
-      "mission": null
+      "actionText": "Sell Animals at ++ in A1",
+      "mission": {
+        "kind": "sell",
+        "item": "Animals",
+        "pickupCell": null,
+        "deliverCell": "A1",
+        "category": "Animals",
+        "modifier": "++",
+        "target": null,
+        "name": "Mayor Lurie’s Job"
+      },
+      "tier": "top"
     },
     {
       "id": "leg_2",
-      "name": "Publius Cornelius Anulinus",
+      "name": "Scott Wiener",
       "deck": "Legiones",
       "type": "character",
-      "faction": "DSA",
-      "bio": "Would serve as Consul ordinarius in 216.",
-      "combatFormula": "X+1(R)",
+      "faction": "TECH",
+      "bio": "“SF’s first openly gay Congressman.”",
+      "combatFormula": "X(R)-X+1",
       "friendlyFavor": [
+        "TECH",
+        "-ISIS",
+        "MAGA"
+      ],
+      "friendlyReward": "Cheapest Party Drugs",
+      "hostileFavor": [
+        "-TECH",
+        "-MAGA",
         "DSA"
       ],
-      "friendlyReward": "3(d)",
-      "hostileFavor": [
-        "-DSA"
-      ],
-      "combatReward": "6(d)",
+      "combatReward": "14(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Sell Grain at + in F6",
+      "mission": {
+        "kind": "sell",
+        "item": "Grain",
+        "pickupCell": null,
+        "deliverCell": "F6",
+        "category": "Grain",
+        "modifier": "+",
+        "target": null,
+        "name": "Scott Wiener’s Job"
+      },
+      "tier": "t2"
+    },
+    {
+      "id": "leg_3",
+      "name": "Paul Graham",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "TECH",
+      "bio": "“Has an essay about this.”",
+      "combatFormula": "X(R)-1+1",
+      "friendlyFavor": [
+        "TECH",
+        "-ISIS",
+        "MAGA",
+        "-DSA"
+      ],
+      "friendlyReward": "Cheapest Weed",
+      "hostileFavor": [
+        "-TECH",
+        "-MAGA",
+        "DSA"
+      ],
+      "combatReward": "14(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Sell Marble at + in F3",
+      "mission": {
+        "kind": "sell",
+        "item": "Marble",
+        "pickupCell": null,
+        "deliverCell": "F3",
+        "category": "Marble",
+        "modifier": "+",
+        "target": null,
+        "name": "Paul Graham’s Job"
+      },
+      "tier": "t2"
+    },
+    {
+      "id": "leg_4",
+      "name": "FBI",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "TECH",
+      "bio": "“We’ve been reading your texts.”",
+      "combatFormula": "2X(R)-1+1",
+      "friendlyFavor": [
+        "TECH",
+        "-ISIS"
+      ],
+      "friendlyReward": "+1 Influence",
+      "hostileFavor": [
+        "-TECH",
+        "DSA"
+      ],
+      "combatReward": "21(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Sell Marble at + in B4",
+      "mission": {
+        "kind": "sell",
+        "item": "Marble",
+        "pickupCell": null,
+        "deliverCell": "B4",
+        "category": "Marble",
+        "modifier": "+",
+        "target": null,
+        "name": "FBI’s Job"
+      },
+      "tier": "t1"
+    },
+    {
+      "id": "leg_5",
+      "name": "CIA",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "TECH",
+      "bio": "“This encounter never happened.”",
+      "combatFormula": "2X(R)-1+1",
+      "friendlyFavor": [
+        "TECH",
+        "-ISIS",
+        "-DSA"
+      ],
+      "friendlyReward": "Cheapest Party Drugs",
+      "hostileFavor": [
+        "-TECH",
+        "-MAGA",
+        "DSA"
+      ],
+      "combatReward": "21(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
           "type": "combat"
         },
         {
@@ -1222,39 +1322,162 @@
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_demand"
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Fine Wine (if Player has no Fine W, no demand)",
-      "mission": null
+      "actionText": "!!: Give me your most valuable Item (highest Uncommon Sell Price)",
+      "mission": null,
+      "tier": "t1"
     },
     {
-      "id": "leg_3",
-      "name": "Macrinus",
+      "id": "leg_6",
+      "name": "Meter Maid",
       "deck": "Legiones",
       "type": "character",
-      "faction": "MAGA",
-      "bio": "Conspired to assassinate MAGA after a seer prophesied that he would become Emperor. Emperor from 217-218.",
-      "combatFormula": "X(R)+1(R)",
+      "faction": "TECH",
+      "bio": "“You can’t park there.”",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
-        "MAGA"
+        "TECH",
+        "-ISIS",
+        "-DSA"
       ],
-      "friendlyReward": "50(d)",
+      "friendlyReward": "Cheapest Weed",
       "hostileFavor": [
-        "-MAGA"
+        "-TECH",
+        "-MAGA",
+        "DSA"
+      ],
+      "combatReward": "5(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
+      "tier": "meter"
+    },
+    {
+      "id": "leg_7",
+      "name": "Traffic Cop",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "TECH",
+      "bio": "“License and registration.”",
+      "combatFormula": "X(R)-X",
+      "friendlyFavor": [
+        "TECH",
+        "-ISIS",
+        "MAGA",
+        "-DSA"
+      ],
+      "friendlyReward": "+1 TECH Favor",
+      "hostileFavor": [
+        "-TECH",
+        "-MAGA",
+        "DSA"
       ],
       "combatReward": "8(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Sell Marble at + in C4",
+      "mission": {
+        "kind": "sell",
+        "item": "Marble",
+        "pickupCell": null,
+        "deliverCell": "C4",
+        "category": "Marble",
+        "modifier": "+",
+        "target": null,
+        "name": "Traffic Cop’s Job"
+      },
+      "tier": "traffic"
+    },
+    {
+      "id": "leg_8",
+      "name": "Rookie",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "TECH",
+      "bio": "“First night on the job.”",
+      "combatFormula": "X",
+      "friendlyFavor": [
+        "TECH",
+        "-ISIS",
+        "MAGA",
+        "-DSA"
+      ],
+      "friendlyReward": "+1 Influence",
+      "hostileFavor": [
+        "-TECH",
+        "-MAGA"
+      ],
+      "combatReward": "5(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "!!: Give me your most valuable Item (highest Uncommon Sell Price)",
+      "mission": null,
+      "tier": "rookie"
+    },
+    {
+      "id": "leg_9",
+      "name": "Nayib Bukele",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "MS13",
+      "bio": "“Zero percent homicide rate, one hundred percent megaprison.”",
+      "combatFormula": "3X(R)+2X+1",
+      "friendlyFavor": [
+        "MS13",
+        "-MAGA"
+      ],
+      "friendlyReward": "29(d) & Cheapest Uppers",
+      "hostileFavor": [
+        "-MS13",
+        "-TECH"
+      ],
+      "combatReward": "29(d)",
       "reactions": [
         {
           "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_strict"
+          "condition": ">=1",
+          "type": "mission_request"
         }
       ],
-      "actionText": "Kill the Emperor (Complete if any Player kills either Emperor)",
+      "actionText": "Kill a Cop in Combat",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -1262,25 +1485,30 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": "The Emperor"
-      }
+        "target": null,
+        "targetDeck": "Legiones",
+        "name": "Nayib Bukele’s Job"
+      },
+      "tier": "leader"
     },
     {
-      "id": "leg_4",
-      "name": "Clodius Pompeianus",
+      "id": "leg_10",
+      "name": "Dirty Cop",
       "deck": "Legiones",
       "type": "character",
       "faction": "MS13",
-      "bio": "Member of the Claudian MS13 dynasty. Consul in 241.",
-      "combatFormula": "X(R)+1+1(R)+1(R)+1",
+      "bio": "“On two payrolls.”",
+      "combatFormula": "X(R)+X+1",
       "friendlyFavor": [
-        "MS13"
+        "MS13",
+        "-MAGA"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "Cheapest Party Drugs",
       "hostileFavor": [
-        "-MS13"
+        "-MS13",
+        "-TECH"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "9(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -1296,465 +1524,191 @@
         }
       ],
       "actionText": "!!: Give me 6(d) (If Player has <6(d), can take thumbs-down and avoid Combat by paying all (d))",
-      "mission": null
-    },
-    {
-      "id": "leg_5",
-      "name": "Tiberius Claudius MS13 Quintianus",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "MAGA",
-      "bio": "Great-grandson of Marcus MS13; served as military tribune and senator under MAGA.",
-      "combatFormula": "X(R)+X+1(R)",
-      "friendlyFavor": [
-        "MAGA",
-        "TechBros"
-      ],
-      "friendlyReward": "7(d)",
-      "hostileFavor": [
-        "-MAGA",
-        "-TechBros"
-      ],
-      "combatReward": "8(d)",
-      "reactions": [
-        {
-          "condition": "<=-2",
-          "type": "combat"
-        },
-        {
-          "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "!!: Give me half of your Cash (give >=50% of all (d) or face Combat)",
-      "mission": null
-    },
-    {
-      "id": "leg_6",
-      "name": "Vigiles Urbani",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "DSA",
-      "bio": "Watchmen of the city. Primarily firefighters.",
-      "combatFormula": "X(R)-1+1(R)",
-      "friendlyFavor": [
-        "DSA"
-      ],
-      "friendlyReward": "6(d)",
-      "hostileFavor": [
-        "-DSA"
-      ],
-      "combatReward": "4(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": "<=1",
-          "type": "demand"
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_demand"
-        }
-      ],
-      "actionText": "!: Give me all of your Grain (if Player has no Grain, no demand)",
-      "mission": null
-    },
-    {
-      "id": "leg_7",
-      "name": "Centurions",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "DSA",
-      "bio": "Roman soldiers.",
-      "combatFormula": "X(R)+1(R)",
-      "friendlyFavor": [
-        "DSA"
-      ],
-      "friendlyReward": "8(d)",
-      "hostileFavor": [
-        "-DSA"
-      ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=0",
-          "type": "deck_quest_demand"
-        }
-      ],
-      "actionText": "!!: Give me (R) Influence Cards (Can give all Cards and take thumbs-down and no Combat)",
-      "mission": null
-    },
-    {
-      "id": "leg_8",
-      "name": "Praetorian Guard",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "ISIS",
-      "bio": "The Imperial Guard.",
-      "combatFormula": "X(R)+X+1(R)+1",
-      "friendlyFavor": [
-        "ISIS",
-        "-TechBros"
-      ],
-      "friendlyReward": "2(d)",
-      "hostileFavor": [
-        "-ISIS",
-        "TechBros"
-      ],
-      "combatReward": "5(d)",
-      "reactions": [
-        {
-          "condition": "<=0",
-          "type": "combat"
-        },
-        {
-          "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "!!: Give me all of your Exotic Animals (Player has no Exotic A, no demand)",
-      "mission": null
-    },
-    {
-      "id": "leg_9",
-      "name": "Praetorian Guard",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "TechBros",
-      "bio": "The Imperial Guard.",
-      "combatFormula": "X+1+1(R)-1",
-      "friendlyFavor": [
-        "TechBros"
-      ],
-      "friendlyReward": "8(d)",
-      "hostileFavor": [
-        "-TechBros"
-      ],
-      "combatReward": "18(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=0",
-          "type": "deck_quest_demand"
-        }
-      ],
-      "actionText": "!!: Give me your most valuable Item (highest Uncommon Sell Price)",
-      "mission": null
-    },
-    {
-      "id": "leg_10",
-      "name": "Cohortes Urbanae",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "MAGA",
-      "bio": "Roman police force used to counterbalance the Praetorian Guard.",
-      "combatFormula": "X(R)+1+1(R)",
-      "friendlyFavor": [
-        "MAGA",
-        "TechBros"
-      ],
-      "friendlyReward": "6(d)",
-      "hostileFavor": [
-        "-MAGA",
-        "-TechBros"
-      ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": "<=1",
-          "type": "demand"
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "!: Give me 4(d) (If Player has <4(d), receive thumbs-down)",
-      "mission": null
+      "mission": null,
+      "tier": "t2"
     },
     {
       "id": "leg_11",
-      "name": "Sextus Varius Marcellus",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "TechBros",
-      "bio": "Married to Julia Soaemias, father of future emperor Elagabalus; served as Prefect in Rome in 211.",
-      "combatFormula": "X+1+1(R)-1",
-      "friendlyFavor": [
-        "TechBros",
-        "-ISIS"
-      ],
-      "friendlyReward": "14(d)",
-      "hostileFavor": [
-        "-TechBros"
-      ],
-      "combatReward": "12(d)",
-      "reactions": [
-        {
-          "condition": "<=-2",
-          "type": "combat"
-        },
-        {
-          "condition": "<=1",
-          "type": "demand"
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "!: Give me 4(d) (If player has <4(d), receive thumbs-down)",
-      "mission": null
-    },
-    {
-      "id": "leg_12",
-      "name": "Praetorian Guard",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "MAGA",
-      "bio": "The Imperial Guard.",
-      "combatFormula": "X(R)+X+1(R)",
-      "friendlyFavor": [
-        "MAGA",
-        "-DSA"
-      ],
-      "friendlyReward": "7(d)",
-      "hostileFavor": [
-        "-MAGA",
-        "DSA"
-      ],
-      "combatReward": "8(d)",
-      "reactions": [
-        {
-          "condition": "<=-2",
-          "type": "combat"
-        },
-        {
-          "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "!!: Give me two Influence Cards (Can give all cards to take thumbs-down and no Combat)",
-      "mission": null
-    },
-    {
-      "id": "leg_13",
-      "name": "Quintus Maecius Laetus",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "MAGA",
-      "bio": "Veteran equestrian commander and Praetorian Prefect in 211. Appointed at Septimius Severus's deathbed.",
-      "combatFormula": "X(R)+1+1(R)",
-      "friendlyFavor": [
-        "MAGA",
-        "-MS13"
-      ],
-      "friendlyReward": "8(d)",
-      "hostileFavor": [
-        "-MAGA",
-        "MS13"
-      ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=-2",
-          "type": "combat"
-        },
-        {
-          "condition": "<=0",
-          "type": "mission_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_offer"
-        }
-      ],
-      "actionText": "Sell Weapons at + in A1",
-      "mission": {
-        "name": "Arm the Mausoleum Watch",
-        "kind": "sell",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": "A1",
-        "category": "Weapons",
-        "modifier": "+",
-        "target": null
-      }
-    },
-    {
-      "id": "leg_14",
-      "name": "Lucius Tiberius Claudius Pompeianus",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "MAGA",
-      "bio": "Son of Lucius A.C. Pompeianus. Great grandson of Marcus MS13. Consul in 231.",
-      "combatFormula": "X(R)-1+1(R)",
-      "friendlyFavor": [
-        "MAGA",
-        "TechBros",
-        "ISIS"
-      ],
-      "friendlyReward": "5(d)",
-      "hostileFavor": [
-        "-MAGA",
-        "-TechBros",
-        "-ISIS"
-      ],
-      "combatReward": "10(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
-      "mission": null
-    },
-    {
-      "id": "leg_15",
-      "name": "Gaius Vettius Gratus Sabinianus",
+      "name": "Jared Kushner",
       "deck": "Legiones",
       "type": "character",
       "faction": "ISIS",
-      "bio": "Curator of Via Flaminia. Responsible for Rome's food supply.",
-      "combatFormula": "X(R)+1+1(R)+1",
+      "bio": "“‘I’ve spoken to every leader in the region.’”",
+      "combatFormula": "3X(R)+X+1",
       "friendlyFavor": [
-        "ISIS"
+        "ISIS",
+        "MAGA",
+        "DSA",
+        "TECH"
       ],
-      "friendlyReward": "2(d)",
+      "friendlyReward": "23(d)",
       "hostileFavor": [
-        "-ISIS"
+        "-ISIS",
+        "MAGA"
       ],
-      "combatReward": "5(d)",
+      "combatReward": "17(d)",
       "reactions": [
         {
           "condition": "<=0",
           "type": "combat"
         },
         {
+          "condition": ">=1",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Kill a Celebrity in Combat",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "Jared Kushner’s Job"
+      },
+      "tier": "leader"
+    },
+    {
+      "id": "leg_12",
+      "name": "Ocasio-Cortez",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "DSA",
+      "bio": "“The Squad’s sharpest elbow.”",
+      "combatFormula": "2X(R)+1+1",
+      "friendlyFavor": [
+        "DSA",
+        "-ISIS",
+        "-MAGA"
+      ],
+      "friendlyReward": "28(d) & +1 Influence",
+      "hostileFavor": [
+        "-DSA",
+        "TECH"
+      ],
+      "combatReward": "27(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
           "condition": ">=0",
           "type": "mission_request"
         }
       ],
-      "actionText": "Pick up Rye in B1, Deliver to C4",
+      "actionText": "Sell Grain at - in E2",
       "mission": {
-        "kind": "delivery",
-        "item": "Rye",
-        "pickupCell": "B1",
-        "deliverCell": "C4",
+        "kind": "sell",
+        "item": "Grain",
+        "pickupCell": null,
+        "deliverCell": "E2",
         "category": "Grain",
-        "modifier": null,
+        "modifier": "-",
         "target": null,
-        "cargoSize": 2,
-        "payoutTable": [
-          18,
-          11,
-          7,
-          5,
-          3
-        ]
-      }
+        "name": "Ocasio-Cortez’s Job"
+      },
+      "tier": "leader"
     },
     {
-      "id": "leg_16",
-      "name": "Legio II Parthica ('The Albanians')",
+      "id": "leg_13",
+      "name": "Dean Preston",
       "deck": "Legiones",
       "type": "character",
-      "faction": "MAGA",
-      "bio": "Barred their camp gates against MAGA after ISIS's murder until bribed with vast donatives.",
-      "combatFormula": "X(R)+1(R)",
+      "faction": "DSA",
+      "bio": "“Never met a rent increase he liked.”",
+      "combatFormula": "X(R)+1+1",
       "friendlyFavor": [
-        "MAGA",
-        "TechBros"
+        "DSA",
+        "-ISIS",
+        "TECH"
       ],
-      "friendlyReward": "9(d)",
+      "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
-        "-MAGA",
-        "-TechBros"
-      ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": "=0",
-          "type": "mission_request"
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_offer"
-        }
-      ],
-      "actionText": "Pick up Hadrianum in A1 and Deliver to F6",
-      "mission": {
-        "name": "Libations for the Alban Camp",
-        "kind": "delivery",
-        "item": "Hadrianum",
-        "pickupCell": "A1",
-        "deliverCell": "F6",
-        "category": "Fine Wine",
-        "modifier": null,
-        "target": null,
-        "cargoSize": 1,
-        "payoutTable": [
-          36,
-          23,
-          15,
-          11,
-          6
-        ]
-      }
-    },
-    {
-      "id": "leg_17",
-      "name": "Quintus Virius Egnatius Sulpicius Priscus",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "MAGA",
-      "bio": "Suffect Consul sometime under MAGA.",
-      "combatFormula": "X(R)-1+1(R)",
-      "friendlyFavor": [
+        "-DSA",
+        "TECH",
         "MAGA"
-      ],
-      "friendlyReward": "16(d)",
-      "hostileFavor": [
-        "-MAGA"
       ],
       "combatReward": "8(d)",
       "reactions": [
         {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "!!: Give me your most valuable Item (highest Uncommon Sell Price)",
+      "mission": null,
+      "tier": "t2"
+    },
+    {
+      "id": "leg_14",
+      "name": "Firefighters",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "DSA",
+      "bio": "“The only cops the DSA likes.”",
+      "combatFormula": "X(R)-1+1",
+      "friendlyFavor": [
+        "DSA",
+        "-ISIS",
+        "-MAGA"
+      ],
+      "friendlyReward": "Cheapest Weapon",
+      "hostileFavor": [
+        "-DSA"
+      ],
+      "combatReward": "7(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "!!: Give me 6(d) (If Player has <6(d), can take thumbs-down and avoid Combat by paying all (d))",
+      "mission": null,
+      "tier": "gen"
+    },
+    {
+      "id": "leg_15",
+      "name": "Harmeet Dhillon",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "MAGA",
+      "bio": "“Civil rights, selectively.”",
+      "combatFormula": "2X(R)+1+1",
+      "friendlyFavor": [
+        "MAGA",
+        "-ISIS",
+        "-DSA"
+      ],
+      "friendlyReward": "Cheapest Uppers",
+      "hostileFavor": [
+        "-MAGA",
+        "ISIS",
+        "TECH"
+      ],
+      "combatReward": "15(d)",
+      "reactions": [
+        {
           "condition": "<=-1",
           "type": "combat"
         },
@@ -1763,35 +1717,123 @@
           "type": "mission_request"
         }
       ],
-      "actionText": "Pick up cheapest Marble on Mkt in C3 and deliver to D6. (lowest present Sell Price)",
+      "actionText": "Kill a Celebrity in Combat",
       "mission": {
-        "kind": "delivery",
-        "item": "Cheapest Marble on Mkt",
-        "pickupCell": "C3",
-        "deliverCell": "D6",
-        "category": "Marble",
-        "modifier": "lowest present Sell Price",
-        "target": null
-      }
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "Harmeet Dhillon’s Job"
+      },
+      "tier": "t1"
+    },
+    {
+      "id": "leg_16",
+      "name": "Vivek Ramaswamy",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "MAGA",
+      "bio": "“Talks fast. Cuts faster.”",
+      "combatFormula": "X(R)+X+1",
+      "friendlyFavor": [
+        "MAGA",
+        "-ISIS",
+        "-DSA",
+        "-TECH"
+      ],
+      "friendlyReward": "Cheapest Uppers",
+      "hostileFavor": [
+        "-MAGA",
+        "ISIS",
+        "DSA"
+      ],
+      "combatReward": "11(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "!!: Give me 6(d) (If Player has <6(d), can take thumbs-down and avoid Combat by paying all (d))",
+      "mission": null,
+      "tier": "t2"
+    },
+    {
+      "id": "leg_17",
+      "name": "Rudy Giuliani",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "MAGA",
+      "bio": "“Live from Four Seasons Total Landscaping.”",
+      "combatFormula": "X(R)+1+1",
+      "friendlyFavor": [
+        "MAGA",
+        "-ISIS",
+        "-DSA",
+        "-TECH"
+      ],
+      "friendlyReward": "Cheapest Uppers",
+      "hostileFavor": [
+        "-MAGA",
+        "ISIS",
+        "DSA",
+        "TECH",
+        "MS13"
+      ],
+      "combatReward": "11(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "!!: Give me 4(d) (Can give all (d) to take thumbs-down and no Combat)",
+      "mission": null,
+      "tier": "t2"
     },
     {
       "id": "leg_18",
-      "name": "Cohortes Urbanae",
+      "name": "SFPD",
       "deck": "Legiones",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "Roman city guard. These ones are loyal to DSA.",
-      "combatFormula": "X(R)+1(R)-1",
+      "faction": "MAGA",
+      "bio": "“Response time: eventually.”",
+      "combatFormula": "X(R)+1+1",
       "friendlyFavor": [
-        "TechBros",
-        "MAGA"
+        "MAGA",
+        "-ISIS",
+        "-DSA",
+        "-TECH"
       ],
-      "friendlyReward": "14(d)",
+      "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
-        "-TechBros",
-        "-MAGA"
+        "-MAGA",
+        "ISIS",
+        "DSA",
+        "TECH",
+        "MS13"
       ],
-      "combatReward": "15(d)",
+      "combatReward": "8(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -1807,67 +1849,80 @@
         }
       ],
       "actionText": "?: Move again this turn",
-      "mission": null
+      "mission": null,
+      "tier": "gen"
     },
     {
       "id": "leg_19",
-      "name": "Gaius Octavius Appius Suetrius Sabinus",
+      "name": "DEA",
       "deck": "Legiones",
       "type": "character",
       "faction": "MAGA",
-      "bio": "Served under MAGA. Lived on the Aventine.",
-      "combatFormula": "X+1+1(R)",
+      "bio": "“Just say no.”",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
-        "MAGA"
+        "MAGA",
+        "-ISIS",
+        "-DSA",
+        "-TECH"
       ],
-      "friendlyReward": "5(d)",
+      "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
-        "-MAGA"
+        "-MAGA",
+        "ISIS",
+        "DSA",
+        "TECH"
       ],
-      "combatReward": "Weapon",
+      "combatReward": "7(d)",
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "mission_strict"
+          "type": "combat"
         },
         {
           "condition": ">=0",
           "type": "mission_request"
         }
       ],
-      "actionText": "Pick up priciest Meat A on Mkt in F4 and deliver to B5. (highest present Sell Price) (if no Meat A on Mkt, no mission)",
+      "actionText": "Kill a Celebrity in Combat",
       "mission": {
-        "kind": "delivery",
-        "item": "Priciest Meat Animal on Mkt",
-        "pickupCell": "F4",
-        "deliverCell": "B5",
-        "category": "Meat Animal",
-        "modifier": "highest present Sell Price",
-        "target": null
-      }
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "DEA’s Job"
+      },
+      "tier": "gen"
     },
     {
       "id": "leg_20",
-      "name": "Julius Martialis",
+      "name": "ICE",
       "deck": "Legiones",
       "type": "character",
       "faction": "MAGA",
-      "bio": "Initial assassin in the murder of MAGA.",
-      "combatFormula": "X(R)+1+1(R)",
+      "bio": "“Papers, please.”",
+      "combatFormula": "X(R)-1+1",
       "friendlyFavor": [
         "MAGA",
-        "TechBros",
-        "ISIS"
+        "-ISIS",
+        "-DSA",
+        "-TECH"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MAGA",
-        "-TechBros"
+        "ISIS",
+        "DSA",
+        "TECH"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
@@ -1879,96 +1934,33 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me 5(d) (If Player has <5(d), can take thumbs-down and avoid Combat by paying all (d))",
-      "mission": null
+      "actionText": "!!: Give me your most valuable Item (highest Uncommon Sell Price)",
+      "mission": null,
+      "tier": "gen"
     },
     {
       "id": "leg_21",
-      "name": "Quintus Hedius Lollianus Plautius Avitus",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "MS13",
-      "bio": "Consul ordinarius in 209. Not killed by MAGA.",
-      "combatFormula": "X+1(R)+1(R)+1",
-      "friendlyFavor": [
-        "MS13"
-      ],
-      "friendlyReward": "3(d)",
-      "hostileFavor": [
-        "-MS13"
-      ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_demand"
-        }
-      ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
-      "mission": null
-    },
-    {
-      "id": "leg_22",
-      "name": "Titus Flavius Sallustius Paelignianus",
+      "name": "Homeland Security",
       "deck": "Legiones",
       "type": "character",
       "faction": "MAGA",
-      "bio": "Suffect Consul in 231.",
-      "combatFormula": "X+1(R)",
+      "bio": "“If you see something, say something.”",
+      "combatFormula": "X(R)+2+1",
       "friendlyFavor": [
         "MAGA",
-        "-DSA"
+        "-ISIS",
+        "-DSA",
+        "-TECH",
+        "-MS13"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-MAGA",
-        "DSA"
+        "ISIS",
+        "DSA",
+        "TECH"
       ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_demand"
-        }
-      ],
-      "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)",
-      "mission": null
-    },
-    {
-      "id": "leg_23",
-      "name": "Lucius Virius Agricola",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "TechBros",
-      "bio": "Consul ordinarius in 230.",
-      "combatFormula": "X(R)+1(R)-1",
-      "friendlyFavor": [
-        "TechBros",
-        "-ISIS",
-        "DSA"
-      ],
-      "friendlyReward": "8(d)",
-      "hostileFavor": [
-        "-TechBros",
-        "-DSA"
-      ],
-      "combatReward": "12(d)",
+      "combatReward": "8(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -1979,35 +1971,42 @@
           "type": "mission_request"
         }
       ],
-      "actionText": "Pick up priciest Wine on Mkt in C1 and deliver to F2. (highest present Sell Price) (if no Wine on Mkt, no mission)",
+      "actionText": "Sell Animals at + in D1",
       "mission": {
-        "kind": "delivery",
-        "item": "Priciest Wine on Mkt",
-        "pickupCell": "C1",
-        "deliverCell": "F2",
-        "category": "Wine",
-        "modifier": "highest present Sell Price",
-        "target": null
-      }
+        "kind": "sell",
+        "item": "Animals",
+        "pickupCell": null,
+        "deliverCell": "D1",
+        "category": "Animals",
+        "modifier": "+",
+        "target": null,
+        "name": "Homeland Security’s Job"
+      },
+      "tier": "gen"
     },
     {
-      "id": "leg_24",
-      "name": "Nemesianus",
+      "id": "leg_22",
+      "name": "SFPD Narcotics Unit",
       "deck": "Legiones",
       "type": "character",
-      "faction": "MS13",
-      "bio": "Tribune in 217. Pretended to come to MAGA's rescue after he had been stabbed by Martialis. Instead slew him.",
-      "combatFormula": "X(R)+1(R)+1(R)+1",
+      "faction": "MAGA",
+      "bio": "“That’s evidence now.”",
+      "combatFormula": "X(R)+2+1",
       "friendlyFavor": [
-        "MS13",
-        "-TechBros",
-        "ISIS"
-      ],
-      "friendlyReward": "5(d)",
-      "hostileFavor": [
+        "MAGA",
+        "-ISIS",
+        "-DSA",
+        "-TECH",
         "-MS13"
       ],
-      "combatReward": "6(d)",
+      "friendlyReward": "Cheapest Weapon",
+      "hostileFavor": [
+        "-MAGA",
+        "ISIS",
+        "DSA",
+        "TECH"
+      ],
+      "combatReward": "9(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -2015,37 +2014,127 @@
         },
         {
           "condition": "<=0",
-          "type": "demand"
+          "type": "demand_strict"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!: Give me 3(d) (If player has <3(d), receive thumbs-down)",
-      "mission": null
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
+      "tier": "t2"
     },
     {
-      "id": "leg_25",
-      "name": "Marcus Clodius Pupienus Maximus",
+      "id": "leg_23",
+      "name": "DEA Task Force",
       "deck": "Legiones",
       "type": "character",
       "faction": "MAGA",
-      "bio": "Co-emperor for three months in 238. Dragged from the palace and hacked to death in the streets by Praetorians.",
-      "combatFormula": "X(R)+1(R)",
+      "bio": "“Knock knock.”",
+      "combatFormula": "2X(R)+1+1",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS"
+        "-ISIS",
+        "-DSA",
+        "-TECH"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MAGA",
-        "ISIS"
+        "ISIS",
+        "DSA"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "14(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
+      "tier": "t1"
+    },
+    {
+      "id": "leg_24",
+      "name": "ICE Raid Team",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "MAGA",
+      "bio": "“No warrant needed, apparently.”",
+      "combatFormula": "2X(R)+1+1",
+      "friendlyFavor": [
+        "MAGA",
+        "-ISIS",
+        "-DSA",
+        "-TECH"
+      ],
+      "friendlyReward": "Cheapest Uppers",
+      "hostileFavor": [
+        "-MAGA",
+        "ISIS",
+        "DSA",
+        "TECH",
+        "MS13"
+      ],
+      "combatReward": "15(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Sell Animals at + in B5",
+      "mission": {
+        "kind": "sell",
+        "item": "Animals",
+        "pickupCell": null,
+        "deliverCell": "B5",
+        "category": "Animals",
+        "modifier": "+",
+        "target": null,
+        "name": "ICE Raid Team’s Job"
+      },
+      "tier": "t1"
+    },
+    {
+      "id": "leg_25",
+      "name": "Border Patrol",
+      "deck": "Legiones",
+      "type": "character",
+      "faction": "MAGA",
+      "bio": "“A long way from the border.”",
+      "combatFormula": "X(R)+2+1",
+      "friendlyFavor": [
+        "MAGA",
+        "-ISIS",
+        "-DSA",
+        "-TECH"
+      ],
+      "friendlyReward": "11(d)",
+      "hostileFavor": [
+        "-MAGA",
+        "ISIS",
+        "DSA",
+        "TECH"
+      ],
+      "combatReward": "7(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
           "type": "combat"
         },
         {
@@ -2066,7 +2155,8 @@
         "category": "Grain",
         "modifier": ">",
         "target": "Market"
-      }
+      },
+      "tier": "gen"
     },
     {
       "id": "leg_26",
@@ -2086,22 +2176,26 @@
     },
     {
       "id": "leg_27",
-      "name": "Lucius Virius Lupus Iulianus",
+      "name": "CHP Trooper",
       "deck": "Legiones",
       "type": "character",
       "faction": "MAGA",
-      "bio": "Consul in 232.",
-      "combatFormula": "X(R)+1+1(R)",
+      "bio": "“Do you know how fast you were going?”",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MAGA",
-        "ISIS"
+        "-ISIS",
+        "-DSA",
+        "-TECH"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-MAGA",
-        "-ISIS"
+        "ISIS",
+        "DSA",
+        "TECH"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "8(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -2125,43 +2219,49 @@
         "category": "Weapon",
         "modifier": ">",
         "target": "Market"
-      }
+      },
+      "tier": "gen"
     },
     {
       "id": "leg_28",
-      "name": "Gaius Valerius Patruinus",
+      "name": "Sheriff’s Deputy",
       "deck": "Legiones",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "Praetorian Prefect in 211; executed during MAGA's purge right after ISIS's assassination.",
-      "combatFormula": "X(R)+1(R)-1",
+      "faction": "MAGA",
+      "bio": "“Not from around here.”",
+      "combatFormula": "X(R)+1+1",
       "friendlyFavor": [
-        "TechBros",
+        "MAGA",
         "-ISIS",
-        "MAGA"
+        "-DSA",
+        "-TECH",
+        "-MS13"
       ],
-      "friendlyReward": "8(d)",
+      "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
-        "-TechBros",
-        "-MAGA"
+        "-MAGA",
+        "ISIS",
+        "DSA",
+        "TECH"
       ],
       "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
           "condition": "<=0",
-          "type": "demand"
+          "type": "demand_strict"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!: Give me one Wine (If player has no Wine, receive thumbs-down)",
-      "mission": null
+      "actionText": "!!: Give me all of your Grain (if Player has no Grain, no demand)",
+      "mission": null,
+      "tier": "gen"
     },
     {
       "id": "leg_29",
@@ -2181,21 +2281,25 @@
     },
     {
       "id": "leg_30",
-      "name": "Marcus Julius Gessius Marcianus",
+      "name": "Muni Fare Inspector",
       "deck": "Legiones",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "Married to Julia Mamaea. Father of Severus Alexander.",
-      "combatFormula": "X(R)+1(R)-1",
+      "faction": "MAGA",
+      "bio": "“Proof of payment, please.”",
+      "combatFormula": "X(R)+1-1+1",
       "friendlyFavor": [
-        "TechBros",
-        "-ISIS"
+        "MAGA",
+        "-ISIS",
+        "-DSA"
       ],
-      "friendlyReward": "14(d)",
+      "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
-        "-TechBros"
+        "-MAGA",
+        "ISIS",
+        "DSA",
+        "TECH"
       ],
-      "combatReward": "15(d)",
+      "combatReward": "6(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -2211,26 +2315,84 @@
         }
       ],
       "actionText": "?: Move again this turn",
-      "mission": null
+      "mission": null,
+      "tier": "t3"
     }
   ],
   "nefarii": [
     {
       "id": "nef_1",
-      "name": "Aelius Herodianus",
+      "name": "Sam Altman",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "Celebrated grammarian whose treatises on Greek accentuation were prized by TechBros's learned circle.",
-      "combatFormula": "X(R)-1",
+      "faction": "TECH",
+      "bio": "“Big on doomsdays.”",
+      "combatFormula": "4X(R)",
       "friendlyFavor": [
-        "TechBros"
+        "TECH",
+        "-ISIS",
+        "MAGA",
+        "-DSA"
       ],
-      "friendlyReward": "4(d)",
+      "friendlyReward": "37(d) & +1 Influence",
       "hostileFavor": [
-        "-TechBros"
+        "-TECH",
+        "-MAGA",
+        "DSA"
       ],
-      "combatReward": "Cheapest Mkt Animal",
+      "combatReward": "36(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Pick up a cooler of molly in E6 and Deliver to A1",
+      "mission": {
+        "kind": "delivery",
+        "item": "a cooler of molly",
+        "pickupCell": "E6",
+        "deliverCell": "A1",
+        "category": "Marble",
+        "modifier": null,
+        "target": null,
+        "cargoSize": 1,
+        "payoutTable": [
+          80,
+          61,
+          46,
+          35,
+          26
+        ],
+        "name": "Sam Altman’s Job"
+      },
+      "tier": "top"
+    },
+    {
+      "id": "nef_2",
+      "name": "Palmer Luckey",
+      "deck": "Nefarii",
+      "type": "character",
+      "faction": "TECH",
+      "bio": "“Hawaiian shirts, autonomous weapons.”",
+      "combatFormula": "2X(R)-1",
+      "friendlyFavor": [
+        "TECH",
+        "-ISIS",
+        "MAGA",
+        "-DSA"
+      ],
+      "friendlyReward": "+1 TECH Favor",
+      "hostileFavor": [
+        "-TECH",
+        "-MAGA",
+        "DSA"
+      ],
+      "combatReward": "20(d)",
       "reactions": [
         {
           "condition": "<=-2",
@@ -2245,41 +2407,9 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me your cheapest Good (if Player has no goods, no demand)",
-      "mission": null
-    },
-    {
-      "id": "nef_2",
-      "name": "Marcus Antonius Gordianus",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "MS13",
-      "bio": "Would become Emperor Gordian II for twenty-two days in 238. Killed at the Battle of Carthage.",
-      "combatFormula": "X(R)-1+1(R)+1",
-      "friendlyFavor": [
-        "MS13"
-      ],
-      "friendlyReward": "5(d)",
-      "hostileFavor": [
-        "-MS13"
-      ],
-      "combatReward": "10(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": "<=1",
-          "type": "demand"
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "!: Give me (R) Influence Cards (Can give all Cards to take thumbs-down and no Combat)",
-      "mission": null
+      "actionText": "!!: Give me 5(d) (If Player has <5(d), can take thumbs-down and avoid Combat by paying all (d))",
+      "mission": null,
+      "tier": "t1"
     },
     {
       "id": "nef_3",
@@ -2299,85 +2429,128 @@
     },
     {
       "id": "nef_4",
-      "name": "Carpophorus",
+      "name": "VC Capitalist",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "ISIS",
-      "bio": "Famed Roman bestiarius celebrated for slaying twenty wild beasts in a single arena spectacle.",
-      "combatFormula": "X+1",
+      "faction": "TECH",
+      "bio": "“Two and twenty, and your kidneys.”",
+      "combatFormula": "X",
       "friendlyFavor": [
-        "ISIS",
-        "-MAGA"
-      ],
-      "friendlyReward": "3(d)",
-      "hostileFavor": [
+        "TECH",
         "-ISIS"
       ],
-      "combatReward": "3(d)",
+      "friendlyReward": "19(d)",
+      "hostileFavor": [
+        "-TECH",
+        "-MAGA",
+        "DSA"
+      ],
+      "combatReward": "14(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_demand"
+          "condition": ">=0",
+          "type": "mission_request"
         }
       ],
-      "actionText": "!!: Give me all of your Animals. (if Player has no Animals, no demand)",
-      "mission": null
+      "actionText": "Pick up a brick of coke in E1 and Deliver to D1",
+      "mission": {
+        "kind": "delivery",
+        "item": "a brick of coke",
+        "pickupCell": "E1",
+        "deliverCell": "D1",
+        "category": "Animals",
+        "modifier": null,
+        "target": null,
+        "cargoSize": 2,
+        "payoutTable": [
+          78,
+          60,
+          46,
+          34,
+          24
+        ],
+        "name": "VC Capitalist’s Job"
+      },
+      "tier": "t2"
     },
     {
       "id": "nef_5",
-      "name": "Gaius Sempronius Rufus",
+      "name": "Crypto Scammer",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "MAGA",
-      "bio": "Notorious eunuch, street poisoner, and palace informer exiled to an island by Severus.",
-      "combatFormula": "X",
+      "faction": "TECH",
+      "bio": "“Rug-pulled three cities so far.”",
+      "combatFormula": "X(R)-X-1",
       "friendlyFavor": [
-        "MAGA",
-        "-ISIS"
+        "TECH",
+        "-ISIS",
+        "MAGA"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "11(d)",
       "hostileFavor": [
-        "-MAGA"
+        "-TECH",
+        "DSA"
       ],
-      "combatReward": "Cheapest Mkt Marble",
+      "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-1",
-          "type": "demand_strict"
+          "condition": "<=-2",
+          "type": "combat"
         },
         {
           "condition": ">=0",
-          "type": "deck_quest_offer"
+          "type": "mission_request"
         }
       ],
-      "actionText": "!!: Give me 6(d) (Can give all (d) to take thumbs-down and no Combat)",
-      "mission": null
+      "actionText": "Pick up a cooler of molly in F2 and Deliver to E4",
+      "mission": {
+        "kind": "delivery",
+        "item": "a cooler of molly",
+        "pickupCell": "F2",
+        "deliverCell": "E4",
+        "category": "Marble",
+        "modifier": null,
+        "target": null,
+        "cargoSize": 1,
+        "payoutTable": [
+          80,
+          61,
+          46,
+          35,
+          26
+        ],
+        "name": "Crypto Scammer’s Job"
+      },
+      "tier": "t3"
     },
     {
       "id": "nef_6",
-      "name": "Smuggler",
+      "name": "KKK",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "This procurer of rare goods works for Julia TechBros.",
-      "combatFormula": "X(R)-1-1",
+      "faction": "MAGA",
+      "bio": "“Not all MAGA are KKK. But—”",
+      "combatFormula": "2X(R)+1",
       "friendlyFavor": [
-        "TechBros",
-        "-ISIS"
+        "MAGA",
+        "-DSA",
+        "-TECH",
+        "-ISIS",
+        "-MS13"
       ],
-      "friendlyReward": "14(d)",
+      "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
-        "-TechBros"
+        "-MAGA",
+        "ISIS",
+        "DSA",
+        "TECH",
+        "MS13"
       ],
-      "combatReward": "9(d)",
+      "combatReward": "16(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -2401,91 +2574,206 @@
         "category": "Any",
         "modifier": "+",
         "target": "Goods Deck"
-      }
+      },
+      "tier": "t1"
     },
     {
       "id": "nef_7",
-      "name": "Maximinus Thrax",
+      "name": "Pot Farmers",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "MS13",
-      "bio": "Thracian recruit, famous for out-wrestling whole cohorts in camp games; Emperor in 235.",
-      "combatFormula": "X(R)+1(R)+1",
+      "faction": "MAGA",
+      "bio": "“They didn’t vote for this shit.”",
+      "combatFormula": "X(R)-1-1",
       "friendlyFavor": [
-        "MS13"
+        "MAGA",
+        "-DSA",
+        "-TECH",
+        "-ISIS"
       ],
-      "friendlyReward": "3(d)",
+      "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
-        "-MS13"
+        "-MAGA",
+        "DSA",
+        "TECH"
       ],
-      "combatReward": "Cheapest Mkt Animal",
+      "combatReward": "4(d)",
       "reactions": [
         {
           "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "<=-1",
-          "type": "demand_strict"
-        },
-        {
           "condition": ">=0",
-          "type": "deck_quest_demand"
+          "type": "mission_request"
         }
       ],
-      "actionText": "!!: Give me all of your Influence Cards (if Player has no Cards, no demand)",
-      "mission": null
+      "actionText": "Sell Wine at - in C3",
+      "mission": {
+        "kind": "sell",
+        "item": "Wine",
+        "pickupCell": null,
+        "deliverCell": "C3",
+        "category": "Wine",
+        "modifier": "-",
+        "target": null,
+        "name": "Pot Farmers’s Job"
+      },
+      "tier": "t3"
     },
     {
       "id": "nef_8",
-      "name": "Bato",
+      "name": "International Terrorist",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "MAGA",
-      "bio": "MAGA commanded Bato to fight three gladiators consecutively, then rewarded him with a magnificent funeral.",
-      "combatFormula": "X+1",
+      "faction": "ISIS",
+      "bio": "“Came all the way here for this.”",
+      "combatFormula": "2X(R)+1",
       "friendlyFavor": [
-        "MAGA"
+        "ISIS"
       ],
-      "friendlyReward": "5(d)",
+      "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
-        "-MAGA"
+        "-ISIS",
+        "-DSA"
       ],
-      "combatReward": "Cheapest Mkt Weapon",
+      "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-1",
-          "type": "demand_strict"
+          "condition": "<=0",
+          "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_demand"
+          "condition": ">=1",
+          "type": "mission_request"
         }
       ],
-      "actionText": "!!: Give me all of your Cheap Wine (if Player has no Cheap W, no demand)",
-      "mission": null
+      "actionText": "Sell Weapons at + in F3",
+      "mission": {
+        "kind": "sell",
+        "item": "Weapons",
+        "pickupCell": null,
+        "deliverCell": "F3",
+        "category": "Weapons",
+        "modifier": "+",
+        "target": null,
+        "name": "International Terrorist’s Job"
+      },
+      "tier": "t1"
     },
     {
       "id": "nef_9",
-      "name": "Bulla Felix",
+      "name": "Domestic Terrorist",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "DSA",
-      "bio": "Legendary 'Robin Hood' bandit captain of 600 brigands. Betrayed by his mistress and thrown to wild beasts.",
-      "combatFormula": "2X(R)",
+      "faction": "ISIS",
+      "bio": "“Locally radicalized.”",
+      "combatFormula": "X(R)+X",
       "friendlyFavor": [
-        "DSA",
-        "-TechBros"
+        "ISIS"
       ],
-      "friendlyReward": "3(d)",
+      "friendlyReward": "6(d)",
       "hostileFavor": [
-        "-DSA",
-        "TechBros"
+        "-ISIS",
+        "MAGA"
       ],
-      "combatReward": "10(d)",
+      "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=0",
+          "type": "combat"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Pick up a duffel of Humboldt in F6 and Deliver to B3",
+      "mission": {
+        "kind": "delivery",
+        "item": "a duffel of Humboldt",
+        "pickupCell": "F6",
+        "deliverCell": "B3",
+        "category": "Grain",
+        "modifier": null,
+        "target": null,
+        "cargoSize": 1,
+        "payoutTable": [
+          8,
+          7,
+          5,
+          4,
+          3
+        ],
+        "name": "Domestic Terrorist’s Job"
+      },
+      "tier": "t2"
+    },
+    {
+      "id": "nef_10",
+      "name": "Hamas",
+      "deck": "Nefarii",
+      "type": "character",
+      "faction": "ISIS",
+      "bio": "“Tunnels under everything.”",
+      "combatFormula": "2X(R)",
+      "friendlyFavor": [
+        "ISIS"
+      ],
+      "friendlyReward": "Cheapest Henchman",
+      "hostileFavor": [
+        "-ISIS",
+        "MAGA"
+      ],
+      "combatReward": "7(d)",
+      "reactions": [
+        {
+          "condition": "<=0",
+          "type": "combat"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Kill a Celebrity in Combat",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "Hamas’s Job"
+      },
+      "tier": "t1"
+    },
+    {
+      "id": "nef_11",
+      "name": "Hezbollah",
+      "deck": "Nefarii",
+      "type": "character",
+      "faction": "ISIS",
+      "bio": "“Has a pager. Doesn’t use it.”",
+      "combatFormula": "2X(R)+1",
+      "friendlyFavor": [
+        "ISIS",
+        "MAGA",
+        "DSA",
+        "TECH"
+      ],
+      "friendlyReward": "Cheapest Henchman",
+      "hostileFavor": [
+        "-ISIS",
+        "-DSA",
+        "MAGA"
+      ],
+      "combatReward": "7(d)",
+      "reactions": [
+        {
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -2498,91 +2786,28 @@
         }
       ],
       "actionText": "!!: Give me your cheapest Good (if Player has no goods, no demand)",
-      "mission": null
+      "mission": null,
+      "tier": "t1"
     },
     {
-      "id": "nef_10",
-      "name": "Fulvius Plautius Hortensianus",
+      "id": "nef_12",
+      "name": "Houthis",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "DSA",
-      "bio": "Son of the executed prefect Plautianus and brother of Fulvia DSA. MAGA orders both siblings strangled.",
-      "combatFormula": "X",
+      "faction": "ISIS",
+      "bio": "“Blockading the Bay, somehow.”",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
-        "DSA",
-        "-MAGA"
+        "ISIS"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
-        "-DSA"
+        "-ISIS"
       ],
       "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
           "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_demand"
-        }
-      ],
-      "actionText": "!!: Give me all of your Cash. (if Player has no Cash, no demand)",
-      "mission": null
-    },
-    {
-      "id": "nef_11",
-      "name": "Gannys",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "TechBros",
-      "bio": "Shrewd palace operative.",
-      "combatFormula": "X(R)-1-1",
-      "friendlyFavor": [
-        "TechBros"
-      ],
-      "friendlyReward": "12(d)",
-      "hostileFavor": [
-        "-TechBros"
-      ],
-      "combatReward": "Cheapest Mkt Cheap Wine",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=0",
-          "type": "deck_quest_demand"
-        }
-      ],
-      "actionText": "!!: Give me (R) Influence Cards (Can give all Cards and take thumbs-down and no Combat)",
-      "mission": null
-    },
-    {
-      "id": "nef_12",
-      "name": "Theocritus",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "MAGA",
-      "bio": "Former slave and Roman pantomime dancer who taught MAGA to dance.",
-      "combatFormula": "X-1",
-      "friendlyFavor": [
-        "MAGA",
-        "-DSA"
-      ],
-      "friendlyReward": "6(d)",
-      "hostileFavor": [
-        "-MAGA"
-      ],
-      "combatReward": "Weapon",
-      "reactions": [
-        {
-          "condition": "<=-1",
           "type": "combat"
         },
         {
@@ -2603,95 +2828,72 @@
         "category": "Marble",
         "modifier": ">",
         "target": "Market"
-      }
+      },
+      "tier": "t2"
     },
     {
       "id": "nef_13",
-      "name": "Tiberius Clodius Pupienus Pulcher Maximus",
+      "name": "Iran",
       "deck": "Nefarii",
       "type": "character",
       "faction": "ISIS",
-      "bio": "Consul suffectus in 224.",
-      "combatFormula": "X(R)+1",
+      "bio": "“Enrichment program, very enriched.”",
+      "combatFormula": "2X(R)+X",
       "friendlyFavor": [
-        "ISIS"
+        "ISIS",
+        "MAGA",
+        "DSA",
+        "TECH"
       ],
-      "friendlyReward": "2(d)",
+      "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
         "-ISIS",
-        "-MS13"
+        "-DSA"
       ],
-      "combatReward": "4(d)",
+      "combatReward": "7(d)",
       "reactions": [
         {
           "condition": "<=0",
           "type": "combat"
         },
         {
-          "condition": ">=0",
+          "condition": ">=1",
           "type": "mission_request"
         }
       ],
-      "actionText": "Pick up cheapest Wine on Mkt in F6 and deliver to E3. (highest present Sell Price) (if no Wine on Mkt, no mission)",
+      "actionText": "Sell Weapons at + in D3",
       "mission": {
-        "kind": "delivery",
-        "item": "Cheapest Wine on Mkt",
-        "pickupCell": "F6",
-        "deliverCell": "E3",
-        "category": "Wine",
-        "modifier": "highest present Sell Price",
-        "target": null
-      }
+        "kind": "sell",
+        "item": "Weapons",
+        "pickupCell": null,
+        "deliverCell": "D3",
+        "category": "Weapons",
+        "modifier": "+",
+        "target": null,
+        "name": "Iran’s Job"
+      },
+      "tier": "t1"
     },
     {
       "id": "nef_14",
-      "name": "Serapion",
+      "name": "Bashar al-Assad",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "DSA",
-      "bio": "Underground Egyptian astrologer.",
-      "combatFormula": "X(R)-1",
+      "faction": "ISIS",
+      "bio": "“Ophthalmologist, between jobs.”",
+      "combatFormula": "2X(R)+2",
       "friendlyFavor": [
-        "DSA"
+        "ISIS"
       ],
-      "friendlyReward": "8(d)",
+      "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-DSA"
+        "-ISIS",
+        "MAGA"
       ],
-      "combatReward": "Cheapest Mkt Cheap Wine",
+      "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-1",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=0",
-          "type": "deck_quest_demand"
-        }
-      ],
-      "actionText": "!!: Give me (R) Influence Cards (Can give all Cards and take thumbs-down and no Combat)",
-      "mission": null
-    },
-    {
-      "id": "nef_15",
-      "name": "Subura Cutthroat",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "MS13",
-      "bio": "Hired blade.",
-      "combatFormula": "X(R)+1(R)+1",
-      "friendlyFavor": [
-        "MS13",
-        "-TechBros"
-      ],
-      "friendlyReward": "7(d)",
-      "hostileFavor": [
-        "-MS13"
-      ],
-      "combatReward": "Cheapest Mkt Animal",
-      "reactions": [
-        {
-          "condition": "<=-1",
+          "condition": "<=0",
           "type": "combat"
         },
         {
@@ -2703,25 +2905,28 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me your cheapest Good (if Player has no goods, no demand)",
-      "mission": null
+      "actionText": "!!: Give me all of your Animals. (if Player has no Animals, no demand)",
+      "mission": null,
+      "tier": "t1"
     },
     {
-      "id": "nef_16",
-      "name": "Euprepes",
+      "id": "nef_15",
+      "name": "Abu Bakr al-Baghdadi",
       "deck": "Nefarii",
       "type": "character",
       "faction": "ISIS",
-      "bio": "Celebrated Roman charioteer who crowned 782 Circus victories. Marked for death by MAGA solely because he raced for ISIS's preferred faction.",
-      "combatFormula": "X(R)-1+1",
+      "bio": "“Supposedly dead.”",
+      "combatFormula": "2X(R)+1",
       "friendlyFavor": [
         "ISIS"
       ],
-      "friendlyReward": "4(d)",
+      "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
-        "-ISIS"
+        "-ISIS",
+        "-DSA",
+        "MAGA"
       ],
-      "combatReward": "4(d)",
+      "combatReward": "7(d)",
       "reactions": [
         {
           "condition": "<=0",
@@ -2737,7 +2942,45 @@
         }
       ],
       "actionText": "!!: Give me (R) Influence Cards (Can give all cards to take thumbs-down and no Combat)",
-      "mission": null
+      "mission": null,
+      "tier": "t1"
+    },
+    {
+      "id": "nef_16",
+      "name": "Pimp",
+      "deck": "Nefarii",
+      "type": "character",
+      "faction": "DSA",
+      "bio": "“Talent manager.”",
+      "combatFormula": "2X(R)+1",
+      "friendlyFavor": [
+        "DSA",
+        "-ISIS",
+        "-MAGA"
+      ],
+      "friendlyReward": "+1 Influence",
+      "hostileFavor": [
+        "-DSA",
+        "TECH"
+      ],
+      "combatReward": "13(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "!!: Give me all of your Animals. (if Player has no Animals, no demand)",
+      "mission": null,
+      "tier": "t1"
     },
     {
       "id": "nef_17",
@@ -2757,112 +3000,25 @@
     },
     {
       "id": "nef_18",
-      "name": "Suppositicius",
+      "name": "London Breed",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "ISIS",
-      "bio": "Fresh arena substitute gladiator thrown in against an exhausted Bato during MAGA's rigged spectacle; ISIS's partisans backed him out of spite.",
-      "combatFormula": "X+1",
+      "faction": "DSA",
+      "bio": "“Former mayor, out after dark.”",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
-        "ISIS",
-        "-DSA"
-      ],
-      "friendlyReward": "2(d)",
-      "hostileFavor": [
+        "DSA",
         "-ISIS"
       ],
-      "combatReward": "Cheapest Mkt Weapon",
-      "reactions": [
-        {
-          "condition": "<=0",
-          "type": "combat"
-        },
-        {
-          "condition": "<=-1",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "!!: Give me all of your Meat Animals (if Player has no Meat A, no demand)",
-      "mission": null
-    },
-    {
-      "id": "nef_19",
-      "name": "Fulvia DSA",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "MS13",
-      "bio": "Estranged wife of MAGA. Banished to Lipara after her father's execution. Ordered strangled in 211.",
-      "combatFormula": "X(R)+1+1(R)+1",
-      "friendlyFavor": [
-        "MS13",
-        "DSA"
-      ],
-      "friendlyReward": "10(d)",
+      "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-MS13",
-        "-DSA"
-      ],
-      "combatReward": "12(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": ">=0",
-          "type": "mission_request"
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "Pick up Pugiones in A5 and deliver to D5",
-      "mission": {
-        "kind": "delivery",
-        "item": "Pugiones",
-        "pickupCell": "A5",
-        "deliverCell": "D5",
-        "category": "Weapon",
-        "modifier": "+1 CP",
-        "target": null,
-        "cargoSize": 1,
-        "payoutTable": [
-          32,
-          24,
-          16,
-          10,
-          7
-        ]
-      }
-    },
-    {
-      "id": "nef_20",
-      "name": "Coeranus",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "MS13",
-      "bio": "Egyptian equestrian confidant of Plautianus exiled to an island in 205.",
-      "combatFormula": "X(R)-1+1(R)+1",
-      "friendlyFavor": [
-        "MS13",
-        "-MAGA",
-        "ISIS"
-      ],
-      "friendlyReward": "7(d)",
-      "hostileFavor": [
-        "-MS13",
-        "MAGA",
-        "-ISIS"
+        "-DSA",
+        "TECH"
       ],
       "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
@@ -2874,67 +3030,153 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me (R) Influence Cards (Can give all cards to take thumbs-down and no Combat)",
-      "mission": null
+      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
+      "mission": null,
+      "tier": "t2"
     },
     {
-      "id": "nef_21",
-      "name": "Flamma",
+      "id": "nef_19",
+      "name": "Homeless",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "ISIS",
-      "bio": "Fought 34 bouts, won 21, refused the wooden rudis of freedom four times. Died in the arena at age 30.",
-      "combatFormula": "X(R)+1+1",
+      "faction": "DSA",
+      "bio": "“Unhoused, but even more so.”",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
-        "ISIS",
+        "DSA",
+        "-MAGA"
+      ],
+      "friendlyReward": "+1 Influence",
+      "hostileFavor": [
         "-DSA"
       ],
-      "friendlyReward": "2(d)",
-      "hostileFavor": [
-        "-ISIS",
-        "DSA"
-      ],
-      "combatReward": "Cheapest Mkt Animal",
+      "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
-          "condition": "<=-1",
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Kill a Celebrity in Combat",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "Homeless’s Job"
+      },
+      "tier": "t2"
+    },
+    {
+      "id": "nef_20",
+      "name": "Illegal",
+      "deck": "Nefarii",
+      "type": "character",
+      "faction": "DSA",
+      "bio": "“Has committed crimes recently.”",
+      "combatFormula": "X(R)",
+      "friendlyFavor": [
+        "DSA",
+        "-ISIS",
+        "TECH",
+        "-MAGA"
+      ],
+      "friendlyReward": "Cheapest Henchman",
+      "hostileFavor": [
+        "-DSA",
+        "TECH"
+      ],
+      "combatReward": "7(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": "<=0",
           "type": "demand_strict"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_demand"
+          "condition": ">=1",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
-      "mission": null
+      "actionText": "!!: Give me all of your Animals. (if Player has no Animals, no demand)",
+      "mission": null,
+      "tier": "t2"
     },
     {
-      "id": "nef_22",
-      "name": "Euodus",
+      "id": "nef_21",
+      "name": "Unhoused",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "MS13",
-      "bio": "Engineered the palace trap against Plautianus. Nonetheless executed by MAGA in late 211.",
-      "combatFormula": "X(R)+1(R)+1",
+      "faction": "DSA",
+      "bio": "“They’re letting him vote with no ID.”",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
-        "MS13",
-        "-MAGA",
-        "ISIS"
+        "DSA",
+        "TECH",
+        "-MAGA"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
-        "-MS13",
-        "MAGA",
-        "-ISIS"
+        "-DSA"
       ],
       "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
+          "type": "combat"
+        },
+        {
+          "condition": ">=0",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Sell Marble at - in C5",
+      "mission": {
+        "kind": "sell",
+        "item": "Marble",
+        "pickupCell": null,
+        "deliverCell": "C5",
+        "category": "Marble",
+        "modifier": "-",
+        "target": null,
+        "name": "Unhoused’s Job"
+      },
+      "tier": "t3"
+    },
+    {
+      "id": "nef_22",
+      "name": "Undocumented",
+      "deck": "Nefarii",
+      "type": "character",
+      "faction": "DSA",
+      "bio": "“A person is not a crime.”",
+      "combatFormula": "X(R)-1",
+      "friendlyFavor": [
+        "DSA",
+        "-ISIS",
+        "TECH",
+        "-MAGA"
+      ],
+      "friendlyReward": "Cheapest Henchman",
+      "hostileFavor": [
+        "-DSA",
+        "MAGA"
+      ],
+      "combatReward": "6(d)",
+      "reactions": [
+        {
+          "condition": "<=-2",
           "type": "combat"
         },
         {
@@ -2955,63 +3197,67 @@
         "category": "Exotic Animal",
         "modifier": ">",
         "target": "Market"
-      }
+      },
+      "tier": "t3"
     },
     {
       "id": "nef_23",
-      "name": "Lupanar Procurer",
+      "name": "Elmer Rodriguez",
       "deck": "Nefarii",
       "type": "character",
       "faction": "MS13",
-      "bio": "Brothel-keeper.",
-      "combatFormula": "X(R)-1+1(R)+1",
+      "bio": "“The name nobody says twice.”",
+      "combatFormula": "3X(R)+X",
       "friendlyFavor": [
         "MS13",
-        "-MAGA",
-        "DSA"
+        "-MAGA"
       ],
-      "friendlyReward": "4(d)",
+      "friendlyReward": "25(d) & Cheapest Opiates",
       "hostileFavor": [
-        "-MS13",
-        "-DSA"
+        "-MS13"
       ],
-      "combatReward": "8(d)",
+      "combatReward": "25(d)",
       "reactions": [
         {
           "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "mission_request"
         }
       ],
-      "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)",
-      "mission": null
+      "actionText": "Kill a Celebrity in Combat",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "Elmer Rodriguez’s Job"
+      },
+      "tier": "top"
     },
     {
       "id": "nef_24",
-      "name": "Saturninus",
+      "name": "Clique Enforcer",
       "deck": "Nefarii",
       "type": "character",
       "faction": "MS13",
-      "bio": "Nocturnal courier.",
-      "combatFormula": "X(R)+1(R)+1",
+      "bio": "“Collects for the clique.”",
+      "combatFormula": "2X(R)+2X",
       "friendlyFavor": [
         "MS13",
-        "-TechBros",
-        "ISIS"
+        "-MAGA"
       ],
-      "friendlyReward": "9(d)",
+      "friendlyReward": "Cheapest Party Drugs",
       "hostileFavor": [
-        "-MS13",
-        "-ISIS"
+        "-MS13"
       ],
-      "combatReward": "6(d)",
+      "combatReward": "13(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -3035,62 +3281,28 @@
         "category": "Wine",
         "modifier": "=",
         "target": null
-      }
+      },
+      "tier": "t1"
     },
     {
       "id": "nef_25",
-      "name": "Herodian Of Antioch",
+      "name": "Sicario",
       "deck": "Nefarii",
       "type": "character",
       "faction": "MS13",
-      "bio": "Minor imperial freedman-clerk in 211. Author of Herodian's Roman History.",
-      "combatFormula": "X(R)-1+1(R)+1",
+      "bio": "“Professional. Punctual.”",
+      "combatFormula": "2X(R)+2X",
       "friendlyFavor": [
         "MS13",
-        "-MAGA",
-        "DSA",
-        "ISIS"
+        "-MAGA"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MS13",
-        "-DSA"
+        "-DSA",
+        "-TECH"
       ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": "<=1",
-          "type": "demand"
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "!: Give me all of your Fine Wine (if Player has no Fine W, no demand)",
-      "mission": null
-    },
-    {
-      "id": "nef_26",
-      "name": "Epagathus",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "TechBros",
-      "bio": "Palace enforcer.",
-      "combatFormula": "X(R)-1-1",
-      "friendlyFavor": [
-        "TechBros",
-        "-ISIS"
-      ],
-      "friendlyReward": "9(d)",
-      "hostileFavor": [
-        "-TechBros"
-      ],
-      "combatReward": "9(d)",
+      "combatReward": "13(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -3102,11 +3314,52 @@
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_demand"
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me 4(d) (Can give all (d) to take thumbs-down and no Combat)",
-      "mission": null
+      "actionText": "!!: Give me 5(d) (If Player has <5(d), can take thumbs-down and avoid Combat by paying all (d))",
+      "mission": null,
+      "tier": "t1"
+    },
+    {
+      "id": "nef_26",
+      "name": "Gang Banger",
+      "deck": "Nefarii",
+      "type": "character",
+      "faction": "MS13",
+      "bio": "“Repping the set.”",
+      "combatFormula": "X(R)+X",
+      "friendlyFavor": [
+        "MS13"
+      ],
+      "friendlyReward": "Cheapest Party Drugs",
+      "hostileFavor": [
+        "-MS13",
+        "-DSA"
+      ],
+      "combatReward": "8(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_request"
+        }
+      ],
+      "actionText": "Sell Grain at = in E5",
+      "mission": {
+        "kind": "sell",
+        "item": "Grain",
+        "pickupCell": null,
+        "deliverCell": "E5",
+        "category": "Grain",
+        "modifier": "=",
+        "target": null,
+        "name": "Gang Banger’s Job"
+      },
+      "tier": "t2"
     },
     {
       "id": "nef_27",
@@ -3126,20 +3379,21 @@
     },
     {
       "id": "nef_28",
-      "name": "Emporium Dock-Thief",
+      "name": "Bad Hombre",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "Riverfront smuggling gang.",
-      "combatFormula": "X(R)-1",
+      "faction": "MS13",
+      "bio": "“As advertised.”",
+      "combatFormula": "X(R)+X",
       "friendlyFavor": [
-        "TechBros",
-        "MAGA"
-      ],
-      "friendlyReward": "14(d)",
-      "hostileFavor": [
-        "-TechBros",
+        "MS13",
         "-MAGA"
+      ],
+      "friendlyReward": "Cheapest Henchman",
+      "hostileFavor": [
+        "-MS13",
+        "-DSA",
+        "-TECH"
       ],
       "combatReward": "9(d)",
       "reactions": [
@@ -3165,25 +3419,27 @@
         "category": "Wine",
         "modifier": "=",
         "target": null
-      }
+      },
+      "tier": "t2"
     },
     {
       "id": "nef_29",
-      "name": "Poacher",
+      "name": "Coyote",
       "deck": "Nefarii",
       "type": "character",
-      "faction": "TechBros",
-      "bio": "Purveyor of fine contraband.",
-      "combatFormula": "X-1",
+      "faction": "MS13",
+      "bio": "“Knows every way in and out.”",
+      "combatFormula": "X(R)+X",
       "friendlyFavor": [
-        "TechBros"
+        "MS13",
+        "-MAGA"
       ],
-      "friendlyReward": "9(d)",
+      "friendlyReward": "Cheapest Party Drugs",
       "hostileFavor": [
-        "-TechBros",
-        "ISIS"
+        "-MS13",
+        "-DSA"
       ],
-      "combatReward": "9(d)",
+      "combatReward": "8(d)",
       "reactions": [
         {
           "condition": "<=-1",
@@ -3207,7 +3463,8 @@
         "category": "Exotic Animal",
         "modifier": ">",
         "target": "Market"
-      }
+      },
+      "tier": "t2"
     }
   ],
   "influence": [
@@ -3512,16 +3769,16 @@
     },
     {
       "id": "inf_52",
-      "name": "TechBros Favor",
-      "effectText": "Receive 6(d), gain 1 TechBros Favor (Diamond), and lose 1 DSA Favor (Sapphire) and 1 MS13 Favor (Amethyst) (can be played after encounter is revealed)",
-      "effectCode": "faction_favor_techbros",
+      "name": "TECH Favor",
+      "effectText": "Receive 6(d), gain 1 TECH Favor (Diamond), and lose 1 DSA Favor (Sapphire) and 1 MS13 Favor (Amethyst) (can be played after encounter is revealed)",
+      "effectCode": "faction_favor_tech",
       "favorGain": {
-        "faction": "TechBros",
+        "faction": "TECH",
         "cash": 6,
         "extraFavor": [
           "-DSA",
           "-MS13",
-          "TechBros"
+          "TECH"
         ]
       },
       "sellTable": null

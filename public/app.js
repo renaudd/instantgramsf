@@ -1,5 +1,5 @@
 /*
- * Night Merchant: All Roads Lead to Rome (211 A.D.)
+ * Night Merchant: Free Parking (reskin of Night Merchant: All Roads Lead to Rome)
  * Copyright (c) 2026 Dashiell Renaud.
  *
  * Licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
@@ -168,7 +168,8 @@ async function signOutFirebaseClient() {
 
 const COLS = ["A", "B", "C", "D", "E", "F"];
 const ROWS = ["1", "2", "3", "4", "5", "6"];
-const TRACK_NAMES = ["Grain", "Animals", "Wine", "Weapons", "Marble", "Guards"];
+// Market layout (display names): Weed, Party, Uppers, Opiates, Weapons, Henchmen
+const TRACK_NAMES = ["Grain", "Marble", "Animals", "Wine", "Weapons", "Guards"];
 const COL_SYMBOLS = ["<<", "<", "=", "=", ">", ">>"];
 
 const MARKET_COLUMNS_META = [
@@ -181,42 +182,42 @@ const MARKET_COLUMNS_META = [
 ];
 
 const ROME_LANDMARKS = {
-  A1: { icon: "🌊", sub: "Lands End (Pacific cliffs — no exits)" },
-  B1: { icon: "🌉", sub: "Presidio (Golden Gate Bridge entrance)" },
-  C1: { icon: "⛵", sub: "Marina Harbor" },
-  D1: { icon: "🦭", sub: "Fisherman's Wharf & Pier 39" },
-  E1: { icon: "⛴️", sub: "Embarcadero & Ferry Building" },
-  F1: { icon: "🌉", sub: "Rincon Hill (Bay Bridge entrance)" },
-  A2: { icon: "🌫️", sub: "Outer Richmond" },
-  B2: { icon: "🥟", sub: "Inner Richmond" },
+  A1: { icon: "🌊", sub: "Land's End (Pacific cliffs — no exits)" },
+  B1: { icon: "🌉", sub: "Presidio (Golden Gate Bridge entry)" },
+  C1: { icon: "⛵", sub: "Marina" },
+  D1: { icon: "🦭", sub: "Fisherman's Wharf" },
+  E1: { icon: "🗼", sub: "Telegraph Hill & Coit Tower" },
+  F1: { icon: "🌉", sub: "Embarcadero (Bay Bridge entry)" },
+  A2: { icon: "🌫️", sub: "Richmond" },
+  B2: { icon: "🛍️", sub: "Laurel Heights" },
   C2: { icon: "🏰", sub: "Pacific Heights Mansions" },
-  D2: { icon: "🍝", sub: "North Beach & Chinatown" },
-  E2: { icon: "🏦", sub: "Financial District Towers" },
-  F2: { icon: "⚾", sub: "Ball Park (Stadium)" },
+  D2: { icon: "🚋", sub: "Nob Hill" },
+  E2: { icon: "🏮", sub: "Chinatown" },
+  F2: { icon: "⚾", sub: "Ballpark (Stadium)" },
   A3: { icon: "🌳", sub: "Golden Gate Park" },
-  B3: { icon: "🌼", sub: "Haight-Ashbury" },
-  C3: { icon: "🎷", sub: "Fillmore Jazz District" },
-  D3: { icon: "💉", sub: "Tenderloin (Open-Air Market)" },
-  E3: { icon: "💻", sub: "SoMa Startups (Open-Air Market)" },
-  F3: { icon: "🧬", sub: "Mission Bay Biotech" },
-  A4: { icon: "🏄", sub: "Outer Sunset" },
-  B4: { icon: "📡", sub: "Twin Peaks & Sutro Tower" },
-  C4: { icon: "🍼", sub: "Noe Valley" },
-  D4: { icon: "🌯", sub: "Mission District (Open-Air Market)" },
-  E4: { icon: "🏭", sub: "Potrero Hill" },
-  F4: { icon: "🚢", sub: "Dogpatch Shipyards" },
-  A5: { icon: "🛣️", sub: "Merced (Highway 1 entrance)" },
-  B5: { icon: "🚋", sub: "West Portal" },
-  C5: { icon: "🌲", sub: "Glen Park Canyon" },
-  D5: { icon: "⛰️", sub: "Bernal Heights" },
-  E5: { icon: "🔧", sub: "Portola" },
-  F5: { icon: "🛣️", sub: "Hunters Point (US-101 entrance)" },
-  A6: { icon: "🏘️", sub: "Daly City Line" },
-  B6: { icon: "🌊", sub: "Ocean View" },
-  C6: { icon: "🏠", sub: "Ingleside" },
-  D6: { icon: "🛣️", sub: "Outer Mission (I-280 entrance)" },
-  E6: { icon: "🌮", sub: "Excelsior" },
-  F6: { icon: "🏚️", sub: "Visitacion Valley" },
+  B3: { icon: "🎷", sub: "Fillmore" },
+  C3: { icon: "💉", sub: "Tenderloin (Open-Air Market)" },
+  D3: { icon: "🏛️", sub: "Civic Center (Open-Air Market)" },
+  E3: { icon: "💻", sub: "SoMa" },
+  F3: { icon: "🏭", sub: "Potrero Hill" },
+  A4: { icon: "🏄", sub: "Sunset" },
+  B4: { icon: "🌼", sub: "Haight-Ashbury" },
+  C4: { icon: "💎", sub: "Diamond Heights" },
+  D4: { icon: "🏳️‍🌈", sub: "Castro (Open-Air Market)" },
+  E4: { icon: "🌯", sub: "Mission District" },
+  F4: { icon: "🚢", sub: "Dogpatch" },
+  A5: { icon: "🛣️", sub: "Merced (Route 1 entry)" },
+  B5: { icon: "🏠", sub: "Ingleside" },
+  C5: { icon: "🌲", sub: "Miraloma Park" },
+  D5: { icon: "🍼", sub: "Noe Valley" },
+  E5: { icon: "⛰️", sub: "Bernal Heights" },
+  F5: { icon: "🛣️", sub: "Hunters Point (US-101 entry)" },
+  A6: { icon: "🏘️", sub: "Daly City" },
+  B6: { icon: "🏘️", sub: "Crocker-Amazon" },
+  C6: { icon: "🌊", sub: "Balboa Park" },
+  D6: { icon: "🛣️", sub: "Glen Park (I-280 entry)" },
+  E6: { icon: "🔧", sub: "Portola" },
+  F6: { icon: "🏚️", sub: "Bayview" },
 };
 
 const FACTION_META = [
@@ -229,10 +230,10 @@ const FACTION_META = [
     gemPlural: "rubies",
     title: "MAGA — Make America Great Again",
     bio: "Red hats in a blue city. MAGA runs deep through the Cops (SFPD, DEA, FBI, ICE), with a few Criminals (pot farmers, the KKK) and one very loud Celebrity (Musk). Back the Blue makes every Cop hit harder.",
-    alignedWith: ["TechBros", "ISIS (sometimes)"],
+    alignedWith: ["TECH", "ISIS (sometimes)"],
     hostileTo: ["MS13 (most hostile)", "DSA (hugely)", "ISIS (sometimes)"],
-    alignmentNote: "MAGA is primarily against MS-13 and hugely against the DSA, aligned with the Tech Bros, and sometimes aligned with, sometimes averse to ISIS.",
-    defaultDeckCounts: { patricii: 2, legiones: 14, nefarii: 3, total: 19 },
+    alignmentNote: "Working for MAGA makes everyone hate you; working against MAGA makes everyone like you. MS-13 mostly doesn't care.",
+    defaultDeckCounts: { patricii: 3, legiones: 14, nefarii: 2, total: 19 },
   },
   {
     key: "ISIS",
@@ -244,13 +245,13 @@ const FACTION_META = [
     title: "ISIS — Sleeper Cells",
     bio: "Poor, violent, and the rarest faction in the city. ISIS hides mostly among the Criminals, then the Celebrities, and only rarely the Cops. It hates every faction except MS-13.",
     alignedWith: ["MS13"],
-    hostileTo: ["MAGA", "TechBros", "DSA"],
-    alignmentNote: "ISIS hates every faction except MS-13.",
-    defaultDeckCounts: { patricii: 4, legiones: 2, nefarii: 5, total: 11 },
+    hostileTo: ["MAGA", "TECH", "DSA"],
+    alignmentNote: "ISIS hates you for working with anyone but ISIS or MS-13. Working for ISIS sometimes wins over everyone except MS-13; working against ISIS often pleases MAGA and sometimes annoys the DSA.",
+    defaultDeckCounts: { patricii: 4, legiones: 1, nefarii: 8, total: 13 },
   },
   {
-    key: "TechBros",
-    label: "Tech Bros",
+    key: "TECH",
+    label: "TECH",
     gem: "/assets/icons/diamond.png",
     color: "#475569",
     gemSingular: "diamond",
@@ -259,8 +260,8 @@ const FACTION_META = [
     bio: "Very rich, very vulnerable, and enormously influential. Tech Bros turn up equally among Celebrities, Criminals, and Cops. Lurie, Zuckerberg, and their party-drug crowd.",
     alignedWith: ["DSA (somewhat)", "MAGA (somewhat)"],
     hostileTo: ["ISIS (somewhat)"],
-    alignmentNote: "Tech Bros are somewhat averse to ISIS, somewhat aligned with both the DSA and MAGA, and indifferent to MS-13.",
-    defaultDeckCounts: { patricii: 7, legiones: 6, nefarii: 6, total: 19 },
+    alignmentNote: "Working for the Tech Bros often pleases MAGA and annoys the DSA; working against them angers MAGA and pleases the DSA.",
+    defaultDeckCounts: { patricii: 7, legiones: 8, nefarii: 4, total: 19 },
   },
   {
     key: "DSA",
@@ -272,13 +273,13 @@ const FACTION_META = [
     title: "DSA — Democratic Socialists of America",
     bio: "Leftists, feminists, gays, natives, and locals. The DSA is best represented among the Celebrities, with some Criminals and very few Cops (the Firefighters).",
     alignedWith: ["ISIS", "MS13"],
-    hostileTo: ["MAGA (most hostile)", "TechBros (somewhat)"],
-    alignmentNote: "The DSA is primarily averse to MAGA, sort of averse to the Tech Bros, and generally aligned with ISIS and MS-13.",
-    defaultDeckCounts: { patricii: 10, legiones: 3, nefarii: 3, total: 16 },
+    hostileTo: ["MAGA (most hostile)", "TECH (somewhat)"],
+    alignmentNote: "Working for the DSA sometimes pleases the Tech Bros and often angers ISIS and MAGA; working against the DSA sometimes pleases the Tech Bros or MAGA.",
+    defaultDeckCounts: { patricii: 10, legiones: 3, nefarii: 6, total: 19 },
   },
   {
     key: "MS13",
-    label: "MS-13",
+    label: "MS13",
     gem: "/assets/icons/amethyst.png",
     color: "#7e22ce",
     gemSingular: "amethyst",
@@ -286,18 +287,18 @@ const FACTION_META = [
     title: "MS-13 — Mara Salvatrucha",
     bio: "The most indifferent faction in the city, and the most dangerous to cross. MS-13 lives among the Criminals and rarely shows up as a Celebrity or Cop. Less likely than ISIS to attack at 0 loyalty, but always attacks at -1 or lower, and is always very strong in combat.",
     alignedWith: ["DSA (slightly)", "ISIS (slightly)"],
-    hostileTo: ["MAGA (somewhat)", "TechBros (a little)"],
-    alignmentNote: "MS-13 is somewhat opposed to MAGA, a little averse to the Tech Bros, and slightly aligned with the DSA and ISIS.",
-    defaultDeckCounts: { patricii: 3, legiones: 3, nefarii: 9, total: 15 },
+    hostileTo: ["MAGA (somewhat)", "TECH (a little)"],
+    alignmentNote: "MS-13 ignores what you do for or against anyone else. Working for MS-13 angers MAGA; working against MS-13 sometimes annoys the DSA and the Tech Bros.",
+    defaultDeckCounts: { patricii: 2, legiones: 2, nefarii: 6, total: 10 },
   },
 ];
 
 const DEFAULT_POLITICAL_CLIMATE_FACTORS = [
   { id: "MAGA", label: "MAGA", gemName: "Ruby", subtitle: "Make America Great Again" },
   { id: "ISIS", label: "ISIS", gemName: "Emerald", subtitle: "Islamic State Sleeper Cells" },
-  { id: "TechBros", label: "Tech Bros", gemName: "Diamond", subtitle: "Silicon Valley Money" },
+  { id: "TECH", label: "TECH", gemName: "Diamond", subtitle: "Silicon Valley Money" },
   { id: "DSA", label: "DSA", gemName: "Sapphire", subtitle: "Democratic Socialists of America" },
-  { id: "MS13", label: "MS-13", gemName: "Amethyst", subtitle: "Mara Salvatrucha" },
+  { id: "MS13", label: "MS13", gemName: "Amethyst", subtitle: "Mara Salvatrucha" },
   { id: "Missions", label: "Gigs", gemName: "Contracts", subtitle: "Gig Economy" },
 ];
 
@@ -369,9 +370,9 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
     description: "Leaving SF by a Bridge or Freeway costs a 4d checkpoint bribe, waived with +1 Emerald or Shortcut.",
   },
   {
-    id: "techbros_1",
-    factor: "TechBros",
-    factorLabel: "Tech Bros",
+    id: "tech_1",
+    factor: "TECH",
+    factorLabel: "TECH",
     gemName: "Diamond",
     optionNumber: 1,
     timing: "endgame",
@@ -380,9 +381,9 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
     description: "End of game: the player with the Most Tech Bros favor gains +20% wealth.",
   },
   {
-    id: "techbros_2",
-    factor: "TechBros",
-    factorLabel: "Tech Bros",
+    id: "tech_2",
+    factor: "TECH",
+    factorLabel: "TECH",
     gemName: "Diamond",
     optionNumber: 2,
     timing: "endgame",
@@ -391,9 +392,9 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
     description: "End of game: Lose 15d per +Diamond and 15d per -Diamond.",
   },
   {
-    id: "techbros_3",
-    factor: "TechBros",
-    factorLabel: "Tech Bros",
+    id: "tech_3",
+    factor: "TECH",
+    factorLabel: "TECH",
     gemName: "Diamond",
     optionNumber: 3,
     timing: "midgame",
@@ -437,7 +438,7 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
   {
     id: "ms13_1",
     factor: "MS13",
-    factorLabel: "MS-13",
+    factorLabel: "MS13",
     gemName: "Amethyst",
     optionNumber: 1,
     timing: "endgame",
@@ -448,7 +449,7 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
   {
     id: "ms13_2",
     factor: "MS13",
-    factorLabel: "MS-13",
+    factorLabel: "MS13",
     gemName: "Amethyst",
     optionNumber: 2,
     timing: "endgame",
@@ -459,7 +460,7 @@ const DEFAULT_POLITICAL_CLIMATE_OPTIONS = [
   {
     id: "ms13_3",
     factor: "MS13",
-    factorLabel: "MS-13",
+    factorLabel: "MS13",
     gemName: "Amethyst",
     optionNumber: 3,
     timing: "midgame",
@@ -1151,8 +1152,77 @@ function createTransactionActionCircleNode(titleText = "Unused Transaction Actio
   return wrap;
 }
 
+/**
+ * Free Parking display reskin. Internal ids (goods tracks, deck keys) stay the
+ * Night Merchant ones so the shared engine keeps working; every visible string
+ * passes through here to show the San Francisco names instead.
+ */
+const SF_RESKIN_RULES = [
+  [/\bExotic Animals?\b/g, "Powder Uppers"],
+  [/\bExotic A\b/g, "Powder Uppers"],
+  [/\bExotic Beasts?\b/g, "Powder Uppers"],
+  [/\bMeat Animals?\b/g, "Pill Uppers"],
+  [/\bMeat A\b/g, "Pill Uppers"],
+  [/\bCheap Wine\b/g, "Street Opiates"],
+  [/\bCheap W\b/g, "Street Opiates"],
+  [/\b(?:Fine|Fancy) Wine\b/g, "Pharma Opiates"],
+  [/\b(?:Fine|Fancy) W\b/g, "Pharma Opiates"],
+  [/\bAnimals\b/g, "Uppers"],
+  [/\bAnimal\b/g, "Upper"],
+  [/\bWines?\b/g, "Opiates"],
+  [/\bGrain\b/g, "Weed"],
+  [/\bMarble\b/g, "Party Drugs"],
+  [/\bGuards\b/g, "Henchmen"],
+  [/\bGuard\b/g, "Henchman"],
+  [/\bguards\b/g, "henchmen"],
+  [/\bguard\b/g, "henchman"],
+  [/\bCart Mat\b/g, "SUV"],
+  [/\bCarts\b/g, "SUVs"],
+  [/\bCart\b/g, "SUV"],
+  [/\bcarts\b/g, "SUVs"],
+  [/\bcart\b/g, "SUV"],
+  [/\bPatricii\b/g, "Celebrities"],
+  [/\bPatricius\b/g, "Celebrity"],
+  [/\bLegiones\b/g, "Cops"],
+  [/\bLegionar(?:y|ies)\b/g, "Cop"],
+  [/\bNefarii\b/g, "Criminals"],
+  [/\bNefarius\b/g, "Criminal"],
+  [/\bMissiones\b/g, "Missions"],
+  [/\bPolitical Climate\b/g, "Ballot Initiatives"],
+  [/\bDecrees\b/g, "Ballot Initiatives"],
+  [/\bDecree\b/g, "Ballot Initiative"],
+  [/\bAngry Mobs?\b/g, "Protesters"],
+  [/\bTheat(?:er|re) Troupes?\b/g, "Stand-Up Comic"],
+  [/\bSoothsayers?\b/g, "Schizophrenic"],
+  [/\bMerchants\b/g, "Dealers"],
+  [/\bMerchant\b/g, "Dealer"],
+  [/\bmerchants\b/g, "dealers"],
+  [/\bmerchant\b/g, "dealer"],
+  [/\bPortus Ostiae\b/g, "the Stash House"],
+  [/\bOstia\b/g, "Stash House"],
+  [/\bImperial Forums?\b/g, "Open-Air Market"],
+  [/\bForums?\b/g, "Open-Air Market"],
+  [/\bVia (?:City )?Gates?\b/g, "Entry Point"],
+  [/\b(?:the )?end of 211 A\.D\./g, "the end of the year"],
+  [/\b211 A\.D\./g, "2026"],
+  [/\bProcession\b/g, "Street Fair"],
+  [/\bSalve!/g, "Shout-Out!"],
+  [/\bUshered Along\b/g, "Move Along"],
+  [/\bBrutta Figura\b/g, "Bad Look"],
+  [/\bRoad Blocked\b/g, "Road Closed"],
+  [/\bRome's\b/g, "San Francisco's"],
+  [/\bRome\b/g, "San Francisco"],
+  [/\bRoman\b/g, "SF"],
+];
+
+function sfReskinText(rawValue) {
+  let out = String(rawValue);
+  for (const [re, rep] of SF_RESKIN_RULES) out = out.replace(re, rep);
+  return out;
+}
+
 function appendTextWithRomeDice(parentNode, rawValue, isOptionTag = false) {
-  const str = replaceDenariiTokens(rawValue);
+  const str = replaceDenariiTokens(sfReskinText(rawValue));
   if (!GAME_TOKEN_REGEX.test(str)) {
     parentNode.appendChild(document.createTextNode(str));
     return;
@@ -1242,7 +1312,7 @@ function el(tag, attrs = {}, ...children) {
     } else if (k === "src" || k === "href") {
       node.setAttribute(k, resolveAssetUrl(String(v)));
     } else if (k === "title") {
-      const safeTitle = String(v).replace(/𐆖(\d+)/g, "$1d").replace(/𐆖/g, "d");
+      const safeTitle = sfReskinText(String(v)).replace(/𐆖(\d+)/g, "$1d").replace(/𐆖/g, "d");
       node.setAttribute("title", safeTitle);
     } else {
       node.setAttribute(k, String(v));
@@ -1315,7 +1385,7 @@ function formatMissionObjective(m) {
 const FACTION_GEM_MAP = {
   MAGA: "/assets/icons/ruby.png",
   ISIS: "/assets/icons/emerald.png",
-  TechBros: "/assets/icons/diamond.png",
+  TECH: "/assets/icons/diamond.png",
   DSA: "/assets/icons/sapphire.png",
   MS13: "/assets/icons/amethyst.png",
 };
@@ -2246,10 +2316,10 @@ const FACTION_FAVOR_INFLUENCE_SPECS = {
       "Receive 5(d), gain 1 ISIS Favor (Emerald), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
     gems: ["ISIS", "-MAGA"],
   },
-  "TechBros Favor": {
+  "TECH Favor": {
     effectText:
-      "Receive 6(d), gain 1 TechBros Favor (Diamond), and lose 1 DSA Favor (Sapphire) and 1 MS13 Favor (Amethyst) (can be played after encounter is revealed)",
-    gems: ["TechBros", "-DSA", "-MS13"],
+      "Receive 6(d), gain 1 TECH Favor (Diamond), and lose 1 DSA Favor (Sapphire) and 1 MS13 Favor (Amethyst) (can be played after encounter is revealed)",
+    gems: ["TECH", "-DSA", "-MS13"],
   },
   "MAGA Favor": {
     effectText:
@@ -3350,7 +3420,7 @@ function openFinalScoringModal(standings, meta = {}) {
   const gameTitle = meta.gameName || (appState.gameSummary && appState.gameSummary.name) || "Roman Expedition";
   const winnerEntry = list.find((s) => s && s.won) || list.find((s) => s && !s.eliminated) || list[0] || null;
   const winnerName = meta.winnerName || (winnerEntry ? winnerEntry.name : "Unknown Merchant");
-  const factionOrder = ["MAGA", "ISIS", "TechBros", "DSA", "MS13"];
+  const factionOrder = ["MAGA", "ISIS", "TECH", "DSA", "MS13"];
 
   const formatSignedDenarii = (n) => {
     const v = Number(n) || 0;
@@ -4428,7 +4498,7 @@ function renderTopbar() {
         { className: "brand-title" },
         el("span", { className: "brand-title-main", text: "Night Merchant:" }),
         " ",
-        el("span", { className: "brand-title-sub", text: "All Roads Lead to Rome" })
+        el("span", { className: "brand-title-sub", text: "Free Parking" })
       )
     ),
     el("nav", { className: "nav-tabs" }, ...navButtons),
@@ -4812,7 +4882,7 @@ function renderAuthView() {
     el(
       "div",
       { className: "panel-title fresco-banner-header fresco-griffin" },
-      el("span", { text: "🦅 Anno Domini 211 — All Roads Lead to Rome" }),
+      el("span", { text: "🚙 San Francisco, After Dark — Free Parking" }),
       el("span", { style: { fontSize: "0.78rem", color: "#fde6b0" }, text: "2–6 Merchants • Strategy Board Game" })
     ),
     el(
@@ -4845,7 +4915,7 @@ function renderAuthView() {
       }),
       el("p", {
         className: "landing-blurb-text",
-        text: "Bid for Grain, Wine, Marble, Weapons, and Exotic Beasts at Portus Ostiae, hire gladiators and guards, and thread 36 torchlit neighborhoods across five ancient stone bridges of the Tiber before the 6:00 A.M. sunrise curfew. Court five rival Severan factions—Empress Julia TechBros, exiled DSA, the old MS13 Senate, and the warring co-emperors—before December 211's bloody Winter Reckoning crowns Rome's wealthiest purveyor.",
+        text: "Bid for Grain, Wine, Marble, Weapons, and Exotic Beasts at Portus Ostiae, hire gladiators and guards, and thread 36 torchlit neighborhoods across five ancient stone bridges of the Tiber before the 6:00 A.M. sunrise curfew. Court five rival Severan factions—Empress Julia TECH, exiled DSA, the old MS13 Senate, and the warring co-emperors—before December 211's bloody Winter Reckoning crowns Rome's wealthiest purveyor.",
       }),
       el(
         "div",
@@ -6040,7 +6110,7 @@ function renderContextualPromptBanner(gs, viewer, activePlayer) {
     }
   } else if (gs.phase === "delivery_entry") {
     promptText =
-      "🚙 Start of Night Delivery (8:00 P.M.): You must roll into the city at one of the five road entry points highlighted in gold on the map: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Highway 1). You may optionally Scout 1 neighborhood stack or deck card first.";
+      "🚙 Start of Night Delivery (8:00 P.M.): You must roll into the city at one of the five road entry points highlighted in gold on the map: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Route 1). You may optionally Scout 1 neighborhood stack or deck card first.";
     if (gs.activePlayerIndex === viewer.index) {
       extraActions.push(
         el("button", {
@@ -9635,7 +9705,7 @@ function openFactionFavorModal(gs, targetPlayer, factionKey) {
         el("div", { style: { fontSize: "0.68rem", color: "var(--text-muted)" }, text: "Current Favor" })
       )
     ),
-    fm.key === "TechBros" &&
+    fm.key === "TECH" &&
       gs &&
       Array.isArray(gs.players) &&
       targetPlayer.index === (typeof gs.viewerPlayerIndex === "number" ? gs.viewerPlayerIndex : 0)
@@ -9965,14 +10035,14 @@ function openPlayerCartModal(gs, targetPlayer, viewer) {
 
 function renderDomnaMediatorExchangeBar(gs, viewer, closeModalOnAction = false) {
   if (!gs || !viewer) return null;
-  if (!hasActiveClimateOption(gs, "techbros_3")) return null;
+  if (!hasActiveClimateOption(gs, "tech_3")) return null;
   if (gs.phase === "finished" || gs.phase === "setup_discard" || gs.phase === "setup_climate") return null;
-  const posDiamonds = Math.max(0, Number(viewer.favor && viewer.favor.TechBros) || 0);
+  const posDiamonds = Math.max(0, Number(viewer.favor && viewer.favor.TECH) || 0);
   if (posDiamonds < 1) return null;
 
   const triggerExchange = async (targetFaction) => {
     await sendGameAction({
-      type: "exchange_techbros_diamond",
+      type: "exchange_tech_diamond",
       targetFaction,
       count: 1,
     });
@@ -9983,21 +10053,21 @@ function renderDomnaMediatorExchangeBar(gs, viewer, closeModalOnAction = false) 
 
   return el(
     "div",
-    { className: "techbros-mediator-bar" },
+    { className: "tech-mediator-bar" },
     el(
       "div",
-      { className: "techbros-mediator-lbl" },
+      { className: "tech-mediator-lbl" },
       el("strong", { text: `💎 Lobbying Blitz (+${posDiamonds} Diamond${posDiamonds > 1 ? "s" : ""}): ` }),
       el("span", { text: "Exchange 1-for-1 anytime" })
     ),
     el(
       "div",
-      { className: "techbros-mediator-btns" },
+      { className: "tech-mediator-btns" },
       el("button", {
         type: "button",
         className: "btn btn-sm",
         style: { borderColor: "#b91c1c", color: "#991b1b" },
-        title: "Spend 1 positive Diamond (-1 TechBros) to gain +1 Ruby (+1 MAGA)",
+        title: "Spend 1 positive Diamond (-1 TECH) to gain +1 Ruby (+1 MAGA)",
         text: "→ +1 Ruby (MAGA)",
         onClick: () => triggerExchange("MAGA"),
       }),
@@ -10400,7 +10470,7 @@ const TIBER_BRIDGE_BADGES_BY_CELL = {
   F1: [{ pos: "E", label: "🌉 Bay Bridge" }],
   F5: [{ pos: "E", label: "🛣️ US-101" }],
   D6: [{ pos: "S", label: "🛣️ I-280" }],
-  A5: [{ pos: "W", label: "🛣️ Hwy 1" }],
+  A5: [{ pos: "W", label: "🛣️ Route 1" }],
 };
 
 function positionRomeHoverTooltip(tooltipEl, clientX, clientY) {
@@ -10932,7 +11002,7 @@ function renderRomeNightBoard(gs, viewer) {
           "div",
           {
             className: "via-start-reminder-bar",
-            title: "All dealers must enter San Francisco through one of the five road entry points: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Highway 1).",
+            title: "All dealers must enter San Francisco through one of the five road entry points: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Route 1).",
           },
           el("span", { className: "via-start-reminder-icon", text: "⛩️" }),
           el(
@@ -10940,7 +11010,7 @@ function renderRomeNightBoard(gs, viewer) {
             {
               text:
                 gs.phase === "delivery_entry"
-                  ? "Start at an Entry Point: Every dealer must enter San Francisco at one of the five gold-outlined entry points — B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Highway 1)."
+                  ? "Start at an Entry Point: Every dealer must enter San Francisco at one of the five gold-outlined entry points — B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Route 1)."
                   : "8:00 P.M. Entry Hour: Dealers begin the night at one of San Francisco's five gold-outlined entry points (B1, F1, F5, D6, A5).",
             }
           )
@@ -15000,7 +15070,7 @@ const RULEBOOK_SECTIONS = [
     bullets: [
       "Starting Treasury & Market: Each merchant begins Spring with 12(d) and 0 Favor across all five factions. 24 Goods/Guards are dealt onto the Portus Ostiae Market Board and left-aligned toward Precious (<<).",
       "Initial Hand & Speed Discard: Each merchant is dealt 5 distinct Starting Missions and 5 distinct Influence cards, then discards 2 Missions and 2 Influence cards (keeping 3 of each).",
-      "Political Climate Draft (6×3 Board): The FIRST merchant to finish discarding claims First Pick on the 6-column Political Climate Board (MAGA, ISIS, TechBros, DSA, MS13, Missions — at most 1 Decree may be enacted per column).",
+      "Political Climate Draft (6×3 Board): The FIRST merchant to finish discarding claims First Pick on the 6-column Political Climate Board (MAGA, ISIS, TECH, DSA, MS13, Missions — at most 1 Decree may be enacted per column).",
       "2-Player vs. 3+ Player Draft: In a 2-player game, 4 modifiers are enacted via snake draft (First Discarder → Rival → Rival → First Discarder — first pick and last pick!). In 3–6 player games, each merchant enacts 1 modifier in discard-completion order (up to all 6 columns).",
       "Normal Game Turn Order & 5th/6th Player Stipend: Once the Political Climate is set, the First Player Token goes to the merchant seated AFTER the First Discarder—so the merchant who claimed First Pick on the Political Climate acts LAST in normal turn order! In 5–6 player games, to offset late Spring Market position, the 5th merchant in Spring turn order receives +1(d) (starting at 13(d)) and the 6th merchant receives +2(d) (starting at 14(d)).",
     ],
@@ -15065,7 +15135,7 @@ const RULEBOOK_SECTIONS = [
     id: "delivery",
     title: "5. Phase II: Nocturnal Rome Delivery, Tile Icons, & The Tiber River",
     paragraphs: [
-      "At 8:00 P.M. (Turn 1), each dealer may take 1 Initial Scout (tile or deck card) and then enters San Francisco through one of the 5 road entry points: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Highway 1). Entering uses your Turn 1 movement. Leaving is different: the Pacific (west) edge has almost no way out except rare, expensive Speedboats; the Bay (north and east) edges offer cheaper boat escapes (Sailboat 1(d), Ferry 2(d), Cargo Ship 3(d)); and the Peninsula (south) edge has the most exits, usually free.",
+      "At 8:00 P.M. (Turn 1), each dealer may take 1 Initial Scout (tile or deck card) and then enters San Francisco through one of the 5 road entry points: B1 (Golden Gate Bridge), F1 (Bay Bridge), F5 (US-101), D6 (I-280), or A5 (Route 1). Entering uses your Turn 1 movement. Leaving is different: the Pacific (west) edge has almost no way out except rare, expensive Speedboats; the Bay (north and east) edges offer cheaper boat escapes (Sailboat 1(d), Ferry 2(d), Cargo Ship 3(d)); and the Peninsula (south) edge has the most exits, usually free.",
       "Across Turns 1–10 (8:00 P.M. to 5:00 A.M.), each active merchant resolves their hourly turn in strict sequence:",
     ],
     iconGrid: [
@@ -15207,16 +15277,16 @@ const RULEBOOK_SECTIONS = [
     bullets: [
       "Step 1 — Unfinished Missions Fail: Incomplete Missions fail first (applying Encounter Hostile Favor and -10(d) each if Surge Pricing is active); remaining mission cargo is discarded.",
       "Step 2 — Cart Liquidation & Loans: Remaining non-mission Goods liquidate at Abundant (>>) (SELL_SYM) Sell Price, then unpaid Spring (-45(d)) and Summer (-60(d)) Loans are deducted.",
-      "Step 3 — Mass Deportation FIRST, Then Political Climate Settlement: If Mass Deportation (MAGA Option 1) is enacted, it resolves FIRST—eliminating the merchant with Least MAGA Favor BEFORE any other Most/Least awards, penalties, steals, or percentages! Eliminated merchants cannot win or suffer subsequent Most/Least awards and rank below all survivors. Then resolve Flat Gem/Mission Modifiers & Least Penalties → Billionaire Tax Steal → TechBros +20% Wealth.",
+      "Step 3 — Mass Deportation FIRST, Then Political Climate Settlement: If Mass Deportation (MAGA Option 1) is enacted, it resolves FIRST—eliminating the merchant with Least MAGA Favor BEFORE any other Most/Least awards, penalties, steals, or percentages! Eliminated merchants cannot win or suffer subsequent Most/Least awards and rank below all survivors. Then resolve Flat Gem/Mission Modifiers & Least Penalties → Billionaire Tax Steal → TECH +20% Wealth.",
       "Step 4 — PvP Combat Tie-Breakers (Strictly One Winner/Loser!): Every 'Most' and 'Least' modifier—as well as Final Score ties—awards its bonus or penalty to STRICTLY ONE merchant, even if tied at 0! Tied merchants fight PvP Combat: pre-roll cards (Mercenary Ambush, Distraction removing 1 positive die) apply before rolling, all dice roll simultaneously, and reactive post-roll cards (Twist Of Fate, Flying Chamber Pot, Gladiator's Intervention) trigger when they can overturn a deficit. For 'Most' awards, the combat winner claims the prize; for 'Least' penalties/elimination, the combat winner escapes and the combat LOSER suffers the penalty!",
     ],
     table: {
-      headers: ["MAGA", "ISIS", "Julia TechBros", "DSA", "MS13", "Missions"],
+      headers: ["MAGA", "ISIS", "Julia TECH", "DSA", "MS13", "Missions"],
       rows: [
         [
           "Mass Deportation: End of game (FIRST): Least MAGA favor is eliminated.",
           "Fatwa: End of game: Least ISIS favor loses 25(d).",
-          "Series A: End of game: Most TechBros favor gains +20% wealth.",
+          "Series A: End of game: Most TECH favor gains +20% wealth.",
           "Billionaire Tax: End of game: Most DSA favor steals 15(d) from the wealthiest rival.",
           "Protection Racket: End of game: Most MS13 favor gains 25(d).",
           "Five-Star Courier: End of game: Most completed Missions gains 30(d).",
@@ -15576,7 +15646,7 @@ function renderRulebookView() {
         el(
           "div",
           { className: "panel-title fresco-banner-header fresco-merchants" },
-          el("span", { text: "📜 Night Merchant: All Roads Lead to Rome — Official v2.0 Rulebook (211 A.D.)" }),
+          el("span", { text: "📜 Night Merchant: Free Parking — Rulebook" }),
           el("span", { style: { fontSize: "0.8rem", color: "#fde6b0" }, text: "Complete HTML Edition" })
         ),
         sectionsContainer
@@ -17029,7 +17099,7 @@ function isViewerActionRequired(gs) {
 }
 
 function updateTabTurnTitle() {
-  const baseTitle = "Night Merchant: All Roads Lead to Rome (211 A.D.)";
+  const baseTitle = "Night Merchant: Free Parking";
   if (appState.activeTab !== "tabletop" || !appState.gameState) {
     document.title = baseTitle;
     appState._wasViewerTurn = false;

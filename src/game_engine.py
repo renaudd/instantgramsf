@@ -24,9 +24,9 @@ GATE_EXITS: Dict[str, Dict[str, str]] = {
     "F1": {"dir": "E", "name": "Bay Bridge"},
     "F5": {"dir": "E", "name": "US-101"},
     "D6": {"dir": "S", "name": "I-280"},
-    "A5": {"dir": "W", "name": "Highway 1"},
+    "A5": {"dir": "W", "name": "Route 1"},
 }
-FORUM_CELLS = ["D3", "E3", "D4"]
+FORUM_CELLS = ["C3", "D3", "D4"]  # Open-air markets: Tenderloin, Civic Center, Castro
 # Bots head for a gate or the southern (Peninsula) edge, where most exits are free.
 BOT_EXIT_TARGET_CELLS = GATE_CELLS + ["A6", "B6", "C6", "E6", "F6"]
 
@@ -68,12 +68,12 @@ def describe_exit(from_cell: Optional[str], direction: Optional[str], edge_val: 
 MAX_GAMBLE_WAGER = 20
 
 NEIGHBORHOOD_NAMES = {
-    "A1": "Lands End", "B1": "Presidio", "C1": "Marina", "D1": "Fisherman's Wharf", "E1": "Embarcadero", "F1": "Rincon Hill",
-    "A2": "Outer Richmond", "B2": "Inner Richmond", "C2": "Pacific Heights", "D2": "North Beach", "E2": "Financial District", "F2": "Ball Park",
-    "A3": "Golden Gate Park", "B3": "Haight-Ashbury", "C3": "Fillmore", "D3": "Tenderloin", "E3": "SoMa", "F3": "Mission Bay",
-    "A4": "Sunset", "B4": "Twin Peaks", "C4": "Noe Valley", "D4": "Mission", "E4": "Potrero Hill", "F4": "Dogpatch",
-    "A5": "Merced", "B5": "West Portal", "C5": "Glen Park", "D5": "Bernal Heights", "E5": "Portola", "F5": "Hunters Point",
-    "A6": "Daly City", "B6": "Ocean View", "C6": "Ingleside", "D6": "Outer Mission", "E6": "Excelsior", "F6": "Visitacion Valley",
+    "A1": "Land's End", "B1": "Presidio", "C1": "Marina", "D1": "Wharf", "E1": "Telegraph", "F1": "Embarcadero",
+    "A2": "Richmond", "B2": "Laurel", "C2": "Pac Heights", "D2": "Nob Hill", "E2": "Chinatown", "F2": "Ballpark",
+    "A3": "GG Park", "B3": "Fillmore", "C3": "Tenderloin", "D3": "Civic Center", "E3": "SoMa", "F3": "Potrero",
+    "A4": "Sunset", "B4": "Haight", "C4": "Diamond", "D4": "Castro", "E4": "Mission", "F4": "Dogpatch",
+    "A5": "Merced", "B5": "Ingleside", "C5": "Miraloma", "D5": "Noe", "E5": "Bernal", "F5": "Hunter's",
+    "A6": "Daly City", "B6": "Crocker", "C6": "Balboa", "D6": "Glen Park", "E6": "Portola", "F6": "Bayview",
 }
 
 DIR_DELTAS = {
@@ -87,7 +87,8 @@ DIR_DELTAS = {
     "NW": (-1, -1),
 }
 
-TRACK_NAMES = ["Grain", "Animals", "Wine", "Weapons", "Marble", "Guards"]
+# Internal track ids; displayed as Weed, Party, Uppers, Opiates, Weapons, Henchmen.
+TRACK_NAMES = ["Grain", "Marble", "Animals", "Wine", "Weapons", "Guards"]
 COL_TO_PRICE_INDEX = [0, 1, 2, 2, 3, 4]
 SCARCITY_LABELS = ["Precious (<<)", "Rare (<)", "Uncommon (=)", "Common (>)", "Abundant (>>)"]
 SCARCITY_SYMBOLS = ["<<", "<", "=", ">", ">>"]
@@ -251,14 +252,14 @@ TURN_HOURS = [
     "Turn 10 — 5:00 A.M. - 6:00 A.M. (Sunrise)",
 ]
 
-FACTIONS = ["MAGA", "ISIS", "TechBros", "DSA", "MS13"]
+FACTIONS = ["MAGA", "ISIS", "TECH", "DSA", "MS13"]
 
 POLITICAL_CLIMATE_FACTORS: List[Dict[str, Any]] = [
     {"id": "MAGA", "label": "MAGA", "gemName": "Ruby", "subtitle": "Make America Great Again"},
     {"id": "ISIS", "label": "ISIS", "gemName": "Emerald", "subtitle": "Islamic State Sleeper Cells"},
-    {"id": "TechBros", "label": "Tech Bros", "gemName": "Diamond", "subtitle": "Silicon Valley Money"},
+    {"id": "TECH", "label": "TECH", "gemName": "Diamond", "subtitle": "Silicon Valley Money"},
     {"id": "DSA", "label": "DSA", "gemName": "Sapphire", "subtitle": "Democratic Socialists of America"},
-    {"id": "MS13", "label": "MS-13", "gemName": "Amethyst", "subtitle": "Mara Salvatrucha"},
+    {"id": "MS13", "label": "MS13", "gemName": "Amethyst", "subtitle": "Mara Salvatrucha"},
     {"id": "Missions", "label": "Gigs", "gemName": "Contracts", "subtitle": "Gig Economy"},
 ]
 
@@ -330,9 +331,9 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "description": "Leaving SF by a Bridge or Freeway costs a 4d checkpoint bribe, waived with +1 Emerald or Shortcut.",
     },
     {
-        "id": "techbros_1",
-        "factor": "TechBros",
-        "factorLabel": "Tech Bros",
+        "id": "tech_1",
+        "factor": "TECH",
+        "factorLabel": "TECH",
         "gemName": "Diamond",
         "optionNumber": 1,
         "timing": "endgame",
@@ -341,9 +342,9 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "description": "End of game: the player with the Most Tech Bros favor gains +20% wealth.",
     },
     {
-        "id": "techbros_2",
-        "factor": "TechBros",
-        "factorLabel": "Tech Bros",
+        "id": "tech_2",
+        "factor": "TECH",
+        "factorLabel": "TECH",
         "gemName": "Diamond",
         "optionNumber": 2,
         "timing": "endgame",
@@ -352,9 +353,9 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "description": "End of game: Lose 15d per +Diamond and 15d per -Diamond.",
     },
     {
-        "id": "techbros_3",
-        "factor": "TechBros",
-        "factorLabel": "Tech Bros",
+        "id": "tech_3",
+        "factor": "TECH",
+        "factorLabel": "TECH",
         "gemName": "Diamond",
         "optionNumber": 3,
         "timing": "midgame",
@@ -398,7 +399,7 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
     {
         "id": "ms13_1",
         "factor": "MS13",
-        "factorLabel": "MS-13",
+        "factorLabel": "MS13",
         "gemName": "Amethyst",
         "optionNumber": 1,
         "timing": "endgame",
@@ -409,7 +410,7 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
     {
         "id": "ms13_2",
         "factor": "MS13",
-        "factorLabel": "MS-13",
+        "factorLabel": "MS13",
         "gemName": "Amethyst",
         "optionNumber": 2,
         "timing": "endgame",
@@ -420,7 +421,7 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
     {
         "id": "ms13_3",
         "factor": "MS13",
-        "factorLabel": "MS-13",
+        "factorLabel": "MS13",
         "gemName": "Amethyst",
         "optionNumber": 3,
         "timing": "midgame",
@@ -1744,6 +1745,48 @@ def grant_reward(
 
     # Fallback string parser for string rewards like "40(d)", "Cheapest Mkt Wine", "1 Meat A from market", "Weapon"
     rt_raw = (reward_text or "").strip()
+
+    # Free Parking compound rewards, e.g. "8(d) & 1 Influence" or "Cheapest Opiates & +1 TECH Favor"
+    if "&" in rt_raw:
+        for part in [p.strip() for p in rt_raw.split("&") if p.strip()]:
+            notes.extend(grant_reward(state, player, None, part, is_mission_reward=is_mission_reward))
+        return notes
+    fp_low = rt_raw.lower()
+    m_inf = re.match(r"^\+?(\d+)\s+influence", fp_low)
+    if m_inf:
+        cnt = int(m_inf.group(1))
+        drawn = 0
+        for _ in range(cnt):
+            if state["decks"]["influence"]:
+                player["influence"].append(state["decks"]["influence"].pop(0))
+                drawn += 1
+        if drawn:
+            notes.append(f"+{drawn} Influence Card(s)")
+        return notes
+    m_fav = re.match(r"^\+?(\d+)\s+([A-Za-z0-9]+)\s+favor", rt_raw, re.IGNORECASE)
+    if m_fav and m_fav.group(2).upper() in FACTIONS:
+        fac = m_fav.group(2).upper()
+        notes.extend(apply_favor_list(player, [fac] * int(m_fav.group(1)), reason=f"reward ({rt_raw})"))
+        return notes
+    fp_pick = {
+        "weed": ("Grain", None), "party": ("Marble", None), "uppers": ("Animals", None),
+        "opiates": ("Wine", None), "weapon": ("Weapons", None), "henchm": ("Guards", None),
+    }
+    for kw, (tr_name, subcat) in fp_pick.items():
+        if (fp_low.startswith("cheapest ") or fp_low.startswith("any ")) and kw in fp_low:
+            notes.extend(
+                _grant_or_enqueue_market_pick(
+                    state,
+                    player,
+                    track_name=tr_name,
+                    subcat=subcat,
+                    mode="cheapest" if fp_low.startswith("cheapest") else "any",
+                    source_label=f"Encounter Reward ({rt_raw})",
+                    reward_label=rt_raw,
+                    deck_fallback=True,
+                )
+            )
+            return notes
     m = re.search(r"(\d+)\s*\(d\)", rt_raw)
     if m:
         amt = int(m.group(1)) * cash_mult
@@ -3738,7 +3781,7 @@ def _finalize_combat_after_post_roll(state: Dict[str, Any], player: Dict[str, An
         inferred_deck = "patricii" if cid_str.startswith("pat_") else "legiones" if cid_str.startswith("leg_") else "nefarii" if cid_str.startswith("nef_") else ""
         deck_name = card.get("deck") or c_state.get("deck") or inferred_deck
         cname = card.get("name", "")
-        is_emperor = any(emp in cname for emp in ("Bassianus", "MAGA", "ISIS"))
+        is_emperor = any(emp in cname for emp in ("Donald Trump", "Jared Kushner"))
         for m in list(player["missions"]):
             if m.get("completed"):
                 continue
@@ -4643,7 +4686,7 @@ def _find_combat_mission_for_encounter(player: Dict[str, Any], card: Dict[str, A
     or prescribed by an encounter) that requires engaging in combat with this encountered party.
     """
     cname = (card.get("name") or "").lower()
-    is_emperor = any(emp in cname for emp in ("bassianus", "maga", "isis"))
+    is_emperor = any(emp in cname for emp in ("donald trump", "jared kushner"))
     dk_low = (deck_key or card.get("deck") or "").lower()
 
     for m in player.get("missions", []):
@@ -7312,15 +7355,15 @@ def _resolve_multiway_pvp_loser(
     return loser
 
 
-def _bot_optimize_techbros_diamonds_for_winter(state: Dict[str, Any]) -> None:
-    """When Lobbying Blitz (techbros_3) is active, bots convert positive Diamonds into Rubies or Sapphires before Winter Reckoning if advantageous."""
-    if not has_climate_modifier(state, "techbros_3"):
+def _bot_optimize_tech_diamonds_for_winter(state: Dict[str, Any]) -> None:
+    """When Lobbying Blitz (tech_3) is active, bots convert positive Diamonds into Rubies or Sapphires before Winter Reckoning if advantageous."""
+    if not has_climate_modifier(state, "tech_3"):
         return
     players = state.get("players", [])
     for bot in players:
         if not bot.get("isBot"):
             continue
-        while int((bot.get("favor") or {}).get("TechBros", 0)) > 0:
+        while int((bot.get("favor") or {}).get("TECH", 0)) > 0:
             cur_car = int(bot["favor"].get("MAGA", 0))
             cur_get = int(bot["favor"].get("ISIS", 0))
             min_car = min((int((p.get("favor") or {}).get("MAGA", 0)) for p in players), default=0)
@@ -7339,13 +7382,13 @@ def _bot_optimize_techbros_diamonds_for_winter(state: Dict[str, Any]) -> None:
             if not target_fac:
                 break
 
-            bot["favor"]["TechBros"] -= 1
+            bot["favor"]["TECH"] -= 1
             bot["favor"][target_fac] = int(bot["favor"].get(target_fac, 0)) + 1
             hist = bot.setdefault("favorHistory", {f: [] for f in FACTIONS})
-            hist.setdefault("TechBros", []).append({
+            hist.setdefault("TECH", []).append({
                 "delta": -1,
                 "reason": f"Lobbying Blitz exchange -> +1 {target_fac}",
-                "newTotal": bot["favor"]["TechBros"],
+                "newTotal": bot["favor"]["TECH"],
             })
             hist.setdefault(target_fac, []).append({
                 "delta": 1,
@@ -7470,8 +7513,8 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
                 add_log(state, f"Winter Loan Settlement: 60(d) deducted from {p['name']} for unpaid Summer Loan.", "penalty")
             loan_map[p["index"]] = loan_ded
 
-        # Step 4: Allow bots to convert remaining positive Diamonds if Lobbying Blitz (techbros_3) is active
-        _bot_optimize_techbros_diamonds_for_winter(state)
+        # Step 4: Allow bots to convert remaining positive Diamonds if Lobbying Blitz (tech_3) is active
+        _bot_optimize_tech_diamonds_for_winter(state)
 
         # Step 5: MAGA Option 1 (Mass Deportation) FIRST per Rulebook — Least MAGA favor is ELIMINATED!
         # An eliminated player cannot win or lose any subsequent Most/Least awards or steal Denarii.
@@ -7552,13 +7595,13 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
                     det = "ISIS 0 (0d)"
                 _record_climate_delta(p, "isis_2", "ISIS", "Infidel Tax", delta, det)
 
-        # 6d. TechBros Option 2 (Conflict of Interest): -15d per positive Diamond AND -15d per negative Diamond
-        if has_climate_modifier(state, "techbros_2"):
+        # 6d. TECH Option 2 (Conflict of Interest): -15d per positive Diamond AND -15d per negative Diamond
+        if has_climate_modifier(state, "tech_2"):
             for p in eligible_players:
-                dom_v = int((p.get("favor") or {}).get("TechBros", 0))
+                dom_v = int((p.get("favor") or {}).get("TECH", 0))
                 delta = -15 * abs(dom_v)
-                det = f"TechBros {dom_v:+d} ({abs(dom_v)} × -15d)" if dom_v != 0 else "TechBros 0 (0d — Neutrality Kept!)"
-                _record_climate_delta(p, "techbros_2", "TechBros", "Conflict of Interest", delta, det)
+                det = f"TECH {dom_v:+d} ({abs(dom_v)} × -15d)" if dom_v != 0 else "TECH 0 (0d — Neutrality Kept!)"
+                _record_climate_delta(p, "tech_2", "TECH", "Conflict of Interest", delta, det)
 
         # 6e. DSA Option 2 (Mutual Aid): +10d per completed DSA-linked mission
         if has_climate_modifier(state, "dsa_2"):
@@ -7681,29 +7724,29 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
                 "phase",
             )
 
-        # Step 8: TechBros Option 1 (Series A) — Most TechBros favor gains +20% of final wealth (after flat modifiers & steals)
-        if has_climate_modifier(state, "techbros_1") and eligible_players:
-            max_dom = max(int((p.get("favor") or {}).get("TechBros", 0)) for p in eligible_players)
-            tied_dom = [p for p in eligible_players if int((p.get("favor") or {}).get("TechBros", 0)) == max_dom]
+        # Step 8: TECH Option 1 (Series A) — Most TECH favor gains +20% of final wealth (after flat modifiers & steals)
+        if has_climate_modifier(state, "tech_1") and eligible_players:
+            max_dom = max(int((p.get("favor") or {}).get("TECH", 0)) for p in eligible_players)
+            tied_dom = [p for p in eligible_players if int((p.get("favor") or {}).get("TECH", 0)) == max_dom]
             if len(tied_dom) > 1:
                 add_log(
                     state,
-                    f"⚔️ Tie for Most TechBros Favor ({max_dom:+d}) between {', '.join(x['name'] for x in tied_dom)} — PvP Combat decides the +20% Series A!",
+                    f"⚔️ Tie for Most TECH Favor ({max_dom:+d}) between {', '.join(x['name'] for x in tied_dom)} — PvP Combat decides the +20% Series A!",
                     "combat",
                 )
                 win_dom = _resolve_multiway_pvp_winner(
-                    state, tied_dom, pvp_gear_snapshot, f"Most TechBros Favor ({max_dom:+d}) +20% Wealth"
+                    state, tied_dom, pvp_gear_snapshot, f"Most TECH Favor ({max_dom:+d}) +20% Wealth"
                 )
-                det_d1_prefix = f"Won PvP Tie-Break for Most TechBros Favor ({max_dom:+d})"
+                det_d1_prefix = f"Won PvP Tie-Break for Most TECH Favor ({max_dom:+d})"
             else:
                 win_dom = tied_dom[0]
-                det_d1_prefix = f"Sole Most TechBros Favor ({max_dom:+d})"
+                det_d1_prefix = f"Sole Most TECH Favor ({max_dom:+d})"
             base_wealth = int(win_dom.get("cash", 0))
             dom_bonus = (base_wealth * 20 + 50) // 100 if base_wealth > 0 else 0
             _record_climate_delta(
                 win_dom,
-                "techbros_1",
-                "TechBros",
+                "tech_1",
+                "TECH",
                 "Series A",
                 dom_bonus,
                 f"{det_d1_prefix}: +20% of {base_wealth}d = +{dom_bonus}d",
@@ -8170,9 +8213,9 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
         run_bots_until_human(state)
         return True, msg_pick
 
-    # 1A-2. Lobbying Blitz (TechBros Option 3): Exchange positive Diamonds 1-for-1 into Rubies or Sapphires at any time
-    if act_type == "exchange_techbros_diamond":
-        if not has_climate_modifier(state, "techbros_3"):
+    # 1A-2. Lobbying Blitz (TECH Option 3): Exchange positive Diamonds 1-for-1 into Rubies or Sapphires at any time
+    if act_type == "exchange_tech_diamond":
+        if not has_climate_modifier(state, "tech_3"):
             return False, "Lobbying Blitz is not active in this game's Political Climate."
         ex_player = next((p for p in state["players"] if not p["isBot"] and p.get("userId") == user_id), None)
         if not ex_player and human_count == 1:
@@ -8188,18 +8231,18 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
             return False, "Invalid Diamond exchange count."
         if cnt < 1:
             return False, "Must exchange at least 1 positive Diamond."
-        cur_dom = int((ex_player.get("favor") or {}).get("TechBros", 0))
+        cur_dom = int((ex_player.get("favor") or {}).get("TECH", 0))
         if cur_dom < cnt:
             return False, f"You only have +{max(0, cur_dom)} positive Diamond(s) available to exchange."
-        ex_player["favor"]["TechBros"] = cur_dom - cnt
+        ex_player["favor"]["TECH"] = cur_dom - cnt
         ex_player["favor"][target_fac] = int(ex_player["favor"].get(target_fac, 0)) + cnt
         hist = ex_player.setdefault("favorHistory", {f: [] for f in FACTIONS})
         gem_lbl = "Ruby" if target_fac == "MAGA" else "Sapphire"
         gem_pl = "Rubies" if target_fac == "MAGA" else "Sapphires"
-        hist.setdefault("TechBros", []).append({
+        hist.setdefault("TECH", []).append({
             "delta": -cnt,
             "reason": f"Lobbying Blitz exchange -> +{cnt} {gem_lbl if cnt == 1 else gem_pl} ({target_fac})",
-            "newTotal": ex_player["favor"]["TechBros"],
+            "newTotal": ex_player["favor"]["TECH"],
         })
         hist.setdefault(target_fac, []).append({
             "delta": cnt,
@@ -10163,19 +10206,19 @@ def _run_bot_climate_pick(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
             if oid in ("maga_3", "maga_1", "ms13_2", "isis_1"):
                 sc += 20
         elif strat == "luxury":
-            if oid in ("dsa_3", "techbros_1", "ms13_1", "isis_2"):
+            if oid in ("dsa_3", "tech_1", "ms13_1", "isis_2"):
                 sc += 20
         elif strat == "missions":
             if oid in ("missions_3", "missions_1", "missions_2", "dsa_2"):
                 sc += 22
         elif strat == "opportunist":
-            if oid in ("ms13_3", "dsa_1", "techbros_3", "isis_3"):
+            if oid in ("ms13_3", "dsa_1", "tech_3", "isis_3"):
                 sc += 20
         else:
-            if oid in ("missions_1", "missions_2", "techbros_1", "ms13_1", "isis_2", "techbros_3"):
+            if oid in ("missions_1", "missions_2", "tech_1", "ms13_1", "isis_2", "tech_3"):
                 sc += 14
 
-        if pos_m > 0 and oid in ("techbros_1", "dsa_1", "dsa_2", "ms13_1", "ms13_2", "dsa_3", "isis_2", "isis_3", "maga_3", "techbros_3"):
+        if pos_m > 0 and oid in ("tech_1", "dsa_1", "dsa_2", "ms13_1", "ms13_2", "dsa_3", "isis_2", "isis_3", "maga_3", "tech_3"):
             sc += 8 * pos_m
         if neg_m > 0 and oid in ("maga_2", "ms13_2"):
             sc += 10 * neg_m

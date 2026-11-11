@@ -2,14 +2,14 @@
   "market": [
     {
       "id": "grn_1",
-      "name": "Spelt",
+      "name": "Dime Bag",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        9,
+        8,
         7,
         5,
         4,
@@ -25,14 +25,14 @@
     },
     {
       "id": "grn_2",
-      "name": "Durum",
+      "name": "Pre-Rolls",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        8,
+        7,
         6,
         5,
         4,
@@ -48,7 +48,7 @@
     },
     {
       "id": "grn_3",
-      "name": "Millet",
+      "name": "Eighth of OG Kush",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -71,14 +71,14 @@
     },
     {
       "id": "grn_4",
-      "name": "Rye",
+      "name": "Shroom Chocolates",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 2,
       "guards": 0,
       "sell": [
-        12,
+        11,
         9,
         7,
         5,
@@ -94,14 +94,14 @@
     },
     {
       "id": "grn_5",
-      "name": "Barley",
+      "name": "LSD Blotter",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 2,
       "guards": 0,
       "sell": [
-        13,
+        12,
         10,
         7,
         5,
@@ -117,7 +117,7 @@
     },
     {
       "id": "grn_6",
-      "name": "Oats",
+      "name": "Weed Gummies",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -140,14 +140,14 @@
     },
     {
       "id": "grn_7",
-      "name": "Spelt",
+      "name": "Mendocino Outdoor",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 2,
       "guards": 0,
       "sell": [
-        13,
+        12,
         9,
         7,
         5,
@@ -163,14 +163,14 @@
     },
     {
       "id": "grn_8",
-      "name": "Durum",
+      "name": "Humboldt Indoor",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 2,
       "guards": 0,
       "sell": [
-        14,
+        13,
         10,
         7,
         5,
@@ -186,7 +186,7 @@
     },
     {
       "id": "grn_9",
-      "name": "Barley",
+      "name": "Vape Carts",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -209,14 +209,14 @@
     },
     {
       "id": "grn_10",
-      "name": "Oats",
+      "name": "Wax Dabs",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 2,
       "guards": 0,
       "sell": [
-        11,
+        10,
         8,
         6,
         5,
@@ -232,14 +232,14 @@
     },
     {
       "id": "grn_11",
-      "name": "Rye",
+      "name": "Peyote Buttons",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        8,
+        7,
         6,
         4,
         3,
@@ -255,14 +255,14 @@
     },
     {
       "id": "grn_12",
-      "name": "Durum",
+      "name": "Half-O of Haze",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        8,
+        7,
         6,
         5,
         4,
@@ -278,15 +278,15 @@
     },
     {
       "id": "cw_1",
-      "name": "Cretan",
+      "name": "Brown Sugar",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        28,
-        21,
+        38,
+        25,
         16,
         12,
         9
@@ -295,21 +295,21 @@
         14,
         11,
         8,
-        6,
-        5
+        5,
+        4
       ]
     },
     {
       "id": "cw_2",
-      "name": "Caeretanum",
+      "name": "Black Tar",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        26,
-        20,
+        35,
+        24,
         15,
         11,
         8
@@ -318,21 +318,21 @@
         13,
         10,
         8,
-        6,
-        5
+        5,
+        4
       ]
     },
     {
       "id": "cw_3",
-      "name": "Passum",
+      "name": "Lean",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        15,
-        12,
+        20,
+        14,
         9,
         7,
         5
@@ -341,21 +341,21 @@
         8,
         6,
         5,
-        4,
-        3
+        3,
+        2
       ]
     },
     {
       "id": "cw_4",
-      "name": "Massicum",
+      "name": "Reds (Barbiturates)",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        22,
-        17,
+        30,
+        20,
         13,
         9,
         7
@@ -364,21 +364,21 @@
         11,
         9,
         7,
-        5,
-        4
+        4,
+        3
       ]
     },
     {
       "id": "cw_5",
-      "name": "Vienna",
+      "name": "Heroin Bundle",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        24,
-        18,
+        32,
+        22,
         14,
         10,
         7
@@ -387,21 +387,21 @@
         12,
         9,
         7,
-        6,
-        5
+        5,
+        4
       ]
     },
     {
       "id": "cw_6",
-      "name": "Posca",
+      "name": "Tranq (Xylazine)",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        14,
-        11,
+        19,
+        13,
         8,
         6,
         4
@@ -411,20 +411,20 @@
         6,
         4,
         3,
-        3
+        2
       ]
     },
     {
       "id": "cw_7",
-      "name": "Carenum",
+      "name": "China White",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        16,
-        12,
+        22,
+        14,
         9,
         7,
         5
@@ -433,21 +433,21 @@
         8,
         6,
         5,
-        4,
-        3
+        3,
+        2
       ]
     },
     {
       "id": "cw_8",
-      "name": "Narbo",
+      "name": "Fentanyl Pressies",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        19,
-        14,
+        26,
+        17,
         11,
         8,
         6
@@ -456,21 +456,21 @@
         10,
         8,
         6,
-        5,
-        4
+        4,
+        3
       ]
     },
     {
       "id": "cw_9",
-      "name": "Massalia",
+      "name": "Fent Brick",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        21,
-        16,
+        28,
+        19,
         12,
         9,
         6
@@ -479,21 +479,21 @@
         11,
         8,
         6,
-        5,
-        4
+        4,
+        3
       ]
     },
     {
       "id": "fw_1",
-      "name": "Pompeian",
+      "name": "Vicodin",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        48,
-        37,
+        65,
+        44,
         28,
         21,
         15
@@ -502,21 +502,21 @@
         23,
         18,
         14,
-        11,
-        9
+        9,
+        7
       ]
     },
     {
       "id": "fw_2",
-      "name": "Lunense",
+      "name": "Codeine Syrup",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        50,
-        38,
+        68,
+        46,
         29,
         22,
         16
@@ -525,21 +525,21 @@
         24,
         19,
         15,
-        12,
-        9
+        10,
+        7
       ]
     },
     {
       "id": "fw_3",
-      "name": "Praetutium",
+      "name": "Percocet",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        53,
-        41,
+        72,
+        49,
         31,
         23,
         17
@@ -548,21 +548,21 @@
         25,
         20,
         15,
-        12,
-        10
+        10,
+        8
       ]
     },
     {
       "id": "fw_4",
-      "name": "Rhaeticum",
+      "name": "Seconal",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        56,
-        43,
+        76,
+        52,
         33,
         25,
         18
@@ -571,21 +571,21 @@
         27,
         21,
         16,
-        13,
-        10
+        11,
+        8
       ]
     },
     {
       "id": "fw_5",
-      "name": "Hadrianum",
+      "name": "OxyContin",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        59,
-        45,
+        80,
+        54,
         34,
         26,
         19
@@ -594,21 +594,21 @@
         28,
         22,
         17,
-        14,
-        11
+        12,
+        8
       ]
     },
     {
       "id": "fw_6",
-      "name": "Alban",
+      "name": "Methadone",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        62,
-        48,
+        84,
+        58,
         36,
         27,
         20
@@ -617,21 +617,21 @@
         29,
         23,
         18,
-        14,
-        11
+        12,
+        8
       ]
     },
     {
       "id": "fw_7",
-      "name": "Falernian",
+      "name": "Morphine Ampoules",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        65,
-        50,
+        88,
+        60,
         38,
         29,
         21
@@ -640,21 +640,21 @@
         31,
         24,
         19,
-        15,
-        12
+        13,
+        9
       ]
     },
     {
       "id": "fw_8",
-      "name": "Caecuban",
+      "name": "Dilaudid",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        68,
-        52,
+        92,
+        62,
         40,
         30,
         22
@@ -663,21 +663,21 @@
         32,
         25,
         20,
-        16,
-        12
+        14,
+        9
       ]
     },
     {
       "id": "fw_9",
-      "name": "Opimian",
+      "name": "Fentanyl Patches",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
       "guards": 0,
       "sell": [
-        72,
-        55,
+        97,
+        66,
         42,
         32,
         23
@@ -686,13 +686,13 @@
         34,
         27,
         21,
-        17,
-        13
+        14,
+        10
       ]
     },
     {
       "id": "ma_1",
-      "name": "Chickens",
+      "name": "Adderall",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -715,7 +715,7 @@
     },
     {
       "id": "ma_2",
-      "name": "Pheasants",
+      "name": "Ritalin",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -738,7 +738,7 @@
     },
     {
       "id": "ma_3",
-      "name": "Hares",
+      "name": "Vyvanse",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -761,7 +761,7 @@
     },
     {
       "id": "ma_4",
-      "name": "Lamb",
+      "name": "Modafinil",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -784,7 +784,7 @@
     },
     {
       "id": "ma_5",
-      "name": "Pig",
+      "name": "Dexedrine",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -807,7 +807,7 @@
     },
     {
       "id": "ma_6",
-      "name": "Geese",
+      "name": "Ephedrine",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -830,7 +830,7 @@
     },
     {
       "id": "ma_7",
-      "name": "Oysters",
+      "name": "Diet Pills",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -853,7 +853,7 @@
     },
     {
       "id": "ma_8",
-      "name": "Goat",
+      "name": "Bennies",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -876,7 +876,7 @@
     },
     {
       "id": "ma_9",
-      "name": "Ducks",
+      "name": "Captagon",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -899,7 +899,7 @@
     },
     {
       "id": "ea_1",
-      "name": "Ostrich",
+      "name": "Bath Salts",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -924,7 +924,7 @@
     },
     {
       "id": "ea_2",
-      "name": "Buffalo",
+      "name": "Speed",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -949,7 +949,7 @@
     },
     {
       "id": "ea_3",
-      "name": "Boar",
+      "name": "Crank",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -979,7 +979,7 @@
     },
     {
       "id": "ea_4",
-      "name": "Leopard",
+      "name": "Crack Rocks",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1009,7 +1009,7 @@
     },
     {
       "id": "ea_5",
-      "name": "Bear",
+      "name": "Coke 8-Ball",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1039,7 +1039,7 @@
     },
     {
       "id": "ea_6",
-      "name": "Crocodile",
+      "name": "Flakka",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1069,7 +1069,7 @@
     },
     {
       "id": "ea_7",
-      "name": "Tiger",
+      "name": "Crystal Meth",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1099,7 +1099,7 @@
     },
     {
       "id": "ea_8",
-      "name": "Lion",
+      "name": "Peruvian Flake",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1129,7 +1129,7 @@
     },
     {
       "id": "ea_9",
-      "name": "Rhinoceros",
+      "name": "Kilo of Coke",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1159,7 +1159,7 @@
     },
     {
       "id": "wpn_1",
-      "name": "Sagittae",
+      "name": "Brass Knuckles",
       "subtitle": "Arrows",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1180,12 +1180,12 @@
         4,
         3
       ],
-      "combatText": "No combat bonus",
+      "combatText": "Brass, 4-finger, 8 oz. No combat bonus",
       "combat": null
     },
     {
       "id": "wpn_2",
-      "name": "Scuta",
+      "name": "Riot Shield",
       "subtitle": "Shields",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1216,7 +1216,7 @@
     },
     {
       "id": "wpn_3",
-      "name": "Pugiones",
+      "name": "Switchblade",
       "subtitle": "Daggers",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1246,7 +1246,7 @@
     },
     {
       "id": "wpn_4",
-      "name": "Gladii",
+      "name": "Glock 19",
       "subtitle": "Shortswords",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1276,7 +1276,7 @@
     },
     {
       "id": "wpn_5",
-      "name": "Hastae",
+      "name": "AR-15",
       "subtitle": "Spears",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1306,7 +1306,7 @@
     },
     {
       "id": "wpn_6",
-      "name": "Spathae",
+      "name": "Desert Eagle",
       "subtitle": "Swords",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1336,7 +1336,7 @@
     },
     {
       "id": "wpn_7",
-      "name": "Manicae",
+      "name": "Stab Vest",
       "subtitle": "Armguards",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1367,7 +1367,7 @@
     },
     {
       "id": "wpn_8",
-      "name": "Galeae",
+      "name": "Kevlar Helmet",
       "subtitle": "Helmets",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1398,7 +1398,7 @@
     },
     {
       "id": "wpn_9",
-      "name": "Arcus",
+      "name": "Hunting Rifle",
       "subtitle": "Bows",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1428,7 +1428,7 @@
     },
     {
       "id": "wpn_10",
-      "name": "Pila",
+      "name": "Molotov Cocktail",
       "subtitle": "Javelins",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1449,7 +1449,7 @@
         4,
         3
       ],
-      "combatText": "1 CP (destroyed if used)",
+      "combatText": "Glass bottle, 1 L gasoline, rag wick. 1 CP (destroyed if used)",
       "combat": {
         "dice": 0,
         "negDice": 0,
@@ -1459,7 +1459,7 @@
     },
     {
       "id": "wpn_11",
-      "name": "Pila",
+      "name": "Pipe Bomb",
       "subtitle": "Javelins",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1467,30 +1467,25 @@
       "blocks": 2,
       "guards": 0,
       "sell": [
-        14,
-        11,
-        8,
-        6,
-        4
+        44,
+        34,
+        26,
+        19,
+        14
       ],
       "buy": [
-        11,
-        8,
-        6,
-        4,
-        3
+        16,
+        12,
+        9,
+        7,
+        5
       ],
-      "combatText": "1 CP (destroyed if used)",
-      "combat": {
-        "dice": 0,
-        "negDice": 0,
-        "flat": 1,
-        "consumable": true
-      }
+      "combatText": "Steel pipe, end caps, fuse. Unusable in a street fight: 0 CP",
+      "combat": null
     },
     {
       "id": "wpn_12",
-      "name": "Loricae",
+      "name": "Kevlar Vest",
       "subtitle": "Body Armor",
       "category": "Weapons",
       "subcategory": "Weapons",
@@ -1498,25 +1493,25 @@
       "blocks": 1,
       "guards": 0,
       "sell": [
-        36,
-        27,
-        20,
+        24,
+        19,
         15,
-        11
+        12,
+        10
       ],
       "buy": [
-        17,
-        13,
-        10,
-        8,
-        6
+        22,
+        18,
+        14,
+        12,
+        10
       ],
-      "combatText": "0 CP (Crated Armor Cargo)",
+      "combatText": "NIJ Level IIIA soft armor (crated). 0 CP in a street ambush",
       "combat": null
     },
     {
       "id": "mrb_1",
-      "name": "Carrara",
+      "name": "Molly Caps",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1533,13 +1528,13 @@
         25,
         19,
         15,
-        12,
-        10
+        15,
+        14
       ]
     },
     {
       "id": "mrb_2",
-      "name": "Carrara",
+      "name": "Ecstasy Pills",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1556,13 +1551,13 @@
         31,
         24,
         18,
-        14,
-        12
+        18,
+        16
       ]
     },
     {
       "id": "mrb_3",
-      "name": "Pavonazzetto",
+      "name": "Ketamine Vials",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1579,13 +1574,13 @@
         27,
         21,
         16,
-        13,
-        11
+        16,
+        15
       ]
     },
     {
       "id": "mrb_4",
-      "name": "Pavonazzetto",
+      "name": "K Bumps",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1602,13 +1597,13 @@
         33,
         25,
         19,
-        15,
-        13
+        19,
+        18
       ]
     },
     {
       "id": "mrb_5",
-      "name": "Proconnesian",
+      "name": "GHB",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1625,13 +1620,13 @@
         29,
         22,
         17,
-        14,
-        11
+        18,
+        15
       ]
     },
     {
       "id": "mrb_6",
-      "name": "Proconnesian",
+      "name": "2C-B",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1648,13 +1643,13 @@
         35,
         27,
         21,
-        16,
-        13
+        20,
+        18
       ]
     },
     {
       "id": "mrb_7",
-      "name": "Cipollino",
+      "name": "Poppers",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1671,13 +1666,13 @@
         31,
         24,
         18,
-        15,
-        12
+        19,
+        16
       ]
     },
     {
       "id": "mrb_8",
-      "name": "Cipollino",
+      "name": "MDMA Crystal",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1694,13 +1689,13 @@
         37,
         29,
         22,
-        17,
-        14
+        21,
+        19
       ]
     },
     {
       "id": "mrb_9",
-      "name": "Numidian",
+      "name": "Nitrous Tank",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1717,13 +1712,13 @@
         33,
         25,
         19,
-        15,
-        13
+        19,
+        18
       ]
     },
     {
       "id": "mrb_10",
-      "name": "Numidian",
+      "name": "Tusi (Pink Coke)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1740,13 +1735,13 @@
         39,
         30,
         23,
-        18,
-        15
+        22,
+        20
       ]
     },
     {
       "id": "mrb_11",
-      "name": "Imperial Porphyry",
+      "name": "Ketamine Brick",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1763,13 +1758,13 @@
         35,
         27,
         21,
-        16,
-        14
+        20,
+        19
       ]
     },
     {
       "id": "mrb_12",
-      "name": "Imperial Porphyry",
+      "name": "Rave Party Pack",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1786,13 +1781,13 @@
         42,
         32,
         25,
-        19,
-        16
+        24,
+        22
       ]
     },
     {
       "id": "grd_1",
-      "name": "Lucius",
+      "name": "Big Mike",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -1806,7 +1801,7 @@
         4,
         4
       ],
-      "combatText": "(R) CP & +■■ Cart Space",
+      "combatText": "(R) CP & +■■ SUV Space",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -1817,7 +1812,7 @@
     },
     {
       "id": "grd_2",
-      "name": "Servius",
+      "name": "Lil' Tony",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -1831,7 +1826,7 @@
         5,
         4
       ],
-      "combatText": "(R) CP & +▲ Cart Space",
+      "combatText": "(R) CP & +▲ SUV Space",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -1842,7 +1837,7 @@
     },
     {
       "id": "grd_3",
-      "name": "Plinius",
+      "name": "Rosa \"La Flaca\"",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -1856,7 +1851,7 @@
         3,
         3
       ],
-      "combatText": "1 CP & Cheap Wines Sell at +1 Rarity",
+      "combatText": "1 CP & Street Opiates Sell at +1 Rarity",
       "combat": {
         "dice": 0,
         "negDice": 0,
@@ -1866,7 +1861,7 @@
     },
     {
       "id": "grd_4",
-      "name": "Rufus",
+      "name": "Tank",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -1889,7 +1884,7 @@
     },
     {
       "id": "grd_5",
-      "name": "Decimus",
+      "name": "Doc",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -1913,7 +1908,7 @@
     },
     {
       "id": "grd_6",
-      "name": "Manius",
+      "name": "Skinny Pete",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -1936,7 +1931,7 @@
     },
     {
       "id": "grd_7",
-      "name": "Agrippa",
+      "name": "Twins",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -1959,7 +1954,7 @@
     },
     {
       "id": "grd_8",
-      "name": "Marcus",
+      "name": "Dre",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -1982,7 +1977,7 @@
     },
     {
       "id": "grd_9",
-      "name": "Paullus",
+      "name": "Ex-Marine Gus",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -2005,7 +2000,7 @@
     },
     {
       "id": "grd_10",
-      "name": "Maximus",
+      "name": "Bouncer Sal",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -2028,7 +2023,7 @@
     },
     {
       "id": "grd_11",
-      "name": "Gnaeus",
+      "name": "Pharmacist Kim",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -2042,7 +2037,7 @@
         4,
         3
       ],
-      "combatText": "(R) CP & Meat Animals Sell at +1 Rarity",
+      "combatText": "(R) CP & Pill Uppers Sell at +1 Rarity",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2052,7 +2047,7 @@
     },
     {
       "id": "grd_12",
-      "name": "Gordianus",
+      "name": "Cuz",
       "category": "Guards",
       "subcategory": "Guard",
       "track": "Guards",
@@ -2077,145 +2072,221 @@
   "missiones": [
     {
       "id": "mis_1",
-      "name": "Patronize The Arts",
       "kind": "sell",
-      "category": "Marble",
-      "modifier": "--",
-      "cell": "D1",
-      "rewardText": "Any Wine on Mkt",
+      "rewardText": "1 Influence Card",
       "reward": {
-        "type": "market_pick",
-        "track": "Wine",
-        "mode": "any"
+        "type": "influence",
+        "count": 1
       },
       "favor": [
-        "TechBros"
+        "DSA"
       ],
-      "text": "Sell Marble at -- Scarcity in D1 (Horti Sallustiani)."
+      "patronFaction": "DSA",
+      "name": "Community Pricing",
+      "category": "Grain",
+      "modifier": "-",
+      "cell": "A1",
+      "text": "Sell Grain at - Scarcity in A1 (Land's End)."
     },
     {
       "id": "mis_2",
-      "name": "Javelins For The Games",
-      "kind": "delivery",
-      "item": "Pila",
-      "category": "Weapons",
-      "blocks": 2,
-      "combatText": "1 CP (destroyed if used)",
-      "combat": {
-        "dice": 0,
-        "negDice": 0,
-        "flat": 1,
-        "consumable": true
-      },
-      "pickupCell": "B6",
-      "deliverCell": "B3",
-      "fencedSell": [
-        38,
-        22,
-        16,
-        10,
-        7
-      ],
-      "rewardText": "10(d)",
+      "kind": "sell",
+      "rewardText": "Cheapest Weapon on Mkt",
       "reward": {
-        "type": "cash",
-        "amount": 10
+        "type": "market_pick",
+        "track": "Weapons",
+        "mode": "cheapest"
       },
-      "favor": [],
-      "text": "Pick up Pila (Weapons • 2■ • 1 CP (destroyed if used)) in B6 (Via Ostiensis), Deliver to B3 (Circus Flaminius). [Fenced Sell: 38/22/16/10/7]"
+      "favor": [
+        "MAGA"
+      ],
+      "patronFaction": "MAGA",
+      "name": "VIP List",
+      "category": "Animals",
+      "modifier": "+",
+      "cell": "E1",
+      "text": "Sell Animals at + Scarcity in E1 (Telegraph)."
     },
     {
       "id": "mis_3",
-      "name": "Imperial Mausoleum Marble",
       "kind": "sell",
-      "category": "Marble",
-      "modifier": "+",
-      "cell": "A1",
-      "rewardText": "MAGA & TechBros Favor",
+      "rewardText": "1 Influence Card",
       "reward": {
-        "type": "none"
+        "type": "influence",
+        "count": 1
       },
       "favor": [
-        "MAGA",
-        "TechBros"
+        "TECH"
       ],
-      "text": "Sell Marble at + Scarcity in A1 (Mausoleum Hadriani)."
+      "patronFaction": "TECH",
+      "name": "Bottle Service",
+      "category": "Animals",
+      "modifier": "+",
+      "cell": "C6",
+      "text": "Sell Animals at + Scarcity in C6 (Balboa)."
     },
     {
       "id": "mis_4",
-      "name": "Price Gouge Grapes",
       "kind": "sell",
-      "category": "Cheap Wine",
-      "modifier": "++",
-      "cell": "D4",
-      "rewardText": "ISIS Favor (-TechBros)",
+      "rewardText": "Cheapest Party Drugs on Mkt",
       "reward": {
-        "type": "none"
+        "type": "market_pick",
+        "track": "Marble",
+        "mode": "cheapest"
       },
       "favor": [
-        "-TechBros",
-        "ISIS"
+        "MS13"
       ],
-      "text": "Sell Cheap Wine at ++ Scarcity in D4 (Forum Vespasiani)."
+      "patronFaction": "MS13",
+      "name": "Markup",
+      "category": "Animals",
+      "modifier": "+",
+      "cell": "D5",
+      "text": "Sell Animals at + Scarcity in D5 (Noe)."
     },
     {
       "id": "mis_5",
-      "name": "Feed The Plebes",
-      "kind": "sell",
-      "category": "Grain",
-      "modifier": "=",
-      "cell": "B4",
-      "rewardText": "1 Influence Card",
+      "kind": "delivery",
+      "rewardText": "Cheapest Opiates on Mkt",
       "reward": {
-        "type": "influence",
-        "count": 1
+        "type": "market_pick",
+        "track": "Wine",
+        "mode": "cheapest"
       },
       "favor": [
-        "DSA"
+        "ISIS"
       ],
-      "text": "Sell Grain at = Scarcity in B4 (Trans Tiberim)."
+      "patronFaction": "ISIS",
+      "name": "Dead Drop",
+      "item": "Ammo Cans",
+      "category": "Weapons",
+      "blocks": 2,
+      "pickupCell": "A3",
+      "deliverCell": "A4",
+      "fencedSell": [
+        42,
+        32,
+        24,
+        18,
+        12
+      ],
+      "text": "Pick up Ammo Cans (Weapons • 2■) in A3 (GG Park), Deliver to A4 (Sunset). [Fenced Sell: 42/32/24/18/12]"
     },
     {
       "id": "mis_6",
-      "name": "Feed The Plebes",
       "kind": "sell",
-      "category": "Grain",
-      "modifier": "--",
-      "cell": "E2",
-      "rewardText": "1 Influence Card",
+      "rewardText": "Cheapest Henchman on Mkt",
       "reward": {
-        "type": "influence",
-        "count": 1
+        "type": "market_pick",
+        "track": "Guards",
+        "mode": "cheapest"
       },
       "favor": [
         "DSA"
       ],
-      "text": "Sell Grain at -- Scarcity in E2 (Subura)."
+      "patronFaction": "DSA",
+      "name": "Community Pricing",
+      "category": "Marble",
+      "modifier": "-",
+      "cell": "C5",
+      "text": "Sell Marble at - Scarcity in C5 (Miraloma)."
     },
     {
       "id": "mis_7",
-      "name": "Noctes Romanae",
+      "name": "Paparazzi",
       "kind": "expose",
       "exposeType": "patricii",
       "exposeCount": 4,
-      "description": "Expose 4 Patricii (4 individual saffron Patricii icons visible on exposed tiles)",
+      "description": "Expose 4 Celebrities (individual Celebrities icons visible on exposed tiles)",
       "rewardText": "16(d)",
       "reward": {
         "type": "cash",
         "amount": 16
       },
       "favor": [
-        "TechBros"
+        "TECH"
       ],
-      "text": "Expose 4 Patricii (4 individual saffron Patricii icons visible on exposed tiles)"
+      "text": "Expose 4 Celebrities (individual Celebrities icons visible on exposed tiles)"
     },
     {
       "id": "mis_8",
-      "name": "Sate The Plebes",
       "kind": "sell",
-      "category": "Cheap Wine",
-      "modifier": "=",
-      "cell": "C6",
+      "rewardText": "Any Weapon on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Weapons",
+        "mode": "any"
+      },
+      "favor": [
+        "MAGA"
+      ],
+      "patronFaction": "MAGA",
+      "name": "VIP List",
+      "category": "Animals",
+      "modifier": "+",
+      "cell": "A2",
+      "text": "Sell Animals at + Scarcity in A2 (Richmond)."
+    },
+    {
+      "id": "mis_9",
+      "kind": "sell",
+      "rewardText": "8(d) & 1 Influence Card",
+      "reward": {
+        "type": "cash_and_influence",
+        "amount": 8,
+        "count": 1
+      },
+      "favor": [
+        "TECH"
+      ],
+      "patronFaction": "TECH",
+      "name": "Bottle Service",
+      "category": "Marble",
+      "modifier": "+",
+      "cell": "D2",
+      "text": "Sell Marble at + Scarcity in D2 (Nob Hill)."
+    },
+    {
+      "id": "mis_10",
+      "kind": "sell",
+      "rewardText": "Any Uppers on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Animals",
+        "mode": "any"
+      },
+      "favor": [
+        "MS13"
+      ],
+      "patronFaction": "MS13",
+      "name": "Markup",
+      "category": "Wine",
+      "modifier": "+",
+      "cell": "A6",
+      "text": "Sell Wine at + Scarcity in A6 (Daly City)."
+    },
+    {
+      "id": "mis_11",
+      "kind": "sell",
+      "rewardText": "Any Opiates on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Wine",
+        "mode": "any"
+      },
+      "favor": [
+        "ISIS"
+      ],
+      "patronFaction": "ISIS",
+      "name": "Bottle Service",
+      "category": "Weapons",
+      "modifier": "+",
+      "cell": "F4",
+      "text": "Sell Weapons at + Scarcity in F4 (Dogpatch)."
+    },
+    {
+      "id": "mis_12",
+      "kind": "sell",
       "rewardText": "1 Influence Card",
       "reward": {
         "type": "influence",
@@ -2224,104 +2295,162 @@
       "favor": [
         "DSA"
       ],
-      "text": "Sell Cheap Wine at = Scarcity in C6 (Remuria / Aventinus Minor)."
-    },
-    {
-      "id": "mis_9",
-      "name": "Uber Drinks",
-      "kind": "delivery",
-      "item": "Caeretanum",
-      "category": "Cheap Wine",
-      "blocks": 1,
-      "pickupCell": "A5",
-      "deliverCell": "C1",
-      "fencedSell": [
-        32,
-        20,
-        13,
-        8,
-        6
-      ],
-      "rewardText": "12(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 12
-      },
-      "favor": [],
-      "text": "Pick up Caeretanum (Cheap Wine • 1■) in A5 (Horti Caesaris), Deliver to C1 (Mons Pincius). [Fenced Sell: 32/20/13/8/6]"
-    },
-    {
-      "id": "mis_10",
-      "name": "Price Gouge Grain",
-      "kind": "sell",
+      "patronFaction": "DSA",
+      "name": "Mutual Aid Drop",
       "category": "Grain",
-      "modifier": "+",
-      "cell": "C1",
-      "rewardText": "4(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 4
-      },
-      "favor": [],
-      "text": "Sell Grain at + Scarcity in C1 (Mons Pincius)."
+      "modifier": "-",
+      "cell": "A4",
+      "text": "Sell Grain at - Scarcity in A4 (Sunset)."
     },
     {
-      "id": "mis_11",
-      "name": "Sports",
+      "id": "mis_13",
       "kind": "sell",
-      "category": "Exotic Animals",
-      "modifier": "-",
-      "cell": "A2",
-      "rewardText": "Top card of Goods deck",
+      "rewardText": "Any Uppers on Mkt",
       "reward": {
-        "type": "top_good"
+        "type": "market_pick",
+        "track": "Animals",
+        "mode": "any"
       },
       "favor": [
-        "MAGA",
-        "ISIS"
+        "MAGA"
       ],
-      "text": "Sell Exotic Animals at - Scarcity in A2 (Circus Agonalis)."
+      "patronFaction": "MAGA",
+      "name": "Markup",
+      "category": "Animals",
+      "modifier": "+",
+      "cell": "E3",
+      "text": "Sell Animals at + Scarcity in E3 (SoMa)."
     },
     {
-      "id": "mis_12",
-      "name": "Animal Sacrifice",
+      "id": "mis_14",
       "kind": "sell",
-      "category": "Meat Animals",
+      "rewardText": "18(d)",
+      "reward": {
+        "type": "cash",
+        "amount": 18
+      },
+      "favor": [
+        "TECH"
+      ],
+      "patronFaction": "TECH",
+      "name": "Bottle Service",
+      "category": "Animals",
       "modifier": "+",
-      "cell": "C2",
+      "cell": "E2",
+      "text": "Sell Animals at + Scarcity in E2 (Chinatown)."
+    },
+    {
+      "id": "mis_15",
+      "kind": "kill",
+      "rewardText": "Cheapest Party Drugs on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Marble",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "MS13"
+      ],
+      "patronFaction": "MS13",
+      "name": "Make an Example",
+      "targetDeck": "Legiones",
+      "description": "Kill a Cop in Combat",
+      "text": "Kill a Cop in Combat"
+    },
+    {
+      "id": "mis_16",
+      "kind": "kill",
+      "rewardText": "Cheapest Opiates on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Wine",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "ISIS"
+      ],
+      "patronFaction": "ISIS",
+      "name": "Hit Job",
+      "targetDeck": "Patricii",
+      "description": "Kill a Celebrity in Combat",
+      "text": "Kill a Celebrity in Combat"
+    },
+    {
+      "id": "mis_17",
+      "kind": "kill",
+      "rewardText": "Cheapest Henchman on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Guards",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "DSA"
+      ],
+      "patronFaction": "DSA",
+      "name": "Hit Job",
+      "targetDeck": "Legiones",
+      "description": "Kill a Cop in Combat",
+      "text": "Kill a Cop in Combat"
+    },
+    {
+      "id": "mis_18",
+      "kind": "sell",
+      "rewardText": "Any Opiates on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Wine",
+        "mode": "any"
+      },
+      "favor": [
+        "MAGA"
+      ],
+      "patronFaction": "MAGA",
+      "name": "Markup",
+      "category": "Animals",
+      "modifier": "+",
+      "cell": "B3",
+      "text": "Sell Animals at + Scarcity in B3 (Fillmore)."
+    },
+    {
+      "id": "mis_19",
+      "kind": "sell",
       "rewardText": "1 Influence Card",
       "reward": {
         "type": "influence",
         "count": 1
       },
       "favor": [
-        "MS13"
+        "TECH"
       ],
-      "text": "Sell Meat Animals at + Scarcity in C2 (Saepta Julia)."
+      "patronFaction": "TECH",
+      "name": "VIP List",
+      "category": "Animals",
+      "modifier": "+",
+      "cell": "A4",
+      "text": "Sell Animals at + Scarcity in A4 (Sunset)."
     },
     {
-      "id": "mis_13",
-      "name": "Sate The Plebes",
-      "kind": "sell",
-      "category": "Cheap Wine",
-      "modifier": "-",
-      "cell": "D2",
-      "rewardText": "Cheapest Guard on Mkt",
+      "id": "mis_20",
+      "kind": "kill",
+      "rewardText": "Cheapest Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Guards",
+        "track": "Animals",
         "mode": "cheapest"
       },
-      "favor": [],
-      "text": "Sell Cheap Wine at - Scarcity in D2 (Collis Quirinalis)."
+      "favor": [
+        "MS13"
+      ],
+      "patronFaction": "MS13",
+      "name": "Make an Example",
+      "targetDeck": "Legiones",
+      "description": "Kill a Cop in Combat",
+      "text": "Kill a Cop in Combat"
     },
     {
-      "id": "mis_14",
-      "name": "Feast",
-      "kind": "sell",
-      "category": "Meat Animals",
-      "modifier": "-",
-      "cell": "E1",
+      "id": "mis_21",
+      "kind": "kill",
       "rewardText": "Cheapest Weapon on Mkt",
       "reward": {
         "type": "market_pick",
@@ -2331,281 +2460,93 @@
       "favor": [
         "ISIS"
       ],
-      "text": "Sell Meat Animals at - Scarcity in E1 (Via Nomentana)."
+      "patronFaction": "ISIS",
+      "name": "Take Out the Trash",
+      "targetDeck": "Legiones",
+      "description": "Kill a Cop in Combat",
+      "text": "Kill a Cop in Combat"
     },
     {
-      "id": "mis_15",
-      "name": "Grain Delivery",
-      "kind": "delivery",
-      "item": "Spelt",
-      "category": "Grain",
-      "blocks": 2,
-      "pickupCell": "E6",
-      "deliverCell": "F4",
-      "fencedSell": [
-        20,
-        13,
-        8,
-        5,
-        4
-      ],
+      "id": "mis_22",
+      "kind": "sell",
       "rewardText": "1 Influence Card",
       "reward": {
         "type": "influence",
         "count": 1
       },
-      "favor": [],
-      "text": "Pick up Spelt (Grain • 2■) in E6 (Caeliolus), Deliver to F4 (Collis Esquilinus). [Fenced Sell: 20/13/8/5/4]"
-    },
-    {
-      "id": "mis_16",
-      "name": "Arm The Vigiles",
-      "kind": "sell",
-      "category": "Weapons",
-      "modifier": "--",
-      "cell": "A4",
-      "rewardText": "Cheapest Meat A on Mkt",
-      "reward": {
-        "type": "market_pick",
-        "track": "Animals",
-        "subcategory": "Meat Animals",
-        "mode": "cheapest"
-      },
-      "favor": [
-        "MS13"
-      ],
-      "text": "Sell Weapons at -- Scarcity in A4 (Via Aurelia)."
-    },
-    {
-      "id": "mis_17",
-      "name": "Rhino Racing",
-      "kind": "delivery",
-      "item": "Rhinoceros",
-      "category": "Exotic Animals",
-      "blocks": 4,
-      "combatText": "3(R) -4 CP",
-      "combat": {
-        "dice": 3,
-        "negDice": 0,
-        "flat": -4,
-        "mandatory": true
-      },
-      "pickupCell": "F3",
-      "deliverCell": "A2",
-      "fencedSell": [
-        76,
-        50,
-        28,
-        18,
-        10
-      ],
-      "rewardText": "(R) x 20(d)",
-      "reward": {
-        "type": "dice_cash",
-        "multiplier": 20
-      },
-      "favor": [],
-      "text": "Pick up Rhinoceros (Exotic Animals • 4■ • 3(R) -4 CP) in F3 (Via Tiburtina), Deliver to A2 (Circus Agonalis). [Fenced Sell: 76/50/28/18/10]"
-    },
-    {
-      "id": "mis_18",
-      "name": "Hunting Games",
-      "kind": "sell",
-      "category": "Exotic Animals",
-      "modifier": "+",
-      "cell": "B3",
-      "rewardText": "MAGA & ISIS Favor",
-      "reward": {
-        "type": "none"
-      },
-      "favor": [
-        "MAGA",
-        "ISIS"
-      ],
-      "text": "Sell Exotic Animals at + Scarcity in B3 (Circus Flaminius)."
-    },
-    {
-      "id": "mis_19",
-      "name": "Shields For The Cohortes Urbanae",
-      "kind": "delivery",
-      "item": "Scuta",
-      "category": "Weapons",
-      "blocks": 2,
-      "combatText": "Ignore (R) Wounds",
-      "combat": {
-        "dice": 0,
-        "negDice": 0,
-        "flat": 0,
-        "ignoreWoundsDice": 1
-      },
-      "pickupCell": "B6",
-      "deliverCell": "C2",
-      "fencedSell": [
-        26,
-        18,
-        10,
-        7,
-        4
-      ],
-      "rewardText": "4(d) & 1 Influence Card",
-      "reward": {
-        "type": "cash_and_influence",
-        "amount": 4,
-        "count": 1
-      },
-      "favor": [],
-      "text": "Pick up Scuta (Weapons • 2■ • Ignore (R) Wounds) in B6 (Via Ostiensis), Deliver to C2 (Saepta Julia). [Fenced Sell: 26/18/10/7/4]"
-    },
-    {
-      "id": "mis_20",
-      "name": "Wine Delivery",
-      "kind": "delivery",
-      "item": "Opimian",
-      "category": "Fine Wine",
-      "blocks": 1,
-      "pickupCell": "D3",
-      "deliverCell": "B5",
-      "fencedSell": [
-        80,
-        60,
-        40,
-        30,
-        15
-      ],
-      "rewardText": "Cheapest Mkt Marble",
-      "reward": {
-        "type": "market_pick",
-        "track": "Marble",
-        "mode": "cheapest"
-      },
-      "favor": [
-        "-MAGA",
-        "MS13"
-      ],
-      "text": "Pick up Opimian (Fine Wine • 1■) in D3 (Forum Augustum), Deliver to B5 (Collis Aventinus). [Fenced Sell: 80/60/40/30/15]"
-    },
-    {
-      "id": "mis_21",
-      "name": "Conspire",
-      "kind": "sell",
-      "category": "Weapons",
-      "modifier": "-",
-      "cell": "B1",
-      "rewardText": "Any Cheap W on Mkt",
-      "reward": {
-        "type": "market_pick",
-        "track": "Wine",
-        "subcategory": "Cheap Wine",
-        "mode": "any"
-      },
       "favor": [
         "DSA"
       ],
-      "text": "Sell Weapons at - Scarcity in B1 (Via Flaminia)."
-    },
-    {
-      "id": "mis_22",
-      "name": "Vigilante",
-      "kind": "kill",
-      "targetDeck": "Nefarii",
-      "description": "Kill a Nefarius in Combat",
-      "rewardText": "Any Meat A on Mkt",
-      "reward": {
-        "type": "market_pick",
-        "track": "Animals",
-        "subcategory": "Meat Animals",
-        "mode": "any"
-      },
-      "favor": [
-        "MAGA"
-      ],
-      "text": "Kill a Nefarius in Combat"
+      "patronFaction": "DSA",
+      "name": "Mutual Aid Drop",
+      "category": "Marble",
+      "modifier": "-",
+      "cell": "A4",
+      "text": "Sell Marble at - Scarcity in A4 (Sunset)."
     },
     {
       "id": "mis_23",
-      "name": "Armor For The Guards",
-      "kind": "delivery",
-      "item": "Galeae",
-      "category": "Weapons",
-      "blocks": 1,
-      "combatText": "Ignore 2 Wounds",
-      "combat": {
-        "dice": 0,
-        "negDice": 0,
-        "flat": 0,
-        "ignoreWoundsFlat": 2
-      },
-      "pickupCell": "F1",
-      "deliverCell": "A4",
-      "fencedSell": [
-        32,
-        22,
-        13,
-        11,
-        8
-      ],
-      "rewardText": "12(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 12
-      },
-      "favor": [],
-      "text": "Pick up Galeae (Weapons • 1■ • Ignore 2 Wounds) in F1 (Castra Praetoria), Deliver to A4 (Via Aurelia). [Fenced Sell: 32/22/13/11/8]"
-    },
-    {
-      "id": "mis_24",
-      "name": "Marble Delivery",
-      "kind": "delivery",
-      "item": "Imperial Porphyry",
-      "category": "Marble",
-      "blocks": 2,
-      "pickupCell": "F3",
-      "deliverCell": "B2",
-      "fencedSell": [
-        76,
-        52,
-        31,
-        23,
-        13
-      ],
-      "rewardText": "Priciest Mkt Guard",
+      "kind": "kill",
+      "rewardText": "Any Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Guards",
-        "mode": "priciest"
-      },
-      "favor": [
-        "-ISIS",
-        "MAGA"
-      ],
-      "text": "Pick up Imperial Porphyry (Marble • 2■) in F3 (Via Tiburtina), Deliver to B2 (Pantheum / Thermae Neronianae). [Fenced Sell: 76/52/31/23/13]"
-    },
-    {
-      "id": "mis_25",
-      "name": "Chariot Games",
-      "kind": "sell",
-      "category": "Exotic Animals",
-      "modifier": "=",
-      "cell": "C5",
-      "rewardText": "Any Weapon on Mkt",
-      "reward": {
-        "type": "market_pick",
-        "track": "Weapons",
+        "track": "Animals",
         "mode": "any"
       },
       "favor": [
-        "MAGA",
-        "ISIS"
+        "MAGA"
       ],
-      "text": "Sell Exotic Animals at = Scarcity in C5 (Circus Maximus)."
+      "patronFaction": "MAGA",
+      "name": "Make an Example",
+      "targetDeck": "Patricii",
+      "description": "Kill a Celebrity in Combat",
+      "text": "Kill a Celebrity in Combat"
+    },
+    {
+      "id": "mis_24",
+      "kind": "sell",
+      "rewardText": "Any Weed on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Grain",
+        "mode": "any"
+      },
+      "favor": [
+        "TECH"
+      ],
+      "patronFaction": "TECH",
+      "name": "Bottle Service",
+      "category": "Grain",
+      "modifier": "+",
+      "cell": "D4",
+      "text": "Sell Grain at + Scarcity in D4 (Castro)."
+    },
+    {
+      "id": "mis_25",
+      "kind": "sell",
+      "rewardText": "Any Uppers on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Animals",
+        "mode": "any"
+      },
+      "favor": [
+        "MS13"
+      ],
+      "patronFaction": "MS13",
+      "name": "Bottle Service",
+      "category": "Animals",
+      "modifier": "+",
+      "cell": "B6",
+      "text": "Sell Animals at + Scarcity in B6 (Crocker)."
     },
     {
       "id": "mis_26",
-      "name": "Martial Law",
+      "name": "Copwatch",
       "kind": "expose",
       "exposeType": "legiones",
       "exposeCount": 12,
-      "description": "Expose 12 Legiones (12 individual red Legiones icons visible on exposed tiles)",
+      "description": "Expose 12 Cops (individual Cops icons visible on exposed tiles)",
       "rewardText": "40(d)",
       "reward": {
         "type": "cash",
@@ -2615,296 +2556,304 @@
         "MAGA",
         "ISIS"
       ],
-      "text": "Expose 12 Legiones (12 individual red Legiones icons visible on exposed tiles)"
+      "text": "Expose 12 Cops (individual Cops icons visible on exposed tiles)"
     },
     {
       "id": "mis_27",
-      "name": "Poultry Delivery",
       "kind": "delivery",
-      "item": "Chickens",
-      "category": "Meat Animals",
-      "blocks": 1,
-      "pickupCell": "C1",
-      "deliverCell": "D5",
-      "fencedSell": [
-        19,
-        12,
-        7,
-        5,
-        4
-      ],
       "rewardText": "6(d)",
       "reward": {
         "type": "cash",
         "amount": 6
       },
-      "favor": [],
-      "text": "Pick up Chickens (Meat Animals • 1■) in C1 (Mons Pincius), Deliver to D5 (Mons Palatinus). [Fenced Sell: 19/12/7/5/4]"
+      "favor": [
+        "ISIS"
+      ],
+      "patronFaction": "ISIS",
+      "name": "Dead Drop",
+      "item": "Crate of ARs",
+      "category": "Weapons",
+      "blocks": 2,
+      "pickupCell": "A1",
+      "deliverCell": "E5",
+      "fencedSell": [
+        42,
+        32,
+        24,
+        18,
+        12
+      ],
+      "text": "Pick up Crate of ARs (Weapons • 2■) in A1 (Land's End), Deliver to E5 (Bernal). [Fenced Sell: 42/32/24/18/12]"
     },
     {
       "id": "mis_28",
-      "name": "Decorate The Baths",
-      "kind": "sell",
-      "category": "Marble",
-      "modifier": "=",
-      "cell": "D6",
-      "rewardText": "MAGA Favor",
-      "reward": {
-        "type": "none"
-      },
-      "favor": [
-        "MAGA"
-      ],
-      "text": "Sell Marble at = Scarcity in D6 (Thermae Antoninianae)."
-    },
-    {
-      "id": "mis_29",
-      "name": "Grain Delivery",
       "kind": "delivery",
-      "item": "Durum",
-      "category": "Grain",
-      "blocks": 2,
-      "pickupCell": "C6",
-      "deliverCell": "D3",
-      "fencedSell": [
-        20,
-        12,
-        7,
-        5,
-        3
-      ],
-      "rewardText": "(R) Influence Cards",
-      "reward": {
-        "type": "dice_influence",
-        "dice": 1
-      },
-      "favor": [],
-      "text": "Pick up Durum (Grain • 2■) in C6 (Remuria / Aventinus Minor), Deliver to D3 (Forum Augustum). [Fenced Sell: 20/12/7/5/3]"
-    },
-    {
-      "id": "mis_30",
-      "name": "Arm The Praetoriani",
-      "kind": "sell",
-      "category": "Weapons",
-      "modifier": "++",
-      "cell": "E4",
-      "rewardText": "MAGA Favor (-DSA)",
-      "reward": {
-        "type": "none"
-      },
-      "favor": [
-        "-DSA",
-        "MAGA"
-      ],
-      "text": "Sell Weapons at ++ Scarcity in E4 (Amphitheatrum Flavium)."
-    },
-    {
-      "id": "mis_31",
-      "name": "Seafood Delivery",
-      "kind": "delivery",
-      "item": "Oysters",
-      "category": "Meat Animals",
-      "blocks": 1,
-      "pickupCell": "B4",
-      "deliverCell": "F2",
-      "fencedSell": [
-        24,
-        16,
-        10,
-        9,
-        6
-      ],
-      "rewardText": "10(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 10
-      },
-      "favor": [],
-      "text": "Pick up Oysters (Meat Animals • 1■) in B4 (Trans Tiberim), Deliver to F2 (Collis Viminalis). [Fenced Sell: 24/16/10/9/6]"
-    },
-    {
-      "id": "mis_32",
-      "name": "Feast",
-      "kind": "sell",
-      "category": "Meat Animals",
-      "modifier": "=",
-      "cell": "E6",
-      "rewardText": "6(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 6
-      },
-      "favor": [
-        "ISIS"
-      ],
-      "text": "Sell Meat Animals at = Scarcity in E6 (Caeliolus)."
-    },
-    {
-      "id": "mis_33",
-      "name": "Price Gouge Grain",
-      "kind": "sell",
-      "category": "Grain",
-      "modifier": "++",
-      "cell": "D3",
-      "rewardText": "2(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 2
-      },
-      "favor": [
-        "-MAGA",
-        "ISIS"
-      ],
-      "text": "Sell Grain at ++ Scarcity in D3 (Forum Augustum)."
-    },
-    {
-      "id": "mis_34",
-      "name": "Regicide",
-      "kind": "kill_emperor",
-      "description": "Kill the Emperor (Completed if either ISIS or MAGA is killed by any Player)",
-      "rewardText": "You Win The Game",
-      "reward": {
-        "type": "win_game"
-      },
-      "favor": [],
-      "text": "Kill the Emperor (Completed if either ISIS or MAGA is killed by any Player)"
-    },
-    {
-      "id": "mis_35",
-      "name": "Uber Drinks",
-      "kind": "delivery",
-      "item": "Falernian",
-      "category": "Fine Wine",
-      "blocks": 1,
-      "pickupCell": "D1",
-      "deliverCell": "F4",
-      "fencedSell": [
-        32,
-        20,
-        13,
-        8,
-        6
-      ],
-      "rewardText": "12(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 12
-      },
-      "favor": [],
-      "text": "Pick up Falernian (Fine Wine • 1■) in D1 (Horti Sallustiani), Deliver to F4 (Collis Esquilinus). [Fenced Sell: 32/20/13/8/6]"
-    },
-    {
-      "id": "mis_36",
-      "name": "Hunting Games",
-      "kind": "delivery",
-      "item": "Ostrich",
-      "category": "Exotic Animals",
-      "blocks": 2,
-      "pickupCell": "E6",
-      "deliverCell": "A2",
-      "fencedSell": [
-        16,
-        12,
-        8,
-        6,
-        3
-      ],
-      "rewardText": "(R) x 10(d)",
-      "reward": {
-        "type": "dice_cash",
-        "multiplier": 10
-      },
-      "favor": [],
-      "text": "Pick up Ostrich (Exotic Animals • 2■) in E6 (Caeliolus), Deliver to A2 (Circus Agonalis). [Fenced Sell: 16/12/8/6/3]"
-    },
-    {
-      "id": "mis_37",
-      "name": "Revolt",
-      "kind": "kill",
-      "targetDeck": "Legiones",
-      "description": "Kill a Legionary in Combat",
-      "rewardText": "Cheapest Fine W on Mkt",
+      "rewardText": "Cheapest Weapon on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Wine",
-        "subcategory": "Fine Wine",
+        "track": "Weapons",
         "mode": "cheapest"
       },
       "favor": [
         "DSA"
       ],
-      "text": "Kill a Legionary in Combat"
+      "patronFaction": "DSA",
+      "name": "Last Mile",
+      "item": "Ketamine Jugs",
+      "category": "Marble",
+      "blocks": 1,
+      "pickupCell": "F2",
+      "deliverCell": "E6",
+      "fencedSell": [
+        80,
+        61,
+        46,
+        35,
+        26
+      ],
+      "text": "Pick up Ketamine Jugs (Marble • 1■) in F2 (Ballpark), Deliver to E6 (Portola). [Fenced Sell: 80/61/46/35/26]"
+    },
+    {
+      "id": "mis_29",
+      "kind": "sell",
+      "rewardText": "Cheapest Uppers on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Animals",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "MAGA"
+      ],
+      "patronFaction": "MAGA",
+      "name": "Mutual Aid Drop",
+      "category": "Wine",
+      "modifier": "-",
+      "cell": "E3",
+      "text": "Sell Wine at - Scarcity in E3 (SoMa)."
+    },
+    {
+      "id": "mis_30",
+      "kind": "delivery",
+      "rewardText": "7(d) & 1 Influence Card",
+      "reward": {
+        "type": "cash_and_influence",
+        "amount": 7,
+        "count": 1
+      },
+      "favor": [
+        "TECH"
+      ],
+      "patronFaction": "TECH",
+      "name": "Last Mile",
+      "item": "Coke Brick",
+      "category": "Animals",
+      "blocks": 2,
+      "pickupCell": "D4",
+      "deliverCell": "A2",
+      "fencedSell": [
+        78,
+        60,
+        46,
+        34,
+        24
+      ],
+      "text": "Pick up Coke Brick (Animals • 2■) in D4 (Castro), Deliver to A2 (Richmond). [Fenced Sell: 78/60/46/34/24]"
+    },
+    {
+      "id": "mis_31",
+      "kind": "kill",
+      "rewardText": "Cheapest Party Drugs on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Marble",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "MS13"
+      ],
+      "patronFaction": "MS13",
+      "name": "Silence a Witness",
+      "targetDeck": "Legiones",
+      "description": "Kill a Cop in Combat",
+      "text": "Kill a Cop in Combat"
+    },
+    {
+      "id": "mis_32",
+      "kind": "delivery",
+      "rewardText": "Cheapest Opiates on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Wine",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "ISIS"
+      ],
+      "patronFaction": "ISIS",
+      "name": "Curbside Pickup",
+      "item": "Oxy Script Haul",
+      "category": "Wine",
+      "blocks": 1,
+      "pickupCell": "C4",
+      "deliverCell": "F3",
+      "fencedSell": [
+        54,
+        37,
+        23,
+        17,
+        13
+      ],
+      "text": "Pick up Oxy Script Haul (Wine • 1■) in C4 (Diamond), Deliver to F3 (Potrero). [Fenced Sell: 54/37/23/17/13]"
+    },
+    {
+      "id": "mis_33",
+      "kind": "sell",
+      "rewardText": "1 Influence Card",
+      "reward": {
+        "type": "influence",
+        "count": 1
+      },
+      "favor": [
+        "DSA"
+      ],
+      "patronFaction": "DSA",
+      "name": "Harm Reduction",
+      "category": "Grain",
+      "modifier": "-",
+      "cell": "E6",
+      "text": "Sell Grain at - Scarcity in E6 (Portola)."
+    },
+    {
+      "id": "mis_34",
+      "name": "Regime Change",
+      "kind": "kill_emperor",
+      "description": "Take Out the Boss (Completed if Donald Trump or Jared Kushner is defeated by any Player)",
+      "rewardText": "You Win The Game",
+      "reward": {
+        "type": "win_game"
+      },
+      "favor": [],
+      "text": "Take Out the Boss (Completed if Donald Trump or Jared Kushner is defeated by any Player)"
+    },
+    {
+      "id": "mis_35",
+      "kind": "sell",
+      "rewardText": "Cheapest Opiates on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Wine",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "MAGA"
+      ],
+      "patronFaction": "MAGA",
+      "name": "Mutual Aid Drop",
+      "category": "Wine",
+      "modifier": "-",
+      "cell": "D5",
+      "text": "Sell Wine at - Scarcity in D5 (Noe)."
+    },
+    {
+      "id": "mis_36",
+      "kind": "sell",
+      "rewardText": "1 Influence Card",
+      "reward": {
+        "type": "influence",
+        "count": 1
+      },
+      "favor": [
+        "TECH"
+      ],
+      "patronFaction": "TECH",
+      "name": "Markup",
+      "category": "Marble",
+      "modifier": "+",
+      "cell": "E4",
+      "text": "Sell Marble at + Scarcity in E4 (Mission)."
+    },
+    {
+      "id": "mis_37",
+      "kind": "kill",
+      "rewardText": "Cheapest Party Drugs on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Marble",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "MS13"
+      ],
+      "patronFaction": "MS13",
+      "name": "Make an Example",
+      "targetDeck": "Legiones",
+      "description": "Kill a Cop in Combat",
+      "text": "Kill a Cop in Combat"
     },
     {
       "id": "mis_38",
-      "name": "Wine Delivery",
-      "kind": "delivery",
-      "item": "Cretan",
-      "category": "Cheap Wine",
-      "blocks": 1,
-      "pickupCell": "B2",
-      "deliverCell": "C5",
-      "fencedSell": [
-        42,
-        26,
-        16,
-        11,
-        6
-      ],
-      "rewardText": "4(d) & 1 Influence Card",
+      "kind": "sell",
+      "rewardText": "Cheapest Henchman on Mkt",
       "reward": {
-        "type": "cash_and_influence",
-        "amount": 4,
-        "count": 1
+        "type": "market_pick",
+        "track": "Guards",
+        "mode": "cheapest"
       },
-      "favor": [],
-      "text": "Pick up Cretan (Cheap Wine • 1■) in B2 (Pantheum / Thermae Neronianae), Deliver to C5 (Circus Maximus). [Fenced Sell: 42/26/16/11/6]"
+      "favor": [
+        "ISIS"
+      ],
+      "patronFaction": "ISIS",
+      "name": "VIP List",
+      "category": "Weapons",
+      "modifier": "+",
+      "cell": "B2",
+      "text": "Sell Weapons at + Scarcity in B2 (Laurel)."
     },
     {
       "id": "mis_39",
-      "name": "Arm The Cohortes Urbanae",
-      "kind": "sell",
-      "category": "Weapons",
-      "modifier": "=",
-      "cell": "B6",
-      "rewardText": "Cheapest Meat A on Mkt",
+      "kind": "kill",
+      "rewardText": "Cheapest Henchman on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
-        "subcategory": "Meat Animals",
+        "track": "Guards",
         "mode": "cheapest"
       },
       "favor": [
-        "MS13"
+        "DSA"
       ],
-      "text": "Sell Weapons at = Scarcity in B6 (Via Ostiensis)."
+      "patronFaction": "DSA",
+      "name": "Hit Job",
+      "targetDeck": "Legiones",
+      "description": "Kill a Cop in Combat",
+      "text": "Kill a Cop in Combat"
     },
     {
       "id": "mis_40",
-      "name": "Quid Pro Quo",
       "kind": "sell",
-      "category": "Fine Wine",
-      "modifier": "-",
-      "cell": "A5",
-      "rewardText": "Cheapest Exotic A on Mkt",
+      "rewardText": "Cheapest Weapon on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
-        "subcategory": "Exotic Animals",
+        "track": "Weapons",
         "mode": "cheapest"
       },
       "favor": [
-        "MS13"
+        "MAGA"
       ],
-      "text": "Sell Fine Wine at - Scarcity in A5 (Horti Caesaris)."
+      "patronFaction": "MAGA",
+      "name": "Bottle Service",
+      "category": "Grain",
+      "modifier": "+",
+      "cell": "E5",
+      "text": "Sell Grain at + Scarcity in E5 (Bernal)."
     },
     {
       "id": "mis_41",
-      "name": "City Of Thieves",
+      "name": "Neighborhood Watch",
       "kind": "expose",
       "exposeType": "nefarii",
       "exposeCount": 8,
-      "description": "Expose 8 Nefarii (8 individual black Nefarii icons visible on exposed tiles)",
+      "description": "Expose 8 Criminals (individual Criminals icons visible on exposed tiles)",
       "rewardText": "26(d)",
       "reward": {
         "type": "cash",
@@ -2913,277 +2862,278 @@
       "favor": [
         "DSA"
       ],
-      "text": "Expose 8 Nefarii (8 individual black Nefarii icons visible on exposed tiles)"
+      "text": "Expose 8 Criminals (individual Criminals icons visible on exposed tiles)"
     },
     {
       "id": "mis_42",
-      "name": "Patronize The Arts",
       "kind": "sell",
-      "category": "Marble",
-      "modifier": "-",
-      "cell": "E3",
-      "rewardText": "Any Exotic A on Mkt",
+      "rewardText": "9(d) & 1 Influence Card",
       "reward": {
-        "type": "market_pick",
-        "track": "Animals",
-        "subcategory": "Exotic Animals",
-        "mode": "any"
+        "type": "cash_and_influence",
+        "amount": 9,
+        "count": 1
       },
       "favor": [
-        "TechBros"
+        "TECH"
       ],
-      "text": "Sell Marble at - Scarcity in E3 (Thermae Traiani)."
+      "patronFaction": "TECH",
+      "name": "Markup",
+      "category": "Marble",
+      "modifier": "+",
+      "cell": "D4",
+      "text": "Sell Marble at + Scarcity in D4 (Castro)."
     },
     {
       "id": "mis_43",
-      "name": "Sacrificial Lamb",
-      "kind": "delivery",
-      "item": "Lamb",
-      "category": "Meat Animals",
-      "blocks": 2,
-      "pickupCell": "F4",
-      "deliverCell": "C2",
-      "fencedSell": [
-        32,
-        20,
-        13,
-        9,
-        5
-      ],
-      "rewardText": "4(d) & 1 Influence Card",
+      "kind": "kill",
+      "rewardText": "Cheapest Uppers on Mkt",
       "reward": {
-        "type": "cash_and_influence",
-        "amount": 4,
-        "count": 1
+        "type": "market_pick",
+        "track": "Animals",
+        "mode": "cheapest"
       },
-      "favor": [],
-      "text": "Pick up Lamb (Meat Animals • 2■) in F4 (Collis Esquilinus), Deliver to C2 (Saepta Julia). [Fenced Sell: 32/20/13/9/5]"
+      "favor": [
+        "MS13"
+      ],
+      "patronFaction": "MS13",
+      "name": "Take Out the Trash",
+      "targetDeck": "Legiones",
+      "description": "Kill a Cop in Combat",
+      "text": "Kill a Cop in Combat"
     },
     {
       "id": "mis_44",
-      "name": "Wine Merchant",
       "kind": "sell",
-      "category": "Fine Wine",
-      "modifier": "=",
-      "cell": "F4",
+      "rewardText": "Cheapest Weed on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Grain",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "ISIS"
+      ],
+      "patronFaction": "ISIS",
+      "name": "VIP List",
+      "category": "Weapons",
+      "modifier": "+",
+      "cell": "A6",
+      "text": "Sell Weapons at + Scarcity in A6 (Daly City)."
+    },
+    {
+      "id": "mis_45",
+      "kind": "sell",
       "rewardText": "1 Influence Card",
       "reward": {
         "type": "influence",
         "count": 1
       },
       "favor": [
-        "MS13"
+        "DSA"
       ],
-      "text": "Sell Fine Wine at = Scarcity in F4 (Collis Esquilinus)."
+      "patronFaction": "DSA",
+      "name": "Community Pricing",
+      "category": "Marble",
+      "modifier": "-",
+      "cell": "C5",
+      "text": "Sell Marble at - Scarcity in C5 (Miraloma)."
     },
     {
-      "id": "mis_45",
-      "name": "Arm The Uprising",
+      "id": "mis_46",
       "kind": "sell",
-      "category": "Weapons",
+      "rewardText": "Any Uppers on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Animals",
+        "mode": "any"
+      },
+      "favor": [
+        "MAGA"
+      ],
+      "patronFaction": "MAGA",
+      "name": "Bottle Service",
+      "category": "Animals",
       "modifier": "+",
-      "cell": "E5",
-      "rewardText": "Cheapest Cheap W on Mkt",
+      "cell": "D2",
+      "text": "Sell Animals at + Scarcity in D2 (Nob Hill)."
+    },
+    {
+      "id": "mis_47",
+      "kind": "sell",
+      "rewardText": "Any Party Drugs on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Marble",
+        "mode": "any"
+      },
+      "favor": [
+        "TECH"
+      ],
+      "patronFaction": "TECH",
+      "name": "Bottle Service",
+      "category": "Marble",
+      "modifier": "+",
+      "cell": "D5",
+      "text": "Sell Marble at + Scarcity in D5 (Noe)."
+    },
+    {
+      "id": "mis_48",
+      "kind": "sell",
+      "rewardText": "Cheapest Opiates on Mkt",
       "reward": {
         "type": "market_pick",
         "track": "Wine",
-        "subcategory": "Cheap Wine",
         "mode": "cheapest"
+      },
+      "favor": [
+        "MS13"
+      ],
+      "patronFaction": "MS13",
+      "name": "VIP List",
+      "category": "Animals",
+      "modifier": "+",
+      "cell": "B4",
+      "text": "Sell Animals at + Scarcity in B4 (Haight)."
+    },
+    {
+      "id": "mis_49",
+      "kind": "kill",
+      "rewardText": "Cheapest Henchman on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Guards",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "ISIS"
+      ],
+      "patronFaction": "ISIS",
+      "name": "Take Out the Trash",
+      "targetDeck": "Patricii",
+      "description": "Kill a Celebrity in Combat",
+      "text": "Kill a Celebrity in Combat"
+    },
+    {
+      "id": "mis_50",
+      "kind": "delivery",
+      "rewardText": "1 Influence Card",
+      "reward": {
+        "type": "influence",
+        "count": 1
       },
       "favor": [
         "DSA"
       ],
-      "text": "Sell Weapons at + Scarcity in E5 (Sucusa)."
-    },
-    {
-      "id": "mis_46",
-      "name": "Royal Banquet Wine",
-      "kind": "sell",
-      "category": "Fine Wine",
-      "modifier": "+",
-      "cell": "D5",
-      "rewardText": "ISIS Favor",
-      "reward": {
-        "type": "none"
-      },
-      "favor": [
-        "ISIS"
-      ],
-      "text": "Sell Fine Wine at + Scarcity in D5 (Mons Palatinus)."
-    },
-    {
-      "id": "mis_47",
-      "name": "Wine Delivery",
-      "kind": "delivery",
-      "item": "Hadrianum",
-      "category": "Fine Wine",
+      "patronFaction": "DSA",
+      "name": "Curbside Pickup",
+      "item": "Molly Stash",
+      "category": "Marble",
       "blocks": 1,
-      "pickupCell": "C3",
-      "deliverCell": "F2",
+      "pickupCell": "B2",
+      "deliverCell": "C1",
       "fencedSell": [
-        74,
-        48,
-        34,
-        24,
-        14
+        80,
+        61,
+        46,
+        35,
+        26
       ],
-      "rewardText": "Cheapest Mkt Animal",
-      "reward": {
-        "type": "market_pick",
-        "track": "Animals",
-        "mode": "cheapest"
-      },
-      "favor": [
-        "-DSA",
-        "MAGA"
-      ],
-      "text": "Pick up Hadrianum (Fine Wine • 1■) in C3 (Forum Traiani), Deliver to F2 (Collis Viminalis). [Fenced Sell: 74/48/34/24/14]"
-    },
-    {
-      "id": "mis_48",
-      "name": "Wine For The Theater",
-      "kind": "sell",
-      "category": "Cheap Wine",
-      "modifier": "+",
-      "cell": "A3",
-      "rewardText": "2(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 2
-      },
-      "favor": [
-        "ISIS"
-      ],
-      "text": "Sell Cheap Wine at + Scarcity in A3 (Theatrum Pompeii)."
-    },
-    {
-      "id": "mis_49",
-      "name": "Assassin",
-      "kind": "kill",
-      "targetDeck": "Patricii",
-      "description": "Kill a Patricius in Combat",
-      "rewardText": "10(d) & 1 Influence Card",
-      "reward": {
-        "type": "cash_and_influence",
-        "amount": 10,
-        "count": 1
-      },
-      "favor": [
-        "MAGA"
-      ],
-      "text": "Kill a Patricius in Combat"
-    },
-    {
-      "id": "mis_50",
-      "name": "Festival Wine",
-      "kind": "sell",
-      "category": "Fine Wine",
-      "modifier": "--",
-      "cell": "B2",
-      "rewardText": "(R)(R) Influence Cards",
-      "reward": {
-        "type": "dice_influence",
-        "dice": 2
-      },
-      "favor": [],
-      "text": "Sell Fine Wine at -- Scarcity in B2 (Pantheum / Thermae Neronianae)."
+      "text": "Pick up Molly Stash (Marble • 1■) in B2 (Laurel), Deliver to C1 (Marina). [Fenced Sell: 80/61/46/35/26]"
     },
     {
       "id": "mis_51",
-      "name": "Regime Change",
+      "name": "Witness Protection",
       "kind": "kill_emperor_cancel",
-      "description": "Kill the Emperor (Completed if either ISIS or MAGA is killed by any Player)",
+      "description": "Protect the Boss (If Donald Trump or Jared Kushner is defeated by any Player, collect this reward and cancel every Regime Change)",
       "rewardText": "20(d) & Cancels all active regicide missions",
       "reward": {
         "type": "regime_change",
         "amount": 20
       },
       "favor": [],
-      "text": "Kill the Emperor (Completed if either ISIS or MAGA is killed by any Player)"
+      "text": "Protect the Boss (If Donald Trump or Jared Kushner is defeated by any Player, collect this reward and cancel every Regime Change)"
     },
     {
       "id": "mis_52",
-      "name": "Wine Delivery",
-      "kind": "delivery",
-      "item": "Narbo",
-      "category": "Cheap Wine",
-      "blocks": 1,
-      "pickupCell": "B4",
-      "deliverCell": "E6",
-      "fencedSell": [
-        24,
-        15,
-        9,
-        6,
-        4
-      ],
-      "rewardText": "6(d)",
+      "kind": "kill",
+      "rewardText": "Any Uppers on Mkt",
       "reward": {
-        "type": "cash",
-        "amount": 6
-      },
-      "favor": [],
-      "text": "Pick up Narbo (Cheap Wine • 1■) in B4 (Trans Tiberim), Deliver to E6 (Caeliolus). [Fenced Sell: 24/15/9/6/4]"
-    },
-    {
-      "id": "mis_53",
-      "name": "Sate The Plebes",
-      "kind": "sell",
-      "category": "Cheap Wine",
-      "modifier": "--",
-      "cell": "F3",
-      "rewardText": "2 Influence Cards",
-      "reward": {
-        "type": "influence",
-        "count": 2
-      },
-      "favor": [],
-      "text": "Sell Cheap Wine at -- Scarcity in F3 (Via Tiburtina)."
-    },
-    {
-      "id": "mis_54",
-      "name": "Imperial Tomb Marble",
-      "kind": "sell",
-      "category": "Marble",
-      "modifier": "+",
-      "cell": "A1",
-      "rewardText": "8(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 8
-      },
-      "favor": [
-        "TechBros",
-        "ISIS"
-      ],
-      "text": "Sell Marble at + Scarcity in A1 (Mausoleum Hadriani)."
-    },
-    {
-      "id": "mis_55",
-      "name": "Ashes of Severus",
-      "kind": "delivery",
-      "item": "Hadrianum",
-      "category": "Fine Wine",
-      "blocks": 1,
-      "pickupCell": "F5",
-      "deliverCell": "A1",
-      "fencedSell": [
-        44,
-        28,
-        18,
-        12,
-        7
-      ],
-      "rewardText": "10(d) & 1 Influence Card",
-      "reward": {
-        "type": "cash_and_influence",
-        "amount": 10,
-        "count": 1
+        "type": "market_pick",
+        "track": "Animals",
+        "mode": "any"
       },
       "favor": [
         "MAGA"
       ],
-      "text": "Pick up Hadrianum (Fine Wine • 1■) in F5 (Amphitheatrum Castrense), Deliver to A1 (Mausoleum Hadriani). [Fenced Sell: 44/28/18/12/7]"
+      "patronFaction": "MAGA",
+      "name": "Take Out the Trash",
+      "targetDeck": "Nefarii",
+      "description": "Kill a Criminal in Combat",
+      "text": "Kill a Criminal in Combat"
+    },
+    {
+      "id": "mis_53",
+      "kind": "sell",
+      "rewardText": "18(d)",
+      "reward": {
+        "type": "cash",
+        "amount": 18
+      },
+      "favor": [
+        "TECH"
+      ],
+      "patronFaction": "TECH",
+      "name": "Bottle Service",
+      "category": "Marble",
+      "modifier": "+",
+      "cell": "E5",
+      "text": "Sell Marble at + Scarcity in E5 (Bernal)."
+    },
+    {
+      "id": "mis_54",
+      "kind": "kill",
+      "rewardText": "Cheapest Opiates on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Wine",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "MS13"
+      ],
+      "patronFaction": "MS13",
+      "name": "Silence a Witness",
+      "targetDeck": "Nefarii",
+      "description": "Kill a Criminal in Combat",
+      "text": "Kill a Criminal in Combat"
+    },
+    {
+      "id": "mis_55",
+      "kind": "delivery",
+      "rewardText": "Cheapest Opiates on Mkt",
+      "reward": {
+        "type": "market_pick",
+        "track": "Wine",
+        "mode": "cheapest"
+      },
+      "favor": [
+        "ISIS"
+      ],
+      "patronFaction": "ISIS",
+      "name": "Dead Drop",
+      "item": "Crate of ARs",
+      "category": "Weapons",
+      "blocks": 2,
+      "pickupCell": "C2",
+      "deliverCell": "D5",
+      "fencedSell": [
+        42,
+        32,
+        24,
+        18,
+        12
+      ],
+      "text": "Pick up Crate of ARs (Weapons • 2■) in C2 (Pac Heights), Deliver to D5 (Noe). [Fenced Sell: 42/32/24/18/12]"
     }
   ]
 }
