@@ -2,7 +2,7 @@
   "market": [
     {
       "id": "grn_1",
-      "name": "Dime Bag",
+      "name": "Pineapple Express (Cartridge)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -25,7 +25,7 @@
     },
     {
       "id": "grn_2",
-      "name": "Pre-Rolls",
+      "name": "Golden Teacher (Shrooms)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -48,7 +48,7 @@
     },
     {
       "id": "grn_3",
-      "name": "Eighth of OG Kush",
+      "name": "Brick Weed (Flower)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -66,12 +66,12 @@
         2,
         2,
         1,
-        0
+        1
       ]
     },
     {
       "id": "grn_4",
-      "name": "Shroom Chocolates",
+      "name": "Granddaddy Purple (Hash)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -94,7 +94,7 @@
     },
     {
       "id": "grn_5",
-      "name": "LSD Blotter",
+      "name": "Mescaline (Peyote Buttons)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -117,7 +117,7 @@
     },
     {
       "id": "grn_6",
-      "name": "Weed Gummies",
+      "name": "Northern Lights (Flower)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -140,7 +140,7 @@
     },
     {
       "id": "grn_7",
-      "name": "Mendocino Outdoor",
+      "name": "Gorilla Glue #4 (Shatter)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -163,7 +163,7 @@
     },
     {
       "id": "grn_8",
-      "name": "Humboldt Indoor",
+      "name": "Wedding Cake (Live Rosin)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -186,7 +186,7 @@
     },
     {
       "id": "grn_9",
-      "name": "Vape Carts",
+      "name": "Blue Dream (Flower)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -209,7 +209,7 @@
     },
     {
       "id": "grn_10",
-      "name": "Wax Dabs",
+      "name": "Felix the Cat (LSD Blotter)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -232,7 +232,7 @@
     },
     {
       "id": "grn_11",
-      "name": "Peyote Buttons",
+      "name": "Sour Diesel (Edibles)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -255,7 +255,7 @@
     },
     {
       "id": "grn_12",
-      "name": "Half-O of Haze",
+      "name": "OG Kush (Flower)",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
@@ -278,7 +278,7 @@
     },
     {
       "id": "cw_1",
-      "name": "Brown Sugar",
+      "name": "Apache (Pure Fentanyl)",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -301,7 +301,7 @@
     },
     {
       "id": "cw_2",
-      "name": "Black Tar",
+      "name": "China White",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -324,7 +324,7 @@
     },
     {
       "id": "cw_3",
-      "name": "Lean",
+      "name": "Brown Sugar (Heroin)",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -370,7 +370,7 @@
     },
     {
       "id": "cw_5",
-      "name": "Heroin Bundle",
+      "name": "Number 4 (Afghan Heroin)",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -393,7 +393,7 @@
     },
     {
       "id": "cw_6",
-      "name": "Tranq (Xylazine)",
+      "name": "Tranq (Xylazine Dope)",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -416,7 +416,7 @@
     },
     {
       "id": "cw_7",
-      "name": "China White",
+      "name": "Chiva (Black Tar)",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -439,7 +439,7 @@
     },
     {
       "id": "cw_8",
-      "name": "Fentanyl Pressies",
+      "name": "Purple Drank (Lean)",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -462,7 +462,7 @@
     },
     {
       "id": "cw_9",
-      "name": "Fent Brick",
+      "name": "Blues (M30 Fentanyl)",
       "category": "Wine",
       "subcategory": "Cheap Wine",
       "track": "Wine",
@@ -485,7 +485,7 @@
     },
     {
       "id": "fw_1",
-      "name": "Vicodin",
+      "name": "Tussin (Codeine Syrup)",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -508,7 +508,7 @@
     },
     {
       "id": "fw_2",
-      "name": "Codeine Syrup",
+      "name": "Trammies (Tramadol)",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -531,7 +531,7 @@
     },
     {
       "id": "fw_3",
-      "name": "Percocet",
+      "name": "Vikes (Vicodin)",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -554,7 +554,7 @@
     },
     {
       "id": "fw_4",
-      "name": "Seconal",
+      "name": "Percs (Percocet)",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -577,7 +577,7 @@
     },
     {
       "id": "fw_5",
-      "name": "OxyContin",
+      "name": "Juice (Methadone)",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -600,7 +600,7 @@
     },
     {
       "id": "fw_6",
-      "name": "Methadone",
+      "name": "Red Devils (Seconal)",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -623,7 +623,7 @@
     },
     {
       "id": "fw_7",
-      "name": "Morphine Ampoules",
+      "name": "Miss Emma (Morphine)",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -646,7 +646,7 @@
     },
     {
       "id": "fw_8",
-      "name": "Dilaudid",
+      "name": "OC 80s (OxyContin)",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -669,7 +669,7 @@
     },
     {
       "id": "fw_9",
-      "name": "Fentanyl Patches",
+      "name": "Hospital Heroin (Dilaudid)",
       "category": "Wine",
       "subcategory": "Fine Wine",
       "track": "Wine",
@@ -692,7 +692,7 @@
     },
     {
       "id": "ma_1",
-      "name": "Adderall",
+      "name": "Mini-Thins (Ephedrine)",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -715,7 +715,7 @@
     },
     {
       "id": "ma_2",
-      "name": "Ritalin",
+      "name": "Bennies (Benzedrine)",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -738,7 +738,7 @@
     },
     {
       "id": "ma_3",
-      "name": "Vyvanse",
+      "name": "Black Beauties (Diet Pills)",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -761,7 +761,7 @@
     },
     {
       "id": "ma_4",
-      "name": "Modafinil",
+      "name": "Abu Hilalain (Captagon)",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -784,7 +784,7 @@
     },
     {
       "id": "ma_5",
-      "name": "Dexedrine",
+      "name": "Blue Addys (Brand Adderall)",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -807,7 +807,7 @@
     },
     {
       "id": "ma_6",
-      "name": "Ephedrine",
+      "name": "Dexies (Dexedrine)",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -830,7 +830,7 @@
     },
     {
       "id": "ma_7",
-      "name": "Diet Pills",
+      "name": "Kiddie Coke (Ritalin)",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -853,7 +853,7 @@
     },
     {
       "id": "ma_8",
-      "name": "Bennies",
+      "name": "Addys (Adderall)",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -876,7 +876,7 @@
     },
     {
       "id": "ma_9",
-      "name": "Captagon",
+      "name": "Moda (Modafinil)",
       "category": "Animals",
       "subcategory": "Meat Animals",
       "track": "Animals",
@@ -899,7 +899,7 @@
     },
     {
       "id": "ea_1",
-      "name": "Bath Salts",
+      "name": "Crank (Bathtub Speed)",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -924,7 +924,7 @@
     },
     {
       "id": "ea_2",
-      "name": "Speed",
+      "name": "Flakka (Bath Salts)",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -949,7 +949,7 @@
     },
     {
       "id": "ea_3",
-      "name": "Crank",
+      "name": "Shake-n-Bake (Meth)",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -979,7 +979,7 @@
     },
     {
       "id": "ea_4",
-      "name": "Crack Rocks",
+      "name": "Yayo (Cocaine)",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1009,7 +1009,7 @@
     },
     {
       "id": "ea_5",
-      "name": "Coke 8-Ball",
+      "name": "Stepped-on Blow",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1039,7 +1039,7 @@
     },
     {
       "id": "ea_6",
-      "name": "Flakka",
+      "name": "Rock (Crack)",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1069,7 +1069,7 @@
     },
     {
       "id": "ea_7",
-      "name": "Crystal Meth",
+      "name": "Glass (Crystal Meth)",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1129,7 +1129,7 @@
     },
     {
       "id": "ea_9",
-      "name": "Kilo of Coke",
+      "name": "Fish Scale (Cocaine)",
       "category": "Animals",
       "subcategory": "Exotic Animals",
       "track": "Animals",
@@ -1511,7 +1511,7 @@
     },
     {
       "id": "mrb_1",
-      "name": "Molly Caps",
+      "name": "Rush (Poppers)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1534,7 +1534,7 @@
     },
     {
       "id": "mrb_2",
-      "name": "Ecstasy Pills",
+      "name": "Liquid G (GHB)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1557,7 +1557,7 @@
     },
     {
       "id": "mrb_3",
-      "name": "Ketamine Vials",
+      "name": "Whippets (Nitrous)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1580,7 +1580,7 @@
     },
     {
       "id": "mrb_4",
-      "name": "K Bumps",
+      "name": "Tusi (Pink Cocaine)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1603,7 +1603,7 @@
     },
     {
       "id": "mrb_5",
-      "name": "GHB",
+      "name": "Bunk Molly",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1619,14 +1619,14 @@
       "buy": [
         29,
         22,
-        17,
+        18,
         18,
         15
       ]
     },
     {
       "id": "mrb_6",
-      "name": "2C-B",
+      "name": "Blue Punishers (Ecstasy)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1649,7 +1649,7 @@
     },
     {
       "id": "mrb_7",
-      "name": "Poppers",
+      "name": "Pink Teslas (Ecstasy)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1665,14 +1665,14 @@
       "buy": [
         31,
         24,
-        18,
+        19,
         19,
         16
       ]
     },
     {
       "id": "mrb_8",
-      "name": "MDMA Crystal",
+      "name": "Red Mitsubishis (Ecstasy)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1695,7 +1695,7 @@
     },
     {
       "id": "mrb_9",
-      "name": "Nitrous Tank",
+      "name": "Special K (Ketamine)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1718,7 +1718,7 @@
     },
     {
       "id": "mrb_10",
-      "name": "Tusi (Pink Coke)",
+      "name": "Blue Swastikas (Ecstasy)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1741,7 +1741,7 @@
     },
     {
       "id": "mrb_11",
-      "name": "Ketamine Brick",
+      "name": "Nexus (2C-B)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
@@ -1764,7 +1764,7 @@
     },
     {
       "id": "mrb_12",
-      "name": "Rave Party Pack",
+      "name": "Champagne Molly (MDMA Crystal)",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
