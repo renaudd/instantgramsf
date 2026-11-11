@@ -147,7 +147,6 @@ player. **Witness Protection** (was Regime Change) cancels it.
 | Card | Faction & deck | Why it was pulled |
 | :--- | :--- | :--- |
 | Hamas, Hezbollah, Houthis, Iran | ISIS Criminals | Removed to keep ISIS the rarest faction |
-| [removed] [removed] | DSA/ISIS Celebrity | Removed to keep the roster to clear public figures |
 
 ## 7. Ballot Initiatives (was Political Climate)
 
