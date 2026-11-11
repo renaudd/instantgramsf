@@ -2023,7 +2023,7 @@ def _prepare_attached_encounter_card(
     remove_from_deck: bool = True,
 ) -> Dict[str, Any]:
     """Attaches a normalized Encounter card to a Mission on the Mission Board and removes it from its Encounter deck while active."""
-    ec = copy.deepcopy(card)
+    ec = copy.deepcopy(card.get("_baseCard") if isinstance(card.get("_baseCard"), dict) else card)
     _normalize_encounter_card_data(ec)
     dk = _infer_encounter_deck_key(ec)
     ec["deck"] = dk
@@ -4722,6 +4722,8 @@ def _build_pending_encounter_state(
 ) -> Dict[str, Any]:
     if not source_label and state.get("pendingEncounter"):
         source_label = state["pendingEncounter"].get("encounterSource")
+    if isinstance(card.get("_baseCard"), dict):
+        card = card["_baseCard"]
     faction = card.get("faction")
     favor_score = calculate_faction_favor(player, faction)
 
@@ -4731,6 +4733,12 @@ def _build_pending_encounter_state(
     reactions = card.get("reactions", [])
     for idx_r, r_item in enumerate(reactions):
         cond_str = str(r_item.get("condition", ">=0")).strip()
+        # Free Parking: conditional tiers only apply if the player is carrying that contraband
+        carry_req = r_item.get("ifCarrying")
+        if carry_req and not any(
+            matches_category(c, str(carry_req)) for c in player.get("cart", []) if not c.get("isMissionCargo")
+        ):
+            continue
         if evaluate_reaction_condition(favor_score, cond_str):
             matched_reaction = r_item.get("type", "demand")
             matched_tier_idx = idx_r
@@ -4738,6 +4746,15 @@ def _build_pending_encounter_state(
             if not (cond_str.startswith(">") or cond_str.startswith("≥")):
                 break
 
+    # Free Parking: a reputation tier may carry its own action text / mission / reward
+    if isinstance(matched_tier_obj, dict) and any(k in matched_tier_obj for k in ("actionText", "mission")):
+        base_card = card
+        card = dict(card)
+        card["_baseCard"] = base_card
+        if "actionText" in matched_tier_obj:
+            card["actionText"] = matched_tier_obj.get("actionText")
+        if "mission" in matched_tier_obj:
+            card["mission"] = copy.deepcopy(matched_tier_obj.get("mission"))
     action_text = (card.get("actionText") or "").strip()
     if action_text.startswith("?") and matched_reaction in ("demand", "mission_request"):
         matched_reaction = "offer"
@@ -4904,6 +4921,7 @@ def trigger_deck_encounter(state: Dict[str, Any], player: Dict[str, Any], enc_co
 
     _inc_encounter_stat(player, deck_key, 1)
     pending = _build_pending_encounter_state(state, player, card, deck_key, x_count, source_label=source_label)
+    card = pending["card"]
     faction = card.get("faction")
     favor_score = pending["favorScore"]
     matched_reaction = pending["reaction"]
@@ -5940,6 +5958,7 @@ def resolve_pending_encounter_choice(
     refreshed = _build_pending_encounter_state(state, player, card, deck_key, x_count, source_label=enc_src)
     reaction = refreshed["reaction"]
     matched_tier = refreshed.get("matchedTier") or {}
+    card = refreshed["card"]
     action_text = card.get("actionText", "")
 
     if player.get("isBot") and refreshed["combatMandatory"]:
@@ -6024,6 +6043,16 @@ def resolve_pending_encounter_choice(
             )
             add_log(state, f"{player['name']} played 'Plea' to satisfy {card['name']}'s demand for Goods! {' '.join(f_notes)}", "encounter")
             return True, "Played 'Plea' to satisfy demand."
+
+    # Free Parking payoff tier: a vulnerable NPC pays the player off. Resolve as if the player
+    # had beaten them in combat: collect the combat reward and take the hostile consequences.
+    if reaction == "payoff":
+        pay = matched_tier.get("reward") or card.get("combatReward") or "4(d)"
+        r_notes = grant_reward(state, player, None, pay)
+        h_list = card.get("hostileFavor") or ([f"-{card['faction']}"] if card.get("faction") else [])
+        h_notes = apply_favor_list(player, h_list, reason=f"shaking down {card['name']}")
+        add_log(state, f"{card['name']} paid {player['name']} off to avoid a fight ({pay})! {' '.join(r_notes + h_notes)}", "encounter")
+        return True, f"{card['name']} paid you off ({pay})."
 
     # Cash Reward tier (e.g., 3(d), 6(d), 7(d), 12(d))
     if reaction == "cash_reward":

@@ -41,20 +41,60 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "mission_strict",
+          "actionText": "Sell Animals at ++ in F2",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "F2",
+            "category": "Animals",
+            "modifier": "++",
+            "target": null,
+            "name": "Mark Zuckerberg’s Job"
+          }
+        },
+        {
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Sell Marble at ++ in B2",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "B2",
+            "category": "Marble",
+            "modifier": "++",
+            "target": null,
+            "name": "Mark Zuckerberg’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_request",
+          "actionText": "Sell Animals at ++ in D5",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "D5",
+            "category": "Animals",
+            "modifier": "++",
+            "target": null,
+            "name": "Mark Zuckerberg’s Job"
+          }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "Sell Marble at ++ in B2",
       "mission": {
-        "kind": "kill",
-        "item": null,
+        "kind": "sell",
+        "item": "Marble",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
+        "deliverCell": "B2",
+        "category": "Marble",
+        "modifier": "++",
         "target": null,
-        "targetDeck": "Patricii",
         "name": "Mark Zuckerberg’s Job"
       },
       "tier": "leader"
@@ -103,16 +143,56 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=0",
+          "type": "mission_offer",
+          "actionText": "Sell Grain at ++ in F2",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "F2",
+            "category": "Grain",
+            "modifier": "++",
+            "target": null,
+            "name": "Donald Trump’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_strict",
+          "actionText": "Sell Animals at ++ in A1",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "A1",
+            "category": "Animals",
+            "modifier": "++",
+            "target": null,
+            "name": "Donald Trump’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Buy one Animal at + Scarcity",
+          "mission": {
+            "kind": "sell",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Animals",
+            "modifier": "+",
+            "target": null
+          }
         }
       ],
-      "actionText": "Sell Grain at ++ in D3",
+      "actionText": "Sell Grain at ++ in F2",
       "mission": {
         "kind": "sell",
         "item": "Grain",
         "pickupCell": null,
-        "deliverCell": "D3",
+        "deliverCell": "F2",
         "category": "Grain",
         "modifier": "++",
         "target": null,
@@ -148,22 +228,34 @@
         },
         {
           "condition": "=0",
-          "type": "deck_quest_demand"
+          "type": "mission_request",
+          "actionText": "Sell Wine at - in E6",
+          "mission": {
+            "kind": "sell",
+            "item": "Wine",
+            "pickupCell": null,
+            "deliverCell": "E6",
+            "category": "Wine",
+            "modifier": "-",
+            "target": null,
+            "name": "Elon Musk’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "?: Will Sell one Fancy Wine from Market or Deck at < Scarcity",
+      "actionText": "Sell Wine at - in E6",
       "mission": {
-        "kind": "buy_from_npc",
-        "item": "Fancy Wine",
+        "kind": "sell",
+        "item": "Wine",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": "Fancy Wine",
-        "modifier": "<",
-        "target": "Market or Deck"
+        "deliverCell": "E6",
+        "category": "Wine",
+        "modifier": "-",
+        "target": null,
+        "name": "Elon Musk’s Job"
       },
       "tier": "t1"
     },
@@ -194,23 +286,49 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Kill a Criminal in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Nefarii",
+            "name": "Peter Thiel’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "mission_offer",
+          "actionText": "?: Kill a Criminal in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Nefarii",
+            "name": "Peter Thiel’s Job"
+          }
         }
       ],
-      "actionText": "?: Will Buy one Fancy Wine at + Scarcity",
+      "actionText": "Kill a Criminal in Combat",
       "mission": {
-        "kind": "sell",
-        "item": "Fancy Wine",
+        "kind": "kill",
+        "item": null,
         "pickupCell": null,
         "deliverCell": null,
-        "category": "Fancy Wine",
-        "modifier": "+",
-        "target": null
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Nefarii",
+        "name": "Peter Thiel’s Job"
       },
       "tier": "t1"
     },
@@ -257,23 +375,69 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_demand"
+          "condition": "=-1",
+          "type": "mission_strict",
+          "actionText": "Sell Marble at + in C3",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "C3",
+            "category": "Marble",
+            "modifier": "+",
+            "target": null,
+            "name": "Brian Chesky’s Job"
+          }
         },
         {
-          "condition": ">=2",
-          "type": "offer"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Marble at + in F4",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "F4",
+            "category": "Marble",
+            "modifier": "+",
+            "target": null,
+            "name": "Brian Chesky’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_request",
+          "actionText": "Pick up a brick of coke in D3 and Deliver to E2",
+          "mission": {
+            "kind": "delivery",
+            "item": "a brick of coke",
+            "pickupCell": "D3",
+            "deliverCell": "E2",
+            "category": "Animals",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 2,
+            "payoutTable": [
+              78,
+              60,
+              46,
+              34,
+              24
+            ],
+            "name": "Brian Chesky’s Job"
+          }
         }
       ],
-      "actionText": "?: Will Sell the top card of the Goods deck for 14(d) (unless Infl, decide without looking)",
+      "actionText": "Sell Marble at + in F4",
       "mission": {
-        "kind": "buy_from_npc",
-        "item": "Top card of Goods deck",
+        "kind": "sell",
+        "item": "Marble",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": "Any",
-        "modifier": "14(d)",
-        "target": "Goods deck"
+        "deliverCell": "F4",
+        "category": "Marble",
+        "modifier": "+",
+        "target": null,
+        "name": "Brian Chesky’s Job"
       },
       "tier": "t1"
     },
@@ -298,20 +462,65 @@
       "combatReward": "12(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
+          "condition": "<=-1",
+          "type": "payoff",
+          "reward": "Cheapest Weed"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Animals at + in C5",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "C5",
+            "category": "Animals",
+            "modifier": "+",
+            "target": null,
+            "name": "Dario Amodei’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "mission_offer",
+          "actionText": "?: Pick up a brick of coke in F2 and Deliver to A1",
+          "mission": {
+            "kind": "delivery",
+            "item": "a brick of coke",
+            "pickupCell": "F2",
+            "deliverCell": "A1",
+            "category": "Animals",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 2,
+            "payoutTable": [
+              78,
+              60,
+              46,
+              34,
+              24
+            ],
+            "name": "Dario Amodei’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Move again this turn"
         }
       ],
-      "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)",
-      "mission": null,
+      "actionText": "Sell Animals at + in C5",
+      "mission": {
+        "kind": "sell",
+        "item": "Animals",
+        "pickupCell": null,
+        "deliverCell": "C5",
+        "category": "Animals",
+        "modifier": "+",
+        "target": null,
+        "name": "Dario Amodei’s Job"
+      },
       "tier": "t2"
     },
     {
@@ -336,26 +545,52 @@
       "combatReward": "14(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
+          "condition": "<=-1",
+          "type": "payoff",
+          "reward": "14(d)"
         },
         {
-          "condition": "<=-2",
-          "type": "cash_reward",
-          "reward": "3(d)"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Grain at + in A6",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "A6",
+            "category": "Grain",
+            "modifier": "+",
+            "target": null,
+            "name": "Daniela Amodei’s Job"
+          }
         },
         {
-          "condition": ">=-1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
-          "type": "cash_reward",
-          "reward": "7(d)"
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Grain at + in C2",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "C2",
+            "category": "Grain",
+            "modifier": "+",
+            "target": null,
+            "name": "Daniela Amodei’s Job"
+          }
         }
       ],
-      "actionText": "?: Accept the top card of the Missiones deck (unseen) as a Mission.",
-      "mission": null,
+      "actionText": "Sell Grain at + in A6",
+      "mission": {
+        "kind": "sell",
+        "item": "Grain",
+        "pickupCell": null,
+        "deliverCell": "A6",
+        "category": "Grain",
+        "modifier": "+",
+        "target": null,
+        "name": "Daniela Amodei’s Job"
+      },
       "tier": "t2"
     },
     {
@@ -381,23 +616,52 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Wine at + in F4",
+          "mission": {
+            "kind": "sell",
+            "item": "Wine",
+            "pickupCell": null,
+            "deliverCell": "F4",
+            "category": "Wine",
+            "modifier": "+",
+            "target": null,
+            "name": "Steph Curry’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "mission_request",
+          "actionText": "Kill a Criminal in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Nefarii",
+            "name": "Steph Curry’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Move again this turn"
         }
       ],
-      "actionText": "?: Will Buy one Meat Animal at + Scarcity",
+      "actionText": "Sell Wine at + in F4",
       "mission": {
         "kind": "sell",
-        "item": null,
+        "item": "Wine",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": "Meat Animal",
+        "deliverCell": "F4",
+        "category": "Wine",
         "modifier": "+",
-        "target": null
+        "target": null,
+        "name": "Steph Curry’s Job"
       },
       "tier": "t1"
     },
@@ -425,11 +689,41 @@
           "type": "combat"
         },
         {
+          "condition": "=0",
+          "type": "mission_offer",
+          "actionText": "Kill a Cop in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Legiones",
+            "name": "Chesa Boudin’s Job"
+          }
+        },
+        {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Buy one Wine at ++ Scarcity",
+          "mission": {
+            "kind": "sell",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Wine",
+            "modifier": "++",
+            "target": null
+          }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "Kill a Cop in Combat",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -438,7 +732,7 @@
         "category": null,
         "modifier": null,
         "target": null,
-        "targetDeck": "Patricii",
+        "targetDeck": "Legiones",
         "name": "Chesa Boudin’s Job"
       },
       "tier": "t2"
@@ -463,31 +757,66 @@
       "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
+          "condition": "=0",
+          "type": "mission_offer",
+          "actionText": "Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Alice Huang’s Job"
+          }
+        },
+        {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "mission_request",
+          "actionText": "Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Alice Huang’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell one Wine from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Wine",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "Pick up a shoebox of fentanyl in C3 and Deliver to D4",
+      "actionText": "Kill a Celebrity in Combat",
       "mission": {
-        "kind": "delivery",
-        "item": "a shoebox of fentanyl",
-        "pickupCell": "C3",
-        "deliverCell": "D4",
-        "category": "Wine",
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
         "modifier": null,
         "target": null,
-        "cargoSize": 1,
-        "payoutTable": [
-          54,
-          37,
-          23,
-          17,
-          13
-        ],
+        "targetDeck": "Patricii",
         "name": "Alice Huang’s Job"
       },
       "tier": "t1"
@@ -511,24 +840,80 @@
       "combatReward": "5(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Pick up a crate of ARs in B6 and Deliver to B2",
+          "mission": {
+            "kind": "delivery",
+            "item": "a crate of ARs",
+            "pickupCell": "B6",
+            "deliverCell": "B2",
+            "category": "Weapons",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 2,
+            "payoutTable": [
+              42,
+              32,
+              24,
+              18,
+              12
+            ],
+            "name": "Dr. Oz’s Job"
+          }
+        },
+        {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "mission_offer",
+          "actionText": "?: Kill a Cop in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Legiones",
+            "name": "Dr. Oz’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell the top card of the Goods deck for 8(d) (unless Infl, decide without looking)",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": "Top card of Goods deck",
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Any",
+            "modifier": "8(d)",
+            "target": "Goods deck"
+          }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "Pick up a crate of ARs in B6 and Deliver to B2",
       "mission": {
-        "kind": "kill",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
+        "kind": "delivery",
+        "item": "a crate of ARs",
+        "pickupCell": "B6",
+        "deliverCell": "B2",
+        "category": "Weapons",
         "modifier": null,
         "target": null,
-        "targetDeck": "Patricii",
+        "cargoSize": 2,
+        "payoutTable": [
+          42,
+          32,
+          24,
+          18,
+          12
+        ],
         "name": "Dr. Oz’s Job"
       },
       "tier": "t2"
@@ -555,24 +940,39 @@
       "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
+          "condition": "<=-1",
+          "type": "payoff",
+          "reward": "9(d)"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Grain at - in C6",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "C6",
+            "category": "Grain",
+            "modifier": "-",
+            "target": null,
+            "name": "Jensen Huang’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "Sell Grain at - in C6",
       "mission": {
-        "kind": "kill",
-        "item": null,
+        "kind": "sell",
+        "item": "Grain",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
+        "deliverCell": "C6",
+        "category": "Grain",
+        "modifier": "-",
         "target": null,
-        "targetDeck": "Patricii",
         "name": "Jensen Huang’s Job"
       },
       "tier": "t2"
@@ -596,27 +996,56 @@
       "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
+          "condition": "<=-1",
+          "type": "payoff",
+          "reward": "9(d)"
         },
         {
           "condition": "=0",
-          "type": "deck_quest_demand"
+          "type": "mission_request",
+          "actionText": "Pick up a cooler of molly in B5 and Deliver to C5",
+          "mission": {
+            "kind": "delivery",
+            "item": "a cooler of molly",
+            "pickupCell": "B5",
+            "deliverCell": "C5",
+            "category": "Marble",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 1,
+            "payoutTable": [
+              80,
+              61,
+              46,
+              35,
+              26
+            ],
+            "name": "Bernie Sanders’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "?: Will Sell the top card of the Goods deck for 10(d) (unless Infl, decide without looking)",
+      "actionText": "Pick up a cooler of molly in B5 and Deliver to C5",
       "mission": {
-        "kind": "buy_from_npc",
-        "item": "Top card of Goods deck",
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Any",
-        "modifier": "10(d)",
-        "target": "Goods deck"
+        "kind": "delivery",
+        "item": "a cooler of molly",
+        "pickupCell": "B5",
+        "deliverCell": "C5",
+        "category": "Marble",
+        "modifier": null,
+        "target": null,
+        "cargoSize": 1,
+        "payoutTable": [
+          80,
+          61,
+          46,
+          35,
+          26
+        ],
+        "name": "Bernie Sanders’s Job"
       },
       "tier": "t2"
     },
@@ -643,22 +1072,101 @@
           "type": "combat"
         },
         {
-          "condition": "<=-2",
-          "type": "cash_reward",
-          "reward": "3(d)"
+          "condition": "=-1",
+          "type": "mission_strict",
+          "actionText": "Kill a Cop in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Legiones",
+            "name": "Cornel West’s Job"
+          }
         },
         {
-          "condition": ">=-1",
-          "type": "deck_quest_offer"
+          "condition": "=0",
+          "type": "mission_offer",
+          "actionText": "Pick up a duffel of Humboldt in B5 and Deliver to F6",
+          "mission": {
+            "kind": "delivery",
+            "item": "a duffel of Humboldt",
+            "pickupCell": "B5",
+            "deliverCell": "F6",
+            "category": "Grain",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 1,
+            "payoutTable": [
+              8,
+              7,
+              5,
+              4,
+              3
+            ],
+            "name": "Cornel West’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Pick up a cooler of molly in C6 and Deliver to F2",
+          "mission": {
+            "kind": "delivery",
+            "item": "a cooler of molly",
+            "pickupCell": "C6",
+            "deliverCell": "F2",
+            "category": "Marble",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 1,
+            "payoutTable": [
+              80,
+              61,
+              46,
+              35,
+              26
+            ],
+            "name": "Cornel West’s Job"
+          }
         },
         {
           "condition": ">=2",
-          "type": "cash_reward",
-          "reward": "7(d)"
+          "type": "offer",
+          "actionText": "?: Will Sell one Marble from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Marble",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "?: Accept the top card of the Missiones deck (unseen) as a Mission.",
-      "mission": null,
+      "actionText": "Pick up a duffel of Humboldt in B5 and Deliver to F6",
+      "mission": {
+        "kind": "delivery",
+        "item": "a duffel of Humboldt",
+        "pickupCell": "B5",
+        "deliverCell": "F6",
+        "category": "Grain",
+        "modifier": null,
+        "target": null,
+        "cargoSize": 1,
+        "payoutTable": [
+          8,
+          7,
+          5,
+          4,
+          3
+        ],
+        "name": "Cornel West’s Job"
+      },
       "tier": "t2"
     },
     {
@@ -681,16 +1189,52 @@
       "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
+          "condition": "<=-1",
+          "type": "payoff",
+          "reward": "Cheapest Weed"
         },
         {
-          "condition": ">=-1",
-          "type": "deck_quest_offer"
+          "condition": "=0",
+          "type": "mission_offer",
+          "actionText": "Sell Marble at - in A4",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "A4",
+            "category": "Marble",
+            "modifier": "-",
+            "target": null,
+            "name": "Drag Queen’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Grain at - in E2",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "E2",
+            "category": "Grain",
+            "modifier": "-",
+            "target": null,
+            "name": "Drag Queen’s Job"
+          }
         }
       ],
-      "actionText": "?: Accept the top card of the Missiones deck (unseen) as a Mission.",
-      "mission": null,
+      "actionText": "Sell Marble at - in A4",
+      "mission": {
+        "kind": "sell",
+        "item": "Marble",
+        "pickupCell": null,
+        "deliverCell": "A4",
+        "category": "Marble",
+        "modifier": "-",
+        "target": null,
+        "name": "Drag Queen’s Job"
+      },
       "tier": "gen"
     },
     {
@@ -717,20 +1261,62 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "mission_strict",
+          "actionText": "Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Tenured Professor’s Job"
+          }
+        },
+        {
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Marble at - in E4",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "E4",
+            "category": "Marble",
+            "modifier": "-",
+            "target": null,
+            "name": "Tenured Professor’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Tenured Professor’s Job"
+          }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "Sell Marble at - in E4",
       "mission": {
-        "kind": "kill",
-        "item": null,
+        "kind": "sell",
+        "item": "Marble",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
+        "deliverCell": "E4",
+        "category": "Marble",
+        "modifier": "-",
         "target": null,
-        "targetDeck": "Patricii",
         "name": "Tenured Professor’s Job"
       },
       "tier": "gen"
@@ -759,23 +1345,80 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
+          "condition": "=-1",
+          "type": "mission_strict",
+          "actionText": "Sell Grain at - in E1",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "E1",
+            "category": "Grain",
+            "modifier": "-",
+            "target": null,
+            "name": "Indie Podcaster’s Job"
+          }
+        },
+        {
+          "condition": "=0",
+          "type": "mission_offer",
+          "actionText": "Pick up a duffel of Humboldt in C4 and Deliver to C2",
+          "mission": {
+            "kind": "delivery",
+            "item": "a duffel of Humboldt",
+            "pickupCell": "C4",
+            "deliverCell": "C2",
+            "category": "Grain",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 1,
+            "payoutTable": [
+              8,
+              7,
+              5,
+              4,
+              3
+            ],
+            "name": "Indie Podcaster’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Buy one Marble at ++ Scarcity",
+          "mission": {
+            "kind": "sell",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Marble",
+            "modifier": "++",
+            "target": null
+          }
         }
       ],
-      "actionText": "?: Will Buy one Marble at + Scarcity",
+      "actionText": "Pick up a duffel of Humboldt in C4 and Deliver to C2",
       "mission": {
-        "kind": "sell",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Marble",
-        "modifier": "+",
-        "target": null
+        "kind": "delivery",
+        "item": "a duffel of Humboldt",
+        "pickupCell": "C4",
+        "deliverCell": "C2",
+        "category": "Grain",
+        "modifier": null,
+        "target": null,
+        "cargoSize": 1,
+        "payoutTable": [
+          8,
+          7,
+          5,
+          4,
+          3
+        ],
+        "name": "Indie Podcaster’s Job"
       },
       "tier": "gen"
     },
@@ -800,30 +1443,68 @@
       "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
+          "condition": "<=-1",
+          "type": "payoff",
+          "reward": "6(d)"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Pick up a duffel of Humboldt in C5 and Deliver to C1",
+          "mission": {
+            "kind": "delivery",
+            "item": "a duffel of Humboldt",
+            "pickupCell": "C5",
+            "deliverCell": "C1",
+            "category": "Grain",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 1,
+            "payoutTable": [
+              8,
+              7,
+              5,
+              4,
+              3
+            ],
+            "name": "Burning Man Artist’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Buy one Marble at ++ Scarcity",
+          "mission": {
+            "kind": "sell",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Marble",
+            "modifier": "++",
+            "target": null
+          }
         }
       ],
-      "actionText": "Pick up a cooler of molly in D2 and Deliver to B2",
+      "actionText": "Pick up a duffel of Humboldt in C5 and Deliver to C1",
       "mission": {
         "kind": "delivery",
-        "item": "a cooler of molly",
-        "pickupCell": "D2",
-        "deliverCell": "B2",
-        "category": "Marble",
+        "item": "a duffel of Humboldt",
+        "pickupCell": "C5",
+        "deliverCell": "C1",
+        "category": "Grain",
         "modifier": null,
         "target": null,
         "cargoSize": 1,
         "payoutTable": [
-          80,
-          61,
-          46,
-          35,
-          26
+          8,
+          7,
+          5,
+          4,
+          3
         ],
         "name": "Burning Man Artist’s Job"
       },
@@ -851,20 +1532,55 @@
       "combatReward": "5(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
+          "condition": "<=-1",
+          "type": "payoff",
+          "reward": "+1 Influence"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Grain at - in E3",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "E3",
+            "category": "Grain",
+            "modifier": "-",
+            "target": null,
+            "name": "Muralist’s Job"
+          }
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell one Marble from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Marble",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)",
-      "mission": null,
+      "actionText": "Sell Grain at - in E3",
+      "mission": {
+        "kind": "sell",
+        "item": "Grain",
+        "pickupCell": null,
+        "deliverCell": "E3",
+        "category": "Grain",
+        "modifier": "-",
+        "target": null,
+        "name": "Muralist’s Job"
+      },
       "tier": "gen"
     },
     {
@@ -893,16 +1609,53 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "mission_strict",
+          "actionText": "Sell Marble at - in B4",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "B4",
+            "category": "Marble",
+            "modifier": "-",
+            "target": null,
+            "name": "Climate Activist’s Job"
+          }
+        },
+        {
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Climate Activist’s Job"
+          }
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me two Influence Cards (Can give all cards to take thumbs-down and no Combat)",
-      "mission": null,
+      "actionText": "Kill a Celebrity in Combat",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "Climate Activist’s Job"
+      },
       "tier": "gen"
     },
     {
@@ -926,21 +1679,48 @@
       "combatReward": "10(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
+          "condition": "<=-1",
+          "type": "payoff",
+          "reward": "10(d)"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Grain at + in C1",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "C1",
+            "category": "Grain",
+            "modifier": "+",
+            "target": null,
+            "name": "Crypto Influencer’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Marble at + in A3",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "A3",
+            "category": "Marble",
+            "modifier": "+",
+            "target": null,
+            "name": "Crypto Influencer’s Job"
+          }
         }
       ],
-      "actionText": "Sell Marble at + in F4",
+      "actionText": "Sell Grain at + in C1",
       "mission": {
         "kind": "sell",
-        "item": "Marble",
+        "item": "Grain",
         "pickupCell": null,
-        "deliverCell": "F4",
-        "category": "Marble",
+        "deliverCell": "C1",
+        "category": "Grain",
         "modifier": "+",
         "target": null,
         "name": "Crypto Influencer’s Job"
@@ -969,23 +1749,41 @@
       "combatReward": "12(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
+          "condition": "<=-1",
+          "type": "payoff",
+          "reward": "Cheapest Weed"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Startup Founder’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Grain at + in F4",
+      "actionText": "Kill a Celebrity in Combat",
       "mission": {
-        "kind": "sell",
-        "item": "Grain",
+        "kind": "kill",
+        "item": null,
         "pickupCell": null,
-        "deliverCell": "F4",
-        "category": "Grain",
-        "modifier": "+",
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
         "target": null,
+        "targetDeck": "Patricii",
         "name": "Startup Founder’s Job"
       },
       "tier": "gen"
@@ -1012,16 +1810,46 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "mission_strict",
+          "actionText": "Sell Animals at + in C5",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "C5",
+            "category": "Animals",
+            "modifier": "+",
+            "target": null,
+            "name": "AI Ethicist’s Job"
+          }
+        },
+        {
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Sell Marble at + in F6",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "F6",
+            "category": "Marble",
+            "modifier": "+",
+            "target": null,
+            "name": "AI Ethicist’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Marble at + in D3",
+      "actionText": "Sell Marble at + in F6",
       "mission": {
         "kind": "sell",
         "item": "Marble",
         "pickupCell": null,
-        "deliverCell": "D3",
+        "deliverCell": "F6",
         "category": "Marble",
         "modifier": "+",
         "target": null,
@@ -1047,20 +1875,59 @@
       "combatReward": "5(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Sell Weapons at + in B2",
+          "mission": {
+            "kind": "sell",
+            "item": "Weapons",
+            "pickupCell": null,
+            "deliverCell": "B2",
+            "category": "Weapons",
+            "modifier": "+",
+            "target": null,
+            "name": "Edgelord Streamer’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "mission_offer",
+          "actionText": "?: Pick up a shoebox of fentanyl in E1 and Deliver to E5",
+          "mission": {
+            "kind": "delivery",
+            "item": "a shoebox of fentanyl",
+            "pickupCell": "E1",
+            "deliverCell": "E5",
+            "category": "Wine",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 1,
+            "payoutTable": [
+              54,
+              37,
+              23,
+              17,
+              13
+            ],
+            "name": "Edgelord Streamer’s Job"
+          }
         }
       ],
-      "actionText": "!!: Give me two Influence Cards (Can give all cards to take thumbs-down and no Combat)",
-      "mission": null,
+      "actionText": "Sell Weapons at + in B2",
+      "mission": {
+        "kind": "sell",
+        "item": "Weapons",
+        "pickupCell": null,
+        "deliverCell": "B2",
+        "category": "Weapons",
+        "modifier": "+",
+        "target": null,
+        "name": "Edgelord Streamer’s Job"
+      },
       "tier": "gen"
     },
     {
@@ -1097,23 +1964,79 @@
       "combatReward": "4(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Pick up a crate of ARs in F6 and Deliver to E1",
+          "mission": {
+            "kind": "delivery",
+            "item": "a crate of ARs",
+            "pickupCell": "F6",
+            "deliverCell": "E1",
+            "category": "Weapons",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 2,
+            "payoutTable": [
+              42,
+              32,
+              24,
+              18,
+              12
+            ],
+            "name": "Radicalized YouTuber’s Job"
+          }
+        },
+        {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "mission_offer",
+          "actionText": "?: Sell Weapons at + in E3",
+          "mission": {
+            "kind": "sell",
+            "item": "Weapons",
+            "pickupCell": null,
+            "deliverCell": "E3",
+            "category": "Weapons",
+            "modifier": "+",
+            "target": null,
+            "name": "Radicalized YouTuber’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Buy one Weapon at + Scarcity",
+          "mission": {
+            "kind": "sell",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Weapons",
+            "modifier": "+",
+            "target": null
+          }
         }
       ],
-      "actionText": "Sell Weapons at + in D4",
+      "actionText": "Pick up a crate of ARs in F6 and Deliver to E1",
       "mission": {
-        "kind": "sell",
-        "item": "Weapons",
-        "pickupCell": null,
-        "deliverCell": "D4",
+        "kind": "delivery",
+        "item": "a crate of ARs",
+        "pickupCell": "F6",
+        "deliverCell": "E1",
         "category": "Weapons",
-        "modifier": "+",
+        "modifier": null,
         "target": null,
+        "cargoSize": 2,
+        "payoutTable": [
+          42,
+          32,
+          24,
+          18,
+          12
+        ],
         "name": "Radicalized YouTuber’s Job"
       },
       "tier": "gen"
@@ -1146,21 +2069,47 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_strict",
+          "actionText": "Sell Animals at ++ in E1",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "E1",
+            "category": "Animals",
+            "modifier": "++",
+            "target": null,
+            "name": "Mayor Lurie’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell one Animal from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Animals",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "Sell Animals at ++ in A1",
-      "mission": {
-        "kind": "sell",
-        "item": "Animals",
-        "pickupCell": null,
-        "deliverCell": "A1",
-        "category": "Animals",
-        "modifier": "++",
-        "target": null,
-        "name": "Mayor Lurie’s Job"
-      },
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
       "tier": "top"
     },
     {
@@ -1189,21 +2138,38 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Wine"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Scott Wiener’s Job"
+          }
         }
       ],
-      "actionText": "Sell Grain at + in F6",
-      "mission": {
-        "kind": "sell",
-        "item": "Grain",
-        "pickupCell": null,
-        "deliverCell": "F6",
-        "category": "Grain",
-        "modifier": "+",
-        "target": null,
-        "name": "Scott Wiener’s Job"
-      },
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
       "tier": "t2"
     },
     {
@@ -1233,21 +2199,38 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Weapons"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Paul Graham’s Job"
+          }
         }
       ],
-      "actionText": "Sell Marble at + in F3",
-      "mission": {
-        "kind": "sell",
-        "item": "Marble",
-        "pickupCell": null,
-        "deliverCell": "F3",
-        "category": "Marble",
-        "modifier": "+",
-        "target": null,
-        "name": "Paul Graham’s Job"
-      },
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
       "tier": "t2"
     },
     {
@@ -1274,21 +2257,33 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Grain (if Player has no Grain, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Grain at + in F6",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "F6",
+            "category": "Grain",
+            "modifier": "+",
+            "target": null,
+            "name": "FBI’s Job"
+          }
         }
       ],
-      "actionText": "Sell Marble at + in B4",
-      "mission": {
-        "kind": "sell",
-        "item": "Marble",
-        "pickupCell": null,
-        "deliverCell": "B4",
-        "category": "Marble",
-        "modifier": "+",
-        "target": null,
-        "name": "FBI’s Job"
-      },
+      "actionText": "!!: Give me all of your Grain (if Player has no Grain, no demand)",
+      "mission": null,
       "tier": "t1"
     },
     {
@@ -1317,15 +2312,30 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
         },
         {
-          "condition": ">=1",
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Weapons"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": "1..2",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+        },
+        {
+          "condition": ">=3",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me your most valuable Item (highest Uncommon Sell Price)",
+      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
       "mission": null,
       "tier": "t1"
     },
@@ -1355,16 +2365,41 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Sell Marble at + in E5",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "E5",
+            "category": "Marble",
+            "modifier": "+",
+            "target": null,
+            "name": "Meter Maid’s Job"
+          }
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
-      "mission": null,
+      "actionText": "Sell Marble at + in E5",
+      "mission": {
+        "kind": "sell",
+        "item": "Marble",
+        "pickupCell": null,
+        "deliverCell": "E5",
+        "category": "Marble",
+        "modifier": "+",
+        "target": null,
+        "name": "Meter Maid’s Job"
+      },
       "tier": "meter"
     },
     {
@@ -1394,21 +2429,47 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Animals at + in D1",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "D1",
+            "category": "Animals",
+            "modifier": "+",
+            "target": null,
+            "name": "Traffic Cop’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell the top card of the Goods deck for 10(d) (unless Infl, decide without looking)",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": "Top card of Goods deck",
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Any",
+            "modifier": "10(d)",
+            "target": "Goods deck"
+          }
         }
       ],
-      "actionText": "Sell Marble at + in C4",
-      "mission": {
-        "kind": "sell",
-        "item": "Marble",
-        "pickupCell": null,
-        "deliverCell": "C4",
-        "category": "Marble",
-        "modifier": "+",
-        "target": null,
-        "name": "Traffic Cop’s Job"
-      },
+      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
+      "mission": null,
       "tier": "traffic"
     },
     {
@@ -1437,16 +2498,43 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Rookie’s Job"
+          }
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me your most valuable Item (highest Uncommon Sell Price)",
-      "mission": null,
+      "actionText": "Kill a Celebrity in Combat",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "Rookie’s Job"
+      },
       "tier": "rookie"
     },
     {
@@ -1473,11 +2561,38 @@
           "type": "combat"
         },
         {
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Kill a Criminal in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Nefarii",
+            "name": "Nayib Bukele’s Job"
+          }
+        },
+        {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "mission_request",
+          "actionText": "Sell Wine at ++ in A4",
+          "mission": {
+            "kind": "sell",
+            "item": "Wine",
+            "pickupCell": null,
+            "deliverCell": "A4",
+            "category": "Wine",
+            "modifier": "++",
+            "target": null,
+            "name": "Nayib Bukele’s Job"
+          }
         }
       ],
-      "actionText": "Kill a Cop in Combat",
+      "actionText": "Kill a Criminal in Combat",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -1486,7 +2601,7 @@
         "category": null,
         "modifier": null,
         "target": null,
-        "targetDeck": "Legiones",
+        "targetDeck": "Nefarii",
         "name": "Nayib Bukele’s Job"
       },
       "tier": "leader"
@@ -1515,16 +2630,52 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Kill a Cop in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Legiones",
+            "name": "Dirty Cop’s Job"
+          }
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell one Animal from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Animals",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "!!: Give me 6(d) (If Player has <6(d), can take thumbs-down and avoid Combat by paying all (d))",
-      "mission": null,
+      "actionText": "Kill a Cop in Combat",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Legiones",
+        "name": "Dirty Cop’s Job"
+      },
       "tier": "t2"
     },
     {
@@ -1554,20 +2705,32 @@
         },
         {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell the top card of the Goods deck for 10(d) (unless Infl, decide without looking)",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": "Top card of Goods deck",
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Any",
+            "modifier": "10(d)",
+            "target": "Goods deck"
+          }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "?: Will Sell the top card of the Goods deck for 10(d) (unless Infl, decide without looking)",
       "mission": {
-        "kind": "kill",
-        "item": null,
+        "kind": "buy_from_npc",
+        "item": "Top card of Goods deck",
         "pickupCell": null,
         "deliverCell": null,
-        "category": null,
-        "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
-        "name": "Jared Kushner’s Job"
+        "category": "Any",
+        "modifier": "10(d)",
+        "target": "Goods deck"
       },
       "tier": "leader"
     },
@@ -1596,21 +2759,33 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Grain (if Player has no Grain, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Grain at - in B6",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "B6",
+            "category": "Grain",
+            "modifier": "-",
+            "target": null,
+            "name": "Ocasio-Cortez’s Job"
+          }
         }
       ],
-      "actionText": "Sell Grain at - in E2",
-      "mission": {
-        "kind": "sell",
-        "item": "Grain",
-        "pickupCell": null,
-        "deliverCell": "E2",
-        "category": "Grain",
-        "modifier": "-",
-        "target": null,
-        "name": "Ocasio-Cortez’s Job"
-      },
+      "actionText": "!!: Give me all of your Grain (if Player has no Grain, no demand)",
+      "mission": null,
       "tier": "leader"
     },
     {
@@ -1639,15 +2814,25 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Wine"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me your most valuable Item (highest Uncommon Sell Price)",
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
       "mission": null,
       "tier": "t2"
     },
@@ -1675,15 +2860,50 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Animals"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "mission_offer",
+          "actionText": "?: Sell Grain at - in C5",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "C5",
+            "category": "Grain",
+            "modifier": "-",
+            "target": null,
+            "name": "Firefighters’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell one Grain from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Grain",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "!!: Give me 6(d) (If Player has <6(d), can take thumbs-down and avoid Combat by paying all (d))",
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
       "mission": null,
       "tier": "gen"
     },
@@ -1713,20 +2933,59 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Sell Animals at + in C6",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "C6",
+            "category": "Animals",
+            "modifier": "+",
+            "target": null,
+            "name": "Harmeet Dhillon’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_request",
+          "actionText": "Sell Grain at + in B5",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "B5",
+            "category": "Grain",
+            "modifier": "+",
+            "target": null,
+            "name": "Harmeet Dhillon’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Buy one Animal at ++ Scarcity",
+          "mission": {
+            "kind": "sell",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Animals",
+            "modifier": "++",
+            "target": null
+          }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "Sell Animals at + in C6",
       "mission": {
-        "kind": "kill",
-        "item": null,
+        "kind": "sell",
+        "item": "Animals",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
+        "deliverCell": "C6",
+        "category": "Animals",
+        "modifier": "+",
         "target": null,
-        "targetDeck": "Patricii",
         "name": "Harmeet Dhillon’s Job"
       },
       "tier": "t1"
@@ -1758,15 +3017,20 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Weapons"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me 6(d) (If Player has <6(d), can take thumbs-down and avoid Combat by paying all (d))",
+      "actionText": "",
       "mission": null,
       "tier": "t2"
     },
@@ -1799,15 +3063,28 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "mission_offer",
+          "actionText": "?: Kill a Criminal in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Nefarii",
+            "name": "Rudy Giuliani’s Job"
+          }
         }
       ],
-      "actionText": "!!: Give me 4(d) (Can give all (d) to take thumbs-down and no Combat)",
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
       "mission": null,
       "tier": "t2"
     },
@@ -1840,16 +3117,43 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Animals"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=1",
           "type": "deck_quest_offer"
         },
         {
           "condition": ">=2",
-          "type": "offer"
+          "type": "offer",
+          "actionText": "?: Will Sell one Weapon from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Weapons",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "?: Move again this turn",
-      "mission": null,
+      "actionText": "?: Will Sell one Weapon from Mkt at > Scarcity",
+      "mission": {
+        "kind": "buy_from_npc",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": "Weapons",
+        "modifier": ">",
+        "target": "Market"
+      },
       "tier": "gen"
     },
     {
@@ -1880,22 +3184,42 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Grain at + in A6",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "A6",
+            "category": "Grain",
+            "modifier": "+",
+            "target": null,
+            "name": "DEA’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell one Weapon from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Weapons",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
-      "mission": {
-        "kind": "kill",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
-        "name": "DEA’s Job"
-      },
+      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
+      "mission": null,
       "tier": "gen"
     },
     {
@@ -1926,16 +3250,41 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Wine"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "mission_offer",
+          "actionText": "?: Sell Animals at + in A3",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "A3",
+            "category": "Animals",
+            "modifier": "+",
+            "target": null,
+            "name": "ICE’s Job"
+          }
         }
       ],
-      "actionText": "!!: Give me your most valuable Item (highest Uncommon Sell Price)",
-      "mission": null,
+      "actionText": "?: Sell Animals at + in A3",
+      "mission": {
+        "kind": "sell",
+        "item": "Animals",
+        "pickupCell": null,
+        "deliverCell": "A3",
+        "category": "Animals",
+        "modifier": "+",
+        "target": null,
+        "name": "ICE’s Job"
+      },
       "tier": "gen"
     },
     {
@@ -1967,16 +3316,31 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Sell Animals at + in B5",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "B5",
+            "category": "Animals",
+            "modifier": "+",
+            "target": null,
+            "name": "Homeland Security’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Animals at + in D1",
+      "actionText": "Sell Animals at + in B5",
       "mission": {
         "kind": "sell",
         "item": "Animals",
         "pickupCell": null,
-        "deliverCell": "D1",
+        "deliverCell": "B5",
         "category": "Animals",
         "modifier": "+",
         "target": null,
@@ -2013,15 +3377,20 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Weapons"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "actionText": "",
       "mission": null,
       "tier": "t2"
     },
@@ -2052,12 +3421,18 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Move again this turn"
         }
       ],
       "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
@@ -2093,21 +3468,26 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Wine"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": "1..2",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": ">=3",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Animals at + in B5",
-      "mission": {
-        "kind": "sell",
-        "item": "Animals",
-        "pickupCell": null,
-        "deliverCell": "B5",
-        "category": "Animals",
-        "modifier": "+",
-        "target": null,
-        "name": "ICE Raid Team’s Job"
-      },
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
       "tier": "t1"
     },
     {
@@ -2138,23 +3518,40 @@
           "type": "combat"
         },
         {
-          "condition": ">=-1",
-          "type": "deck_quest_demand"
+          "condition": "=0",
+          "type": "combat",
+          "ifCarrying": "Wine"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "mission_offer",
+          "actionText": "?: Sell Animals at + in E5",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "E5",
+            "category": "Animals",
+            "modifier": "+",
+            "target": null,
+            "name": "Border Patrol’s Job"
+          }
         }
       ],
-      "actionText": "?: Will Sell one Grain from Mkt at > Scarcity",
+      "actionText": "?: Sell Animals at + in E5",
       "mission": {
-        "kind": "buy_from_npc",
-        "item": null,
+        "kind": "sell",
+        "item": "Animals",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": "Grain",
-        "modifier": ">",
-        "target": "Market"
+        "deliverCell": "E5",
+        "category": "Animals",
+        "modifier": "+",
+        "target": null,
+        "name": "Border Patrol’s Job"
       },
       "tier": "gen"
     },
@@ -2202,24 +3599,17 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
         },
         {
-          "condition": ">=2",
-          "type": "offer"
+          "condition": ">=1",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "?: Will Sell one Weapon on Mkt at > Scarcity",
-      "mission": {
-        "kind": "buy_from_npc",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Weapon",
-        "modifier": ">",
-        "target": "Market"
-      },
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
       "tier": "gen"
     },
     {
@@ -2247,20 +3637,70 @@
       "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Sell Grain at + in B3",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "B3",
+            "category": "Grain",
+            "modifier": "+",
+            "target": null,
+            "name": "Sheriff’s Deputy’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "mission_offer",
+          "actionText": "?: Sell Grain at + in A2",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "A2",
+            "category": "Grain",
+            "modifier": "+",
+            "target": null,
+            "name": "Sheriff’s Deputy’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell one Weapon from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Weapons",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "!!: Give me all of your Grain (if Player has no Grain, no demand)",
-      "mission": null,
+      "actionText": "Sell Grain at + in B3",
+      "mission": {
+        "kind": "sell",
+        "item": "Grain",
+        "pickupCell": null,
+        "deliverCell": "B3",
+        "category": "Grain",
+        "modifier": "+",
+        "target": null,
+        "name": "Sheriff’s Deputy’s Job"
+      },
       "tier": "gen"
     },
     {
@@ -2306,16 +3746,63 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Muni Fare Inspector’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Wine at - in C3",
+          "mission": {
+            "kind": "sell",
+            "item": "Wine",
+            "pickupCell": null,
+            "deliverCell": "C3",
+            "category": "Wine",
+            "modifier": "-",
+            "target": null,
+            "name": "Muni Fare Inspector’s Job"
+          }
         },
         {
           "condition": ">=2",
-          "type": "offer"
+          "type": "offer",
+          "actionText": "?: Will Sell one Animal from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Animals",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "?: Move again this turn",
-      "mission": null,
+      "actionText": "Kill a Celebrity in Combat",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Patricii",
+        "name": "Muni Fare Inspector’s Job"
+      },
       "tier": "t3"
     }
   ],
@@ -2347,16 +3834,69 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Pick up a cooler of molly in F4 and Deliver to B2",
+          "mission": {
+            "kind": "delivery",
+            "item": "a cooler of molly",
+            "pickupCell": "F4",
+            "deliverCell": "B2",
+            "category": "Marble",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 1,
+            "payoutTable": [
+              80,
+              61,
+              46,
+              35,
+              26
+            ],
+            "name": "Sam Altman’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Marble at ++ in B4",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "B4",
+            "category": "Marble",
+            "modifier": "++",
+            "target": null,
+            "name": "Sam Altman’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell the top card of the Goods deck for 12(d) (unless Infl, decide without looking)",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": "Top card of Goods deck",
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Any",
+            "modifier": "12(d)",
+            "target": "Goods deck"
+          }
         }
       ],
-      "actionText": "Pick up a cooler of molly in E6 and Deliver to A1",
+      "actionText": "Pick up a cooler of molly in F4 and Deliver to B2",
       "mission": {
         "kind": "delivery",
         "item": "a cooler of molly",
-        "pickupCell": "E6",
-        "deliverCell": "A1",
+        "pickupCell": "F4",
+        "deliverCell": "B2",
         "category": "Marble",
         "modifier": null,
         "target": null,
@@ -2399,16 +3939,68 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Pick up a duffel of Humboldt in F2 and Deliver to E5",
+          "mission": {
+            "kind": "delivery",
+            "item": "a duffel of Humboldt",
+            "pickupCell": "F2",
+            "deliverCell": "E5",
+            "category": "Grain",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 1,
+            "payoutTable": [
+              8,
+              7,
+              5,
+              4,
+              3
+            ],
+            "name": "Palmer Luckey’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "mission_offer",
+          "actionText": "?: Sell Marble at + in F6",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "F6",
+            "category": "Marble",
+            "modifier": "+",
+            "target": null,
+            "name": "Palmer Luckey’s Job"
+          }
         }
       ],
-      "actionText": "!!: Give me 5(d) (If Player has <5(d), can take thumbs-down and avoid Combat by paying all (d))",
-      "mission": null,
+      "actionText": "Pick up a duffel of Humboldt in F2 and Deliver to E5",
+      "mission": {
+        "kind": "delivery",
+        "item": "a duffel of Humboldt",
+        "pickupCell": "F2",
+        "deliverCell": "E5",
+        "category": "Grain",
+        "modifier": null,
+        "target": null,
+        "cargoSize": 1,
+        "payoutTable": [
+          8,
+          7,
+          5,
+          4,
+          3
+        ],
+        "name": "Palmer Luckey’s Job"
+      },
       "tier": "t1"
     },
     {
@@ -2452,29 +4044,22 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Pick up a brick of coke in E1 and Deliver to D1",
-      "mission": {
-        "kind": "delivery",
-        "item": "a brick of coke",
-        "pickupCell": "E1",
-        "deliverCell": "D1",
-        "category": "Animals",
-        "modifier": null,
-        "target": null,
-        "cargoSize": 2,
-        "payoutTable": [
-          78,
-          60,
-          46,
-          34,
-          24
-        ],
-        "name": "VC Capitalist’s Job"
-      },
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
       "tier": "t2"
     },
     {
@@ -2502,27 +4087,39 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Sell Animals at + in D1",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "D1",
+            "category": "Animals",
+            "modifier": "+",
+            "target": null,
+            "name": "Crypto Scammer’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Pick up a cooler of molly in F2 and Deliver to E4",
+      "actionText": "Sell Animals at + in D1",
       "mission": {
-        "kind": "delivery",
-        "item": "a cooler of molly",
-        "pickupCell": "F2",
-        "deliverCell": "E4",
-        "category": "Marble",
-        "modifier": null,
+        "kind": "sell",
+        "item": "Animals",
+        "pickupCell": null,
+        "deliverCell": "D1",
+        "category": "Animals",
+        "modifier": "+",
         "target": null,
-        "cargoSize": 1,
-        "payoutTable": [
-          80,
-          61,
-          46,
-          35,
-          26
-        ],
         "name": "Crypto Scammer’s Job"
       },
       "tier": "t3"
@@ -2557,23 +4154,37 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
+          "condition": "<=0",
+          "type": "combat"
+        },
+        {
+          "condition": ">=1",
           "type": "deck_quest_offer"
         },
         {
           "condition": ">=2",
-          "type": "offer"
+          "type": "offer",
+          "actionText": "?: Will Buy one Animal at + Scarcity",
+          "mission": {
+            "kind": "sell",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Animals",
+            "modifier": "+",
+            "target": null
+          }
         }
       ],
-      "actionText": "?: Will Sell any one Good from Goods Deck at + (relative to Present Mkt Scarcity)",
+      "actionText": "?: Will Buy one Animal at + Scarcity",
       "mission": {
-        "kind": "buy_from_npc",
-        "item": "Any one Good from Goods Deck",
+        "kind": "sell",
+        "item": null,
         "pickupCell": null,
         "deliverCell": null,
-        "category": "Any",
+        "category": "Animals",
         "modifier": "+",
-        "target": "Goods Deck"
+        "target": null
       },
       "tier": "t1"
     },
@@ -2604,21 +4215,29 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Kill a Criminal in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Nefarii",
+            "name": "Pot Farmers’s Job"
+          }
         }
       ],
-      "actionText": "Sell Wine at - in C3",
-      "mission": {
-        "kind": "sell",
-        "item": "Wine",
-        "pickupCell": null,
-        "deliverCell": "C3",
-        "category": "Wine",
-        "modifier": "-",
-        "target": null,
-        "name": "Pot Farmers’s Job"
-      },
+      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
+      "mission": null,
       "tier": "t3"
     },
     {
@@ -2645,18 +4264,45 @@
         },
         {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "mission_strict",
+          "actionText": "Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "International Terrorist’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell one Wine from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Wine",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "Sell Weapons at + in F3",
+      "actionText": "Kill a Celebrity in Combat",
       "mission": {
-        "kind": "sell",
-        "item": "Weapons",
+        "kind": "kill",
+        "item": null,
         "pickupCell": null,
-        "deliverCell": "F3",
-        "category": "Weapons",
-        "modifier": "+",
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
         "target": null,
+        "targetDeck": "Patricii",
         "name": "International Terrorist’s Job"
       },
       "tier": "t1"
@@ -2685,27 +4331,32 @@
         },
         {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell the top card of the Goods deck for 12(d) (unless Infl, decide without looking)",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": "Top card of Goods deck",
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Any",
+            "modifier": "12(d)",
+            "target": "Goods deck"
+          }
         }
       ],
-      "actionText": "Pick up a duffel of Humboldt in F6 and Deliver to B3",
+      "actionText": "?: Will Sell the top card of the Goods deck for 12(d) (unless Infl, decide without looking)",
       "mission": {
-        "kind": "delivery",
-        "item": "a duffel of Humboldt",
-        "pickupCell": "F6",
-        "deliverCell": "B3",
-        "category": "Grain",
-        "modifier": null,
-        "target": null,
-        "cargoSize": 1,
-        "payoutTable": [
-          8,
-          7,
-          5,
-          4,
-          3
-        ],
-        "name": "Domestic Terrorist’s Job"
+        "kind": "buy_from_npc",
+        "item": "Top card of Goods deck",
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": "Any",
+        "modifier": "12(d)",
+        "target": "Goods deck"
       },
       "tier": "t2"
     },
@@ -2732,16 +4383,34 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "mission_offer",
+          "actionText": "?: Kill a Cop in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Legiones",
+            "name": "Bashar al-Assad’s Job"
+          }
         }
       ],
-      "actionText": "!!: Give me all of your Animals. (if Player has no Animals, no demand)",
-      "mission": null,
+      "actionText": "?: Kill a Cop in Combat",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Legiones",
+        "name": "Bashar al-Assad’s Job"
+      },
       "tier": "t1"
     },
     {
@@ -2768,16 +4437,34 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
           "condition": ">=1",
           "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell the top card of the Goods deck for 12(d) (unless Infl, decide without looking)",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": "Top card of Goods deck",
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Any",
+            "modifier": "12(d)",
+            "target": "Goods deck"
+          }
         }
       ],
-      "actionText": "!!: Give me (R) Influence Cards (Can give all cards to take thumbs-down and no Combat)",
-      "mission": null,
+      "actionText": "?: Will Sell the top card of the Goods deck for 12(d) (unless Infl, decide without looking)",
+      "mission": {
+        "kind": "buy_from_npc",
+        "item": "Top card of Goods deck",
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": "Any",
+        "modifier": "12(d)",
+        "target": "Goods deck"
+      },
       "tier": "t1"
     },
     {
@@ -2805,15 +4492,26 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
         },
         {
-          "condition": ">=1",
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)"
+        },
+        {
+          "condition": "1..2",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": ">=3",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Animals. (if Player has no Animals, no demand)",
+      "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)",
       "mission": null,
       "tier": "t1"
     },
@@ -2857,15 +4555,21 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
       "mission": null,
       "tier": "t2"
     },
@@ -2892,22 +4596,38 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Grain at - in C5",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "C5",
+            "category": "Grain",
+            "modifier": "-",
+            "target": null,
+            "name": "Homeless’s Job"
+          }
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Move again this turn"
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
-      "mission": {
-        "kind": "kill",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
-        "name": "Homeless’s Job"
-      },
+      "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)",
+      "mission": null,
       "tier": "t2"
     },
     {
@@ -2936,16 +4656,41 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Grain at - in F2",
+          "mission": {
+            "kind": "sell",
+            "item": "Grain",
+            "pickupCell": null,
+            "deliverCell": "F2",
+            "category": "Grain",
+            "modifier": "-",
+            "target": null,
+            "name": "Illegal’s Job"
+          }
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Animals. (if Player has no Animals, no demand)",
-      "mission": null,
+      "actionText": "Sell Grain at - in F2",
+      "mission": {
+        "kind": "sell",
+        "item": "Grain",
+        "pickupCell": null,
+        "deliverCell": "F2",
+        "category": "Grain",
+        "modifier": "-",
+        "target": null,
+        "name": "Illegal’s Job"
+      },
       "tier": "t2"
     },
     {
@@ -2972,21 +4717,22 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "mission_request"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Marble at - in C5",
-      "mission": {
-        "kind": "sell",
-        "item": "Marble",
-        "pickupCell": null,
-        "deliverCell": "C5",
-        "category": "Marble",
-        "modifier": "-",
-        "target": null,
-        "name": "Unhoused’s Job"
-      },
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
       "tier": "t3"
     },
     {
@@ -3015,23 +4761,40 @@
           "type": "combat"
         },
         {
-          "condition": ">=-1",
-          "type": "deck_quest_demand"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "mission_strict",
+          "actionText": "Sell Marble at - in F3",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "F3",
+            "category": "Marble",
+            "modifier": "-",
+            "target": null,
+            "name": "Undocumented’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "?: Will Sell one Exotic A from Mkt at > Scarcity",
+      "actionText": "Sell Marble at - in F3",
       "mission": {
-        "kind": "buy_from_npc",
-        "item": null,
+        "kind": "sell",
+        "item": "Marble",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": "Exotic Animal",
-        "modifier": ">",
-        "target": "Market"
+        "deliverCell": "F3",
+        "category": "Marble",
+        "modifier": "-",
+        "target": null,
+        "name": "Undocumented’s Job"
       },
       "tier": "t3"
     },
@@ -3054,26 +4817,40 @@
       "combatReward": "25(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell one Animal from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Animals",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
-      "mission": {
-        "kind": "kill",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
-        "name": "Elmer Rodriguez’s Job"
-      },
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
       "tier": "top"
     },
     {
@@ -3099,24 +4876,42 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_request",
+          "actionText": "Sell Animals at + in B5",
+          "mission": {
+            "kind": "sell",
+            "item": "Animals",
+            "pickupCell": null,
+            "deliverCell": "B5",
+            "category": "Animals",
+            "modifier": "+",
+            "target": null,
+            "name": "Clique Enforcer’s Job"
+          }
         },
         {
           "condition": ">=2",
-          "type": "offer"
+          "type": "offer",
+          "actionText": "?: Will Sell one Wine from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Wine",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "?: Will Buy one Wine at = Scarcity",
-      "mission": {
-        "kind": "sell",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Wine",
-        "modifier": "=",
-        "target": null
-      },
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
       "tier": "t1"
     },
     {
@@ -3144,16 +4939,43 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "demand_strict"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Kill a Criminal in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Nefarii",
+            "name": "Sicario’s Job"
+          }
         },
         {
-          "condition": ">=1",
+          "condition": "1..2",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+        },
+        {
+          "condition": ">=3",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me 5(d) (If Player has <5(d), can take thumbs-down and avoid Combat by paying all (d))",
-      "mission": null,
+      "actionText": "Kill a Criminal in Combat",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": null,
+        "targetDeck": "Nefarii",
+        "name": "Sicario’s Job"
+      },
       "tier": "t1"
     },
     {
@@ -3179,21 +5001,31 @@
           "type": "combat"
         },
         {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+        },
+        {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "?: Will Sell one Animal from Mkt at > Scarcity",
+          "mission": {
+            "kind": "buy_from_npc",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Animals",
+            "modifier": ">",
+            "target": "Market"
+          }
         }
       ],
-      "actionText": "Sell Grain at = in E5",
-      "mission": {
-        "kind": "sell",
-        "item": "Grain",
-        "pickupCell": null,
-        "deliverCell": "E5",
-        "category": "Grain",
-        "modifier": "=",
-        "target": null,
-        "name": "Gang Banger’s Job"
-      },
+      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "mission": null,
       "tier": "t2"
     },
     {
@@ -3233,28 +5065,37 @@
       "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<=-2",
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
+          "condition": "=-1",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
         },
         {
-          "condition": ">=2",
-          "type": "offer"
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "?: Sell Wine at + in D4",
+          "mission": {
+            "kind": "sell",
+            "item": "Wine",
+            "pickupCell": null,
+            "deliverCell": "D4",
+            "category": "Wine",
+            "modifier": "+",
+            "target": null,
+            "name": "Bad Hombre’s Job"
+          }
         }
       ],
-      "actionText": "?: Will Buy one Wine at = Scarcity",
-      "mission": {
-        "kind": "sell",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Wine",
-        "modifier": "=",
-        "target": null
-      },
+      "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)",
+      "mission": null,
       "tier": "t2"
     },
     {
@@ -3281,23 +5122,47 @@
           "type": "combat"
         },
         {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Marble at = in C6",
+          "mission": {
+            "kind": "sell",
+            "item": "Marble",
+            "pickupCell": null,
+            "deliverCell": "C6",
+            "category": "Marble",
+            "modifier": "=",
+            "target": null,
+            "name": "Coyote’s Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "mission_offer",
+          "actionText": "?: Kill a Celebrity in Combat",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": null,
+            "targetDeck": "Patricii",
+            "name": "Coyote’s Job"
+          }
         }
       ],
-      "actionText": "?: Will Sell one Exotic A from Mkt at > Scarcity",
+      "actionText": "Sell Marble at = in C6",
       "mission": {
-        "kind": "buy_from_npc",
-        "item": null,
+        "kind": "sell",
+        "item": "Marble",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": "Exotic Animal",
-        "modifier": ">",
-        "target": "Market"
+        "deliverCell": "C6",
+        "category": "Marble",
+        "modifier": "=",
+        "target": null,
+        "name": "Coyote’s Job"
       },
       "tier": "t2"
     }

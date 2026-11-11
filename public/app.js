@@ -878,17 +878,30 @@ function navigateToMarketBoardForCategory(category) {
  */
 const DENARIUS_SYM = "𐆖";
 
+/**
+ * Free Parking currency: the engine keeps integer amounts where 1 unit = 1 Denarius = 0.1 Bitcoin.
+ * Every displayed amount is shown in Bitcoin (e.g. 14 -> ₿1.4, 30 -> ₿3).
+ */
+const BTC_SYM = "₿";
+function formatBtc(units) {
+  const n = Number(units);
+  if (!Number.isFinite(n)) return String(units);
+  const v = Math.round(n) / 10;
+  return Number.isInteger(v) ? String(v) : v.toFixed(1);
+}
+
 function replaceDenariiTokens(rawStr) {
+  const toBtcList = (nums) => nums.split("/").map((x) => formatBtc(x)).join("/");
   return String(rawStr)
+    .replace(/𐆖\s?(\d+(?:\/\d+)*)/g, (_m, nums) => `${BTC_SYM}${toBtcList(nums)}`)
     .replace(
-      /(\b|[+\-<>]=?)(\d+(?:\s*[x×*]\s*)?(?:\(R\)|\(r\)|®|🅁))(?:\(d\)|d\b|𐆖)/g,
-      `$1${DENARIUS_SYM}$2`
+      /(\b|[+\-<>]=?)(\d+)(\s*[x×*]\s*)?(\(R\)|\(r\)|®|🅁)(?:\(d\)|d\b|𐆖)/g,
+      (_m, pre, num, x, die) => `${pre}${BTC_SYM}${formatBtc(num)}${x || ""}${die}`
     )
-    .replace(
-      /(\b|[+\-<>]=?)(\d+(?:\/\d+)*)(?:\(d\)|d\b|𐆖)/gi,
-      `$1${DENARIUS_SYM}$2`
-    )
-    .replace(/\(d\)/gi, DENARIUS_SYM);
+    .replace(/(\b|[+\-<>]=?)(\d+(?:\/\d+)*)(?:\(d\)|d\b|𐆖)/gi, (_m, pre, nums) => `${pre}${BTC_SYM}${toBtcList(nums)}`)
+    .replace(/\(d\)/gi, BTC_SYM)
+    .replace(/\bDenarii\b/g, "Bitcoin")
+    .replace(/\bDenarius\b/g, "Bitcoin");
 }
 
 /**
@@ -905,6 +918,14 @@ const GAME_TOKEN_REGEX =
  * without relying on missing U+10196 system font glyphs.
  */
 function createDenariusSvgNode(extraClass = "") {
+  const btc = document.createElement("span");
+  btc.className = `btc-sym ${extraClass}`.trim();
+  btc.setAttribute("aria-hidden", "true");
+  btc.textContent = BTC_SYM;
+  return btc;
+}
+
+function createRomanDenariusSvgNodeUnused(extraClass = "") {
   const svgNS = "http://www.w3.org/2000/svg";
   const svg = document.createElementNS(svgNS, "svg");
   svg.setAttribute("viewBox", "0 0 16 18");
@@ -2443,6 +2464,10 @@ function formatReactionTypeSymbol(rOrType) {
   if (t === "deck_quest_offer") return "(DECK_ICON)(QUEST_ICON)?";
   if (t === "demand") return "!";
   if (t === "offer" || t === "quest_optional") return "?";
+  if (t === "payoff") return "💰(d)";
+  if (t === "combat" && typeof rOrType === "object" && rOrType.ifCarrying) {
+    return `(COMBAT_ICON) if ${sfReskinText(String(rOrType.ifCarrying))}`;
+  }
   if (t === "cash_reward") {
     return typeof rOrType === "object" && rOrType.reward ? String(rOrType.reward) : "(d)";
   }
@@ -2611,6 +2636,7 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
       ? card.reactions.map((r) => ({
           cond: formatReactionCondition(r.condition),
           effect: formatReactionTypeSymbol(r),
+          text: r.actionText || null,
         }))
       : [
           { cond: "≤ -1", effect: "(COMBAT_ICON)" },
@@ -2645,7 +2671,7 @@ function renderPhysicalEncounterCardNode(card, pend, opts = {}) {
             : "Combat Locked (Not Threatened)"
           : isActive
           ? "Your Active Reputation Tier — Click to Comply / Accept"
-          : `Reputation Tier (${t.cond})`,
+          : `Reputation Tier (${t.cond})${t.text ? `: ${t.text}` : ""}`,
         onClick: isCombatTier ? handleCombatClick : isActive && !combatMandatory ? handleFulfillClick : null,
       },
       el("div", { className: "phys-enc-tier-effect", text: eff }),
@@ -8898,7 +8924,7 @@ function renderGoodPriceTableNode(card, trackName, colIndex, isPriceIdxDirect = 
             ...sellArr.slice(0, 5).map((val, idx) =>
               el("td", {
                 className: `${idx === 2 ? "price-eq-col" : ""} ${idx === activePriceIdx ? "active-price-cell" : ""}`,
-                text: String(val),
+                text: formatBtc(val),
               })
             )
           )
@@ -8915,7 +8941,7 @@ function renderGoodPriceTableNode(card, trackName, colIndex, isPriceIdxDirect = 
             ...buyArr.slice(0, 5).map((val, idx) =>
               el("td", {
                 className: `${idx === 2 ? "price-eq-col" : ""} ${idx === activePriceIdx ? "active-price-cell" : ""}`,
-                text: String(val),
+                text: formatBtc(val),
               })
             )
           )

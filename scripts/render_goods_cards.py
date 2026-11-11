@@ -32,6 +32,12 @@ GRID = (60, 60, 60)
 SCARCITY_LABEL = {"Grain": "WEED", "Marble": "PARTY"}
 
 
+def btc(units):
+    """Engine amounts are tenths of a Bitcoin (1 Denarius = 0.1 BTC)."""
+    v = round(int(units)) / 10
+    return str(int(v)) if v == int(v) else f"{v:.1f}"
+
+
 def load_cards():
     m = json.load(open(os.path.join(ROOT, "src/data/market_and_missions.json"), encoding="utf-8"))
     return {c["id"]: c for c in m["market"]}
@@ -200,7 +206,7 @@ def draw_panel(d, zone, card):
                 f = ImageFont.truetype(F_BOLD, int(rh * 0.55))
                 center_text(d, box, SCARCITY[ci], f, SCARCITY_COLORS[ci])
             else:
-                v = str(vals[ci])
+                v = btc(vals[ci])
                 bold = lbl in ("BUY", "HIRE") and ci == 2
                 f = fit_font(F_NUM, v, col_w * 0.86, int(rh * (0.70 if bold else 0.60)))
                 center_text(d, box, v, f, INK if not bold else (0, 0, 0))
