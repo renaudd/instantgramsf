@@ -449,7 +449,7 @@
       "deck": "Patricii",
       "type": "character",
       "faction": "ISIS",
-      "bio": "“Nobody is quite sure how she got on the list.”",
+      "bio": "“At the center of a global news scandal.”",
       "combatFormula": "2X(R)+2-1",
       "friendlyFavor": [
         "ISIS"
@@ -2710,171 +2710,6 @@
       "tier": "t2"
     },
     {
-      "id": "nef_10",
-      "name": "Hamas",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "ISIS",
-      "bio": "“Tunnels under everything.”",
-      "combatFormula": "2X(R)",
-      "friendlyFavor": [
-        "ISIS"
-      ],
-      "friendlyReward": "Cheapest Henchman",
-      "hostileFavor": [
-        "-ISIS",
-        "MAGA"
-      ],
-      "combatReward": "7(d)",
-      "reactions": [
-        {
-          "condition": "<=0",
-          "type": "combat"
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_request"
-        }
-      ],
-      "actionText": "Kill a Celebrity in Combat",
-      "mission": {
-        "kind": "kill",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
-        "name": "Hamas’s Job"
-      },
-      "tier": "t1"
-    },
-    {
-      "id": "nef_11",
-      "name": "Hezbollah",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "ISIS",
-      "bio": "“Has a pager. Doesn’t use it.”",
-      "combatFormula": "2X(R)+1",
-      "friendlyFavor": [
-        "ISIS",
-        "MAGA",
-        "DSA",
-        "TECH"
-      ],
-      "friendlyReward": "Cheapest Henchman",
-      "hostileFavor": [
-        "-ISIS",
-        "-DSA",
-        "MAGA"
-      ],
-      "combatReward": "7(d)",
-      "reactions": [
-        {
-          "condition": "<=0",
-          "type": "combat"
-        },
-        {
-          "condition": "<=0",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
-        }
-      ],
-      "actionText": "!!: Give me your cheapest Good (if Player has no goods, no demand)",
-      "mission": null,
-      "tier": "t1"
-    },
-    {
-      "id": "nef_12",
-      "name": "Houthis",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "ISIS",
-      "bio": "“Blockading the Bay, somehow.”",
-      "combatFormula": "X(R)+1",
-      "friendlyFavor": [
-        "ISIS"
-      ],
-      "friendlyReward": "Cheapest Opiates",
-      "hostileFavor": [
-        "-ISIS"
-      ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=0",
-          "type": "combat"
-        },
-        {
-          "condition": ">=0",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=1",
-          "type": "offer"
-        }
-      ],
-      "actionText": "?: Will Sell one Marble from Mkt at > Scarcity",
-      "mission": {
-        "kind": "buy_from_npc",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Marble",
-        "modifier": ">",
-        "target": "Market"
-      },
-      "tier": "t2"
-    },
-    {
-      "id": "nef_13",
-      "name": "Iran",
-      "deck": "Nefarii",
-      "type": "character",
-      "faction": "ISIS",
-      "bio": "“Enrichment program, very enriched.”",
-      "combatFormula": "2X(R)+X",
-      "friendlyFavor": [
-        "ISIS",
-        "MAGA",
-        "DSA",
-        "TECH"
-      ],
-      "friendlyReward": "Cheapest Opiates",
-      "hostileFavor": [
-        "-ISIS",
-        "-DSA"
-      ],
-      "combatReward": "7(d)",
-      "reactions": [
-        {
-          "condition": "<=0",
-          "type": "combat"
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_request"
-        }
-      ],
-      "actionText": "Sell Weapons at + in D3",
-      "mission": {
-        "kind": "sell",
-        "item": "Weapons",
-        "pickupCell": null,
-        "deliverCell": "D3",
-        "category": "Weapons",
-        "modifier": "+",
-        "target": null,
-        "name": "Iran’s Job"
-      },
-      "tier": "t1"
-    },
-    {
       "id": "nef_14",
       "name": "Bashar al-Assad",
       "deck": "Nefarii",
@@ -3206,7 +3041,7 @@
       "deck": "Nefarii",
       "type": "character",
       "faction": "MS13",
-      "bio": "“The name nobody says twice.”",
+      "bio": "“Gordo.” Ran the 20th Street clique in the Mission.",
       "combatFormula": "3X(R)+X",
       "friendlyFavor": [
         "MS13",

@@ -36,9 +36,9 @@ the same as in the Rome edition.
 | Rome faction (gem) | Free Parking | Celebrities / Cops / Criminals |
 | :--- | :--- | :--- |
 | Caracalla (Ruby) | **MAGA** | 3 / **14** / 2 |
-| Geta (Emerald) | **ISIS** | 4 / 1 / **8** |
+| Geta (Emerald) | **ISIS** (rarest) | 4 / 1 / 4 |
 | Domna (Diamond) | **TECH** (Tech Bros) | 7 / 8 / 4 |
-| Plautilla (Sapphire) | **DSA** | **10** / 3 / 6 |
+| Plautilla (Sapphire) | **DSA** | **9** / 3 / 6 |
 | Aurelius (Amethyst) | **MS13** | 2 / 2 / **6** |
 
 ### Alignment consequences
@@ -116,7 +116,7 @@ player. **Witness Protection** (was Regime Change) cancels it.
 | :--- | :--- |
 | TECH | Mark Zuckerberg *(Leader)*, Brian Chesky *(T1)*, Dario Amodei *(T2)*, Daniela Amodei *(T2)*, Crypto Influencer, Startup Founder, AI Ethicist |
 | MAGA | Donald Trump *(Leader)*, Elon Musk *(T1)*, Peter Thiel *(T1)* |
-| DSA | DSA/ISIS)*, Jensen Huang *(T2)*, Bernie Sanders, Cornel West, Drag Queen, Tenured Professor, Indie Podcaster, Burning Man Artist, Muralist, Climate Activist |
+| DSA | Jensen Huang *(T2)*, Bernie Sanders, Cornel West, Drag Queen, Tenured Professor, Indie Podcaster, Burning Man Artist, Muralist, Climate Activist |
 | MS13 | Steph Curry *(T1)*, Chesa Boudin |
 | ISIS | Alice Huang *(T1)*, Dr. Oz, Edgelord Streamer, Radicalized YouTuber |
 
@@ -136,9 +136,18 @@ player. **Witness Protection** (was Regime Change) cancels it.
 | :--- | :--- |
 | TECH | Sam Altman *(Top)*, Palmer Luckey, VC Capitalist, Crypto Scammer |
 | MAGA | KKK *(T1)*, Pot Farmers *(T3)* |
-| ISIS | International Terrorist *(T1)*, Domestic Terrorist *(T2)*, Hamas, Hezbollah, Houthis, Iran, Bashar al-Assad, Abu Bakr al-Baghdadi |
+| ISIS | International Terrorist *(T1)*, Domestic Terrorist *(T2)*, Bashar al-Assad, Abu Bakr al-Baghdadi |
 | DSA | Pimp *(T1)*, London Breed, Homeless *(T2)*, Illegal *(T2)*, Unhoused *(T3)*, Undocumented *(T3)* |
 | MS13 | Elmer Rodriguez *(Top)*, Clique Enforcer, Sicario, Gang Banger, Bad Hombre, Coyote |
+
+### Reserve cards
+
+`src/data/reserve_cards.json` holds cards that were pulled from the decks, with all their stats, so they can be added back later. If other factions grow, these can regrow ISIS.
+
+| Card | Faction & deck | Why it was pulled |
+| :--- | :--- | :--- |
+| Hamas, Hezbollah, Houthis, Iran | ISIS Criminals | Removed to keep ISIS the rarest faction |
+| [removed] [removed] | DSA/ISIS Celebrity | Removed to keep the roster to clear public figures |
 
 ## 7. Ballot Initiatives (was Political Climate)
 

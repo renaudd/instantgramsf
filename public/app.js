@@ -247,7 +247,7 @@ const FACTION_META = [
     alignedWith: ["MS13"],
     hostileTo: ["MAGA", "TECH", "DSA"],
     alignmentNote: "ISIS hates you for working with anyone but ISIS or MS-13. Working for ISIS sometimes wins over everyone except MS-13; working against ISIS often pleases MAGA and sometimes annoys the DSA.",
-    defaultDeckCounts: { patricii: 4, legiones: 1, nefarii: 8, total: 13 },
+    defaultDeckCounts: { patricii: 4, legiones: 1, nefarii: 4, total: 9 },
   },
   {
     key: "TECH",
@@ -275,7 +275,7 @@ const FACTION_META = [
     alignedWith: ["ISIS", "MS13"],
     hostileTo: ["MAGA (most hostile)", "TECH (somewhat)"],
     alignmentNote: "Working for the DSA sometimes pleases the Tech Bros and often angers ISIS and MAGA; working against the DSA sometimes pleases the Tech Bros or MAGA.",
-    defaultDeckCounts: { patricii: 10, legiones: 3, nefarii: 6, total: 19 },
+    defaultDeckCounts: { patricii: 9, legiones: 3, nefarii: 6, total: 18 },
   },
   {
     key: "MS13",
