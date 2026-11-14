@@ -687,15 +687,7 @@ def get_job_phone_base():
     global _JOB_PHONE_CACHE
     if _JOB_PHONE_CACHE is not None:
         return _JOB_PHONE_CACHE
-    raw = Image.open(os.path.join(MOCKUPS_DIR, "mission_email_phone.png")).convert("RGBA")
-    # Crop tightly around the outer edges of the phone (x=42..854, y=28..1199) and resize to 896x1200
-    cropped = raw.crop((42, 28, 854, 1199)).resize((896, 1200), Image.LANCZOS)
-    # Extract the cracked glass texture from the pure-white lower region (y=520..1180, x=52..844)
-    raw_rgb = np.array(cropped.convert("RGB"), dtype=np.float32)
-    glass_patch = raw_rgb[520:1180, 52:844, :] - 248.0  # negative along dark cracks, 0 on flat glass
-    # Resize glass_patch to cover the full phone screen interior (x=38..858 -> w=820, y=90..1200 -> h=1110)
-    glass_full = cv2.resize(glass_patch, (820, 1110), interpolation=cv2.INTER_LINEAR)
-    _JOB_PHONE_CACHE = (cropped, glass_full)
+    _JOB_PHONE_CACHE = rem.prepare_full_bleed_phone_base()
     return _JOB_PHONE_CACHE
 
 
@@ -717,58 +709,78 @@ def format_job_concise_text(m: dict) -> str:
     return obj
 
 
+def format_job_bezel_reward(m: dict) -> str:
+    rew_raw = sf_reskin(str(m.get("rewardText") or "Special"))
+    # Strip any trailing job rule descriptions so ONLY the reward appears in the top-right bezel
+    rew_raw = re.sub(r"\s*&\s*Cancels.*$", "", rew_raw, flags=re.IGNORECASE)
+    rew_short = (
+        rew_raw.replace("Cheapest ", "Cheap ")
+        .replace("Most Expensive ", "Top ")
+        .replace(" on Market", "")
+        .replace(" on Mkt", "")
+        .replace("Influence Cards", "Inf")
+        .replace("Influence Card", "Inf")
+        .replace("Influence", "Inf")
+        .replace("Henchman", "Hench")
+        .replace("Henchmen", "Hench")
+        .strip()
+    )
+    return rew_short
+
+
 def render_job_card(m: dict, out_path: str):
     mid = str(m.get("id", "mis_1"))
     num_match = re.search(r"(\d+)", mid)
     num_id = int(num_match.group(1)) if num_match else 1
     theme = JOB_PLATFORM_THEMES[(num_id - 1) % len(JOB_PLATFORM_THEMES)]
 
-    phone_base, glass_delta = get_job_phone_base()
+    phone_base, mask, glass_delta = get_job_phone_base()
     im = phone_base.copy()
-    W, H = im.size
     draw = ImageDraw.Draw(im)
 
-    # 1. Top Black Bezel / Outcome Bar (kept on all Job cards by default)
-    bar_h = 88
-    draw.rectangle((0, 0, W, bar_h), fill=(14, 18, 24, 255))
-    draw.line((0, bar_h, W, bar_h), fill=(212, 175, 55, 255), width=3)
+    SX0, SX1 = 46, 854
+    SY0, SY1 = 104, 1296
 
-    thumb_up = rem.load_icon("thumb_up_green.png", 56, tight=True)
-    im.paste(thumb_up, (20, (bar_h - 56) // 2), thumb_up)
-    gx = 86
-    for g_tok in (m.get("favor") or []):
+    # 1. Top Black Phone Bezel / Outcome Bar (y=36..104 inside the rounded phone frame)
+    draw.rectangle((SX0, 36, SX1, SY0), fill=(14, 18, 24))
+    draw.line((SX0, SY0, SX1, SY0), fill=(212, 175, 55), width=3)
+
+    top_cy = 72
+    thumb_sz = 54
+    thumb_up = rem.load_icon("thumb_up_green.png", thumb_sz, tight=True)
+    im.paste(thumb_up, (62, top_cy - thumb_sz // 2), thumb_up)
+    f_colon = ImageFont.truetype(rem.F_BOLD, 34)
+    draw.text((64 + thumb_sz, top_cy - 20), ":", font=f_colon, fill=(255, 255, 255))
+
+    favor_list = m.get("favor") or []
+    gem_sz = 48 if len(favor_list) >= 3 else 54
+    gx = 78 + thumb_sz
+    for g_tok in favor_list:
         gem_name, is_neg = parse_gem_token(g_tok)
-        gx = rem.draw_gem_with_slash(im, gx, (bar_h - 60) // 2, gem_name, is_negative=is_neg, size=60, black_border=True, border_px=3)
-        gx += 4
+        gx = rem.draw_gem_with_slash(im, gx, top_cy - gem_sz // 2, gem_name, is_negative=is_neg, size=gem_sz, black_border=True, border_px=3)
 
-    rew_raw = sf_reskin(str(m.get("rewardText") or "Special"))
-    rew_short = (
-        rew_raw.replace("Cheapest ", "Cheap ")
-        .replace(" on Market", " Mkt")
-        .replace(" on Mkt", " Mkt")
-        .replace("Influence Cards", "Influence")
-        .replace("Influence Card", "Influence")
-    )
+    # Top-Right Bezel: ONLY the Job Reward (kept strictly to the right of the center speaker notch x=385..565)
+    rew_short = format_job_bezel_reward(m)
     rew_str = f":{rew_short}"
-    f_rew = rgc.fit_font(rem.F_SYM, rew_str, max(120, W - gx - 95), 34, min_size=18)
+    cash_sz = 46
+    max_rew_w = min(218, max(135, 836 - max(gx, 570) - cash_sz - 10))
+    f_rew = rgc.fit_font(rem.F_SYM, rew_str, max_rew_w, 32, min_size=17)
     try:
         f_rew.set_variation_by_name("Bold")
     except Exception:
         pass
     bb_r = draw.textbbox((0, 0), rew_str, font=f_rew)
     rw, rh = bb_r[2] - bb_r[0], bb_r[3] - bb_r[1]
-    rx = W - 20 - rw
-    ry = (bar_h - rh) // 2 - bb_r[1]
-    cash_ic = rem.load_icon("cash_white.png", 52, tight=True)
-    im.paste(cash_ic, (rx - 58, (bar_h - 52) // 2), cash_ic)
-    draw.text((rx, ry), rew_str, font=f_rew, fill=(255, 255, 255), stroke_width=3, stroke_fill=(0, 0, 0))
+    rx = 836 - rw
+    ry = top_cy - rh // 2 - bb_r[1]
+    cash_ic = rem.load_icon("cash_white.png", cash_sz, tight=True)
+    im.paste(cash_ic, (rx - cash_sz - 4, top_cy - cash_sz // 2), cash_ic)
+    draw.text((rx, ry), rew_str, font=f_rew, fill=(255, 255, 255), stroke_width=2, stroke_fill=(0, 0, 0))
 
-    # 2. Phone Screen Interior (x=38..858, y=90..1200)
-    SX0, SX1 = 38, 858
-    SY0, SY1 = 90, 1200
+    # 2. Phone Screen Interior (x=46..854, y=104..1296)
     draw.rectangle((SX0, SY0, SX1, SY1), fill=theme["screen_bg"])
 
-    # Platform App Header Bar (y=90..176)
+    # Platform App Header Bar (y=104..188)
     hy0, hy1 = SY0, SY0 + 84
     draw.rectangle((SX0, hy0, SX1, hy1), fill=theme["header_bg"])
     if theme["id"] == "ebay":
@@ -779,7 +791,7 @@ def render_job_card(m: dict, out_path: str):
         draw.rectangle((SX0 + 2 * sw, hy1 - 8, SX0 + 3 * sw, hy1), fill=(245, 175, 2))
         draw.rectangle((SX0 + 3 * sw, hy1 - 8, SX1, hy1), fill=(134, 184, 23))
 
-    f_app = rgc.fit_font(rem.F_BOLD, theme["app_name"], 560, 36, min_size=24)
+    f_app = rgc.fit_font(rem.F_BOLD, theme["app_name"], 550, 36, min_size=24)
     draw.text((SX0 + 26, hy0 + 22), f"‹  {theme['app_name']}", font=f_app, fill=theme["header_fg"])
 
     # Badge pill on right of header bar
@@ -792,8 +804,8 @@ def render_job_card(m: dict, out_path: str):
     draw.rounded_rectangle((bx0_p, by0_p, SX1 - 20, by0_p + bh + 16), radius=12, fill=theme["accent"])
     draw.text((bx0_p + 14 - bb_b[0], by0_p + 8 - bb_b[1]), badge_str, font=f_badge, fill=(255, 255, 255))
 
-    # 3. Sender / Metadata Header Strip (y=190..312)
-    meta_y0, meta_y1 = 190, 312
+    # 3. Sender / Metadata Header Strip (y=202..324)
+    meta_y0, meta_y1 = 202, 324
     is_dark = theme["dark"]
     meta_bg = (28, 32, 42) if is_dark else (255, 255, 255)
     meta_fg = (242, 245, 250) if is_dark else (20, 24, 32)
@@ -808,13 +820,13 @@ def render_job_card(m: dict, out_path: str):
     bb_i = draw.textbbox((0, 0), initials[:2], font=f_init)
     draw.text((av_cx - (bb_i[2] - bb_i[0]) // 2 - bb_i[0], av_cy - (bb_i[3] - bb_i[1]) // 2 - bb_i[1]), initials[:2], font=f_init, fill=(255, 255, 255))
 
-    f_sender = rgc.fit_font(rem.F_BOLD, theme["sender"], 620, 28, min_size=20)
-    f_sub = rgc.fit_font(rem.F_REG, theme["sub_meta"], 620, 22, min_size=16)
+    f_sender = rgc.fit_font(rem.F_BOLD, theme["sender"], 610, 28, min_size=20)
+    f_sub = rgc.fit_font(rem.F_REG, theme["sub_meta"], 610, 22, min_size=16)
     draw.text((SX0 + 124, meta_y0 + 22), theme["sender"], font=f_sender, fill=meta_fg)
     draw.text((SX0 + 124, meta_y0 + 62), theme["sub_meta"], font=f_sub, fill=sub_fg)
 
-    # 4. Message Bubble / Email Body Container (y=328..1164)
-    bx0, by0, bx1, by1 = SX0 + 20, 328, SX1 - 20, 1164
+    # 4. Message Bubble / Email Body Container (y=340..1276)
+    bx0, by0, bx1, by1 = SX0 + 20, 340, SX1 - 20, 1276
     rad = 26 if theme["kind"] == "chat" else 12
     draw.rounded_rectangle((bx0, by0, bx1, by1), radius=rad, fill=theme["card_bg"], outline=theme["card_border"], width=4)
 
@@ -837,7 +849,7 @@ def render_job_card(m: dict, out_path: str):
     underline_y = ty + th + 16
     draw.line((bx0 + 36, underline_y, bx1 - 36, underline_y), fill=theme["card_border"], width=3)
 
-    # 5. Large Concise Job Assignment Text
+    # 5. Large Concise Job Assignment Text (Strictly in the center information face)
     concise_text = format_job_concise_text(m)
     has_delivery_table = str(m.get("kind", "")).lower() == "delivery" and isinstance(m.get("fencedSell"), list) and len(m["fencedSell"]) >= 5
 
@@ -888,13 +900,19 @@ def render_job_card(m: dict, out_path: str):
             dark_mode=is_dark,
         )
 
-    # 7. Blend Subtle Cracked-Screen Overlay Across the Phone Screen Interior
+    # 7. Bottom Phone Chin / Home Indicator Bezel (y=1296..1352) so the phone frame encloses all 4 sides
+    draw.rectangle((SX0, SY1, SX1, 1354), fill=(14, 18, 24))
+    draw.line((SX0, SY1, SX1, SY1), fill=(58, 70, 78), width=2)
+    draw.rounded_rectangle((345, 1320, 555, 1330), radius=5, fill=(148, 158, 172))
+
+    # 8. Blend Subtle Cracked-Screen Overlay & Composite into Full-Bleed 4-Sided Phone Frame
     rgb_arr = np.array(im.convert("RGB"), dtype=np.float32)
-    scr_sub = rgb_arr[SY0:SY1, SX0:SX1, :]
+    scr_sub = rgb_arr[36:1352, 46:854, :]
     scr_sub = np.clip(scr_sub + glass_delta * 0.42, 0, 255)
-    rgb_arr[SY0:SY1, SX0:SX1, :] = scr_sub
-    out_im = Image.fromarray(rgb_arr.astype(np.uint8))
-    out_im.save(out_path, quality=90)
+    rgb_arr[36:1352, 46:854, :] = scr_sub
+    comp = Image.fromarray(rgb_arr.astype(np.uint8))
+    final = Image.composite(comp, phone_base, mask).resize((848, 1264), Image.LANCZOS)
+    final.convert("RGB").save(out_path, quality=90)
 
 
 # ============================================================================

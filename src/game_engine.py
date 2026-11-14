@@ -5867,7 +5867,7 @@ def _build_pending_encounter_state(
         elif "actionText" in matched_tier_obj or matched_reaction in ("combat", "no_contraband", "payoff", "offer", "deck_quest_offer", "deck_quest_demand", "deck_quest_strict", "demand_strict", "demand"):
             card["mission"] = None
     action_text = (card.get("actionText") or "").strip()
-    if (action_text.startswith("?") or action_text.endswith("?")) and matched_reaction in ("demand", "mission_request"):
+    if not reactions and (action_text.startswith("?") or action_text.endswith("?")) and matched_reaction in ("demand", "mission_request"):
         matched_reaction = "offer"
     combat_mandatory = matched_reaction == "combat"
     is_strict_demand = (matched_reaction in ("demand_strict", "mission_strict", "deck_quest_strict")) or (
@@ -9793,6 +9793,48 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
         msg = _complete_delivery_mission(state, target_p, m, curr_cell)
         return True, msg
 
+    # 1B. Spontaneous Anytime Influence Cards (Sponsor/Patron, Favor, Body Shop/SUVwright, Thug, Fentanyl Press/Wine Forger, Dark Web Plug/Procurer)
+    if act_type == "play_influence" and state.get("phase") not in ("setup_discard", "setup_climate", "finished"):
+        req_card_id = action.get("cardId")
+        owner_p = next(
+            (
+                p for p in state["players"]
+                if not p.get("isBot")
+                and (p.get("userId") == user_id or p.get("userId") is None)
+                and any(c.get("id") == req_card_id for c in p.get("influence", []))
+            ),
+            None,
+        )
+        if owner_p:
+            cand_card = next((c for c in owner_p["influence"] if c.get("id") == req_card_id), None)
+            if cand_card:
+                cname_cand = str(cand_card.get("name") or "")
+                eff_cand = str(cand_card.get("effectCode") or "")
+                is_spontaneous_anytime = (
+                    cname_cand in ("Patron", "Sponsor", "SUVwright", "Cartwright", "Body Shop", "Thug", "Fentanyl Press", "Wine Forger", "Opiates Forger", "Procurer", "Dark Web Plug")
+                    or "Favor" in cname_cand
+                    or eff_cand in ("gain_40d", "permanent_storage_plus_2", "free_henchman_1r", "wine_forger", "buy_from_deck_uncommon", "buy_any_good_common")
+                    or eff_cand.startswith("faction_favor_")
+                )
+                if is_spontaneous_anytime:
+                    ok, msg = _execute_influence_card(state, owner_p, cand_card, action)
+                    if ok and state.get("pendingEncounter") and state["pendingEncounter"].get("stage", "pre_decision") == "pre_decision":
+                        pend_now = state["pendingEncounter"]
+                        enc_p_now = state["players"][pend_now["playerIndex"]]
+                        prev_int = pend_now.get("interveningPlayerIndex")
+                        state["pendingEncounter"] = _build_pending_encounter_state(
+                            state,
+                            enc_p_now,
+                            pend_now["card"],
+                            pend_now.get("deck", "celebrities"),
+                            pend_now.get("xCount", 1),
+                        )
+                        if prev_int is not None:
+                            state["pendingEncounter"]["interveningPlayerIndex"] = prev_int
+                    elif ok and not state.get("pendingEncounter") and state.get("phase") != "cleanup":
+                        run_bots_until_human(state)
+                    return ok, msg
+
     # 2. Pending Encounter Choice (including human intervention on another player's encounter/combat/chart roll)
     if state.get("pendingEncounter"):
         pend = state["pendingEncounter"]
@@ -11132,8 +11174,8 @@ def _execute_influence_card(state: Dict[str, Any], player: Dict[str, Any], card:
         ok_swap, err_swap, _ = _validate_and_apply_suv_space_swaps(
             state,
             player,
-            discard_suv_ids=action.get("discardSUVIds"),
-            fire_henchman_ids=action.get("fireHenchmanIds"),
+            discard_suv_ids=action.get("discardSUVIds") or action.get("discardCartIds"),
+            fire_henchman_ids=action.get("fireHenchmanIds") or action.get("fireGuardIds"),
             incoming_blocks=int(cand_good.get("blocks", 1) or 1),
             reason=f"to procure {cand_good['name']}",
         )
@@ -11145,8 +11187,8 @@ def _execute_influence_card(state: Dict[str, Any], player: Dict[str, Any], card:
         ok_swap, err_swap, _ = _validate_and_apply_suv_space_swaps(
             state,
             player,
-            discard_suv_ids=action.get("discardSUVIds"),
-            fire_henchman_ids=action.get("fireHenchmanIds"),
+            discard_suv_ids=action.get("discardSUVIds") or action.get("discardCartIds"),
+            fire_henchman_ids=action.get("fireHenchmanIds") or action.get("fireGuardIds"),
             incoming_henchmen=1,
             reason="to deploy Thug (Free Henchman)",
         )
@@ -11157,8 +11199,8 @@ def _execute_influence_card(state: Dict[str, Any], player: Dict[str, Any], card:
         ok_swap, err_swap, _ = _validate_and_apply_suv_space_swaps(
             state,
             player,
-            discard_suv_ids=action.get("discardSUVIds"),
-            fire_henchman_ids=action.get("fireHenchmanIds"),
+            discard_suv_ids=action.get("discardSUVIds") or action.get("discardCartIds"),
+            fire_henchman_ids=action.get("fireHenchmanIds") or action.get("fireGuardIds"),
             incoming_blocks=1,
             reason="to add Pressed Fentanyl to SUV",
         )

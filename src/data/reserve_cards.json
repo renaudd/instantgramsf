@@ -123,7 +123,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Knock knock.”",
-      "combatFormula": "2X(R)+1",
+      "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -187,7 +187,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“No warrant needed, apparently.”",
-      "combatFormula": "2X(R)+2",
+      "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -232,7 +232,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Has a pager. Doesn’t use it.”",
-      "combatFormula": "2X(R)+1",
+      "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "ISIS",
         "MAGA",

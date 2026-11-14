@@ -3935,7 +3935,7 @@
       "name": "Witness Protection",
       "kind": "kill_emperor_cancel",
       "description": "Protect the Boss (If Donald Trump or Jared Kushner is defeated by any Player, collect this reward and cancel every Regime Change)",
-      "rewardText": "20(d) & Cancels all active Regime Change jobs",
+      "rewardText": "20(d)",
       "reward": {
         "type": "regime_change",
         "amount": 20

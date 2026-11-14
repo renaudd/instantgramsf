@@ -23,7 +23,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“He’s actually quite likeable.”",
-      "combatFormula": "4(R)+1",
+      "combatFormula": "3(R)+3",
       "friendlyFavor": [
         "MAGA",
         "-DSA"
@@ -196,7 +196,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“At one point the wealthiest man in the world.”",
-      "combatFormula": "6(R)",
+      "combatFormula": "3(R)+2",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -254,7 +254,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Bets on contrarians. Collects citizenships.”",
-      "combatFormula": "3(R)+2",
+      "combatFormula": "3(R)+1",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -330,7 +330,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Spent the $100 million on city parks.”",
-      "combatFormula": "5(R)",
+      "combatFormula": "3(R)+1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -574,7 +574,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Not his fault that he has fans.”",
-      "combatFormula": "4(R)",
+      "combatFormula": "3(R)",
       "friendlyFavor": [
         "MS13"
       ],
@@ -914,8 +914,8 @@
         },
         {
           "condition": "=0",
-          "type": "mission_offer",
-          "actionText": "Pick up Cooler of Molly at F4 and deliver to A5?",
+          "type": "mission_request",
+          "actionText": "Pick up Cooler of Molly at F4 and deliver to A5!",
           "mission": {
             "kind": "delivery",
             "item": "Cooler of Molly",
@@ -949,7 +949,7 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "(QUEST_ICON)? Pick up Cooler of Molly at F4 and deliver to A5?",
+      "actionText": "(QUEST_ICON)! Pick up Cooler of Molly at F4 and deliver to A5!",
       "mission": {
         "kind": "delivery",
         "item": "Cooler of Molly",
@@ -1840,7 +1840,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Let’s go, San Francisco.”",
-      "combatFormula": "3X(R)",
+      "combatFormula": "2X(R)",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -1961,7 +1961,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Has an essay about this.”",
-      "combatFormula": "X(R)+X+1",
+      "combatFormula": "X(R)+2",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -2022,7 +2022,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“We’ve been reading your texts.”",
-      "combatFormula": "X(R)+2X",
+      "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -2086,7 +2086,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“This encounter never happened.”",
-      "combatFormula": "2X(R)+X",
+      "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -2328,7 +2328,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“On two payrolls.”",
-      "combatFormula": "X(R)+2",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MS13",
         "ISIS",
@@ -3369,7 +3369,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“The Squad’s sharpest elbow.”",
-      "combatFormula": "3X(R)-3",
+      "combatFormula": "2X(R)",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -3416,7 +3416,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Big on doomsdays.”",
-      "combatFormula": "3X(R)+X",
+      "combatFormula": "2X(R)",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -3476,7 +3476,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Hawaiian shirts, autonomous weapons.”",
-      "combatFormula": "X(R)+2X",
+      "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -3551,7 +3551,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Two and twenty, and your kidneys.”",
-      "combatFormula": "2X(R)+1",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -4220,7 +4220,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Gordo.” Ran the 20th Street clique in the Mission.",
-      "combatFormula": "2X(R)+X",
+      "combatFormula": "2X(R)",
       "friendlyFavor": [
         "MS13",
         "ISIS",
@@ -4263,7 +4263,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Collects for the clique.”",
-      "combatFormula": "2X(R)",
+      "combatFormula": "X(R)+2",
       "friendlyFavor": [
         "MS13",
         "ISIS",
@@ -4327,7 +4327,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Professional. Punctual.”",
-      "combatFormula": "X(R)+X+1",
+      "combatFormula": "X(R)+2",
       "friendlyFavor": [
         "MS13",
         "ISIS",
@@ -4388,7 +4388,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Repping the set.”",
-      "combatFormula": "2X(R)-X",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MS13"
       ],
@@ -4449,7 +4449,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“As advertised.”",
-      "combatFormula": "2X",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MS13",
         "ISIS",
@@ -4508,7 +4508,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Knows every way in and out.”",
-      "combatFormula": "2X(R)-2",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MS13",
         "ISIS",
@@ -4567,7 +4567,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Tunnels under everything.”",
-      "combatFormula": "2X(R)",
+      "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -4618,7 +4618,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Enrichment program, very enriched.”",
-      "combatFormula": "2X(R)+X",
+      "combatFormula": "X(R)+X",
       "friendlyFavor": [
         "ISIS",
         "DSA",
@@ -4673,7 +4673,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Runs the Mission block from a contraband cell phone in Pelican Bay.”",
-      "combatFormula": "2X(R)+1",
+      "combatFormula": "2X",
       "friendlyFavor": [
         "MS13",
         "-MAGA"

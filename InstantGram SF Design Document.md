@@ -71,16 +71,16 @@ encounter outcomes and to job completion and failure.
 | Leader | Faction | Deck | Friendly Outcome | Hostile Outcome | Negative (`≤ -1`) | Neutral (`= 0`) | Positive (`≥ +1`) | Combat Formula |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Donald Trump** | MAGA | Celebrities | −Sapphire −Emerald *(no +Ruby: doesn't reward loyalty)* | +Sapphire +Diamond | Threat (`!!`) *(never attacks unless you refuse)* | Offer (`?`) | Deal (`?`: *Buy 1 Influence for ₿0.5?*) | `3(R)+3` |
-| **Mark Zuckerberg** | TECH | Celebrities | +Ruby −Sapphire *(no +Diamond: rest of TECH doesn't like you)* | −Ruby −Diamond | Attack at `≤ -2`; Threat (`!!`) at `-1` | Threat (`!!`) | Threat (`!!`) | `4(R)+1` |
+| **Mark Zuckerberg** | TECH | Celebrities | +Ruby −Sapphire *(no +Diamond: rest of TECH doesn't like you)* | −Ruby −Diamond | Attack at `≤ -2`; Threat (`!!`) at `-1` | Threat (`!!`) | Threat (`!!`) | `3(R)+3` |
 | **Nayib Bukele** | MS13 | Cops | +Amethyst −Ruby | −Amethyst | Attack (`⚔`) | Threat (`!!`) | Offer (`?`) | `3X` |
 | **Jared Kushner** | ISIS | Cops | +Emerald −Diamond | −Emerald −Ruby | Attack (`⚔`) | Offer (`?`) *(undercover)* | Threat (`!!`) *(ride or die)* | `2X(R)` |
-| **Ocasio-Cortez** | DSA | Criminals | +Sapphire −Ruby −Emerald | −Sapphire +Diamond | Attack (`⚔`) | Demand (`!`) | Deal (`?`) | `3X(R)-3` |
+| **Ocasio-Cortez** | DSA | Criminals | +Sapphire −Ruby −Emerald | −Sapphire +Diamond | Attack (`⚔`) | Demand (`!`) | Deal (`?`) | `2X(R)` |
 
 ### Behavior
 
 | Faction | Attacks when your favor is | Notes |
 | :--- | :--- | :--- |
-| MS13 | ≤ −1 | Never attacks at 0 |
+| MS13 | ≤ −1 | Never attacks at 0; MS13 baseline combat formula is `X(R)+1` |
 | ISIS | ≤ 0 | Poor: cash rewards ×0.6 (Kushner is undercover at 0 and offers instead of attacking) |
 | MAGA | ≤ −1 | Trump never attacks automatically unless you refuse his threat |
 | DSA | ≤ −2 | Ocasio-Cortez attacks at ≤ −1 |
@@ -88,9 +88,9 @@ encounter outcomes and to job completion and failure.
 
 ## 4. Combat Strength
 
-Each Rome die `R` has faces `[0, 0, 1, 1, 2, 3]` with expected value $E[R] = 7/6 \approx 1.167$.
-- **Celebrities** encounter spaces always have 1 icon, so **Celebrities combat formulas never contain `X`**: they span 25 distinct non-`X` formulas from `1`, `3(R)-2(R)`, `2(R)-(R)`, `(R)`, `2(R)-1`, `2`, `(R)+1`, `3(R)-(R)`, `2(R)`, `3(R)-1`, `3`, `(R)+2`, `2(R)+1`, `3(R)`, `4`, `(R)+3`, `2(R)+2`, `3(R)+1`, `4(R)`, `2(R)+3`, `3(R)+2`, `4(R)+1` (**Zuckerberg**), `5(R)`, `3(R)+3` (**Trump**), up to `6(R)` (**Elon Musk**).
-- **Cops** and **Criminals** encounter spaces range from `1–4` icons, so **all Cops and Criminals combat formulas are functions of `X`**: spanning `X(R)-X`, `X-1`, `X(R)-1`, `X`, `X(R)`, `2X(R)-X(R)`, `2X(R)-3`, `2X(R)-2`, `X+1`, `X(R)+1`, `2X-1`, `2X(R)-X`, `2X(R)-1`, `X(R)+2`, `2X`, `X(R)+X-1`, `X(R)+X`, `2X+1`, `X(R)+3`, `X(R)+X+1`, `2X(R)` (**Kushner**), `2X(R)+1`, `3X-1`, `2X(R)+2`, `3X(R)-3` (**Ocasio-Cortez**), `X(R)+2X`, `2X(R)+X`, `3X` (**Bukele**), `3X(R)` (**Mayor Lurie**), and `3X(R)+X` (**Sam Altman**).
+Each Rome die `R` has faces `[0, 0, 1, 1, 2, 3]` with expected value $E[R] = 7/6 \approx 1.167$. No encounter exceeds the top leaders (`2X(R)`, `3X`, `3(R)+3`):
+- **Celebrities** encounter spaces always have 1 icon, so **Celebrities combat formulas never contain `X`**: they span non-`X` formulas from `1`, `3(R)-2(R)`, `2(R)-(R)`, `(R)`, `2(R)-1`, `2`, `(R)+1`, `3(R)-(R)`, `2(R)`, `3(R)-1`, `3`, `(R)+2`, `2(R)+1`, `3(R)`, `4`, `(R)+3`, `2(R)+2`, `3(R)+1`, `2(R)+3`, `3(R)+2` (**Elon Musk**), up to the top leader cap `3(R)+3` (**Donald Trump** and **Mark Zuckerberg**).
+- **Cops** and **Criminals** encounter spaces range from `1–4` icons, so **all Cops and Criminals combat formulas are functions of `X`**: spanning `X(R)-X`, `X-1`, `X(R)-1`, `X`, `X(R)`, `2X(R)-X(R)`, `2X(R)-3`, `2X(R)-2`, `X+1`, `X(R)+1` (**MS13 baseline**), `2X-1`, `2X(R)-X`, `2X(R)-1`, `X(R)+2`, `2X`, `X(R)+X-1`, `X(R)+X` (**Iran**), `2X+1`, `X(R)+3`, `3X-1`, up to the top leader caps `2X(R)` (**Jared Kushner**, **Ocasio-Cortez**, **Mayor Lurie**, **Sam Altman**, **Elmer Rodriguez**) and `3X` (**Nayib Bukele**).
 
 ## 5. Job Trends & Rewards
 
