@@ -146,39 +146,126 @@ def _get_static_card_maps() -> Dict[str, Any]:
     mis_by_id: Dict[str, Dict[str, Any]] = {}
     inf_by_id: Dict[str, Dict[str, Any]] = {}
     mkt_by_id: Dict[str, Dict[str, Any]] = {}
+    deck_totals: Dict[str, int] = {
+        "celebrities": 0,
+        "cops": 0,
+        "criminals": 0,
+        "market": 0,
+        "missions": 0,
+        "influence": 0,
+    }
+    enc_faction_totals: Dict[str, Dict[str, int]] = {
+        "celebrities": {f: 0 for f in FACTIONS},
+        "cops": {f: 0 for f in FACTIONS},
+        "criminals": {f: 0 for f in FACTIONS},
+    }
+    market_track_totals: Dict[str, int] = {t: 0 for t in TRACK_NAMES}
     decks_path = os.path.join(DATA_DIR, "decks.json")
     if os.path.exists(decks_path):
         with open(decks_path, "r", encoding="utf-8") as f:
             dk_raw = json.load(f)
         for dk_name in ("celebrities", "cops", "criminals"):
-            for c in dk_raw.get(dk_name, []):
+            dk_list = dk_raw.get(dk_name, [])
+            deck_totals[dk_name] = len(dk_list)
+            for c in dk_list:
                 if isinstance(c, dict) and c.get("id"):
                     c_cp = copy.deepcopy(c)
                     c_cp["deck"] = dk_name
                     enc_by_id[str(c_cp["id"])] = c_cp
                     if c_cp.get("name"):
                         enc_by_name[str(c_cp["name"]).strip().lower()] = c_cp
-        for inf_c in dk_raw.get("influence", []):
+                    fac = c_cp.get("faction")
+                    if fac in enc_faction_totals[dk_name]:
+                        enc_faction_totals[dk_name][fac] += 1
+        inf_list = dk_raw.get("influence", [])
+        deck_totals["influence"] = len(inf_list)
+        for inf_c in inf_list:
             if isinstance(inf_c, dict) and inf_c.get("id"):
                 inf_by_id[str(inf_c["id"])] = copy.deepcopy(inf_c)
     mm_path = os.path.join(DATA_DIR, "market_and_missions.json")
     if os.path.exists(mm_path):
         with open(mm_path, "r", encoding="utf-8") as f:
             mm_raw = json.load(f)
-        for m in mm_raw.get("missions", []):
+        mis_list = mm_raw.get("missions", [])
+        deck_totals["missions"] = len(mis_list)
+        for m in mis_list:
             if isinstance(m, dict) and m.get("id"):
                 mis_by_id[str(m["id"])] = copy.deepcopy(m)
-        for mc in mm_raw.get("market", []):
+        mkt_list = mm_raw.get("market", [])
+        deck_totals["market"] = len(mkt_list)
+        for mc in mkt_list:
             if isinstance(mc, dict) and mc.get("id"):
                 mkt_by_id[str(mc["id"])] = copy.deepcopy(mc)
+                tr = mc.get("track")
+                if tr in market_track_totals:
+                    market_track_totals[tr] += 1
     _STATIC_CARD_CACHE = {
         "enc_by_id": enc_by_id,
         "enc_by_name": enc_by_name,
         "mis_by_id": mis_by_id,
         "inf_by_id": inf_by_id,
         "mkt_by_id": mkt_by_id,
+        "deck_totals": deck_totals,
+        "enc_faction_totals": enc_faction_totals,
+        "market_track_totals": market_track_totals,
     }
     return _STATIC_CARD_CACHE
+
+
+_DECK_KEY_ALIASES: Dict[str, str] = {
+    "celebrities": "celebrities",
+    "patricii": "celebrities",
+    "cops": "cops",
+    "legiones": "cops",
+    "legionaries": "cops",
+    "criminals": "criminals",
+    "nefarii": "criminals",
+    "nefarious": "criminals",
+    "market": "market",
+    "goods": "market",
+    "missions": "missions",
+    "missiones": "missions",
+    "jobs": "missions",
+    "influence": "influence",
+}
+
+_DECK_DISPLAY_LABELS: Dict[str, str] = {
+    "celebrities": "Celebrities",
+    "cops": "Cops",
+    "criminals": "Criminals",
+    "market": "Goods & Henchmen",
+    "missions": "Jobs",
+    "influence": "Influence",
+}
+
+
+def _normalize_deck_target_key(raw_key: Any) -> str:
+    k = str(raw_key or "").strip().lower()
+    return _DECK_KEY_ALIASES.get(k, k)
+
+
+def _deck_display_label(deck_key: str) -> str:
+    return _DECK_DISPLAY_LABELS.get(deck_key, deck_key.capitalize())
+
+
+def _count_tile_deck_icons(coord: str, tile: Optional[Dict[str, Any]]) -> Dict[str, int]:
+    counts = {"criminals": 0, "celebrities": 0, "cops": 0}
+    if not isinstance(tile, dict):
+        return counts
+    eff_edges = get_effective_tile_edges(coord, tile)
+    tokens: List[Any] = [tile.get("encounter")] + list(eff_edges.values())
+    for tok in tokens:
+        if not tok or not isinstance(tok, str):
+            continue
+        parts = tok.strip().lower().split("_")
+        dk_raw = parts[0]
+        dk = _DECK_KEY_ALIASES.get(dk_raw)
+        if dk in counts:
+            n = 1
+            if len(parts) > 1 and parts[1].isdigit():
+                n = max(1, min(4, int(parts[1])))
+            counts[dk] += n
+    return counts
 
 
 def _infer_encounter_deck_key(card: Optional[Dict[str, Any]]) -> str:
@@ -9138,6 +9225,8 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
         t_key = pend_r.get("targetKey", "celebrities")
         if t_type == "tile":
             t_key = normalize_cell_id(t_key) or t_key
+        else:
+            t_key = _normalize_deck_target_key(t_key)
         target_list = (
             state["romeBoard"].get(t_key, {}).get("stack", [])
             if t_type == "tile"
@@ -9163,14 +9252,14 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
             summary_str = (
                 _summarize_tile(top_one)
                 if t_type == "tile"
-                else f"Top of {t_key.capitalize()}: {top_one.get('name', 'Card')}"
+                else f"Top of {_deck_display_label(t_key)}: {top_one.get('name', 'Card')}"
             )
             target_p["scoutedInfo"].append({
                 "id": f"top3_{secrets.token_hex(4)}",
                 "turn": state.get("turn", 1),
                 "targetType": t_type,
                 "targetKey": t_key,
-                "label": f"Informants Top 3 ({pend_r.get('label', t_key)})",
+                "label": f"Informants Top 3 ({pend_r.get('label', _deck_display_label(t_key))})",
                 "summary": summary_str,
                 "revealedData": copy.deepcopy(top_one),
             })
@@ -9400,9 +9489,10 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
                 return False, "You have already used your Initial Scout before this night."
             target_type = action.get("targetType", "tile")
             if target_type == "deck":
-                target_key = str(action.get("targetKey", "celebrities")).strip().lower()
+                target_key = _normalize_deck_target_key(action.get("targetKey", "celebrities"))
                 if target_key not in state["decks"]:
                     return False, "Invalid scout deck target."
+                deck_lbl = _deck_display_label(target_key)
                 player["scoutedThisTurn"] = True
                 dk = state["decks"][target_key]
                 if dk:
@@ -9412,12 +9502,12 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
                         "turn": 0,
                         "targetType": "deck",
                         "targetKey": target_key,
-                        "label": f"Initial Scout (Deck {target_key.capitalize()})",
-                        "summary": f"{top_c.get('name', 'Card')} — {top_c.get('actionText') or top_c.get('effectText') or top_c.get('category', '')}",
+                        "label": f"Initial Scout ({deck_lbl} Deck)",
+                        "summary": f"{top_c.get('name', 'Card')} — {top_c.get('actionText') or top_c.get('effectText') or top_c.get('text') or top_c.get('category', '')}",
                         "revealedData": copy.deepcopy(top_c),
                     })
-                add_log(state, f"{player['name']} performed their Initial Scout on the {target_key.capitalize()} deck.", "action")
-                return True, f"Scouted top card of {target_key.capitalize()}."
+                add_log(state, f"{player['name']} performed their Initial Scout on the {deck_lbl} deck.", "action")
+                return True, f"Scouted top card of {deck_lbl} deck."
             raw_cell = action.get("cell") or action.get("targetKey") or "B1"
             cell = normalize_cell_id(raw_cell) or "B1"
             if cell not in state["romeBoard"]:
@@ -9467,23 +9557,84 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
             target_key = action.get("targetKey", "B1")
             if target_type == "tile":
                 target_key = normalize_cell_id(target_key) or "B1"
+            else:
+                target_key = _normalize_deck_target_key(target_key)
             inf_card = next((c for c in player["influence"] if c["id"] == inf_id), None)
             if not inf_card:
                 return False, "Select an Influence card to discard."
-            player["influence"].remove(inf_card)
-            state["decks"]["influence"].append(inf_card)
-            player["trashedThisTurn"] = True
-            if target_type == "tile" and target_key in state["romeBoard"]:
-                stk = state["romeBoard"][target_key]["stack"]
-                if stk:
-                    stk.append(stk.pop(0))
-                add_log(state, f"{player['name']} discarded '{inf_card['name']}' to bury the top unexposed tile of {target_key}.", "action")
+            if target_type == "tile":
+                if target_key not in state["romeBoard"]:
+                    return False, "Invalid neighborhood cell."
+                cell_state = state["romeBoard"][target_key]
+                stk = cell_state["stack"]
+                raw_mode = str(action.get("targetMode") or "").strip().lower()
+                if raw_mode in ("revealed", "exposed", "faceup", "visible"):
+                    if not cell_state.get("revealed"):
+                        return False, f"No exposed face-up tile on {target_key} to trash."
+                    use_revealed = True
+                elif raw_mode in ("stack", "unrevealed", "hidden"):
+                    if not stk:
+                        return False, f"No unrevealed tiles remaining in the {target_key} stack."
+                    use_revealed = False
+                else:
+                    # Default to trashing the exposed face-up tile if present; otherwise bury the top unrevealed stack tile
+                    use_revealed = bool(cell_state.get("revealed"))
+                    if not use_revealed and not stk:
+                        return False, f"No tiles available on {target_key} to trash."
+                player["influence"].remove(inf_card)
+                state["decks"]["influence"].append(inf_card)
+                player["trashedThisTurn"] = True
+                if use_revealed:
+                    old_rev = cell_state.get("revealed")
+                    occupied_now = any(
+                        normalize_cell_id(p_occ.get("position")) == target_key
+                        and not p_occ.get("exitedRome")
+                        and not p_occ.get("eliminated")
+                        for p_occ in state.get("players", [])
+                    )
+                    if old_rev is not None:
+                        stk.append(old_rev)
+                    if occupied_now and stk:
+                        cell_state["revealed"] = stk.pop(0)
+                        add_log(
+                            state,
+                            f"{player['name']} discarded '{inf_card['name']}' to trash the exposed face-up tile on {target_key} ({NEIGHBORHOOD_NAMES.get(target_key, target_key)}) to the bottom of its stack and flip a replacement tile!",
+                            "action",
+                        )
+                        return True, f"Trashed exposed face-up tile on {target_key} and revealed the next tile."
+                    cell_state["revealed"] = None
+                    add_log(
+                        state,
+                        f"{player['name']} discarded '{inf_card['name']}' to trash the exposed face-up tile on {target_key} ({NEIGHBORHOOD_NAMES.get(target_key, target_key)}) to the bottom of its stack!",
+                        "action",
+                    )
+                    return True, f"Trashed exposed face-up tile on {target_key} to the bottom of its stack."
+                else:
+                    if stk:
+                        stk.append(stk.pop(0))
+                    add_log(
+                        state,
+                        f"{player['name']} discarded '{inf_card['name']}' to bury the top unexposed tile of {target_key} ({NEIGHBORHOOD_NAMES.get(target_key, target_key)}).",
+                        "action",
+                    )
+                    return True, f"Buried top unexposed tile of {target_key} to the bottom of its stack."
             elif target_type == "deck" and target_key in state["decks"]:
                 dk = state["decks"][target_key]
-                if dk:
-                    dk.append(dk.pop(0))
-                add_log(state, f"{player['name']} discarded '{inf_card['name']}' to bury the top card of the {target_key.capitalize()} deck.", "action")
-            return True, "Trashed top item to bottom of stack/deck."
+                if not dk:
+                    return False, "That deck has no cards remaining."
+                deck_lbl = _deck_display_label(target_key)
+                player["influence"].remove(inf_card)
+                # Cycle the top card of the target deck BEFORE appending the discarded Influence card to the Influence deck
+                dk.append(dk.pop(0))
+                state["decks"]["influence"].append(inf_card)
+                player["trashedThisTurn"] = True
+                add_log(
+                    state,
+                    f"{player['name']} discarded '{inf_card['name']}' to bury the top card of the {deck_lbl} deck.",
+                    "action",
+                )
+                return True, f"Trashed top card of the {deck_lbl} deck to the bottom."
+            return False, "Invalid trash target."
 
         if act_type == "delivery_move":
             if player.get("movesRemaining", 0) <= 0:
@@ -9899,6 +10050,8 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
             target_key = action.get("targetKey", "C3")
             if target_type == "tile":
                 target_key = normalize_cell_id(target_key) or "C3"
+            else:
+                target_key = _normalize_deck_target_key(target_key)
             if target_type == "tile" and target_key in state["romeBoard"]:
                 player["scoutedThisTurn"] = True
                 stk = state["romeBoard"][target_key]["stack"]
@@ -9918,6 +10071,7 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
                 run_bots_until_human(state)
                 return True, f"Scouted top tile of {target_key} (turn ended)."
             if target_type == "deck" and target_key in state["decks"]:
+                deck_lbl = _deck_display_label(target_key)
                 player["scoutedThisTurn"] = True
                 dk = state["decks"][target_key]
                 if dk:
@@ -9927,14 +10081,14 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
                         "turn": state["turn"],
                         "targetType": "deck",
                         "targetKey": target_key,
-                        "label": f"Deck {target_key.capitalize()}",
-                        "summary": f"{top_c.get('name', 'Card')} — {top_c.get('actionText') or top_c.get('effectText') or top_c.get('category', '')}",
+                        "label": f"{deck_lbl} Deck",
+                        "summary": f"{top_c.get('name', 'Card')} — {top_c.get('actionText') or top_c.get('effectText') or top_c.get('text') or top_c.get('category', '')}",
                         "revealedData": copy.deepcopy(top_c),
                     })
-                add_log(state, f"{player['name']} scouted the {target_key.capitalize()} deck and ended their turn.", "action")
+                add_log(state, f"{player['name']} scouted the {deck_lbl} deck and ended their turn.", "action")
                 advance_delivery_turn(state)
                 run_bots_until_human(state)
-                return True, f"Scouted top card of {target_key.capitalize()} (turn ended)."
+                return True, f"Scouted top card of {deck_lbl} deck (turn ended)."
             return False, "Invalid scout target."
 
         if act_type == "delivery_end_turn":
@@ -10719,10 +10873,10 @@ def _execute_influence_card(state: Dict[str, Any], player: Dict[str, Any], card:
 
     eff_code = str(card.get("effectCode", ""))
     eff_txt = str(card.get("effectText", "")).lower()
-    if eff_code.startswith("reorder_top_3") or "informants" in cname.lower() or "look at the top three" in eff_txt:
+    if eff_code.startswith("reorder_top_3") or "informants" in cname.lower() or "wiretap" in cname.lower() or "look at the top three" in eff_txt:
         target_type = action.get("targetType", "deck")
         raw_tkey = action.get("targetKey", "celebrities")
-        target_key = normalize_cell_id(raw_tkey) if target_type == "tile" else raw_tkey
+        target_key = normalize_cell_id(raw_tkey) if target_type == "tile" else _normalize_deck_target_key(raw_tkey)
         if target_type == "tile" and target_key in state["romeBoard"]:
             stk = state["romeBoard"][target_key]["stack"]
             top_items = copy.deepcopy(stk[:3])
@@ -10733,7 +10887,7 @@ def _execute_influence_card(state: Dict[str, Any], player: Dict[str, Any], card:
                 target_key = "celebrities"
             dk = state["decks"][target_key]
             top_items = copy.deepcopy(dk[:3])
-            label_str = f"{target_key.capitalize()} Deck"
+            label_str = f"{_deck_display_label(target_key)} Deck"
         player["pendingTop3Reorder"] = {
             "id": f"top3_{secrets.token_hex(4)}",
             "targetType": target_type,
@@ -11759,7 +11913,49 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
                         "passable": (val not in ("red", None, "none")) and not tiber_blocked,
                     }
             rev["outgoingDirections"] = out_dirs
-        stack_len = len(cell.get("stack", []))
+        rem_tiles = list(cell.get("stack", []))
+        all_tiles = rem_tiles + ([cell["revealed"]] if cell.get("revealed") else [])
+        tot_buys: Dict[str, int] = {}
+        rem_buys: Dict[str, int] = {}
+        for t_obj in all_tiles:
+            seen_cats = {
+                str(s_e.get("category"))
+                for s_e in (t_obj.get("sells") or [])
+                if isinstance(s_e, dict) and s_e.get("category")
+            }
+            for cat_k in seen_cats:
+                tot_buys[cat_k] = tot_buys.get(cat_k, 0) + 1
+        for t_obj in rem_tiles:
+            seen_cats = {
+                str(s_e.get("category"))
+                for s_e in (t_obj.get("sells") or [])
+                if isinstance(s_e, dict) and s_e.get("category")
+            }
+            for cat_k in seen_cats:
+                rem_buys[cat_k] = rem_buys.get(cat_k, 0) + 1
+        top_3_cats = sorted(
+            tot_buys.keys(),
+            key=lambda c_k: (-tot_buys[c_k], TRACK_NAMES.index(c_k) if c_k in TRACK_NAMES else 99, c_k),
+        )[:3]
+        top_buys_list = [
+            {
+                "category": cat_k,
+                "remaining": int(rem_buys.get(cat_k, 0)),
+                "total": int(tot_buys[cat_k]),
+            }
+            for cat_k in top_3_cats
+        ]
+        tot_enc = {"criminals": 0, "celebrities": 0, "cops": 0}
+        rem_enc = {"criminals": 0, "celebrities": 0, "cops": 0}
+        for t_obj in all_tiles:
+            ic = _count_tile_deck_icons(coord, t_obj)
+            for dk_k in tot_enc:
+                tot_enc[dk_k] += ic[dk_k]
+        for t_obj in rem_tiles:
+            ic = _count_tile_deck_icons(coord, t_obj)
+            for dk_k in rem_enc:
+                rem_enc[dk_k] += ic[dk_k]
+        stack_len = len(rem_tiles)
         rome_view[coord] = {
             "coord": coord,
             "name": NEIGHBORHOOD_NAMES.get(coord, cell.get("name", coord)),
@@ -11769,6 +11965,13 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
             "revealed": rev,
             "stackCount": stack_len,
             "unrevealedCount": stack_len,
+            "stackStats": {
+                "topBuys": top_buys_list,
+                "encounters": {
+                    dk_k: {"remaining": int(rem_enc[dk_k]), "total": int(tot_enc[dk_k])}
+                    for dk_k in ("criminals", "celebrities", "cops")
+                },
+            },
         }
 
     # Deterministically sorted & deduplicated sourceable goods (eliminates deck top-order leakage)
@@ -12129,17 +12332,48 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
             ev["outcomeMessage"] = priv_msg
             ev["outcomeDetail"] = priv_msg
 
+    static_maps = _get_static_card_maps()
+    deck_totals = copy.deepcopy(static_maps.get("deck_totals") or {})
+    enc_faction_totals = copy.deepcopy(static_maps.get("enc_faction_totals") or {})
+    market_track_totals = copy.deepcopy(static_maps.get("market_track_totals") or {})
+
     faction_deck_counts: Dict[str, Dict[str, int]] = {}
     for f_name in FACTIONS:
         p_cnt = sum(1 for c in state["decks"].get("celebrities", []) if c.get("faction") == f_name)
         l_cnt = sum(1 for c in state["decks"].get("cops", []) if c.get("faction") == f_name)
         n_cnt = sum(1 for c in state["decks"].get("criminals", []) if c.get("faction") == f_name)
+        p_tot = int((enc_faction_totals.get("celebrities") or {}).get(f_name, p_cnt))
+        l_tot = int((enc_faction_totals.get("cops") or {}).get(f_name, l_cnt))
+        n_tot = int((enc_faction_totals.get("criminals") or {}).get(f_name, n_cnt))
         faction_deck_counts[f_name] = {
             "celebrities": p_cnt,
             "cops": l_cnt,
             "criminals": n_cnt,
             "total": p_cnt + l_cnt + n_cnt,
+            "celebritiesTotal": p_tot,
+            "copsTotal": l_tot,
+            "criminalsTotal": n_tot,
+            "totalInit": p_tot + l_tot + n_tot,
         }
+
+    _goods_track_labels = {
+        "Grain": "Weed",
+        "Marble": "Party",
+        "Animals": "Uppers",
+        "Wine": "Opiates",
+        "Weapons": "Weapons",
+        "Henchmen": "Henchmen",
+    }
+    goods_deck_category_counts = []
+    for t_name in TRACK_NAMES:
+        rem_t = sum(1 for c in state["decks"].get("market", []) if c.get("track") == t_name)
+        tot_t = int(market_track_totals.get(t_name, rem_t))
+        goods_deck_category_counts.append({
+            "track": t_name,
+            "label": _goods_track_labels.get(t_name, t_name),
+            "remaining": rem_t,
+            "total": tot_t,
+        })
 
     undo_idx, undo_type, undo_lbl = _get_undo_target_info(state)
     human_count = sum(1 for p in state.get("players", []) if not p.get("isBot"))
@@ -12179,7 +12413,10 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
         "hourEffects": state.get("hourEffects", {}),
         "romeBoard": rome_view,
         "deckCounts": {k: len(v) for k, v in state["decks"].items()},
+        "deckTotalCounts": deck_totals,
         "factionDeckCounts": faction_deck_counts,
+        "encounterDeckFactionTotals": enc_faction_totals,
+        "goodsDeckCategoryCounts": goods_deck_category_counts,
         "sourceableGoods": sourceable_goods,
         "players": players_view,
         "pendingEncounter": pend_view,
