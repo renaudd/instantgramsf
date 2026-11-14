@@ -199,12 +199,24 @@ def _get_static_card_maps() -> Dict[str, Any]:
                 tr = mc.get("track")
                 if tr in market_track_totals:
                     market_track_totals[tr] += 1
+    tile_by_id: Dict[str, Dict[str, Any]] = {}
+    tiles_path = os.path.join(DATA_DIR, "tiles.json")
+    if os.path.exists(tiles_path):
+        with open(tiles_path, "r", encoding="utf-8") as f:
+            tiles_raw = json.load(f)
+        if isinstance(tiles_raw, dict):
+            for c_cell in tiles_raw.values():
+                if isinstance(c_cell, dict):
+                    for ct in (c_cell.get("tiles") or []):
+                        if isinstance(ct, dict) and ct.get("id"):
+                            tile_by_id[str(ct["id"])] = copy.deepcopy(ct)
     _STATIC_CARD_CACHE = {
         "enc_by_id": enc_by_id,
         "enc_by_name": enc_by_name,
         "mis_by_id": mis_by_id,
         "inf_by_id": inf_by_id,
         "mkt_by_id": mkt_by_id,
+        "tile_by_id": tile_by_id,
         "deck_totals": deck_totals,
         "enc_faction_totals": enc_faction_totals,
         "market_track_totals": market_track_totals,
@@ -3543,14 +3555,7 @@ def _sync_mission_and_influence_card_data(state: Dict[str, Any]) -> None:
                 if rwd.get("subcategory"):
                     rwd["subcategory"] = _legacy_cat_remap.get(rwd["subcategory"], rwd["subcategory"])
     if isinstance(rb, dict):
-        canon_tiles_data = _load_json("tiles.json")
-        canon_tile_by_id: Dict[str, Dict[str, Any]] = {}
-        if isinstance(canon_tiles_data, dict):
-            for c_cell in canon_tiles_data.values():
-                if isinstance(c_cell, dict):
-                    for ct in (c_cell.get("tiles") or []):
-                        if isinstance(ct, dict) and ct.get("id"):
-                            canon_tile_by_id[str(ct["id"])] = ct
+        canon_tile_by_id: Dict[str, Dict[str, Any]] = maps.get("tile_by_id", {})
         for cell_v in rb.values():
             if not isinstance(cell_v, dict):
                 continue
