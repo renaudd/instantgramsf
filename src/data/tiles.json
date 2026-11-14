@@ -9,9 +9,14 @@
         "id": "A1_1",
         "index": 1,
         "edges": {
-          "S": "green",
+          "N": "red",
+          "NE": "red",
           "E": "red",
-          "SE": "toll_2"
+          "SE": "red",
+          "S": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -35,9 +40,14 @@
         "id": "A1_2",
         "index": 2,
         "edges": {
-          "S": "cops_1",
+          "N": "red",
+          "NE": "red",
           "E": "toll_2",
-          "SE": "cops_2"
+          "SE": "red",
+          "S": "cops_1",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -61,9 +71,14 @@
         "id": "A1_3",
         "index": 3,
         "edges": {
-          "S": "green",
+          "N": "red",
+          "NE": "red",
           "E": "toll_2",
-          "SE": "red"
+          "SE": "red",
+          "S": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -87,9 +102,14 @@
         "id": "A1_4",
         "index": 4,
         "edges": {
-          "S": "green",
+          "N": "red",
+          "NE": "red",
           "E": "red",
-          "SE": "cops_1"
+          "SE": "cops_1",
+          "S": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -113,9 +133,14 @@
         "id": "A1_5",
         "index": 5,
         "edges": {
-          "S": "toll_2",
+          "N": "red",
+          "NE": "red",
           "E": "toll_2",
-          "SE": "cops_2"
+          "SE": "red",
+          "S": "toll_2",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -135,9 +160,14 @@
         "id": "A1_6",
         "index": 6,
         "edges": {
-          "S": "green",
+          "N": "red",
+          "NE": "red",
           "E": "cops_1",
-          "SE": "toll_2"
+          "SE": "toll_2",
+          "S": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -161,9 +191,14 @@
         "id": "A1_7",
         "index": 7,
         "edges": {
-          "S": "celebrities_1",
+          "N": "red",
+          "NE": "red",
           "E": "red",
-          "SE": "cops_1"
+          "SE": "red",
+          "S": "celebrities_1",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -187,9 +222,14 @@
         "id": "A1_8",
         "index": 8,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
-          "E": "cops_2",
-          "SE": "red"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -213,9 +253,14 @@
         "id": "A1_9",
         "index": 9,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "cops_1",
           "S": "green",
-          "E": "cops_2",
-          "SE": "cops_1"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -239,9 +284,14 @@
         "id": "A1_10",
         "index": 10,
         "edges": {
-          "S": "green",
+          "N": "red",
+          "NE": "red",
           "E": "criminals_1",
-          "SE": "criminals_1"
+          "SE": "criminals_1",
+          "S": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -265,9 +315,14 @@
         "id": "A1_11",
         "index": 11,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "toll_2",
           "S": "green",
-          "E": "cops_1",
-          "SE": "toll_2"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -291,9 +346,14 @@
         "id": "A1_12",
         "index": 12,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "toll_2",
           "SE": "cops_1",
-          "S": "red"
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -317,11 +377,13 @@
         "index": 1,
         "edges": {
           "N": "toll_2",
+          "NE": "red",
           "E": "green",
-          "SE": "cops_1",
+          "SE": "red",
           "S": "red",
           "SW": "green",
-          "W": "cops_1"
+          "W": "cops_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -342,11 +404,13 @@
         "index": 2,
         "edges": {
           "N": "cops_1",
+          "NE": "red",
           "E": "green",
           "SE": "cops_2",
           "S": "criminals_1",
           "SW": "green",
-          "W": "toll_2"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -367,11 +431,13 @@
         "index": 3,
         "edges": {
           "N": "green",
+          "NE": "red",
           "E": "green",
           "SE": "cops_1",
-          "S": "cops_2",
+          "S": "red",
           "SW": "green",
-          "W": "criminals_1"
+          "W": "criminals_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -392,11 +458,13 @@
         "index": 4,
         "edges": {
           "N": "toll_1",
+          "NE": "red",
           "E": "green",
           "SE": "cops_2",
           "S": "cops_1",
           "SW": "green",
-          "W": "cops_2"
+          "W": "cops_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -417,11 +485,13 @@
         "index": 5,
         "edges": {
           "N": "criminals_1",
+          "NE": "red",
           "E": "green",
           "SE": "toll_2",
           "S": "cops_1",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -442,11 +512,13 @@
         "index": 6,
         "edges": {
           "N": "theater",
+          "NE": "red",
           "E": "green",
           "SE": "red",
-          "S": "toll_2",
+          "S": "red",
           "SW": "green",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -467,11 +539,13 @@
         "index": 7,
         "edges": {
           "N": "toll_2",
+          "NE": "red",
           "E": "green",
           "SE": "red",
           "S": "cops_1",
           "SW": "green",
-          "W": "cops_2"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -492,11 +566,13 @@
         "index": 8,
         "edges": {
           "N": "cops_2",
+          "NE": "red",
           "E": "green",
           "SE": "red",
-          "S": "toll_2",
+          "S": "red",
           "SW": "green",
-          "W": "cops_1"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -517,11 +593,13 @@
         "index": 9,
         "edges": {
           "N": "celebrities_1",
+          "NE": "red",
           "E": "toll_1",
           "SE": "criminals_1",
           "S": "red",
           "SW": "toll_1",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -542,11 +620,13 @@
         "index": 10,
         "edges": {
           "N": "mob",
+          "NE": "red",
           "E": "toll_1",
           "SE": "toll_2",
-          "S": "toll_2",
+          "S": "red",
           "SW": "toll_1",
-          "W": "cops_1"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -571,11 +651,13 @@
         "index": 11,
         "edges": {
           "N": "green",
+          "NE": "red",
           "E": "cops_1",
           "SE": "cops_1",
           "S": "red",
           "SW": "cops_1",
-          "W": "toll_2"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -600,11 +682,13 @@
         "index": 12,
         "edges": {
           "N": "schizophrenic",
+          "NE": "red",
           "E": "cops_1",
           "SE": "toll_2",
           "S": "toll_2",
           "SW": "cops_1",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -627,11 +711,14 @@
         "id": "C1_1",
         "index": 1,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "theater",
           "SE": "red",
           "S": "green",
-          "SW": "green",
-          "W": "green"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -651,11 +738,14 @@
         "id": "C1_2",
         "index": 2,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "green",
           "SE": "cops_1",
           "S": "red",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -675,11 +765,14 @@
         "id": "C1_3",
         "index": 3,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "green",
-          "SE": "green",
+          "SE": "red",
           "S": "green",
-          "SW": "green",
-          "W": "green"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -699,11 +792,14 @@
         "id": "C1_4",
         "index": 4,
         "edges": {
+          "N": "toll_1",
+          "NE": "red",
           "E": "green",
-          "SE": "green",
+          "SE": "red",
           "S": "toll_2",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -723,11 +819,14 @@
         "id": "C1_5",
         "index": 5,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -747,11 +846,14 @@
         "id": "C1_6",
         "index": 6,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "celebrities_1",
           "SE": "red",
           "S": "celebrities_1",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -771,11 +873,14 @@
         "id": "C1_7",
         "index": 7,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "mob",
           "SE": "green",
           "S": "green",
           "SW": "criminals_1",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -795,11 +900,14 @@
         "id": "C1_8",
         "index": 8,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "toll_2",
           "SE": "green",
           "S": "celebrities_1",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -819,11 +927,14 @@
         "id": "C1_9",
         "index": 9,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "green",
           "SE": "cops_1",
           "S": "red",
           "SW": "cops_1",
-          "W": "toll_1"
+          "W": "toll_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -843,11 +954,14 @@
         "id": "C1_10",
         "index": 10,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "red",
           "SE": "criminals_1",
           "S": "green",
           "SW": "criminals_1",
-          "W": "toll_1"
+          "W": "toll_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -871,11 +985,14 @@
         "id": "C1_11",
         "index": 11,
         "edges": {
+          "N": "toll_1",
+          "NE": "red",
           "E": "schizophrenic",
           "SE": "toll_2",
           "S": "green",
           "SW": "toll_2",
-          "W": "cops_1"
+          "W": "cops_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -899,11 +1016,14 @@
         "id": "C1_12",
         "index": 12,
         "edges": {
+          "N": "toll_2",
+          "NE": "red",
           "E": "red",
           "SE": "green",
           "S": "cops_1",
           "SW": "green",
-          "W": "cops_1"
+          "W": "cops_1",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -926,11 +1046,14 @@
         "id": "D1_1",
         "index": 1,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "celebrities_1",
           "SE": "red",
-          "S": "green",
+          "S": "red",
           "SW": "theater",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -950,11 +1073,14 @@
         "id": "D1_2",
         "index": 2,
         "edges": {
-          "E": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
           "SE": "green",
           "S": "criminals_1",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -974,11 +1100,14 @@
         "id": "D1_3",
         "index": 3,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "green",
+          "S": "red",
           "SW": "criminals_1",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -998,11 +1127,14 @@
         "id": "D1_4",
         "index": 4,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "red",
           "SE": "schizophrenic",
           "S": "red",
-          "SW": "green",
-          "W": "criminals_1"
+          "SW": "red",
+          "W": "criminals_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1022,11 +1154,14 @@
         "id": "D1_5",
         "index": 5,
         "edges": {
-          "E": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
           "SE": "green",
           "S": "red",
           "SW": "criminals_1",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1046,11 +1181,14 @@
         "id": "D1_6",
         "index": 6,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "green",
           "SE": "green",
           "S": "red",
           "SW": "red",
-          "W": "criminals_1"
+          "W": "criminals_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1070,11 +1208,14 @@
         "id": "D1_7",
         "index": 7,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "red",
           "SE": "theater",
-          "S": "green",
+          "S": "red",
           "SW": "green",
-          "W": "celebrities_1"
+          "W": "celebrities_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1094,11 +1235,14 @@
         "id": "D1_8",
         "index": 8,
         "edges": {
-          "E": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
           "SE": "mob",
-          "S": "green",
+          "S": "red",
           "SW": "green",
-          "W": "cops_1"
+          "W": "cops_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1118,11 +1262,14 @@
         "id": "D1_9",
         "index": 9,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "criminals_1",
           "SE": "green",
           "S": "criminals_1",
           "SW": "criminals_1",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1142,11 +1289,14 @@
         "id": "D1_10",
         "index": 10,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "cops_1",
           "SE": "green",
           "S": "cops_1",
           "SW": "celebrities_1",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1170,11 +1320,14 @@
         "id": "D1_11",
         "index": 11,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "toll_2",
           "SE": "red",
           "S": "toll_2",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1198,11 +1351,14 @@
         "id": "D1_12",
         "index": 12,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "green",
           "SE": "criminals_1",
           "S": "green",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -1225,11 +1381,14 @@
         "id": "E1_1",
         "index": 1,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "toll_2",
           "SE": "green",
           "S": "green",
           "SW": "red",
-          "W": "mob"
+          "W": "mob",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1249,11 +1408,14 @@
         "id": "E1_2",
         "index": 2,
         "edges": {
-          "E": "cops_2",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
           "SE": "red",
           "S": "celebrities_1",
-          "SW": "green",
-          "W": "green"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1273,11 +1435,14 @@
         "id": "E1_3",
         "index": 3,
         "edges": {
-          "E": "toll_2",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
           "SE": "celebrities_1",
           "S": "green",
-          "SW": "green",
-          "W": "green"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1297,11 +1462,14 @@
         "id": "E1_4",
         "index": 4,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "green",
           "SW": "red",
-          "W": "cops_1"
+          "W": "cops_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1321,11 +1489,14 @@
         "id": "E1_5",
         "index": 5,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "cops_1",
           "SE": "cops_1",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1345,11 +1516,14 @@
         "id": "E1_6",
         "index": 6,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "red",
           "SE": "green",
           "S": "celebrities_1",
-          "SW": "green",
-          "W": "red"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1369,11 +1543,14 @@
         "id": "E1_7",
         "index": 7,
         "edges": {
-          "E": "toll_2",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
           "SE": "green",
           "S": "green",
           "SW": "cops_1",
-          "W": "mob"
+          "W": "mob",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1393,11 +1570,14 @@
         "id": "E1_8",
         "index": 8,
         "edges": {
-          "E": "toll_2",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
           "SE": "theater",
           "S": "cops_1",
-          "SW": "green",
-          "W": "celebrities_1"
+          "SW": "red",
+          "W": "celebrities_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1417,11 +1597,14 @@
         "id": "E1_9",
         "index": 9,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "red",
           "SE": "green",
           "S": "red",
           "SW": "cops_1",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1441,11 +1624,14 @@
         "id": "E1_10",
         "index": 10,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "toll_3",
           "SE": "green",
           "S": "green",
           "SW": "criminals_1",
-          "W": "cops_1"
+          "W": "cops_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1469,11 +1655,14 @@
         "id": "E1_11",
         "index": 11,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "cops_3",
           "SE": "red",
           "S": "mob",
           "SW": "toll_2",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1497,11 +1686,14 @@
         "id": "E1_12",
         "index": 12,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "criminals_3",
           "SE": "criminals_1",
           "S": "red",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -1524,10 +1716,14 @@
         "id": "F1_1",
         "index": 1,
         "edges": {
-          "S": "red",
-          "SW": "toll_2",
-          "W": "cops_1",
-          "E": "green"
+          "N": "red",
+          "NE": "red",
+          "E": "green",
+          "SE": "red",
+          "S": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1547,10 +1743,14 @@
         "id": "F1_2",
         "index": 2,
         "edges": {
-          "S": "red",
+          "N": "red",
+          "NE": "red",
+          "E": "cops_1",
+          "SE": "red",
+          "S": "green",
           "SW": "cops_1",
           "W": "cops_2",
-          "E": "cops_1"
+          "NW": "red"
         },
         "sells": [
           {
@@ -1570,10 +1770,14 @@
         "id": "F1_3",
         "index": 3,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "criminals_1",
+          "SE": "red",
           "S": "cops_1",
-          "SW": "criminals_1",
+          "SW": "red",
           "W": "toll_2",
-          "E": "criminals_1"
+          "NW": "red"
         },
         "sells": [
           {
@@ -1593,10 +1797,14 @@
         "id": "F1_4",
         "index": 4,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "toll_2",
+          "SE": "red",
           "S": "cops_2",
           "SW": "cops_1",
           "W": "toll_2",
-          "E": "toll_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -1616,10 +1824,14 @@
         "id": "F1_5",
         "index": 5,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "cops_2",
+          "SE": "red",
           "S": "toll_2",
           "SW": "red",
           "W": "red",
-          "E": "cops_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -1639,10 +1851,14 @@
         "id": "F1_6",
         "index": 6,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "theater",
+          "SE": "red",
           "S": "toll_2",
           "SW": "red",
-          "W": "celebrities_1",
-          "E": "theater"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1662,10 +1878,14 @@
         "id": "F1_7",
         "index": 7,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "green",
+          "SE": "red",
           "S": "toll_2",
           "SW": "celebrities_1",
           "W": "red",
-          "E": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -1685,10 +1905,14 @@
         "id": "F1_8",
         "index": 8,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "criminals_2",
+          "SE": "red",
           "S": "criminals_1",
           "SW": "toll_2",
           "W": "red",
-          "E": "criminals_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -1708,10 +1932,14 @@
         "id": "F1_9",
         "index": 9,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "celebrities_1",
+          "SE": "red",
           "S": "cops_1",
-          "SW": "cops_2",
-          "W": "toll_2",
-          "E": "celebrities_1"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1731,10 +1959,14 @@
         "id": "F1_10",
         "index": 10,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "mob",
+          "SE": "red",
           "S": "toll_1",
-          "SW": "toll_2",
-          "W": "toll_2",
-          "E": "mob"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1758,10 +1990,14 @@
         "id": "F1_11",
         "index": 11,
         "edges": {
+          "N": "red",
+          "NE": "red",
+          "E": "cops_3",
+          "SE": "red",
           "S": "toll_1",
           "SW": "toll_3",
           "W": "toll_3",
-          "E": "cops_3"
+          "NW": "red"
         },
         "sells": [
           {
@@ -1785,10 +2021,14 @@
         "id": "F1_12",
         "index": 12,
         "edges": {
+          "N": "red",
+          "NE": "red",
           "E": "schizophrenic",
+          "SE": "red",
           "S": "toll_1",
           "SW": "cops_2",
-          "W": "cops_2"
+          "W": "cops_2",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -1811,11 +2051,14 @@
         "id": "A2_1",
         "index": 1,
         "edges": {
+          "N": "schizophrenic",
           "NE": "green",
           "E": "red",
           "SE": "red",
           "S": "green",
-          "N": "schizophrenic"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1843,11 +2086,14 @@
         "id": "A2_2",
         "index": 2,
         "edges": {
+          "N": "toll_2",
           "NE": "green",
-          "E": "green",
+          "E": "red",
           "SE": "schizophrenic",
           "S": "green",
-          "N": "toll_2"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1875,11 +2121,14 @@
         "id": "A2_3",
         "index": 3,
         "edges": {
+          "N": "green",
           "NE": "green",
           "E": "red",
           "SE": "green",
           "S": "green",
-          "N": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1903,11 +2152,14 @@
         "id": "A2_4",
         "index": 4,
         "edges": {
+          "N": "cops_1",
           "NE": "green",
           "E": "green",
-          "SE": "green",
+          "SE": "red",
           "S": "toll_2",
-          "N": "cops_1"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1931,11 +2183,14 @@
         "id": "A2_5",
         "index": 5,
         "edges": {
+          "N": "cops_1",
           "NE": "green",
-          "E": "green",
+          "E": "red",
           "SE": "theater",
           "S": "green",
-          "N": "cops_1"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1959,11 +2214,14 @@
         "id": "A2_6",
         "index": 6,
         "edges": {
+          "N": "toll_2",
           "NE": "green",
-          "E": "cops_1",
+          "E": "red",
           "SE": "green",
           "S": "toll_2",
-          "N": "toll_2"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -1987,11 +2245,14 @@
         "id": "A2_7",
         "index": 7,
         "edges": {
+          "N": "green",
           "NE": "green",
           "E": "green",
-          "SE": "green",
+          "SE": "red",
           "S": "green",
-          "N": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -2015,11 +2276,14 @@
         "id": "A2_8",
         "index": 8,
         "edges": {
+          "N": "toll_2",
           "NE": "green",
           "E": "red",
-          "SE": "green",
+          "SE": "red",
           "S": "cops_1",
-          "N": "toll_2"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -2043,11 +2307,14 @@
         "id": "A2_9",
         "index": 9,
         "edges": {
+          "N": "cops_1",
           "NE": "toll_1",
           "E": "cops_1",
           "SE": "theater",
           "S": "red",
-          "N": "cops_1"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -2071,11 +2338,14 @@
         "id": "A2_10",
         "index": 10,
         "edges": {
+          "N": "mob",
           "NE": "toll_1",
           "E": "criminals_1",
           "SE": "cops_1",
           "S": "red",
-          "N": "mob"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -2090,11 +2360,14 @@
         "id": "A2_11",
         "index": 11,
         "edges": {
+          "N": "red",
           "NE": "cops_1",
           "E": "toll_2",
-          "SE": "green",
+          "SE": "red",
           "S": "toll_2",
-          "N": "red"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -2122,7 +2395,10 @@
           "NE": "cops_1",
           "E": "green",
           "SE": "red",
-          "S": "red"
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -2176,7 +2452,7 @@
         "id": "B2_2",
         "index": 2,
         "edges": {
-          "N": "cops_1",
+          "N": "red",
           "NE": "toll_2",
           "E": "green",
           "SE": "red",
@@ -2214,7 +2490,7 @@
           "S": "green",
           "SW": "green",
           "W": "red",
-          "NW": "toll_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -2265,7 +2541,7 @@
         "id": "B2_5",
         "index": 5,
         "edges": {
-          "N": "cops_2",
+          "N": "red",
           "NE": "red",
           "E": "green",
           "SE": "mob",
@@ -2296,14 +2572,14 @@
         "id": "B2_6",
         "index": 6,
         "edges": {
-          "N": "cops_1",
+          "N": "red",
           "NE": "celebrities_1",
           "E": "red",
           "SE": "celebrities_1",
           "S": "red",
           "SW": "green",
           "W": "green",
-          "NW": "cops_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -2323,7 +2599,7 @@
         "id": "B2_7",
         "index": 7,
         "edges": {
-          "N": "cops_2",
+          "N": "red",
           "NE": "green",
           "E": "mob",
           "SE": "red",
@@ -2357,11 +2633,11 @@
           "N": "criminals_1",
           "NE": "green",
           "E": "toll_2",
-          "SE": "green",
+          "SE": "red",
           "S": "celebrities_1",
           "SW": "schizophrenic",
           "W": "green",
-          "NW": "toll_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -2412,9 +2688,9 @@
         "id": "B2_10",
         "index": 10,
         "edges": {
-          "N": "toll_2",
+          "N": "red",
           "NE": "green",
-          "E": "green",
+          "E": "red",
           "SE": "schizophrenic",
           "S": "theater",
           "SW": "red",
@@ -2449,7 +2725,7 @@
           "SE": "green",
           "S": "red",
           "SW": "mob",
-          "W": "toll_2",
+          "W": "red",
           "NW": "cops_1"
         },
         "sells": [
@@ -2477,11 +2753,11 @@
           "N": "toll_2",
           "NE": "red",
           "E": "red",
-          "SE": "green",
-          "S": "green",
+          "SE": "red",
+          "S": "red",
           "SW": "red",
           "W": "toll_2",
-          "NW": "cops_2"
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -2508,10 +2784,10 @@
           "NE": "green",
           "E": "cops_1",
           "SE": "green",
-          "S": "green",
+          "S": "red",
           "SW": "red",
           "W": "green",
-          "NW": "cops_1"
+          "NW": "red"
         },
         "sells": [
           {
@@ -2565,7 +2841,7 @@
           "S": "red",
           "SW": "green",
           "W": "red",
-          "NW": "cops_1"
+          "NW": "red"
         },
         "sells": [
           {
@@ -2592,7 +2868,7 @@
           "S": "toll_2",
           "SW": "celebrities_1",
           "W": "red",
-          "NW": "toll_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -2614,7 +2890,7 @@
         "edges": {
           "N": "green",
           "NE": "celebrities_1",
-          "E": "green",
+          "E": "red",
           "SE": "schizophrenic",
           "S": "green",
           "SW": "toll_2",
@@ -2672,7 +2948,7 @@
           "SE": "green",
           "S": "red",
           "SW": "green",
-          "W": "green",
+          "W": "red",
           "NW": "red"
         },
         "sells": [
@@ -2727,7 +3003,7 @@
           "S": "celebrities_1",
           "SW": "green",
           "W": "cops_1",
-          "NW": "cops_1"
+          "NW": "red"
         },
         "sells": [
           {
@@ -2754,7 +3030,7 @@
           "S": "green",
           "SW": "toll_2",
           "W": "criminals_1",
-          "NW": "toll_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -2839,14 +3115,14 @@
         "id": "D2_1",
         "index": 1,
         "edges": {
-          "NW": "schizophrenic",
           "N": "green",
           "NE": "red",
           "E": "green",
           "SE": "green",
           "S": "red",
           "SW": "criminals_1",
-          "W": "red"
+          "W": "red",
+          "NW": "schizophrenic"
         },
         "sells": [
           {
@@ -2866,14 +3142,14 @@
         "id": "D2_2",
         "index": 2,
         "edges": {
-          "NW": "green",
           "N": "green",
           "NE": "red",
           "E": "mob",
           "SE": "toll_2",
           "S": "green",
           "SW": "criminals_1",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -2893,14 +3169,14 @@
         "id": "D2_3",
         "index": 3,
         "edges": {
-          "NW": "red",
           "N": "schizophrenic",
-          "NE": "green",
+          "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -2920,14 +3196,14 @@
         "id": "D2_4",
         "index": 4,
         "edges": {
-          "NW": "criminals_1",
           "N": "criminals_1",
           "NE": "green",
           "E": "green",
           "SE": "green",
           "S": "toll_2",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -2947,14 +3223,14 @@
         "id": "D2_5",
         "index": 5,
         "edges": {
-          "NW": "green",
           "N": "red",
           "NE": "green",
           "E": "criminals_1",
           "SE": "green",
           "S": "criminals_2",
           "SW": "toll_2",
-          "W": "cops_1"
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -2974,14 +3250,14 @@
         "id": "D2_6",
         "index": 6,
         "edges": {
-          "NW": "green",
           "N": "green",
           "NE": "red",
           "E": "green",
           "SE": "criminals_1",
           "S": "green",
           "SW": "toll_2",
-          "W": "cops_1"
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -3001,14 +3277,14 @@
         "id": "D2_7",
         "index": 7,
         "edges": {
-          "NW": "green",
           "N": "schizophrenic",
           "NE": "cops_1",
           "E": "green",
           "SE": "green",
           "S": "red",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -3028,14 +3304,14 @@
         "id": "D2_8",
         "index": 8,
         "edges": {
-          "NW": "red",
           "N": "green",
-          "NE": "green",
+          "NE": "red",
           "E": "green",
           "SE": "green",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3055,14 +3331,14 @@
         "id": "D2_9",
         "index": 9,
         "edges": {
-          "NW": "theater",
           "N": "green",
           "NE": "criminals_1",
           "E": "toll_2",
           "SE": "red",
           "S": "criminals_1",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "theater"
         },
         "sells": [
           {
@@ -3082,14 +3358,14 @@
         "id": "D2_10",
         "index": 10,
         "edges": {
-          "NW": "green",
           "N": "red",
           "NE": "cops_1",
           "E": "green",
           "SE": "green",
           "S": "green",
           "SW": "mob",
-          "W": "schizophrenic"
+          "W": "schizophrenic",
+          "NW": "green"
         },
         "sells": [
           {
@@ -3113,14 +3389,14 @@
         "id": "D2_11",
         "index": 11,
         "edges": {
-          "NW": "toll_2",
           "N": "criminals_1",
           "NE": "toll_2",
           "E": "green",
           "SE": "green",
           "S": "green",
           "SW": "schizophrenic",
-          "W": "theater"
+          "W": "theater",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -3147,9 +3423,9 @@
           "N": "red",
           "NE": "green",
           "E": "red",
-          "SE": "cops_1",
-          "S": "criminals_1",
-          "SW": "green",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "red",
           "NW": "red"
         },
@@ -3174,14 +3450,14 @@
         "id": "E2_1",
         "index": 1,
         "edges": {
-          "NW": "toll_2",
           "N": "green",
           "NE": "celebrities_1",
           "E": "red",
           "SE": "green",
           "S": "criminals_3",
           "SW": "cops_2",
-          "W": "green"
+          "W": "green",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -3201,14 +3477,14 @@
         "id": "E2_2",
         "index": 2,
         "edges": {
-          "NW": "green",
           "N": "red",
-          "NE": "toll_2",
+          "NE": "red",
           "E": "cops_2",
           "SE": "green",
           "S": "cops_2",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3228,14 +3504,14 @@
         "id": "E2_3",
         "index": 3,
         "edges": {
-          "NW": "green",
           "N": "green",
-          "NE": "cops_1",
+          "NE": "red",
           "E": "criminals_3",
           "SE": "red",
           "S": "toll_2",
           "SW": "toll_2",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3255,14 +3531,14 @@
         "id": "E2_4",
         "index": 4,
         "edges": {
-          "NW": "red",
           "N": "red",
           "NE": "cops_2",
           "E": "cops_2",
-          "SE": "green",
+          "SE": "red",
           "S": "green",
-          "SW": "green",
-          "W": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3282,14 +3558,14 @@
         "id": "E2_5",
         "index": 5,
         "edges": {
-          "NW": "cops_2",
           "N": "green",
           "NE": "red",
           "E": "toll_2",
-          "SE": "green",
+          "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "celebrities_1"
+          "W": "celebrities_1",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -3309,14 +3585,14 @@
         "id": "E2_6",
         "index": 6,
         "edges": {
-          "NW": "criminals_3",
-          "N": "green",
+          "N": "red",
           "NE": "criminals_1",
           "E": "green",
           "SE": "green",
           "S": "red",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -3336,14 +3612,14 @@
         "id": "E2_7",
         "index": 7,
         "edges": {
-          "NW": "cops_2",
           "N": "criminals_1",
           "NE": "red",
-          "E": "green",
+          "E": "red",
           "SE": "green",
           "S": "green",
           "SW": "cops_2",
-          "W": "red"
+          "W": "red",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -3363,14 +3639,14 @@
         "id": "E2_8",
         "index": 8,
         "edges": {
-          "NW": "green",
-          "N": "green",
+          "N": "red",
           "NE": "red",
           "E": "green",
-          "SE": "criminals_1",
+          "SE": "red",
           "S": "cops_2",
           "SW": "criminals_3",
-          "W": "red"
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -3390,14 +3666,14 @@
         "id": "E2_9",
         "index": 9,
         "edges": {
-          "NW": "toll_2",
           "N": "cops_2",
-          "NE": "toll_2",
+          "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "criminals_3",
           "SW": "cops_2",
-          "W": "cops_2"
+          "W": "cops_2",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -3417,14 +3693,14 @@
         "id": "E2_10",
         "index": 10,
         "edges": {
-          "NW": "green",
           "N": "criminals_2",
           "NE": "toll_3",
           "E": "cops_2",
           "SE": "cops_3",
           "S": "cops_2",
           "SW": "green",
-          "W": "criminals_2"
+          "W": "criminals_2",
+          "NW": "green"
         },
         "sells": [
           {
@@ -3448,14 +3724,14 @@
         "id": "E2_11",
         "index": 11,
         "edges": {
-          "NW": "green",
           "N": "toll_2",
           "NE": "cops_3",
           "E": "criminals_3",
           "SE": "criminals_3",
           "S": "toll_2",
           "SW": "toll_2",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3509,11 +3785,14 @@
         "id": "F2_1",
         "index": 1,
         "edges": {
-          "NW": "green",
-          "N": "red",
-          "S": "toll_2",
+          "N": "green",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "red",
           "SW": "cops_1",
-          "W": "theater"
+          "W": "theater",
+          "NW": "green"
         },
         "sells": [
           {
@@ -3533,11 +3812,14 @@
         "id": "F2_2",
         "index": 2,
         "edges": {
-          "NW": "cops_1",
-          "N": "red",
+          "N": "theater",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "cops_1",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3557,11 +3839,14 @@
         "id": "F2_3",
         "index": 3,
         "edges": {
-          "NW": "red",
           "N": "celebrities_1",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "green",
-          "W": "cops_1"
+          "W": "cops_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3581,11 +3866,14 @@
         "id": "F2_4",
         "index": 4,
         "edges": {
-          "NW": "red",
-          "N": "cops_2",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "red",
-          "SW": "green",
-          "W": "cops_2"
+          "SW": "red",
+          "W": "cops_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3605,11 +3893,14 @@
         "id": "F2_5",
         "index": 5,
         "edges": {
-          "NW": "green",
           "N": "cops_1",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "theater",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -3629,11 +3920,14 @@
         "id": "F2_6",
         "index": 6,
         "edges": {
-          "NW": "green",
           "N": "toll_2",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "red",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3653,11 +3947,14 @@
         "id": "F2_7",
         "index": 7,
         "edges": {
-          "NW": "red",
           "N": "celebrities_1",
-          "S": "green",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "red",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3677,11 +3974,14 @@
         "id": "F2_8",
         "index": 8,
         "edges": {
-          "NW": "green",
           "N": "cops_2",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "red",
           "SW": "green",
-          "W": "celebrities_1"
+          "W": "celebrities_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3701,11 +4001,14 @@
         "id": "F2_9",
         "index": 9,
         "edges": {
-          "NW": "criminals_1",
           "N": "toll_2",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "mob",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -3725,11 +4028,14 @@
         "id": "F2_10",
         "index": 10,
         "edges": {
-          "NW": "cops_1",
           "N": "cops_1",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "cops_2",
           "SW": "celebrities_1",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "cops_1"
         },
         "sells": [
           {
@@ -3753,11 +4059,14 @@
         "id": "F2_11",
         "index": 11,
         "edges": {
-          "NW": "toll_2",
-          "N": "red",
+          "N": "green",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "criminals_2",
-          "SW": "green",
-          "W": "green"
+          "SW": "red",
+          "W": "green",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -3782,8 +4091,11 @@
         "index": 12,
         "edges": {
           "N": "criminals_1",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "toll_3",
-          "SW": "green",
+          "SW": "red",
           "W": "red",
           "NW": "green"
         },
@@ -3811,8 +4123,11 @@
           "N": "criminals_1",
           "NE": "green",
           "E": "theater",
+          "SE": "red",
           "S": "green",
-          "SE": "cops_1"
+          "SW": "red",
+          "W": "toll_8",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3843,8 +4158,11 @@
           "N": "green",
           "NE": "green",
           "E": "green",
+          "SE": "green",
           "S": "red",
-          "SE": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3871,8 +4189,11 @@
           "N": "green",
           "NE": "criminals_1",
           "E": "green",
+          "SE": "red",
           "S": "green",
-          "SE": "criminals_1"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3897,10 +4218,13 @@
         "index": 4,
         "edges": {
           "N": "schizophrenic",
-          "NE": "green",
+          "NE": "red",
           "E": "green",
+          "SE": "red",
           "S": "toll_2",
-          "SE": "criminals_1"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -3918,8 +4242,11 @@
           "N": "green",
           "NE": "red",
           "E": "theater",
+          "SE": "green",
           "S": "cops_1",
-          "SE": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3946,8 +4273,11 @@
           "N": "green",
           "NE": "red",
           "E": "criminals_1",
-          "S": "green",
-          "SE": "green"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -3974,8 +4304,11 @@
           "N": "mob",
           "NE": "green",
           "E": "theater",
+          "SE": "red",
           "S": "green",
-          "SE": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -4000,10 +4333,13 @@
         "index": 8,
         "edges": {
           "N": "red",
-          "NE": "green",
+          "NE": "red",
           "E": "cops_1",
+          "SE": "red",
           "S": "cops_1",
-          "SE": "red"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -4030,8 +4366,11 @@
           "N": "green",
           "NE": "cops_1",
           "E": "green",
+          "SE": "red",
           "S": "red",
-          "SE": "red"
+          "SW": "red",
+          "W": "toll_8",
+          "NW": "red"
         },
         "sells": [
           {
@@ -4058,8 +4397,11 @@
           "N": "green",
           "NE": "criminals_1",
           "E": "red",
+          "SE": "red",
           "S": "mob",
-          "SE": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -4077,8 +4419,11 @@
           "N": "criminals_1",
           "NE": "toll_2",
           "E": "red",
+          "SE": "green",
           "S": "toll_2",
-          "SE": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -4106,7 +4451,10 @@
           "NE": "green",
           "E": "red",
           "SE": "criminals_1",
-          "S": "green"
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -4129,14 +4477,14 @@
         "id": "B3_1",
         "index": 1,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "green",
           "E": "green",
           "SE": "celebrities_1",
           "S": "green",
+          "SW": "red",
           "W": "red",
-          "NW": "green",
-          "SW": "red"
+          "NW": "green"
         },
         "sells": [
           {
@@ -4160,14 +4508,14 @@
         "id": "B3_2",
         "index": 2,
         "edges": {
-          "N": "criminals_1",
+          "N": "red",
           "NE": "toll_2",
           "E": "green",
-          "SE": "green",
+          "SE": "red",
           "S": "celebrities_1",
+          "SW": "red",
           "W": "green",
-          "NW": "toll_2",
-          "SW": "green"
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -4196,9 +4544,9 @@
           "E": "toll_2",
           "SE": "green",
           "S": "green",
+          "SW": "red",
           "W": "red",
-          "NW": "celebrities_1",
-          "SW": "red"
+          "NW": "celebrities_1"
         },
         "sells": [
           {
@@ -4223,9 +4571,9 @@
           "E": "toll_2",
           "SE": "green",
           "S": "toll_2",
-          "W": "celebrities_1",
-          "NW": "green",
-          "SW": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -4249,14 +4597,14 @@
         "id": "B3_5",
         "index": 5,
         "edges": {
-          "N": "green",
-          "NE": "toll_2",
+          "N": "red",
+          "NE": "red",
           "E": "green",
           "SE": "mob",
           "S": "green",
+          "SW": "red",
           "W": "green",
-          "NW": "celebrities_1",
-          "SW": "cops_1"
+          "NW": "celebrities_1"
         },
         "sells": [
           {
@@ -4285,9 +4633,9 @@
           "E": "red",
           "SE": "celebrities_1",
           "S": "red",
+          "SW": "red",
           "W": "green",
-          "NW": "green",
-          "SW": "toll_2"
+          "NW": "green"
         },
         "sells": [
           {
@@ -4312,9 +4660,9 @@
           "E": "mob",
           "SE": "red",
           "S": "green",
+          "SW": "toll_2",
           "W": "schizophrenic",
-          "NW": "green",
-          "SW": "toll_2"
+          "NW": "green"
         },
         "sells": [
           {
@@ -4338,14 +4686,14 @@
         "id": "B3_8",
         "index": 8,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "green",
           "E": "green",
-          "SE": "green",
+          "SE": "red",
           "S": "celebrities_1",
+          "SW": "toll_2",
           "W": "green",
-          "NW": "green",
-          "SW": "toll_2"
+          "NW": "green"
         },
         "sells": [
           {
@@ -4368,11 +4716,11 @@
           "N": "criminals_1",
           "NE": "mob",
           "E": "green",
+          "SE": "red",
           "S": "red",
+          "SW": "red",
           "W": "toll_2",
-          "NW": "green",
-          "SE": "green",
-          "SW": "green"
+          "NW": "green"
         },
         "sells": [
           {
@@ -4401,9 +4749,9 @@
           "E": "red",
           "SE": "schizophrenic",
           "S": "theater",
+          "SW": "red",
           "W": "green",
-          "NW": "red",
-          "SW": "green"
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -4423,9 +4771,9 @@
           "E": "schizophrenic",
           "SE": "green",
           "S": "green",
+          "SW": "green",
           "W": "celebrities_1",
-          "NW": "criminals_1",
-          "SW": "green"
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -4454,7 +4802,7 @@
           "E": "red",
           "SE": "red",
           "S": "red",
-          "SW": "green",
+          "SW": "red",
           "W": "red",
           "NW": "red"
         },
@@ -4480,13 +4828,13 @@
         "index": 1,
         "edges": {
           "N": "green",
-          "NE": "green",
+          "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "criminals_3",
+          "SW": "cops_3",
           "W": "criminals_4",
-          "NW": "green",
-          "SW": "cops_3"
+          "NW": "red"
         },
         "sells": [
           {
@@ -4521,12 +4869,12 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "green",
+          "E": "red",
           "SE": "criminals_3",
           "S": "cops_3",
+          "SW": "criminals_4",
           "W": "cops_3",
-          "NW": "green",
-          "SW": "criminals_4"
+          "NW": "red"
         },
         "sells": [
           {
@@ -4559,14 +4907,14 @@
         "id": "C3_3",
         "index": 3,
         "edges": {
-          "N": "green",
-          "NE": "green",
+          "N": "red",
+          "NE": "red",
           "E": "criminals_3",
           "SE": "cops_3",
           "S": "criminals_4",
-          "W": "green",
-          "NW": "red",
-          "SW": "cops_3"
+          "SW": "cops_3",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -4599,14 +4947,14 @@
         "id": "C3_4",
         "index": 4,
         "edges": {
-          "N": "green",
-          "NE": "green",
+          "N": "red",
+          "NE": "red",
           "E": "cops_3",
           "SE": "criminals_4",
           "S": "cops_3",
+          "SW": "red",
           "W": "red",
-          "NW": "green",
-          "SW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -4640,13 +4988,13 @@
         "index": 5,
         "edges": {
           "N": "criminals_3",
-          "NE": "green",
+          "NE": "red",
           "E": "criminals_4",
           "SE": "toll_3",
-          "S": "green",
+          "S": "red",
+          "SW": "red",
           "W": "red",
-          "NW": "red",
-          "SW": "red"
+          "NW": "red"
         },
         "sells": [
           {
@@ -4684,9 +5032,9 @@
           "E": "cops_3",
           "SE": "green",
           "S": "red",
-          "W": "green",
-          "NW": "green",
-          "SW": "green"
+          "SW": "green",
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -4721,12 +5069,12 @@
         "edges": {
           "N": "criminals_4",
           "NE": "green",
-          "E": "green",
+          "E": "red",
           "SE": "green",
           "S": "red",
+          "SW": "red",
           "W": "criminals_4",
-          "NW": "green",
-          "SW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -4760,13 +5108,13 @@
         "index": 8,
         "edges": {
           "N": "cops_3",
-          "NE": "green",
+          "NE": "red",
           "E": "green",
           "SE": "red",
-          "S": "green",
+          "S": "red",
+          "SW": "criminals_4",
           "W": "cops_3",
-          "NW": "green",
-          "SW": "criminals_4"
+          "NW": "red"
         },
         "sells": [
           {
@@ -4802,11 +5150,11 @@
           "N": "red",
           "NE": "cops_3",
           "E": "red",
-          "SE": "green",
+          "SE": "red",
           "S": "criminals_4",
+          "SW": "cops_3",
           "W": "criminals_3",
-          "NW": "cops_3",
-          "SW": "cops_3"
+          "NW": "cops_3"
         },
         "sells": [
           {
@@ -4839,14 +5187,14 @@
         "id": "C3_10",
         "index": 10,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "criminals_3",
-          "E": "green",
+          "E": "red",
           "SE": "criminals_4",
           "S": "cops_3",
+          "SW": "criminals_3",
           "W": "cops_4",
-          "NW": "criminals_3",
-          "SW": "criminals_3"
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -4879,14 +5227,14 @@
         "id": "C3_11",
         "index": 11,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "toll_2",
           "E": "criminals_4",
           "SE": "cops_3",
           "S": "criminals_3",
-          "W": "green",
-          "NW": "toll_2",
-          "SW": "cops_4"
+          "SW": "cops_4",
+          "W": "red",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -4924,9 +5272,9 @@
           "E": "cops_3",
           "SE": "criminals_3",
           "S": "cops_4",
-          "W": "green",
-          "NW": "cops_3",
-          "SW": "red"
+          "SW": "red",
+          "W": "red",
+          "NW": "cops_3"
         },
         "sells": [
           {
@@ -4967,14 +5315,14 @@
         "id": "D3_1",
         "index": 1,
         "edges": {
-          "NW": "toll_3",
-          "N": "green",
-          "NE": "green",
+          "N": "red",
+          "NE": "red",
           "E": "red",
-          "SE": "green",
+          "SE": "red",
           "S": "criminals_3",
           "SW": "cops_3",
-          "W": "criminals_4"
+          "W": "criminals_4",
+          "NW": "toll_3"
         },
         "sells": [
           {
@@ -5007,14 +5355,14 @@
         "id": "D3_2",
         "index": 2,
         "edges": {
-          "NW": "red",
-          "N": "green",
+          "N": "red",
           "NE": "red",
-          "E": "green",
-          "SE": "green",
+          "E": "red",
+          "SE": "red",
           "S": "cops_3",
           "SW": "criminals_4",
-          "W": "cops_3"
+          "W": "cops_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5047,14 +5395,14 @@
         "id": "D3_3",
         "index": 3,
         "edges": {
-          "NW": "green",
-          "N": "green",
-          "NE": "green",
+          "N": "red",
+          "NE": "red",
           "E": "criminals_3",
-          "SE": "green",
+          "SE": "red",
           "S": "criminals_4",
           "SW": "cops_3",
-          "W": "green"
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -5087,14 +5435,14 @@
         "id": "D3_4",
         "index": 4,
         "edges": {
-          "NW": "red",
           "N": "red",
           "NE": "criminals_3",
           "E": "cops_3",
           "SE": "red",
           "S": "cops_3",
-          "SW": "green",
-          "W": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5127,14 +5475,14 @@
         "id": "D3_5",
         "index": 5,
         "edges": {
-          "NW": "green",
-          "N": "green",
+          "N": "red",
           "NE": "cops_3",
           "E": "criminals_4",
           "SE": "green",
           "S": "green",
-          "SW": "green",
-          "W": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -5167,14 +5515,14 @@
         "id": "D3_6",
         "index": 6,
         "edges": {
-          "NW": "criminals_4",
           "N": "red",
           "NE": "criminals_4",
           "E": "cops_3",
           "SE": "red",
-          "S": "green",
-          "SW": "green",
-          "W": "red"
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "criminals_4"
         },
         "sells": [
           {
@@ -5207,14 +5555,14 @@
         "id": "D3_7",
         "index": 7,
         "edges": {
-          "NW": "cops_3",
-          "N": "green",
+          "N": "red",
           "NE": "cops_3",
           "E": "green",
-          "SE": "green",
+          "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_4"
+          "W": "criminals_4",
+          "NW": "cops_3"
         },
         "sells": [
           {
@@ -5247,14 +5595,14 @@
         "id": "D3_8",
         "index": 8,
         "edges": {
-          "NW": "criminals_3",
           "N": "green",
-          "NE": "green",
+          "NE": "red",
           "E": "green",
           "SE": "red",
           "S": "red",
           "SW": "criminals_4",
-          "W": "cops_3"
+          "W": "cops_3",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -5287,14 +5635,14 @@
         "id": "D3_9",
         "index": 9,
         "edges": {
-          "NW": "toll_3",
           "N": "criminals_3",
-          "NE": "green",
-          "E": "green",
+          "NE": "red",
+          "E": "red",
           "SE": "criminals_3",
           "S": "criminals_4",
           "SW": "cops_3",
-          "W": "criminals_3"
+          "W": "criminals_3",
+          "NW": "toll_3"
         },
         "sells": [
           {
@@ -5327,14 +5675,14 @@
         "id": "D3_10",
         "index": 10,
         "edges": {
-          "NW": "green",
           "N": "cops_3",
-          "NE": "green",
+          "NE": "red",
           "E": "red",
           "SE": "cops_3",
           "S": "cops_3",
           "SW": "criminals_3",
-          "W": "cops_4"
+          "W": "cops_4",
+          "NW": "green"
         },
         "sells": [
           {
@@ -5367,14 +5715,14 @@
         "id": "D3_11",
         "index": 11,
         "edges": {
-          "NW": "green",
           "N": "toll_2",
           "NE": "red",
           "E": "criminals_4",
           "SE": "toll_2",
           "S": "criminals_3",
           "SW": "cops_4",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5407,14 +5755,14 @@
         "id": "D3_12",
         "index": 12,
         "edges": {
-          "NW": "green",
           "N": "cops_3",
           "NE": "criminals_4",
           "E": "cops_3",
           "SE": "cops_3",
           "S": "cops_4",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5455,14 +5803,14 @@
         "id": "E3_1",
         "index": 1,
         "edges": {
-          "NW": "green",
           "N": "red",
-          "NE": "green",
-          "E": "celebrities_1",
-          "SE": "green",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "cops_3",
-          "W": "criminals_4"
+          "W": "criminals_4",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5482,14 +5830,14 @@
         "id": "E3_2",
         "index": 2,
         "edges": {
-          "NW": "red",
           "N": "red",
           "NE": "red",
           "E": "red",
           "SE": "criminals_3",
           "S": "green",
           "SW": "criminals_4",
-          "W": "cops_3"
+          "W": "cops_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5509,14 +5857,14 @@
         "id": "E3_3",
         "index": 3,
         "edges": {
-          "NW": "green",
           "N": "green",
           "NE": "green",
           "E": "red",
           "SE": "cops_3",
           "S": "green",
           "SW": "cops_3",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5536,14 +5884,14 @@
         "id": "E3_4",
         "index": 4,
         "edges": {
-          "NW": "red",
-          "N": "green",
+          "N": "red",
           "NE": "criminals_3",
           "E": "green",
           "SE": "criminals_4",
-          "S": "green",
+          "S": "red",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5563,14 +5911,14 @@
         "id": "E3_5",
         "index": 5,
         "edges": {
-          "NW": "red",
           "N": "criminals_3",
           "NE": "cops_3",
-          "E": "green",
+          "E": "red",
           "SE": "toll_3",
           "S": "red",
-          "SW": "green",
-          "W": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5590,14 +5938,14 @@
         "id": "E3_6",
         "index": 6,
         "edges": {
-          "NW": "green",
           "N": "cops_3",
           "NE": "criminals_4",
-          "E": "green",
-          "SE": "green",
+          "E": "red",
+          "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5617,14 +5965,14 @@
         "id": "E3_7",
         "index": 7,
         "edges": {
-          "NW": "green",
           "N": "criminals_4",
           "NE": "cops_3",
           "E": "green",
-          "SE": "green",
+          "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_4"
+          "W": "criminals_4",
+          "NW": "green"
         },
         "sells": [
           {
@@ -5644,14 +5992,14 @@
         "id": "E3_8",
         "index": 8,
         "edges": {
-          "NW": "green",
           "N": "cops_3",
           "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "green",
           "SW": "criminals_4",
-          "W": "cops_3"
+          "W": "cops_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5671,14 +6019,14 @@
         "id": "E3_9",
         "index": 9,
         "edges": {
-          "NW": "cops_3",
           "N": "green",
           "NE": "green",
           "E": "green",
           "SE": "red",
           "S": "cops_3",
           "SW": "cops_3",
-          "W": "criminals_3"
+          "W": "criminals_3",
+          "NW": "cops_3"
         },
         "sells": [
           {
@@ -5698,14 +6046,14 @@
         "id": "E3_10",
         "index": 10,
         "edges": {
-          "NW": "criminals_3",
-          "N": "green",
+          "N": "red",
           "NE": "red",
           "E": "cops_3",
           "SE": "criminals_4",
           "S": "criminals_3",
           "SW": "criminals_3",
-          "W": "cops_4"
+          "W": "cops_4",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -5729,14 +6077,14 @@
         "id": "E3_11",
         "index": 11,
         "edges": {
-          "NW": "toll_2",
-          "N": "green",
-          "NE": "green",
+          "N": "red",
+          "NE": "red",
           "E": "criminals_3",
           "SE": "cops_3",
           "S": "toll_2",
           "SW": "cops_4",
-          "W": "green"
+          "W": "red",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -5760,12 +6108,12 @@
         "id": "E3_12",
         "index": 12,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "criminals_4",
           "E": "toll_3",
           "SE": "criminals_3",
           "S": "cops_3",
-          "SW": "green",
+          "SW": "red",
           "W": "green",
           "NW": "cops_3"
         },
@@ -5790,11 +6138,14 @@
         "id": "F3_1",
         "index": 1,
         "edges": {
-          "NW": "criminals_3",
-          "N": "green",
-          "S": "green",
-          "SW": "green",
-          "W": "cops_3"
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "cops_3",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -5814,11 +6165,14 @@
         "id": "F3_2",
         "index": 2,
         "edges": {
-          "NW": "red",
           "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "criminals_3",
           "SW": "green",
-          "W": "cops_3"
+          "W": "cops_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5838,11 +6192,14 @@
         "id": "F3_3",
         "index": 3,
         "edges": {
-          "NW": "red",
           "N": "criminals_3",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "cops_3",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5862,11 +6219,14 @@
         "id": "F3_4",
         "index": 4,
         "edges": {
-          "NW": "cops_2",
           "N": "cops_2",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "cops_3",
           "SW": "red",
-          "W": "green"
+          "W": "red",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -5886,11 +6246,14 @@
         "id": "F3_5",
         "index": 5,
         "edges": {
-          "NW": "criminals_3",
           "N": "toll_2",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "red",
           "SW": "criminals_1",
-          "W": "cops_2"
+          "W": "cops_2",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -5910,11 +6273,14 @@
         "id": "F3_6",
         "index": 6,
         "edges": {
-          "NW": "green",
-          "N": "green",
-          "S": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "red",
           "SW": "red",
-          "W": "criminals_3"
+          "W": "criminals_3",
+          "NW": "green"
         },
         "sells": [
           {
@@ -5934,11 +6300,14 @@
         "id": "F3_7",
         "index": 7,
         "edges": {
-          "NW": "red",
-          "N": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "cops_2",
           "SW": "green",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5958,11 +6327,14 @@
         "id": "F3_8",
         "index": 8,
         "edges": {
-          "NW": "green",
           "N": "cops_2",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "criminals_3",
-          "SW": "green",
-          "W": "red"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -5982,11 +6354,14 @@
         "id": "F3_9",
         "index": 9,
         "edges": {
-          "NW": "criminals_3",
           "N": "criminals_3",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "toll_2",
           "SW": "criminals_2",
-          "W": "red"
+          "W": "red",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -6006,11 +6381,14 @@
         "id": "F3_10",
         "index": 10,
         "edges": {
-          "NW": "cops_2",
           "N": "green",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "red",
           "SW": "cops_2",
-          "W": "criminals_3"
+          "W": "criminals_3",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -6034,11 +6412,14 @@
         "id": "F3_11",
         "index": 11,
         "edges": {
-          "NW": "toll_2",
           "N": "red",
-          "S": "green",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "red",
           "SW": "toll_2",
-          "W": "cops_2"
+          "W": "cops_2",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -6062,11 +6443,14 @@
         "id": "F3_12",
         "index": 12,
         "edges": {
-          "N": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "criminals_3",
           "SW": "green",
           "W": "green",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -6090,10 +6474,13 @@
         "index": 1,
         "edges": {
           "N": "green",
-          "E": "theater",
-          "S": "green",
           "NE": "red",
-          "SE": "green"
+          "E": "theater",
+          "SE": "red",
+          "S": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6113,11 +6500,14 @@
         "id": "A4_2",
         "index": 2,
         "edges": {
-          "N": "green",
-          "E": "green",
-          "S": "red",
+          "N": "red",
           "NE": "cops_1",
-          "SE": "green"
+          "E": "green",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6138,10 +6528,13 @@
         "index": 3,
         "edges": {
           "N": "red",
-          "E": "green",
-          "S": "green",
           "NE": "green",
-          "SE": "green"
+          "E": "green",
+          "SE": "red",
+          "S": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6162,10 +6555,13 @@
         "index": 4,
         "edges": {
           "N": "schizophrenic",
-          "E": "green",
-          "S": "toll_2",
           "NE": "green",
-          "SE": "green"
+          "E": "green",
+          "SE": "red",
+          "S": "toll_2",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6186,10 +6582,13 @@
         "index": 5,
         "edges": {
           "N": "cops_1",
-          "E": "red",
-          "S": "green",
           "NE": "green",
-          "SE": "green"
+          "E": "red",
+          "SE": "green",
+          "S": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6210,10 +6609,13 @@
         "index": 6,
         "edges": {
           "N": "toll_2",
-          "E": "cops_1",
-          "S": "green",
           "NE": "red",
-          "SE": "red"
+          "E": "cops_1",
+          "SE": "red",
+          "S": "green",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6234,10 +6636,13 @@
         "index": 7,
         "edges": {
           "N": "toll_2",
+          "NE": "red",
           "E": "mob",
+          "SE": "red",
           "S": "green",
-          "NE": "green",
-          "SE": "criminals_1"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6258,10 +6663,13 @@
         "index": 8,
         "edges": {
           "N": "theater",
+          "NE": "red",
           "E": "toll_2",
+          "SE": "red",
           "S": "cops_1",
-          "NE": "toll_2",
-          "SE": "red"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6282,10 +6690,13 @@
         "index": 9,
         "edges": {
           "N": "cops_1",
-          "E": "green",
-          "S": "celebrities_1",
           "NE": "celebrities_1",
-          "SE": "cops_1"
+          "E": "green",
+          "SE": "cops_1",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6306,10 +6717,13 @@
         "index": 10,
         "edges": {
           "N": "cops_1",
-          "E": "red",
-          "S": "red",
           "NE": "green",
-          "SE": "criminals_1"
+          "E": "red",
+          "SE": "criminals_1",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6334,10 +6748,13 @@
         "index": 11,
         "edges": {
           "N": "green",
+          "NE": "red",
           "E": "schizophrenic",
+          "SE": "toll_2",
           "S": "toll_2",
-          "NE": "green",
-          "SE": "toll_2"
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -6362,10 +6779,13 @@
         "index": 12,
         "edges": {
           "N": "red",
-          "NE": "celebrities_1",
+          "NE": "red",
           "E": "red",
           "SE": "green",
-          "S": "red"
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -6389,12 +6809,12 @@
         "index": 1,
         "edges": {
           "N": "mob",
+          "NE": "red",
           "E": "toll_2",
+          "SE": "red",
           "S": "red",
           "SW": "toll_2",
           "W": "green",
-          "NE": "cops_1",
-          "SE": "red",
           "NW": "green"
         },
         "sells": [
@@ -6420,12 +6840,12 @@
         "index": 2,
         "edges": {
           "N": "green",
+          "NE": "celebrities_1",
           "E": "green",
+          "SE": "red",
           "S": "green",
           "SW": "celebrities_1",
           "W": "mob",
-          "NE": "celebrities_1",
-          "SE": "red",
           "NW": "celebrities_1"
         },
         "sells": [
@@ -6451,12 +6871,12 @@
         "index": 3,
         "edges": {
           "N": "red",
+          "NE": "red",
           "E": "toll_2",
+          "SE": "red",
           "S": "red",
           "SW": "green",
           "W": "red",
-          "NE": "red",
-          "SE": "criminals_1",
           "NW": "red"
         },
         "sells": [
@@ -6477,14 +6897,14 @@
         "id": "B4_4",
         "index": 4,
         "edges": {
-          "N": "green",
+          "N": "red",
+          "NE": "criminals_1",
           "E": "mob",
+          "SE": "green",
           "S": "green",
           "SW": "green",
           "W": "red",
-          "NE": "criminals_1",
-          "SE": "green",
-          "NW": "criminals_1"
+          "NW": "red"
         },
         "sells": [
           {
@@ -6509,12 +6929,12 @@
         "index": 5,
         "edges": {
           "N": "toll_2",
+          "NE": "criminals_1",
           "E": "green",
+          "SE": "red",
           "S": "red",
           "SW": "celebrities_1",
           "W": "green",
-          "NE": "criminals_1",
-          "SE": "green",
           "NW": "criminals_1"
         },
         "sells": [
@@ -6540,12 +6960,12 @@
         "index": 6,
         "edges": {
           "N": "toll_2",
-          "E": "green",
+          "NE": "red",
+          "E": "red",
+          "SE": "green",
           "S": "green",
           "SW": "red",
           "W": "green",
-          "NE": "green",
-          "SE": "green",
           "NW": "green"
         },
         "sells": [
@@ -6567,13 +6987,13 @@
         "index": 7,
         "edges": {
           "N": "schizophrenic",
+          "NE": "red",
           "E": "red",
-          "S": "cops_1",
+          "SE": "red",
+          "S": "red",
           "SW": "green",
           "W": "theater",
-          "NE": "green",
-          "SE": "green",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -6598,12 +7018,12 @@
         "index": 8,
         "edges": {
           "N": "red",
+          "NE": "green",
           "E": "green",
+          "SE": "red",
           "S": "green",
           "SW": "green",
           "W": "green",
-          "NE": "green",
-          "SE": "green",
           "NW": "red"
         },
         "sells": [
@@ -6625,13 +7045,13 @@
         "index": 9,
         "edges": {
           "N": "celebrities_1",
+          "NE": "red",
           "E": "theater",
+          "SE": "red",
           "S": "criminals_1",
           "SW": "green",
           "W": "red",
-          "NE": "red",
-          "SE": "criminals_1",
-          "NW": "celebrities_1"
+          "NW": "red"
         },
         "sells": [
           {
@@ -6655,13 +7075,13 @@
         "id": "B4_10",
         "index": 10,
         "edges": {
-          "N": "green",
+          "N": "red",
+          "NE": "red",
           "E": "red",
+          "SE": "red",
           "S": "cops_1",
           "SW": "cops_1",
           "W": "green",
-          "NE": "green",
-          "SE": "criminals_1",
           "NW": "green"
         },
         "sells": [],
@@ -6678,12 +7098,12 @@
         "index": 11,
         "edges": {
           "N": "green",
+          "NE": "red",
           "E": "schizophrenic",
+          "SE": "red",
           "S": "toll_2",
           "SW": "red",
           "W": "celebrities_1",
-          "NE": "green",
-          "SE": "cops_1",
           "NW": "green"
         },
         "sells": [
@@ -6714,8 +7134,8 @@
           "SE": "green",
           "S": "green",
           "SW": "red",
-          "W": "criminals_1",
-          "NW": "green"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -6743,7 +7163,7 @@
           "E": "green",
           "SE": "mob",
           "S": "schizophrenic",
-          "SW": "criminals_1",
+          "SW": "red",
           "W": "celebrities_1",
           "NW": "green"
         },
@@ -6905,7 +7325,7 @@
           "E": "celebrities_1",
           "SE": "green",
           "S": "red",
-          "SW": "green",
+          "SW": "red",
           "W": "green",
           "NW": "red"
         },
@@ -7016,7 +7436,7 @@
           "NE": "mob",
           "E": "toll_2",
           "SE": "green",
-          "S": "green",
+          "S": "red",
           "SW": "toll_2",
           "W": "green",
           "NW": "schizophrenic"
@@ -7045,12 +7465,12 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_1",
+          "E": "red",
           "SE": "red",
           "S": "red",
           "SW": "green",
           "W": "red",
-          "NW": "celebrities_1"
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -7073,14 +7493,14 @@
         "id": "D4_1",
         "index": 1,
         "edges": {
-          "NW": "toll_3",
-          "N": "green",
-          "NE": "green",
+          "N": "red",
+          "NE": "red",
           "E": "red",
           "SE": "green",
           "S": "criminals_3",
           "SW": "cops_3",
-          "W": "criminals_4"
+          "W": "criminals_4",
+          "NW": "toll_3"
         },
         "sells": [
           {
@@ -7113,14 +7533,14 @@
         "id": "D4_2",
         "index": 2,
         "edges": {
-          "NW": "green",
-          "N": "green",
-          "NE": "green",
-          "E": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
           "SE": "criminals_3",
           "S": "cops_3",
           "SW": "criminals_4",
-          "W": "cops_3"
+          "W": "cops_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -7153,14 +7573,14 @@
         "id": "D4_3",
         "index": 3,
         "edges": {
-          "NW": "green",
           "N": "red",
           "NE": "red",
-          "E": "green",
+          "E": "red",
           "SE": "cops_3",
           "S": "criminals_4",
           "SW": "cops_3",
-          "W": "red"
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -7193,14 +7613,14 @@
         "id": "D4_4",
         "index": 4,
         "edges": {
-          "NW": "green",
           "N": "red",
           "NE": "criminals_3",
           "E": "green",
           "SE": "criminals_4",
           "S": "cops_3",
           "SW": "red",
-          "W": "green"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -7233,14 +7653,14 @@
         "id": "D4_5",
         "index": 5,
         "edges": {
-          "NW": "red",
           "N": "criminals_3",
           "NE": "cops_3",
-          "E": "green",
+          "E": "red",
           "SE": "toll_3",
-          "S": "green",
-          "SW": "green",
-          "W": "red"
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -7273,14 +7693,14 @@
         "id": "D4_6",
         "index": 6,
         "edges": {
-          "NW": "criminals_4",
           "N": "cops_3",
           "NE": "criminals_4",
           "E": "red",
-          "SE": "green",
-          "S": "green",
+          "SE": "red",
+          "S": "red",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "criminals_4"
         },
         "sells": [
           {
@@ -7313,14 +7733,14 @@
         "id": "D4_7",
         "index": 7,
         "edges": {
-          "NW": "cops_3",
           "N": "criminals_4",
           "NE": "cops_3",
           "E": "green",
           "SE": "red",
           "S": "red",
-          "SW": "green",
-          "W": "criminals_4"
+          "SW": "red",
+          "W": "criminals_4",
+          "NW": "cops_3"
         },
         "sells": [
           {
@@ -7353,14 +7773,14 @@
         "id": "D4_8",
         "index": 8,
         "edges": {
-          "NW": "criminals_3",
           "N": "cops_3",
-          "NE": "green",
-          "E": "green",
-          "SE": "green",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "red",
           "SW": "criminals_4",
-          "W": "cops_3"
+          "W": "cops_3",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -7393,14 +7813,14 @@
         "id": "D4_9",
         "index": 9,
         "edges": {
-          "NW": "toll_3",
-          "N": "green",
+          "N": "red",
           "NE": "red",
           "E": "criminals_3",
           "SE": "red",
           "S": "criminals_4",
           "SW": "cops_3",
-          "W": "criminals_3"
+          "W": "criminals_3",
+          "NW": "toll_3"
         },
         "sells": [
           {
@@ -7433,14 +7853,14 @@
         "id": "D4_10",
         "index": 10,
         "edges": {
-          "NW": "red",
           "N": "red",
-          "NE": "green",
+          "NE": "red",
           "E": "cops_3",
           "SE": "criminals_4",
           "S": "cops_3",
           "SW": "criminals_3",
-          "W": "cops_4"
+          "W": "cops_4",
+          "NW": "red"
         },
         "sells": [
           {
@@ -7473,14 +7893,14 @@
         "id": "D4_11",
         "index": 11,
         "edges": {
-          "NW": "green",
-          "N": "green",
-          "NE": "green",
+          "N": "red",
+          "NE": "red",
           "E": "toll_2",
           "SE": "cops_3",
           "S": "criminals_3",
           "SW": "cops_4",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -7513,14 +7933,14 @@
         "id": "D4_12",
         "index": 12,
         "edges": {
-          "NW": "green",
-          "N": "green",
+          "N": "red",
           "NE": "criminals_4",
           "E": "cops_3",
           "SE": "criminals_3",
           "S": "cops_4",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -7561,14 +7981,14 @@
         "id": "E4_1",
         "index": 1,
         "edges": {
-          "NW": "green",
-          "N": "green",
-          "NE": "green",
+          "N": "red",
+          "NE": "red",
           "E": "green",
           "SE": "criminals_1",
           "S": "green",
           "SW": "schizophrenic",
-          "W": "red"
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -7592,14 +8012,14 @@
         "id": "E4_2",
         "index": 2,
         "edges": {
-          "NW": "red",
           "N": "green",
-          "NE": "green",
+          "NE": "red",
           "E": "green",
           "SE": "red",
           "S": "toll_2",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -7623,14 +8043,14 @@
         "id": "E4_3",
         "index": 3,
         "edges": {
-          "NW": "criminals_1",
           "N": "red",
-          "NE": "green",
+          "NE": "red",
           "E": "toll_2",
           "SE": "green",
           "S": "green",
-          "SW": "toll_2",
-          "W": "cops_1"
+          "SW": "red",
+          "W": "red",
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -7650,14 +8070,14 @@
         "id": "E4_4",
         "index": 4,
         "edges": {
-          "NW": "green",
           "N": "schizophrenic",
           "NE": "criminals_1",
-          "E": "green",
+          "E": "red",
           "SE": "green",
           "S": "criminals_1",
           "SW": "criminals_1",
-          "W": "criminals_1"
+          "W": "criminals_1",
+          "NW": "green"
         },
         "sells": [
           {
@@ -7681,14 +8101,14 @@
         "id": "E4_5",
         "index": 5,
         "edges": {
-          "NW": "green",
           "N": "criminals_1",
           "NE": "red",
           "E": "green",
           "SE": "green",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -7712,14 +8132,14 @@
         "id": "E4_6",
         "index": 6,
         "edges": {
-          "NW": "green",
           "N": "toll_2",
-          "NE": "green",
+          "NE": "red",
           "E": "red",
           "SE": "mob",
           "S": "red",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -7739,14 +8159,14 @@
         "id": "E4_7",
         "index": 7,
         "edges": {
-          "NW": "green",
           "N": "theater",
           "NE": "green",
           "E": "schizophrenic",
           "SE": "criminals_1",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -7770,14 +8190,14 @@
         "id": "E4_8",
         "index": 8,
         "edges": {
-          "NW": "green",
           "N": "toll_2",
           "NE": "green",
           "E": "green",
           "SE": "red",
           "S": "criminals_1",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -7797,14 +8217,14 @@
         "id": "E4_9",
         "index": 9,
         "edges": {
-          "NW": "green",
           "N": "criminals_1",
           "NE": "red",
           "E": "mob",
           "SE": "green",
           "S": "green",
           "SW": "green",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "green"
         },
         "sells": [
           {
@@ -7828,14 +8248,14 @@
         "id": "E4_10",
         "index": 10,
         "edges": {
-          "NW": "green",
           "N": "criminals_2",
           "NE": "cops_2",
           "E": "red",
           "SE": "schizophrenic",
           "S": "theater",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [],
         "buys": [],
@@ -7850,14 +8270,14 @@
         "id": "E4_11",
         "index": 11,
         "edges": {
-          "NW": "green",
           "N": "green",
           "NE": "criminals_2",
           "E": "criminals_1",
-          "SE": "green",
+          "SE": "red",
           "S": "red",
           "SW": "mob",
-          "W": "schizophrenic"
+          "W": "schizophrenic",
+          "NW": "green"
         },
         "sells": [
           {
@@ -7911,11 +8331,14 @@
         "id": "F4_1",
         "index": 1,
         "edges": {
-          "NW": "criminals_1",
           "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "schizophrenic",
-          "W": "green"
+          "W": "red",
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -7935,11 +8358,14 @@
         "id": "F4_2",
         "index": 2,
         "edges": {
-          "NW": "toll_2",
           "N": "green",
-          "S": "celebrities_1",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "red",
           "SW": "green",
-          "W": "green"
+          "W": "red",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -7959,11 +8385,14 @@
         "id": "F4_3",
         "index": 3,
         "edges": {
-          "NW": "green",
           "N": "green",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "criminals_1",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -7983,11 +8412,14 @@
         "id": "F4_4",
         "index": 4,
         "edges": {
-          "NW": "mob",
-          "N": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "toll_2",
           "SW": "green",
-          "W": "criminals_1"
+          "W": "red",
+          "NW": "mob"
         },
         "sells": [
           {
@@ -8007,11 +8439,14 @@
         "id": "F4_5",
         "index": 5,
         "edges": {
-          "NW": "criminals_1",
-          "N": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -8031,11 +8466,14 @@
         "id": "F4_6",
         "index": 6,
         "edges": {
-          "NW": "theater",
           "N": "toll_2",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "criminals_1",
           "SW": "green",
-          "W": "green"
+          "W": "red",
+          "NW": "theater"
         },
         "sells": [
           {
@@ -8055,11 +8493,14 @@
         "id": "F4_7",
         "index": 7,
         "edges": {
-          "NW": "green",
-          "N": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -8079,11 +8520,14 @@
         "id": "F4_8",
         "index": 8,
         "edges": {
-          "NW": "green",
-          "N": "green",
+          "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "criminals_1",
           "SW": "criminals_1",
-          "W": "green"
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -8103,11 +8547,14 @@
         "id": "F4_9",
         "index": 9,
         "edges": {
-          "NW": "green",
           "N": "red",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "red",
           "SW": "mob",
-          "W": "criminals_1"
+          "W": "criminals_1",
+          "NW": "green"
         },
         "sells": [
           {
@@ -8127,11 +8574,14 @@
         "id": "F4_10",
         "index": 10,
         "edges": {
-          "NW": "green",
           "N": "cops_2",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "criminals_1",
-          "W": "cops_1"
+          "W": "cops_1",
+          "NW": "green"
         },
         "sells": [
           {
@@ -8155,11 +8605,14 @@
         "id": "F4_11",
         "index": 11,
         "edges": {
-          "NW": "red",
           "N": "criminals_2",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "green",
           "SW": "theater",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8184,6 +8637,9 @@
         "index": 12,
         "edges": {
           "N": "toll_3",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "green",
@@ -8212,10 +8668,12 @@
         "edges": {
           "N": "green",
           "NE": "green",
-          "E": "green",
+          "E": "red",
+          "SE": "red",
           "S": "green",
+          "SW": "red",
           "W": "theater",
-          "SE": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8239,12 +8697,14 @@
         "id": "A5_2",
         "index": 2,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "toll_2",
-          "E": "green",
+          "E": "red",
+          "SE": "red",
           "S": "green",
+          "SW": "red",
           "W": "cops_1",
-          "SE": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8271,9 +8731,11 @@
           "N": "red",
           "NE": "green",
           "E": "red",
+          "SE": "red",
           "S": "green",
+          "SW": "red",
           "W": "green",
-          "SE": "red"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8295,10 +8757,12 @@
         "edges": {
           "N": "schizophrenic",
           "NE": "green",
-          "E": "green",
+          "E": "red",
+          "SE": "red",
           "S": "toll_2",
+          "SW": "red",
           "W": "theater",
-          "SE": "red"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8325,9 +8789,11 @@
           "N": "green",
           "NE": "red",
           "E": "red",
+          "SE": "celebrities_1",
           "S": "green",
+          "SW": "red",
           "W": "criminals_1",
-          "SE": "celebrities_1"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8354,9 +8820,11 @@
           "N": "toll_2",
           "NE": "green",
           "E": "red",
+          "SE": "green",
           "S": "criminals_1",
+          "SW": "red",
           "W": "toll_1",
-          "SE": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8378,10 +8846,12 @@
         "edges": {
           "N": "toll_2",
           "NE": "green",
-          "E": "cops_1",
+          "E": "red",
+          "SE": "red",
           "S": "green",
+          "SW": "red",
           "W": "theater",
-          "SE": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8407,10 +8877,12 @@
         "edges": {
           "N": "theater",
           "NE": "green",
-          "E": "green",
+          "E": "red",
+          "SE": "green",
           "S": "green",
+          "SW": "red",
           "W": "cops_2",
-          "SE": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8433,9 +8905,11 @@
           "N": "green",
           "NE": "mob",
           "E": "cops_1",
+          "SE": "red",
           "S": "red",
+          "SW": "red",
           "W": "celebrities_1",
-          "SE": "cops_1"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8458,9 +8932,11 @@
           "N": "green",
           "NE": "green",
           "E": "criminals_1",
+          "SE": "red",
           "S": "green",
+          "SW": "red",
           "W": "mob",
-          "SE": "criminals_1"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8487,9 +8963,11 @@
           "N": "green",
           "NE": "red",
           "E": "toll_2",
+          "SE": "red",
           "S": "red",
+          "SW": "red",
           "W": "green",
-          "SE": "toll_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8513,12 +8991,14 @@
         "id": "A5_12",
         "index": 12,
         "edges": {
-          "W": "schizophrenic",
           "N": "red",
           "NE": "red",
           "E": "green",
           "SE": "green",
-          "S": "red"
+          "S": "red",
+          "SW": "red",
+          "W": "schizophrenic",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -8547,7 +9027,7 @@
           "SE": "green",
           "S": "green",
           "SW": "mob",
-          "W": "green",
+          "W": "red",
           "NW": "red"
         },
         "sells": [
@@ -8575,11 +9055,11 @@
           "N": "schizophrenic",
           "NE": "green",
           "E": "green",
-          "SE": "celebrities_1",
+          "SE": "red",
           "S": "criminals_1",
-          "SW": "celebrities_1",
+          "SW": "red",
           "W": "toll_2",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8609,8 +9089,8 @@
           "SE": "green",
           "S": "toll_2",
           "SW": "cops_1",
-          "W": "green",
-          "NW": "green"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8662,7 +9142,7 @@
         "index": 5,
         "edges": {
           "N": "toll_2",
-          "NE": "celebrities_1",
+          "NE": "red",
           "E": "green",
           "SE": "green",
           "S": "schizophrenic",
@@ -8696,10 +9176,10 @@
           "NE": "criminals_1",
           "E": "green",
           "SE": "green",
-          "S": "green",
+          "S": "red",
           "SW": "green",
-          "W": "green",
-          "NW": "green"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8726,7 +9206,7 @@
           "S": "green",
           "SW": "green",
           "W": "toll_2",
-          "NW": "toll_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8805,8 +9285,8 @@
           "SE": "theater",
           "S": "green",
           "SW": "red",
-          "W": "green",
-          "NW": "green"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -8830,14 +9310,14 @@
         "id": "B5_11",
         "index": 11,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "red",
           "E": "schizophrenic",
           "SE": "green",
           "S": "red",
           "SW": "red",
           "W": "criminals_1",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -8865,7 +9345,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "green",
+          "S": "red",
           "SW": "red",
           "W": "red",
           "NW": "criminals_1"
@@ -8891,13 +9371,13 @@
         "id": "C5_1",
         "index": 1,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "green",
           "E": "mob",
           "SE": "criminals_1",
           "S": "green",
           "SW": "schizophrenic",
-          "W": "green",
+          "W": "red",
           "NW": "green"
         },
         "sells": [
@@ -8951,7 +9431,7 @@
           "SE": "green",
           "S": "green",
           "SW": "criminals_1",
-          "W": "green",
+          "W": "red",
           "NW": "criminals_1"
         },
         "sells": [
@@ -8977,7 +9457,7 @@
           "E": "green",
           "SE": "green",
           "S": "criminals_1",
-          "SW": "green",
+          "SW": "red",
           "W": "red",
           "NW": "toll_2"
         },
@@ -9005,7 +9485,7 @@
           "SE": "green",
           "S": "criminals_1",
           "SW": "green",
-          "W": "green",
+          "W": "red",
           "NW": "criminals_1"
         },
         "sells": [
@@ -9032,7 +9512,7 @@
           "SE": "criminals_1",
           "S": "green",
           "SW": "red",
-          "W": "criminals_1",
+          "W": "red",
           "NW": "green"
         },
         "sells": [
@@ -9059,7 +9539,7 @@
           "SE": "green",
           "S": "red",
           "SW": "mob",
-          "W": "green",
+          "W": "red",
           "NW": "red"
         },
         "sells": [
@@ -9086,8 +9566,8 @@
           "SE": "red",
           "S": "green",
           "SW": "green",
-          "W": "green",
-          "NW": "celebrities_1"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -9114,7 +9594,7 @@
           "S": "green",
           "SW": "toll_2",
           "W": "cops_1",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -9141,7 +9621,7 @@
           "S": "green",
           "SW": "green",
           "W": "criminals_1",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -9199,7 +9679,7 @@
           "N": "red",
           "NE": "red",
           "E": "red",
-          "SE": "criminals_1",
+          "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "green",
@@ -9226,14 +9706,14 @@
         "id": "D5_1",
         "index": 1,
         "edges": {
-          "NW": "green",
           "N": "green",
           "NE": "red",
           "E": "red",
           "SE": "green",
-          "S": "green",
+          "S": "red",
           "SW": "red",
-          "W": "celebrities_1"
+          "W": "celebrities_1",
+          "NW": "green"
         },
         "sells": [
           {
@@ -9253,14 +9733,14 @@
         "id": "D5_2",
         "index": 2,
         "edges": {
-          "NW": "toll_2",
           "N": "green",
-          "NE": "green",
+          "NE": "red",
           "E": "mob",
           "SE": "green",
           "S": "cops_1",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -9280,14 +9760,14 @@
         "id": "D5_3",
         "index": 3,
         "edges": {
-          "NW": "theater",
           "N": "green",
           "NE": "toll_2",
           "E": "green",
           "SE": "red",
-          "S": "green",
+          "S": "red",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "theater"
         },
         "sells": [
           {
@@ -9307,14 +9787,14 @@
         "id": "D5_4",
         "index": 4,
         "edges": {
-          "NW": "green",
           "N": "celebrities_1",
           "NE": "green",
           "E": "red",
           "SE": "cops_1",
           "S": "toll_2",
           "SW": "cops_1",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -9334,14 +9814,14 @@
         "id": "D5_5",
         "index": 5,
         "edges": {
-          "NW": "green",
           "N": "green",
           "NE": "red",
           "E": "green",
           "SE": "schizophrenic",
           "S": "red",
           "SW": "toll_2",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -9361,14 +9841,14 @@
         "id": "D5_6",
         "index": 6,
         "edges": {
-          "NW": "green",
           "N": "green",
           "NE": "red",
           "E": "cops_1",
           "SE": "celebrities_1",
           "S": "red",
           "SW": "mob",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -9388,14 +9868,14 @@
         "id": "D5_7",
         "index": 7,
         "edges": {
-          "NW": "red",
           "N": "schizophrenic",
           "NE": "green",
           "E": "green",
           "SE": "green",
           "S": "green",
           "SW": "green",
-          "W": "celebrities_1"
+          "W": "celebrities_1",
+          "NW": "red"
         },
         "sells": [
           {
@@ -9415,14 +9895,14 @@
         "id": "D5_8",
         "index": 8,
         "edges": {
-          "NW": "green",
           "N": "green",
-          "NE": "green",
+          "NE": "red",
           "E": "red",
           "SE": "green",
           "S": "cops_1",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -9442,14 +9922,14 @@
         "id": "D5_9",
         "index": 9,
         "edges": {
-          "NW": "toll_2",
           "N": "green",
           "NE": "criminals_1",
           "E": "toll_2",
           "SE": "theater",
           "S": "celebrities_1",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -9469,14 +9949,14 @@
         "id": "D5_10",
         "index": 10,
         "edges": {
-          "NW": "green",
           "N": "red",
           "NE": "cops_1",
           "E": "green",
           "SE": "red",
           "S": "green",
           "SW": "toll_2",
-          "W": "schizophrenic"
+          "W": "schizophrenic",
+          "NW": "green"
         },
         "sells": [
           {
@@ -9500,14 +9980,14 @@
         "id": "D5_11",
         "index": 11,
         "edges": {
-          "NW": "toll_2",
           "N": "celebrities_1",
           "NE": "toll_2",
           "E": "theater",
           "SE": "green",
           "S": "green",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -9533,9 +10013,9 @@
         "edges": {
           "N": "red",
           "NE": "green",
-          "E": "green",
+          "E": "red",
           "SE": "red",
-          "S": "green",
+          "S": "red",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -9561,14 +10041,14 @@
         "id": "E5_1",
         "index": 1,
         "edges": {
-          "NW": "toll_2",
           "N": "green",
-          "NE": "green",
+          "NE": "red",
           "E": "red",
           "SE": "cops_2",
           "S": "criminals_3",
           "SW": "cops_2",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -9588,14 +10068,14 @@
         "id": "E5_2",
         "index": 2,
         "edges": {
-          "NW": "green",
           "N": "red",
           "NE": "red",
           "E": "cops_2",
           "SE": "criminals_3",
           "S": "cops_2",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -9615,14 +10095,14 @@
         "id": "E5_3",
         "index": 3,
         "edges": {
-          "NW": "red",
-          "N": "green",
+          "N": "red",
           "NE": "cops_2",
           "E": "criminals_3",
           "SE": "cops_2",
           "S": "toll_2",
           "SW": "toll_2",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -9642,14 +10122,14 @@
         "id": "E5_4",
         "index": 4,
         "edges": {
-          "NW": "green",
           "N": "celebrities_1",
           "NE": "criminals_3",
           "E": "cops_2",
           "SE": "green",
           "S": "green",
           "SW": "red",
-          "W": "green"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -9669,14 +10149,14 @@
         "id": "E5_5",
         "index": 5,
         "edges": {
-          "NW": "cops_2",
           "N": "red",
           "NE": "cops_2",
           "E": "toll_2",
           "SE": "toll_2",
           "S": "green",
           "SW": "red",
-          "W": "red"
+          "W": "red",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -9696,14 +10176,14 @@
         "id": "E5_6",
         "index": 6,
         "edges": {
-          "NW": "criminals_3",
           "N": "red",
           "NE": "green",
           "E": "green",
           "SE": "red",
           "S": "red",
           "SW": "green",
-          "W": "cops_2"
+          "W": "cops_2",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -9723,14 +10203,14 @@
         "id": "E5_7",
         "index": 7,
         "edges": {
-          "NW": "cops_2",
-          "N": "green",
+          "N": "red",
           "NE": "toll_2",
-          "E": "green",
+          "E": "red",
           "SE": "red",
           "S": "red",
           "SW": "cops_2",
-          "W": "criminals_3"
+          "W": "criminals_3",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -9750,14 +10230,14 @@
         "id": "E5_8",
         "index": 8,
         "edges": {
-          "NW": "green",
-          "N": "green",
+          "N": "red",
           "NE": "green",
-          "E": "green",
+          "E": "red",
           "SE": "red",
           "S": "cops_2",
           "SW": "criminals_3",
-          "W": "cops_2"
+          "W": "cops_2",
+          "NW": "green"
         },
         "sells": [
           {
@@ -9777,14 +10257,14 @@
         "id": "E5_9",
         "index": 9,
         "edges": {
-          "NW": "toll_2",
           "N": "cops_2",
           "NE": "green",
           "E": "red",
           "SE": "cops_2",
           "S": "criminals_3",
           "SW": "cops_2",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -9804,14 +10284,14 @@
         "id": "E5_10",
         "index": 10,
         "edges": {
-          "NW": "green",
           "N": "criminals_2",
           "NE": "red",
           "E": "cops_2",
           "SE": "criminals_3",
           "S": "cops_2",
           "SW": "green",
-          "W": "green"
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -9835,14 +10315,14 @@
         "id": "E5_11",
         "index": 11,
         "edges": {
-          "NW": "green",
           "N": "toll_2",
           "NE": "cops_2",
           "E": "criminals_3",
           "SE": "cops_2",
           "S": "toll_2",
           "SW": "toll_2",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -9871,8 +10351,8 @@
           "E": "cops_2",
           "SE": "green",
           "S": "green",
-          "SW": "green",
-          "W": "green",
+          "SW": "red",
+          "W": "red",
           "NW": "red"
         },
         "sells": [],
@@ -9896,12 +10376,14 @@
         "id": "F5_1",
         "index": 1,
         "edges": {
-          "NW": "green",
-          "N": "green",
+          "N": "red",
+          "NE": "red",
           "E": "criminals_1",
+          "SE": "red",
           "S": "red",
           "SW": "criminals_3",
-          "W": "cops_3"
+          "W": "cops_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -9921,12 +10403,14 @@
         "id": "F5_2",
         "index": 2,
         "edges": {
-          "NW": "red",
           "N": "red",
+          "NE": "red",
           "E": "cops_1",
+          "SE": "red",
           "S": "criminals_3",
           "SW": "cops_2",
-          "W": "cops_3"
+          "W": "cops_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -9946,12 +10430,14 @@
         "id": "F5_3",
         "index": 3,
         "edges": {
-          "NW": "green",
           "N": "criminals_3",
+          "NE": "red",
           "E": "green",
+          "SE": "red",
           "S": "cops_2",
           "SW": "toll_2",
-          "W": "red"
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -9971,12 +10457,14 @@
         "id": "F5_4",
         "index": 4,
         "edges": {
-          "NW": "green",
           "N": "cops_2",
+          "NE": "red",
           "E": "criminals_2",
+          "SE": "red",
           "S": "green",
           "SW": "red",
-          "W": "green"
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -9996,12 +10484,14 @@
         "id": "F5_5",
         "index": 5,
         "edges": {
-          "NW": "green",
           "N": "toll_2",
+          "NE": "red",
           "E": "toll_2",
+          "SE": "red",
           "S": "red",
           "SW": "green",
-          "W": "cops_2"
+          "W": "cops_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10021,12 +10511,14 @@
         "id": "F5_6",
         "index": 6,
         "edges": {
-          "NW": "toll_2",
           "N": "green",
+          "NE": "red",
           "E": "theater",
-          "S": "green",
+          "SE": "red",
+          "S": "red",
           "SW": "cops_2",
-          "W": "criminals_3"
+          "W": "criminals_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10046,12 +10538,14 @@
         "id": "F5_7",
         "index": 7,
         "edges": {
-          "NW": "red",
           "N": "green",
+          "NE": "red",
           "E": "criminals_3",
+          "SE": "red",
           "S": "cops_2",
           "SW": "criminals_3",
-          "W": "toll_2"
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10071,12 +10565,14 @@
         "id": "F5_8",
         "index": 8,
         "edges": {
-          "NW": "red",
           "N": "cops_2",
+          "NE": "red",
           "E": "cops_2",
+          "SE": "red",
           "S": "criminals_3",
           "SW": "green",
-          "W": "red"
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10096,12 +10592,14 @@
         "id": "F5_9",
         "index": 9,
         "edges": {
-          "NW": "criminals_2",
           "N": "criminals_3",
+          "NE": "red",
           "E": "celebrities_1",
+          "SE": "red",
           "S": "toll_2",
           "SW": "red",
-          "W": "green"
+          "W": "red",
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -10121,12 +10619,14 @@
         "id": "F5_10",
         "index": 10,
         "edges": {
-          "NW": "cops_2",
           "N": "green",
+          "NE": "red",
           "E": "mob",
-          "S": "green",
+          "SE": "red",
+          "S": "red",
           "SW": "red",
-          "W": "criminals_3"
+          "W": "criminals_3",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -10150,12 +10650,14 @@
         "id": "F5_11",
         "index": 11,
         "edges": {
-          "NW": "toll_2",
-          "N": "green",
+          "N": "red",
+          "NE": "red",
           "E": "green",
+          "SE": "red",
           "S": "red",
           "SW": "criminals_3",
-          "W": "cops_2"
+          "W": "cops_2",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -10179,8 +10681,10 @@
         "id": "F5_12",
         "index": 12,
         "edges": {
-          "E": "schizophrenic",
           "N": "red",
+          "NE": "red",
+          "E": "schizophrenic",
+          "SE": "red",
           "S": "criminals_3",
           "SW": "cops_2",
           "W": "green",
@@ -10209,7 +10713,12 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "criminals_3"
+          "E": "criminals_3",
+          "SE": "red",
+          "S": "cops_3",
+          "SW": "criminals_3",
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10235,7 +10744,12 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_2"
+          "E": "cops_2",
+          "SE": "red",
+          "S": "green",
+          "SW": "green",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10260,8 +10774,13 @@
         "index": 3,
         "edges": {
           "N": "criminals_3",
-          "NE": "green",
-          "E": "toll_2"
+          "NE": "red",
+          "E": "toll_2",
+          "SE": "red",
+          "S": "toll_2",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10282,8 +10801,13 @@
         "index": 4,
         "edges": {
           "N": "cops_2",
-          "NE": "green",
-          "E": "green"
+          "NE": "red",
+          "E": "green",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "criminals_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10309,7 +10833,12 @@
         "edges": {
           "N": "toll_2",
           "NE": "red",
-          "E": "red"
+          "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "criminals_3",
+          "W": "cops_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10334,8 +10863,13 @@
         "index": 6,
         "edges": {
           "N": "green",
-          "NE": "green",
-          "E": "green"
+          "NE": "red",
+          "E": "green",
+          "SE": "red",
+          "S": "criminals_3",
+          "SW": "cops_2",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10357,7 +10891,12 @@
         "edges": {
           "N": "red",
           "NE": "green",
-          "E": "criminals_3"
+          "E": "criminals_3",
+          "SE": "red",
+          "S": "cops_2",
+          "SW": "toll_2",
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10381,9 +10920,14 @@
         "id": "A6_8",
         "index": 8,
         "edges": {
-          "N": "green",
-          "NE": "celebrities_1",
-          "E": "cops_2"
+          "N": "red",
+          "NE": "red",
+          "E": "cops_2",
+          "SE": "red",
+          "S": "green",
+          "SW": "green",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10405,7 +10949,12 @@
         "edges": {
           "N": "criminals_3",
           "NE": "cops_2",
-          "E": "toll_2"
+          "E": "toll_2",
+          "SE": "red",
+          "S": "toll_2",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10427,7 +10976,12 @@
         "edges": {
           "N": "cops_2",
           "NE": "criminals_2",
-          "E": "green"
+          "E": "green",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "criminals_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10453,7 +11007,12 @@
         "edges": {
           "N": "toll_2",
           "NE": "toll_2",
-          "E": "red"
+          "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "criminals_3",
+          "W": "cops_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10479,7 +11038,12 @@
         "edges": {
           "N": "green",
           "NE": "green",
-          "E": "red"
+          "E": "red",
+          "SE": "red",
+          "S": "criminals_3",
+          "SW": "cops_2",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [],
         "buys": [],
@@ -10505,6 +11069,9 @@
           "N": "green",
           "NE": "green",
           "E": "criminals_3",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "cops_3",
           "NW": "criminals_3"
         },
@@ -10526,9 +11093,12 @@
         "id": "B6_2",
         "index": 2,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "criminals_3",
           "E": "cops_2",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "green",
           "NW": "green"
         },
@@ -10553,6 +11123,9 @@
           "N": "red",
           "NE": "cops_2",
           "E": "toll_2",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "red",
           "NW": "red"
         },
@@ -10574,10 +11147,13 @@
         "id": "B6_4",
         "index": 4,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "green",
           "E": "red",
-          "W": "green",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
           "NW": "cops_2"
         },
         "sells": [
@@ -10599,8 +11175,11 @@
         "index": 5,
         "edges": {
           "N": "red",
-          "NE": "green",
+          "NE": "red",
           "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "cops_2",
           "NW": "criminals_3"
         },
@@ -10622,9 +11201,12 @@
         "id": "B6_6",
         "index": 6,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "red",
           "E": "cops_2",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "criminals_3",
           "NW": "green"
         },
@@ -10649,8 +11231,11 @@
           "N": "toll_2",
           "NE": "cops_2",
           "E": "criminals_3",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "toll_2",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -10670,9 +11255,12 @@
         "id": "B6_8",
         "index": 8,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "criminals_3",
           "E": "green",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "red",
           "NW": "red"
         },
@@ -10697,7 +11285,10 @@
           "N": "criminals_2",
           "NE": "toll_2",
           "E": "red",
-          "W": "green",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
           "NW": "criminals_3"
         },
         "sells": [
@@ -10720,7 +11311,10 @@
         "edges": {
           "N": "cops_2",
           "NE": "red",
-          "E": "green",
+          "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "criminals_3",
           "NW": "cops_2"
         },
@@ -10747,8 +11341,11 @@
         "index": 11,
         "edges": {
           "N": "toll_2",
-          "NE": "green",
+          "NE": "red",
           "E": "criminals_3",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "cops_2",
           "NW": "toll_2"
         },
@@ -10777,6 +11374,9 @@
           "N": "green",
           "NE": "criminals_3",
           "E": "cops_2",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "green",
           "NW": "green"
         },
@@ -10804,6 +11404,9 @@
           "N": "red",
           "NE": "red",
           "E": "criminals_3",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "cops_2",
           "NW": "red"
         },
@@ -10828,6 +11431,9 @@
           "N": "green",
           "NE": "criminals_3",
           "E": "cops_2",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "cops_3",
           "NW": "red"
         },
@@ -10852,8 +11458,11 @@
           "N": "criminals_3",
           "NE": "cops_2",
           "E": "toll_2",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "green",
-          "NW": "toll_2"
+          "NW": "red"
         },
         "sells": [
           {
@@ -10876,8 +11485,11 @@
           "N": "cops_2",
           "NE": "green",
           "E": "red",
-          "W": "green",
-          "NW": "green"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -10899,9 +11511,12 @@
         "edges": {
           "N": "toll_2",
           "NE": "red",
-          "E": "green",
+          "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "cops_2",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -10924,8 +11539,11 @@
           "N": "red",
           "NE": "red",
           "E": "cops_2",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "criminals_3",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -10948,8 +11566,11 @@
           "N": "green",
           "NE": "cops_2",
           "E": "criminals_3",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "toll_2",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -10972,8 +11593,11 @@
           "N": "cops_2",
           "NE": "criminals_3",
           "E": "green",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "red",
-          "NW": "green"
+          "NW": "red"
         },
         "sells": [
           {
@@ -10996,6 +11620,9 @@
           "N": "criminals_3",
           "NE": "toll_2",
           "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "red",
           "NW": "cops_2"
         },
@@ -11018,8 +11645,11 @@
         "index": 10,
         "edges": {
           "N": "green",
-          "NE": "green",
+          "NE": "red",
           "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "criminals_3",
           "NW": "criminals_2"
         },
@@ -11048,6 +11678,9 @@
           "N": "green",
           "NE": "green",
           "E": "criminals_3",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "cops_2",
           "NW": "toll_2"
         },
@@ -11076,6 +11709,9 @@
           "N": "green",
           "NE": "criminals_3",
           "E": "cops_2",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "green",
           "NW": "green"
         },
@@ -11100,12 +11736,14 @@
         "id": "D6_1",
         "index": 1,
         "edges": {
-          "NW": "toll_2",
-          "N": "green",
+          "N": "red",
           "NE": "red",
           "E": "criminals_3",
+          "SE": "red",
           "S": "celebrities_1",
-          "W": "toll_2"
+          "SW": "red",
+          "W": "toll_2",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -11125,12 +11763,14 @@
         "id": "D6_2",
         "index": 2,
         "edges": {
-          "NW": "red",
           "N": "red",
           "NE": "criminals_3",
           "E": "cops_2",
+          "SE": "red",
           "S": "cops_1",
-          "W": "green"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -11150,12 +11790,14 @@
         "id": "D6_3",
         "index": 3,
         "edges": {
-          "NW": "green",
           "N": "criminals_3",
           "NE": "cops_2",
           "E": "toll_2",
+          "SE": "red",
           "S": "green",
-          "W": "red"
+          "SW": "red",
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -11175,12 +11817,14 @@
         "id": "D6_4",
         "index": 4,
         "edges": {
-          "NW": "criminals_3",
           "N": "cops_2",
           "NE": "green",
           "E": "green",
+          "SE": "red",
           "S": "celebrities_1",
-          "W": "red"
+          "SW": "red",
+          "W": "red",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -11200,12 +11844,14 @@
         "id": "D6_5",
         "index": 5,
         "edges": {
-          "NW": "cops_2",
           "N": "toll_2",
           "NE": "toll_2",
           "E": "red",
+          "SE": "red",
           "S": "criminals_1",
-          "W": "criminals_3"
+          "SW": "red",
+          "W": "criminals_3",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -11225,12 +11871,14 @@
         "id": "D6_6",
         "index": 6,
         "edges": {
-          "NW": "green",
           "N": "green",
           "NE": "red",
           "E": "green",
+          "SE": "red",
           "S": "toll_2",
-          "W": "cops_2"
+          "SW": "red",
+          "W": "cops_2",
+          "NW": "green"
         },
         "sells": [
           {
@@ -11250,12 +11898,14 @@
         "id": "D6_7",
         "index": 7,
         "edges": {
-          "NW": "toll_2",
           "N": "green",
-          "NE": "green",
+          "NE": "red",
           "E": "criminals_3",
+          "SE": "red",
           "S": "celebrities_1",
-          "W": "toll_2"
+          "SW": "red",
+          "W": "toll_2",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -11275,12 +11925,14 @@
         "id": "D6_8",
         "index": 8,
         "edges": {
-          "NW": "red",
           "N": "red",
           "NE": "criminals_3",
           "E": "cops_2",
+          "SE": "red",
           "S": "cops_2",
-          "W": "green"
+          "SW": "red",
+          "W": "green",
+          "NW": "red"
         },
         "sells": [
           {
@@ -11300,12 +11952,14 @@
         "id": "D6_9",
         "index": 9,
         "edges": {
-          "NW": "green",
           "N": "criminals_3",
           "NE": "cops_2",
           "E": "toll_2",
+          "SE": "red",
           "S": "theater",
-          "W": "green"
+          "SW": "red",
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -11325,12 +11979,14 @@
         "id": "D6_10",
         "index": 10,
         "edges": {
-          "NW": "criminals_3",
           "N": "cops_2",
           "NE": "green",
           "E": "green",
+          "SE": "red",
           "S": "mob",
-          "W": "red"
+          "SW": "red",
+          "W": "red",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -11354,12 +12010,14 @@
         "id": "D6_11",
         "index": 11,
         "edges": {
-          "NW": "cops_2",
           "N": "toll_2",
           "NE": "toll_2",
-          "E": "green",
+          "E": "red",
+          "SE": "red",
           "S": "green",
-          "W": "criminals_3"
+          "SW": "red",
+          "W": "criminals_3",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -11383,10 +12041,12 @@
         "id": "D6_12",
         "index": 12,
         "edges": {
-          "S": "schizophrenic",
           "N": "green",
           "NE": "red",
           "E": "red",
+          "SE": "red",
+          "S": "schizophrenic",
+          "SW": "red",
           "W": "cops_2",
           "NW": "green"
         },
@@ -11411,11 +12071,14 @@
         "id": "E6_1",
         "index": 1,
         "edges": {
-          "NW": "toll_2",
           "N": "red",
-          "NE": "green",
+          "NE": "red",
           "E": "criminals_3",
-          "W": "cops_2"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "cops_2",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -11435,11 +12098,14 @@
         "id": "E6_2",
         "index": 2,
         "edges": {
-          "NW": "green",
-          "N": "green",
+          "N": "red",
           "NE": "criminals_3",
           "E": "cops_2",
-          "W": "green"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "green",
+          "NW": "green"
         },
         "sells": [
           {
@@ -11459,11 +12125,14 @@
         "id": "E6_3",
         "index": 3,
         "edges": {
-          "NW": "green",
           "N": "criminals_3",
           "NE": "cops_2",
           "E": "toll_2",
-          "W": "red"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -11483,11 +12152,14 @@
         "id": "E6_4",
         "index": 4,
         "edges": {
-          "NW": "cops_2",
           "N": "cops_2",
           "NE": "green",
           "E": "red",
-          "W": "red"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -11507,11 +12179,14 @@
         "id": "E6_5",
         "index": 5,
         "edges": {
-          "NW": "criminals_3",
           "N": "toll_2",
           "NE": "red",
           "E": "red",
-          "W": "cops_2"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "cops_2",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -11531,11 +12206,14 @@
         "id": "E6_6",
         "index": 6,
         "edges": {
-          "NW": "green",
           "N": "green",
-          "NE": "green",
+          "NE": "red",
           "E": "cops_2",
-          "W": "criminals_3"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "criminals_3",
+          "NW": "green"
         },
         "sells": [
           {
@@ -11555,11 +12233,14 @@
         "id": "E6_7",
         "index": 7,
         "edges": {
-          "NW": "red",
-          "N": "green",
+          "N": "red",
           "NE": "cops_2",
           "E": "criminals_3",
-          "W": "toll_2"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "toll_2",
+          "NW": "red"
         },
         "sells": [
           {
@@ -11579,11 +12260,14 @@
         "id": "E6_8",
         "index": 8,
         "edges": {
-          "NW": "red",
           "N": "cops_2",
           "NE": "criminals_3",
           "E": "green",
-          "W": "red"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -11603,11 +12287,14 @@
         "id": "E6_9",
         "index": 9,
         "edges": {
-          "NW": "criminals_3",
           "N": "criminals_3",
           "NE": "toll_2",
-          "E": "green",
-          "W": "green"
+          "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -11627,11 +12314,14 @@
         "id": "E6_10",
         "index": 10,
         "edges": {
-          "NW": "cops_2",
           "N": "green",
           "NE": "red",
           "E": "red",
-          "W": "criminals_3"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "criminals_3",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -11655,11 +12345,14 @@
         "id": "E6_11",
         "index": 11,
         "edges": {
-          "NW": "toll_2",
           "N": "red",
           "NE": "red",
           "E": "criminals_3",
-          "W": "cops_2"
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "cops_2",
+          "NW": "toll_2"
         },
         "sells": [
           {
@@ -11683,9 +12376,12 @@
         "id": "E6_12",
         "index": 12,
         "edges": {
-          "N": "green",
+          "N": "red",
           "NE": "criminals_3",
           "E": "cops_2",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "green",
           "NW": "red"
         },
@@ -11710,9 +12406,14 @@
         "id": "F6_1",
         "index": 1,
         "edges": {
-          "NW": "criminals_4",
           "N": "red",
-          "W": "criminals_4"
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "cops_4",
+          "SW": "red",
+          "W": "criminals_4",
+          "NW": "criminals_4"
         },
         "sells": [
           {
@@ -11732,9 +12433,14 @@
         "id": "F6_2",
         "index": 2,
         "edges": {
-          "NW": "red",
           "N": "green",
-          "W": "cops_4"
+          "NE": "red",
+          "E": "red",
+          "SE": "cops_4",
+          "S": "criminals_4",
+          "SW": "red",
+          "W": "cops_4",
+          "NW": "red"
         },
         "sells": [
           {
@@ -11754,9 +12460,14 @@
         "id": "F6_3",
         "index": 3,
         "edges": {
-          "NW": "red",
           "N": "red",
-          "W": "green"
+          "NE": "red",
+          "E": "cops_4",
+          "SE": "criminals_4",
+          "S": "cops_4",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -11776,9 +12487,14 @@
         "id": "F6_4",
         "index": 4,
         "edges": {
-          "NW": "green",
           "N": "cops_4",
-          "W": "green"
+          "NE": "red",
+          "E": "criminals_4",
+          "SE": "cops_4",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "green"
         },
         "sells": [
           {
@@ -11798,9 +12514,14 @@
         "id": "F6_5",
         "index": 5,
         "edges": {
-          "NW": "cops_4",
           "N": "criminals_4",
-          "W": "green"
+          "NE": "red",
+          "E": "criminals_4",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "cops_4"
         },
         "sells": [
           {
@@ -11820,9 +12541,14 @@
         "id": "F6_6",
         "index": 6,
         "edges": {
-          "NW": "criminals_3",
           "N": "cops_3",
-          "W": "cops_4"
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "cops_4",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -11842,9 +12568,14 @@
         "id": "F6_7",
         "index": 7,
         "edges": {
-          "NW": "cops_3",
           "N": "green",
-          "W": "criminals_3"
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "cops_4",
+          "SW": "red",
+          "W": "criminals_3",
+          "NW": "cops_3"
         },
         "sells": [
           {
@@ -11864,9 +12595,14 @@
         "id": "F6_8",
         "index": 8,
         "edges": {
-          "NW": "green",
           "N": "green",
-          "W": "cops_3"
+          "NE": "red",
+          "E": "red",
+          "SE": "cops_4",
+          "S": "criminals_3",
+          "SW": "red",
+          "W": "cops_3",
+          "NW": "red"
         },
         "sells": [
           {
@@ -11886,9 +12622,14 @@
         "id": "F6_9",
         "index": 9,
         "edges": {
-          "NW": "green",
-          "N": "green",
-          "W": "red"
+          "N": "red",
+          "NE": "red",
+          "E": "cops_4",
+          "SE": "criminals_3",
+          "S": "toll_3",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -11908,9 +12649,14 @@
         "id": "F6_10",
         "index": 10,
         "edges": {
-          "NW": "green",
           "N": "cops_4",
-          "W": "red"
+          "NE": "red",
+          "E": "criminals_3",
+          "SE": "cops_3",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "red"
         },
         "sells": [
           {
@@ -11934,9 +12680,14 @@
         "id": "F6_11",
         "index": 11,
         "edges": {
-          "NW": "cops_4",
           "N": "criminals_3",
-          "W": "red"
+          "NE": "red",
+          "E": "cops_3",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
+          "W": "red",
+          "NW": "cops_4"
         },
         "sells": [
           {
@@ -11961,6 +12712,11 @@
         "index": 12,
         "edges": {
           "N": "cops_3",
+          "NE": "red",
+          "E": "red",
+          "SE": "red",
+          "S": "red",
+          "SW": "red",
           "W": "cops_4",
           "NW": "criminals_3"
         },

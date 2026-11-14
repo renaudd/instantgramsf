@@ -6,19 +6,18 @@ the same as in the Rome edition.
 
 ---
 
-## 1. Goods (Market layout, top to bottom)
+## 1. Goods (Market layout, top to bottom — 112 cards in `2 : 2 : 3 : 3 : 2 : 2` ratio)
 
-| Row | InstantGram SF | Rome track (internal id) | Contents | Notes |
+| Row | InstantGram SF Track | Count | Contents | Notes |
 | :-- | :--- | :--- | :--- | :--- |
-| 1 | **Weed** (+ hallucinogens) | Grain | Dime bags, pre-rolls, shrooms, LSD, edibles | Easy to sell, low risk, low violence, low profit. Can be sold in bulk. |
-| 2 | **Party** | Marble | Molly, ketamine, GHB, 2C-B, tusi | Profitable, but a high price floor and limited demand. Safer. |
-| 3 | **Uppers** — *Pill* / *Powder* | Animals (Meat / Exotic) | Addys, Abu Hilalain, Moda… / coke, crack, meth, speed | Almost all Uppers (17 of 18 across both Pill and Powder) have mandatory combat effects ranging from `2(R)-3(R)` up to `4(R)-2(R)`. Uppers with negative/poor combat effects are cheaper and have better resale profitability than high-CP Uppers. |
-| 4 | **Opiates** — *Street* / *Pharma* | Wine (Cheap / Fine) | Heroin, tranq, fentanyl… / OC 80s, Hospital Heroin, Percs, Vikes | Highest margins: the **largest gap between the Abundant Wholesale Price (`-₿`) and the Precious Retail Price (`+₿`)**. Most dangerous; biggest enforcement. |
-| 5 | **Weapons** | Weapons | Switchblade, Taser, Pipe Bomb … Draco AK, Bearcat .50 Cal | 16 Weapons spanning the full combat spectrum (`Use once for 1`, `Use once for (R)`, `Use once for 2(R)`, `(R)-1`, `1`, `2(R)-(R)`, `(R)`, `2(R)-1`, `(R)+1`, `2`, `3(R)-(R)`, `2(R)`, `3`, `(R)+2`, `2(R)+1`, `3(R)-1`). Single-use and low-CP weapons are cheap with high resale margins; heavy high-CP weapons (`2–3■`) are expensive with tight resale margins. |
-| 6 | **Henchmen** | Henchmen | Big Mike, Lil' Tony, Rosa "La Flaca"… | Almost unchanged. |
+| 1 | **Weed** (+ hallucinogens) | 16 | Dime bags, pre-rolls, shrooms, LSD, edibles, DMT | Easy to sell, low risk, low violence, low profit. Can be sold in bulk. |
+| 2 | **Party** | 16 | Molly, ketamine, GHB, 2C-B, tusi, sassafras, poppers | Profitable, but a high price floor and limited demand. Safer. |
+| 3 | **Uppers** — *Pill Uppers* (12) / *Powder Uppers* (12) | 24 | Addys, Abu Hilalain, Vyvanse, Moda… / coke, crack, meth, speed | Almost all Uppers (23 of 24 across both Pill and Powder) have mandatory combat effects ranging from `2(R)-3(R)` up to `4(R)-2(R)`. Uppers with negative/poor combat effects are cheaper and have better resale profitability than high-CP Uppers. |
+| 4 | **Opiates** — *Street Opiates* (12) / *Pharma Opiates* (12) | 24 | Heroin, tranq, fentanyl, grey death… / OC 80s, Hospital Heroin, Opana, Percs, Vikes | Highest margins: the **largest gap between the Abundant Wholesale Price (`-₿`) and the Precious Retail Price (`+₿`)**. Most dangerous; biggest enforcement. |
+| 5 | **Weapons** | 16 | Switchblade, Pipe Bomb … Draco AK, Bearcat .50 Cal, Body Armor | 16 Weapons & Armor spanning the full combat and wound-absorption spectrum. Single-use and low-CP weapons are cheap with high resale margins; heavy high-CP weapons (`2–3■`) are expensive with tight resale margins. |
+| 6 | **Henchmen** | 16 | Big Mike, Big Tina, Rosa "La Flaca", Felicia, Lil' Chino, DJ Krystal… | Hired muscle riding in the front seats (`▲`). |
 
-> Implementation note: the engine keeps the Rome track ids. A display layer (`sfReskinText` in
-> `app.js`) shows the InstantGram SF names everywhere in the UI.
+> Implementation note: the engine and data files (`src/game_engine.py`, `src/data/market_and_missions.json`, `src/data/tiles.json`) use the native InstantGram SF track and category names (`Weed`, `Party`, `Uppers`, `Pill Uppers`, `Powder Uppers`, `Opiates`, `Street Opiates`, `Pharma Opiates`, `Weapons`, `Henchmen`) directly, with automatic migration for any legacy saved game states.
 
 ## 2. Art Direction
 
@@ -39,13 +38,13 @@ the same as in the Rome edition.
 
 ## 3. Factions (short names: MAGA, ISIS, DSA, TECH, MS13)
 
-| Rome faction (gem) | InstantGram SF | Celebrities / Cops / Criminals |
-| :--- | :--- | :--- |
-| Caracalla (Ruby) | **MAGA** | 3 / **14** / 2 |
-| Geta (Emerald) | **ISIS** (rarest) | 4 / 1 / 4 |
-| Domna (Diamond) | **TECH** (Tech Bros) | 7 / 8 / 4 |
-| Plautilla (Sapphire) | **DSA** | **9** / 2 / 7 |
-| Aurelius (Amethyst) | **MS13** | 2 / 2 / **6** |
+| Rome faction (gem) | InstantGram SF | Celebrities (30) / Cops (30) / Criminals (29) | Total (80 + 9 Events = 89) |
+| :--- | :--- | :--- | :--- |
+| Plautilla (Sapphire) | **DSA** | **9** / 3 / 6 | **18** |
+| Caracalla (Ruby) | **MAGA** | 3 / **11** / 3 | **17** |
+| Domna (Diamond) | **TECH** (Tech Bros) | 6 / 6 / 4 | **16** |
+| Aurelius (Amethyst) | **MS13** | 4 / 4 / **7** | **15** |
+| Geta (Emerald) | **ISIS** (rarest) | 4 / 4 / 6 | **14** |
 
 ### Alignment consequences
 
@@ -106,57 +105,61 @@ Each list runs from most likely to least likely.
 | **ISIS** | Sell Weapons at a premium, deliver Weapons, kill Celebrities, kill Cops, deliver Opiates, deliver Weed | Opiates, cash, Weed, Henchmen, Weapons, Influence |
 
 - **Influencer**: Hold 6 Influence cards in your hand (Influence cards tucked under Schizophrenic jobs don't count). Reward: `1(R)` Influence cards + `₿0.2`, `+Diamond`, `-Emerald`.
-- **Regime Change** (was Regicide): completed if Donald Trump or Jared Kushner is defeated by any
-player. **Witness Protection** (was Regime Change) cancels it.
+- **Regime Change** (`mis_34`, was Regicide): Completed if **Donald Trump** or **Jared Kushner** is defeated in combat by **any Player** while you hold *Regime Change*, immediately winning the game.
+- **Witness Protection** (`mis_51`, was Regime Change): Triggers **first** if **Donald Trump** or **Jared Kushner** is defeated in combat by **any Player**, awarding `₿2` (`20(d)`) and **canceling every active *Regime Change* job** across all players.
 
-## 6. Encounter Decks
+## 6. Encounter Decks (30 Celebrities / 30 Cops / 29 Criminals = 89 Cards)
 
 | Rome | InstantGram SF |
 | :--- | :--- |
-| Celebrities | **Celebrities** |
-| Criminals | **Criminals** |
-| Cops | **Cops** |
+| Celebrities | **Celebrities** (26 Faction Characters + 4 Street Events = 30) |
+| Criminals | **Criminals** (26 Faction Characters + 3 Street Events = 29) |
+| Cops | **Cops** (28 Faction Characters + 2 Street Events = 30) |
 | Protesters | **Protesters** |
-| Theatre Troupe | **Stand-Up Comic** |
+| Theatre Troupe | **Open Mic / Stand-Up Comic** |
 | Schizophrenic | **Schizophrenic** |
 
-### Celebrities
+### Celebrities (30)
 
 | Faction | Characters |
 | :--- | :--- |
-| TECH | Mark Zuckerberg *(Leader)*, Brian Chesky *(T1)*, Dario Amodei *(T2)*, Daniela Amodei *(T2)*, Crypto Influencer, Startup Founder, AI Ethicist |
-| MAGA | Donald Trump *(Leader)*, Elon Musk *(T1)*, Peter Thiel *(T1)* |
-| DSA | Jensen Huang *(T2)*, Bernie Sanders, Cornel West, Drag Queen, Tenured Professor, Indie Podcaster, Burning Guy Artist, Muralist, Climate Activist |
-| MS13 | Steph Curry *(T1)*, Chesa Boudin |
-| ISIS | Alice Huang *(T1)*, Dr. Oz, Edgelord Streamer, Radicalized YouToober |
+| DSA (9) | Jensen Huang *(T2)*, Bernie Sanders, Cornel West, Drag Queen, Tenured Professor, Indie Podcaster, Burning Guy Artist, Muralist, Climate Activist |
+| TECH (6) | Mark Zuckerberg *(Leader)*, Brian Chesky *(T1)*, Dario Amodei *(T2)*, Daniela Amodei *(T2)*, Crypto Influencer, Startup Founder |
+| ISIS (4) | Alice Huang *(T1)*, Dr. Oz, Edgelord Streamer, Radicalized YouToober |
+| MS13 (4) | Steph Curry *(T1)*, Chesa Boudin, Latin Trap Star, Lowrider King |
+| MAGA (3) | Donald Trump *(Leader)*, Elon Musk *(T1)*, Peter Thiel *(T1)* |
 
-### Cops
-
-| Faction | Characters |
-| :--- | :--- |
-| TECH | Mayor Lurie *(Top)*, Scott Wiener *(T2)*, Paul Graham, FBI, CIA, Meter Maid, Traffic Cop, Rookie |
-| MS13 | Nayib Bukele *(Leader)*, Dirty Cop |
-| ISIS | Jared Kushner *(Leader)* |
-| DSA | Dean Preston, Firefighters |
-| MAGA | Harmeet Dhillon, Vivek Ramaswamy, Rudy Giuliani, SFPD, DEA, ICE, Homeland Security, SFPD Narcotics Unit, DEA Task Force, ICE Raid Team, Border Patrol, CHP Trooper, Sheriff's Deputy, Muni Fare Inspector |
-
-### Criminals
+### Cops (30)
 
 | Faction | Characters |
 | :--- | :--- |
-| TECH | Sam Altman *(Top)*, Palmer Luckey, VC Capitalist, Crypto Scammer |
-| MAGA | KKK *(T1)*, Pot Farmers *(T3)* |
-| ISIS | International Terrorist *(T1)*, Domestic Terrorist *(T2)*, Bashar al-Assad, Abu Bakr al-Baghdadi |
-| DSA | Ocasio-Cortez *(Leader)*, Pimp *(T1)*, London Breed, Homeless *(T2)*, Illegal *(T2)*, Unhoused *(T3)*, Undocumented *(T3)* |
-| MS13 | Elmer Rodriguez *(Top)*, Clique Enforcer, Sicario, Gang Banger, Bad Hombre, Coyote |
+| MAGA (11) | Harmeet Dhillon, Vivek Ramaswamy, Rudy Giuliani, SFPD, DEA, ICE, ATF, Border Patrol, CHP Trooper, Sheriff's Deputy, Muni Fare Inspector |
+| TECH (6) | Mayor Lurie *(Top)*, Scott Wiener *(T2)*, Paul Graham, FBI, CIA, Meter Maid |
+| MS13 (4) | Nayib Bukele *(Leader)*, Dirty Cop, Rookie, Evidence Locker Clerk |
+| ISIS (4) | Jared Kushner *(Leader)*, Diplomatic Security, Sleeper Agent, Port Customs Inspector |
+| DSA (3) | Dean Preston, Firefighters, Traffic Cop |
+
+### Criminals (29)
+
+| Faction | Characters |
+| :--- | :--- |
+| MS13 (7) | Elmer Rodriguez *(Top)*, Clique Enforcer, Sicario, Gang Banger, Bad Hombre, Coyote, Shot Caller |
+| DSA (6) | Ocasio-Cortez *(Leader)*, Pimp *(T1)*, London Breed, Homeless *(T2)*, Illegal *(T2)*, Undocumented *(T3)* |
+| ISIS (6) | International Terrorist *(T1)*, Domestic Terrorist *(T2)*, Hamas *(T1)*, Iran *(T1)*, Bashar al-Assad, Abu Bakr al-Baghdadi |
+| TECH (4) | Sam Altman *(Top)*, Palmer Luckey, VC Capitalist, Crypto Scammer |
+| MAGA (3) | KKK *(T1)*, Pot Farmers *(T3)*, Militia Prepper *(T2)* |
 
 ### Reserve cards
 
-`src/data/reserve_cards.json` holds cards that were pulled from the decks, with all their stats, so they can be added back later. If other factions grow, these can regrow ISIS.
+`src/data/reserve_cards.json` holds cards that were pulled from the active decks to maintain the All Roads relative proportions across factions and goods categories:
 
-| Card | Faction & deck | Why it was pulled |
+| Card | Category / Faction & deck | Why it was pulled |
 | :--- | :--- | :--- |
-| Hamas, Hezbollah, Houthis, Iran | ISIS Criminals | Removed to keep ISIS the rarest faction |
+| Hezbollah, Houthis | ISIS Criminals | Kept in reserve so ISIS remains the rarest faction (14 cards) |
+| SFPD Narcotics Unit, DEA Task Force, ICE Raid Team | MAGA Cops | Pulled to avoid duplicating SFPD, DEA, and ICE and keep MAGA balanced (17 cards) |
+| AI Ethicist | TECH Celebrities | Pulled to keep TECH balanced (16 cards) |
+| Unhoused | DSA Criminals | Pulled to avoid duplicating Homeless and keep DSA balanced (18 cards) |
+| Hunting Rifle | Weapons (Goods) | Pulled to keep Weapons at 16 cards (`2 : 2 : 3 : 3 : 2 : 2` Market ratio) |
 
 ## 7. Ballot Initiatives (was Political Climate)
 
@@ -268,7 +271,7 @@ See the in-game board. The Rome mechanics stay, retitled for the new factions:
 - The Henchmen who add a henchman seat (+▲) or raise sale prices are women: **Big Tina** (+▲), **Rosa "La Flaca"** (Street Opiates sell +1 step), and **Nurse Keisha** (Pill Uppers sell +1 step).
 - **Felicia** is the strongest Henchman: 3(R) +1 CP and ignores 1 wound (a nod to *The Wire*).
 
-## 14. Positive vs Hostile Outcomes (Stand-Up Comic)
+## 14. Positive vs Hostile Outcomes (Open Mic / Stand-Up Comic) & Addiction
 
 Every gem change is tagged by how it happened.
 
@@ -277,12 +280,16 @@ Every gem change is tagged by how it happened.
 | **Positive** | Satisfying demands, accepting offers, buying or selling with NPCs, playing Influence cards, completing jobs |
 | **Hostile** | Refusing threats or demands, combat, being unable to pay, failing or abandoning jobs |
 
-The Stand-Up Comic table now works on outcomes, not on gem signs:
+The Open Mic / Stand-Up Comic table works on outcomes, not on gem signs:
 
 | Roll | Effect |
 | :-- | :-- |
 | **0 (Roasted)** | Undo every gem change from **Positive outcomes** |
 | **I (The Bit)** | Undo every gem change from **Hostile outcomes** |
+| **II (Bombed)** | Lose the rest of this turn and your next turn (flip SUV over) |
+| **III (Killed)** | Draw `1(R)` Influence cards |
+
+- **Addiction Rule (Mandatory Uppers & Open Mic Sets):** Every Dealer is a reprobate open mic comic and recovering stimulant addict. If a Dealer enters combat while in possession of **Uppers** (`Pill Uppers` or `Powder Uppers`), the Dealer automatically consumes those Uppers and rolls their mandatory combat dice (`mandatory: true`), for better or for worse, whether or not the player desires to do so. Similarly, if the Dealer encounters an **Open Mic** icon on a tile or street edge, the Dealer will stop in for a set and roll `1(R)` on the Open Mic table, whether or not the player desires to risk time or reputation.
 
 
 ## 15. Job Locations & Delivery Rewards

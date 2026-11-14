@@ -1,51 +1,230 @@
 {
   "_note": "Encounter cards removed from InstantGram SF decks but kept for later (e.g. to regrow ISIS). Move a card back into its deck in decks.json to reuse it.",
-  "celebrities": [],
-  "cops": [],
-  "criminals": [
+  "celebrities": [
     {
-      "id": "nef_10",
-      "name": "Hamas",
-      "deck": "Criminals",
+      "id": "pat_27",
+      "name": "AI Ethicist",
+      "deck": "Celebrities",
       "type": "character",
-      "faction": "ISIS",
-      "bio": "“Tunnels under everything.”",
-      "combatFormula": "2X(R)",
+      "faction": "TECH",
+      "bio": "“Concerned, professionally.”",
+      "combatFormula": "2(R)+2",
       "friendlyFavor": [
-        "ISIS"
+        "TECH"
       ],
-      "friendlyReward": "Cheapest Henchman",
+      "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-ISIS",
-        "MAGA"
+        "-TECH"
       ],
-      "combatReward": "7(d)",
+      "combatReward": "12(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
+          "condition": "=0",
+          "type": "deck_quest_strict"
+        },
+        {
           "condition": ">=1",
-          "type": "mission_request",
-          "actionText": "Sell Weapons at + in F6!",
+          "type": "mission_strict",
+          "actionText": "Sell Party at + in B5!!",
           "mission": {
-            "type": "delivery",
-            "targetCell": "F6",
-            "commodity": "Weapons",
-            "modifier": "+"
+            "kind": "sell",
+            "item": "Party",
+            "pickupCell": null,
+            "deliverCell": "B5",
+            "category": "Party",
+            "modifier": "+",
+            "target": null,
+            "name": "AI Ethicist’s Job"
           }
         }
       ],
-      "actionText": "(QUEST_ICON)! Sell Weapons at + in F6!",
+      "actionText": "(QUEST_ICON)!! Sell Party at + in B5!!",
       "mission": {
-        "type": "delivery",
-        "targetCell": "F6",
-        "commodity": "Weapons",
-        "modifier": "+"
+        "kind": "sell",
+        "item": "Party",
+        "pickupCell": null,
+        "deliverCell": "B5",
+        "category": "Party",
+        "modifier": "+",
+        "target": null,
+        "name": "AI Ethicist’s Job"
+      },
+      "tier": "gen"
+    }
+  ],
+  "cops": [
+    {
+      "id": "leg_22",
+      "name": "SFPD Narcotics Unit",
+      "deck": "Cops",
+      "type": "character",
+      "faction": "MAGA",
+      "bio": "“That’s evidence now.”",
+      "combatFormula": "2X",
+      "friendlyFavor": [
+        "MAGA",
+        "TECH",
+        "-ISIS"
+      ],
+      "friendlyReward": "Cheapest Weapon",
+      "hostileFavor": [
+        "-MAGA",
+        "-TECH",
+        "ISIS"
+      ],
+      "combatReward": "9(d)",
+      "reactions": [
+        {
+          "condition": "<-1",
+          "type": "combat"
+        },
+        {
+          "condition": "-1..0",
+          "type": "combat",
+          "ifCarrying": "Opiates or Party"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_strict",
+          "actionText": "Sell Opiates at + in E1!!",
+          "mission": {
+            "kind": "sell",
+            "item": "Opiates",
+            "pickupCell": null,
+            "deliverCell": "E1",
+            "category": "Opiates",
+            "modifier": "+",
+            "target": null,
+            "name": "SFPD Narcotics Unit’s Job"
+          }
+        }
+      ],
+      "actionText": "(QUEST_ICON)!! Sell Opiates at + in E1!!",
+      "mission": {
+        "kind": "sell",
+        "item": "Opiates",
+        "pickupCell": null,
+        "deliverCell": "E1",
+        "category": "Opiates",
+        "modifier": "+",
+        "target": null,
+        "name": "SFPD Narcotics Unit’s Job"
+      },
+      "tier": "t2"
+    },
+    {
+      "id": "leg_23",
+      "name": "DEA Task Force",
+      "deck": "Cops",
+      "type": "character",
+      "faction": "MAGA",
+      "bio": "“Knock knock.”",
+      "combatFormula": "2X(R)+1",
+      "friendlyFavor": [
+        "MAGA",
+        "TECH",
+        "-ISIS"
+      ],
+      "friendlyReward": "Cheapest Uppers",
+      "hostileFavor": [
+        "-MAGA",
+        "-TECH",
+        "ISIS"
+      ],
+      "combatReward": "14(d)",
+      "reactions": [
+        {
+          "condition": "<-1",
+          "type": "combat"
+        },
+        {
+          "condition": "-1..0",
+          "type": "combat",
+          "ifCarrying": "Opiates"
+        },
+        {
+          "condition": "=1",
+          "type": "demand_strict",
+          "actionText": "Give me all of your Opiates!!"
+        },
+        {
+          "condition": ">=2",
+          "type": "mission_request",
+          "actionText": "Kill an ISIS!",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": "ISIS",
+            "name": "DEA Task Force’s Job"
+          }
+        }
+      ],
+      "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)! Kill an ISIS!",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "ISIS",
+        "name": "DEA Task Force’s Job"
       },
       "tier": "t1"
     },
+    {
+      "id": "leg_24",
+      "name": "ICE Raid Team",
+      "deck": "Cops",
+      "type": "character",
+      "faction": "MAGA",
+      "bio": "“No warrant needed, apparently.”",
+      "combatFormula": "2X(R)+2",
+      "friendlyFavor": [
+        "MAGA",
+        "TECH",
+        "-ISIS"
+      ],
+      "friendlyReward": "Cheapest Uppers",
+      "hostileFavor": [
+        "-MAGA",
+        "DSA",
+        "TECH"
+      ],
+      "combatReward": "15(d)",
+      "reactions": [
+        {
+          "condition": "<-1",
+          "type": "combat"
+        },
+        {
+          "condition": "-1..0",
+          "type": "combat",
+          "ifCarrying": "Henchmen or Weapons"
+        },
+        {
+          "condition": "=1",
+          "type": "demand_strict"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer"
+        }
+      ],
+      "actionText": "[!!] Give me all of your Weapons!! • [?] Buy Cheapest Mkt Weapon at -?",
+      "mission": null,
+      "tier": "t1"
+    }
+  ],
+  "criminals": [
     {
       "id": "nef_11",
       "name": "Hezbollah",
@@ -116,46 +295,67 @@
       "tier": "t2"
     },
     {
-      "id": "nef_13",
-      "name": "Iran",
+      "id": "nef_21",
+      "name": "Unhoused",
       "deck": "Criminals",
       "type": "character",
-      "faction": "ISIS",
-      "bio": "“Enrichment program, very enriched.”",
-      "combatFormula": "2X(R)+X",
+      "faction": "DSA",
+      "bio": "“They’re letting him vote with no ID.”",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
-        "ISIS",
-        "MAGA",
         "DSA",
-        "TECH"
+        "TECH",
+        "-MAGA"
       ],
-      "friendlyReward": "Cheapest Opiates",
+      "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
-        "-ISIS",
         "-DSA"
       ],
-      "combatReward": "7(d)",
+      "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": ">=1",
-          "type": "mission_request",
-          "actionText": "Kill a Cop!",
-          "mission": {
-            "type": "kill",
-            "targetDeck": "cops"
-          }
+          "condition": ">=0",
+          "type": "demand_strict"
         }
       ],
-      "actionText": "(QUEST_ICON)! Kill a Cop!",
-      "mission": {
-        "type": "kill",
-        "targetDeck": "cops"
-      },
-      "tier": "t1"
+      "actionText": "[!!] Give me all of your Party!!",
+      "mission": null,
+      "tier": "t3"
+    }
+  ],
+  "weapons": [
+    {
+      "id": "wpn_9",
+      "name": "Hunting Rifle",
+      "category": "Weapons",
+      "subcategory": "Weapons",
+      "track": "Weapons",
+      "blocks": 2,
+      "henchmen": 0,
+      "sell": [
+        27,
+        21,
+        16,
+        12,
+        9
+      ],
+      "buy": [
+        22,
+        17,
+        13,
+        10,
+        8
+      ],
+      "combatText": "3(R)-1 CP",
+      "combat": {
+        "dice": 3,
+        "negDice": 0,
+        "flat": -1
+      }
     }
   ]
 }

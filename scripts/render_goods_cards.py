@@ -21,9 +21,14 @@ F_SERIF_B = os.path.join(FONTS, "Georgia Bold.ttf")
 F_NUM = os.path.join(FONTS, "DIN Alternate Bold.ttf")
 
 CATEGORY_LABEL = {
-    "Grain": "WEED", "Marble": "PARTY", "Weapons": "WEAPONS", "Henchmen": "HENCHMEN",
-    "Meat Animals": "PILL UPPERS", "Exotic Animals": "POWDER UPPERS",
-    "Cheap Wine": "STREET OPIATES", "Fine Wine": "PHARMA OPIATES",
+    "Grain": "WEED", "Weed": "WEED",
+    "Marble": "PARTY", "Party": "PARTY",
+    "Weapons": "WEAPONS", "Henchmen": "HENCHMEN", "Henchman": "HENCHMEN",
+    "Meat Animals": "PILL UPPERS", "Pill Uppers": "PILL UPPERS",
+    "Exotic Animals": "POWDER UPPERS", "Powder Uppers": "POWDER UPPERS",
+    "Cheap Wine": "STREET OPIATES", "Street Opiates": "STREET OPIATES",
+    "Fine Wine": "PHARMA OPIATES", "Pharma Opiates": "PHARMA OPIATES",
+    "Uppers": "UPPERS", "Opiates": "OPIATES",
 }
 SCARCITY = ["<<", "<", "=", ">", ">>"]
 SCARCITY_COLORS = [(31, 122, 31), (31, 160, 60), (190, 170, 20), (214, 90, 40), (150, 20, 40)]
@@ -31,7 +36,7 @@ INK = (24, 22, 20)
 SELL_GREEN = (22, 110, 40)
 BUY_RED = (150, 28, 28)
 GRID = (60, 60, 60)
-SCARCITY_LABEL = {"Grain": "WEED", "Marble": "PARTY"}
+SCARCITY_LABEL = {"Grain": "WEED", "Weed": "WEED", "Marble": "PARTY", "Party": "PARTY"}
 
 
 def btc(units):

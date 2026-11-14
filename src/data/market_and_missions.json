@@ -3,9 +3,9 @@
     {
       "id": "grn_1",
       "name": "Pineapple Express",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -27,9 +27,9 @@
     {
       "id": "grn_2",
       "name": "Golden Teacher",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -51,9 +51,9 @@
     {
       "id": "grn_3",
       "name": "Brick Weed",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -75,9 +75,9 @@
     {
       "id": "grn_4",
       "name": "Granddaddy Purple",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -99,9 +99,9 @@
     {
       "id": "grn_5",
       "name": "Mescaline",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -123,9 +123,9 @@
     {
       "id": "grn_6",
       "name": "Northern Lights",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -147,9 +147,9 @@
     {
       "id": "grn_7",
       "name": "Guerilla Glue #4",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -171,9 +171,9 @@
     {
       "id": "grn_8",
       "name": "Wedding Cake",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -195,9 +195,9 @@
     {
       "id": "grn_9",
       "name": "Blue Dream",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -219,9 +219,9 @@
     {
       "id": "grn_10",
       "name": "Feline the Cat",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -243,9 +243,9 @@
     {
       "id": "grn_11",
       "name": "Sour Diesel",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -267,9 +267,9 @@
     {
       "id": "grn_12",
       "name": "OG Kush",
-      "category": "Grain",
-      "subcategory": "Grain",
-      "track": "Grain",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -291,9 +291,9 @@
     {
       "id": "cw_1",
       "name": "Apache",
-      "category": "Wine",
-      "subcategory": "Cheap Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -315,9 +315,9 @@
     {
       "id": "cw_2",
       "name": "China White",
-      "category": "Wine",
-      "subcategory": "Cheap Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -338,9 +338,9 @@
     {
       "id": "cw_3",
       "name": "Brown Sugar",
-      "category": "Wine",
-      "subcategory": "Cheap Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -362,9 +362,9 @@
     {
       "id": "cw_4",
       "name": "Reds",
-      "category": "Wine",
-      "subcategory": "Cheap Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -386,9 +386,9 @@
     {
       "id": "cw_5",
       "name": "Number 4",
-      "category": "Wine",
-      "subcategory": "Cheap Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -410,9 +410,9 @@
     {
       "id": "cw_6",
       "name": "Tranq",
-      "category": "Wine",
-      "subcategory": "Cheap Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -434,9 +434,9 @@
     {
       "id": "cw_7",
       "name": "Chiva",
-      "category": "Wine",
-      "subcategory": "Cheap Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -458,9 +458,9 @@
     {
       "id": "cw_8",
       "name": "Purple Drank",
-      "category": "Wine",
-      "subcategory": "Cheap Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -482,9 +482,9 @@
     {
       "id": "cw_9",
       "name": "Blues",
-      "category": "Wine",
-      "subcategory": "Cheap Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -506,9 +506,9 @@
     {
       "id": "fw_1",
       "name": "Tussin",
-      "category": "Wine",
-      "subcategory": "Fine Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -530,9 +530,9 @@
     {
       "id": "fw_2",
       "name": "Trammies",
-      "category": "Wine",
-      "subcategory": "Fine Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -554,9 +554,9 @@
     {
       "id": "fw_3",
       "name": "Vikes",
-      "category": "Wine",
-      "subcategory": "Fine Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -578,9 +578,9 @@
     {
       "id": "fw_4",
       "name": "Percs",
-      "category": "Wine",
-      "subcategory": "Fine Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -602,9 +602,9 @@
     {
       "id": "fw_5",
       "name": "Juice",
-      "category": "Wine",
-      "subcategory": "Fine Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -626,9 +626,9 @@
     {
       "id": "fw_6",
       "name": "Red Devils",
-      "category": "Wine",
-      "subcategory": "Fine Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -650,9 +650,9 @@
     {
       "id": "fw_7",
       "name": "Miss Emma",
-      "category": "Wine",
-      "subcategory": "Fine Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -674,9 +674,9 @@
     {
       "id": "fw_8",
       "name": "OC 80s",
-      "category": "Wine",
-      "subcategory": "Fine Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -698,9 +698,9 @@
     {
       "id": "fw_9",
       "name": "Hospital Heroin",
-      "category": "Wine",
-      "subcategory": "Fine Wine",
-      "track": "Wine",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -722,9 +722,9 @@
     {
       "id": "ma_1",
       "name": "Mini-Thins",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -753,9 +753,9 @@
     {
       "id": "ma_2",
       "name": "Bennies",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -784,9 +784,9 @@
     {
       "id": "ma_3",
       "name": "Black Beauties",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -815,9 +815,9 @@
     {
       "id": "ma_4",
       "name": "Abu Hilalain",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -846,9 +846,9 @@
     {
       "id": "ma_5",
       "name": "Blue Addys",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -877,9 +877,9 @@
     {
       "id": "ma_6",
       "name": "Dexies",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -908,9 +908,9 @@
     {
       "id": "ma_7",
       "name": "Kiddie Coke",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -939,9 +939,9 @@
     {
       "id": "ma_8",
       "name": "Addys",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -970,9 +970,9 @@
     {
       "id": "ma_9",
       "name": "Moda",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -996,9 +996,9 @@
     {
       "id": "ea_1",
       "name": "Crank",
-      "category": "Animals",
-      "subcategory": "Exotic Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -1027,9 +1027,9 @@
     {
       "id": "ea_2",
       "name": "Flakka",
-      "category": "Animals",
-      "subcategory": "Exotic Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -1058,9 +1058,9 @@
     {
       "id": "ea_3",
       "name": "Shake-n-Bake",
-      "category": "Animals",
-      "subcategory": "Exotic Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -1089,9 +1089,9 @@
     {
       "id": "ea_4",
       "name": "Yayo",
-      "category": "Animals",
-      "subcategory": "Exotic Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -1120,9 +1120,9 @@
     {
       "id": "ea_5",
       "name": "Stepped-on Blow",
-      "category": "Animals",
-      "subcategory": "Exotic Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -1150,9 +1150,9 @@
     {
       "id": "ea_6",
       "name": "Rock",
-      "category": "Animals",
-      "subcategory": "Exotic Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -1181,9 +1181,9 @@
     {
       "id": "ea_7",
       "name": "Glass",
-      "category": "Animals",
-      "subcategory": "Exotic Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -1212,9 +1212,9 @@
     {
       "id": "ea_8",
       "name": "Peruvian Flake",
-      "category": "Animals",
-      "subcategory": "Exotic Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -1242,9 +1242,9 @@
     {
       "id": "ea_9",
       "name": "Fish Scale",
-      "category": "Animals",
-      "subcategory": "Exotic Animals",
-      "track": "Animals",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -1507,35 +1507,6 @@
       }
     },
     {
-      "id": "wpn_9",
-      "name": "Hunting Rifle",
-      "category": "Weapons",
-      "subcategory": "Weapons",
-      "track": "Weapons",
-      "blocks": 2,
-      "henchmen": 0,
-      "sell": [
-        27,
-        21,
-        16,
-        12,
-        9
-      ],
-      "buy": [
-        22,
-        17,
-        13,
-        10,
-        8
-      ],
-      "combatText": "3(R)-1 CP",
-      "combat": {
-        "dice": 3,
-        "negDice": 0,
-        "flat": -1
-      }
-    },
-    {
       "id": "wpn_10",
       "name": "Molotov Cocktail",
       "category": "Weapons",
@@ -1780,9 +1751,9 @@
     {
       "id": "mrb_1",
       "name": "Rush",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -1804,9 +1775,9 @@
     {
       "id": "mrb_2",
       "name": "Liquid G",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -1828,9 +1799,9 @@
     {
       "id": "mrb_3",
       "name": "Whippets",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -1852,9 +1823,9 @@
     {
       "id": "mrb_4",
       "name": "Tusi",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -1876,9 +1847,9 @@
     {
       "id": "mrb_5",
       "name": "Bunk Molly",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -1899,9 +1870,9 @@
     {
       "id": "mrb_6",
       "name": "Blue Punishas",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -1923,9 +1894,9 @@
     {
       "id": "mrb_7",
       "name": "Pink Tezlas",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -1947,9 +1918,9 @@
     {
       "id": "mrb_8",
       "name": "Red Mitsubushis",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -1971,9 +1942,9 @@
     {
       "id": "mrb_9",
       "name": "Special K",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -1995,9 +1966,9 @@
     {
       "id": "mrb_10",
       "name": "Blue Dolphins",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -2019,9 +1990,9 @@
     {
       "id": "mrb_11",
       "name": "Nexus",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 1,
       "henchmen": 0,
       "sell": [
@@ -2043,9 +2014,9 @@
     {
       "id": "mrb_12",
       "name": "Champagne Molly",
-      "category": "Marble",
-      "subcategory": "Marble",
-      "track": "Marble",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
       "blocks": 2,
       "henchmen": 0,
       "sell": [
@@ -2080,7 +2051,7 @@
         4,
         4
       ],
-      "combatText": "(R) CP & +\u25a0\u25a0 SUV Space",
+      "combatText": "(R) CP & +■■ SUV Space",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2105,7 +2076,7 @@
         5,
         4
       ],
-      "combatText": "(R) CP & +\u25b2 SUV Space",
+      "combatText": "(R) CP & +▲ SUV Space",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2347,6 +2318,632 @@
         "flat": 1,
         "ignoreWoundsFlat": 1
       }
+    },
+    {
+      "id": "grn_13",
+      "name": "Gelato #41",
+      "subtitle": "Exotic Indoor",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        6,
+        5,
+        4,
+        3,
+        2
+      ],
+      "sell": [
+        10,
+        8,
+        6,
+        5,
+        3
+      ]
+    },
+    {
+      "id": "grn_14",
+      "name": "Jack Herer",
+      "subtitle": "Sativa Pre-Rolls",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        5,
+        4,
+        3,
+        2,
+        2
+      ],
+      "sell": [
+        8,
+        6,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "id": "grn_15",
+      "name": "DMT Vape Cart",
+      "subtitle": "Deemsters",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        8,
+        6,
+        5,
+        4,
+        3
+      ],
+      "sell": [
+        14,
+        11,
+        8,
+        6,
+        4
+      ]
+    },
+    {
+      "id": "grn_16",
+      "name": "Penis Envy",
+      "subtitle": "Shrooms",
+      "category": "Weed",
+      "subcategory": "Weed",
+      "track": "Weed",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        7,
+        5,
+        4,
+        3,
+        2
+      ],
+      "sell": [
+        11,
+        9,
+        7,
+        5,
+        3
+      ]
+    },
+    {
+      "id": "cw_10",
+      "name": "Grey Death",
+      "subtitle": "Carfentanil Mix",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        18,
+        14,
+        11,
+        7,
+        5
+      ],
+      "sell": [
+        54,
+        36,
+        22,
+        17,
+        12
+      ]
+    },
+    {
+      "id": "cw_11",
+      "name": "Pink Fent",
+      "subtitle": "Tenderloin Foil",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        15,
+        12,
+        9,
+        6,
+        4
+      ],
+      "sell": [
+        45,
+        31,
+        19,
+        14,
+        10
+      ]
+    },
+    {
+      "id": "cw_12",
+      "name": "Gunpowder",
+      "subtitle": "Sonoran Tar",
+      "category": "Opiates",
+      "subcategory": "Street Opiates",
+      "track": "Opiates",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        11,
+        8,
+        6,
+        4,
+        3
+      ],
+      "sell": [
+        32,
+        21,
+        14,
+        10,
+        7
+      ]
+    },
+    {
+      "id": "fw_10",
+      "name": "Opana ER",
+      "subtitle": "Oxymorphone",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        38,
+        30,
+        23,
+        16,
+        11
+      ],
+      "sell": [
+        112,
+        76,
+        49,
+        37,
+        27
+      ]
+    },
+    {
+      "id": "fw_11",
+      "name": "Roxies",
+      "subtitle": "Roxicodone 30mg",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        35,
+        27,
+        21,
+        15,
+        10
+      ],
+      "sell": [
+        104,
+        71,
+        45,
+        34,
+        24
+      ]
+    },
+    {
+      "id": "fw_12",
+      "name": "Actavis Pint",
+      "subtitle": "Promethazine Syrup",
+      "category": "Opiates",
+      "subcategory": "Pharma Opiates",
+      "track": "Opiates",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        30,
+        24,
+        18,
+        13,
+        9
+      ],
+      "sell": [
+        89,
+        61,
+        39,
+        29,
+        21
+      ]
+    },
+    {
+      "id": "ma_10",
+      "name": "Vyvanse 70s",
+      "subtitle": "Lisdexamfetamine",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        15,
+        12,
+        9,
+        7,
+        5
+      ],
+      "sell": [
+        23,
+        18,
+        14,
+        10,
+        8
+      ],
+      "combatText": "2(R)-1 CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 0,
+        "flat": -1,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "ma_11",
+      "name": "Focalin XR",
+      "subtitle": "Dexmethylphenidate",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        11,
+        8,
+        6,
+        5,
+        4
+      ],
+      "sell": [
+        21,
+        16,
+        12,
+        9,
+        7
+      ],
+      "combatText": "(R)-1 CP",
+      "combat": {
+        "dice": 1,
+        "negDice": 0,
+        "flat": -1,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "ma_12",
+      "name": "Yellow Jackets",
+      "subtitle": "Ephedra Stack",
+      "category": "Uppers",
+      "subcategory": "Pill Uppers",
+      "track": "Uppers",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        7,
+        5,
+        4,
+        3,
+        2
+      ],
+      "sell": [
+        20,
+        15,
+        12,
+        9,
+        6
+      ],
+      "combatText": "2(R)-3 CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 0,
+        "flat": -3,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "ea_10",
+      "name": "Tina",
+      "subtitle": "Ice Shards",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        28,
+        22,
+        17,
+        13,
+        10
+      ],
+      "sell": [
+        50,
+        39,
+        30,
+        22,
+        17
+      ],
+      "combatText": "3(R)-2 CP",
+      "combat": {
+        "dice": 3,
+        "negDice": 0,
+        "flat": -2,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "ea_11",
+      "name": "Eight-Ball",
+      "subtitle": "Uncut Blow",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        32,
+        25,
+        19,
+        15,
+        11
+      ],
+      "sell": [
+        51,
+        39,
+        30,
+        23,
+        17
+      ],
+      "combatText": "2(R)-1 CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 0,
+        "flat": -1,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "ea_12",
+      "name": "Biker Crank",
+      "subtitle": "P2P Speed",
+      "category": "Uppers",
+      "subcategory": "Powder Uppers",
+      "track": "Uppers",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        22,
+        17,
+        13,
+        10,
+        8
+      ],
+      "sell": [
+        54,
+        41,
+        32,
+        24,
+        18
+      ],
+      "combatText": "2(R)-2(R) CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 2,
+        "flat": 0,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "mrb_13",
+      "name": "Sassafras",
+      "subtitle": "MDA",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        27,
+        21,
+        16,
+        15,
+        14
+      ],
+      "sell": [
+        44,
+        34,
+        26,
+        19,
+        15
+      ]
+    },
+    {
+      "id": "mrb_14",
+      "name": "Orange Teslas",
+      "subtitle": "Ecstasy",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        29,
+        23,
+        17,
+        16,
+        15
+      ],
+      "sell": [
+        49,
+        38,
+        29,
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mrb_15",
+      "name": "K-Hole S-Isomer",
+      "subtitle": "Ketamine",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        32,
+        25,
+        19,
+        18,
+        16
+      ],
+      "sell": [
+        55,
+        42,
+        32,
+        24,
+        18
+      ]
+    },
+    {
+      "id": "mrb_16",
+      "name": "Jungle Juice",
+      "subtitle": "Alkyl Nitrites",
+      "category": "Party",
+      "subcategory": "Party",
+      "track": "Party",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        21,
+        16,
+        13,
+        12,
+        11
+      ],
+      "sell": [
+        34,
+        26,
+        20,
+        15,
+        11
+      ]
+    },
+    {
+      "id": "grd_13",
+      "name": "Lil' Chino",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
+      "blocks": 0,
+      "henchmen": 1,
+      "sell": null,
+      "buy": [
+        9,
+        7,
+        4,
+        3,
+        3
+      ],
+      "combatText": "(R) CP & Weed Sells at +1 Rarity",
+      "combat": {
+        "dice": 1,
+        "negDice": 0,
+        "flat": 0
+      },
+      "bonusBlocks": 0,
+      "bonusHenchmen": 0,
+      "rarityBoostCategory": "Weed"
+    },
+    {
+      "id": "grd_14",
+      "name": "DJ Krystal",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
+      "blocks": 0,
+      "henchmen": 1,
+      "sell": null,
+      "buy": [
+        11,
+        9,
+        5,
+        4,
+        3
+      ],
+      "combatText": "1 CP & Party Sells at +1 Rarity",
+      "combat": {
+        "dice": 0,
+        "negDice": 0,
+        "flat": 1
+      },
+      "bonusBlocks": 0,
+      "bonusHenchmen": 0,
+      "rarityBoostCategory": "Party"
+    },
+    {
+      "id": "grd_15",
+      "name": "Svetlana",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
+      "blocks": 0,
+      "henchmen": 1,
+      "sell": null,
+      "buy": [
+        15,
+        12,
+        7,
+        6,
+        5
+      ],
+      "combatText": "2(R) - 1 CP & +■ SUV Space",
+      "combat": {
+        "dice": 2,
+        "negDice": 0,
+        "flat": -1
+      },
+      "bonusBlocks": 1,
+      "bonusHenchmen": 0
+    },
+    {
+      "id": "grd_16",
+      "name": "Sarge",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
+      "blocks": 0,
+      "henchmen": 1,
+      "sell": null,
+      "buy": [
+        18,
+        14,
+        9,
+        8,
+        6
+      ],
+      "combatText": "2 CP & Absorb 1 Wound - Destroyed when used",
+      "combat": {
+        "dice": 0,
+        "negDice": 0,
+        "flat": 2
+      },
+      "bonusBlocks": 0,
+      "bonusHenchmen": 0,
+      "absorbWounds": 1,
+      "destroyOnAbsorb": true
     }
   ],
   "missions": [
@@ -2411,7 +3008,7 @@
       "rewardText": "Cheapest Party on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Marble",
+        "track": "Party",
         "mode": "cheapest"
       },
       "favor": [
@@ -2430,7 +3027,7 @@
       "rewardText": "Cheapest Opiates on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Wine",
+        "track": "Opiates",
         "mode": "cheapest"
       },
       "favor": [
@@ -2450,7 +3047,7 @@
         18,
         12
       ],
-      "text": "Pick up Ammo Cans (Weapons \u2022 2\u25a0) in A5 (Merced), Deliver to A1 (Land's End). [Fenced Sell: 42/32/24/18/12]",
+      "text": "Pick up Ammo Cans (Weapons • 2■) in A5 (Merced), Deliver to A1 (Land's End). [Fenced Sell: 42/32/24/18/12]",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2538,7 +3135,7 @@
       "rewardText": "Any Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
+        "track": "Uppers",
         "mode": "any"
       },
       "favor": [
@@ -2557,7 +3154,7 @@
       "rewardText": "Any Opiates on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Wine",
+        "track": "Opiates",
         "mode": "any"
       },
       "favor": [
@@ -2594,7 +3191,7 @@
       "rewardText": "Any Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
+        "track": "Uppers",
         "mode": "any"
       },
       "favor": [
@@ -2631,7 +3228,7 @@
       "rewardText": "Cheapest Party on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Marble",
+        "track": "Party",
         "mode": "cheapest"
       },
       "favor": [
@@ -2649,7 +3246,7 @@
       "rewardText": "Cheapest Opiates on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Wine",
+        "track": "Opiates",
         "mode": "cheapest"
       },
       "favor": [
@@ -2685,7 +3282,7 @@
       "rewardText": "Any Opiates on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Wine",
+        "track": "Opiates",
         "mode": "any"
       },
       "favor": [
@@ -2722,7 +3319,7 @@
       "rewardText": "Cheapest Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
+        "track": "Uppers",
         "mode": "cheapest"
       },
       "favor": [
@@ -2776,7 +3373,7 @@
       "rewardText": "Any Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
+        "track": "Uppers",
         "mode": "any"
       },
       "favor": [
@@ -2794,7 +3391,7 @@
       "rewardText": "Any Weed on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Grain",
+        "track": "Weed",
         "mode": "any"
       },
       "favor": [
@@ -2813,7 +3410,7 @@
       "rewardText": "Any Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
+        "track": "Uppers",
         "mode": "any"
       },
       "favor": [
@@ -2869,7 +3466,7 @@
         18,
         12
       ],
-      "text": "Pick up Crate of ARs (Weapons \u2022 2\u25a0) in F3 (Ball Park), Deliver to A4 (Sunset). [Fenced Sell: 42/32/24/18/12]",
+      "text": "Pick up Crate of ARs (Weapons • 2■) in F3 (Ball Park), Deliver to A4 (Sunset). [Fenced Sell: 42/32/24/18/12]",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2903,7 +3500,7 @@
         35,
         26
       ],
-      "text": "Pick up Ketamine Jugs (Party \u2022 1\u25a0) in F1 (Treasure), Deliver to C4 (Castro). [Fenced Sell: 80/61/46/35/26]"
+      "text": "Pick up Ketamine Jugs (Party • 1■) in F1 (Treasure), Deliver to C4 (Castro). [Fenced Sell: 80/61/46/35/26]"
     },
     {
       "id": "mis_29",
@@ -2911,7 +3508,7 @@
       "rewardText": "Cheapest Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
+        "track": "Uppers",
         "mode": "cheapest"
       },
       "favor": [
@@ -2950,7 +3547,7 @@
         34,
         24
       ],
-      "text": "Pick up Coke Brick (Uppers \u2022 2\u25a0) in A6 (Daly City), Deliver to C1 (Marina). [Fenced Sell: 78/60/46/34/24]"
+      "text": "Pick up Coke Brick (Uppers • 2■) in A6 (Daly City), Deliver to C1 (Marina). [Fenced Sell: 78/60/46/34/24]"
     },
     {
       "id": "mis_31",
@@ -2958,7 +3555,7 @@
       "rewardText": "Cheapest Party on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Marble",
+        "track": "Party",
         "mode": "cheapest"
       },
       "favor": [
@@ -2976,7 +3573,7 @@
       "rewardText": "Cheapest Opiates on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Wine",
+        "track": "Opiates",
         "mode": "cheapest"
       },
       "favor": [
@@ -2996,7 +3593,7 @@
         17,
         13
       ],
-      "text": "Pick up Oxy Script Haul (Opiates \u2022 1\u25a0) in C5 (Noe Valley), Deliver to F1 (Treasure). [Fenced Sell: 54/37/23/17/13]"
+      "text": "Pick up Oxy Script Haul (Opiates • 1■) in C5 (Noe Valley), Deliver to F1 (Treasure). [Fenced Sell: 54/37/23/17/13]"
     },
     {
       "id": "mis_33",
@@ -3034,7 +3631,7 @@
       "rewardText": "Cheapest Opiates on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Wine",
+        "track": "Opiates",
         "mode": "cheapest"
       },
       "favor": [
@@ -3071,7 +3668,7 @@
       "rewardText": "Cheapest Party on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Marble",
+        "track": "Party",
         "mode": "cheapest"
       },
       "favor": [
@@ -3181,7 +3778,7 @@
       "rewardText": "Cheapest Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
+        "track": "Uppers",
         "mode": "cheapest"
       },
       "favor": [
@@ -3199,7 +3796,7 @@
       "rewardText": "Cheapest Weed on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Grain",
+        "track": "Weed",
         "mode": "cheapest"
       },
       "favor": [
@@ -3236,7 +3833,7 @@
       "rewardText": "Any Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
+        "track": "Uppers",
         "mode": "any"
       },
       "favor": [
@@ -3255,7 +3852,7 @@
       "rewardText": "Any Party on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Marble",
+        "track": "Party",
         "mode": "any"
       },
       "favor": [
@@ -3274,7 +3871,7 @@
       "rewardText": "Cheapest Opiates on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Wine",
+        "track": "Opiates",
         "mode": "cheapest"
       },
       "favor": [
@@ -3330,14 +3927,14 @@
         35,
         26
       ],
-      "text": "Pick up Molly Stash (Party \u2022 1\u25a0) in A1 (Land's End), Deliver to E3 (SoMa). [Fenced Sell: 80/61/46/35/26]"
+      "text": "Pick up Molly Stash (Party • 1■) in A1 (Land's End), Deliver to E3 (SoMa). [Fenced Sell: 80/61/46/35/26]"
     },
     {
       "id": "mis_51",
       "name": "Witness Protection",
       "kind": "kill_emperor_cancel",
       "description": "Protect the Boss (If Donald Trump or Jared Kushner is defeated by any Player, collect this reward and cancel every Regime Change)",
-      "rewardText": "20(d) & Cancels all active regicide missions",
+      "rewardText": "20(d) & Cancels all active Regime Change jobs",
       "reward": {
         "type": "regime_change",
         "amount": 20
@@ -3351,7 +3948,7 @@
       "rewardText": "Any Uppers on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Animals",
+        "track": "Uppers",
         "mode": "any"
       },
       "favor": [
@@ -3387,7 +3984,7 @@
       "rewardText": "Cheapest Opiates on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Wine",
+        "track": "Opiates",
         "mode": "cheapest"
       },
       "favor": [
@@ -3405,7 +4002,7 @@
       "rewardText": "Cheapest Opiates on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Wine",
+        "track": "Opiates",
         "mode": "cheapest"
       },
       "favor": [
@@ -3425,7 +4022,7 @@
         18,
         12
       ],
-      "text": "Pick up Crate of ARs (Weapons \u2022 2\u25a0) in B2 (Pac Heights), Deliver to D6 (Excelsior). [Fenced Sell: 42/32/24/18/12]",
+      "text": "Pick up Crate of ARs (Weapons • 2■) in B2 (Pac Heights), Deliver to D6 (Excelsior). [Fenced Sell: 42/32/24/18/12]",
       "combat": {
         "dice": 1,
         "negDice": 0,

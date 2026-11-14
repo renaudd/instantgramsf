@@ -88,7 +88,7 @@ DIR_DELTAS = {
 }
 
 # Internal track ids; displayed as Weed, Party, Uppers, Opiates, Weapons, Henchmen.
-TRACK_NAMES = ["Grain", "Marble", "Animals", "Wine", "Weapons", "Henchmen"]
+TRACK_NAMES = ["Weed", "Party", "Uppers", "Opiates", "Weapons", "Henchmen"]
 COL_TO_PRICE_INDEX = [0, 1, 2, 2, 3, 4]
 SCARCITY_LABELS = ["Precious (<<)", "Rare (<)", "Uncommon (=)", "Common (>)", "Abundant (>>)"]
 SCARCITY_SYMBOLS = ["<<", "<", "=", ">", ">>"]
@@ -590,40 +590,40 @@ BOT_PERSONAS = [
         "name": "Marcus Mercator",
         "color": "Z1",
         "strategy": "balanced",
-        "title": "Ostia Grain & Wine Syndic",
-        "description": "Balanced ROI trader who keeps a steady Henchman and cash reserve while fulfilling nearby contracts.",
+        "title": "Safe House Weed & Opiates Plug",
+        "description": "Balanced ROI dealer who keeps a steady Henchman and cash reserve while fulfilling nearby gigs.",
     },
     {
         "id": "luxury",
         "name": "Cornelia Severa",
         "color": "Z7",
         "strategy": "luxury",
-        "title": "Palatine Marble Purveyor",
-        "description": "Targets high-margin Marble & Fine Wine, leverages nightal Loans, and hunts +/++ scarcity sales.",
+        "title": "Marina Party & Pharma Purveyor",
+        "description": "Targets high-margin Party & Pharma Opiates, leverages nightly Loans, and hunts +/++ scarcity sales.",
     },
     {
         "id": "aggressive",
         "name": "Titus Valerius",
         "color": "Z3",
         "strategy": "aggressive",
-        "title": "Gladiator & Beasts Contractor",
-        "description": "Recruits Henchmen, Weapons, & Exotic Beasts, pursues Combat contracts, and pressures the leader.",
+        "title": "Muscle & Uppers Enforcer",
+        "description": "Recruits Henchmen, Weapons, & Powder Uppers, pursues Combat contracts, and pressures the leader.",
     },
     {
         "id": "missions",
         "name": "Julia Lucilla",
         "color": "Z11",
         "strategy": "missions",
-        "title": "Senatorial Courier",
-        "description": "Dedicated courier who routes efficiently across Rome's bridges to fulfill Delivery & Sell Missions.",
+        "title": "Five-Star Gig Courier",
+        "description": "Dedicated courier who routes efficiently across San Francisco to fulfill Delivery & Sell Jobs.",
     },
     {
         "id": "opportunist",
         "name": "Gaius Fulvius",
         "color": "Z9",
         "strategy": "opportunist",
-        "title": "Subura Night Runner",
-        "description": "Nimble smuggler who flips compact cargo, plays Influence aggressively, and wagers at Stadiums.",
+        "title": "Tenderloin Night Runner",
+        "description": "Nimble dealer who flips compact cargo, plays Influence aggressively, and wagers at Street Dice.",
     },
 ]
 
@@ -722,18 +722,18 @@ def get_player_suv_limits(player: Dict[str, Any]) -> Tuple[int, int]:
 def _resolve_track_for_category(cat: str) -> str:
     c = (cat or "").strip()
     if c in ("Cheap W", "Cheap Wine", "Fine W", "Fine Wine", "Fancy Wine", "Wine", "Street Opiates", "Pharma Opiates", "Opiates"):
-        return "Wine"
+        return "Opiates"
     if c in ("Meat A", "Meat Animals", "Meat Animal", "Exotic A", "Exotic Animals", "Exotic Animal", "Animals", "Animal", "Pill Uppers", "Powder Uppers", "Uppers", "Upper"):
-        return "Animals"
+        return "Uppers"
     if c in ("Party", "Party Drugs", "Marble"):
-        return "Marble"
+        return "Party"
     if c in ("Weed", "Grain"):
-        return "Grain"
+        return "Weed"
     if c in ("Henchmen", "Henchman", "Guards", "Guard"):
         return "Henchmen"
     if c in ("Weapons", "Weapon"):
         return "Weapons"
-    return "Grain"
+    return "Weed"
 
 
 def _create_mission_cargo_card(m: Dict[str, Any]) -> Dict[str, Any]:
@@ -1240,13 +1240,13 @@ def matches_category(card: Dict[str, Any], requested_cat: str) -> bool:
     if req in ("Exotic A", "Exotic Animals", "Exotic Animal", "Powder Uppers"):
         return c_sub in ("Exotic Animals", "Powder Uppers") or c_cat in ("Exotic Animals", "Powder Uppers")
     if req in ("Wine", "Opiates"):
-        return is_any_wine or c_trk == "Wine" or c_cat in ("Wine", "Cheap Wine", "Fine Wine", "Opiates", "Street Opiates", "Pharma Opiates")
+        return is_any_wine or c_trk in ("Opiates", "Wine") or c_cat in ("Wine", "Cheap Wine", "Fine Wine", "Opiates", "Street Opiates", "Pharma Opiates")
     if req in ("Animals", "Animal", "Uppers", "Upper"):
-        return c_trk == "Animals" or c_cat in ("Animals", "Meat Animals", "Exotic Animals", "Uppers", "Pill Uppers", "Powder Uppers")
+        return c_trk in ("Uppers", "Animals") or c_cat in ("Animals", "Meat Animals", "Exotic Animals", "Uppers", "Pill Uppers", "Powder Uppers")
     if req in ("Marble", "Party", "Party Drugs"):
-        return c_trk == "Marble" or c_cat in ("Marble", "Party", "Party Drugs")
+        return c_trk in ("Party", "Marble") or c_cat in ("Marble", "Party", "Party Drugs")
     if req in ("Grain", "Weed"):
-        return c_trk == "Grain" or c_cat in ("Grain", "Weed")
+        return c_trk in ("Weed", "Grain") or c_cat in ("Grain", "Weed")
     if req in ("Weapon", "Weapons"):
         return c_trk == "Weapons" or c_cat == "Weapons"
     if req in ("Henchmen", "Henchman", "Guards", "Guard"):
@@ -1578,7 +1578,7 @@ def _bot_complete_setup_discard(state: Dict[str, Any], player: Dict[str, Any]) -
             elif kind in ("sell", "delivery"):
                 sc += 15
         elif strat == "luxury":
-            if cat in ("Marble", "Fine Wine", "Exotic Animals"):
+            if cat in ("Party", "Pharma Opiates", "Powder Uppers", "Marble", "Fine Wine", "Exotic Animals"):
                 sc += 28
             if kind == "sell":
                 sc += 18
@@ -1914,7 +1914,7 @@ def grant_reward(
         elif rtype == "regime_change":
             amt = int(reward.get("amount", 20)) * cash_mult
             player["cash"] += amt
-            notes.append(f"+{amt}(d){mult_tag} & cancelled Regicide rewards")
+            notes.append(f"+{amt}(d){mult_tag} & cancelled Regime Change rewards")
         return notes
 
     # Saturdayback string parser for string rewards like "40(d)", "Cheapest Mkt Wine", "1 Meat A from market", "Weapon"
@@ -1948,8 +1948,8 @@ def grant_reward(
         notes.extend(apply_favor_list(player, [fac] * int(m_fav.group(1)), reason=f"reward ({rt_raw})"))
         return notes
     fp_pick = {
-        "weed": ("Grain", None), "party": ("Marble", None), "uppers": ("Animals", None),
-        "opiates": ("Wine", None), "weapon": ("Weapons", None), "henchm": ("Henchmen", None),
+        "weed": ("Weed", None), "party": ("Party", None), "uppers": ("Uppers", None),
+        "opiates": ("Opiates", None), "weapon": ("Weapons", None), "henchm": ("Henchmen", None),
     }
     for kw, (tr_name, subcat) in fp_pick.items():
         if (fp_low.startswith("cheapest ") or fp_low.startswith("any ")) and kw in fp_low:
@@ -1976,17 +1976,17 @@ def grant_reward(
     rt_low = rt_raw.lower()
     str_pick_spec: Optional[Tuple[str, Optional[str], str, bool]] = None
     if "cheap wine" in rt_low or "street opiates" in rt_low:
-        str_pick_spec = ("Wine", "Cheap Wine", "cheapest" if "cheapest" in rt_low else "any", False)
+        str_pick_spec = ("Opiates", "Street Opiates", "cheapest" if "cheapest" in rt_low else "any", False)
     elif "mkt wine" in rt_low or "market wine" in rt_low or "mkt opiates" in rt_low or "market opiates" in rt_low:
-        str_pick_spec = ("Wine", None, "cheapest" if "cheapest" in rt_low else "any", False)
+        str_pick_spec = ("Opiates", None, "cheapest" if "cheapest" in rt_low else "any", False)
     elif "meat a" in rt_low or "pill uppers" in rt_low:
-        str_pick_spec = ("Animals", "Meat Animals", "cheapest" if "cheapest" in rt_low else "any", False)
+        str_pick_spec = ("Uppers", "Pill Uppers", "cheapest" if "cheapest" in rt_low else "any", False)
     elif "exotic a" in rt_low or "powder uppers" in rt_low:
-        str_pick_spec = ("Animals", "Exotic Animals", "cheapest" if "cheapest" in rt_low else "any", False)
+        str_pick_spec = ("Uppers", "Powder Uppers", "cheapest" if "cheapest" in rt_low else "any", False)
     elif "mkt animal" in rt_low or "market animal" in rt_low or "mkt uppers" in rt_low or "market uppers" in rt_low:
-        str_pick_spec = ("Animals", None, "cheapest" if "cheapest" in rt_low else "any", False)
+        str_pick_spec = ("Uppers", None, "cheapest" if "cheapest" in rt_low else "any", False)
     elif "mkt marble" in rt_low or "market marble" in rt_low or "mkt party" in rt_low or "market party" in rt_low:
-        str_pick_spec = ("Marble", None, "cheapest" if "cheapest" in rt_low else "any", False)
+        str_pick_spec = ("Party", None, "cheapest" if "cheapest" in rt_low else "any", False)
     elif "mkt weapon" in rt_low or "market weapon" in rt_low:
         str_pick_spec = ("Weapons", None, "cheapest" if "cheapest" in rt_low else "any", False)
     elif rt_low == "weapon":
@@ -2913,9 +2913,9 @@ def _get_chart_roll_preview(
         return f"Rolled {r_rom} (III) → Begged for mercy! Lose all {len(player['influence'])} Influence cards, night continues."
     if chart_type == "mob":
         if r_clamped == 0:
-            return f"Rolled {r_rom} (0) → Protesters drinks all of {player['name']}'s Wine!"
+            return f"Rolled {r_rom} (0) → Protesters confiscate all of {player['name']}'s Opiates!"
         if r_clamped == 1:
-            return f"Rolled {r_rom} (I) → Protesters loots all of {player['name']}'s Grain!"
+            return f"Rolled {r_rom} (I) → Protesters loot all of {player['name']}'s Weed!"
         if r_clamped == 2:
             return f"Rolled {r_rom} (II) → Protesters seizes {player['name']}'s most expensive Cargo good!"
         return f"Rolled {r_rom} (III) → The crowd clamors noisily as {player['name']} passes safely!"
@@ -2942,8 +2942,8 @@ def _does_bot_want_post_chart_intervention(
     # Self-defense if player is a bot
     if player.get("isBot"):
         if chart_type == "mob":
-            if (r == 0 and any(c.get("track") == "Wine" for c in player["suv"])) or (
-                r == 1 and any(c.get("track") == "Grain" for c in player["suv"])
+            if (r == 0 and any(c.get("track") in ("Opiates", "Wine") for c in player["suv"])) or (
+                r == 1 and any(c.get("track") in ("Weed", "Grain") for c in player["suv"])
             ) or (r == 2 and len(player["suv"]) > 0):
                 if _get_player_post_chart_influence(player, chart_type, is_self=True):
                     return True
@@ -3001,8 +3001,8 @@ def _run_bot_post_chart_interventions(
     # 1. Self-defense by bot roller
     if player.get("isBot"):
         if c_type == "mob" and any("Man Of The People" in str(c.get("name", "")) for c in player["influence"]):
-            bad_mob = (r == 0 and any(c.get("track") == "Wine" for c in player["suv"])) or (
-                r == 1 and any(c.get("track") == "Grain" for c in player["suv"])
+            bad_mob = (r == 0 and any(c.get("track") in ("Opiates", "Wine") for c in player["suv"])) or (
+                r == 1 and any(c.get("track") in ("Weed", "Grain") for c in player["suv"])
             ) or (r == 2 and len(player["suv"]) > 0)
             if bad_mob:
                 motp = next(c for c in player["influence"] if "Man Of The People" in str(c.get("name", "")))
@@ -3048,7 +3048,7 @@ def _run_bot_post_chart_interventions(
         if tof_self:
             pos_fav = sum(v for v in player["favor"].values() if v > 0)
             bad_self = (
-                (c_type == "mob" and ((r == 0 and any(c.get("track") == "Wine" for c in player["suv"])) or (r == 1 and any(c.get("track") == "Grain" for c in player["suv"])) or (r == 2 and len(player["suv"]) > 0)))
+                (c_type == "mob" and ((r == 0 and any(c.get("track") in ("Opiates", "Wine") for c in player["suv"])) or (r == 1 and any(c.get("track") in ("Weed", "Grain") for c in player["suv"])) or (r == 2 and len(player["suv"]) > 0)))
                 or (c_type == "theater" and ((r == 0 and pos_fav >= 2) or r == 2))
                 or (c_type == "death" and (r == 0 or (r == 1 and len(player["suv"]) >= 2) or (r == 2 and player["cash"] >= 16)))
                 or (c_type == "schizophrenic" and r == 0)
@@ -3227,21 +3227,21 @@ def _apply_table_encounter_outcome(
     if enc_type == "mob":
         mob_lbl = "✓ Passed Safely"
         if r == 0:
-            wines = [c for c in list(player["suv"]) if c.get("track") == "Wine"]
+            wines = [c for c in list(player["suv"]) if c.get("track") in ("Opiates", "Wine")]
             for w in wines:
                 _remove_suv_item(state, player, w, reason="looted by Protesters")
             if wines:
                 state["lastStolenGood"] = wines[0]
-            msg = f"Protesters (rolled ®={r_rom})! The mob drank all {len(wines)} of {player['name']}'s Wine!"
-            mob_lbl = f"🍷 Lost {len(wines)} Wine" if wines else "🍷 No Wine Lost"
+            msg = f"Protesters (rolled ®={r_rom})! The protesters confiscated all {len(wines)} of {player['name']}'s Opiates!"
+            mob_lbl = f"💊 Lost {len(wines)} Opiates" if wines else "💊 No Opiates Lost"
         elif r == 1:
-            grains = [c for c in list(player["suv"]) if c.get("track") == "Grain"]
+            grains = [c for c in list(player["suv"]) if c.get("track") in ("Weed", "Grain")]
             for g in grains:
                 _remove_suv_item(state, player, g, reason="looted by Protesters")
             if grains:
                 state["lastStolenGood"] = grains[0]
-            msg = f"Protesters (rolled ®={r_rom})! The mob looted all {len(grains)} of {player['name']}'s Grain!"
-            mob_lbl = f"🌾 Lost {len(grains)} Grain" if grains else "🌾 No Grain Lost"
+            msg = f"Protesters (rolled ®={r_rom})! The protesters looted all {len(grains)} of {player['name']}'s Weed!"
+            mob_lbl = f"🌿 Lost {len(grains)} Weed" if grains else "🌿 No Weed Lost"
         elif r == 2:
             if player["suv"]:
                 player["suv"].sort(key=_item_base_value, reverse=True)
@@ -3262,7 +3262,7 @@ def _apply_table_encounter_outcome(
                 state,
                 kind="table_encounter",
                 title=f"🔥 PROTESTERS ENCOUNTER — {player['name']}",
-                subtitle="0: Lose Wine • I: Lose Grain • II: Lose Best Good • III: Clamors Noisily",
+                subtitle="0: Lose Opiates • I: Lose Weed • II: Lose Best Good • III: Clamors Noisily",
                 groups=[{
                     "rollerName": player["name"],
                     "rollerType": "player",
@@ -3482,15 +3482,64 @@ def _sync_mission_and_influence_card_data(state: Dict[str, Any]) -> None:
             canon_mc = mkt_by_id[mc_obj["id"]]
             for k, v in canon_mc.items():
                 mc_obj[k] = copy.deepcopy(v)
+    _legacy_track_remap = {"Grain": "Weed", "Marble": "Party", "Animals": "Uppers", "Wine": "Opiates", "Guards": "Henchmen"}
+    _legacy_cat_remap = {
+        "Grain": "Weed", "Marble": "Party", "Animals": "Uppers", "Meat Animals": "Pill Uppers",
+        "Exotic Animals": "Powder Uppers", "Wine": "Opiates", "Cheap Wine": "Street Opiates",
+        "Fine Wine": "Pharma Opiates", "Guards": "Henchmen", "Guard": "Henchman",
+    }
+    nts = state.get("nightTrackShifts")
+    if isinstance(nts, dict):
+        for old_tk, new_tk in _legacy_track_remap.items():
+            if old_tk in nts:
+                val = nts.pop(old_tk)
+                nts.setdefault(new_tk, val)
+        for tk in TRACK_NAMES:
+            nts.setdefault(tk, 0)
     mb = state.get("marketBoard")
     if isinstance(mb, dict):
+        for old_tk, new_tk in _legacy_track_remap.items():
+            if old_tk in mb:
+                old_list = mb.pop(old_tk)
+                if new_tk not in mb or not mb[new_tk]:
+                    mb[new_tk] = old_list
+        for tk in TRACK_NAMES:
+            mb.setdefault(tk, [])
         for track_cards in mb.values():
             if isinstance(track_cards, list):
                 for slot in track_cards:
-                    if isinstance(slot, dict) and slot.get("id") in mkt_by_id:
-                        canon_mc = mkt_by_id[slot["id"]]
-                        for k, v in canon_mc.items():
-                            slot[k] = copy.deepcopy(v)
+                    if isinstance(slot, dict):
+                        if slot.get("id") in mkt_by_id:
+                            canon_mc = mkt_by_id[slot["id"]]
+                            for k, v in canon_mc.items():
+                                slot[k] = copy.deepcopy(v)
+                        else:
+                            slot["track"] = _legacy_track_remap.get(slot.get("track"), slot.get("track"))
+                            slot["category"] = _legacy_cat_remap.get(slot.get("category"), slot.get("category"))
+                            slot["subcategory"] = _legacy_cat_remap.get(slot.get("subcategory"), slot.get("subcategory"))
+    for p in state.get("players", []):
+        for suv_obj in p.get("suv", []):
+            if isinstance(suv_obj, dict):
+                suv_obj["track"] = _legacy_track_remap.get(suv_obj.get("track"), suv_obj.get("track") or _resolve_track_for_category(suv_obj.get("category", "Weed")))
+                suv_obj["category"] = _legacy_cat_remap.get(suv_obj.get("category"), suv_obj.get("category"))
+                suv_obj["subcategory"] = _legacy_cat_remap.get(suv_obj.get("subcategory"), suv_obj.get("subcategory"))
+        for rwd in (p.get("pendingMarketReward") or []):
+            if isinstance(rwd, dict):
+                rwd["track"] = _legacy_track_remap.get(rwd.get("track"), rwd.get("track"))
+                if rwd.get("subcategory"):
+                    rwd["subcategory"] = _legacy_cat_remap.get(rwd["subcategory"], rwd["subcategory"])
+    if isinstance(rb, dict):
+        for cell_v in rb.values():
+            if not isinstance(cell_v, dict):
+                continue
+            tiles_to_fix = list(cell_v.get("stack") or []) + ([cell_v["revealed"]] if isinstance(cell_v.get("revealed"), dict) else [])
+            for t_obj in tiles_to_fix:
+                for s_e in (t_obj.get("sells") or []):
+                    if isinstance(s_e, dict) and s_e.get("category") in _legacy_cat_remap:
+                        s_e["category"] = _legacy_cat_remap[s_e["category"]]
+                for b_e in (t_obj.get("buys") or []):
+                    if isinstance(b_e, dict) and b_e.get("category") in _legacy_cat_remap:
+                        b_e["category"] = _legacy_cat_remap[b_e["category"]]
     elif isinstance(mb, list):
         for slot in mb:
             if isinstance(slot, dict) and slot.get("id") in mkt_by_id:
@@ -3591,7 +3640,7 @@ def resolve_table_encounter(
             preview_txt = _get_chart_roll_preview(player, enc_type, r, sooth_goal)
             if enc_type == "mob":
                 title_str = f"🔥 PROTESTERS ENCOUNTER — {player['name']}"
-                sub_str = "0: Lose Wine • I: Lose Grain • II: Lose Best Good • III: Clamors Noisily"
+                sub_str = "0: Lose Opiates • I: Lose Weed • II: Lose Best Good • III: Clamors Noisily"
                 die_lbl = "Protesters ®"
                 card_nm = "Protesters"
             elif enc_type == "theater":
@@ -3962,7 +4011,7 @@ def _enforce_refused_demand_after_defeat(state: Dict[str, Any], player: Dict[str
         mod = normalize_scarcity_modifier(raw_mod_str)
         max_b, _ = get_player_suv_limits(player)
         used_b, _ = get_player_suv_usage(player)
-        for t_name in ("Weapons", "Grain", "Wine", "Marble", "Animals"):
+        for t_name in ("Weapons", "Weed", "Opiates", "Party", "Uppers"):
             tr = state["marketBoard"].get(t_name, [])
             for col_idx, c in enumerate(list(tr)):
                 if req_cat == "Any" or matches_category(c, req_cat):
@@ -4266,7 +4315,7 @@ def _finalize_combat_after_post_roll(state: Dict[str, Any], player: Dict[str, An
                         m_rc,
                         mr,
                         mf,
-                        context_detail=f"Defeated {card['name']} in Combat ({player_cp} CP vs. {opp_cp} CP) — cancelled Regicide!",
+                        context_detail=f"Defeated {card['name']} in Combat ({player_cp} CP vs. {opp_cp} CP) — cancelled Regime Change!",
                     )
                     _recycle_mission_cards(state, m_rc)
                     r_notes.extend([f"{p_rc['name']} triggered '{m_rc['name']}'!"] + mr + mf)
@@ -4284,7 +4333,7 @@ def _finalize_combat_after_post_roll(state: Dict[str, Any], player: Dict[str, An
                                 under_reg = m_reg.pop("underInfluence", [])
                                 p_reg["influence"].extend(under_reg)
                             _recycle_mission_cards(state, m_reg)
-                            cancel_note = f"{p_reg['name']}'s '{m_reg['name']}' reward was cancelled by 'Regime Change'!"
+                            cancel_note = f"{p_reg['name']}'s '{m_reg['name']}' reward was cancelled by 'Witness Protection'!"
                             add_log(state, cancel_note, "mission")
                             r_notes.append(cancel_note)
             else:
@@ -5619,7 +5668,7 @@ def _start_npc_offer(state: Dict[str, Any], player: Dict[str, Any], card: Dict[s
 
         candidates: List[Dict[str, Any]] = []
         if src_spec in ("market", "market_or_deck") and not is_top_of_deck:
-            for t_name in ("Weapons", "Grain", "Wine", "Marble", "Animals"):
+            for t_name in ("Weapons", "Weed", "Opiates", "Party", "Uppers"):
                 for col_idx, c in enumerate(state["marketBoard"].get(t_name, [])):
                     if req_cat == "Any" or matches_category(c, req_cat):
                         pr, sym = _compute_npc_offer_buy_price(state, c, "market", col_idx, mod, fixed_price, action_text)
@@ -9868,7 +9917,7 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
                 )
 
             if len(items_to_sell) > 1:
-                sold_label = f"bulk Grain ({', '.join(sold_parts)} @ {sym}){am_log_note}"
+                sold_label = f"bulk Weed ({', '.join(sold_parts)} @ {sym}){am_log_note}"
             else:
                 sold_label = f"{lead_item['name']} ({total_price}d @ {sym}){am_log_note}"
 
@@ -9910,7 +9959,7 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
                 add_log(state, f"{player['name']} fulfilled Sell Mission '{matched_mission['name']}' in {curr_cell}! {' '.join(r_notes + f_notes)}", "mission")
 
             if len(items_to_sell) > 1:
-                return True, f"Bulk-sold {len(items_to_sell)} Grain cards for {total_price}(d)."
+                return True, f"Bulk-sold {len(items_to_sell)} Weed cards for {total_price}(d)."
             return True, f"Sold {lead_item['name']} for {total_price}(d)."
 
         if act_type == "delivery_forum_buy":
@@ -10404,14 +10453,14 @@ def _execute_influence_card(state: Dict[str, Any], player: Dict[str, Any], card:
         if not ok_swap:
             return False, err_swap
 
-    if "Wine Forger" in cname:
+    if "Wine Forger" in cname or "Fentanyl Press" in cname or "Opiates Forger" in cname:
         ok_swap, err_swap, _ = _validate_and_apply_suv_space_swaps(
             state,
             player,
             discard_suv_ids=action.get("discardSUVIds"),
             fire_henchman_ids=action.get("fireHenchmanIds"),
             incoming_blocks=1,
-            reason="to add Forged Wine to SUV",
+            reason="to add Pressed Fentanyl to SUV",
         )
         if not ok_swap:
             return False, err_swap
@@ -10816,13 +10865,13 @@ def _execute_influence_card(state: Dict[str, Any], player: Dict[str, Any], card:
         )
         add_log(state, f"{player['name']} played '{cname}' (+{cash_b}(d), {' '.join(f_notes)})!", "action")
         return True, f"+{cash_b}(d) and Favor updated."
-    if "Wine Forger" in cname:
+    if "Wine Forger" in cname or "Fentanyl Press" in cname or "Opiates Forger" in cname:
         player["suv"].append({
             "id": f"forged_wine_{secrets.token_hex(2)}",
-            "name": "Forged Wine",
-            "category": "Wine",
-            "subcategory": "Fine Wine",
-            "track": "Wine",
+            "name": "Pressed Fentanyl",
+            "category": "Opiates",
+            "subcategory": "Pharma Opiates",
+            "track": "Opiates",
             "blocks": 1,
             "henchmen": 0,
             "sell": [12, 9, 6, 4, 3],
@@ -10830,8 +10879,8 @@ def _execute_influence_card(state: Dict[str, Any], player: Dict[str, Any], card:
             "purchasePrice": 0,
             "countsAsAnyWine": True,
         })
-        add_log(state, f"{player['name']} played 'Wine Forger' — added Forged Wine (counts as any Wine) to SUV!", "action")
-        return True, "Added Forged Wine to SUV."
+        add_log(state, f"{player['name']} played 'Fentanyl Press' — added Pressed Fentanyl (counts as any Opiates) to SUV!", "action")
+        return True, "Added Pressed Fentanyl to SUV."
     if "Prophecy" in cname:
         target_p = player
         raw_t = action.get("targetPlayerIndex")
@@ -11156,7 +11205,7 @@ def _run_bot_market_turn(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
         existing_grain_cnt = sum(
             1 for c in bot.get("suv", []) if not c.get("isMissionCargo") and matches_category(c, "Grain")
         )
-        for track_name in ("Marble", "Wine", "Animals", "Weapons", "Grain"):
+        for track_name in ("Party", "Opiates", "Uppers", "Weapons", "Weed"):
             track = state["marketBoard"].get(track_name, [])
             for col_idx, card in enumerate(track):
                 blocks = int(card.get("blocks", 1) or 1)
@@ -11170,12 +11219,12 @@ def _run_bot_market_turn(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
                 bonus = 0.0
                 if any(matches_category(card, mc) for mc in mission_cats):
                     bonus += 13.0 if strategy == "missions" else 9.0
-                if track_name == "Grain" and existing_grain_cnt >= 1 and profit >= 2:
+                if track_name in ("Weed", "Grain") and existing_grain_cnt >= 1 and profit >= 2:
                     # Bulk Grain Sale synergy: additional Grain cards sell in the same single hourly Transaction!
                     bonus += 3.0
-                if strategy == "luxury" and (track_name == "Marble" or card.get("subcategory") == "Fine Wine"):
+                if strategy == "luxury" and (track_name in ("Party", "Marble") or card.get("subcategory") in ("Pharma Opiates", "Fine Wine")):
                     bonus += 4.5
-                elif strategy == "aggressive" and (track_name == "Weapons" or card.get("subcategory") == "Exotic Animals"):
+                elif strategy == "aggressive" and (track_name == "Weapons" or card.get("subcategory") in ("Powder Uppers", "Exotic Animals")):
                     bonus += 4.0
                 elif strategy == "opportunist" and blocks == 1:
                     bonus += 2.5
@@ -11338,7 +11387,7 @@ def _bot_try_proactive_self_influence(state: Dict[str, Any], bot: Dict[str, Any]
             _execute_influence_card(state, bot, c, {})
             add_npc_event(state, bot, "influence", "Played 'SUVwright' (+2■)", cell=bot.get("position"), visual={"kind": "influence", "cardName": nm, "outcomeLabel": "🛒 +2■ Space"})
             max_b, _ = get_player_suv_limits(bot)
-        elif "Wine Forger" in nm and used_b + 1 <= max_b and int(state.get("turn", 1)) <= 7:
+        elif ("Wine Forger" in nm or "Fentanyl Press" in nm) and used_b + 1 <= max_b and int(state.get("turn", 1)) <= 7:
             _execute_influence_card(state, bot, c, {})
             add_npc_event(state, bot, "influence", "Played 'Wine Forger'", cell=bot.get("position"), visual={"kind": "influence", "cardName": nm, "outcomeLabel": "🍷 Wine Forger"})
             used_b, _ = get_player_suv_usage(bot)
@@ -11360,7 +11409,7 @@ def _bot_try_adversarial_turn_influence(state: Dict[str, Any], bot: Dict[str, An
     if ss_card:
         best_track = None
         best_leader_val = 0
-        for t_name in ("Marble", "Wine", "Animals", "Weapons", "Grain"):
+        for t_name in ("Party", "Opiates", "Uppers", "Weapons", "Weed"):
             if any(c.get("track") == t_name for c in bot.get("suv", [])):
                 continue
             track_cards = state["marketBoard"].get(t_name, [])
@@ -11670,7 +11719,7 @@ def _bot_try_transact(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
                 under = m.pop("underInfluence", [])
                 bot["influence"].extend(under)
                 r_notes.append(f"+{len(under)} Schizophrenic Influence Card(s)")
-            sold_desc = f"{len(items_sold)} Grain ({', '.join(x['name'] for x in items_sold)})" if len(items_sold) > 1 else lead_item["name"]
+            sold_desc = f"{len(items_sold)} Weed ({', '.join(x['name'] for x in items_sold)})" if len(items_sold) > 1 else lead_item["name"]
             patron_lbl = f" for {m['patronName']}" if m.get("patronName") else ""
             f_notes = apply_favor_list(
                 bot,
@@ -11757,7 +11806,7 @@ def _bot_try_transact(state: Dict[str, Any], bot: Dict[str, Any]) -> None:
             bot["cash"] += total_p
             bot["transactedThisTurn"] = True
             _inc_player_stat(bot, "itemsSold", len(items_sold))
-            sold_desc = f"bulk Grain ({', '.join(x['name'] for x in items_sold)})" if len(items_sold) > 1 else lead_item["name"]
+            sold_desc = f"bulk Weed ({', '.join(x['name'] for x in items_sold)})" if len(items_sold) > 1 else lead_item["name"]
             add_log(state, f"{bot['name']} sold {sold_desc} ({total_p}d @ {sym}){am_note} in {curr_cell}.", "action")
             add_npc_event(
                 state,

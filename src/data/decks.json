@@ -1530,60 +1530,6 @@
       "tier": "gen"
     },
     {
-      "id": "pat_27",
-      "name": "AI Ethicist",
-      "deck": "Celebrities",
-      "type": "character",
-      "faction": "TECH",
-      "bio": "“Concerned, professionally.”",
-      "combatFormula": "2(R)+2",
-      "friendlyFavor": [
-        "TECH"
-      ],
-      "friendlyReward": "+1 Influence",
-      "hostileFavor": [
-        "-TECH"
-      ],
-      "combatReward": "12(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": "=0",
-          "type": "deck_quest_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_strict",
-          "actionText": "Sell Party at + in B5!!",
-          "mission": {
-            "kind": "sell",
-            "item": "Party",
-            "pickupCell": null,
-            "deliverCell": "B5",
-            "category": "Party",
-            "modifier": "+",
-            "target": null,
-            "name": "AI Ethicist’s Job"
-          }
-        }
-      ],
-      "actionText": "(QUEST_ICON)!! Sell Party at + in B5!!",
-      "mission": {
-        "kind": "sell",
-        "item": "Party",
-        "pickupCell": null,
-        "deliverCell": "B5",
-        "category": "Party",
-        "modifier": "+",
-        "target": null,
-        "name": "AI Ethicist’s Job"
-      },
-      "tier": "gen"
-    },
-    {
       "id": "pat_28",
       "name": "Edgelord Streamer",
       "deck": "Celebrities",
@@ -1717,6 +1663,108 @@
         "name": "Radicalized YouTuber’s Job"
       },
       "tier": "gen"
+    },
+    {
+      "id": "pat_31",
+      "name": "Latin Trap Star",
+      "deck": "Celebrities",
+      "type": "character",
+      "faction": "MS13",
+      "bio": "“VIP booth at the Mission club, entourages four deep.”",
+      "combatFormula": "2(R)+1",
+      "friendlyFavor": [
+        "MS13",
+        "-MAGA"
+      ],
+      "friendlyReward": "12(d)",
+      "hostileFavor": [
+        "-MS13"
+      ],
+      "combatReward": "10(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": "=0",
+          "type": "mission_request",
+          "actionText": "Sell Party at + in D4!",
+          "mission": {
+            "kind": "sell",
+            "item": "Party",
+            "pickupCell": null,
+            "deliverCell": "D4",
+            "category": "Party",
+            "modifier": "+",
+            "target": null,
+            "name": "Latin Trap Star’s Job"
+          }
+        },
+        {
+          "condition": ">=1",
+          "type": "offer",
+          "actionText": "Sell Uppers at ++?",
+          "mission": {
+            "kind": "sell",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Uppers",
+            "modifier": "++",
+            "target": null
+          }
+        }
+      ],
+      "actionText": "(QUEST_ICON)! Sell Party at + in D4! • [?] Sell Uppers at ++?",
+      "mission": {
+        "kind": "sell",
+        "item": "Party",
+        "pickupCell": null,
+        "deliverCell": "D4",
+        "category": "Party",
+        "modifier": "+",
+        "target": null,
+        "name": "Latin Trap Star’s Job"
+      },
+      "tier": "t2"
+    },
+    {
+      "id": "pat_32",
+      "name": "Lowrider King",
+      "deck": "Celebrities",
+      "type": "character",
+      "faction": "MS13",
+      "bio": "“Chrome hydraulics bouncing down 24th Street.”",
+      "combatFormula": "3(R)",
+      "friendlyFavor": [
+        "MS13"
+      ],
+      "friendlyReward": "Cheapest Uppers",
+      "hostileFavor": [
+        "-MS13",
+        "-DSA"
+      ],
+      "combatReward": "9(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_offer"
+        },
+        {
+          "condition": ">=1",
+          "type": "offer",
+          "actionText": "Move again this turn?",
+          "mission": null
+        }
+      ],
+      "actionText": "[?] Move again this turn?",
+      "mission": null,
+      "tier": "t2"
     }
   ],
   "cops": [
@@ -2039,19 +2087,16 @@
       "name": "Traffic Cop",
       "deck": "Cops",
       "type": "character",
-      "faction": "TECH",
+      "faction": "DSA",
       "bio": "“License and registration.”",
       "combatFormula": "2X(R)-2",
       "friendlyFavor": [
-        "TECH",
-        "MAGA",
-        "-ISIS"
+        "DSA",
+        "-MAGA"
       ],
       "friendlyReward": "+1 TECH Favor",
       "hostileFavor": [
-        "-TECH",
-        "-MAGA",
-        "DSA"
+        "-DSA"
       ],
       "combatReward": "8(d)",
       "reactions": [
@@ -2088,18 +2133,16 @@
       "name": "Rookie",
       "deck": "Cops",
       "type": "character",
-      "faction": "TECH",
+      "faction": "MS13",
       "bio": "“First night on the job.”",
       "combatFormula": "X(R)-1",
       "friendlyFavor": [
-        "TECH",
-        "MAGA",
-        "-ISIS"
+        "MS13",
+        "-MAGA"
       ],
       "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-TECH",
-        "-MAGA"
+        "-MS13"
       ],
       "combatReward": "5(d)",
       "reactions": [
@@ -2771,172 +2814,6 @@
       "tier": "gen"
     },
     {
-      "id": "leg_22",
-      "name": "SFPD Narcotics Unit",
-      "deck": "Cops",
-      "type": "character",
-      "faction": "MAGA",
-      "bio": "“That’s evidence now.”",
-      "combatFormula": "2X",
-      "friendlyFavor": [
-        "MAGA",
-        "TECH",
-        "-ISIS"
-      ],
-      "friendlyReward": "Cheapest Weapon",
-      "hostileFavor": [
-        "-MAGA",
-        "-TECH",
-        "ISIS"
-      ],
-      "combatReward": "9(d)",
-      "reactions": [
-        {
-          "condition": "<-1",
-          "type": "combat"
-        },
-        {
-          "condition": "-1..0",
-          "type": "combat",
-          "ifCarrying": "Opiates or Party"
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_strict",
-          "actionText": "Sell Opiates at + in E1!!",
-          "mission": {
-            "kind": "sell",
-            "item": "Opiates",
-            "pickupCell": null,
-            "deliverCell": "E1",
-            "category": "Opiates",
-            "modifier": "+",
-            "target": null,
-            "name": "SFPD Narcotics Unit’s Job"
-          }
-        }
-      ],
-      "actionText": "(QUEST_ICON)!! Sell Opiates at + in E1!!",
-      "mission": {
-        "kind": "sell",
-        "item": "Opiates",
-        "pickupCell": null,
-        "deliverCell": "E1",
-        "category": "Opiates",
-        "modifier": "+",
-        "target": null,
-        "name": "SFPD Narcotics Unit’s Job"
-      },
-      "tier": "t2"
-    },
-    {
-      "id": "leg_23",
-      "name": "DEA Task Force",
-      "deck": "Cops",
-      "type": "character",
-      "faction": "MAGA",
-      "bio": "“Knock knock.”",
-      "combatFormula": "2X(R)+1",
-      "friendlyFavor": [
-        "MAGA",
-        "TECH",
-        "-ISIS"
-      ],
-      "friendlyReward": "Cheapest Uppers",
-      "hostileFavor": [
-        "-MAGA",
-        "-TECH",
-        "ISIS"
-      ],
-      "combatReward": "14(d)",
-      "reactions": [
-        {
-          "condition": "<-1",
-          "type": "combat"
-        },
-        {
-          "condition": "-1..0",
-          "type": "combat",
-          "ifCarrying": "Opiates"
-        },
-        {
-          "condition": "=1",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Opiates!!"
-        },
-        {
-          "condition": ">=2",
-          "type": "mission_request",
-          "actionText": "Kill an ISIS!",
-          "mission": {
-            "kind": "kill",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": null,
-            "modifier": null,
-            "target": "ISIS",
-            "name": "DEA Task Force’s Job"
-          }
-        }
-      ],
-      "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)! Kill an ISIS!",
-      "mission": {
-        "kind": "kill",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
-        "target": "ISIS",
-        "name": "DEA Task Force’s Job"
-      },
-      "tier": "t1"
-    },
-    {
-      "id": "leg_24",
-      "name": "ICE Raid Team",
-      "deck": "Cops",
-      "type": "character",
-      "faction": "MAGA",
-      "bio": "“No warrant needed, apparently.”",
-      "combatFormula": "2X(R)+2",
-      "friendlyFavor": [
-        "MAGA",
-        "TECH",
-        "-ISIS"
-      ],
-      "friendlyReward": "Cheapest Uppers",
-      "hostileFavor": [
-        "-MAGA",
-        "DSA",
-        "TECH"
-      ],
-      "combatReward": "15(d)",
-      "reactions": [
-        {
-          "condition": "<-1",
-          "type": "combat"
-        },
-        {
-          "condition": "-1..0",
-          "type": "combat",
-          "ifCarrying": "Henchmen or Weapons"
-        },
-        {
-          "condition": "=1",
-          "type": "demand_strict"
-        },
-        {
-          "condition": ">=2",
-          "type": "offer"
-        }
-      ],
-      "actionText": "[!!] Give me all of your Weapons!! • [?] Buy Cheapest Mkt Weapon at -?",
-      "mission": null,
-      "tier": "t1"
-    },
-    {
       "id": "leg_25",
       "name": "Border Patrol",
       "deck": "Cops",
@@ -3190,6 +3067,166 @@
         "name": "Muni Fare Inspector’s Job"
       },
       "tier": "t3"
+    },
+    {
+      "id": "leg_31",
+      "name": "Evidence Locker Clerk",
+      "deck": "Cops",
+      "type": "character",
+      "faction": "MS13",
+      "bio": "“Half the seized bricks never make it to the incinerator.”",
+      "combatFormula": "X(R)+1",
+      "friendlyFavor": [
+        "MS13",
+        "-MAGA"
+      ],
+      "friendlyReward": "Cheapest Opiates",
+      "hostileFavor": [
+        "-MS13"
+      ],
+      "combatReward": "8(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "Pay 6(d)!!"
+        },
+        {
+          "condition": ">=1",
+          "type": "offer",
+          "actionText": "Buy Cheapest Mkt Opiates at -?"
+        }
+      ],
+      "actionText": "[!!] Pay 6(d)!! • [?] Buy Cheapest Mkt Opiates at -?",
+      "mission": null,
+      "tier": "t2"
+    },
+    {
+      "id": "leg_32",
+      "name": "Diplomatic Security",
+      "deck": "Cops",
+      "type": "character",
+      "faction": "ISIS",
+      "bio": "“Consulate plates, diplomatic immunity, zero questions.”",
+      "combatFormula": "2X(R)-1",
+      "friendlyFavor": [
+        "ISIS",
+        "-MAGA",
+        "-TECH"
+      ],
+      "friendlyReward": "Cheapest Weapon",
+      "hostileFavor": [
+        "-ISIS",
+        "MAGA"
+      ],
+      "combatReward": "7(d)",
+      "reactions": [
+        {
+          "condition": "<=0",
+          "type": "combat"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "Sell Weapons at + in F1?",
+          "mission": {
+            "kind": "sell",
+            "item": "Weapons",
+            "pickupCell": null,
+            "deliverCell": "F1",
+            "category": "Weapons",
+            "modifier": "+",
+            "target": null,
+            "name": "Diplomatic Security’s Job"
+          }
+        }
+      ],
+      "actionText": "(QUEST_ICON)? Sell Weapons at + in F1?",
+      "mission": {
+        "kind": "sell",
+        "item": "Weapons",
+        "pickupCell": null,
+        "deliverCell": "F1",
+        "category": "Weapons",
+        "modifier": "+",
+        "target": null,
+        "name": "Diplomatic Security’s Job"
+      },
+      "tier": "t2"
+    },
+    {
+      "id": "leg_33",
+      "name": "Sleeper Agent",
+      "deck": "Cops",
+      "type": "character",
+      "faction": "ISIS",
+      "bio": "“Badge in the wallet, encrypted Telegram on the burner.”",
+      "combatFormula": "X(R)+X",
+      "friendlyFavor": [
+        "ISIS",
+        "MS13",
+        "-MAGA"
+      ],
+      "friendlyReward": "+1 Influence",
+      "hostileFavor": [
+        "-ISIS"
+      ],
+      "combatReward": "6(d)",
+      "reactions": [
+        {
+          "condition": "<=0",
+          "type": "combat"
+        },
+        {
+          "condition": ">=1",
+          "type": "deck_quest_offer"
+        }
+      ],
+      "actionText": "",
+      "mission": null,
+      "tier": "t2"
+    },
+    {
+      "id": "leg_34",
+      "name": "Port Customs Inspector",
+      "deck": "Cops",
+      "type": "character",
+      "faction": "ISIS",
+      "bio": "“Waves the right shipping containers straight through Pier 80.”",
+      "combatFormula": "2X-1",
+      "friendlyFavor": [
+        "ISIS",
+        "-TECH"
+      ],
+      "friendlyReward": "Cheapest Opiates",
+      "hostileFavor": [
+        "-ISIS",
+        "MAGA"
+      ],
+      "combatReward": "7(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "Give me all of your Weapons!!"
+        },
+        {
+          "condition": ">=1",
+          "type": "offer",
+          "actionText": "Buy Cheapest Mkt Weapon at -?"
+        }
+      ],
+      "actionText": "[!!] Give me all of your Weapons!! • [?] Buy Cheapest Mkt Weapon at -?",
+      "mission": null,
+      "tier": "t2"
     }
   ],
   "criminals": [
@@ -3926,38 +3963,6 @@
       "tier": "t2"
     },
     {
-      "id": "nef_21",
-      "name": "Unhoused",
-      "deck": "Criminals",
-      "type": "character",
-      "faction": "DSA",
-      "bio": "“They’re letting him vote with no ID.”",
-      "combatFormula": "X(R)-1",
-      "friendlyFavor": [
-        "DSA",
-        "TECH",
-        "-MAGA"
-      ],
-      "friendlyReward": "Cheapest Henchman",
-      "hostileFavor": [
-        "-DSA"
-      ],
-      "combatReward": "6(d)",
-      "reactions": [
-        {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": ">=0",
-          "type": "demand_strict"
-        }
-      ],
-      "actionText": "[!!] Give me all of your Party!!",
-      "mission": null,
-      "tier": "t3"
-    },
-    {
       "id": "nef_22",
       "name": "Undocumented",
       "deck": "Criminals",
@@ -4346,6 +4351,219 @@
         "name": "Coyote’s Job"
       },
       "tier": "t2"
+    },
+    {
+      "id": "nef_10",
+      "name": "Hamas",
+      "deck": "Criminals",
+      "type": "character",
+      "faction": "ISIS",
+      "bio": "“Tunnels under everything.”",
+      "combatFormula": "2X(R)",
+      "friendlyFavor": [
+        "ISIS"
+      ],
+      "friendlyReward": "Cheapest Henchman",
+      "hostileFavor": [
+        "-ISIS",
+        "MAGA"
+      ],
+      "combatReward": "7(d)",
+      "reactions": [
+        {
+          "condition": "<=0",
+          "type": "combat"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_request",
+          "actionText": "Sell Weapons at + in F6!",
+          "mission": {
+            "kind": "sell",
+            "item": "Weapons",
+            "pickupCell": null,
+            "deliverCell": "F6",
+            "category": "Weapons",
+            "modifier": "+",
+            "target": null,
+            "name": "Hamas’s Job"
+          }
+        }
+      ],
+      "actionText": "(QUEST_ICON)! Sell Weapons at + in F6!",
+      "mission": {
+        "kind": "sell",
+        "item": "Weapons",
+        "pickupCell": null,
+        "deliverCell": "F6",
+        "category": "Weapons",
+        "modifier": "+",
+        "target": null,
+        "name": "Hamas’s Job"
+      },
+      "tier": "t1"
+    },
+    {
+      "id": "nef_13",
+      "name": "Iran",
+      "deck": "Criminals",
+      "type": "character",
+      "faction": "ISIS",
+      "bio": "“Enrichment program, very enriched.”",
+      "combatFormula": "2X(R)+X",
+      "friendlyFavor": [
+        "ISIS",
+        "MAGA",
+        "DSA",
+        "TECH"
+      ],
+      "friendlyReward": "Cheapest Opiates",
+      "hostileFavor": [
+        "-ISIS",
+        "-DSA"
+      ],
+      "combatReward": "7(d)",
+      "reactions": [
+        {
+          "condition": "<=0",
+          "type": "combat"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_request",
+          "actionText": "Kill a Cop!",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": "Cops",
+            "targetDeck": "Cops",
+            "name": "Iran’s Job"
+          }
+        }
+      ],
+      "actionText": "(QUEST_ICON)! Kill a Cop!",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "Cops",
+        "targetDeck": "Cops",
+        "name": "Iran’s Job"
+      },
+      "tier": "t1"
+    },
+    {
+      "id": "nef_30",
+      "name": "Shot Caller",
+      "deck": "Criminals",
+      "type": "character",
+      "faction": "MS13",
+      "bio": "“Runs the Mission block from a contraband cell phone in Pelican Bay.”",
+      "combatFormula": "2X(R)+1",
+      "friendlyFavor": [
+        "MS13",
+        "-MAGA"
+      ],
+      "friendlyReward": "Cheapest Opiates",
+      "hostileFavor": [
+        "-MS13"
+      ],
+      "combatReward": "10(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "Give me all of your Opiates!!"
+        },
+        {
+          "condition": ">=1",
+          "type": "mission_offer",
+          "actionText": "Kill a Cop?",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": "Cops",
+            "targetDeck": "Cops",
+            "name": "Shot Caller’s Job"
+          }
+        }
+      ],
+      "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)? Kill a Cop?",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "Cops",
+        "targetDeck": "Cops",
+        "name": "Shot Caller’s Job"
+      },
+      "tier": "t1"
+    },
+    {
+      "id": "nef_31",
+      "name": "Militia Prepper",
+      "deck": "Criminals",
+      "type": "character",
+      "faction": "MAGA",
+      "bio": "“Drove down from Jefferson State with a trunk full of surplus crates.”",
+      "combatFormula": "2X(R)-1",
+      "friendlyFavor": [
+        "MAGA",
+        "-DSA",
+        "-MS13"
+      ],
+      "friendlyReward": "Cheapest Weapon",
+      "hostileFavor": [
+        "-MAGA",
+        "DSA"
+      ],
+      "combatReward": "9(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "Give me all of your Weapons!!"
+        },
+        {
+          "condition": ">=1",
+          "type": "offer",
+          "actionText": "Sell Uppers at ++?",
+          "mission": {
+            "kind": "sell",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Uppers",
+            "modifier": "++",
+            "target": null
+          }
+        }
+      ],
+      "actionText": "[!!] Give me all of your Weapons!! • [?] Sell Uppers at ++?",
+      "mission": null,
+      "tier": "t2"
     }
   ],
   "influence": [
@@ -4642,7 +4860,7 @@
     },
     {
       "id": "inf_50",
-      "name": "Wine Forger",
+      "name": "Fentanyl Press",
       "effectText": "Counts as any one Opiates for job purposes. Or sell: [12, 9, 6, 4, 3]",
       "effectCode": "wine_forger",
       "favorGain": null,
