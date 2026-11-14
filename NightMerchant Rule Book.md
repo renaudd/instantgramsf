@@ -333,7 +333,7 @@ COMBAT BETWEEN PLAYERS
 - **`(T)` (Gold Transaction Circle)**: Represents **1 hourly Transaction** (Sell 1 Good, Bulk-Sell all Weed, Buy 1 Open-Air Market Good, or Gamble at Street Dice).
 - **`(R)` / `®` (Action Die)**: 6-sided custom die with faces **`0, 0, I, I, II, III`** (average roll = `1.167`).
 - **`++`  `+`  `=`  `-`  `--` (Tile Buyer & Open-Air Market Modifiers)**: Shifts the active Market Scarcity column 1 or 2 steps left toward `<<` Precious (`+` / `++`) or right toward `>>` Abundant (`-` / `--`).
-- **Persistent (`⤹`) & Refresh (`↻` / `⤿`) Tile Icons**: Persistent landmark tiles remain face-up across nights; Refresh tiles discard after their encounter resolves and immediately reveal the next tile.
+- **Persistent (`⤹`) & Refresh (`↻` / `⤿`) Tile Icons**: Persistent tiles remain face-up when entered during the Night instead of revealing a new tile (all face-up tiles are always discarded at Dawn); Refresh tiles carry only a Center Encounter icon and the Refresh symbol below it (no edge icons), and after resolving that encounter the player immediately reveals and resolves the next tile in the stack.
 - **Encounter Icons**:
   - **Celebrities** (*Gold Hoodie Silhouette*): Draws 1 card from the Celebrities deck (`X = 1`).
   - **Cops** (*Blue 8-Point Police Hat Silhouette*): Draws 1 card from the Cops deck (`X = 1–4`).

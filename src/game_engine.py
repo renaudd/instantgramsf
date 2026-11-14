@@ -344,10 +344,10 @@ GATE_EXIT_DISTRIBUTIONS: Dict[str, List[str]] = {
 def get_effective_tile_edges(coord: str, tile: Optional[Dict[str, Any]]) -> Dict[str, Any]:
     if not tile or not isinstance(tile.get("edges"), dict):
         return {}
+    if tile.get("refresh"):
+        return {}
     src = normalize_cell_id(coord) or coord
     idx = int(tile.get("index", 0) or 0)
-    if tile.get("refresh") and idx == 12 and src not in FORUM_CELLS:
-        return {}
     edges = dict(tile.get("edges") or {})
     gate = GATE_EXITS.get(src)
     if gate:
@@ -12786,6 +12786,17 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
             for dk_k in rem_enc:
                 rem_enc[dk_k] += ic[dk_k]
         stack_len = len(rem_tiles)
+        top_tile_view = None
+        if rem_tiles:
+            top_tile_view = copy.deepcopy(rem_tiles[0])
+            top_tile_view["edges"] = get_effective_tile_edges(coord, top_tile_view)
+            for s_entry in (top_tile_view.get("sells") or []):
+                if "modifier" in s_entry:
+                    s_entry["modifier"] = normalize_scarcity_modifier(str(s_entry["modifier"]))
+            for b_entry in (top_tile_view.get("buys") or []):
+                if "modifier" in b_entry:
+                    b_entry["modifier"] = normalize_scarcity_modifier(str(b_entry["modifier"]))
+            top_tile_view["summary"] = _summarize_tile(top_tile_view)
         rome_view[coord] = {
             "coord": coord,
             "name": NEIGHBORHOOD_NAMES.get(coord, cell.get("name", coord)),
@@ -12793,6 +12804,7 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
             "isForum": coord in FORUM_CELLS,
             "westBank": coord in WEST_BANK_CELLS,
             "revealed": rev,
+            "topTile": top_tile_view,
             "stackCount": stack_len,
             "unrevealedCount": stack_len,
             "stackStats": {
@@ -13243,6 +13255,7 @@ def sanitize_state_for_player(state: Dict[str, Any], user_id: Optional[int]) -> 
         "hourEffects": state.get("hourEffects", {}),
         "romeBoard": rome_view,
         "deckCounts": {k: len(v) for k, v in state["decks"].items()},
+        "deckTopCards": {k: copy.deepcopy(v[0]) if v else None for k, v in state["decks"].items()},
         "deckTotalCounts": deck_totals,
         "factionDeckCounts": faction_deck_counts,
         "encounterDeckFactionTotals": enc_faction_totals,

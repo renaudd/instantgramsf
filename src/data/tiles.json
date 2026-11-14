@@ -29,7 +29,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -43,7 +43,7 @@
           "N": "red",
           "NE": "red",
           "E": "toll_2",
-          "SE": "criminals_2",
+          "SE": "criminals_1",
           "S": "schizophrenic",
           "SW": "red",
           "W": "red",
@@ -60,7 +60,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -91,10 +91,10 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
-        "refresh": true,
+        "refresh": false,
         "coord": "A1",
         "image": "/assets/tiles/CI/3.png"
       },
@@ -105,7 +105,7 @@
           "N": "red",
           "NE": "red",
           "E": "mob",
-          "SE": "criminals_2",
+          "SE": "criminals_1",
           "S": "green",
           "SW": "red",
           "W": "red",
@@ -149,7 +149,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -180,7 +180,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -214,7 +214,7 @@
         "encounter": "theater",
         "gamble": false,
         "persistent": false,
-        "refresh": true,
+        "refresh": false,
         "coord": "A1",
         "image": "/assets/tiles/CI/7.png"
       },
@@ -242,7 +242,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -286,7 +286,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_1",
+          "E": "criminals_2",
           "SE": "criminals_1",
           "S": "green",
           "SW": "red",
@@ -304,10 +304,10 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
-        "refresh": true,
+        "refresh": false,
         "coord": "A1",
         "image": "/assets/tiles/CI/10.png"
       },
@@ -335,7 +335,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -345,16 +345,7 @@
       {
         "id": "A1_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "toll_2",
-          "SE": "cops_1",
-          "S": "red",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "mob",
@@ -392,7 +383,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "cops_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -407,7 +398,7 @@
           "NE": "red",
           "E": "green",
           "SE": "schizophrenic",
-          "S": "criminals_1",
+          "S": "criminals_2",
           "SW": "green",
           "W": "red",
           "NW": "red"
@@ -419,7 +410,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "cops_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -446,7 +437,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -565,7 +556,7 @@
         "id": "B1_8",
         "index": 8,
         "edges": {
-          "N": "cops_2",
+          "N": "cops_1",
           "NE": "red",
           "E": "green",
           "SE": "red",
@@ -680,16 +671,7 @@
       {
         "id": "B1_12",
         "index": 12,
-        "edges": {
-          "N": "schizophrenic",
-          "NE": "red",
-          "E": "cops_1",
-          "SE": "toll_2",
-          "S": "toll_2",
-          "SW": "cops_1",
-          "W": "toll_2",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "celebrities_1",
@@ -727,7 +709,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -754,7 +736,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -889,7 +871,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -916,7 +898,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1015,16 +997,7 @@
       {
         "id": "C1_12",
         "index": 12,
-        "edges": {
-          "N": "toll_2",
-          "NE": "red",
-          "E": "red",
-          "SE": "green",
-          "S": "cops_1",
-          "SW": "green",
-          "W": "cops_1",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "celebrities_1",
@@ -1062,7 +1035,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1089,7 +1062,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -1116,7 +1089,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1143,7 +1116,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1159,7 +1132,7 @@
           "E": "red",
           "SE": "green",
           "S": "red",
-          "SW": "criminals_1",
+          "SW": "criminals_2",
           "W": "green",
           "NW": "red"
         },
@@ -1224,7 +1197,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1241,7 +1214,7 @@
           "SE": "mob",
           "S": "red",
           "SW": "green",
-          "W": "cops_1",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -1251,7 +1224,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1267,7 +1240,7 @@
           "E": "criminals_1",
           "SE": "green",
           "S": "criminals_1",
-          "SW": "criminals_1",
+          "SW": "criminals_2",
           "W": "toll_2",
           "NW": "red"
         },
@@ -1278,7 +1251,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1350,16 +1323,7 @@
       {
         "id": "D1_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "green",
-          "SE": "criminals_1",
-          "S": "green",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "celebrities_1",
@@ -1397,7 +1361,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -1424,7 +1388,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1451,7 +1415,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1478,7 +1442,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -1559,7 +1523,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1586,7 +1550,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1644,7 +1608,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -1657,7 +1621,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_3",
+          "E": "cops_1",
           "SE": "red",
           "S": "mob",
           "SW": "toll_2",
@@ -1685,16 +1649,7 @@
       {
         "id": "E1_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "criminals_3",
-          "SE": "criminals_1",
-          "S": "red",
-          "SW": "green",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "celebrities_1",
@@ -1749,7 +1704,7 @@
           "SE": "red",
           "S": "green",
           "SW": "cops_1",
-          "W": "cops_2",
+          "W": "cops_1",
           "NW": "red"
         },
         "sells": [
@@ -1759,7 +1714,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "cops_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -1786,7 +1741,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1813,7 +1768,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -1907,7 +1862,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_2",
+          "E": "criminals_1",
           "SE": "red",
           "S": "criminals_1",
           "SW": "toll_2",
@@ -1992,7 +1947,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_3",
+          "E": "cops_2",
           "SE": "red",
           "S": "toll_1",
           "SW": "toll_3",
@@ -2020,16 +1975,7 @@
       {
         "id": "F1_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "schizophrenic",
-          "SE": "red",
-          "S": "toll_1",
-          "SW": "cops_2",
-          "W": "cops_2",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "celebrities_1",
@@ -2075,7 +2021,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -2110,7 +2056,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -2124,7 +2070,7 @@
           "N": "green",
           "NE": "green",
           "E": "red",
-          "SE": "criminals_2",
+          "SE": "criminals_1",
           "S": "green",
           "SW": "red",
           "W": "red",
@@ -2141,7 +2087,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -2183,7 +2129,7 @@
         "id": "A2_5",
         "index": 5,
         "edges": {
-          "N": "criminals_2",
+          "N": "criminals_1",
           "NE": "green",
           "E": "red",
           "SE": "theater",
@@ -2203,7 +2149,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -2265,7 +2211,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": true,
         "persistent": false,
         "refresh": false,
@@ -2296,7 +2242,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -2307,9 +2253,9 @@
         "id": "A2_9",
         "index": 9,
         "edges": {
-          "N": "cops_1",
+          "N": "cops_2",
           "NE": "toll_1",
-          "E": "cops_1",
+          "E": "cops_2",
           "SE": "theater",
           "S": "red",
           "SW": "red",
@@ -2340,7 +2286,7 @@
         "edges": {
           "N": "mob",
           "NE": "toll_1",
-          "E": "criminals_1",
+          "E": "criminals_3",
           "SE": "cops_1",
           "S": "red",
           "SW": "red",
@@ -2361,7 +2307,7 @@
         "index": 11,
         "edges": {
           "N": "red",
-          "NE": "cops_1",
+          "NE": "cops_2",
           "E": "toll_2",
           "SE": "red",
           "S": "toll_2",
@@ -2380,7 +2326,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": true,
         "persistent": false,
         "refresh": false,
@@ -2390,19 +2336,10 @@
       {
         "id": "A2_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "cops_1",
-          "E": "green",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
-        "encounter": null,
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -2472,7 +2409,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -2483,7 +2420,7 @@
         "id": "B2_3",
         "index": 3,
         "edges": {
-          "N": "cops_1",
+          "N": "cops_2",
           "NE": "celebrities_1",
           "E": "toll_2",
           "SE": "celebrities_1",
@@ -2530,7 +2467,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -2619,7 +2556,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -2646,7 +2583,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -2749,19 +2686,10 @@
       {
         "id": "B2_12",
         "index": 12,
-        "edges": {
-          "N": "toll_2",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "toll_2",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -2823,7 +2751,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -2850,7 +2778,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -2877,7 +2805,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -2958,7 +2886,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -2985,7 +2913,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -2998,11 +2926,11 @@
         "edges": {
           "N": "green",
           "NE": "celebrities_1",
-          "E": "cops_1",
+          "E": "cops_2",
           "SE": "theater",
           "S": "celebrities_1",
           "SW": "green",
-          "W": "cops_1",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -3012,7 +2940,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3043,7 +2971,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3061,7 +2989,7 @@
           "S": "green",
           "SW": "green",
           "W": "toll_2",
-          "NW": "cops_2"
+          "NW": "cops_1"
         },
         "sells": [
           {
@@ -3084,16 +3012,7 @@
       {
         "id": "C2_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "green",
-          "SE": "red",
-          "S": "green",
-          "SW": "red",
-          "W": "green",
-          "NW": "toll_2"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "schizophrenic",
@@ -3158,7 +3077,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3212,7 +3131,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -3227,7 +3146,7 @@
           "NE": "green",
           "E": "criminals_1",
           "SE": "green",
-          "S": "criminals_2",
+          "S": "criminals_1",
           "SW": "toll_2",
           "W": "red",
           "NW": "green"
@@ -3266,7 +3185,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": "criminals_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3278,7 +3197,7 @@
         "index": 7,
         "edges": {
           "N": "schizophrenic",
-          "NE": "cops_1",
+          "NE": "cops_2",
           "E": "green",
           "SE": "green",
           "S": "red",
@@ -3293,7 +3212,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -3320,7 +3239,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3347,7 +3266,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3378,7 +3297,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3409,7 +3328,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -3419,16 +3338,7 @@
       {
         "id": "D2_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "green",
-          "E": "red",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "criminals_1",
@@ -3466,7 +3376,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3493,7 +3403,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3506,7 +3416,7 @@
         "edges": {
           "N": "mob",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "criminals_1",
           "SE": "red",
           "S": "toll_2",
           "SW": "toll_2",
@@ -3520,7 +3430,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -3574,7 +3484,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -3586,13 +3496,13 @@
         "index": 6,
         "edges": {
           "N": "red",
-          "NE": "criminals_1",
+          "NE": "criminals_2",
           "E": "green",
           "SE": "green",
           "S": "red",
           "SW": "red",
           "W": "green",
-          "NW": "criminals_3"
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -3612,7 +3522,7 @@
         "id": "E2_7",
         "index": 7,
         "edges": {
-          "N": "criminals_1",
+          "N": "criminals_3",
           "NE": "red",
           "E": "red",
           "SE": "green",
@@ -3628,7 +3538,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -3644,7 +3554,7 @@
           "E": "green",
           "SE": "red",
           "S": "cops_2",
-          "SW": "criminals_3",
+          "SW": "criminals_1",
           "W": "red",
           "NW": "green"
         },
@@ -3682,7 +3592,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3696,10 +3606,10 @@
           "N": "criminals_2",
           "NE": "toll_3",
           "E": "cops_2",
-          "SE": "cops_3",
+          "SE": "cops_2",
           "S": "cops_2",
           "SW": "green",
-          "W": "criminals_2",
+          "W": "criminals_3",
           "NW": "green"
         },
         "sells": [
@@ -3713,7 +3623,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3726,7 +3636,7 @@
         "edges": {
           "N": "toll_2",
           "NE": "cops_3",
-          "E": "criminals_3",
+          "E": "criminals_2",
           "SE": "criminals_3",
           "S": "toll_2",
           "SW": "toll_2",
@@ -3744,7 +3654,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -3754,16 +3664,7 @@
       {
         "id": "E2_12",
         "index": 12,
-        "edges": {
-          "N": "green",
-          "NE": "criminals_3",
-          "E": "cops_2",
-          "SE": "toll_3",
-          "S": "green",
-          "SW": "green",
-          "W": "green",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "celebrities_1",
@@ -3817,7 +3718,7 @@
           "E": "red",
           "SE": "red",
           "S": "schizophrenic",
-          "SW": "cops_1",
+          "SW": "cops_2",
           "W": "green",
           "NW": "red"
         },
@@ -3828,7 +3729,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -3855,7 +3756,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3882,7 +3783,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -3936,7 +3837,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3963,7 +3864,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3974,7 +3875,7 @@
         "id": "F2_8",
         "index": 8,
         "edges": {
-          "N": "cops_2",
+          "N": "cops_1",
           "NE": "red",
           "E": "red",
           "SE": "red",
@@ -4017,7 +3918,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4028,14 +3929,14 @@
         "id": "F2_10",
         "index": 10,
         "edges": {
-          "N": "cops_1",
+          "N": "cops_2",
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_2",
+          "S": "cops_1",
           "SW": "celebrities_1",
           "W": "toll_2",
-          "NW": "cops_1"
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -4048,7 +3949,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4063,7 +3964,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "criminals_2",
+          "S": "criminals_1",
           "SW": "red",
           "W": "green",
           "NW": "toll_2"
@@ -4079,7 +3980,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4089,16 +3990,7 @@
       {
         "id": "F2_12",
         "index": 12,
-        "edges": {
-          "N": "criminals_1",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
-          "S": "toll_3",
-          "SW": "red",
-          "W": "red",
-          "NW": "green"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "cops_2",
@@ -4144,7 +4036,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4206,7 +4098,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4259,7 +4151,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4290,7 +4182,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4321,7 +4213,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4334,7 +4226,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_1",
+          "E": "cops_2",
           "SE": "red",
           "S": "cops_1",
           "SW": "red",
@@ -4436,7 +4328,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4446,16 +4338,7 @@
       {
         "id": "A3_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "green",
-          "E": "red",
-          "SE": "criminals_1",
-          "S": "red",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "theater",
@@ -4528,7 +4411,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4555,7 +4438,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4586,7 +4469,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -4675,7 +4558,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -4702,7 +4585,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -4733,7 +4616,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4786,7 +4669,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4796,16 +4679,7 @@
       {
         "id": "B3_12",
         "index": 12,
-        "edges": {
-          "N": "green",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "schizophrenic",
@@ -4832,7 +4706,7 @@
           "E": "red",
           "SE": "red",
           "S": "schizophrenic",
-          "SW": "cops_3",
+          "SW": "cops_4",
           "W": "criminals_4",
           "NW": "red"
         },
@@ -4856,7 +4730,7 @@
             "modifier": "-"
           }
         ],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4872,8 +4746,8 @@
           "E": "red",
           "SE": "mob",
           "S": "cops_3",
-          "SW": "criminals_4",
-          "W": "cops_3",
+          "SW": "criminals_3",
+          "W": "cops_4",
           "NW": "red"
         },
         "sells": [
@@ -4896,7 +4770,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4910,9 +4784,9 @@
           "N": "red",
           "NE": "red",
           "E": "mob",
-          "SE": "cops_3",
+          "SE": "cops_4",
           "S": "criminals_4",
-          "SW": "cops_3",
+          "SW": "cops_4",
           "W": "red",
           "NW": "red"
         },
@@ -4936,7 +4810,7 @@
             "modifier": "-"
           }
         ],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4951,7 +4825,7 @@
           "NE": "red",
           "E": "mob",
           "SE": "criminals_4",
-          "S": "cops_3",
+          "S": "cops_2",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -4989,7 +4863,7 @@
         "edges": {
           "N": "mob",
           "NE": "red",
-          "E": "criminals_4",
+          "E": "criminals_3",
           "SE": "toll_3",
           "S": "red",
           "SW": "red",
@@ -5027,9 +4901,9 @@
         "id": "C3_6",
         "index": 6,
         "edges": {
-          "N": "cops_3",
+          "N": "cops_4",
           "NE": "red",
-          "E": "cops_3",
+          "E": "cops_4",
           "SE": "celebrities_1",
           "S": "red",
           "SW": "schizophrenic",
@@ -5073,7 +4947,7 @@
           "SE": "green",
           "S": "red",
           "SW": "red",
-          "W": "criminals_4",
+          "W": "criminals_2",
           "NW": "red"
         },
         "sells": [
@@ -5096,7 +4970,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5113,7 +4987,7 @@
           "SE": "red",
           "S": "red",
           "SW": "criminals_4",
-          "W": "cops_3",
+          "W": "cops_4",
           "NW": "red"
         },
         "sells": [
@@ -5151,10 +5025,10 @@
           "NE": "cops_3",
           "E": "red",
           "SE": "red",
-          "S": "criminals_4",
-          "SW": "cops_3",
-          "W": "criminals_3",
-          "NW": "cops_3"
+          "S": "criminals_3",
+          "SW": "cops_4",
+          "W": "criminals_4",
+          "NW": "cops_4"
         },
         "sells": [
           {
@@ -5176,7 +5050,7 @@
             "modifier": "+"
           }
         ],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5191,10 +5065,10 @@
           "NE": "criminals_3",
           "E": "red",
           "SE": "criminals_4",
-          "S": "cops_3",
-          "SW": "criminals_3",
+          "S": "cops_2",
+          "SW": "criminals_4",
           "W": "cops_4",
-          "NW": "criminals_3"
+          "NW": "criminals_4"
         },
         "sells": [
           {
@@ -5216,7 +5090,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5230,9 +5104,9 @@
           "N": "red",
           "NE": "toll_2",
           "E": "criminals_4",
-          "SE": "cops_3",
-          "S": "criminals_3",
-          "SW": "cops_4",
+          "SE": "cops_4",
+          "S": "criminals_2",
+          "SW": "cops_3",
           "W": "red",
           "NW": "toll_2"
         },
@@ -5266,40 +5140,13 @@
       {
         "id": "C3_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "cops_3",
-          "E": "cops_3",
-          "SE": "criminals_3",
-          "S": "cops_4",
-          "SW": "red",
-          "W": "red",
-          "NW": "cops_3"
-        },
-        "sells": [
-          {
-            "category": "Opiates",
-            "modifier": "+"
-          },
-          {
-            "category": "Weapons",
-            "modifier": "="
-          },
-          {
-            "category": "Weed",
-            "modifier": "-"
-          }
-        ],
-        "buys": [
-          {
-            "category": "Uppers",
-            "modifier": "="
-          }
-        ],
-        "encounter": null,
+        "edges": {},
+        "sells": [],
+        "buys": [],
+        "encounter": "celebrities_1",
         "gamble": false,
-        "persistent": true,
-        "refresh": false,
+        "persistent": false,
+        "refresh": true,
         "coord": "C3",
         "image": "/assets/tiles/CIII/12.png"
       }
@@ -5320,8 +5167,8 @@
           "E": "red",
           "SE": "red",
           "S": "mob",
-          "SW": "cops_3",
-          "W": "criminals_4",
+          "SW": "cops_2",
+          "W": "criminals_3",
           "NW": "toll_3"
         },
         "sells": [
@@ -5344,7 +5191,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5360,8 +5207,8 @@
           "E": "red",
           "SE": "red",
           "S": "mob",
-          "SW": "criminals_4",
-          "W": "cops_3",
+          "SW": "criminals_3",
+          "W": "cops_4",
           "NW": "red"
         },
         "sells": [
@@ -5384,7 +5231,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5399,8 +5246,8 @@
           "NE": "red",
           "E": "mob",
           "SE": "red",
-          "S": "criminals_4",
-          "SW": "cops_3",
+          "S": "criminals_3",
+          "SW": "cops_4",
           "W": "red",
           "NW": "celebrities_1"
         },
@@ -5437,9 +5284,9 @@
         "edges": {
           "N": "red",
           "NE": "mob",
-          "E": "cops_3",
+          "E": "cops_2",
           "SE": "red",
-          "S": "cops_3",
+          "S": "cops_4",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -5504,7 +5351,7 @@
             "modifier": "-"
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5522,7 +5369,7 @@
           "S": "red",
           "SW": "red",
           "W": "red",
-          "NW": "criminals_4"
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -5544,7 +5391,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "cops_4",
+        "encounter": "cops_3",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5556,13 +5403,13 @@
         "index": 7,
         "edges": {
           "N": "red",
-          "NE": "cops_3",
+          "NE": "cops_4",
           "E": "schizophrenic",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_4",
-          "NW": "cops_3"
+          "W": "criminals_3",
+          "NW": "cops_4"
         },
         "sells": [
           {
@@ -5600,7 +5447,7 @@
           "E": "schizophrenic",
           "SE": "red",
           "S": "red",
-          "SW": "criminals_4",
+          "SW": "criminals_3",
           "W": "cops_3",
           "NW": "criminals_3"
         },
@@ -5639,9 +5486,9 @@
           "NE": "red",
           "E": "red",
           "SE": "criminals_3",
-          "S": "criminals_4",
+          "S": "criminals_3",
           "SW": "cops_3",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "toll_3"
         },
         "sells": [
@@ -5664,7 +5511,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5675,13 +5522,13 @@
         "id": "D3_10",
         "index": 10,
         "edges": {
-          "N": "cops_3",
+          "N": "cops_4",
           "NE": "red",
           "E": "red",
           "SE": "cops_3",
           "S": "cops_3",
           "SW": "criminals_3",
-          "W": "cops_4",
+          "W": "cops_2",
           "NW": "green"
         },
         "sells": [
@@ -5704,7 +5551,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5719,8 +5566,8 @@
           "NE": "red",
           "E": "criminals_4",
           "SE": "toll_2",
-          "S": "criminals_3",
-          "SW": "cops_4",
+          "S": "criminals_4",
+          "SW": "cops_3",
           "W": "green",
           "NW": "red"
         },
@@ -5744,7 +5591,7 @@
             "modifier": "-"
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5754,40 +5601,13 @@
       {
         "id": "D3_12",
         "index": 12,
-        "edges": {
-          "N": "cops_3",
-          "NE": "criminals_4",
-          "E": "cops_3",
-          "SE": "cops_3",
-          "S": "cops_4",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
-        "sells": [
-          {
-            "category": "Opiates",
-            "modifier": "+"
-          },
-          {
-            "category": "Party",
-            "modifier": "="
-          },
-          {
-            "category": "Weed",
-            "modifier": "-"
-          }
-        ],
-        "buys": [
-          {
-            "category": "Uppers",
-            "modifier": "="
-          }
-        ],
-        "encounter": null,
+        "edges": {},
+        "sells": [],
+        "buys": [],
+        "encounter": "criminals_3",
         "gamble": false,
-        "persistent": true,
-        "refresh": false,
+        "persistent": false,
+        "refresh": true,
         "coord": "D3",
         "image": "/assets/tiles/DIII/12.png"
       }
@@ -5808,8 +5628,8 @@
           "E": "red",
           "SE": "red",
           "S": "celebrities_1",
-          "SW": "cops_3",
-          "W": "criminals_4",
+          "SW": "cops_2",
+          "W": "criminals_3",
           "NW": "red"
         },
         "sells": [
@@ -5819,7 +5639,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5833,7 +5653,7 @@
           "N": "red",
           "NE": "red",
           "E": "red",
-          "SE": "criminals_3",
+          "SE": "criminals_4",
           "S": "celebrities_1",
           "SW": "criminals_4",
           "W": "cops_3",
@@ -5862,7 +5682,7 @@
           "E": "red",
           "SE": "cops_3",
           "S": "schizophrenic",
-          "SW": "cops_3",
+          "SW": "cops_4",
           "W": "red",
           "NW": "red"
         },
@@ -5873,7 +5693,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5887,7 +5707,7 @@
           "N": "red",
           "NE": "criminals_3",
           "E": "schizophrenic",
-          "SE": "criminals_4",
+          "SE": "criminals_3",
           "S": "red",
           "SW": "red",
           "W": "red",
@@ -5911,8 +5731,8 @@
         "id": "E3_5",
         "index": 5,
         "edges": {
-          "N": "criminals_3",
-          "NE": "cops_3",
+          "N": "criminals_4",
+          "NE": "cops_4",
           "E": "red",
           "SE": "toll_3",
           "S": "red",
@@ -5927,7 +5747,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5965,13 +5785,13 @@
         "id": "E3_7",
         "index": 7,
         "edges": {
-          "N": "criminals_4",
+          "N": "criminals_3",
           "NE": "cops_3",
           "E": "schizophrenic",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_4",
+          "W": "criminals_3",
           "NW": "mob"
         },
         "sells": [
@@ -5981,7 +5801,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5992,13 +5812,13 @@
         "id": "E3_8",
         "index": 8,
         "edges": {
-          "N": "cops_3",
+          "N": "cops_2",
           "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "mob",
           "SW": "criminals_4",
-          "W": "cops_3",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -6025,7 +5845,7 @@
           "SE": "red",
           "S": "cops_3",
           "SW": "cops_3",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "cops_3"
         },
         "sells": [
@@ -6035,7 +5855,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6050,10 +5870,10 @@
           "NE": "red",
           "E": "cops_3",
           "SE": "criminals_4",
-          "S": "criminals_3",
-          "SW": "criminals_3",
-          "W": "cops_4",
-          "NW": "criminals_3"
+          "S": "criminals_4",
+          "SW": "criminals_4",
+          "W": "cops_2",
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -6066,7 +5886,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6097,7 +5917,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -6107,19 +5927,10 @@
       {
         "id": "E3_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "criminals_4",
-          "E": "toll_3",
-          "SE": "criminals_3",
-          "S": "cops_3",
-          "SW": "red",
-          "W": "green",
-          "NW": "cops_3"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
-        "encounter": "cops_4",
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -6144,7 +5955,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "cops_3",
+          "W": "cops_2",
           "NW": "schizophrenic"
         },
         "sells": [
@@ -6154,7 +5965,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -6171,7 +5982,7 @@
           "SE": "red",
           "S": "mob",
           "SW": "celebrities_1",
-          "W": "cops_3",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -6181,7 +5992,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -6196,7 +6007,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_3",
+          "S": "cops_2",
           "SW": "schizophrenic",
           "W": "schizophrenic",
           "NW": "red"
@@ -6208,7 +6019,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6252,7 +6063,7 @@
           "SE": "red",
           "S": "red",
           "SW": "criminals_1",
-          "W": "cops_2",
+          "W": "cops_3",
           "NW": "criminals_3"
         },
         "sells": [
@@ -6279,7 +6090,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "green"
         },
         "sells": [
@@ -6304,7 +6115,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_2",
+          "S": "cops_3",
           "SW": "green",
           "W": "toll_2",
           "NW": "red"
@@ -6316,7 +6127,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6331,7 +6142,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "criminals_3",
+          "S": "criminals_2",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -6370,7 +6181,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -6401,7 +6212,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -6418,7 +6229,7 @@
           "SE": "red",
           "S": "red",
           "SW": "toll_2",
-          "W": "cops_2",
+          "W": "cops_3",
           "NW": "toll_2"
         },
         "sells": [
@@ -6432,7 +6243,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": true,
         "persistent": false,
         "refresh": false,
@@ -6442,20 +6253,11 @@
       {
         "id": "F3_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
-          "S": "criminals_3",
-          "SW": "green",
-          "W": "green",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "cops_2",
-        "gamble": true,
+        "gamble": false,
         "persistent": false,
         "refresh": true,
         "coord": "F3",
@@ -6501,7 +6303,7 @@
         "index": 2,
         "edges": {
           "N": "red",
-          "NE": "cops_1",
+          "NE": "cops_2",
           "E": "green",
           "SE": "red",
           "S": "red",
@@ -6610,7 +6412,7 @@
         "edges": {
           "N": "toll_2",
           "NE": "red",
-          "E": "cops_1",
+          "E": "cops_2",
           "SE": "red",
           "S": "green",
           "SW": "red",
@@ -6651,7 +6453,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6666,7 +6468,7 @@
           "NE": "red",
           "E": "toll_2",
           "SE": "red",
-          "S": "cops_1",
+          "S": "cops_2",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -6678,7 +6480,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6689,7 +6491,7 @@
         "id": "A4_9",
         "index": 9,
         "edges": {
-          "N": "cops_1",
+          "N": "cops_2",
           "NE": "celebrities_1",
           "E": "green",
           "SE": "cops_1",
@@ -6705,7 +6507,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6716,7 +6518,7 @@
         "id": "A4_10",
         "index": 10,
         "edges": {
-          "N": "cops_1",
+          "N": "cops_2",
           "NE": "green",
           "E": "red",
           "SE": "criminals_1",
@@ -6736,7 +6538,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -6777,16 +6579,7 @@
       {
         "id": "A4_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "red",
-          "SE": "green",
-          "S": "red",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "cops_1",
@@ -6814,8 +6607,8 @@
           "SE": "red",
           "S": "red",
           "SW": "toll_2",
-          "W": "criminals_1",
-          "NW": "criminals_2"
+          "W": "criminals_2",
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -6828,7 +6621,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -6843,7 +6636,7 @@
           "NE": "celebrities_1",
           "E": "green",
           "SE": "red",
-          "S": "criminals_3",
+          "S": "criminals_1",
           "SW": "celebrities_1",
           "W": "mob",
           "NW": "celebrities_1"
@@ -6886,7 +6679,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -6898,7 +6691,7 @@
         "index": 4,
         "edges": {
           "N": "red",
-          "NE": "criminals_1",
+          "NE": "criminals_3",
           "E": "mob",
           "SE": "schizophrenic",
           "S": "mob",
@@ -6929,7 +6722,7 @@
         "index": 5,
         "edges": {
           "N": "toll_2",
-          "NE": "criminals_1",
+          "NE": "criminals_3",
           "E": "green",
           "SE": "red",
           "S": "red",
@@ -6948,7 +6741,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6962,11 +6755,11 @@
           "N": "toll_2",
           "NE": "red",
           "E": "red",
-          "SE": "criminals_1",
-          "S": "criminals_2",
+          "SE": "criminals_2",
+          "S": "criminals_3",
           "SW": "red",
           "W": "green",
-          "NW": "criminals_3"
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -7006,7 +6799,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7033,7 +6826,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7048,7 +6841,7 @@
           "NE": "red",
           "E": "theater",
           "SE": "red",
-          "S": "criminals_1",
+          "S": "criminals_3",
           "SW": "green",
           "W": "red",
           "NW": "red"
@@ -7064,7 +6857,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7079,10 +6872,10 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_1",
-          "SW": "cops_1",
+          "S": "cops_2",
+          "SW": "cops_2",
           "W": "green",
-          "NW": "criminals_1"
+          "NW": "criminals_2"
         },
         "sells": [],
         "buys": [],
@@ -7127,19 +6920,10 @@
       {
         "id": "B4_12",
         "index": 12,
-        "edges": {
-          "N": "green",
-          "NE": "green",
-          "E": "green",
-          "SE": "green",
-          "S": "green",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
-        "encounter": null,
+        "encounter": "criminals_1",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -7201,7 +6985,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7228,7 +7012,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7255,7 +7039,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7336,7 +7120,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7363,7 +7147,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7390,7 +7174,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7452,7 +7236,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7462,16 +7246,7 @@
       {
         "id": "C4_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
-          "S": "red",
-          "SW": "green",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "criminals_1",
@@ -7498,7 +7273,7 @@
           "E": "red",
           "SE": "celebrities_1",
           "S": "schizophrenic",
-          "SW": "cops_3",
+          "SW": "cops_2",
           "W": "criminals_4",
           "NW": "toll_3"
         },
@@ -7522,7 +7297,7 @@
             "modifier": "+"
           }
         ],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7537,9 +7312,9 @@
           "NE": "red",
           "E": "red",
           "SE": "schizophrenic",
-          "S": "cops_3",
+          "S": "cops_2",
           "SW": "criminals_4",
-          "W": "cops_3",
+          "W": "cops_4",
           "NW": "red"
         },
         "sells": [
@@ -7562,7 +7337,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7578,7 +7353,7 @@
           "E": "red",
           "SE": "mob",
           "S": "criminals_4",
-          "SW": "cops_3",
+          "SW": "cops_2",
           "W": "red",
           "NW": "celebrities_1"
         },
@@ -7602,7 +7377,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7616,7 +7391,7 @@
           "N": "red",
           "NE": "mob",
           "E": "celebrities_1",
-          "SE": "criminals_4",
+          "SE": "criminals_3",
           "S": "cops_3",
           "SW": "red",
           "W": "red",
@@ -7694,13 +7469,13 @@
         "index": 6,
         "edges": {
           "N": "mob",
-          "NE": "criminals_4",
+          "NE": "criminals_3",
           "E": "red",
           "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "schizophrenic",
-          "NW": "criminals_4"
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -7739,7 +7514,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_4",
+          "W": "criminals_3",
           "NW": "cops_3"
         },
         "sells": [
@@ -7762,7 +7537,7 @@
             "modifier": "-"
           }
         ],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7773,14 +7548,14 @@
         "id": "D4_8",
         "index": 8,
         "edges": {
-          "N": "cops_3",
+          "N": "cops_2",
           "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "red",
           "SW": "criminals_4",
-          "W": "cops_3",
-          "NW": "criminals_3"
+          "W": "cops_4",
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -7817,7 +7592,7 @@
           "NE": "red",
           "E": "criminals_3",
           "SE": "red",
-          "S": "criminals_4",
+          "S": "criminals_2",
           "SW": "cops_3",
           "W": "criminals_3",
           "NW": "toll_3"
@@ -7842,7 +7617,7 @@
             "modifier": "-"
           }
         ],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7855,11 +7630,11 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_3",
-          "SE": "criminals_4",
+          "E": "cops_2",
+          "SE": "criminals_3",
           "S": "cops_3",
-          "SW": "criminals_3",
-          "W": "cops_4",
+          "SW": "criminals_4",
+          "W": "cops_3",
           "NW": "red"
         },
         "sells": [
@@ -7882,7 +7657,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7896,7 +7671,7 @@
           "N": "red",
           "NE": "red",
           "E": "toll_2",
-          "SE": "cops_3",
+          "SE": "cops_4",
           "S": "criminals_3",
           "SW": "cops_4",
           "W": "green",
@@ -7932,40 +7707,13 @@
       {
         "id": "D4_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "criminals_4",
-          "E": "cops_3",
-          "SE": "criminals_3",
-          "S": "cops_4",
-          "SW": "red",
-          "W": "green",
-          "NW": "red"
-        },
-        "sells": [
-          {
-            "category": "Weapons",
-            "modifier": "+"
-          },
-          {
-            "category": "Opiates",
-            "modifier": "="
-          },
-          {
-            "category": "Weed",
-            "modifier": "-"
-          }
-        ],
-        "buys": [
-          {
-            "category": "Uppers",
-            "modifier": "="
-          }
-        ],
-        "encounter": null,
+        "edges": {},
+        "sells": [],
+        "buys": [],
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
-        "refresh": false,
+        "refresh": true,
         "coord": "D4",
         "image": "/assets/tiles/DIV/12.png"
       }
@@ -8059,7 +7807,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -8090,7 +7838,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -8101,7 +7849,7 @@
         "id": "E4_5",
         "index": 5,
         "edges": {
-          "N": "criminals_1",
+          "N": "criminals_2",
           "NE": "red",
           "E": "green",
           "SE": "green",
@@ -8179,7 +7927,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -8237,7 +7985,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -8248,8 +7996,8 @@
         "id": "E4_10",
         "index": 10,
         "edges": {
-          "N": "criminals_2",
-          "NE": "cops_2",
+          "N": "criminals_1",
+          "NE": "cops_1",
           "E": "red",
           "SE": "schizophrenic",
           "S": "theater",
@@ -8271,7 +8019,7 @@
         "index": 11,
         "edges": {
           "N": "green",
-          "NE": "criminals_2",
+          "NE": "criminals_1",
           "E": "criminals_1",
           "SE": "red",
           "S": "red",
@@ -8290,7 +8038,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -8300,16 +8048,7 @@
       {
         "id": "E4_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "toll_3",
-          "E": "red",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "schizophrenic",
@@ -8374,7 +8113,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -8401,7 +8140,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -8509,7 +8248,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -8574,13 +8313,13 @@
         "id": "F4_10",
         "index": 10,
         "edges": {
-          "N": "cops_2",
+          "N": "cops_1",
           "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "green",
           "SW": "criminals_1",
-          "W": "cops_1",
+          "W": "cops_2",
           "NW": "green"
         },
         "sells": [
@@ -8605,7 +8344,7 @@
         "id": "F4_11",
         "index": 11,
         "edges": {
-          "N": "criminals_2",
+          "N": "criminals_1",
           "NE": "red",
           "E": "red",
           "SE": "red",
@@ -8635,16 +8374,7 @@
       {
         "id": "F4_12",
         "index": 12,
-        "edges": {
-          "N": "toll_3",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "green",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "criminals_1",
@@ -8686,7 +8416,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "cops_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -8717,7 +8447,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -8744,7 +8474,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "cops_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -8881,7 +8611,7 @@
           "SE": "mob",
           "S": "green",
           "SW": "red",
-          "W": "cops_2",
+          "W": "cops_1",
           "NW": "red"
         },
         "sells": [
@@ -8904,7 +8634,7 @@
         "edges": {
           "N": "green",
           "NE": "mob",
-          "E": "cops_1",
+          "E": "cops_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -8990,16 +8720,7 @@
       {
         "id": "A5_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "green",
-          "SE": "green",
-          "S": "red",
-          "SW": "red",
-          "W": "schizophrenic",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "celebrities_1",
@@ -9041,7 +8762,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -9072,7 +8793,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -9219,7 +8940,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -9340,19 +9061,10 @@
       {
         "id": "B5_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "red",
-          "NW": "criminals_1"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -9414,7 +9126,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": true,
         "persistent": false,
         "refresh": false,
@@ -9441,7 +9153,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": true,
         "persistent": false,
         "refresh": false,
@@ -9468,7 +9180,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -9495,7 +9207,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -9603,7 +9315,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -9665,7 +9377,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -9675,16 +9387,7 @@
       {
         "id": "C5_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "green",
-          "NW": "green"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "cops_1",
@@ -9722,7 +9425,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -9749,7 +9452,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -9776,7 +9479,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -9788,11 +9491,11 @@
         "index": 4,
         "edges": {
           "N": "criminals_1",
-          "NE": "criminals_1",
+          "NE": "criminals_2",
           "E": "red",
-          "SE": "cops_1",
+          "SE": "cops_2",
           "S": "toll_2",
-          "SW": "cops_1",
+          "SW": "cops_2",
           "W": "green",
           "NW": "green"
         },
@@ -9843,7 +9546,7 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "criminals_2",
+          "E": "criminals_1",
           "SE": "celebrities_1",
           "S": "red",
           "SW": "mob",
@@ -9884,7 +9587,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -9899,7 +9602,7 @@
           "NE": "red",
           "E": "red",
           "SE": "green",
-          "S": "cops_1",
+          "S": "cops_2",
           "SW": "green",
           "W": "green",
           "NW": "green"
@@ -9911,7 +9614,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -9923,7 +9626,7 @@
         "index": 9,
         "edges": {
           "N": "green",
-          "NE": "criminals_1",
+          "NE": "criminals_3",
           "E": "toll_2",
           "SE": "theater",
           "S": "celebrities_1",
@@ -9938,7 +9641,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -9950,7 +9653,7 @@
         "index": 10,
         "edges": {
           "N": "red",
-          "NE": "cops_1",
+          "NE": "cops_2",
           "E": "green",
           "SE": "red",
           "S": "green",
@@ -10000,7 +9703,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10010,16 +9713,7 @@
       {
         "id": "D5_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "green",
-          "E": "red",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "cops_1",
@@ -10057,7 +9751,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10071,7 +9765,7 @@
           "N": "red",
           "NE": "red",
           "E": "cops_2",
-          "SE": "criminals_3",
+          "SE": "criminals_2",
           "S": "cops_2",
           "SW": "green",
           "W": "green",
@@ -10084,7 +9778,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10097,7 +9791,7 @@
         "edges": {
           "N": "red",
           "NE": "cops_2",
-          "E": "criminals_3",
+          "E": "criminals_2",
           "SE": "cops_2",
           "S": "toll_2",
           "SW": "toll_2",
@@ -10111,7 +9805,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10138,7 +9832,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10165,7 +9859,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10183,7 +9877,7 @@
           "S": "red",
           "SW": "mob",
           "W": "cops_2",
-          "NW": "criminals_3"
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -10219,7 +9913,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10236,7 +9930,7 @@
           "SE": "red",
           "S": "cops_2",
           "SW": "criminals_3",
-          "W": "cops_2",
+          "W": "cops_3",
           "NW": "green"
         },
         "sells": [
@@ -10261,7 +9955,7 @@
           "NE": "green",
           "E": "red",
           "SE": "cops_2",
-          "S": "criminals_3",
+          "S": "criminals_2",
           "SW": "cops_2",
           "W": "toll_2",
           "NW": "toll_2"
@@ -10284,9 +9978,9 @@
         "id": "E5_10",
         "index": 10,
         "edges": {
-          "N": "criminals_2",
+          "N": "criminals_3",
           "NE": "red",
-          "E": "cops_2",
+          "E": "cops_3",
           "SE": "criminals_3",
           "S": "cops_2",
           "SW": "green",
@@ -10304,7 +9998,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10316,7 +10010,7 @@
         "index": 11,
         "edges": {
           "N": "toll_2",
-          "NE": "cops_2",
+          "NE": "cops_3",
           "E": "criminals_3",
           "SE": "cops_2",
           "S": "toll_2",
@@ -10345,16 +10039,7 @@
       {
         "id": "E5_12",
         "index": 12,
-        "edges": {
-          "N": "green",
-          "NE": "criminals_3",
-          "E": "cops_2",
-          "SE": "green",
-          "S": "green",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "mob",
@@ -10378,11 +10063,11 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_1",
+          "E": "criminals_3",
           "SE": "red",
           "S": "red",
           "SW": "criminals_3",
-          "W": "cops_3",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -10392,7 +10077,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10405,11 +10090,11 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_1",
+          "E": "cops_2",
           "SE": "red",
-          "S": "criminals_3",
-          "SW": "cops_2",
-          "W": "cops_3",
+          "S": "criminals_2",
+          "SW": "cops_3",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -10419,7 +10104,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10430,7 +10115,7 @@
         "id": "F5_3",
         "index": 3,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_1",
           "NE": "red",
           "E": "green",
           "SE": "red",
@@ -10446,7 +10131,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": true,
         "persistent": false,
         "refresh": false,
@@ -10473,7 +10158,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10516,8 +10201,8 @@
           "E": "theater",
           "SE": "red",
           "S": "red",
-          "SW": "cops_2",
-          "W": "criminals_3",
+          "SW": "cops_3",
+          "W": "criminals_2",
           "NW": "red"
         },
         "sells": [
@@ -10540,10 +10225,10 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "criminals_1",
           "SE": "red",
-          "S": "cops_2",
-          "SW": "criminals_3",
+          "S": "cops_3",
+          "SW": "criminals_2",
           "W": "toll_2",
           "NW": "red"
         },
@@ -10567,9 +10252,9 @@
         "edges": {
           "N": "cops_2",
           "NE": "red",
-          "E": "cops_2",
+          "E": "cops_3",
           "SE": "red",
-          "S": "criminals_3",
+          "S": "criminals_2",
           "SW": "green",
           "W": "red",
           "NW": "red"
@@ -10581,7 +10266,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10608,7 +10293,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -10625,7 +10310,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_1",
           "NW": "cops_2"
         },
         "sells": [
@@ -10639,7 +10324,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10655,7 +10340,7 @@
           "E": "green",
           "SE": "red",
           "S": "red",
-          "SW": "criminals_3",
+          "SW": "criminals_1",
           "W": "cops_2",
           "NW": "toll_2"
         },
@@ -10670,7 +10355,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": "cops_2",
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -10680,16 +10365,7 @@
       {
         "id": "F5_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "red",
-          "E": "schizophrenic",
-          "SE": "red",
-          "S": "criminals_3",
-          "SW": "cops_2",
-          "W": "green",
-          "NW": "green"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "mob",
@@ -10715,8 +10391,8 @@
           "NE": "red",
           "E": "schizophrenic",
           "SE": "red",
-          "S": "cops_3",
-          "SW": "criminals_3",
+          "S": "cops_2",
+          "SW": "criminals_2",
           "W": "toll_2",
           "NW": "red"
         },
@@ -10731,7 +10407,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10762,7 +10438,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10789,7 +10465,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10866,7 +10542,7 @@
           "NE": "red",
           "E": "schizophrenic",
           "SE": "red",
-          "S": "criminals_3",
+          "S": "criminals_2",
           "SW": "cops_2",
           "W": "green",
           "NW": "red"
@@ -10909,7 +10585,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10936,7 +10612,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10947,8 +10623,8 @@
         "id": "A6_9",
         "index": 9,
         "edges": {
-          "N": "criminals_3",
-          "NE": "cops_2",
+          "N": "criminals_1",
+          "NE": "cops_3",
           "E": "toll_2",
           "SE": "red",
           "S": "toll_2",
@@ -10963,7 +10639,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10975,12 +10651,12 @@
         "index": 10,
         "edges": {
           "N": "cops_2",
-          "NE": "criminals_2",
+          "NE": "criminals_3",
           "E": "green",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "red"
         },
         "sells": [
@@ -10994,7 +10670,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11010,7 +10686,7 @@
           "E": "red",
           "SE": "red",
           "S": "red",
-          "SW": "criminals_3",
+          "SW": "criminals_2",
           "W": "cops_2",
           "NW": "red"
         },
@@ -11035,16 +10711,7 @@
       {
         "id": "A6_12",
         "index": 12,
-        "edges": {
-          "N": "green",
-          "NE": "green",
-          "E": "red",
-          "SE": "red",
-          "S": "criminals_3",
-          "SW": "cops_2",
-          "W": "green",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "criminals_2",
@@ -11072,7 +10739,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "cops_3",
+          "W": "cops_2",
           "NW": "criminals_3"
         },
         "sells": [
@@ -11109,7 +10776,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11181,7 +10848,7 @@
           "S": "red",
           "SW": "red",
           "W": "cops_2",
-          "NW": "criminals_3"
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -11190,7 +10857,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11203,7 +10870,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_2",
+          "E": "cops_3",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -11244,7 +10911,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11289,7 +10956,7 @@
           "S": "red",
           "SW": "red",
           "W": "red",
-          "NW": "criminals_3"
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -11298,7 +10965,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11329,7 +10996,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11342,7 +11009,7 @@
         "edges": {
           "N": "toll_2",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "criminals_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -11360,7 +11027,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11370,19 +11037,10 @@
       {
         "id": "B6_12",
         "index": 12,
-        "edges": {
-          "N": "green",
-          "NE": "criminals_3",
-          "E": "cops_2",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "green",
-          "NW": "green"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": "criminals_1",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -11407,7 +11065,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "cops_2",
+          "W": "cops_3",
           "NW": "red"
         },
         "sells": [
@@ -11430,11 +11088,11 @@
         "edges": {
           "N": "celebrities_1",
           "NE": "mob",
-          "E": "cops_2",
+          "E": "cops_3",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "cops_3",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -11444,7 +11102,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11498,7 +11156,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11525,7 +11183,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11565,7 +11223,7 @@
         "edges": {
           "N": "schizophrenic",
           "NE": "cops_2",
-          "E": "criminals_3",
+          "E": "criminals_1",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -11579,7 +11237,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11606,7 +11264,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11633,7 +11291,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11651,7 +11309,7 @@
           "S": "red",
           "SW": "red",
           "W": "criminals_3",
-          "NW": "criminals_2"
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -11664,7 +11322,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11695,7 +11353,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11705,16 +11363,7 @@
       {
         "id": "C6_12",
         "index": 12,
-        "edges": {
-          "N": "green",
-          "NE": "criminals_3",
-          "E": "cops_2",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "green",
-          "NW": "green"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "cops_2",
@@ -11752,7 +11401,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11764,10 +11413,10 @@
         "index": 2,
         "edges": {
           "N": "red",
-          "NE": "criminals_3",
+          "NE": "criminals_1",
           "E": "cops_2",
           "SE": "red",
-          "S": "cops_1",
+          "S": "cops_2",
           "SW": "red",
           "W": "green",
           "NW": "red"
@@ -11779,7 +11428,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11790,8 +11439,8 @@
         "id": "D6_3",
         "index": 3,
         "edges": {
-          "N": "criminals_3",
-          "NE": "cops_2",
+          "N": "criminals_2",
+          "NE": "cops_3",
           "E": "toll_2",
           "SE": "red",
           "S": "green",
@@ -11806,7 +11455,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11833,7 +11482,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": "criminals_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11848,9 +11497,9 @@
           "NE": "toll_2",
           "E": "red",
           "SE": "red",
-          "S": "criminals_1",
+          "S": "criminals_2",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "cops_2"
         },
         "sells": [
@@ -11887,7 +11536,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11914,7 +11563,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11926,7 +11575,7 @@
         "index": 8,
         "edges": {
           "N": "red",
-          "NE": "criminals_3",
+          "NE": "criminals_2",
           "E": "cops_2",
           "SE": "red",
           "S": "cops_2",
@@ -11941,7 +11590,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11968,7 +11617,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11979,14 +11628,14 @@
         "id": "D6_10",
         "index": 10,
         "edges": {
-          "N": "cops_2",
+          "N": "cops_3",
           "NE": "green",
           "E": "green",
           "SE": "red",
           "S": "mob",
           "SW": "red",
           "W": "red",
-          "NW": "criminals_3"
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -11999,7 +11648,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -12030,7 +11679,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -12040,16 +11689,7 @@
       {
         "id": "D6_12",
         "index": 12,
-        "edges": {
-          "N": "green",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
-          "S": "schizophrenic",
-          "SW": "red",
-          "W": "cops_2",
-          "NW": "green"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "celebrities_1",
@@ -12077,7 +11717,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "cops_2",
+          "W": "cops_3",
           "NW": "toll_2"
         },
         "sells": [
@@ -12087,7 +11727,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -12114,7 +11754,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -12141,7 +11781,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -12168,7 +11808,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -12186,7 +11826,7 @@
           "S": "red",
           "SW": "red",
           "W": "mob",
-          "NW": "criminals_3"
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -12195,7 +11835,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -12212,7 +11852,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "green"
         },
         "sells": [
@@ -12235,7 +11875,7 @@
         "edges": {
           "N": "red",
           "NE": "cops_2",
-          "E": "criminals_3",
+          "E": "criminals_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -12261,7 +11901,7 @@
         "index": 8,
         "edges": {
           "N": "cops_2",
-          "NE": "criminals_3",
+          "NE": "criminals_1",
           "E": "green",
           "SE": "red",
           "S": "red",
@@ -12287,7 +11927,7 @@
         "id": "E6_9",
         "index": 9,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_2",
           "NE": "toll_2",
           "E": "red",
           "SE": "red",
@@ -12303,7 +11943,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -12334,7 +11974,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_2",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -12375,16 +12015,7 @@
       {
         "id": "E6_12",
         "index": 12,
-        "edges": {
-          "N": "red",
-          "NE": "criminals_3",
-          "E": "cops_2",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "green",
-          "NW": "red"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "celebrities_1",
@@ -12410,10 +12041,10 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_4",
+          "S": "cops_3",
           "SW": "red",
           "W": "criminals_4",
-          "NW": "criminals_4"
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -12422,7 +12053,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -12436,10 +12067,10 @@
           "N": "celebrities_1",
           "NE": "red",
           "E": "red",
-          "SE": "cops_4",
-          "S": "criminals_4",
+          "SE": "cops_3",
+          "S": "criminals_3",
           "SW": "red",
-          "W": "cops_4",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -12449,7 +12080,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -12462,7 +12093,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_4",
+          "E": "cops_3",
           "SE": "criminals_4",
           "S": "cops_4",
           "SW": "red",
@@ -12476,7 +12107,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -12489,8 +12120,8 @@
         "edges": {
           "N": "cops_4",
           "NE": "red",
-          "E": "criminals_4",
-          "SE": "cops_4",
+          "E": "criminals_3",
+          "SE": "cops_3",
           "S": "red",
           "SW": "red",
           "W": "red",
@@ -12514,14 +12145,14 @@
         "id": "F6_5",
         "index": 5,
         "edges": {
-          "N": "criminals_4",
+          "N": "criminals_3",
           "NE": "red",
-          "E": "criminals_4",
+          "E": "criminals_3",
           "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "red",
-          "NW": "cops_4"
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -12530,7 +12161,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -12547,7 +12178,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "cops_4",
+          "W": "cops_3",
           "NW": "schizophrenic"
         },
         "sells": [
@@ -12557,7 +12188,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -12572,7 +12203,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_4",
+          "S": "cops_3",
           "SW": "red",
           "W": "mob",
           "NW": "cops_3"
@@ -12584,7 +12215,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -12598,7 +12229,7 @@
           "N": "green",
           "NE": "red",
           "E": "red",
-          "SE": "cops_4",
+          "SE": "cops_3",
           "S": "mob",
           "SW": "red",
           "W": "cops_3",
@@ -12611,7 +12242,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -12638,7 +12269,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -12649,10 +12280,10 @@
         "id": "F6_10",
         "index": 10,
         "edges": {
-          "N": "cops_4",
+          "N": "cops_3",
           "NE": "red",
-          "E": "criminals_3",
-          "SE": "cops_3",
+          "E": "criminals_2",
+          "SE": "cops_4",
           "S": "red",
           "SW": "red",
           "W": "red",
@@ -12669,7 +12300,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -12680,14 +12311,14 @@
         "id": "F6_11",
         "index": 11,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_4",
           "NE": "red",
           "E": "cops_3",
           "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "red",
-          "NW": "cops_4"
+          "NW": "cops_3"
         },
         "sells": [
           {
@@ -12710,16 +12341,7 @@
       {
         "id": "F6_12",
         "index": 12,
-        "edges": {
-          "N": "cops_3",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
-          "S": "red",
-          "SW": "red",
-          "W": "cops_4",
-          "NW": "criminals_3"
-        },
+        "edges": {},
         "sells": [],
         "buys": [],
         "encounter": "celebrities_1",
