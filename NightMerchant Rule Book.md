@@ -325,8 +325,8 @@ COMBAT BETWEEN PLAYERS
 ## SYMBOL & ICON REFERENCE
 
 ### Goods & Henchmen Card Symbols
-- **Bold Green `+𐆖` (Sell / Fence Price Row)**: The top row on a Good Card’s price table. Indicates the **Denarii (`𐆖`) you receive** when selling that Good in Rome (or Fencing Encounter Mission Cargo) at each Scarcity column (`<<` to `>>`).
-- **Italic Red `-𐆖` (Buy / Hire Price Row)**: The bottom row on a Good or Henchman Card’s price table. Indicates the **Denarii (`𐆖`) you pay** to purchase that Good at Portus Ostiae (or an Imperial Forum) or to hire/retain a Henchman.
+- **Bold Green `+𐆖` Retail (Sell / Fence Price Row)**: The top row on a Good Card’s price table. Indicates the **Denarii (`𐆖`) you receive** when selling that Good in Rome (or Fencing Encounter Mission Cargo) at each Scarcity column (`<<` to `>>`).
+- **Italic Red `-𐆖` Wholesale (Buy / Hire Price Row)**: The bottom row on a Good or Henchman Card’s price table. Indicates the **Denarii (`𐆖`) you pay** to purchase that Good at Portus Ostiae (or an Imperial Forum) or to hire/retain a Henchman.
 - **Denarius (`𐆖` / `(d)`)**: Roman silver coin (`U+10196`) used for all purchases, sales, road tolls, Stadium wagers, Henchman upkeep, and final victory scoring.
 - **`<<`  `<`  `=`  `>`  `>>` (5 Scarcity Columns)**:
   - `<<` **Precious** (`0` cards remaining on that category’s Ostia Market track)

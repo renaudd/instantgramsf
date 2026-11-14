@@ -6,7 +6,10 @@ FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    NIGHTMERCHANT_CLOUD_RUN=1
+    NIGHTMERCHANT_CLOUD_RUN=1 \
+    GOOGLE_CLOUD_PROJECT=instantgramsf \
+    FIREBASE_PROJECT_ID=instantgramsf \
+    NIGHTMERCHANT_PUBLIC_URL=https://dashiellrenaud.com/instantgram/
 
 WORKDIR /app
 

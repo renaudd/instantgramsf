@@ -457,8 +457,8 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "optionNumber": 1,
         "timing": "endgame",
         "title": "Five-Star Courier",
-        "shortText": "Most completed Missions gains 30d",
-        "description": "End of game: Most completed Missions gains 30d.",
+        "shortText": "Most net completed Jobs gains 30d",
+        "description": "End of game: Most net completed Jobs (completed minus failed, min 0) gains 30d.",
     },
     {
         "id": "missions_2",
@@ -468,8 +468,8 @@ POLITICAL_CLIMATE_OPTIONS: List[Dict[str, Any]] = [
         "optionNumber": 2,
         "timing": "endgame",
         "title": "Full Time Employee",
-        "shortText": "Receive (gems of one faction × missions done for it) ₿",
-        "description": "End of game: Each player receives A × B ₿. A = gems of any one faction, B = missions completed for that faction.",
+        "shortText": "Receive (gems of one faction × net jobs done for it) ₿",
+        "description": "End of game: Each player receives A × B ₿. A = gems of any one faction, B = net jobs completed for that faction (completed minus failed, min 0).",
     },
     {
         "id": "missions_3",
@@ -2234,6 +2234,13 @@ def _fail_mission(
     counts_as_failure = (not is_overflow) and (not fenced_exempt)
     if counts_as_failure:
         _inc_player_stat(player, "missionsFailed", 1)
+        m_fav = m.get("favor") or []
+        m_fac = m.get("patronFaction") or next((f.lstrip("+") for f in m_fav if f and not f.startswith("-")), None)
+        if m_fac in FACTIONS:
+            f_by_fac = _ensure_player_stats(player).setdefault("failedMissionsByFaction", {})
+            f_by_fac[m_fac] = int(f_by_fac.get(m_fac, 0)) + 1
+        if "DSA" in m_fav or m.get("patronFaction") == "DSA":
+            _inc_player_stat(player, "dsaMissionsFailed", 1)
     mid = m.get("id")
     # Remove any loaded cargo for this mission from player's suv (thrown away, cannot be sold)
     player["suv"] = [c for c in player.get("suv", []) if c.get("missionId") != mid]
@@ -3726,6 +3733,33 @@ def _format_combat_total_label(cp: int, dice_objs: List[Dict[str, Any]], flat_va
     return f"{cp} CP"
 
 
+def _select_needed_consumable_armor(cons_items: List[Dict[str, Any]], rem_wounds: int) -> List[Dict[str, Any]]:
+    """
+    Select the minimal subset of 'Destroyed when used' armor items needed to absorb rem_wounds.
+    Consumable armor is only used (and destroyed) if rem_wounds > 0 after non-consumable armor.
+    If 'Absorb 3 Wounds - Destroyed when used' is needed to absorb any amount of wounds (1, 2, or 3),
+    it is used and destroyed.
+    """
+    if rem_wounds <= 0 or not cons_items:
+        return []
+    total_avail = sum(int(it.get("absorb", 0)) for it in cons_items)
+    target = min(rem_wounds, total_avail)
+    if target <= 0:
+        return []
+    n = len(cons_items)
+    best_sub: Optional[List[Dict[str, Any]]] = None
+    best_key: Optional[Tuple[int, int]] = None
+    for mask in range(1, 1 << n):
+        sub = [cons_items[i] for i in range(n) if (mask & (1 << i))]
+        s_abs = sum(int(x.get("absorb", 0)) for x in sub)
+        if s_abs >= target:
+            key = (len(sub), s_abs)
+            if best_key is None or key < best_key:
+                best_key = key
+                best_sub = sub
+    return best_sub or []
+
+
 def _recompute_combat_totals(c_state: Dict[str, Any]) -> None:
     p_dice_sum = sum(int(d["value"]) * int(d.get("sign", 1)) for d in c_state.get("playerDiceObjs", []) if int(d.get("sign", 1)) != 0)
     o_dice_sum = sum(int(d["value"]) * int(d.get("sign", 1)) for d in c_state.get("oppDiceObjs", []) if int(d.get("sign", 1)) != 0)
@@ -3733,21 +3767,29 @@ def _recompute_combat_totals(c_state: Dict[str, Any]) -> None:
     o_cp = o_dice_sum + int(c_state.get("oppFlat", 0))
     c_state["playerCP"] = p_cp
     c_state["oppCP"] = o_cp
+    raw_w = max(0, o_cp - p_cp)
+    c_state["rawWounds"] = raw_w
     if "ignoreWoundsFlat" in c_state:
         armor_dice_sum = sum(int(d["value"]) for d in c_state.get("playerDiceObjs", []) if int(d.get("sign", 1)) == 0)
-        ign_w = int(c_state.get("ignoreWoundsFlat", 0)) + armor_dice_sum
+        perm_ign_w = int(c_state.get("ignoreWoundsFlat", 0)) + armor_dice_sum
+        rem_after_perm = max(0, raw_w - perm_ign_w)
+        used_cons = _select_needed_consumable_armor(c_state.get("consumableArmorItems", []), rem_after_perm)
+        c_state["usedConsumableArmor"] = used_cons
+        cons_ign_w = sum(int(x.get("absorb", 0)) for x in used_cons)
+        ign_w = perm_ign_w + cons_ign_w
         c_state["ignoreWounds"] = ign_w
         dyn_sources = list(c_state.get("flatArmorSources", []))
         for d in c_state.get("playerDiceObjs", []):
             if int(d.get("sign", 1)) == 0:
                 base_lbl = d.get("itemName") or str(d.get("label", "Armor")).replace(" (Block ®)", "").replace(" (Re-rolled)", "")
                 val_d = int(d.get("value", 0))
-                dyn_sources.append(f"{base_lbl} (Ignore {val_d} Wound{'s' if val_d != 1 else ''}, rolled {d.get('roman', '0')})")
+                dyn_sources.append(f"{base_lbl} (Absorb {val_d} Wound{'s' if val_d != 1 else ''}, rolled {d.get('roman', '0')})")
+        for u_arm in used_cons:
+            u_abs = int(u_arm.get("absorb", 0))
+            dyn_sources.append(f"{u_arm.get('name', 'Armor')} (Absorb {u_abs} Wound{'s' if u_abs != 1 else ''} - Destroyed when used)")
         c_state["armorSources"] = dyn_sources
     else:
         ign_w = int(c_state.get("ignoreWounds", 0))
-    raw_w = max(0, o_cp - p_cp)
-    c_state["rawWounds"] = raw_w
     c_state["netWoundsAfterArmor"] = max(0, raw_w - ign_w)
 
 
@@ -4235,6 +4277,12 @@ def _finalize_combat_after_post_roll(state: Dict[str, Any], player: Dict[str, An
     raw_wounds = opp_cp - player_cp
     net_wounds = max(0, raw_wounds - ignore_wounds)
     casualties = []
+    for u_arm in c_state.get("usedConsumableArmor") or []:
+        u_id = str(u_arm.get("id", ""))
+        match_arm = next((it for it in player.get("suv", []) if str(it.get("id", "")) == u_id), None)
+        if match_arm is not None:
+            _remove_suv_item(state, player, match_arm, reason="destroyed absorbing wound(s) in combat")
+            casualties.append(f"{u_arm.get('name', 'Armor')} destroyed absorbing wound(s)")
     while net_wounds > 0 and player["henchmen"]:
         dead_henchman = player["henchmen"].pop(0)
         if not str(dead_henchman.get("id", "")).startswith("thug_"):
@@ -4624,6 +4672,9 @@ def execute_combat(
     consumable_candidates = [
         it for it in player.get("suv", [])
         if (it.get("combat") or {}).get("consumable")
+        and not (it.get("combat") or {}).get("ignoreWoundsFlat")
+        and not (it.get("combat") or {}).get("ignoreWoundsDice")
+        and not it.get("isMissionCargo")
     ]
     if not player.get("isBot") and consumable_candidates and use_consumable_ids is None:
         prev_src = source_label or (state.get("pendingEncounter") or {}).get("encounterSource")
@@ -4786,20 +4837,21 @@ def execute_combat(
             ]
             equipment_notes.append(f"Distraction (-{deducted_cnt}® deducted before roll)")
 
-    # Pre-roll Armor wound-blocking dice and record flat wound-blocking items (Manicae, Galeae, Decimus, Scuta)
+    # Pre-roll Armor wound-blocking dice and record flat wound-blocking items
     ignore_wounds_flat = 0
     flat_armor_sources: List[str] = []
+    consumable_armor_items: List[Dict[str, Any]] = []
     for g in player["henchmen"]:
         g_ign = int((g.get("combat") or {}).get("ignoreWoundsFlat", 0))
         if g_ign > 0:
             ignore_wounds_flat += g_ign
             g_lbl = f"Henchman: {g.get('name', 'Henchman')}"
-            flat_armor_sources.append(f"{g_lbl} (Ignore {g_ign} Wound{'s' if g_ign != 1 else ''})")
+            flat_armor_sources.append(f"{g_lbl} (Absorb {g_ign} Wound{'s' if g_ign != 1 else ''})")
             player_flat_mods.append({
                 "kind": "armor",
                 "label": g_lbl,
                 "value": g_ign,
-                "text": f"Ignore {g_ign} Wound{'s' if g_ign != 1 else ''}",
+                "text": f"Absorb {g_ign} Wound{'s' if g_ign != 1 else ''}",
             })
     ignore_wounds = ignore_wounds_flat
     for item in all_items:
@@ -4807,16 +4859,30 @@ def execute_combat(
         item_name = item.get("item") or item.get("name", "Armor")
         i_ign_flat = int(cinfo.get("ignoreWoundsFlat", 0))
         if i_ign_flat > 0:
-            ignore_wounds_flat += i_ign_flat
-            ignore_wounds += i_ign_flat
-            flat_armor_sources.append(f"{item_name} (Ignore {i_ign_flat} Wound{'s' if i_ign_flat != 1 else ''})")
-            player_flat_mods.append({
-                "kind": "armor",
-                "label": item_name,
-                "value": i_ign_flat,
-                "text": f"Ignore {i_ign_flat} Wound{'s' if i_ign_flat != 1 else ''}",
-            })
-            equipment_notes.append(f"{item_name} (Ignore {i_ign_flat} Wound{'s' if i_ign_flat != 1 else ''})")
+            if cinfo.get("consumable"):
+                consumable_armor_items.append({
+                    "id": str(item.get("id", "")),
+                    "name": item_name,
+                    "absorb": i_ign_flat,
+                })
+                player_flat_mods.append({
+                    "kind": "armor",
+                    "label": item_name,
+                    "value": i_ign_flat,
+                    "text": f"Absorb {i_ign_flat} Wound{'s' if i_ign_flat != 1 else ''} - Destroyed when used",
+                })
+                equipment_notes.append(f"{item_name} (Absorb {i_ign_flat} Wound{'s' if i_ign_flat != 1 else ''} - Destroyed when used)")
+            else:
+                ignore_wounds_flat += i_ign_flat
+                ignore_wounds += i_ign_flat
+                flat_armor_sources.append(f"{item_name} (Absorb {i_ign_flat} Wound{'s' if i_ign_flat != 1 else ''})")
+                player_flat_mods.append({
+                    "kind": "armor",
+                    "label": item_name,
+                    "value": i_ign_flat,
+                    "text": f"Absorb {i_ign_flat} Wound{'s' if i_ign_flat != 1 else ''}",
+                })
+                equipment_notes.append(f"{item_name} (Absorb {i_ign_flat} Wound{'s' if i_ign_flat != 1 else ''})")
         for _ in range(cinfo.get("ignoreWoundsDice", 0)):
             r_arm = roll_rome_die()
             r_arm_rom = roman_die_str(r_arm)
@@ -4829,7 +4895,7 @@ def execute_combat(
                 "label": f"{item_name} (Block ®)",
                 "color": player["color"],
             })
-            equipment_notes.append(f"{item_name} (Ignore {r_arm} Wound{'s' if r_arm != 1 else ''}, rolled ®={r_arm_rom})")
+            equipment_notes.append(f"{item_name} (Absorb {r_arm} Wound{'s' if r_arm != 1 else ''}, rolled ®={r_arm_rom})")
 
     for c_item in consumables_used:
         _remove_suv_item(state, player, c_item, reason="consumed in combat")
@@ -4902,6 +4968,7 @@ def execute_combat(
         "oppCP": opp_cp,
         "ignoreWoundsFlat": ignore_wounds_flat,
         "flatArmorSources": flat_armor_sources,
+        "consumableArmorItems": consumable_armor_items,
         "ignoreWounds": ignore_wounds,
         "equipmentNotes": equipment_notes,
         "hostileNotes": h_notes,
@@ -8087,13 +8154,16 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
                 det = f"TECH {dom_v:+d} ({abs(dom_v)} × -15d)" if dom_v != 0 else "TECH 0 (0d — Neutrality Kept!)"
                 _record_climate_delta(p, "tech_2", "TECH", "Conflict of Interest", delta, det)
 
-        # 6e. DSA Option 2 (Mutual Aid): +10d per completed DSA-linked mission
+        # 6e. DSA Option 2 (Mutual Aid): +10d per net completed DSA-linked mission
         if has_climate_modifier(state, "dsa_2"):
             for p in eligible_players:
                 st_p = _ensure_player_stats(p)
-                pla_m = int(st_p.get("dsaMissionsCompleted", 0) or 0)
+                pla_m = max(
+                    0,
+                    int(st_p.get("dsaMissionsCompleted", 0) or 0) - int(st_p.get("dsaMissionsFailed", 0) or 0),
+                )
                 delta = 10 * pla_m
-                det = f"{pla_m} DSA Mission{'s' if pla_m != 1 else ''} × +10d"
+                det = f"{pla_m} Net DSA Job{'s' if pla_m != 1 else ''} × +10d"
                 _record_climate_delta(p, "dsa_2", "DSA", "Mutual Aid", delta, det)
 
         # 6f. MS13 Option 1 (Protection Racket): Most MS13 favor gains +25(d) (ties -> PvP Combat)
@@ -8124,42 +8194,55 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
                 det = f"MS13 {aur_v:+d} ({abs(aur_v)} × +10d)" if aur_v != 0 else "MS13 0 (0d)"
                 _record_climate_delta(p, "ms13_2", "MS13", "Plata o Plomo", delta, det)
 
-        # 6h. Missions Option 1 (Five-Star Courier): Most completed missions gains +30(d) (ties -> PvP Combat)
+        # 6h. Missions Option 1 (Five-Star Courier): Most net completed jobs gains +30(d) (ties -> PvP Combat)
         if has_climate_modifier(state, "missions_1") and eligible_players:
-            max_comp = max(int(_ensure_player_stats(p).get("missionsCompleted", 0) or 0) for p in eligible_players)
-            tied_m1 = [p for p in eligible_players if int(_ensure_player_stats(p).get("missionsCompleted", 0) or 0) == max_comp]
+            def _net_pos_jobs(pl: Dict[str, Any]) -> int:
+                st_pl = _ensure_player_stats(pl)
+                return max(0, int(st_pl.get("missionsCompleted", 0) or 0) - int(st_pl.get("missionsFailed", 0) or 0))
+
+            max_comp = max(_net_pos_jobs(p) for p in eligible_players)
+            tied_m1 = [p for p in eligible_players if _net_pos_jobs(p) == max_comp]
             if len(tied_m1) > 1:
                 add_log(
                     state,
-                    f"⚔️ Tie for Most Completed Missions ({max_comp}) between {', '.join(x['name'] for x in tied_m1)} — PvP Combat decides +30(d)!",
+                    f"⚔️ Tie for Most Net Completed Jobs ({max_comp}) between {', '.join(x['name'] for x in tied_m1)} — PvP Combat decides +30(d)!",
                     "combat",
                 )
                 win_m1 = _resolve_multiway_pvp_winner(
-                    state, tied_m1, pvp_gear_snapshot, f"Most Completed Missions ({max_comp}) +30d"
+                    state, tied_m1, pvp_gear_snapshot, f"Most Net Completed Jobs ({max_comp}) +30d"
                 )
-                det_m1 = f"Won PvP Tie-Break for Most Completed Missions ({max_comp})"
+                det_m1 = f"Won PvP Tie-Break for Most Net Completed Jobs ({max_comp})"
             else:
                 win_m1 = tied_m1[0]
-                det_m1 = f"Sole Most Completed Missions ({max_comp})"
+                det_m1 = f"Sole Most Net Completed Jobs ({max_comp})"
             _record_climate_delta(win_m1, "missions_1", "Missions", "Five-Star Courier", 30, det_m1)
             add_log(state, f"Five-Star Courier: {win_m1['name']} claims +30(d) ({det_m1})!", "phase")
 
-        # 6i. Missions Option 2 (Full Time Employee): A x B Bitcoin (gems of one faction x missions done for it)
+        # 6i. Missions Option 2 (Full Time Employee): A x B Bitcoin (gems of one faction x net jobs done for it)
         if has_climate_modifier(state, "missions_2"):
             # Full Time Employee: each player receives A x B Bitcoin, where A = gems of one faction and
-            # B = missions completed for that faction (best faction for the player). 1 BTC = 10 units.
+            # B = net positive jobs completed for that faction (completed minus failed, min 0). 1 BTC = 10 units.
             for p in eligible_players:
                 st_p = _ensure_player_stats(p)
                 by_fac = st_p.get("missionsByFaction") or {}
-                best_fac, best_val = None, 0
+                failed_by_fac = st_p.get("failedMissionsByFaction") or {}
+                best_fac, best_val, best_net_jobs = None, 0, 0
                 for fac_k in FACTIONS:
                     gems = int((p.get("favor") or {}).get(fac_k, 0))
-                    val = max(0, gems) * int(by_fac.get(fac_k, 0) or 0)
+                    comp_f = int(by_fac.get(fac_k, 0) or 0)
+                    fail_f = int(failed_by_fac.get(fac_k, 0) or 0)
+                    net_f = max(0, comp_f - fail_f)
+                    val = max(0, gems) * net_f
                     if val > best_val:
-                        best_fac, best_val = fac_k, val
+                        best_fac, best_val, best_net_jobs = fac_k, val, net_f
                 if best_fac:
                     gems = int(p["favor"].get(best_fac, 0))
-                    det = f"{best_fac}: {gems} gems × {int(by_fac.get(best_fac, 0))} missions"
+                    comp_f = int(by_fac.get(best_fac, 0) or 0)
+                    fail_f = int(failed_by_fac.get(best_fac, 0) or 0)
+                    if fail_f > 0:
+                        det = f"{best_fac}: {gems} gems × {best_net_jobs} net jobs ({comp_f} done - {fail_f} failed)"
+                    else:
+                        det = f"{best_fac}: {gems} gems × {best_net_jobs} net jobs"
                     _record_climate_delta(p, "missions_2", "Missions", "Full Time Employee", best_val * 10, det)
 
         # Step 7: DSA Option 1 (Billionaire Tax) — Most DSA favor steals 15(d) from the wealthiest surviving rival

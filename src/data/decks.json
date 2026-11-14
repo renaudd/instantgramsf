@@ -22,7 +22,7 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cHe\u2019s actually quite likeable.\u201d",
+      "bio": "“He’s actually quite likeable.”",
       "combatFormula": "4(R)+1",
       "friendlyFavor": [
         "MAGA",
@@ -72,7 +72,7 @@
               9,
               6
             ],
-            "name": "Mark Zuckerberg\u2019s Job"
+            "name": "Mark Zuckerberg’s Job"
           }
         }
       ],
@@ -102,7 +102,7 @@
           9,
           6
         ],
-        "name": "Mark Zuckerberg\u2019s Job"
+        "name": "Mark Zuckerberg’s Job"
       },
       "tier": "leader"
     },
@@ -128,16 +128,16 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201c\u2018They let you do it.\u2019\u201d",
+      "bio": "“‘They let you do it.’”",
       "combatFormula": "3(R)+3",
       "friendlyFavor": [
-        "-DSA",
-        "-ISIS"
+        "TECH",
+        "-DSA"
       ],
       "friendlyReward": "34(d) & Cheapest Weapon",
       "hostileFavor": [
-        "DSA",
-        "TECH"
+        "-MAGA",
+        "DSA"
       ],
       "combatReward": "33(d)",
       "reactions": [
@@ -157,7 +157,7 @@
             "category": "Weed",
             "modifier": "++",
             "target": null,
-            "name": "Donald Trump\u2019s Job"
+            "name": "Donald Trump’s Job"
           }
         },
         {
@@ -176,7 +176,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)? Sell Weed at ++ in B1? \u2022 [?] Buy 1 Influence for 5(d)?",
+      "actionText": "(QUEST_ICON)? Sell Weed at ++ in B1? • [?] Buy 1 Influence for 5(d)?",
       "mission": {
         "kind": "sell",
         "item": "Weed",
@@ -185,7 +185,7 @@
         "category": "Weed",
         "modifier": "++",
         "target": null,
-        "name": "Donald Trump\u2019s Job"
+        "name": "Donald Trump’s Job"
       },
       "tier": "leader"
     },
@@ -195,19 +195,18 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cAt one point the wealthiest man in the world.\u201d",
+      "bio": "“At one point the wealthiest man in the world.”",
       "combatFormula": "6(R)",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "TECH"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "14(d)",
       "reactions": [
@@ -227,7 +226,7 @@
             "category": "Opiates",
             "modifier": "-",
             "target": null,
-            "name": "Elon Musk\u2019s Job"
+            "name": "Elon Musk’s Job"
           }
         },
         {
@@ -244,7 +243,7 @@
         "category": "Opiates",
         "modifier": "-",
         "target": null,
-        "name": "Elon Musk\u2019s Job"
+        "name": "Elon Musk’s Job"
       },
       "tier": "t1"
     },
@@ -254,19 +253,18 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cBets on contrarians. Collects citizenships.\u201d",
+      "bio": "“Bets on contrarians. Collects citizenships.”",
       "combatFormula": "3(R)+2",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
         "-MAGA",
-        "DSA",
-        "TECH"
+        "-TECH",
+        "DSA"
       ],
       "combatReward": "15(d)",
       "reactions": [
@@ -291,7 +289,7 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Criminals",
-            "name": "Peter Thiel\u2019s Job"
+            "name": "Peter Thiel’s Job"
           }
         }
       ],
@@ -305,7 +303,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Criminals",
-        "name": "Peter Thiel\u2019s Job"
+        "name": "Peter Thiel’s Job"
       },
       "tier": "t1"
     },
@@ -331,13 +329,12 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cSpent the $100 million on city parks.\u201d",
+      "bio": "“Spent the $100 million on city parks.”",
       "combatFormula": "5(R)",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
         "MAGA",
-        "-DSA"
+        "-ISIS"
       ],
       "friendlyReward": "28(d)",
       "hostileFavor": [
@@ -348,16 +345,12 @@
       "combatReward": "22(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "deck_quest_strict"
-        },
-        {
           "condition": "=0",
-          "type": "deck_quest_demand"
+          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
@@ -379,7 +372,7 @@
               34,
               24
             ],
-            "name": "Brian Chesky\u2019s Job",
+            "name": "Brian Chesky’s Job",
             "blocks": 2,
             "fencedSell": [
               78,
@@ -409,7 +402,7 @@
           34,
           24
         ],
-        "name": "Brian Chesky\u2019s Job",
+        "name": "Brian Chesky’s Job",
         "blocks": 2,
         "fencedSell": [
           78,
@@ -427,16 +420,17 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cBuilds the AI that worries about AI.\u201d",
+      "bio": "“Builds the AI that worries about AI.”",
       "combatFormula": "3(R)+1",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
-        "-DSA"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "17(d)",
       "hostileFavor": [
         "-TECH",
+        "-MAGA",
         "DSA"
       ],
       "combatReward": "12(d)",
@@ -448,10 +442,6 @@
         },
         {
           "condition": "=0",
-          "type": "deck_quest_demand"
-        },
-        {
-          "condition": ">=1",
           "type": "mission_offer",
           "actionText": "Pick up Brick of Coke at D6 and deliver to D2?",
           "mission": {
@@ -470,7 +460,7 @@
               34,
               24
             ],
-            "name": "Dario Amodei\u2019s Job",
+            "name": "Dario Amodei’s Job",
             "blocks": 2,
             "fencedSell": [
               78,
@@ -483,13 +473,13 @@
           "friendlyReward": "42(d)"
         },
         {
-          "condition": ">=2",
+          "condition": ">=1",
           "type": "offer",
           "actionText": "Move again this turn?",
           "mission": null
         }
       ],
-      "actionText": "(QUEST_ICON)? Pick up Brick of Coke at D6 and deliver to D2? \u2022 [?] Move again this turn?",
+      "actionText": "(QUEST_ICON)? Pick up Brick of Coke at D6 and deliver to D2? • [?] Move again this turn?",
       "mission": {
         "kind": "delivery",
         "item": "Brick of Coke",
@@ -506,7 +496,7 @@
           34,
           24
         ],
-        "name": "Dario Amodei\u2019s Job",
+        "name": "Dario Amodei’s Job",
         "blocks": 2,
         "fencedSell": [
           78,
@@ -524,12 +514,12 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cKeeps the safety team\u2019s lights on.\u201d",
+      "bio": "“Keeps the safety team’s lights on.”",
       "combatFormula": "2(R)+3",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
-        "-DSA"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "19(d)",
       "hostileFavor": [
@@ -560,7 +550,7 @@
             "category": "Weed",
             "modifier": "+",
             "target": null,
-            "name": "Daniela Amodei\u2019s Job"
+            "name": "Daniela Amodei’s Job"
           }
         }
       ],
@@ -573,7 +563,7 @@
         "category": "Weed",
         "modifier": "+",
         "target": null,
-        "name": "Daniela Amodei\u2019s Job"
+        "name": "Daniela Amodei’s Job"
       },
       "tier": "t2"
     },
@@ -583,7 +573,7 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "MS13",
-      "bio": "\u201cNot his fault that he has fans.\u201d",
+      "bio": "“Not his fault that he has fans.”",
       "combatFormula": "4(R)",
       "friendlyFavor": [
         "MS13"
@@ -601,10 +591,6 @@
         },
         {
           "condition": "=0",
-          "type": "deck_quest_demand"
-        },
-        {
-          "condition": ">=1",
           "type": "mission_request",
           "actionText": "Kill a Cop!",
           "mission": {
@@ -616,17 +602,17 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Criminals",
-            "name": "Steph Curry\u2019s Job"
+            "name": "Steph Curry’s Job"
           }
         },
         {
-          "condition": ">=2",
+          "condition": ">=1",
           "type": "offer",
           "actionText": "Move again this turn?",
           "mission": null
         }
       ],
-      "actionText": "(QUEST_ICON)! Kill a Cop! \u2022 [?] Move again this turn?",
+      "actionText": "(QUEST_ICON)! Kill a Cop! • [?] Move again this turn?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -636,7 +622,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Criminals",
-        "name": "Steph Curry\u2019s Job"
+        "name": "Steph Curry’s Job"
       },
       "tier": "t1"
     },
@@ -646,10 +632,11 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "MS13",
-      "bio": "\u201cRecalled, but not forgotten.\u201d",
+      "bio": "“Recalled, but not forgotten.”",
       "combatFormula": "3(R)-1",
       "friendlyFavor": [
         "MS13",
+        "ISIS",
         "-MAGA"
       ],
       "friendlyReward": "Cheapest Henchman",
@@ -676,15 +663,11 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Cops",
-            "name": "Chesa Boudin\u2019s Job"
+            "name": "Chesa Boudin’s Job"
           }
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
           "type": "offer",
           "actionText": "Sell Opiates at ++?",
           "mission": {
@@ -698,7 +681,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)? Kill a Cop? \u2022 [?] Sell Opiates at ++?",
+      "actionText": "(QUEST_ICON)? Kill a Cop? • [?] Sell Opiates at ++?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -708,7 +691,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Cops",
-        "name": "Chesa Boudin\u2019s Job"
+        "name": "Chesa Boudin’s Job"
       },
       "tier": "t2"
     },
@@ -718,7 +701,7 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "ISIS",
-      "bio": "\u201cAt the center of a global news scandal.\u201d",
+      "bio": "“At the center of a global news scandal.”",
       "combatFormula": "3",
       "friendlyFavor": [
         "ISIS"
@@ -737,10 +720,6 @@
         },
         {
           "condition": "=0",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=1",
           "type": "mission_request",
           "actionText": "Kill a Cop!",
           "mission": {
@@ -752,11 +731,11 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Celebrities",
-            "name": "Alice Huang\u2019s Job"
+            "name": "Alice Huang’s Job"
           }
         },
         {
-          "condition": ">=2",
+          "condition": ">=1",
           "type": "offer",
           "actionText": "Buy any Mkt Opiate at -?",
           "mission": {
@@ -770,7 +749,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)! Kill a Cop! \u2022 [?] Buy any Mkt Opiate at -?",
+      "actionText": "(QUEST_ICON)! Kill a Cop! • [?] Buy any Mkt Opiate at -?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -780,7 +759,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Celebrities",
-        "name": "Alice Huang\u2019s Job"
+        "name": "Alice Huang’s Job"
       },
       "tier": "t1"
     },
@@ -790,7 +769,7 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "ISIS",
-      "bio": "\u201cMiracle cures, now with a studio audience.\u201d",
+      "bio": "“Miracle cures, now with a studio audience.”",
       "combatFormula": "3(R)-2(R)",
       "friendlyFavor": [
         "ISIS"
@@ -808,11 +787,6 @@
         },
         {
           "condition": "=0",
-          "type": "deck_quest_demand",
-          "friendlyReward": "29(d)"
-        },
-        {
-          "condition": ">=1",
           "type": "mission_offer",
           "actionText": "Kill a Cop?",
           "mission": {
@@ -824,11 +798,11 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Cops",
-            "name": "Dr. Oz\u2019s Job"
+            "name": "Dr. Oz’s Job"
           }
         },
         {
-          "condition": ">=2",
+          "condition": ">=1",
           "type": "offer",
           "actionText": "Buy Cheapest Mkt Weapon for 8(d)?",
           "mission": {
@@ -843,7 +817,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)? Kill a Cop? \u2022 [?] Buy Cheapest Mkt Weapon for 8(d)?",
+      "actionText": "(QUEST_ICON)? Kill a Cop? • [?] Buy Cheapest Mkt Weapon for 8(d)?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -853,7 +827,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Cops",
-        "name": "Dr. Oz\u2019s Job"
+        "name": "Dr. Oz’s Job"
       },
       "tier": "t2"
     },
@@ -863,17 +837,17 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cLeather jacket, trillion-dollar chips.\u201d",
+      "bio": "“Leather jacket, trillion-dollar chips.”",
       "combatFormula": "(R)+2",
       "friendlyFavor": [
         "DSA",
-        "-ISIS",
         "TECH",
-        "-MAGA"
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-DSA",
+        "-MAGA",
         "TECH"
       ],
       "combatReward": "9(d)",
@@ -895,7 +869,7 @@
             "category": "Weed",
             "modifier": "-",
             "target": null,
-            "name": "Jensen Huang\u2019s Job"
+            "name": "Jensen Huang’s Job"
           }
         },
         {
@@ -912,7 +886,7 @@
         "category": "Weed",
         "modifier": "-",
         "target": null,
-        "name": "Jensen Huang\u2019s Job"
+        "name": "Jensen Huang’s Job"
       },
       "tier": "t2"
     },
@@ -922,10 +896,11 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cOnce again asking.\u201d",
+      "bio": "“Once again asking.”",
       "combatFormula": "2(R)+1",
       "friendlyFavor": [
         "DSA",
+        "TECH",
         "-MAGA"
       ],
       "friendlyReward": "+1 Influence",
@@ -959,7 +934,7 @@
               35,
               26
             ],
-            "name": "Bernie Sanders\u2019s Job",
+            "name": "Bernie Sanders’s Job",
             "blocks": 2,
             "fencedSell": [
               80,
@@ -993,7 +968,7 @@
           35,
           26
         ],
-        "name": "Bernie Sanders\u2019s Job",
+        "name": "Bernie Sanders’s Job",
         "blocks": 2,
         "fencedSell": [
           80,
@@ -1011,10 +986,11 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cPhilosopher, preacher, perennial candidate.\u201d",
+      "bio": "“Philosopher, preacher, perennial candidate.”",
       "combatFormula": "3(R)",
       "friendlyFavor": [
         "DSA",
+        "TECH",
         "-MAGA"
       ],
       "friendlyReward": "Cheapest Henchman",
@@ -1024,66 +1000,19 @@
       "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "deck_quest_strict"
-        },
-        {
           "condition": "=0",
-          "type": "deck_quest_offer",
-          "friendlyReward": "18(d)"
+          "type": "mission_offer"
         },
         {
           "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "Pick up Cooler of Molly at D1 and deliver to D5?",
-          "mission": {
-            "kind": "delivery",
-            "item": "Cooler of Molly",
-            "pickupCell": "D1",
-            "deliverCell": "D5",
-            "category": "Party",
-            "modifier": null,
-            "target": null,
-            "cargoSize": 2,
-            "payoutTable": [
-              80,
-              61,
-              46,
-              35,
-              26
-            ],
-            "name": "Cornel West\u2019s Job",
-            "blocks": 2,
-            "fencedSell": [
-              80,
-              61,
-              46,
-              35,
-              26
-            ]
-          },
-          "friendlyReward": "29(d)"
-        },
-        {
-          "condition": ">=2",
-          "type": "offer",
-          "actionText": "Buy any Mkt Party at -?",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Party",
-            "modifier": "-",
-            "target": "Market"
-          }
+          "type": "offer"
         }
       ],
-      "actionText": "(QUEST_ICON)? Pick up Cooler of Molly at D1 and deliver to D5? \u2022 [?] Buy any Mkt Party at -?",
+      "actionText": "(QUEST_ICON)? Pick up Cooler of Molly at D1 and deliver to D5? • [?] Buy any Mkt Party at -?",
       "mission": {
         "kind": "delivery",
         "item": "Cooler of Molly",
@@ -1100,7 +1029,7 @@
           35,
           26
         ],
-        "name": "Cornel West\u2019s Job",
+        "name": "Cornel West’s Job",
         "blocks": 2,
         "fencedSell": [
           80,
@@ -1118,12 +1047,12 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cStory hour starts at midnight.\u201d",
+      "bio": "“Story hour starts at midnight.”",
       "combatFormula": "2(R)-1",
       "friendlyFavor": [
         "DSA",
-        "-ISIS",
-        "-MAGA"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
@@ -1133,27 +1062,11 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "combat",
-          "reward": "Cheapest Weed"
+          "type": "combat"
         },
         {
-          "condition": "=0",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "Sell Weed at - in E5?",
-          "mission": {
-            "kind": "sell",
-            "item": "Weed",
-            "pickupCell": null,
-            "deliverCell": "E5",
-            "category": "Weed",
-            "modifier": "-",
-            "target": null,
-            "name": "Drag Queen\u2019s Job"
-          }
+          "condition": ">=0",
+          "type": "mission_offer"
         }
       ],
       "actionText": "(QUEST_ICON)? Sell Weed at - in E5?",
@@ -1165,7 +1078,7 @@
         "category": "Weed",
         "modifier": "-",
         "target": null,
-        "name": "Drag Queen\u2019s Job"
+        "name": "Drag Queen’s Job"
       },
       "tier": "gen"
     },
@@ -1175,30 +1088,26 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cHas a theory about you.\u201d",
+      "bio": "“Has a theory about you.”",
       "combatFormula": "(R)+1",
       "friendlyFavor": [
         "DSA",
+        "TECH",
         "-ISIS"
       ],
       "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-DSA",
-        "MAGA"
+        "-DSA"
       ],
       "combatReward": "7(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "deck_quest_strict"
-        },
-        {
           "condition": "=0",
-          "type": "deck_quest_demand"
+          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
@@ -1213,7 +1122,7 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Celebrities",
-            "name": "Tenured Professor\u2019s Job"
+            "name": "Tenured Professor’s Job"
           }
         }
       ],
@@ -1227,7 +1136,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Celebrities",
-        "name": "Tenured Professor\u2019s Job"
+        "name": "Tenured Professor’s Job"
       },
       "tier": "gen"
     },
@@ -1237,12 +1146,12 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cThis episode is sponsored by you.\u201d",
+      "bio": "“This episode is sponsored by you.”",
       "combatFormula": "3(R)-(R)",
       "friendlyFavor": [
         "DSA",
-        "-ISIS",
-        "-MAGA"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "+1 Influence",
       "hostileFavor": [
@@ -1251,65 +1160,19 @@
       "combatReward": "7(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "deck_quest_strict"
-        },
-        {
           "condition": "=0",
-          "type": "mission_offer",
-          "actionText": "Pick up Humboldt Duffel at E6 and deliver to A2?",
-          "mission": {
-            "kind": "delivery",
-            "item": "Humboldt Duffel",
-            "pickupCell": "E6",
-            "deliverCell": "A2",
-            "category": "Weed",
-            "modifier": null,
-            "target": null,
-            "cargoSize": 1,
-            "payoutTable": [
-              12,
-              10,
-              8,
-              6,
-              4
-            ],
-            "name": "Indie Podcaster\u2019s Job",
-            "blocks": 1,
-            "fencedSell": [
-              12,
-              10,
-              8,
-              6,
-              4
-            ]
-          },
-          "friendlyReward": "23(d)"
+          "type": "mission_offer"
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
-          "type": "offer",
-          "actionText": "Sell Party at ++?",
-          "mission": {
-            "kind": "sell",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Party",
-            "modifier": "++",
-            "target": null
-          }
+          "type": "offer"
         }
       ],
-      "actionText": "(QUEST_ICON)? Pick up Humboldt Duffel at E6 and deliver to A2? \u2022 [?] Sell Party at ++?",
+      "actionText": "(QUEST_ICON)? Pick up Humboldt Duffel at E6 and deliver to A2? • [?] Sell Party at ++?",
       "mission": {
         "kind": "delivery",
         "item": "Humboldt Duffel",
@@ -1326,7 +1189,7 @@
           6,
           4
         ],
-        "name": "Indie Podcaster\u2019s Job",
+        "name": "Indie Podcaster’s Job",
         "blocks": 1,
         "fencedSell": [
           12,
@@ -1344,7 +1207,7 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cStill finding playa dust.\u201d",
+      "bio": "“Still finding playa dust.”",
       "combatFormula": "2",
       "friendlyFavor": [
         "DSA",
@@ -1353,8 +1216,7 @@
       ],
       "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-DSA",
-        "MAGA"
+        "-DSA"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -1383,7 +1245,7 @@
               6,
               4
             ],
-            "name": "Burning Guy Artist\u2019s Job",
+            "name": "Burning Guy Artist’s Job",
             "blocks": 1,
             "fencedSell": [
               12,
@@ -1397,10 +1259,6 @@
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
           "type": "offer",
           "actionText": "Sell Party at ++?",
           "mission": {
@@ -1414,7 +1272,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)! Pick up Humboldt Duffel at E2 and deliver to B4! \u2022 [?] Sell Party at ++?",
+      "actionText": "(QUEST_ICON)! Pick up Humboldt Duffel at E2 and deliver to B4! • [?] Sell Party at ++?",
       "mission": {
         "kind": "delivery",
         "item": "Humboldt Duffel",
@@ -1431,7 +1289,7 @@
           6,
           4
         ],
-        "name": "Burning Guy Artist\u2019s Job",
+        "name": "Burning Guy Artist’s Job",
         "blocks": 1,
         "fencedSell": [
           12,
@@ -1449,18 +1307,16 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cPainted your face on a wall. You\u2019re welcome.\u201d",
+      "bio": "“Painted your face on a wall. You’re welcome.”",
       "combatFormula": "2(R)-(R)",
       "friendlyFavor": [
         "DSA",
-        "-ISIS",
         "TECH",
-        "-MAGA"
+        "-ISIS"
       ],
       "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-DSA",
-        "MAGA"
+        "-DSA"
       ],
       "combatReward": "5(d)",
       "reactions": [
@@ -1481,15 +1337,11 @@
             "category": "Weed",
             "modifier": "-",
             "target": null,
-            "name": "Muralist\u2019s Job"
+            "name": "Muralist’s Job"
           }
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
           "type": "offer",
           "actionText": "Buy any Mkt Party at -?",
           "mission": {
@@ -1503,7 +1355,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)! Sell Weed at - in C4! \u2022 [?] Buy any Mkt Party at -?",
+      "actionText": "(QUEST_ICON)! Sell Weed at - in C4! • [?] Buy any Mkt Party at -?",
       "mission": {
         "kind": "sell",
         "item": "Weed",
@@ -1512,7 +1364,7 @@
         "category": "Weed",
         "modifier": "-",
         "target": null,
-        "name": "Muralist\u2019s Job"
+        "name": "Muralist’s Job"
       },
       "tier": "gen"
     },
@@ -1522,31 +1374,29 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cGlued to the Bay Bridge since Tuesday.\u201d",
+      "bio": "“Glued to the Bay Bridge since Tuesday.”",
       "combatFormula": "2(R)",
       "friendlyFavor": [
         "DSA",
-        "-ISIS",
         "TECH",
-        "-MAGA"
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
-        "-DSA",
-        "MAGA"
+        "-DSA"
       ],
       "combatReward": "7(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
+          "condition": "=0",
           "type": "deck_quest_strict"
         },
         {
-          "condition": "=0",
+          "condition": ">=1",
           "type": "mission_request",
           "actionText": "Kill a Cop!",
           "mission": {
@@ -1558,12 +1408,8 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Celebrities",
-            "name": "Climate Activist\u2019s Job"
+            "name": "Climate Activist’s Job"
           }
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
         }
       ],
       "actionText": "(QUEST_ICON)! Kill a Cop!",
@@ -1576,7 +1422,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Celebrities",
-        "name": "Climate Activist\u2019s Job"
+        "name": "Climate Activist’s Job"
       },
       "tier": "gen"
     },
@@ -1586,12 +1432,12 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cThis is not financial advice.\u201d",
+      "bio": "“This is not financial advice.”",
       "combatFormula": "4",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
-        "MAGA"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "+1 TECH Favor",
       "hostileFavor": [
@@ -1602,27 +1448,11 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "combat",
-          "reward": "10(d)"
+          "type": "combat"
         },
         {
-          "condition": "=0",
-          "type": "deck_quest_demand"
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "Sell Party at ++ in A1?",
-          "mission": {
-            "kind": "sell",
-            "item": "Party",
-            "pickupCell": null,
-            "deliverCell": "A1",
-            "category": "Party",
-            "modifier": "++",
-            "target": null,
-            "name": "Crypto Influencer\u2019s Job"
-          }
+          "condition": ">=0",
+          "type": "mission_offer"
         }
       ],
       "actionText": "(QUEST_ICON)? Sell Party at ++ in A1?",
@@ -1634,7 +1464,7 @@
         "category": "Party",
         "modifier": "++",
         "target": null,
-        "name": "Crypto Influencer\u2019s Job"
+        "name": "Crypto Influencer’s Job"
       },
       "tier": "gen"
     },
@@ -1644,17 +1474,17 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cIt\u2019s like Oober, but for you.\u201d",
+      "bio": "“It’s like Oober, but for you.”",
       "combatFormula": "(R)+3",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
         "MAGA",
-        "-DSA"
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Party",
       "hostileFavor": [
         "-TECH",
+        "-MAGA",
         "DSA"
       ],
       "combatReward": "12(d)",
@@ -1677,7 +1507,7 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Celebrities",
-            "name": "Startup Founder\u2019s Job"
+            "name": "Startup Founder’s Job"
           }
         },
         {
@@ -1695,7 +1525,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Celebrities",
-        "name": "Startup Founder\u2019s Job"
+        "name": "Startup Founder’s Job"
       },
       "tier": "gen"
     },
@@ -1705,7 +1535,7 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cConcerned, professionally.\u201d",
+      "bio": "“Concerned, professionally.”",
       "combatFormula": "2(R)+2",
       "friendlyFavor": [
         "TECH"
@@ -1717,15 +1547,15 @@
       "combatReward": "12(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
+          "condition": "=0",
           "type": "deck_quest_strict"
         },
         {
-          "condition": "=0",
+          "condition": ">=1",
           "type": "mission_strict",
           "actionText": "Sell Party at + in B5!!",
           "mission": {
@@ -1736,12 +1566,8 @@
             "category": "Party",
             "modifier": "+",
             "target": null,
-            "name": "AI Ethicist\u2019s Job"
+            "name": "AI Ethicist’s Job"
           }
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
         }
       ],
       "actionText": "(QUEST_ICON)!! Sell Party at + in B5!!",
@@ -1753,7 +1579,7 @@
         "category": "Party",
         "modifier": "+",
         "target": null,
-        "name": "AI Ethicist\u2019s Job"
+        "name": "AI Ethicist’s Job"
       },
       "tier": "gen"
     },
@@ -1763,7 +1589,7 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "ISIS",
-      "bio": "\u201cSmash that like button.\u201d",
+      "bio": "“Smash that like button.”",
       "combatFormula": "(R)",
       "friendlyFavor": [
         "ISIS"
@@ -1779,40 +1605,8 @@
           "type": "combat"
         },
         {
-          "condition": "=0",
-          "type": "deck_quest_strict"
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "Pick up Fentanyl Box at A3 and deliver to F5?",
-          "mission": {
-            "kind": "delivery",
-            "item": "Fentanyl Box",
-            "pickupCell": "A3",
-            "deliverCell": "F5",
-            "category": "Opiates",
-            "modifier": null,
-            "target": null,
-            "cargoSize": 1,
-            "payoutTable": [
-              54,
-              37,
-              23,
-              17,
-              13
-            ],
-            "name": "Edgelord Streamer\u2019s Job",
-            "blocks": 1,
-            "fencedSell": [
-              54,
-              37,
-              23,
-              17,
-              13
-            ]
-          },
-          "friendlyReward": "52(d)"
+          "condition": ">=0",
+          "type": "mission_offer"
         }
       ],
       "actionText": "(QUEST_ICON)? Pick up Fentanyl Box at A3 and deliver to F5?",
@@ -1832,7 +1626,7 @@
           17,
           13
         ],
-        "name": "Edgelord Streamer\u2019s Job",
+        "name": "Edgelord Streamer’s Job",
         "blocks": 1,
         "fencedSell": [
           54,
@@ -1866,7 +1660,7 @@
       "deck": "Celebrities",
       "type": "character",
       "faction": "ISIS",
-      "bio": "\u201cDid his own research.\u201d",
+      "bio": "“Did his own research.”",
       "combatFormula": "1",
       "friendlyFavor": [
         "ISIS"
@@ -1893,7 +1687,7 @@
             "category": "Weapons",
             "modifier": "+",
             "target": null,
-            "name": "Radicalized YouTuber\u2019s Job"
+            "name": "Radicalized YouTuber’s Job"
           }
         },
         {
@@ -1911,7 +1705,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)? Sell Weapons at + in F5? \u2022 [?] Sell Weapons at +?",
+      "actionText": "(QUEST_ICON)? Sell Weapons at + in F5? • [?] Sell Weapons at +?",
       "mission": {
         "kind": "sell",
         "item": "Weapons",
@@ -1920,7 +1714,7 @@
         "category": "Weapons",
         "modifier": "+",
         "target": null,
-        "name": "Radicalized YouTuber\u2019s Job"
+        "name": "Radicalized YouTuber’s Job"
       },
       "tier": "gen"
     }
@@ -1932,12 +1726,12 @@
       "deck": "Cops",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cLet\u2019s go, San Francisco.\u201d",
+      "bio": "“Let’s go, San Francisco.”",
       "combatFormula": "3X(R)",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
-        "MAGA"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "37(d) & +1 TECH Favor",
       "hostileFavor": [
@@ -1948,39 +1742,19 @@
       "combatReward": "36(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Opiates!!"
-        },
-        {
           "condition": "=0",
-          "type": "deck_quest_offer"
+          "type": "demand_strict"
         },
         {
           "condition": ">=1",
-          "type": "mission_strict",
-          "actionText": "Sell Uppers at ++ in E3!!",
-          "mission": {
-            "kind": "sell",
-            "item": "Uppers",
-            "pickupCell": null,
-            "deliverCell": "E3",
-            "category": "Uppers",
-            "modifier": "++",
-            "target": null,
-            "name": "Mayor Lurie\u2019s Job"
-          }
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
+          "type": "mission_strict"
         }
       ],
-      "actionText": "[!!] Give me all of your Opiates!! \u2022 (QUEST_ICON)!! Sell Uppers at ++ in E3!!",
+      "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)!! Sell Uppers at ++ in E3!!",
       "mission": {
         "kind": "sell",
         "item": "Uppers",
@@ -1989,7 +1763,7 @@
         "category": "Uppers",
         "modifier": "++",
         "target": null,
-        "name": "Mayor Lurie\u2019s Job"
+        "name": "Mayor Lurie’s Job"
       },
       "tier": "top"
     },
@@ -1999,12 +1773,12 @@
       "deck": "Cops",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cSF\u2019s first openly gay Congressman.\u201d",
+      "bio": "“SF’s first openly gay Congressman.”",
       "combatFormula": "X(R)+3",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
-        "MAGA"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Party",
       "hostileFavor": [
@@ -2015,17 +1789,13 @@
       "combatReward": "14(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
+          "condition": "=0",
           "type": "demand_strict",
           "actionText": "Give me all of your Uppers!!"
-        },
-        {
-          "condition": "=0",
-          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
@@ -2040,11 +1810,11 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Celebrities",
-            "name": "Scott Wiener\u2019s Job"
+            "name": "Scott Wiener’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Uppers!! \u2022 (QUEST_ICON)? Kill a Cop?",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Kill a Cop?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -2054,7 +1824,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Celebrities",
-        "name": "Scott Wiener\u2019s Job"
+        "name": "Scott Wiener’s Job"
       },
       "tier": "t2"
     },
@@ -2064,13 +1834,12 @@
       "deck": "Cops",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cHas an essay about this.\u201d",
+      "bio": "“Has an essay about this.”",
       "combatFormula": "X(R)+X+1",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
         "MAGA",
-        "-DSA"
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Weed",
       "hostileFavor": [
@@ -2081,17 +1850,13 @@
       "combatReward": "14(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
+          "condition": "=0",
           "type": "demand_strict",
           "actionText": "Give me all of your Uppers!!"
-        },
-        {
-          "condition": "=0",
-          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
@@ -2106,11 +1871,11 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Celebrities",
-            "name": "Paul Graham\u2019s Job"
+            "name": "Paul Graham’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Uppers!! \u2022 (QUEST_ICON)? Kill a Cop?",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Kill a Cop?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -2120,7 +1885,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Celebrities",
-        "name": "Paul Graham\u2019s Job"
+        "name": "Paul Graham’s Job"
       },
       "tier": "t2"
     },
@@ -2130,15 +1895,17 @@
       "deck": "Cops",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cWe\u2019ve been reading your texts.\u201d",
+      "bio": "“We’ve been reading your texts.”",
       "combatFormula": "X(R)+2X",
       "friendlyFavor": [
         "TECH",
+        "MAGA",
         "-ISIS"
       ],
       "friendlyReward": "+1 Influence",
       "hostileFavor": [
         "-TECH",
+        "-MAGA",
         "DSA"
       ],
       "combatReward": "21(d)",
@@ -2169,11 +1936,11 @@
             "category": "Weed",
             "modifier": "+",
             "target": null,
-            "name": "FBI\u2019s Job"
+            "name": "FBI’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Weapons!! \u2022 (QUEST_ICON)? Sell Weed at + in F2?",
+      "actionText": "[!!] Give me all of your Weapons!! • (QUEST_ICON)? Sell Weed at + in F2?",
       "mission": {
         "kind": "sell",
         "item": "Weed",
@@ -2182,7 +1949,7 @@
         "category": "Weed",
         "modifier": "+",
         "target": null,
-        "name": "FBI\u2019s Job"
+        "name": "FBI’s Job"
       },
       "tier": "t1"
     },
@@ -2192,12 +1959,12 @@
       "deck": "Cops",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cThis encounter never happened.\u201d",
+      "bio": "“This encounter never happened.”",
       "combatFormula": "2X(R)+X",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
-        "-DSA"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Party",
       "hostileFavor": [
@@ -2208,24 +1975,15 @@
       "combatReward": "21(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "deck_quest_strict"
-        },
-        {
           "condition": "=0",
-          "type": "deck_quest_offer"
+          "type": "demand_strict"
         },
         {
-          "condition": "1..2",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Weapons!!"
-        },
-        {
-          "condition": ">=3",
+          "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
@@ -2239,12 +1997,12 @@
       "deck": "Cops",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cYou can\u2019t park there.\u201d",
+      "bio": "“You can’t park there.”",
       "combatFormula": "X(R)-X",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
-        "-DSA"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Weed",
       "hostileFavor": [
@@ -2255,32 +2013,12 @@
       "combatReward": "5(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Uppers!!"
-        },
-        {
-          "condition": "=0",
-          "type": "mission_strict",
-          "actionText": "Sell Party at - in D4!",
-          "mission": {
-            "kind": "sell",
-            "item": "Party",
-            "pickupCell": null,
-            "deliverCell": "D4",
-            "category": "Party",
-            "modifier": "-",
-            "target": null,
-            "name": "Meter Maid\u2019s Job"
-          }
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
+          "condition": ">=0",
+          "type": "mission_request"
         }
       ],
       "actionText": "(QUEST_ICON)! Sell Party at - in D4!",
@@ -2292,7 +2030,7 @@
         "category": "Party",
         "modifier": "-",
         "target": null,
-        "name": "Meter Maid\u2019s Job"
+        "name": "Meter Maid’s Job"
       },
       "tier": "meter"
     },
@@ -2302,13 +2040,12 @@
       "deck": "Cops",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cLicense and registration.\u201d",
+      "bio": "“License and registration.”",
       "combatFormula": "2X(R)-2",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
         "MAGA",
-        "-DSA"
+        "-ISIS"
       ],
       "friendlyReward": "+1 TECH Favor",
       "hostileFavor": [
@@ -2328,27 +2065,12 @@
           "ifCarrying": "Party"
         },
         {
-          "condition": "=1",
+          "condition": ">=1",
           "type": "demand_strict",
           "actionText": "Give me all of your Party!!"
-        },
-        {
-          "condition": ">=2",
-          "type": "mission_offer",
-          "actionText": "Sell Uppers at + in C1?",
-          "mission": {
-            "kind": "sell",
-            "item": "Uppers",
-            "pickupCell": null,
-            "deliverCell": "C1",
-            "category": "Uppers",
-            "modifier": "+",
-            "target": null,
-            "name": "Traffic Cop\u2019s Job"
-          }
         }
       ],
-      "actionText": "[!!] Give me all of your Party!! \u2022 (QUEST_ICON)? Sell Uppers at + in C1?",
+      "actionText": "[!!] Give me all of your Party!!",
       "mission": {
         "kind": "sell",
         "item": "Uppers",
@@ -2357,7 +2079,7 @@
         "category": "Uppers",
         "modifier": "+",
         "target": null,
-        "name": "Traffic Cop\u2019s Job"
+        "name": "Traffic Cop’s Job"
       },
       "tier": "traffic"
     },
@@ -2367,13 +2089,12 @@
       "deck": "Cops",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cFirst night on the job.\u201d",
+      "bio": "“First night on the job.”",
       "combatFormula": "X(R)-1",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
         "MAGA",
-        "-DSA"
+        "-ISIS"
       ],
       "friendlyReward": "+1 Influence",
       "hostileFavor": [
@@ -2383,7 +2104,7 @@
       "combatReward": "5(d)",
       "reactions": [
         {
-          "condition": "<0",
+          "condition": "<=-1",
           "type": "combat",
           "ifCarrying": "Weed or Party"
         },
@@ -2393,7 +2114,7 @@
           "actionText": "Give me all of your Uppers!!"
         },
         {
-          "condition": "=1",
+          "condition": ">=1",
           "type": "mission_strict",
           "actionText": "Kill a Cop!!",
           "mission": {
@@ -2405,15 +2126,11 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Celebrities",
-            "name": "Rookie\u2019s Job"
+            "name": "Rookie’s Job"
           }
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "[!!] Give me all of your Uppers!! \u2022 (QUEST_ICON)!! Kill a Cop!!",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)!! Kill a Cop!!",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -2423,7 +2140,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Celebrities",
-        "name": "Rookie\u2019s Job"
+        "name": "Rookie’s Job"
       },
       "tier": "rookie"
     },
@@ -2433,10 +2150,11 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MS13",
-      "bio": "\u201cZero percent homicide rate, one hundred percent megaprison.\u201d",
+      "bio": "“Zero percent homicide rate, one hundred percent megaprison.”",
       "combatFormula": "3X",
       "friendlyFavor": [
         "MS13",
+        "ISIS",
         "-MAGA"
       ],
       "friendlyReward": "29(d) & Cheapest Uppers",
@@ -2465,7 +2183,7 @@
             "category": "Opiates",
             "modifier": "++",
             "target": null,
-            "name": "Nayib Bukele\u2019s Job"
+            "name": "Nayib Bukele’s Job"
           }
         }
       ],
@@ -2478,7 +2196,7 @@
         "category": "Opiates",
         "modifier": "++",
         "target": null,
-        "name": "Nayib Bukele\u2019s Job"
+        "name": "Nayib Bukele’s Job"
       },
       "tier": "leader"
     },
@@ -2488,10 +2206,11 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MS13",
-      "bio": "\u201cOn two payrolls.\u201d",
+      "bio": "“On two payrolls.”",
       "combatFormula": "X(R)+2",
       "friendlyFavor": [
         "MS13",
+        "ISIS",
         "-MAGA"
       ],
       "friendlyReward": "Cheapest Party",
@@ -2518,15 +2237,11 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Cops",
-            "name": "Dirty Cop\u2019s Job"
+            "name": "Dirty Cop’s Job"
           }
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
           "type": "offer",
           "actionText": "Buy any Mkt Upper at -?",
           "mission": {
@@ -2540,7 +2255,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)!! Kill a Cop!! \u2022 [?] Buy any Mkt Upper at -?",
+      "actionText": "(QUEST_ICON)!! Kill a Cop!! • [?] Buy any Mkt Upper at -?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -2550,7 +2265,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Cops",
-        "name": "Dirty Cop\u2019s Job"
+        "name": "Dirty Cop’s Job"
       },
       "tier": "t2"
     },
@@ -2560,10 +2275,11 @@
       "deck": "Cops",
       "type": "character",
       "faction": "ISIS",
-      "bio": "\u201c\u2018I\u2019ve spoken to every leader in the region.\u2019\u201d",
+      "bio": "“‘I’ve spoken to every leader in the region.’”",
       "combatFormula": "2X(R)",
       "friendlyFavor": [
         "ISIS",
+        "MS13",
         "-TECH"
       ],
       "friendlyReward": "23(d)",
@@ -2594,7 +2310,7 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Celebrities",
-            "name": "Jared Kushner\u2019s Job"
+            "name": "Jared Kushner’s Job"
           }
         }
       ],
@@ -2608,7 +2324,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Celebrities",
-        "name": "Jared Kushner\u2019s Job"
+        "name": "Jared Kushner’s Job"
       },
       "tier": "leader"
     },
@@ -2618,37 +2334,28 @@
       "deck": "Cops",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cNever met a rent increase he liked.\u201d",
+      "bio": "“Never met a rent increase he liked.”",
       "combatFormula": "X+1",
       "friendlyFavor": [
         "DSA",
-        "-ISIS",
-        "TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
         "-DSA",
-        "TECH",
-        "MAGA"
+        "-MAGA",
+        "TECH"
       ],
       "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Weapons!!"
-        },
-        {
-          "condition": "=0",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
+          "condition": ">=0",
+          "type": "demand_strict"
         }
       ],
       "actionText": "[!!] Give me all of your Weapons!!",
@@ -2661,12 +2368,12 @@
       "deck": "Cops",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cThe only cops the DSA likes.\u201d",
+      "bio": "“The only cops the DSA likes.”",
       "combatFormula": "X(R)",
       "friendlyFavor": [
         "DSA",
-        "-ISIS",
-        "-MAGA"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
@@ -2675,39 +2382,19 @@
       "combatReward": "7(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Uppers!!"
-        },
-        {
           "condition": "=0",
-          "type": "deck_quest_offer"
+          "type": "demand_strict"
         },
         {
           "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "Sell Weed at - in C5?",
-          "mission": {
-            "kind": "sell",
-            "item": "Weed",
-            "pickupCell": null,
-            "deliverCell": "C5",
-            "category": "Weed",
-            "modifier": "-",
-            "target": null,
-            "name": "Firefighters\u2019s Job"
-          }
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
+          "type": "mission_offer"
         }
       ],
-      "actionText": "[!!] Give me all of your Uppers!! \u2022 (QUEST_ICON)? Sell Weed at - in C5?",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Sell Weed at - in C5?",
       "mission": {
         "kind": "sell",
         "item": "Weed",
@@ -2716,7 +2403,7 @@
         "category": "Weed",
         "modifier": "-",
         "target": null,
-        "name": "Firefighters\u2019s Job"
+        "name": "Firefighters’s Job"
       },
       "tier": "gen"
     },
@@ -2726,18 +2413,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cCivil rights, selectively.\u201d",
+      "bio": "“Civil rights, selectively.”",
       "combatFormula": "3X-1",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "TECH"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "15(d)",
       "reactions": [
@@ -2747,10 +2434,6 @@
         },
         {
           "condition": "=0",
-          "type": "deck_quest_strict"
-        },
-        {
-          "condition": ">=1",
           "type": "mission_request",
           "actionText": "Sell Weed at + in F3!",
           "mission": {
@@ -2761,11 +2444,11 @@
             "category": "Weed",
             "modifier": "+",
             "target": null,
-            "name": "Harmeet Dhillon\u2019s Job"
+            "name": "Harmeet Dhillon’s Job"
           }
         },
         {
-          "condition": ">=2",
+          "condition": ">=1",
           "type": "offer",
           "actionText": "Sell Uppers at ++?",
           "mission": {
@@ -2779,7 +2462,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)! Sell Weed at + in F3! \u2022 [?] Sell Uppers at ++?",
+      "actionText": "(QUEST_ICON)! Sell Weed at + in F3! • [?] Sell Uppers at ++?",
       "mission": {
         "kind": "sell",
         "item": "Weed",
@@ -2788,7 +2471,7 @@
         "category": "Weed",
         "modifier": "+",
         "target": null,
-        "name": "Harmeet Dhillon\u2019s Job"
+        "name": "Harmeet Dhillon’s Job"
       },
       "tier": "t1"
     },
@@ -2798,19 +2481,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cTalks fast. Cuts faster.\u201d",
+      "bio": "“Talks fast. Cuts faster.”",
       "combatFormula": "X(R)+X",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "DSA"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "11(d)",
       "reactions": [
@@ -2844,21 +2526,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cLive from Four Nights Total Landscaping.\u201d",
+      "bio": "“Live from Four Nights Total Landscaping.”",
       "combatFormula": "2X+1",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "DSA",
-        "TECH",
-        "MS13"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "11(d)",
       "reactions": [
@@ -2884,11 +2563,11 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Criminals",
-            "name": "Rudy Giuliani\u2019s Job"
+            "name": "Rudy Giuliani’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Weapons!! \u2022 (QUEST_ICON)? Kill a Cop?",
+      "actionText": "[!!] Give me all of your Weapons!! • (QUEST_ICON)? Kill a Cop?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -2898,7 +2577,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Criminals",
-        "name": "Rudy Giuliani\u2019s Job"
+        "name": "Rudy Giuliani’s Job"
       },
       "tier": "t2"
     },
@@ -2908,21 +2587,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cResponse time: eventually.\u201d",
+      "bio": "“Response time: eventually.”",
       "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "DSA",
-        "TECH",
-        "MS13"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "8(d)",
       "reactions": [
@@ -2936,22 +2612,8 @@
           "ifCarrying": "Opiates or Weapons"
         },
         {
-          "condition": "=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
-          "type": "offer",
-          "actionText": "Buy any Mkt Weapon at -?",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Weapons",
-            "modifier": "-",
-            "target": "Market"
-          }
+          "condition": ">=1",
+          "type": "offer"
         }
       ],
       "actionText": "[?] Buy any Mkt Weapon at -?",
@@ -2964,36 +2626,29 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cJust say no.\u201d",
+      "bio": "“Just say no.”",
       "combatFormula": "2X(R)-X(R)",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
         "DSA",
         "TECH"
       ],
       "combatReward": "7(d)",
       "reactions": [
         {
-          "condition": "<-1",
-          "type": "combat"
-        },
-        {
-          "condition": "-1..0",
+          "condition": "<=0",
           "type": "combat",
           "ifCarrying": "Opiates or Uppers"
         },
         {
           "condition": ">=1",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Opiates and Uppers!!"
+          "type": "demand_strict"
         }
       ],
       "actionText": "[!!] Give me all of your Opiates and Uppers!!",
@@ -3006,20 +2661,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cPapers, please.\u201d",
+      "bio": "“Papers, please.”",
       "combatFormula": "2X-1",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "DSA",
-        "TECH"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "8(d)",
       "reactions": [
@@ -3049,11 +2702,11 @@
             "category": "Uppers",
             "modifier": "+",
             "target": null,
-            "name": "ICE\u2019s Job"
+            "name": "ICE’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your henchmen!! \u2022 (QUEST_ICON)? Sell Uppers at + in C3?",
+      "actionText": "[!!] Give me all of your henchmen!! • (QUEST_ICON)? Sell Uppers at + in C3?",
       "mission": {
         "kind": "sell",
         "item": "Uppers",
@@ -3062,7 +2715,7 @@
         "category": "Uppers",
         "modifier": "+",
         "target": null,
-        "name": "ICE\u2019s Job"
+        "name": "ICE’s Job"
       },
       "tier": "gen"
     },
@@ -3072,21 +2725,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cGot a tax stamp for that?\u201d",
+      "bio": "“Got a tax stamp for that?”",
       "combatFormula": "2X(R)-X",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH",
-        "-MS13"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "DSA",
-        "TECH"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "8(d)",
       "reactions": [
@@ -3116,7 +2766,7 @@
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Weapons!! \u2022 [?] Buy Cheapest Mkt Weapon at -?",
+      "actionText": "[!!] Give me all of your Weapons!! • [?] Buy Cheapest Mkt Weapon at -?",
       "mission": null,
       "tier": "gen"
     },
@@ -3126,21 +2776,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cThat\u2019s evidence now.\u201d",
+      "bio": "“That’s evidence now.”",
       "combatFormula": "2X",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH",
-        "-MS13"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "DSA",
-        "TECH"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "9(d)",
       "reactions": [
@@ -3154,11 +2801,7 @@
           "ifCarrying": "Opiates or Party"
         },
         {
-          "condition": "=1",
-          "type": "deck_quest_strict"
-        },
-        {
-          "condition": ">=2",
+          "condition": ">=1",
           "type": "mission_strict",
           "actionText": "Sell Opiates at + in E1!!",
           "mission": {
@@ -3169,7 +2812,7 @@
             "category": "Opiates",
             "modifier": "+",
             "target": null,
-            "name": "SFPD Narcotics Unit\u2019s Job"
+            "name": "SFPD Narcotics Unit’s Job"
           }
         }
       ],
@@ -3182,7 +2825,7 @@
         "category": "Opiates",
         "modifier": "+",
         "target": null,
-        "name": "SFPD Narcotics Unit\u2019s Job"
+        "name": "SFPD Narcotics Unit’s Job"
       },
       "tier": "t2"
     },
@@ -3192,19 +2835,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cKnock knock.\u201d",
+      "bio": "“Knock knock.”",
       "combatFormula": "2X(R)+1",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "DSA"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "14(d)",
       "reactions": [
@@ -3234,11 +2876,11 @@
             "category": null,
             "modifier": null,
             "target": "ISIS",
-            "name": "DEA Task Force\u2019s Job"
+            "name": "DEA Task Force’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Opiates!! \u2022 (QUEST_ICON)! Kill an ISIS!",
+      "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)! Kill an ISIS!",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -3247,7 +2889,7 @@
         "category": null,
         "modifier": null,
         "target": "ISIS",
-        "name": "DEA Task Force\u2019s Job"
+        "name": "DEA Task Force’s Job"
       },
       "tier": "t1"
     },
@@ -3257,21 +2899,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cNo warrant needed, apparently.\u201d",
+      "bio": "“No warrant needed, apparently.”",
       "combatFormula": "2X(R)+2",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
         "DSA",
-        "TECH",
-        "MS13"
+        "TECH"
       ],
       "combatReward": "15(d)",
       "reactions": [
@@ -3285,16 +2924,15 @@
           "ifCarrying": "Henchmen or Weapons"
         },
         {
-          "condition": "1..2",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Weapons!!"
+          "condition": "=1",
+          "type": "demand_strict"
         },
         {
-          "condition": ">=3",
-          "type": "deck_quest_offer"
+          "condition": ">=2",
+          "type": "offer"
         }
       ],
-      "actionText": "[!!] Give me all of your Weapons!!",
+      "actionText": "[!!] Give me all of your Weapons!! • [?] Buy Cheapest Mkt Weapon at -?",
       "mission": null,
       "tier": "t1"
     },
@@ -3304,20 +2942,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cA long way from the border.\u201d",
+      "bio": "“A long way from the border.”",
       "combatFormula": "2X(R)-3",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "11(d)",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "DSA",
-        "TECH"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "7(d)",
       "reactions": [
@@ -3343,11 +2979,11 @@
             "category": "Uppers",
             "modifier": "+",
             "target": null,
-            "name": "Border Patrol\u2019s Job"
+            "name": "Border Patrol’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Weed!! \u2022 (QUEST_ICON)? Sell Uppers at + in B1?",
+      "actionText": "[!!] Give me all of your Weed!! • (QUEST_ICON)? Sell Uppers at + in B1?",
       "mission": {
         "kind": "sell",
         "item": "Uppers",
@@ -3356,7 +2992,7 @@
         "category": "Uppers",
         "modifier": "+",
         "target": null,
-        "name": "Border Patrol\u2019s Job"
+        "name": "Border Patrol’s Job"
       },
       "tier": "gen"
     },
@@ -3382,36 +3018,29 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cDo you know how fast you were going?\u201d",
+      "bio": "“Do you know how fast you were going?”",
       "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
         "DSA",
         "TECH"
       ],
       "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<-1",
-          "type": "combat"
-        },
-        {
-          "condition": "-1..0",
+          "condition": "<=0",
           "type": "combat",
           "ifCarrying": "Uppers"
         },
         {
           "condition": ">=1",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Uppers!!"
+          "type": "demand_strict"
         }
       ],
       "actionText": "[!!] Give me all of your Uppers!!",
@@ -3420,25 +3049,22 @@
     },
     {
       "id": "leg_28",
-      "name": "Sheriff\u2019s Deputy",
+      "name": "Sheriff’s Deputy",
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cNot from around here.\u201d",
+      "bio": "“Not from around here.”",
       "combatFormula": "X(R)+X-1",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA",
-        "-TECH",
-        "-MS13"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "DSA",
-        "TECH"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "9(d)",
       "reactions": [
@@ -3464,11 +3090,11 @@
             "category": "Weed",
             "modifier": "+",
             "target": null,
-            "name": "Sheriff\u2019s Deputy\u2019s Job"
+            "name": "Sheriff’s Deputy’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Weapons!! \u2022 (QUEST_ICON)? Sell Weed at + in D1?",
+      "actionText": "[!!] Give me all of your Weapons!! • (QUEST_ICON)? Sell Weed at + in D1?",
       "mission": {
         "kind": "sell",
         "item": "Weed",
@@ -3477,7 +3103,7 @@
         "category": "Weed",
         "modifier": "+",
         "target": null,
-        "name": "Sheriff\u2019s Deputy\u2019s Job"
+        "name": "Sheriff’s Deputy’s Job"
       },
       "tier": "gen"
     },
@@ -3503,19 +3129,18 @@
       "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cProof of payment, please.\u201d",
+      "bio": "“Proof of payment, please.”",
       "combatFormula": "X",
       "friendlyFavor": [
         "MAGA",
-        "-ISIS",
-        "-DSA"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
-        "DSA",
-        "TECH"
+        "-TECH",
+        "ISIS"
       ],
       "combatReward": "6(d)",
       "reactions": [
@@ -3525,10 +3150,6 @@
         },
         {
           "condition": "=0",
-          "type": "deck_quest_demand"
-        },
-        {
-          "condition": ">=1",
           "type": "mission_offer",
           "actionText": "Sell Opiates at - in F6?",
           "mission": {
@@ -3539,11 +3160,11 @@
             "category": "Opiates",
             "modifier": "-",
             "target": null,
-            "name": "Muni Fare Inspector\u2019s Job"
+            "name": "Muni Fare Inspector’s Job"
           }
         },
         {
-          "condition": ">=2",
+          "condition": ">=1",
           "type": "offer",
           "actionText": "Buy any Mkt Upper at -?",
           "mission": {
@@ -3557,7 +3178,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)? Sell Opiates at - in F6? \u2022 [?] Buy any Mkt Upper at -?",
+      "actionText": "(QUEST_ICON)? Sell Opiates at - in F6? • [?] Buy any Mkt Upper at -?",
       "mission": {
         "kind": "sell",
         "item": "Opiates",
@@ -3566,7 +3187,7 @@
         "category": "Opiates",
         "modifier": "-",
         "target": null,
-        "name": "Muni Fare Inspector\u2019s Job"
+        "name": "Muni Fare Inspector’s Job"
       },
       "tier": "t3"
     }
@@ -3578,12 +3199,12 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cThe Squad\u2019s sharpest elbow.\u201d",
+      "bio": "“The Squad’s sharpest elbow.”",
       "combatFormula": "3X(R)-3",
       "friendlyFavor": [
         "DSA",
-        "-MAGA",
-        "-ISIS"
+        "TECH",
+        "-MAGA"
       ],
       "friendlyReward": "28(d) & +1 Influence",
       "hostileFavor": [
@@ -3625,13 +3246,12 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cBig on doomsdays.\u201d",
+      "bio": "“Big on doomsdays.”",
       "combatFormula": "3X(R)+X",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
         "MAGA",
-        "-DSA"
+        "-ISIS"
       ],
       "friendlyReward": "37(d) & +1 Influence",
       "hostileFavor": [
@@ -3642,39 +3262,19 @@
       "combatReward": "36(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Opiates!!"
-        },
-        {
           "condition": "=0",
-          "type": "deck_quest_offer"
+          "type": "demand_strict"
         },
         {
           "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "Sell Party at ++ in D3?",
-          "mission": {
-            "kind": "sell",
-            "item": "Party",
-            "pickupCell": null,
-            "deliverCell": "D3",
-            "category": "Party",
-            "modifier": "++",
-            "target": null,
-            "name": "Sam Altman\u2019s Job"
-          }
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
+          "type": "mission_offer"
         }
       ],
-      "actionText": "[!!] Give me all of your Opiates!! \u2022 (QUEST_ICON)? Sell Party at ++ in D3?",
+      "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)? Sell Party at ++ in D3?",
       "mission": {
         "kind": "sell",
         "item": "Party",
@@ -3683,7 +3283,7 @@
         "category": "Party",
         "modifier": "++",
         "target": null,
-        "name": "Sam Altman\u2019s Job"
+        "name": "Sam Altman’s Job"
       },
       "tier": "top"
     },
@@ -3693,13 +3293,12 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cHawaiian shirts, autonomous weapons.\u201d",
+      "bio": "“Hawaiian shirts, autonomous weapons.”",
       "combatFormula": "X(R)+2X",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
         "MAGA",
-        "-DSA"
+        "-ISIS"
       ],
       "friendlyReward": "+1 TECH Favor",
       "hostileFavor": [
@@ -3710,18 +3309,13 @@
       "combatReward": "20(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
+          "condition": "=0",
           "type": "demand_strict",
           "actionText": "Give me all of your Uppers!!"
-        },
-        {
-          "condition": "=0",
-          "type": "deck_quest_strict",
-          "friendlyReward": "18(d)"
         },
         {
           "condition": ">=1",
@@ -3735,11 +3329,11 @@
             "category": "Party",
             "modifier": "+",
             "target": null,
-            "name": "Palmer Luckey\u2019s Job"
+            "name": "Palmer Luckey’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Uppers!! \u2022 (QUEST_ICON)? Sell Party at + in F4?",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Sell Party at + in F4?",
       "mission": {
         "kind": "sell",
         "item": "Party",
@@ -3748,7 +3342,7 @@
         "category": "Party",
         "modifier": "+",
         "target": null,
-        "name": "Palmer Luckey\u2019s Job"
+        "name": "Palmer Luckey’s Job"
       },
       "tier": "t1"
     },
@@ -3774,36 +3368,30 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cTwo and twenty, and your kidneys.\u201d",
+      "bio": "“Two and twenty, and your kidneys.”",
       "combatFormula": "2X(R)+1",
       "friendlyFavor": [
         "TECH",
+        "MAGA",
         "-ISIS"
       ],
       "friendlyReward": "19(d)",
       "hostileFavor": [
         "-TECH",
         "-MAGA",
-        "DSA"
+        "DSA",
+        "ISIS",
+        "MS13"
       ],
       "combatReward": "14(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "deck_quest_strict"
-        },
-        {
-          "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Uppers!!"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
+          "condition": ">=0",
+          "type": "demand_strict"
         }
       ],
       "actionText": "[!!] Give me all of your Uppers!!",
@@ -3816,16 +3404,17 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "TECH",
-      "bio": "\u201cRug-pulled three cities so far.\u201d",
+      "bio": "“Rug-pulled three cities so far.”",
       "combatFormula": "X-1",
       "friendlyFavor": [
         "TECH",
-        "-ISIS",
-        "MAGA"
+        "MAGA",
+        "-ISIS"
       ],
       "friendlyReward": "11(d)",
       "hostileFavor": [
         "-TECH",
+        "-MAGA",
         "DSA"
       ],
       "combatReward": "6(d)",
@@ -3852,11 +3441,11 @@
             "modifier": "+",
             "qty": 3,
             "target": null,
-            "name": "Crypto Scammer\u2019s Job"
+            "name": "Crypto Scammer’s Job"
           }
         }
       ],
-      "actionText": "[!] Sell Upper at ++! \u2022 (QUEST_ICON)? Sell 3 Party at + in C4 in one transaction?",
+      "actionText": "[!] Sell Upper at ++! • (QUEST_ICON)? Sell 3 Party at + in C4 in one transaction?",
       "mission": {
         "kind": "sell",
         "item": "Party",
@@ -3866,7 +3455,7 @@
         "modifier": "+",
         "qty": 3,
         "target": null,
-        "name": "Crypto Scammer\u2019s Job"
+        "name": "Crypto Scammer’s Job"
       },
       "tier": "t3"
     },
@@ -3876,22 +3465,18 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cNot all MAGA are KKK. But\u2014\u201d",
+      "bio": "“Not all MAGA are KKK. But—”",
       "combatFormula": "3X-1",
       "friendlyFavor": [
         "MAGA",
-        "-DSA",
-        "-TECH",
-        "-ISIS",
-        "-MS13"
+        "TECH",
+        "-DSA"
       ],
       "friendlyReward": "Cheapest Weapon",
       "hostileFavor": [
         "-MAGA",
-        "ISIS",
         "DSA",
-        "TECH",
-        "MS13"
+        "TECH"
       ],
       "combatReward": "16(d)",
       "reactions": [
@@ -3900,30 +3485,19 @@
           "type": "combat"
         },
         {
-          "condition": "<=0",
-          "type": "deck_quest_strict"
+          "condition": "=0",
+          "type": "demand_strict"
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
-          "type": "offer",
-          "actionText": "Sell Uppers at +?",
-          "mission": {
-            "kind": "sell",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Uppers",
-            "modifier": "+",
-            "target": null
-          }
+          "type": "offer"
         }
       ],
-      "actionText": "[?] Sell Uppers at +?",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Weed!!",
+      "mission": {
+        "kind": "give_all_category",
+        "category": "Weed"
+      },
       "tier": "t1"
     },
     {
@@ -3932,19 +3506,18 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "MAGA",
-      "bio": "\u201cThey didn\u2019t vote for this shit.\u201d",
+      "bio": "“They didn’t vote for this shit.”",
       "combatFormula": "X(R)-X",
       "friendlyFavor": [
         "MAGA",
-        "-DSA",
-        "-TECH",
-        "-ISIS"
+        "TECH",
+        "-DSA"
       ],
       "friendlyReward": "Cheapest Uppers",
       "hostileFavor": [
         "-MAGA",
-        "DSA",
-        "TECH"
+        "-TECH",
+        "DSA"
       ],
       "combatReward": "4(d)",
       "reactions": [
@@ -3964,7 +3537,7 @@
             "category": "Weed",
             "modifier": "--",
             "target": null,
-            "name": "Pot Farmers\u2019 Job"
+            "name": "Pot Farmers’ Job"
           }
         },
         {
@@ -3973,7 +3546,7 @@
           "actionText": "Buy Cheapest Mkt Weapon for 9(d)?"
         }
       ],
-      "actionText": "(QUEST_ICON)! Sell Weed at -- in A5! \u2022 [?] Buy Cheapest Mkt Weapon for 9(d)?",
+      "actionText": "(QUEST_ICON)! Sell Weed at -- in A5! • [?] Buy Cheapest Mkt Weapon for 9(d)?",
       "mission": {
         "kind": "sell",
         "item": "Weed",
@@ -3982,7 +3555,7 @@
         "category": "Weed",
         "modifier": "--",
         "target": null,
-        "name": "Pot Farmers\u2019 Job"
+        "name": "Pot Farmers’ Job"
       },
       "tier": "t3"
     },
@@ -3992,7 +3565,7 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
-      "bio": "\u201cCame all the way here for this.\u201d",
+      "bio": "“Came all the way here for this.”",
       "combatFormula": "2X-1",
       "friendlyFavor": [
         "ISIS"
@@ -4021,7 +3594,7 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Celebrities",
-            "name": "International Terrorist\u2019s Job"
+            "name": "International Terrorist’s Job"
           }
         },
         {
@@ -4039,7 +3612,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)!! Kill a Cop!! \u2022 [?] Buy any Mkt Opiate at -?",
+      "actionText": "(QUEST_ICON)!! Kill a Cop!! • [?] Buy any Mkt Opiate at -?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -4049,7 +3622,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Celebrities",
-        "name": "International Terrorist\u2019s Job"
+        "name": "International Terrorist’s Job"
       },
       "tier": "t1"
     },
@@ -4059,7 +3632,7 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
-      "bio": "\u201cLocally radicalized.\u201d",
+      "bio": "“Locally radicalized.”",
       "combatFormula": "X(R)",
       "friendlyFavor": [
         "ISIS"
@@ -4077,22 +3650,7 @@
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
-          "type": "offer",
-          "actionText": "Buy Cheapest Mkt Weapon for 12(d)?",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": "Top card of Goods deck",
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Any",
-            "modifier": "12(d)",
-            "target": "Goods deck",
-            "fixedPrice": 12
-          }
+          "type": "offer"
         }
       ],
       "actionText": "[?] Buy Cheapest Mkt Weapon for 12(d)?",
@@ -4105,15 +3663,14 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
-      "bio": "\u201cOphthalmologist, between jobs.\u201d",
+      "bio": "“Ophthalmologist, between jobs.”",
       "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "ISIS"
       ],
       "friendlyReward": "+1 Influence",
       "hostileFavor": [
-        "-ISIS",
-        "MAGA"
+        "-ISIS"
       ],
       "combatReward": "9(d)",
       "reactions": [
@@ -4123,19 +3680,7 @@
         },
         {
           "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "Kill a Cop?",
-          "mission": {
-            "kind": "kill",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": null,
-            "modifier": null,
-            "target": "Cops",
-            "targetDeck": "Cops",
-            "name": "Bashar al-Assad\u2019s Job"
-          }
+          "type": "mission_offer"
         }
       ],
       "actionText": "(QUEST_ICON)? Kill a Cop?",
@@ -4148,7 +3693,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Cops",
-        "name": "Bashar al-Assad\u2019s Job"
+        "name": "Bashar al-Assad’s Job"
       },
       "tier": "t1"
     },
@@ -4158,7 +3703,7 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
-      "bio": "\u201cSupposedly dead.\u201d",
+      "bio": "“Supposedly dead.”",
       "combatFormula": "2X(R)-3",
       "friendlyFavor": [
         "ISIS"
@@ -4176,23 +3721,12 @@
           "type": "combat"
         },
         {
-          "condition": ">=1",
+          "condition": "=1",
           "type": "deck_quest_offer"
         },
         {
           "condition": ">=2",
-          "type": "offer",
-          "actionText": "Buy Cheapest Mkt Weapon for 12(d)?",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": "Top card of Goods deck",
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Any",
-            "modifier": "12(d)",
-            "target": "Goods deck",
-            "fixedPrice": 12
-          }
+          "type": "offer"
         }
       ],
       "actionText": "[?] Buy Cheapest Mkt Weapon for 12(d)?",
@@ -4205,39 +3739,31 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cTalent manager.\u201d",
+      "bio": "“Talent manager.”",
       "combatFormula": "X(R)+X",
       "friendlyFavor": [
         "DSA",
-        "-ISIS",
-        "-MAGA"
+        "TECH",
+        "-ISIS"
       ],
       "friendlyReward": "+1 Influence",
       "hostileFavor": [
         "-DSA",
+        "-MAGA",
         "TECH"
       ],
       "combatReward": "13(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "deck_quest_strict"
-        },
-        {
           "condition": "=0",
-          "type": "deck_quest_offer"
+          "type": "demand_strict"
         },
         {
-          "condition": "1..2",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Weapons!!"
-        },
-        {
-          "condition": ">=3",
+          "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
@@ -4267,35 +3793,28 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cFormer mayor, out after dark.\u201d",
+      "bio": "“Former mayor, out after dark.”",
       "combatFormula": "X+1",
       "friendlyFavor": [
         "DSA",
+        "TECH",
         "-ISIS"
       ],
       "friendlyReward": "+1 Influence",
       "hostileFavor": [
         "-DSA",
+        "-MAGA",
         "TECH"
       ],
       "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "deck_quest_strict"
-        },
-        {
-          "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Uppers!!"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
+          "condition": ">=0",
+          "type": "demand_strict"
         }
       ],
       "actionText": "[!!] Give me all of your Uppers!!",
@@ -4308,10 +3827,11 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cUnhoused, but even more so.\u201d",
+      "bio": "“Unhoused, but even more so.”",
       "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "DSA",
+        "TECH",
         "-MAGA"
       ],
       "friendlyReward": "+1 Influence",
@@ -4321,39 +3841,19 @@
       "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Uppers!!"
-        },
-        {
           "condition": "=0",
-          "type": "deck_quest_strict"
+          "type": "demand_strict"
         },
         {
           "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "Sell Weed at - in D5?",
-          "mission": {
-            "kind": "sell",
-            "item": "Weed",
-            "pickupCell": null,
-            "deliverCell": "D5",
-            "category": "Weed",
-            "modifier": "-",
-            "target": null,
-            "name": "Homeless\u2019s Job"
-          }
-        },
-        {
-          "condition": ">=2",
-          "type": "deck_quest_offer"
+          "type": "mission_offer"
         }
       ],
-      "actionText": "[!!] Give me all of your Uppers!! \u2022 (QUEST_ICON)? Sell Weed at - in D5?",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Sell Weed at - in D5?",
       "mission": {
         "kind": "sell",
         "item": "Weed",
@@ -4362,7 +3862,7 @@
         "category": "Weed",
         "modifier": "-",
         "target": null,
-        "name": "Homeless\u2019s Job"
+        "name": "Homeless’s Job"
       },
       "tier": "t2"
     },
@@ -4372,32 +3872,32 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cHas committed crimes recently.\u201d",
+      "bio": "“Has committed crimes recently.”",
       "combatFormula": "2X(R)-X(R)",
       "friendlyFavor": [
         "DSA",
-        "-ISIS",
         "TECH",
-        "-MAGA"
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
         "-DSA",
+        "-MAGA",
         "TECH"
       ],
       "combatReward": "7(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
+          "condition": "=0",
           "type": "demand_strict",
           "actionText": "Give me all of your Uppers!!"
         },
         {
-          "condition": "=0",
+          "condition": ">=1",
           "type": "mission_request",
           "actionText": "Sell Weed at - in B6!",
           "mission": {
@@ -4408,12 +3908,8 @@
             "category": "Weed",
             "modifier": "-",
             "target": null,
-            "name": "Illegal\u2019s Job"
+            "name": "Illegal’s Job"
           }
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
         }
       ],
       "actionText": "(QUEST_ICON)! Sell Weed at - in B6!",
@@ -4425,7 +3921,7 @@
         "category": "Weed",
         "modifier": "-",
         "target": null,
-        "name": "Illegal\u2019s Job"
+        "name": "Illegal’s Job"
       },
       "tier": "t2"
     },
@@ -4435,7 +3931,7 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cThey\u2019re letting him vote with no ID.\u201d",
+      "bio": "“They’re letting him vote with no ID.”",
       "combatFormula": "X(R)-1",
       "friendlyFavor": [
         "DSA",
@@ -4449,21 +3945,12 @@
       "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "deck_quest_strict"
-        },
-        {
-          "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "Give me all of your Party!!"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
+          "condition": ">=0",
+          "type": "demand_strict"
         }
       ],
       "actionText": "[!!] Give me all of your Party!!",
@@ -4476,32 +3963,30 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
-      "bio": "\u201cA person is not a crime.\u201d",
+      "bio": "“A person is not a crime.”",
       "combatFormula": "X",
       "friendlyFavor": [
         "DSA",
-        "-ISIS",
         "TECH",
-        "-MAGA"
+        "-ISIS"
       ],
       "friendlyReward": "Cheapest Henchman",
       "hostileFavor": [
-        "-DSA",
-        "MAGA"
+        "-DSA"
       ],
       "combatReward": "6(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
+          "condition": "=0",
           "type": "demand_strict",
           "actionText": "Give me all of your Party!!"
         },
         {
-          "condition": "=0",
+          "condition": ">=1",
           "type": "mission_strict",
           "actionText": "Sell Party at - in B4!!",
           "mission": {
@@ -4512,15 +3997,11 @@
             "category": "Party",
             "modifier": "-",
             "target": null,
-            "name": "Undocumented\u2019s Job"
+            "name": "Undocumented’s Job"
           }
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "[!!] Give me all of your Party!! \u2022 (QUEST_ICON)!! Sell Party at - in B4!!",
+      "actionText": "[!!] Give me all of your Party!! • (QUEST_ICON)!! Sell Party at - in B4!!",
       "mission": {
         "kind": "sell",
         "item": "Party",
@@ -4529,7 +4010,7 @@
         "category": "Party",
         "modifier": "-",
         "target": null,
-        "name": "Undocumented\u2019s Job"
+        "name": "Undocumented’s Job"
       },
       "tier": "t3"
     },
@@ -4539,10 +4020,11 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
-      "bio": "\u201cGordo.\u201d Ran the 20th Street clique in the Mission.",
+      "bio": "“Gordo.” Ran the 20th Street clique in the Mission.",
       "combatFormula": "2X(R)+X",
       "friendlyFavor": [
         "MS13",
+        "ISIS",
         "-MAGA"
       ],
       "friendlyReward": "25(d) & Cheapest Opiates",
@@ -4552,34 +4034,16 @@
       "combatReward": "25(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
+          "condition": "=0",
           "type": "deck_quest_strict"
         },
         {
-          "condition": "=0",
-          "type": "deck_quest_offer"
-        },
-        {
           "condition": ">=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
-          "type": "offer",
-          "actionText": "Buy any Mkt Upper at -?",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Uppers",
-            "modifier": "-",
-            "target": "Market"
-          }
+          "type": "offer"
         }
       ],
       "actionText": "[?] Buy any Mkt Upper at -?",
@@ -4592,10 +4056,11 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
-      "bio": "\u201cCollects for the clique.\u201d",
+      "bio": "“Collects for the clique.”",
       "combatFormula": "2X(R)",
       "friendlyFavor": [
         "MS13",
+        "ISIS",
         "-MAGA"
       ],
       "friendlyReward": "Cheapest Party",
@@ -4648,10 +4113,11 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
-      "bio": "\u201cProfessional. Punctual.\u201d",
+      "bio": "“Professional. Punctual.”",
       "combatFormula": "X(R)+X+1",
       "friendlyFavor": [
         "MS13",
+        "ISIS",
         "-MAGA"
       ],
       "friendlyReward": "Cheapest Uppers",
@@ -4679,20 +4145,16 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Criminals",
-            "name": "Sicario\u2019s Job"
+            "name": "Sicario’s Job"
           }
         },
         {
-          "condition": "1..2",
+          "condition": ">=1",
           "type": "demand_strict",
           "actionText": "Give me all of your Opiates!!"
-        },
-        {
-          "condition": ">=3",
-          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "(QUEST_ICON)! Kill a Cop! \u2022 [!!] Give me all of your Opiates!!",
+      "actionText": "(QUEST_ICON)! Kill a Cop! • [!!] Give me all of your Opiates!!",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -4702,7 +4164,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Criminals",
-        "name": "Sicario\u2019s Job"
+        "name": "Sicario’s Job"
       },
       "tier": "t1"
     },
@@ -4712,7 +4174,7 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
-      "bio": "\u201cRepping the set.\u201d",
+      "bio": "“Repping the set.”",
       "combatFormula": "2X(R)-X",
       "friendlyFavor": [
         "MS13"
@@ -4734,10 +4196,6 @@
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
           "type": "offer",
           "actionText": "Buy any Mkt Upper at -?",
           "mission": {
@@ -4777,10 +4235,11 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
-      "bio": "\u201cAs advertised.\u201d",
+      "bio": "“As advertised.”",
       "combatFormula": "2X",
       "friendlyFavor": [
         "MS13",
+        "ISIS",
         "-MAGA"
       ],
       "friendlyReward": "Cheapest Henchman",
@@ -4792,17 +4251,13 @@
       "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<=-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
+          "condition": "=0",
           "type": "demand_strict",
           "actionText": "Give me all of your Weapons!!"
-        },
-        {
-          "condition": "=0",
-          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
@@ -4816,11 +4271,11 @@
             "category": "Opiates",
             "modifier": "+",
             "target": null,
-            "name": "Bad Hombre\u2019s Job"
+            "name": "Bad Hombre’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Weapons!! \u2022 (QUEST_ICON)? Sell Opiates at + in B6?",
+      "actionText": "[!!] Give me all of your Weapons!! • (QUEST_ICON)? Sell Opiates at + in B6?",
       "mission": {
         "kind": "sell",
         "item": "Opiates",
@@ -4829,7 +4284,7 @@
         "category": "Opiates",
         "modifier": "+",
         "target": null,
-        "name": "Bad Hombre\u2019s Job"
+        "name": "Bad Hombre’s Job"
       },
       "tier": "t2"
     },
@@ -4839,10 +4294,11 @@
       "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
-      "bio": "\u201cKnows every way in and out.\u201d",
+      "bio": "“Knows every way in and out.”",
       "combatFormula": "2X(R)-2",
       "friendlyFavor": [
         "MS13",
+        "ISIS",
         "-MAGA"
       ],
       "friendlyReward": "Cheapest Party",
@@ -4873,7 +4329,7 @@
             "modifier": null,
             "target": "Cops",
             "targetDeck": "Celebrities",
-            "name": "Coyote\u2019s Job"
+            "name": "Coyote’s Job"
           }
         }
       ],
@@ -4887,7 +4343,7 @@
         "modifier": null,
         "target": "Cops",
         "targetDeck": "Celebrities",
-        "name": "Coyote\u2019s Job"
+        "name": "Coyote’s Job"
       },
       "tier": "t2"
     }

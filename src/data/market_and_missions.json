@@ -1315,17 +1315,18 @@
         8
       ],
       "buy": [
-        17,
-        13,
-        10,
+        14,
+        11,
         8,
-        6
+        6,
+        5
       ],
-      "combatText": "2 CP",
+      "combatText": "Absorb (R) Wounds",
       "combat": {
         "dice": 0,
         "negDice": 0,
-        "flat": 2
+        "flat": 0,
+        "ignoreWoundsDice": 1
       }
     },
     {
@@ -1466,11 +1467,12 @@
         4,
         3
       ],
-      "combatText": "Use once for (R) CP",
+      "combatText": "Absorb 1 Wound - Destroyed when used",
       "combat": {
-        "dice": 1,
+        "dice": 0,
         "negDice": 0,
         "flat": 0,
+        "ignoreWoundsFlat": 1,
         "consumable": true
       }
     },
@@ -1480,7 +1482,7 @@
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
-      "blocks": 2,
+      "blocks": 1,
       "henchmen": 0,
       "sell": [
         24,
@@ -1490,17 +1492,18 @@
         8
       ],
       "buy": [
-        15,
-        12,
-        9,
-        7,
-        5
+        11,
+        8,
+        6,
+        5,
+        4
       ],
-      "combatText": "2(R)-1 CP",
+      "combatText": "Absorb 1 Wound",
       "combat": {
-        "dice": 2,
+        "dice": 0,
         "negDice": 0,
-        "flat": -1
+        "flat": 0,
+        "ignoreWoundsFlat": 1
       }
     },
     {
@@ -1598,27 +1601,28 @@
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
-      "blocks": 1,
+      "blocks": 2,
       "henchmen": 0,
       "sell": [
-        22,
-        17,
-        13,
-        10,
-        7
+        26,
+        20,
+        15,
+        11,
+        8
       ],
       "buy": [
-        12,
-        9,
-        7,
-        5,
-        4
+        18,
+        14,
+        11,
+        8,
+        6
       ],
-      "combatText": "2(R)-(R) CP",
+      "combatText": "Absorb 2 Wounds",
       "combat": {
-        "dice": 2,
-        "negDice": 1,
-        "flat": 0
+        "dice": 0,
+        "negDice": 0,
+        "flat": 0,
+        "ignoreWoundsFlat": 2
       }
     },
     {
@@ -1740,6 +1744,38 @@
         "flat": 2
       },
       "subtitle": "Anti-Materiel Rifle"
+    },
+    {
+      "id": "wpn_17",
+      "name": "Ceramic Plate",
+      "category": "Weapons",
+      "subcategory": "Weapons",
+      "track": "Weapons",
+      "blocks": 1,
+      "henchmen": 0,
+      "buy": [
+        15,
+        12,
+        9,
+        7,
+        5
+      ],
+      "sell": [
+        25,
+        19,
+        15,
+        11,
+        8
+      ],
+      "combatText": "Absorb 3 Wounds - Destroyed when used",
+      "combat": {
+        "dice": 0,
+        "negDice": 0,
+        "flat": 0,
+        "ignoreWoundsFlat": 3,
+        "consumable": true
+      },
+      "subtitle": "Level IV Trauma Plate"
     },
     {
       "id": "mrb_1",
@@ -2141,7 +2177,7 @@
         4,
         4
       ],
-      "combatText": "(R) CP & Ignore 1 Wound",
+      "combatText": "(R) CP & Absorb 1 Wound",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2304,7 +2340,7 @@
         11,
         10
       ],
-      "combatText": "3(R) +1 CP & Ignore 1 Wound",
+      "combatText": "3(R) +1 CP & Absorb 1 Wound",
       "combat": {
         "dice": 3,
         "negDice": 0,

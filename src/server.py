@@ -89,6 +89,48 @@ def _allowed_origins() -> Set[str]:
     return DEFAULT_ALLOWED_ORIGINS | extra
 
 
+_CACHED_DISCOVERED_FB_CONFIG: Optional[Dict[str, str]] = None
+
+
+def _discover_firebase_web_config_from_gcp(project_id: str) -> Optional[Dict[str, str]]:
+    global _CACHED_DISCOVERED_FB_CONFIG
+    if _CACHED_DISCOVERED_FB_CONFIG is not None:
+        return _CACHED_DISCOVERED_FB_CONFIG or None
+    if not os.getenv("K_SERVICE") and os.getenv("NIGHTMERCHANT_CLOUD_RUN") != "1":
+        _CACHED_DISCOVERED_FB_CONFIG = {}
+        return None
+    try:
+        meta_req = urllib.request.Request(
+            "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token",
+            headers={"Metadata-Flavor": "Google"},
+        )
+        with urllib.request.urlopen(meta_req, timeout=2.0) as resp:
+            tok_data = json.loads(resp.read().decode("utf-8"))
+        access_token = tok_data.get("access_token", "")
+        if not access_token:
+            _CACHED_DISCOVERED_FB_CONFIG = {}
+            return None
+        cfg_req = urllib.request.Request(
+            f"https://firebase.googleapis.com/v1beta1/projects/{project_id}/webApps/-/config",
+            headers={"Authorization": f"Bearer {access_token}"},
+        )
+        with urllib.request.urlopen(cfg_req, timeout=3.0) as resp:
+            cfg_data = json.loads(resp.read().decode("utf-8"))
+        if isinstance(cfg_data, dict) and cfg_data.get("apiKey"):
+            _CACHED_DISCOVERED_FB_CONFIG = {
+                "apiKey": str(cfg_data["apiKey"]),
+                "authDomain": str(cfg_data.get("authDomain") or f"{project_id}.firebaseapp.com"),
+                "projectId": str(cfg_data.get("projectId") or project_id),
+            }
+            if cfg_data.get("appId"):
+                _CACHED_DISCOVERED_FB_CONFIG["appId"] = str(cfg_data["appId"])
+            return _CACHED_DISCOVERED_FB_CONFIG
+    except Exception:
+        pass
+    _CACHED_DISCOVERED_FB_CONFIG = {}
+    return None
+
+
 def _build_public_firebase_config() -> Optional[Dict[str, str]]:
     if not storage.is_firebase_enabled():
         return None
@@ -97,6 +139,10 @@ def _build_public_firebase_config() -> Optional[Dict[str, str]]:
         or os.getenv("FIREBASE_WEB_API_KEY", "").strip("<>\"' \t\r\n")
     )
     project_id = os.getenv("FIREBASE_PROJECT_ID", "").strip("<>\"' \t\r\n")
+    if not api_key and project_id:
+        discovered = _discover_firebase_web_config_from_gcp(project_id)
+        if discovered:
+            return dict(discovered)
     if not api_key or not project_id:
         return None
     auth_domain = (
@@ -272,6 +318,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
         ]
         if is_https:
             parts.append("Secure")
+            parts.append("Partitioned")
         return "; ".join(parts)
 
     def _get_bearer_token(self) -> Optional[str]:

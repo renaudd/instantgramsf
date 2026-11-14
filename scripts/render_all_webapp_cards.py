@@ -84,6 +84,10 @@ def sf_reskin(text: str) -> str:
     if not text:
         return ""
     out = str(text)
+    out = re.sub(r"(\bD4\s*[—–\-·]\s*)Mission\b", r"\1__SF_NBHD_MISSION__", out)
+    out = re.sub(r"\(\s*Mission\s*\)", "(__SF_NBHD_MISSION__)", out)
+    out = re.sub(r"\b(in\s+the\s+|the\s+)Mission\b", r"\1__SF_NBHD_MISSION__", out)
+    out = re.sub(r"\bMission(\s+(?:District|Dolores|St|Street|Bay))\b", r"__SF_NBHD_MISSION__\1", out)
 
     def _den_repl(m):
         val = int(m.group(1))
@@ -94,6 +98,7 @@ def sf_reskin(text: str) -> str:
     out = re.sub(r"\b(\d+)\s*\(d\)", _den_repl, out)
     for pat, rep in SF_TEXT_RULES:
         out = re.sub(pat, rep, out)
+    out = out.replace("__SF_NBHD_MISSION__", "Mission")
     return out
 
 
