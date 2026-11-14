@@ -195,16 +195,29 @@ def draw_phone_bezel_outcomes(canvas, friendly_gems, friendly_reward, combat_loo
     d.rectangle((46, 1278, 854, 1354), fill=(16, 22, 26))
     d.line((46, 1278, 854, 1278), fill=(58, 70, 78), width=2)
 
-    gem_sz = 58
+    gem_sz_top = 50 if len(friendly_gems) >= 3 else 58
+    gem_sz_bot = 50 if len(hostile_gems) >= 3 else 58
     thumb_sz = 58
     status_icon_sz = 52
 
     f_colon = ImageFont.truetype(F_BOLD, 38)
-    f_rew = ImageFont.truetype(F_SYM, 38)
+    f_rew_base = ImageFont.truetype(F_SYM, 38)
     try:
-        f_rew.set_variation_by_name("Bold")
+        f_rew_base.set_variation_by_name("Bold")
     except Exception:
         pass
+
+    def _fit_bezel_font(txt_str, max_w):
+        for sz in range(38, 17, -2):
+            fn = ImageFont.truetype(F_SYM, sz)
+            try:
+                fn.set_variation_by_name("Bold")
+            except Exception:
+                pass
+            bb_t = d.textbbox((0, 0), txt_str, font=fn)
+            if (bb_t[2] - bb_t[0]) <= max_w:
+                return fn
+        return ImageFont.truetype(F_SYM, 18)
 
     # 1. TOP-LEFT BEZEL: Large Green Thumbs-Up + Large Tight-Cropped Friendly Faction Gems
     thumb_green = load_icon("thumb_up_green.png", thumb_sz)
@@ -213,24 +226,22 @@ def draw_phone_bezel_outcomes(canvas, friendly_gems, friendly_reward, combat_loo
 
     gx = 80 + thumb_sz
     for g_name, g_sign in friendly_gems:
-        gx = draw_gem_with_slash(canvas, gx, top_cy - gem_sz // 2, g_name, is_negative=(g_sign == "-"), size=gem_sz)
+        gx = draw_gem_with_slash(canvas, gx, top_cy - gem_sz_top // 2, g_name, is_negative=(g_sign == "-"), size=gem_sz_top)
 
     # 2. TOP-RIGHT BEZEL: All-White Cash Stack Icon (cash_white.png) + All-White Job Reward
     cash_w = load_icon("cash_white.png", status_icon_sz)
     rew_txt = f":{friendly_reward}"
-    bb = d.textbbox((0, 0), rew_txt, font=f_rew)
+    # Keep cash_w + rew_txt strictly to the right of the center speaker notch (x=385..565)
+    f_rew_top = _fit_bezel_font(rew_txt, min(216, max(140, 836 - gx - status_icon_sz - 16)))
+    bb = d.textbbox((0, 0), rew_txt, font=f_rew_top)
     tw, th = bb[2] - bb[0], bb[3] - bb[1]
     rx = 836 - tw
     canvas.paste(cash_w, (rx - status_icon_sz - 4, top_cy - status_icon_sz // 2), cash_w)
-    d.text((rx, top_cy - th // 2 - bb[1]), rew_txt, font=f_rew, fill=(255, 255, 255))
+    d.text((rx, top_cy - th // 2 - bb[1]), rew_txt, font=f_rew_top, fill=(255, 255, 255))
 
     # 3. BOTTOM-LEFT BEZEL: All-White Pistol Icon + All-White Combat Reward
     pistol_w = load_icon("pistol_white.png", status_icon_sz)
     canvas.paste(pistol_w, (62, bot_cy - status_icon_sz // 2), pistol_w)
-    loot_txt = f":{combat_loot}"
-    bb_l = d.textbbox((0, 0), loot_txt, font=f_rew)
-    lh = bb_l[3] - bb_l[1]
-    d.text((68 + status_icon_sz, bot_cy - lh // 2 - bb_l[1]), loot_txt, font=f_rew, fill=(255, 255, 255))
 
     # 4. BOTTOM-RIGHT BEZEL: Hostile Faction Gems (left) + Red Thumbs-Up Pointing UP (right)
     thumb_red_up = load_icon("thumb_up_red.png", thumb_sz)
@@ -239,9 +250,16 @@ def draw_phone_bezel_outcomes(canvas, friendly_gems, friendly_reward, combat_loo
     d.text((td_x - 16, bot_cy - 22), ":", font=f_colon, fill=(255, 255, 255))
 
     hx = td_x - 22
+    step_bot = (gem_sz_bot + 6) if len(hostile_gems) >= 3 else (gem_sz_bot + 10)
     for g_name, g_sign in reversed(hostile_gems):
-        hx -= (gem_sz + 10)
-        draw_gem_with_slash(canvas, hx, bot_cy - gem_sz // 2, g_name, is_negative=(g_sign == "-"), size=gem_sz)
+        hx -= step_bot
+        draw_gem_with_slash(canvas, hx, bot_cy - gem_sz_bot // 2, g_name, is_negative=(g_sign == "-"), size=gem_sz_bot)
+
+    loot_txt = f":{combat_loot}"
+    f_rew_bot = _fit_bezel_font(loot_txt, max(160, hx - (68 + status_icon_sz) - 12))
+    bb_l = d.textbbox((0, 0), loot_txt, font=f_rew_bot)
+    lh = bb_l[3] - bb_l[1]
+    d.text((68 + status_icon_sz, bot_cy - lh // 2 - bb_l[1]), loot_txt, font=f_rew_bot, fill=(255, 255, 255))
 
 
 def draw_tall_faction_interaction_bar(canvas, x0, y0, x1, y1, faction, tiers):

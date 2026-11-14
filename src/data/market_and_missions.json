@@ -1558,12 +1558,13 @@
         5,
         4
       ],
-      "combatText": "Use once for 2(R) CP",
+      "combatText": "Pre-roll (R) Strike - Destroyed when used",
       "combat": {
-        "dice": 2,
+        "dice": 1,
         "negDice": 0,
         "flat": 0,
-        "consumable": true
+        "consumable": true,
+        "preRollStrike": true
       }
     },
     {

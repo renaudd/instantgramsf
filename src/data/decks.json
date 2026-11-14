@@ -46,7 +46,7 @@
         {
           "condition": ">=0",
           "type": "mission_strict",
-          "actionText": "Pick up Banana OG in A4 and deliver to F2.",
+          "actionText": "Pick up Banana OG in A4 and deliver to F2!!",
           "mission": {
             "kind": "delivery",
             "item": "Banana OG",
@@ -76,7 +76,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)!! Pick up Banana OG in A4 and deliver to F2.",
+      "actionText": "(QUEST_ICON)!! Pick up Banana OG in A4 and deliver to F2!!",
       "mission": {
         "kind": "delivery",
         "item": "Banana OG",
@@ -288,7 +288,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Criminals",
+            "targetDeck": "Cops",
             "name": "Peter Thiel’s Job"
           }
         }
@@ -302,7 +302,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Criminals",
+        "targetDeck": "Cops",
         "name": "Peter Thiel’s Job"
       },
       "tier": "t1"
@@ -601,7 +601,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Criminals",
+            "targetDeck": "Cops",
             "name": "Steph Curry’s Job"
           }
         },
@@ -621,7 +621,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Criminals",
+        "targetDeck": "Cops",
         "name": "Steph Curry’s Job"
       },
       "tier": "t1"
@@ -730,7 +730,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Celebrities",
+            "targetDeck": "Cops",
             "name": "Alice Huang’s Job"
           }
         },
@@ -758,7 +758,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Celebrities",
+        "targetDeck": "Cops",
         "name": "Alice Huang’s Job"
       },
       "tier": "t1"
@@ -807,12 +807,10 @@
           "actionText": "Buy Cheapest Mkt Weapon for 8(d)?",
           "mission": {
             "kind": "buy_from_npc",
-            "item": "Top card of Goods deck",
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Any",
+            "category": "Weapons",
+            "which": "cheapest",
             "modifier": "8(d)",
-            "target": "Goods deck",
+            "target": "Market",
             "fixedPrice": 8
           }
         }
@@ -916,7 +914,7 @@
         },
         {
           "condition": "=0",
-          "type": "mission_request",
+          "type": "mission_offer",
           "actionText": "Pick up Cooler of Molly at F4 and deliver to A5?",
           "mission": {
             "kind": "delivery",
@@ -1005,11 +1003,45 @@
         },
         {
           "condition": "=0",
-          "type": "mission_offer"
+          "type": "mission_offer",
+          "actionText": "Pick up Cooler of Molly at D1 and deliver to D5?",
+          "mission": {
+            "kind": "delivery",
+            "item": "Cooler of Molly",
+            "pickupCell": "D1",
+            "deliverCell": "D5",
+            "category": "Party",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 2,
+            "payoutTable": [
+              80,
+              61,
+              46,
+              35,
+              26
+            ],
+            "name": "Cornel West’s Job",
+            "blocks": 2,
+            "fencedSell": [
+              80,
+              61,
+              46,
+              35,
+              26
+            ]
+          }
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "offer",
+          "actionText": "Buy any Mkt Party at -?",
+          "mission": {
+            "kind": "buy_from_npc",
+            "category": "Party",
+            "modifier": "-",
+            "target": "Market"
+          }
         }
       ],
       "actionText": "(QUEST_ICON)? Pick up Cooler of Molly at D1 and deliver to D5? • [?] Buy any Mkt Party at -?",
@@ -1121,7 +1153,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Celebrities",
+            "targetDeck": "Cops",
             "name": "Tenured Professor’s Job"
           }
         }
@@ -1135,7 +1167,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Celebrities",
+        "targetDeck": "Cops",
         "name": "Tenured Professor’s Job"
       },
       "tier": "gen"
@@ -1165,11 +1197,44 @@
         },
         {
           "condition": "=0",
-          "type": "mission_offer"
+          "type": "mission_offer",
+          "actionText": "Pick up Humboldt Duffel at E6 and deliver to A2?",
+          "mission": {
+            "kind": "delivery",
+            "item": "Humboldt Duffel",
+            "pickupCell": "E6",
+            "deliverCell": "A2",
+            "category": "Weed",
+            "modifier": null,
+            "target": null,
+            "cargoSize": 1,
+            "payoutTable": [
+              12,
+              10,
+              8,
+              6,
+              4
+            ],
+            "name": "Indie Podcaster’s Job",
+            "blocks": 1,
+            "fencedSell": [
+              12,
+              10,
+              8,
+              6,
+              4
+            ]
+          }
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "offer",
+          "actionText": "Sell Party at ++?",
+          "mission": {
+            "kind": "sell",
+            "category": "Party",
+            "modifier": "++"
+          }
         }
       ],
       "actionText": "(QUEST_ICON)? Pick up Humboldt Duffel at E6 and deliver to A2? • [?] Sell Party at ++?",
@@ -1407,7 +1472,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Celebrities",
+            "targetDeck": "Cops",
             "name": "Climate Activist’s Job"
           }
         }
@@ -1421,7 +1486,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Celebrities",
+        "targetDeck": "Cops",
         "name": "Climate Activist’s Job"
       },
       "tier": "gen"
@@ -1506,7 +1571,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Celebrities",
+            "targetDeck": "Cops",
             "name": "Startup Founder’s Job"
           }
         },
@@ -1524,7 +1589,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Celebrities",
+        "targetDeck": "Cops",
         "name": "Startup Founder’s Job"
       },
       "tier": "gen"
@@ -1795,11 +1860,24 @@
         },
         {
           "condition": "=0",
-          "type": "demand_strict"
+          "type": "demand_strict",
+          "actionText": "Give me all of your Opiates!!",
+          "mission": null
         },
         {
           "condition": ">=1",
-          "type": "mission_strict"
+          "type": "mission_strict",
+          "actionText": "Sell Uppers at ++ in E3!!",
+          "mission": {
+            "kind": "sell",
+            "item": "Uppers",
+            "pickupCell": null,
+            "deliverCell": "E3",
+            "category": "Uppers",
+            "modifier": "++",
+            "target": null,
+            "name": "Mayor Lurie’s Job"
+          }
         }
       ],
       "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)!! Sell Uppers at ++ in E3!!",
@@ -1857,7 +1935,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Celebrities",
+            "targetDeck": "Cops",
             "name": "Scott Wiener’s Job"
           }
         }
@@ -1871,7 +1949,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Celebrities",
+        "targetDeck": "Cops",
         "name": "Scott Wiener’s Job"
       },
       "tier": "t2"
@@ -1918,7 +1996,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Celebrities",
+            "targetDeck": "Cops",
             "name": "Paul Graham’s Job"
           }
         }
@@ -1932,7 +2010,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Celebrities",
+        "targetDeck": "Cops",
         "name": "Paul Graham’s Job"
       },
       "tier": "t2"
@@ -2168,7 +2246,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Celebrities",
+            "targetDeck": "Cops",
             "name": "Rookie’s Job"
           }
         }
@@ -2182,7 +2260,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Celebrities",
+        "targetDeck": "Cops",
         "name": "Rookie’s Job"
       },
       "tier": "rookie"
@@ -2352,7 +2430,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Celebrities",
+            "targetDeck": "Cops",
             "name": "Jared Kushner’s Job"
           }
         }
@@ -2366,7 +2444,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Celebrities",
+        "targetDeck": "Cops",
         "name": "Jared Kushner’s Job"
       },
       "tier": "leader"
@@ -2430,11 +2508,24 @@
         },
         {
           "condition": "=0",
-          "type": "demand_strict"
+          "type": "demand_strict",
+          "actionText": "Give me all of your Uppers!!",
+          "mission": null
         },
         {
           "condition": ">=1",
-          "type": "mission_offer"
+          "type": "mission_offer",
+          "actionText": "Sell Weed at - in C5?",
+          "mission": {
+            "kind": "sell",
+            "item": "Weed",
+            "pickupCell": null,
+            "deliverCell": "C5",
+            "category": "Weed",
+            "modifier": "-",
+            "target": null,
+            "name": "Firefighters’s Job"
+          }
         }
       ],
       "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Sell Weed at - in C5?",
@@ -2552,15 +2643,28 @@
           "type": "mission_offer",
           "actionText": "Sell Opiates at + in C1?",
           "mission": {
-            "type": "delivery",
-            "targetCell": "C1",
-            "commodity": "Opiates",
-            "modifier": "+"
+            "kind": "sell",
+            "item": "Opiates",
+            "pickupCell": null,
+            "deliverCell": "C1",
+            "category": "Opiates",
+            "modifier": "+",
+            "target": null,
+            "name": "Vivek Ramaswamy’s Job"
           }
         }
       ],
       "actionText": "(QUEST_ICON)? Sell Opiates at + in C1?",
-      "mission": null,
+      "mission": {
+        "kind": "sell",
+        "item": "Opiates",
+        "pickupCell": null,
+        "deliverCell": "C1",
+        "category": "Opiates",
+        "modifier": "+",
+        "target": null,
+        "name": "Vivek Ramaswamy’s Job"
+      },
       "tier": "t2"
     },
     {
@@ -2605,7 +2709,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Criminals",
+            "targetDeck": "Cops",
             "name": "Rudy Giuliani’s Job"
           }
         }
@@ -2619,7 +2723,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Criminals",
+        "targetDeck": "Cops",
         "name": "Rudy Giuliani’s Job"
       },
       "tier": "t2"
@@ -2656,11 +2760,23 @@
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "offer",
+          "actionText": "Buy any Mkt Weapon at -?",
+          "mission": {
+            "kind": "buy_from_npc",
+            "category": "Weapons",
+            "modifier": "-",
+            "target": "Market"
+          }
         }
       ],
       "actionText": "[?] Buy any Mkt Weapon at -?",
-      "mission": null,
+      "mission": {
+        "kind": "buy_from_npc",
+        "category": "Weapons",
+        "modifier": "-",
+        "target": "Market"
+      },
       "tier": "gen"
     },
     {
@@ -3093,12 +3209,20 @@
         {
           "condition": "=0",
           "type": "demand_strict",
-          "actionText": "Pay 6(d)!!"
+          "actionText": "Pay 6(d)!!",
+          "mission": null
         },
         {
           "condition": ">=1",
           "type": "offer",
-          "actionText": "Buy Cheapest Mkt Opiates at -?"
+          "actionText": "Buy Cheapest Mkt Opiates at -?",
+          "mission": {
+            "kind": "buy_from_npc",
+            "category": "Opiates",
+            "which": "cheapest",
+            "modifier": "-",
+            "target": "Market"
+          }
         }
       ],
       "actionText": "[!!] Pay 6(d)!! • [?] Buy Cheapest Mkt Opiates at -?",
@@ -3216,12 +3340,20 @@
         {
           "condition": "=0",
           "type": "demand_strict",
-          "actionText": "Give me all of your Weapons!!"
+          "actionText": "Give me all of your Weapons!!",
+          "mission": null
         },
         {
           "condition": ">=1",
           "type": "offer",
-          "actionText": "Buy Cheapest Mkt Weapon at -?"
+          "actionText": "Buy Cheapest Mkt Weapon at -?",
+          "mission": {
+            "kind": "buy_from_npc",
+            "category": "Weapons",
+            "which": "cheapest",
+            "modifier": "-",
+            "target": "Market"
+          }
         }
       ],
       "actionText": "[!!] Give me all of your Weapons!! • [?] Buy Cheapest Mkt Weapon at -?",
@@ -3304,11 +3436,24 @@
         },
         {
           "condition": "=0",
-          "type": "demand_strict"
+          "type": "demand_strict",
+          "actionText": "Give me all of your Opiates!!",
+          "mission": null
         },
         {
           "condition": ">=1",
-          "type": "mission_offer"
+          "type": "mission_offer",
+          "actionText": "Sell Party at ++ in D3?",
+          "mission": {
+            "kind": "sell",
+            "item": "Party",
+            "pickupCell": null,
+            "deliverCell": "D3",
+            "category": "Party",
+            "modifier": "++",
+            "target": null,
+            "name": "Sam Altman’s Job"
+          }
         }
       ],
       "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)? Sell Party at ++ in D3?",
@@ -3416,9 +3561,7 @@
       "hostileFavor": [
         "-TECH",
         "-MAGA",
-        "DSA",
-        "ISIS",
-        "MS13"
+        "DSA"
       ],
       "combatReward": "14(d)",
       "reactions": [
@@ -3463,7 +3606,12 @@
         {
           "condition": "=-1",
           "type": "demand",
-          "actionText": "Sell Upper at ++!"
+          "actionText": "Sell Upper at ++!",
+          "mission": {
+            "kind": "sell",
+            "category": "Uppers",
+            "modifier": "++"
+          }
         },
         {
           "condition": ">=0",
@@ -3523,18 +3671,18 @@
         },
         {
           "condition": "=0",
-          "type": "demand_strict"
+          "type": "demand_strict",
+          "actionText": "Give me all of your Weed!!",
+          "mission": null
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "deck_quest_offer",
+          "mission": null
         }
       ],
       "actionText": "[!!] Give me all of your Weed!!",
-      "mission": {
-        "kind": "give_all_category",
-        "category": "Weed"
-      },
+      "mission": null,
       "tier": "t1"
     },
     {
@@ -3580,7 +3728,15 @@
         {
           "condition": ">=1",
           "type": "offer",
-          "actionText": "Buy Cheapest Mkt Weapon for 9(d)?"
+          "actionText": "Buy Cheapest Mkt Weapon for 9(d)?",
+          "mission": {
+            "kind": "buy_from_npc",
+            "category": "Weapons",
+            "which": "cheapest",
+            "modifier": "9(d)",
+            "target": "Market",
+            "fixedPrice": 9
+          }
         }
       ],
       "actionText": "(QUEST_ICON)! Sell Weed at -- in A5! • [?] Buy Cheapest Mkt Weapon for 9(d)?",
@@ -3630,7 +3786,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Celebrities",
+            "targetDeck": "Cops",
             "name": "International Terrorist’s Job"
           }
         },
@@ -3658,7 +3814,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Celebrities",
+        "targetDeck": "Cops",
         "name": "International Terrorist’s Job"
       },
       "tier": "t1"
@@ -3687,11 +3843,27 @@
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "offer",
+          "actionText": "Buy Cheapest Mkt Weapon for 12(d)?",
+          "mission": {
+            "kind": "buy_from_npc",
+            "category": "Weapons",
+            "which": "cheapest",
+            "modifier": "12(d)",
+            "target": "Market",
+            "fixedPrice": 12
+          }
         }
       ],
       "actionText": "[?] Buy Cheapest Mkt Weapon for 12(d)?",
-      "mission": null,
+      "mission": {
+        "kind": "buy_from_npc",
+        "category": "Weapons",
+        "which": "cheapest",
+        "modifier": "12(d)",
+        "target": "Market",
+        "fixedPrice": 12
+      },
       "tier": "t2"
     },
     {
@@ -3763,7 +3935,16 @@
         },
         {
           "condition": ">=2",
-          "type": "offer"
+          "type": "offer",
+          "actionText": "Buy Cheapest Mkt Weapon for 12(d)?",
+          "mission": {
+            "kind": "buy_from_npc",
+            "category": "Weapons",
+            "which": "cheapest",
+            "modifier": "12(d)",
+            "target": "Market",
+            "fixedPrice": 12
+          }
         }
       ],
       "actionText": "[?] Buy Cheapest Mkt Weapon for 12(d)?",
@@ -3883,11 +4064,24 @@
         },
         {
           "condition": "=0",
-          "type": "demand_strict"
+          "type": "demand_strict",
+          "actionText": "Give me all of your Uppers!!",
+          "mission": null
         },
         {
           "condition": ">=1",
-          "type": "mission_offer"
+          "type": "mission_offer",
+          "actionText": "Sell Weed at - in D5?",
+          "mission": {
+            "kind": "sell",
+            "item": "Weed",
+            "pickupCell": null,
+            "deliverCell": "D5",
+            "category": "Weed",
+            "modifier": "-",
+            "target": null,
+            "name": "Homeless’s Job"
+          }
         }
       ],
       "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Sell Weed at - in D5?",
@@ -3949,7 +4143,7 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)! Sell Weed at - in B6!",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)! Sell Weed at - in B6!",
       "mission": {
         "kind": "sell",
         "item": "Weed",
@@ -4048,7 +4242,14 @@
         },
         {
           "condition": ">=1",
-          "type": "offer"
+          "type": "offer",
+          "actionText": "Buy any Mkt Upper at -?",
+          "mission": {
+            "kind": "buy_from_npc",
+            "category": "Uppers",
+            "modifier": "-",
+            "target": "Market"
+          }
         }
       ],
       "actionText": "[?] Buy any Mkt Upper at -?",
@@ -4085,7 +4286,14 @@
         {
           "condition": ">=1",
           "type": "offer",
-          "actionText": "Buy Black Tar Heroin at -?"
+          "actionText": "Buy Black Tar Heroin at -?",
+          "mission": {
+            "kind": "buy_from_npc",
+            "category": "Opiates",
+            "item": "Black Tar Heroin",
+            "modifier": "-",
+            "target": "Market"
+          }
         }
       ],
       "actionText": "[?] Buy Black Tar Heroin at -?",
@@ -4149,7 +4357,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Criminals",
+            "targetDeck": "Cops",
             "name": "Sicario’s Job"
           }
         },
@@ -4168,7 +4376,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Criminals",
+        "targetDeck": "Cops",
         "name": "Sicario’s Job"
       },
       "tier": "t1"
@@ -4333,7 +4541,7 @@
             "category": null,
             "modifier": null,
             "target": "Cops",
-            "targetDeck": "Celebrities",
+            "targetDeck": "Cops",
             "name": "Coyote’s Job"
           }
         }
@@ -4347,7 +4555,7 @@
         "category": null,
         "modifier": null,
         "target": "Cops",
-        "targetDeck": "Celebrities",
+        "targetDeck": "Cops",
         "name": "Coyote’s Job"
       },
       "tier": "t2"
@@ -4413,9 +4621,8 @@
       "combatFormula": "2X(R)+X",
       "friendlyFavor": [
         "ISIS",
-        "MAGA",
         "DSA",
-        "TECH"
+        "-MAGA"
       ],
       "friendlyReward": "Cheapest Opiates",
       "hostileFavor": [

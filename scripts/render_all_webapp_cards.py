@@ -953,8 +953,8 @@ def convert_card_to_spec(card: dict, deck_key: str) -> dict:
     elif "farmer" in name_l:
         archetype = "craigslist"
 
-    raw_up = (card.get("friendlyFavor") or ([card["faction"]] if card.get("faction") else []))[:2]
-    raw_dn = (card.get("hostileFavor") or ([f"-{card['faction']}"] if card.get("faction") else []))[:2]
+    raw_up = card.get("friendlyFavor") or ([card["faction"]] if card.get("faction") else [])
+    raw_dn = card.get("hostileFavor") or ([f"-{card['faction']}"] if card.get("faction") else [])
     friendly_gems = []
     for g in raw_up:
         if g:
@@ -1006,7 +1006,8 @@ def convert_card_to_spec(card: dict, deck_key: str) -> dict:
     if not tiers:
         tiers = [("\u2264 -1", "COMBAT"), ("\u2265 0", "!")]
 
-    act_text = sf_reskin(str(card.get("actionText") or "Comply with this party."))
+    raw_act_str = card.get("actionText")
+    act_text = sf_reskin(str(raw_act_str if raw_act_str is not None else "Comply with this party."))
     lines = [ln.strip() for ln in re.split(r"[\n\r]+|\s+•\s+", act_text) if ln.strip()]
     assignments = []
     for ln in lines:
@@ -1049,16 +1050,13 @@ def convert_card_to_spec(card: dict, deck_key: str) -> dict:
 
     def _short_rew(s: str) -> str:
         out = sf_reskin(s)
-        out = out.replace(" & +1 Influence Card", "+1 Inf").replace(" & +1 Influence", "+1 Inf")
-        out = out.replace("Cheapest ", "Cheap ").replace(" on Market", " Mkt").replace(" on Mkt", " Mkt")
+        out = out.replace(" & +1 Influence Card", " + 1 Inf").replace(" & +1 Influence", " + 1 Inf").replace(" & 1 Influence Card", " + 1 Inf").replace(" & 1 Influence", " + 1 Inf")
+        out = out.replace(" & +1 TECH Favor", " + 1 Diamond").replace(" & Cheapest ", " + Cheap ")
+        out = out.replace("Cheapest ", "Cheap ").replace(" on Market", " Mkt").replace(" on Mkt", " Mkt").replace(" on the Market", " Mkt").replace(" from Market", " Mkt")
         out = out.replace("Influence Cards", "Inf").replace("Influence Card", "Inf").replace("Influence", "Inf")
-        if len(out) > 12:
-            out = out[:12].strip()
-        return out
+        return out.strip()
 
     cp_raw = str(card.get("combatFormula") or "2(R)")
-    if "(R)" not in cp_raw and "R" not in cp_raw and cp_raw != "0":
-        cp_raw = f"{cp_raw}(R)"
 
     return {
         "archetype": archetype,
@@ -1178,38 +1176,41 @@ def render_encounter_card(spec: dict, out_path: str, bases: dict):
 
         # Top & Bottom outcome bars
         f_colon = ImageFont.truetype(rem.F_BOLD, 44)
-        f_rew = ImageFont.truetype(rem.F_SYM, 40)
         top_cy = 58
-        gem_sz = 80
+        gem_sz_top = 64 if len(spec["friendly_gems"]) >= 3 else 80
+        gem_sz_bot = 64 if len(spec["hostile_gems"]) >= 3 else 80
         d.text((116, top_cy - 24), ":", font=f_colon, fill=(255, 255, 255), stroke_width=4, stroke_fill=(12, 12, 16))
         gx = 138
         for g_name, sign in spec["friendly_gems"]:
-            gx = rem.draw_gem_with_slash(w_card, gx, top_cy - gem_sz // 2, g_name, is_negative=(sign == "-"), size=gem_sz, black_border=True, border_px=4)
+            gx = rem.draw_gem_with_slash(w_card, gx, top_cy - gem_sz_top // 2, g_name, is_negative=(sign == "-"), size=gem_sz_top, black_border=True, border_px=4)
             gx += 4
 
         rew_txt = f":{spec['friendly_reward']}"
-        bb_r = d.textbbox((0, 0), rew_txt, font=f_rew)
+        f_rew_top = rgc.fit_font(rem.F_SYM, rew_txt, max(160, 868 - gx - 72), 40, min_size=24)
+        bb_r = d.textbbox((0, 0), rew_txt, font=f_rew_top)
         rw, rh = bb_r[2] - bb_r[0], bb_r[3] - bb_r[1]
         rx = 868 - rw
         cash_icon = rem.load_icon("cash_white.png", 60)
         rem.paste_with_optional_border(w_card, cash_icon, rx - 64, top_cy - 30, black_border=True, border_px=3)
-        d.text((rx, top_cy - rh // 2 - bb_r[1]), rew_txt, font=f_rew, fill=(255, 255, 255), stroke_width=4, stroke_fill=(12, 12, 16))
+        d.text((rx, top_cy - rh // 2 - bb_r[1]), rew_txt, font=f_rew_top, fill=(255, 255, 255), stroke_width=4, stroke_fill=(12, 12, 16))
 
         bot_cy = 1330
         pistol_w = rem.load_icon("pistol_white.png", 58)
         rem.paste_with_optional_border(w_card, pistol_w, 42, bot_cy - 29, black_border=True, border_px=3)
-        loot_txt = f":{spec['combat_loot']}"
-        bb_l = d.textbbox((0, 0), loot_txt, font=f_rew)
-        lh = bb_l[3] - bb_l[1]
-        d.text((108, bot_cy - lh // 2 - bb_l[1]), loot_txt, font=f_rew, fill=(255, 255, 255), stroke_width=4, stroke_fill=(12, 12, 16))
 
         td_x = 866 - rt_up.size[0]
         w_card.paste(rt_up, (td_x, bot_cy - rt_up.size[1] // 2), rt_up)
         d.text((td_x - 22, bot_cy - 24), ":", font=f_colon, fill=(255, 255, 255), stroke_width=4, stroke_fill=(12, 12, 16))
         hx = td_x - 26
         for g_name, sign in reversed(spec["hostile_gems"]):
-            hx -= (gem_sz + 8)
-            rem.draw_gem_with_slash(w_card, hx, bot_cy - gem_sz // 2, g_name, is_negative=(sign == "-"), size=gem_sz, black_border=True, border_px=4)
+            hx -= (gem_sz_bot + 6)
+            rem.draw_gem_with_slash(w_card, hx, bot_cy - gem_sz_bot // 2, g_name, is_negative=(sign == "-"), size=gem_sz_bot, black_border=True, border_px=4)
+
+        loot_txt = f":{spec['combat_loot']}"
+        f_rew_bot = rgc.fit_font(rem.F_SYM, loot_txt, max(160, hx - 118), 40, min_size=24)
+        bb_l = d.textbbox((0, 0), loot_txt, font=f_rew_bot)
+        lh = bb_l[3] - bb_l[1]
+        d.text((108, bot_cy - lh // 2 - bb_l[1]), loot_txt, font=f_rew_bot, fill=(255, 255, 255), stroke_width=4, stroke_fill=(12, 12, 16))
 
         rem.draw_tall_faction_interaction_bar(w_card, 55, 698, 845, 817, spec["faction"], spec["tiers"])
         d.rectangle((58, 856, 842, 1240), fill=(224, 212, 190))
@@ -1233,38 +1234,41 @@ def render_encounter_card(spec: dict, out_path: str, bases: dict):
         rem.draw_cp_line(id_card, 368, 548, spec["cp"], dark_text=True, icon_sz=64, font_sz=56)
 
         f_colon = ImageFont.truetype(rem.F_BOLD, 38)
-        f_rew = ImageFont.truetype(rem.F_SYM, 36)
         top_cy = 104
-        gem_sz = 60
+        gem_sz_top = 50 if len(spec["friendly_gems"]) >= 3 else 60
+        gem_sz_bot = 50 if len(spec["hostile_gems"]) >= 3 else 60
         d.text((156, top_cy - 22), ":", font=f_colon, fill=(255, 255, 255), stroke_width=3, stroke_fill=(12, 24, 18))
         gx = 176
         for g_name, sign in spec["friendly_gems"]:
-            gx = rem.draw_gem_with_slash(id_card, gx, top_cy - gem_sz // 2, g_name, is_negative=(sign == "-"), size=gem_sz, black_border=True, border_px=3)
+            gx = rem.draw_gem_with_slash(id_card, gx, top_cy - gem_sz_top // 2, g_name, is_negative=(sign == "-"), size=gem_sz_top, black_border=True, border_px=3)
             gx += 2
 
         rew_txt = f":{spec['friendly_reward']}"
-        bb_r = d.textbbox((0, 0), rew_txt, font=f_rew)
+        f_rew_top = rgc.fit_font(rem.F_SYM, rew_txt, max(150, 812 - gx - 64), 36, min_size=22)
+        bb_r = d.textbbox((0, 0), rew_txt, font=f_rew_top)
         rw, rh = bb_r[2] - bb_r[0], bb_r[3] - bb_r[1]
         rx = 812 - rw
         cash_w = rem.load_icon("cash_white.png", 52)
         rem.paste_with_optional_border(id_card, cash_w, rx - 56, top_cy - 26, black_border=True, border_px=2)
-        d.text((rx, top_cy - rh // 2 - bb_r[1]), rew_txt, font=f_rew, fill=(255, 255, 255), stroke_width=3, stroke_fill=(12, 24, 18))
+        d.text((rx, top_cy - rh // 2 - bb_r[1]), rew_txt, font=f_rew_top, fill=(255, 255, 255), stroke_width=3, stroke_fill=(12, 24, 18))
 
         bot_cy = 1296
         pistol_w = rem.load_icon("pistol_white.png", 52)
         rem.paste_with_optional_border(id_card, pistol_w, 84, bot_cy - 26, black_border=True, border_px=2)
-        loot_txt = f":{spec['combat_loot']}"
-        bb_l = d.textbbox((0, 0), loot_txt, font=f_rew)
-        lh = bb_l[3] - bb_l[1]
-        d.text((142, bot_cy - lh // 2 - bb_l[1]), loot_txt, font=f_rew, fill=(255, 255, 255), stroke_width=3, stroke_fill=(28, 10, 14))
 
         td_x = 814 - rt_cop_up.size[0]
         id_card.paste(rt_cop_up, (td_x, bot_cy - rt_cop_up.size[1] // 2), rt_cop_up)
         d.text((td_x - 18, bot_cy - 22), ":", font=f_colon, fill=(255, 255, 255), stroke_width=3, stroke_fill=(28, 10, 14))
         hx = td_x - 24
         for g_name, sign in reversed(spec["hostile_gems"]):
-            hx -= (gem_sz + 8)
-            rem.draw_gem_with_slash(id_card, hx, bot_cy - gem_sz // 2, g_name, is_negative=(sign == "-"), size=gem_sz, black_border=True, border_px=3)
+            hx -= (gem_sz_bot + 6)
+            rem.draw_gem_with_slash(id_card, hx, bot_cy - gem_sz_bot // 2, g_name, is_negative=(sign == "-"), size=gem_sz_bot, black_border=True, border_px=3)
+
+        loot_txt = f":{spec['combat_loot']}"
+        f_rew_bot = rgc.fit_font(rem.F_SYM, loot_txt, max(150, hx - 150), 36, min_size=22)
+        bb_l = d.textbbox((0, 0), loot_txt, font=f_rew_bot)
+        lh = bb_l[3] - bb_l[1]
+        d.text((142, bot_cy - lh // 2 - bb_l[1]), loot_txt, font=f_rew_bot, fill=(255, 255, 255), stroke_width=3, stroke_fill=(28, 10, 14))
 
         rem.draw_tall_faction_interaction_bar(id_card, 96, 652, 804, 766, spec["faction"], spec["tiers"])
         rem.draw_lower_card_details(id_card, 98, 792, 802, 1234, False, spec["assignments"], spec["good_table"])
