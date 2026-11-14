@@ -727,7 +727,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_2",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -808,7 +808,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_2",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -847,7 +847,7 @@
         "index": 6,
         "edges": {
           "N": "red",
-          "E": "celebrities_2",
+          "E": "celebrities_1",
           "SE": "red",
           "S": "celebrities_1",
           "SW": "red",
@@ -2811,7 +2811,7 @@
           "NE": "schizophrenic",
           "E": "red",
           "SE": "green",
-          "S": "celebrities_2",
+          "S": "celebrities_1",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -2861,7 +2861,7 @@
         "id": "C2_4",
         "index": 4,
         "edges": {
-          "N": "celebrities_2",
+          "N": "celebrities_1",
           "NE": "green",
           "E": "red",
           "SE": "celebrities_1",
@@ -3043,7 +3043,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_2",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3074,7 +3074,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_2",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7164,7 +7164,7 @@
           "SE": "mob",
           "S": "schizophrenic",
           "SW": "red",
-          "W": "celebrities_2",
+          "W": "celebrities_1",
           "NW": "green"
         },
         "sells": [
@@ -7189,7 +7189,7 @@
           "NE": "schizophrenic",
           "E": "green",
           "SE": "green",
-          "S": "celebrities_2",
+          "S": "celebrities_1",
           "SW": "red",
           "W": "red",
           "NW": "toll_2"
@@ -7390,7 +7390,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_2",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7402,7 +7402,7 @@
         "index": 10,
         "edges": {
           "N": "red",
-          "NE": "celebrities_2",
+          "NE": "celebrities_1",
           "E": "green",
           "SE": "red",
           "S": "green",
@@ -7432,7 +7432,7 @@
         "id": "C4_11",
         "index": 11,
         "edges": {
-          "N": "celebrities_2",
+          "N": "celebrities_1",
           "NE": "mob",
           "E": "toll_2",
           "SE": "green",
@@ -11821,7 +11821,7 @@
           "N": "cops_2",
           "NE": "green",
           "E": "green",
-          "S": "celebrities_2",
+          "S": "celebrities_1",
           "W": "red",
           "SE": "red",
           "SW": "red"

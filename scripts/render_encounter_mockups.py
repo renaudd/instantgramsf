@@ -385,7 +385,7 @@ def draw_good_price_grid(canvas, d, x0, y0, x1, y1, good_spec, dark_mode=False):
     """
     name_cat = f"{good_spec['name']} ({good_spec['category']})"
     blocks = int(good_spec.get("blocks", 1))
-    combat_txt = good_spec.get("combatText")
+    combat_txt = good_spec.get("combatText") or good_spec.get("combat")
 
     fg = (242, 246, 250) if dark_mode else (20, 22, 26)
     f_meta = ImageFont.truetype(F_SYM, 28)
@@ -547,7 +547,7 @@ def draw_lower_card_details(
             canvas.paste(cash_sm, (sx, (by0 + by1 - 40) // 2), cash_sm)
             d.text((sx + 46, (by0 + by1 - ph) // 2 - bb_p[1]), punc, font=f_punc, fill=accent_gold)
         else:
-            lbl = f"[{punc}]"
+            lbl = f"{punc}"
             bb_p = d.textbbox((0, 0), lbl, font=f_punc)
             pw, ph = bb_p[2] - bb_p[0], bb_p[3] - bb_p[1]
             d.text(((bx0 + bx1 - pw) // 2 - bb_p[0], (by0 + by1 - ph) // 2 - bb_p[1]), lbl, font=f_punc, fill=accent_red)

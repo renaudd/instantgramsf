@@ -262,10 +262,11 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
     def _format_session_cookie(self, token: str, max_age: int = db_defaults.SESSION_TTL_SECONDS) -> str:
         is_https = self.headers.get("X-Forwarded-Proto", "").lower() == "https"
         cookie_name = SECURE_SESSION_COOKIE_NAME if is_https else SESSION_COOKIE_NAME
+        same_site = "None" if is_https else "Lax"
         parts = [
             f"{cookie_name}={token}",
             "HttpOnly",
-            "SameSite=Lax",
+            f"SameSite={same_site}",
             "Path=/",
             f"Max-Age={max_age}",
         ]
@@ -284,10 +285,14 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
         """Return (user_dict, auth_mode) where auth_mode is 'bearer', 'cookie', or 'none'."""
         store = storage.get_backend()
         bearer = self._get_bearer_token()
-        if bearer and storage.is_firebase_enabled() and hasattr(store, "verify_and_sync_firebase_id_token"):
-            fb_user, err = store.verify_and_sync_firebase_id_token(bearer)
-            if fb_user and not err:
-                return fb_user, "bearer"
+        if bearer:
+            s_user = store.get_session_user(bearer)
+            if s_user:
+                return s_user, "bearer"
+            if storage.is_firebase_enabled() and hasattr(store, "verify_and_sync_firebase_id_token"):
+                fb_user, err = store.verify_and_sync_firebase_id_token(bearer)
+                if fb_user and not err:
+                    return fb_user, "bearer"
 
         for raw_token in self._get_session_cookies():
             c_user = store.get_session_user(raw_token)
@@ -551,7 +556,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
             cookie_str = self._format_session_cookie(raw_token)
             self._send_json(
                 201,
-                {"ok": True, "user": user, "csrfToken": csrf_token, "firebaseCustomToken": fb_custom_token},
+                {"ok": True, "user": user, "csrfToken": csrf_token, "sessionToken": raw_token, "firebaseCustomToken": fb_custom_token},
                 set_cookie=cookie_str,
             )
             return
@@ -568,7 +573,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
             cookie_str = self._format_session_cookie(raw_token)
             self._send_json(
                 200,
-                {"ok": True, "user": user, "csrfToken": csrf_token, "firebaseCustomToken": fb_custom_token},
+                {"ok": True, "user": user, "csrfToken": csrf_token, "sessionToken": raw_token, "firebaseCustomToken": fb_custom_token},
                 set_cookie=cookie_str,
             )
             return
@@ -585,7 +590,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
             cookie_str = self._format_session_cookie(raw_token)
             self._send_json(
                 200,
-                {"ok": True, "user": user, "csrfToken": csrf_token},
+                {"ok": True, "user": user, "csrfToken": csrf_token, "sessionToken": raw_token},
                 set_cookie=cookie_str,
             )
             return
@@ -610,7 +615,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
             user.pop("csrfToken", None)
             raw_token, csrf_token = store.create_session(user["id"])
             cookie_str = self._format_session_cookie(raw_token)
-            self._send_json(200, {"ok": True, "user": user, "csrfToken": csrf_token}, set_cookie=cookie_str)
+            self._send_json(200, {"ok": True, "user": user, "csrfToken": csrf_token, "sessionToken": raw_token}, set_cookie=cookie_str)
             return
 
         if path == "/api/auth/google":
@@ -628,7 +633,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
                 user.pop("csrfToken", None)
                 raw_token, csrf_token = store.create_session(user["id"])
                 cookie_str = self._format_session_cookie(raw_token)
-                self._send_json(200, {"ok": True, "user": user, "csrfToken": csrf_token}, set_cookie=cookie_str)
+                self._send_json(200, {"ok": True, "user": user, "csrfToken": csrf_token, "sessionToken": raw_token}, set_cookie=cookie_str)
                 return
 
             google_client_id = os.getenv("GOOGLE_CLIENT_ID", "").strip()
@@ -679,9 +684,15 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
             if g_err or not user:
                 self._send_json(400, {"ok": False, "error": g_err or "Google sign-in failed."})
                 return
+            fb_custom_token = user.pop("_firebaseCustomToken", None)
+            user.pop("csrfToken", None)
             raw_token, csrf_token = store.create_session(user["id"])
             cookie_str = self._format_session_cookie(raw_token)
-            self._send_json(200, {"ok": True, "user": user, "csrfToken": csrf_token}, set_cookie=cookie_str)
+            self._send_json(
+                200,
+                {"ok": True, "user": user, "csrfToken": csrf_token, "sessionToken": raw_token, "firebaseCustomToken": fb_custom_token},
+                set_cookie=cookie_str,
+            )
             return
 
         if path == "/api/auth/logout":

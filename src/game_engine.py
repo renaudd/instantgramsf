@@ -5123,7 +5123,8 @@ def trigger_deck_encounter(state: Dict[str, Any], player: Dict[str, Any], enc_co
     """Draws and resolves (or queues interactive choice for) a Celebrities, Cops, or Criminals encounter."""
     parts = enc_code.split("_")
     deck_key = parts[0].lower()
-    x_count = int(parts[1]) if len(parts) > 1 and parts[1].isdigit() else 1
+    raw_x = int(parts[1]) if len(parts) > 1 and parts[1].isdigit() else 1
+    x_count = max(1, min(4, raw_x)) if deck_key in ("cops", "criminals", "legionaries", "nefarious") else 1
 
     deck = state["decks"].get(deck_key, [])
     if not deck:
@@ -6041,6 +6042,7 @@ def resolve_pending_encounter_choice(
     pending: Dict[str, Any],
     decision: str,
     use_consumable_ids: Optional[List[str]] = None,
+    replace_mission_id: Optional[str] = None,
 ) -> Tuple[bool, str]:
     """
     decision: 'fulfill' | 'refuse' | 'fight' | 'use_dog' | 'use_plea' | 'use_casus_belli'
@@ -6364,8 +6366,52 @@ def resolve_pending_encounter_choice(
             if player["cash"] < req_pr:
                 return False, f"You need {req_pr}(d) to buy an Influence card from {card['name']} (or click Refuse Offer)."
 
+    # Check if this fulfill decision will assign a new Job (Deck Quest or Bespoke Card Job) while at 5 active regular Jobs
+    m_raw_pre = card.get("mission") or {}
+    clean_act_low_pre = action_text.lower().lstrip("?!: ")
+    is_npc_buy_pre = (
+        (m_raw_pre.get("kind") == "buy_from_npc")
+        or ("will sell" in action_text.lower())
+        or clean_act_low_pre.startswith("buy ")
+    )
+    is_npc_sell_pre = (
+        m_raw_pre.get("kind") == "sell"
+        and not m_raw_pre.get("cell")
+        and not m_raw_pre.get("deliverCell")
+        and ("will buy" in action_text.lower() or "on the spot" in action_text.lower() or (clean_act_low_pre.startswith("sell ") and " in " not in clean_act_low_pre))
+    )
+    is_job_assignment_fulfill = (
+        decision == "fulfill"
+        and (
+            reaction in ("deck_quest_demand", "deck_quest_strict", "deck_quest_offer")
+            or (
+                reaction not in ("no_contraband", "payoff", "cash_reward")
+                and not is_npc_buy_pre
+                and not is_npc_sell_pre
+                and (bool(card.get("mission")) or not action_text.strip())
+            )
+        )
+    )
+    m_to_replace: Optional[Dict[str, Any]] = None
+    if is_job_assignment_fulfill:
+        active_regular_jobs = [m for m in player["missions"] if m.get("source") != "schizophrenic"]
+        if len(active_regular_jobs) >= 5:
+            if player.get("isBot") and not replace_mission_id:
+                m_to_replace = sorted(active_regular_jobs, key=lambda m: (0 if m.get("source") == "starting" else 1))[0]
+            elif not replace_mission_id:
+                return (
+                    False,
+                    "You already have 5 active Jobs! Select one of your 5 active Jobs to fail to make room for this Job (or choose to refuse/fight).",
+                )
+            else:
+                m_to_replace = next((m for m in active_regular_jobs if str(m.get("id")) == str(replace_mission_id)), None)
+                if not m_to_replace:
+                    return False, "Selected Job to fail was not found among your active regular Jobs."
+
     state["pendingEncounter"] = None
     player["tempFavor"] = 0
+    if m_to_replace is not None:
+        _fail_mission(state, player, m_to_replace, reason=f"failed to make room for {card['name']}'s job")
 
     if decision == "use_dog":
         dog = next((c for c in player["influence"] if "Trained Dog" in c.get("name", "")), None)
@@ -6567,8 +6613,9 @@ def resolve_pending_encounter_choice(
 
         # Check if this is a Quest card that draws from the Missions deck (no embedded mission on card)
         sooth_cnt = sum(1 for m in player["missions"] if m.get("source") == "schizophrenic")
+        non_sooth_cnt = len(player["missions"]) - sooth_cnt
         if not card.get("mission") and not action_text.strip():
-            if state["decks"]["missions"] and (len(player["missions"]) < 5 or (not player.get("isBot") and sooth_cnt < 5)):
+            if state["decks"]["missions"] and non_sooth_cnt < 5:
                 drawn_m = copy.deepcopy(state["decks"]["missions"].pop(0))
                 drawn_m["source"] = "encounter"
                 drawn_m["hasDrawnMissionCard"] = True
@@ -6592,7 +6639,7 @@ def resolve_pending_encounter_choice(
         norm_p_cell = normalize_cell_id(m_data.get("pickupCell")) if m_data.get("pickupCell") else None
         norm_d_cell = normalize_cell_id(m_data.get("deliverCell")) if m_data.get("deliverCell") else None
         norm_act_txt = _normalize_relative_scarcity_text(action_text)
-        if len(player["missions"]) < 5 or (not player.get("isBot") and sooth_cnt < 5):
+        if non_sooth_cnt < 5:
             m_obj = {
                 "id": f"enc_{card['id']}_{secrets.token_hex(2)}",
                 "name": m_data.get("name") or f"{card['name']}'s Task",
@@ -6604,6 +6651,7 @@ def resolve_pending_encounter_choice(
                 "kind": raw_kind,
                 "item": m_data.get("item", "Cargo"),
                 "category": m_data.get("category", "Wine"),
+                "subcategory": m_data.get("subcategory"),
                 "modifier": normalize_scarcity_modifier(m_data.get("modifier") or "+"),
                 "target": m_data.get("target"),
                 "targetDeck": m_data.get("targetDeck"),
@@ -8859,7 +8907,15 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
             return False, "Invalid encounter decision."
         raw_use_cons = action.get("useConsumableIds")
         use_cons_list = [str(x) for x in raw_use_cons] if isinstance(raw_use_cons, list) else None
-        ok, msg = resolve_pending_encounter_choice(state, enc_player, pend, decision, use_consumable_ids=use_cons_list)
+        replace_mission_id = str(action.get("replaceMissionId") or "").strip() or None
+        ok, msg = resolve_pending_encounter_choice(
+            state,
+            enc_player,
+            pend,
+            decision,
+            use_consumable_ids=use_cons_list,
+            replace_mission_id=replace_mission_id,
+        )
         if not ok:
             return False, msg
         if not state.get("pendingEncounter") and not enc_player.get("pendingNpcOffer") and not enc_player.get("pendingSUVOverflow") and not enc_player.get("pendingMarketReward"):

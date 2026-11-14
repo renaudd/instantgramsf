@@ -37,6 +37,19 @@ FACTION_TO_GEM = {
 }
 
 SF_TEXT_RULES = [
+    (r"\bGladiator's Intervention\b", "Backup Arrives"),
+    (r"\bHenchman's Intervention\b", "Backup Arrives"),
+    (r"\bFriend In The City (?:Guard|Henchman)\b", "City Hall Fixer"),
+    (r"\bFlying Chamber Pot\b", "Pepper Spray"),
+    (r"\bMercenary Ambush\b", "Drive-By"),
+    (r"\bWine Forger\b", "Fentanyl Press"),
+    (r"\bOpiates Forger\b", "Fentanyl Press"),
+    (r"\bProphecy\b", "Bad Trip"),
+    (r"\bProcurer\b", "Dark Web Plug"),
+    (r"\bSupplicant\b", "VIP Vouch"),
+    (r"\bDramaturge\b", "Viral Heckler"),
+    (r"\bMake Haste\b", "Floor It"),
+    (r"\bPuffery\b", "Market Hype"),
     (r"\bDenarii\b", "₿"),
     (r"\bDenarius\b", "₿"),
     (r"\bGrain\b", "Weed"),
@@ -644,11 +657,11 @@ JOB_PLATFORM_THEMES = [
         "badge": "99% MATCH",
         "dark": False,
     },
-    # 24. Feeld Messages
+    # 24. Feely Messages
     {
-        "id": "feeld",
+        "id": "feely",
         "kind": "chat",
-        "app_name": "Feeld • Ping Connection",
+        "app_name": "Feely • Ping Connection",
         "header_bg": (42, 24, 56),
         "header_fg": (255, 168, 138),
         "screen_bg": (22, 16, 28),
@@ -1005,9 +1018,14 @@ def convert_card_to_spec(card: dict, deck_key: str) -> dict:
     good_table = None
     m_obj = card.get("mission")
     if isinstance(m_obj, dict) and str(m_obj.get("kind", "")).lower() == "delivery" and isinstance(m_obj.get("fencedSell"), list) and len(m_obj["fencedSell"]) >= 5:
+        cat_str = sf_reskin(str(m_obj.get("category") or "Good"))
+        if m_obj.get("subcategory"):
+            sub_str = sf_reskin(str(m_obj["subcategory"]))
+            if sub_str and sub_str.lower() != cat_str.lower():
+                cat_str = f"{cat_str}, {sub_str}"
         good_table = {
             "name": sf_reskin(str(m_obj.get("item") or "Cargo")),
-            "category": sf_reskin(str(m_obj.get("category") or "Good")),
+            "category": cat_str,
             "blocks": max(1, int(m_obj.get("blocks") or 1)),
             "combat": sf_reskin(str(m_obj.get("combatText") or "")),
             "sell": [rgc.btc(v) for v in m_obj["fencedSell"][:5]],
@@ -1245,6 +1263,8 @@ def render_encounter_card(spec: dict, out_path: str, bases: dict):
 
         rem.draw_tall_faction_interaction_bar(id_card, 96, 652, 804, 766, spec["faction"], spec["tiers"])
         rem.draw_lower_card_details(id_card, 98, 792, 802, 1234, False, spec["assignments"], spec["good_table"])
+        # Crop slightly so the ID card edges are just barely enclosed within the edges of the image
+        id_card = id_card.crop((32, 32, 868, 1372)).resize((rem.CARD_W, rem.CARD_H), Image.LANCZOS)
         id_card.convert("RGB").save(out_path, quality=90)
         return
 
@@ -1348,13 +1368,20 @@ def main():
     dk = json.load(open(os.path.join(ROOT, "src/data/decks.json"), encoding="utf-8"))
     rc = json.load(open(os.path.join(ROOT, "src/data/reserve_cards.json"), encoding="utf-8"))
 
-    # 1. Influence cards
+    # 1. Influence cards (preserve user's manual edits on ClockTok & FaceSpace cards)
+    MANUALLY_FIXED_INFLUENCE_IDS = {
+        "inf_2", "inf_12", "inf_14", "inf_17", "inf_22",
+        "inf_27", "inf_29", "inf_34", "inf_37", "inf_39",
+        "inf_44", "inf_49", "inf_52", "inf_57", "inf_59",
+    }
     inf_count = 0
     for c in dk.get("influence", []):
         cid = c.get("id")
         if not cid:
             continue
         out_p = os.path.join(CARDS_DIR, "influence", f"{cid}.jpg")
+        if cid in MANUALLY_FIXED_INFLUENCE_IDS and os.path.exists(out_p):
+            continue
         render_influence_card(c, out_p)
         inf_count += 1
     print(f"Rendered {inf_count} Influence cards.")

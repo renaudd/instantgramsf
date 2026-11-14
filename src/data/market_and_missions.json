@@ -2044,7 +2044,7 @@
         4,
         4
       ],
-      "combatText": "(R) CP & +■■ SUV Space",
+      "combatText": "(R) CP & +\u25a0\u25a0 SUV Space",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2069,7 +2069,7 @@
         5,
         4
       ],
-      "combatText": "(R) CP & +▲ SUV Space",
+      "combatText": "(R) CP & +\u25b2 SUV Space",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2329,8 +2329,8 @@
       "name": "Community Pricing",
       "category": "Weed",
       "modifier": "-",
-      "cell": "C3",
-      "text": "Sell Weed at - in C3 (Civic Center)!"
+      "cell": "C2",
+      "text": "Sell Weed at - in C2 (Russian)!"
     },
     {
       "id": "mis_2",
@@ -2383,10 +2383,10 @@
       ],
       "patronFaction": "MS13",
       "name": "Markup",
-      "category": "Uppers",
-      "modifier": "+",
+      "category": "Party",
+      "modifier": "++",
       "cell": "D6",
-      "text": "Sell Uppers at + in D6 (Excelsior)!"
+      "text": "Sell Party at ++ in D6 (Excelsior)!"
     },
     {
       "id": "mis_5",
@@ -2414,7 +2414,7 @@
         18,
         12
       ],
-      "text": "Pick up Ammo Cans (Weapons • 2■) in A5 (Merced), Deliver to A1 (Land's End). [Fenced Sell: 42/32/24/18/12]",
+      "text": "Pick up Ammo Cans (Weapons \u2022 2\u25a0) in A5 (Merced), Deliver to A1 (Land's End). [Fenced Sell: 42/32/24/18/12]",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2438,8 +2438,8 @@
       "name": "Community Pricing",
       "category": "Party",
       "modifier": "-",
-      "cell": "E5",
-      "text": "Sell Party at - in E5 (Bernal)!"
+      "cell": "E2",
+      "text": "Sell Party at - in E2 (Chinatown)!"
     },
     {
       "id": "mis_7",
@@ -2473,9 +2473,9 @@
       "patronFaction": "MAGA",
       "name": "VIP List",
       "category": "Uppers",
-      "modifier": "+",
+      "modifier": "=",
       "cell": "F6",
-      "text": "Sell Uppers at + in F6 (Hunter's)!"
+      "text": "Sell Uppers at = in F6 (Hunter's)!"
     },
     {
       "id": "mis_9",
@@ -2492,9 +2492,9 @@
       "patronFaction": "TECH",
       "name": "Bottle Service",
       "category": "Party",
-      "modifier": "+",
+      "modifier": "-",
       "cell": "E1",
-      "text": "Sell Party at + in E1 (Telegraph)!"
+      "text": "Sell Party at - in E1 (Telegraph)!"
     },
     {
       "id": "mis_10",
@@ -2511,9 +2511,9 @@
       "patronFaction": "MS13",
       "name": "Markup",
       "category": "Opiates",
-      "modifier": "+",
+      "modifier": "-",
       "cell": "A5",
-      "text": "Sell Opiates at + in A5 (Merced)!"
+      "text": "Sell Opiates at - in A5 (Merced)!"
     },
     {
       "id": "mis_11",
@@ -2531,8 +2531,8 @@
       "name": "Bottle Service",
       "category": "Weapons",
       "modifier": "+",
-      "cell": "C6",
-      "text": "Sell Weapons at + in C6 (Sunnyside)!"
+      "cell": "E6",
+      "text": "Sell Weapons at + in E6 (Visitacion)!"
     },
     {
       "id": "mis_12",
@@ -2547,10 +2547,10 @@
       ],
       "patronFaction": "DSA",
       "name": "Mutual Aid Drop",
-      "category": "Weed",
-      "modifier": "-",
+      "category": "Opiates",
+      "modifier": "++",
       "cell": "E5",
-      "text": "Sell Weed at - in E5 (Bernal)!"
+      "text": "Sell Opiates at ++ in E5 (Bernal)!"
     },
     {
       "id": "mis_13",
@@ -2566,10 +2566,10 @@
       ],
       "patronFaction": "MAGA",
       "name": "Markup",
-      "category": "Uppers",
-      "modifier": "+",
+      "category": "Opiates",
+      "modifier": "++",
       "cell": "D1",
-      "text": "Sell Uppers at + in D1 (Wharf)!"
+      "text": "Sell Opiates at ++ in D1 (Wharf)!"
     },
     {
       "id": "mis_14",
@@ -2729,10 +2729,10 @@
       ],
       "patronFaction": "DSA",
       "name": "Mutual Aid Drop",
-      "category": "Party",
-      "modifier": "-",
+      "category": "Weapons",
+      "modifier": "+",
       "cell": "B4",
-      "text": "Sell Party at - in B4 (Haight)!"
+      "text": "Sell Weapons at + in B4 (Haight)!"
     },
     {
       "id": "mis_23",
@@ -2768,8 +2768,8 @@
       "name": "Bottle Service",
       "category": "Weed",
       "modifier": "+",
-      "cell": "F2",
-      "text": "Sell Weed at + in F2 (Embarcadero)!"
+      "cell": "A2",
+      "text": "Sell Weed at + in A2 (Richmond)!"
     },
     {
       "id": "mis_25",
@@ -2786,9 +2786,9 @@
       "patronFaction": "MS13",
       "name": "Bottle Service",
       "category": "Uppers",
-      "modifier": "+",
+      "modifier": "++",
       "cell": "C6",
-      "text": "Sell Uppers at + in C6 (Sunnyside)!"
+      "text": "Sell Uppers at ++ in C6 (Sunnyside)!"
     },
     {
       "id": "mis_26",
@@ -2833,7 +2833,7 @@
         18,
         12
       ],
-      "text": "Pick up Crate of ARs (Weapons • 2■) in F3 (Ball Park), Deliver to A4 (Sunset). [Fenced Sell: 42/32/24/18/12]",
+      "text": "Pick up Crate of ARs (Weapons \u2022 2\u25a0) in F3 (Ball Park), Deliver to A4 (Sunset). [Fenced Sell: 42/32/24/18/12]",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2867,7 +2867,7 @@
         35,
         26
       ],
-      "text": "Pick up Ketamine Jugs (Party • 1■) in F1 (Treasure), Deliver to C4 (Castro). [Fenced Sell: 80/61/46/35/26]"
+      "text": "Pick up Ketamine Jugs (Party \u2022 1\u25a0) in F1 (Treasure), Deliver to C4 (Castro). [Fenced Sell: 80/61/46/35/26]"
     },
     {
       "id": "mis_29",
@@ -2914,7 +2914,7 @@
         34,
         24
       ],
-      "text": "Pick up Coke Brick (Uppers • 2■) in A6 (Daly City), Deliver to C1 (Marina). [Fenced Sell: 78/60/46/34/24]"
+      "text": "Pick up Coke Brick (Uppers \u2022 2\u25a0) in A6 (Daly City), Deliver to C1 (Marina). [Fenced Sell: 78/60/46/34/24]"
     },
     {
       "id": "mis_31",
@@ -2951,7 +2951,7 @@
       "item": "Oxy Script Haul",
       "category": "Opiates",
       "blocks": 1,
-      "pickupCell": "A4",
+      "pickupCell": "C5",
       "deliverCell": "F1",
       "fencedSell": [
         54,
@@ -2960,7 +2960,7 @@
         17,
         13
       ],
-      "text": "Pick up Oxy Script Haul (Opiates • 1■) in A4 (Sunset), Deliver to F1 (Treasure). [Fenced Sell: 54/37/23/17/13]"
+      "text": "Pick up Oxy Script Haul (Opiates \u2022 1\u25a0) in C5 (Noe Valley), Deliver to F1 (Treasure). [Fenced Sell: 54/37/23/17/13]"
     },
     {
       "id": "mis_33",
@@ -2976,9 +2976,9 @@
       "patronFaction": "DSA",
       "name": "Harm Reduction",
       "category": "Weed",
-      "modifier": "-",
+      "modifier": "=",
       "cell": "F4",
-      "text": "Sell Weed at - in F4 (Dogpatch)!"
+      "text": "Sell Weed at = in F4 (Dogpatch)!"
     },
     {
       "id": "mis_34",
@@ -3006,10 +3006,10 @@
       ],
       "patronFaction": "MAGA",
       "name": "Mutual Aid Drop",
-      "category": "Opiates",
-      "modifier": "-",
-      "cell": "D1",
-      "text": "Sell Opiates at - in D1 (Wharf)!"
+      "category": "Uppers",
+      "modifier": "--",
+      "cell": "F3",
+      "text": "Sell Uppers at -- in F3 (Ball Park)!"
     },
     {
       "id": "mis_36",
@@ -3024,10 +3024,10 @@
       ],
       "patronFaction": "TECH",
       "name": "Markup",
-      "category": "Party",
-      "modifier": "+",
-      "cell": "E4",
-      "text": "Sell Party at + in E4 (Potrero)!"
+      "category": "Uppers",
+      "modifier": "++",
+      "cell": "A6",
+      "text": "Sell Uppers at ++ in A6 (Daly City)!"
     },
     {
       "id": "mis_37",
@@ -3061,10 +3061,10 @@
       ],
       "patronFaction": "ISIS",
       "name": "VIP List",
-      "category": "Weapons",
-      "modifier": "+",
+      "category": "Uppers",
+      "modifier": "++",
       "cell": "C4",
-      "text": "Sell Weapons at + in C4 (Castro)!"
+      "text": "Sell Uppers at ++ in C4 (Castro)!"
     },
     {
       "id": "mis_39",
@@ -3099,9 +3099,9 @@
       "patronFaction": "MAGA",
       "name": "Bottle Service",
       "category": "Weed",
-      "modifier": "+",
-      "cell": "F6",
-      "text": "Sell Weed at + in F6 (Hunter's)!"
+      "modifier": "-",
+      "cell": "A4",
+      "text": "Sell Weed at - in A4 (Sunset)!"
     },
     {
       "id": "mis_41",
@@ -3134,10 +3134,10 @@
       ],
       "patronFaction": "TECH",
       "name": "Markup",
-      "category": "Party",
-      "modifier": "+",
+      "category": "Opiates",
+      "modifier": "-",
       "cell": "D3",
-      "text": "Sell Party at + in D3 (Tenderloin)!"
+      "text": "Sell Opiates at - in D3 (Tenderloin)!"
     },
     {
       "id": "mis_43",
@@ -3171,10 +3171,10 @@
       ],
       "patronFaction": "ISIS",
       "name": "VIP List",
-      "category": "Weapons",
-      "modifier": "+",
-      "cell": "A4",
-      "text": "Sell Weapons at + in A4 (Sunset)!"
+      "category": "Opiates",
+      "modifier": "--",
+      "cell": "B5",
+      "text": "Sell Opiates at -- in B5 (Twin Peaks)!"
     },
     {
       "id": "mis_45",
@@ -3189,10 +3189,10 @@
       ],
       "patronFaction": "DSA",
       "name": "Community Pricing",
-      "category": "Party",
-      "modifier": "-",
-      "cell": "B4",
-      "text": "Sell Party at - in B4 (Haight)!"
+      "category": "Uppers",
+      "modifier": "++",
+      "cell": "C5",
+      "text": "Sell Uppers at ++ in C5 (Noe Valley)!"
     },
     {
       "id": "mis_46",
@@ -3209,9 +3209,9 @@
       "patronFaction": "MAGA",
       "name": "Bottle Service",
       "category": "Uppers",
-      "modifier": "+",
-      "cell": "C2",
-      "text": "Sell Uppers at + in C2 (Russian)!"
+      "modifier": "++",
+      "cell": "D2",
+      "text": "Sell Uppers at ++ in D2 (Nob Hill)!"
     },
     {
       "id": "mis_47",
@@ -3294,7 +3294,7 @@
         35,
         26
       ],
-      "text": "Pick up Molly Stash (Party • 1■) in A1 (Land's End), Deliver to E3 (SoMa). [Fenced Sell: 80/61/46/35/26]"
+      "text": "Pick up Molly Stash (Party \u2022 1\u25a0) in A1 (Land's End), Deliver to E3 (SoMa). [Fenced Sell: 80/61/46/35/26]"
     },
     {
       "id": "mis_51",
@@ -3389,7 +3389,7 @@
         18,
         12
       ],
-      "text": "Pick up Crate of ARs (Weapons • 2■) in B2 (Pac Heights), Deliver to D6 (Excelsior). [Fenced Sell: 42/32/24/18/12]",
+      "text": "Pick up Crate of ARs (Weapons \u2022 2\u25a0) in B2 (Pac Heights), Deliver to D6 (Excelsior). [Fenced Sell: 42/32/24/18/12]",
       "combat": {
         "dice": 1,
         "negDice": 0,
