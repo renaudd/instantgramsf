@@ -23,10 +23,10 @@ Players register or sign in via the **Collegium Mercatorum** portal (Username/Em
 
 - **Frontend (`public/`)**: Static vanilla ES6+ SPA (`index.html`, `app.js`, `styles.css`, `config.js`, `assets/`) using subpath-safe relative URLs so it runs identically at `/` (local dev) and `/nightmerchant/` (GitHub Pages at `dashiellrenaud.com/nightmerchant`).
 - **Authoritative Game & Auth Server (`src/`)**:
-  - `src/server.py` — HTTP API server with CORS allow-listing, CSRF protection, Firebase ID token verification, and hidden-information filtering (opponents' secret Influence hands, hidden Missiones, and raw emails never leave the server).
-  - `src/game_engine.py` — Complete rules engine, Ostia market supply/demand simulator, Rome encounter resolver, Winter Reckoning scoring, and AI bot personas.
+  - `src/server.py` — HTTP API server with CORS allow-listing, CSRF protection, Firebase ID token verification, and hidden-information filtering (opponents' secret Influence hands, hidden Missions, and raw emails never leave the server).
+  - `src/game_engine.py` — Complete rules engine, Ostia market supply/demand simulator, Rome encounter resolver, Sunday Reckoning scoring, and AI bot personas.
   - `src/firebase_db.py` — Production persistence & auth adapter backed by **Firebase Authentication** and **Cloud Firestore** (`NIGHTMERCHANT_USE_FIREBASE=1` or `FIREBASE_PROJECT_ID`).
-  - `src/db.py` — Zero-config local SQLite fallback for offline local development.
+  - `src/db.py` — Zero-config local SQLite saturdayback for offline local development.
   - `src/email_service.py` — Server-side EmailJS REST dispatcher for Invite-Only game notifications.
 
 ---
@@ -34,7 +34,7 @@ Players register or sign in via the **Collegium Mercatorum** portal (Username/Em
 ## Local Development
 
 ```bash
-# Run locally with SQLite fallback on http://127.0.0.1:8080
+# Run locally with SQLite saturdayback on http://127.0.0.1:8080
 python3 src/server.py
 ```
 

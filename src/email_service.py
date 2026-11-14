@@ -12,7 +12,7 @@ import urllib.request
 from typing import Any, Dict, List
 
 EMAILJS_API_URL = "https://api.emailjs.com/api/v1.0/email/send"
-DEFAULT_PUBLIC_URL = "https://dashiellrenaud.com/nightmerchant/"
+DEFAULT_PUBLIC_URL = "https://dashiellrenaud.com/instantgram/"
 
 logger = logging.getLogger("nightmerchant.email")
 
@@ -58,7 +58,7 @@ def build_invite_email_payload(
         f"This table is Invite-Only: only invited merchants may claim an open seat, "
         f"and seats close as soon as the host starts the match.\n\n"
         f"Join the lobby here:\n{invite_url}\n\n"
-        f"Sign in as @{rec_username} to claim your merchant cart.\n"
+        f"Sign in as @{rec_username} to claim your merchant suv.\n"
         f"— Collegium Mercatorum (211 A.D.)"
     )
 

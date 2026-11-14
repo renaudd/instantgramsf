@@ -59,7 +59,7 @@ def _resolve_db_path() -> Tuple[str, str]:
 
 
 def get_secret_key() -> str:
-    """Multi-tiered secret resolution without hardcoded literal fallbacks."""
+    """Multi-tiered secret resolution without hardcoded literal saturdaybacks."""
     env_secret = os.getenv("NIGHTMERCHANT_SECRET_KEY")
     if env_secret:
         return env_secret
@@ -70,7 +70,7 @@ def get_secret_key() -> str:
             val = fh.read().strip()
             if val:
                 return val
-    # Ephemeral fallback for local sandbox/testing
+    # Ephemeral saturdayback for local sandbox/testing
     os.makedirs(db_dir, exist_ok=True)
     generated = secrets.token_hex(32)
     try:
@@ -92,7 +92,7 @@ def get_connection() -> sqlite3.Connection:
     return conn
 
 
-ALL_CART_COLORS: List[str] = [
+ALL_SUV_COLORS: List[str] = [
     "Ruby",
     "Cobalt",
     "Emerald",
@@ -123,10 +123,10 @@ LEGACY_COLOR_MAP: Dict[str, str] = {
 }
 
 
-def normalize_cart_color(color: Optional[str], default: str = "Ruby") -> str:
+def normalize_suv_color(color: Optional[str], default: str = "Ruby") -> str:
     if not color:
         return default
-    if color in ALL_CART_COLORS:
+    if color in ALL_SUV_COLORS:
         return color
     return LEGACY_COLOR_MAP.get(color, default)
 
@@ -164,7 +164,7 @@ DEFAULT_HOTKEYS: Dict[str, str] = {
     "scoutDeck": "d",
     "endTurn": "e",
     "closeModal": "x",
-    "toggleCartNav": "n",
+    "toggleSUVNav": "n",
     "viewRomeBoard": "r",
     "viewMarketBoard": "m",
     "viewClimateBoard": "c",
@@ -263,7 +263,7 @@ def _format_user_dict(row: sqlite3.Row, csrf_token: Optional[str] = None) -> Dic
         "email": email_val,
         "maskedEmail": mask_email(email_val),
         "authProvider": provider_val,
-        "preferredColor": normalize_cart_color(row["preferred_color"], "Z1"),
+        "preferredColor": normalize_suv_color(row["preferred_color"], "Z1"),
         "settings": _parse_user_settings(settings_raw),
         "isAdmin": is_admin_val,
         "needsUsernameSetup": needs_uname_val,
@@ -333,8 +333,8 @@ def init_db() -> None:
             # Backfill any existing users missing an email address
             rows_no_email = conn.execute("SELECT id, username FROM users WHERE email IS NULL OR email = ''").fetchall()
             for r in rows_no_email:
-                fallback_email = f"{r['username']}@roma.local"
-                conn.execute("UPDATE users SET email = ? WHERE id = ?", (fallback_email, r["id"]))
+                saturdayback_email = f"{r['username']}@roma.local"
+                conn.execute("UPDATE users SET email = ? WHERE id = ?", (saturdayback_email, r["id"]))
 
             conn.execute(
                 """
@@ -357,7 +357,7 @@ def init_db() -> None:
                     status TEXT NOT NULL DEFAULT 'lobby',
                     invite_mode TEXT NOT NULL DEFAULT 'open',
                     max_players INTEGER NOT NULL DEFAULT 4,
-                    season TEXT NOT NULL DEFAULT 'Spring',
+                    night TEXT NOT NULL DEFAULT 'Thursday',
                     phase TEXT NOT NULL DEFAULT 'Setup',
                     turn INTEGER NOT NULL DEFAULT 1,
                     state_json TEXT NOT NULL,
@@ -373,6 +373,23 @@ def init_db() -> None:
             }
             if "invite_mode" not in game_cols:
                 conn.execute("ALTER TABLE games ADD COLUMN invite_mode TEXT NOT NULL DEFAULT 'open'")
+            if "night" not in game_cols:
+                conn.execute("ALTER TABLE games ADD COLUMN night TEXT NOT NULL DEFAULT 'Thursday'")
+                if "season" in game_cols:
+                    conn.execute(
+                        """
+                        UPDATE games
+                        SET night = CASE season
+                            WHEN 'Spring' THEN 'Thursday'
+                            WHEN 'Summer' THEN 'Friday'
+                            WHEN 'Fall' THEN 'Saturday'
+                            WHEN 'Thursday' THEN 'Thursday'
+                            WHEN 'Friday' THEN 'Friday'
+                            WHEN 'Saturday' THEN 'Saturday'
+                            ELSE 'Thursday'
+                        END
+                        """
+                    )
             conn.execute(
                 """
                 CREATE TABLE IF NOT EXISTS game_invites (
@@ -411,12 +428,32 @@ def init_db() -> None:
                     game_id TEXT PRIMARY KEY,
                     game_name TEXT NOT NULL,
                     winner_name TEXT,
-                    season TEXT NOT NULL DEFAULT 'Fall',
+                    night TEXT NOT NULL DEFAULT 'Saturday',
                     completed_at INTEGER NOT NULL,
                     standings_json TEXT
                 )
                 """
             )
+            cg_cols = {
+                r["name"] for r in conn.execute("PRAGMA table_info(completed_games)").fetchall()
+            }
+            if "night" not in cg_cols:
+                conn.execute("ALTER TABLE completed_games ADD COLUMN night TEXT NOT NULL DEFAULT 'Saturday'")
+                if "season" in cg_cols:
+                    conn.execute(
+                        """
+                        UPDATE completed_games
+                        SET night = CASE season
+                            WHEN 'Spring' THEN 'Thursday'
+                            WHEN 'Summer' THEN 'Friday'
+                            WHEN 'Fall' THEN 'Saturday'
+                            WHEN 'Thursday' THEN 'Thursday'
+                            WHEN 'Friday' THEN 'Friday'
+                            WHEN 'Saturday' THEN 'Saturday'
+                            ELSE 'Saturday'
+                        END
+                        """
+                    )
             conn.execute(
                 """
                 CREATE TABLE IF NOT EXISTS completed_game_players (
@@ -473,8 +510,8 @@ def init_db() -> None:
                     hist_gid = "hist_211ad_01"
                     conn.execute(
                         """
-                        INSERT INTO completed_games (game_id, game_name, winner_name, season, completed_at, standings_json)
-                        VALUES (?, ?, ?, 'Fall', ?, NULL)
+                        INSERT INTO completed_games (game_id, game_name, winner_name, night, completed_at, standings_json)
+                        VALUES (?, ?, ?, 'Saturday', ?, NULL)
                         """,
                         (
                             hist_gid,
@@ -511,22 +548,22 @@ def _upsert_completed_game(
     completed_at: int,
 ) -> List[int]:
     winner_name = state.get("winner")
-    season = str(state.get("season") or "Fall")
+    night = str(state.get("night") or "Saturday")
     standings = state.get("finalStandings")
     standings_json = json.dumps(standings) if isinstance(standings, list) else None
 
     conn.execute(
         """
-        INSERT INTO completed_games (game_id, game_name, winner_name, season, completed_at, standings_json)
+        INSERT INTO completed_games (game_id, game_name, winner_name, night, completed_at, standings_json)
         VALUES (?, ?, ?, ?, ?, ?)
         ON CONFLICT(game_id) DO UPDATE SET
             game_name = excluded.game_name,
             winner_name = excluded.winner_name,
-            season = excluded.season,
+            night = excluded.night,
             completed_at = excluded.completed_at,
             standings_json = excluded.standings_json
         """,
-        (game_id, game_name, winner_name, season, int(completed_at), standings_json),
+        (game_id, game_name, winner_name, night, int(completed_at), standings_json),
     )
 
     conn.execute("DELETE FROM completed_game_players WHERE game_id = ?", (game_id,))
@@ -576,7 +613,7 @@ def _upsert_completed_game(
         uid = p.get("userId")
         if uid is not None:
             affected_uids.append(int(uid))
-        p_color = normalize_cart_color(p.get("color"), "Z3")
+        p_color = normalize_suv_color(p.get("color"), "Z3")
         c_val = int(p.get("cash", 0))
         rk = rank_by_index.get(seat_idx, i + 1)
         won_int = 1 if won_by_index.get(seat_idx, bool(winner_name and p.get("name") == winner_name)) else 0
@@ -693,7 +730,7 @@ def create_user(
     if pw_err:
         return None, pw_err
 
-    clean_color = normalize_cart_color(preferred_color, "Z1")
+    clean_color = normalize_suv_color(preferred_color, "Z1")
     salt_hex = secrets.token_hex(16)
     pw_hash = _hash_password(password, salt_hex)
     now = int(time.time())
@@ -830,7 +867,7 @@ def authenticate_or_create_google_user(
             while conn.execute("SELECT id FROM users WHERE username = ?", (candidate,)).fetchone():
                 candidate = f"pending_{secrets.token_hex(4)}"
 
-            clean_color = normalize_cart_color(preferred_color, "Z3")
+            clean_color = normalize_suv_color(preferred_color, "Z3")
             salt_hex = secrets.token_hex(16)
             random_pw_hash = _hash_password(secrets.token_urlsafe(32), salt_hex)
             now = int(time.time())
@@ -905,7 +942,7 @@ def set_permanent_username(
 
 
 def update_user_color(user_id: int, preferred_color: str) -> str:
-    clean_color = normalize_cart_color(preferred_color, "Z1")
+    clean_color = normalize_suv_color(preferred_color, "Z1")
     conn = get_connection()
     try:
         with conn:
@@ -952,7 +989,7 @@ def update_user_profile(
                     return None, "That email address is already tied to another account."
                 new_email = clean_email
 
-            new_color = normalize_cart_color(preferred_color, row["preferred_color"]) if preferred_color else row["preferred_color"]
+            new_color = normalize_suv_color(preferred_color, row["preferred_color"]) if preferred_color else row["preferred_color"]
 
             current_settings = _parse_user_settings(row["settings_json"])
             if isinstance(settings, dict):
@@ -1239,11 +1276,14 @@ def get_user_completed_games(user_id: int) -> List[Dict[str, Any]]:
             user_won = any(r["user_id"] == uid and int(r["won"] or 0) == 1 for r in p_rows)
             user_rank = next((int(r["rank"]) for r in p_rows if r["user_id"] == uid), None)
             user_score = next((int(r["final_wealth"]) for r in p_rows if r["user_id"] == uid), None)
+            cg_keys = cg.keys()
+            raw_cg_night = cg["night"] if "night" in cg_keys and cg["night"] else (cg["season"] if "season" in cg_keys else "Saturday")
+            cg_night = {"Spring": "Thursday", "Summer": "Friday", "Fall": "Saturday"}.get(str(raw_cg_night), str(raw_cg_night or "Saturday"))
             results.append({
                 "gameId": gid,
                 "gameName": cg["game_name"],
                 "winnerName": cg["winner_name"],
-                "season": cg["season"],
+                "night": cg_night,
                 "completedAt": int(cg["completed_at"] or 0),
                 "userWon": user_won,
                 "userRank": user_rank,
@@ -1336,16 +1376,16 @@ def create_game_lobby(
             "isBot": False,
             "botStrategy": None,
             "name": host_user["displayName"],
-            "color": normalize_cart_color(host_user.get("preferredColor"), "Z1"),
+            "color": normalize_suv_color(host_user.get("preferredColor"), "Z1"),
         }
     ]
     used_colors = {seats[0]["color"]}
-    all_colors = ALL_CART_COLORS
+    all_colors = ALL_SUV_COLORS
 
     for b in initial_bots:
         if len(seats) >= max_p:
             break
-        b_color = normalize_cart_color(b.get("color"), "") if b.get("color") else None
+        b_color = normalize_suv_color(b.get("color"), "") if b.get("color") else None
         if not b_color or b_color in used_colors:
             b_color = next((c for c in all_colors if c not in used_colors), "Z3")
         used_colors.add(b_color)
@@ -1363,8 +1403,8 @@ def create_game_lobby(
         with conn:
             conn.execute(
                 """
-                INSERT INTO games (id, name, host_user_id, status, invite_mode, max_players, season, phase, turn, state_json, created_at, updated_at)
-                VALUES (?, ?, ?, 'lobby', ?, ?, 'Spring', 'lobby', 1, '{}', ?, ?)
+                INSERT INTO games (id, name, host_user_id, status, invite_mode, max_players, night, phase, turn, state_json, created_at, updated_at)
+                VALUES (?, ?, ?, 'lobby', ?, ?, 'Thursday', 'lobby', 1, '{}', ?, ?)
                 """,
                 (game_id, clean_name, host_user["id"], clean_mode, max_p, now, now),
             )
@@ -1425,7 +1465,7 @@ def get_game_summary(game_id: str, viewer_user: Optional[Dict[str, Any]] = None)
                 "isBot": bool(r["is_bot"]),
                 "botStrategy": r["bot_strategy"],
                 "name": r["player_name"],
-                "color": normalize_cart_color(r["player_color"], "Z1"),
+                "color": normalize_suv_color(r["player_color"], "Z1"),
                 "finalWealth": r["final_wealth"],
             }
             for r in p_rows
@@ -1469,6 +1509,9 @@ def get_game_summary(game_id: str, viewer_user: Optional[Dict[str, Any]] = None)
             else []
         )
 
+        raw_night = row["night"] if "night" in row_keys and row["night"] else (row["season"] if "season" in row_keys else "Thursday")
+        norm_night = {"Spring": "Thursday", "Summer": "Friday", "Fall": "Saturday"}.get(str(raw_night), str(raw_night or "Thursday"))
+
         return {
             "id": row["id"],
             "name": row["name"],
@@ -1480,7 +1523,7 @@ def get_game_summary(game_id: str, viewer_user: Optional[Dict[str, Any]] = None)
             "viewerIsInvited": is_invited,
             "canViewerJoin": can_join,
             "maxPlayers": row["max_players"],
-            "season": row["season"],
+            "night": norm_night,
             "phase": row["phase"],
             "turn": row["turn"],
             "winnerName": row["winner_name"],
@@ -1557,9 +1600,9 @@ def join_game_lobby(game_id: str, user: Dict[str, Any], preferred_color: Optiona
                 if not inv_match:
                     return False, "This game is Invite-Only. Only invited players may claim an empty seat."
 
-            used_colors = {normalize_cart_color(r["player_color"], "Z1") for r in p_rows}
-            all_colors = ALL_CART_COLORS
-            chosen_color = normalize_cart_color(preferred_color or user.get("preferredColor"), "Z1")
+            used_colors = {normalize_suv_color(r["player_color"], "Z1") for r in p_rows}
+            all_colors = ALL_SUV_COLORS
+            chosen_color = normalize_suv_color(preferred_color or user.get("preferredColor"), "Z1")
             if chosen_color in used_colors:
                 chosen_color = next((c for c in all_colors if c not in used_colors), "Z1")
 
@@ -1645,8 +1688,8 @@ def add_bot_to_lobby(game_id: str, user_id: int, bot_info: Dict[str, Any]) -> Tu
         return False, f"Lobby already has the maximum of {summary['maxPlayers']} seats."
 
     used_colors = {s["color"] for s in seats}
-    all_colors = ALL_CART_COLORS
-    b_color = normalize_cart_color(bot_info.get("color"), "") if bot_info.get("color") else None
+    all_colors = ALL_SUV_COLORS
+    b_color = normalize_suv_color(bot_info.get("color"), "") if bot_info.get("color") else None
     if not b_color or b_color in used_colors:
         b_color = next((c for c in all_colors if c not in used_colors), "Z3")
 
@@ -1696,13 +1739,13 @@ def update_lobby_bot_seat(
         b_name = f"{b_name} ({seat_index + 1})"
 
     used_colors = {s["color"] for s in other_seats}
-    req_color = normalize_cart_color(bot_info.get("color"), "") if bot_info.get("color") else None
+    req_color = normalize_suv_color(bot_info.get("color"), "") if bot_info.get("color") else None
     if req_color and req_color not in used_colors:
         b_color = req_color
     elif target["color"] not in used_colors:
         b_color = target["color"]
     else:
-        b_color = next((c for c in ALL_CART_COLORS if c not in used_colors), "Z3")
+        b_color = next((c for c in ALL_SUV_COLORS if c not in used_colors), "Z3")
 
     b_strategy = str(bot_info.get("strategy") or target.get("botStrategy") or "balanced").strip().lower()
     now = int(time.time())
@@ -1774,12 +1817,12 @@ def save_game_state(game_id: str, state: Dict[str, Any], was_Already_Finished: b
             conn.execute(
                 """
                 UPDATE games
-                SET status = ?, season = ?, phase = ?, turn = ?, state_json = ?, winner_name = ?, updated_at = ?
+                SET status = ?, night = ?, phase = ?, turn = ?, state_json = ?, winner_name = ?, updated_at = ?
                 WHERE id = ?
                 """,
                 (
                     status,
-                    state.get("season", "Spring"),
+                    state.get("night", "Thursday"),
                     state.get("phase", "market"),
                     int(state.get("turn", 1)),
                     json.dumps(state),

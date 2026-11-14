@@ -27,9 +27,9 @@ import db as local_helpers
 logger = logging.getLogger("nightmerchant.firebase")
 
 SESSION_TTL_SECONDS = local_helpers.SESSION_TTL_SECONDS
-ALL_CART_COLORS = local_helpers.ALL_CART_COLORS
+ALL_SUV_COLORS = local_helpers.ALL_SUV_COLORS
 DEFAULT_USER_SETTINGS = local_helpers.DEFAULT_USER_SETTINGS
-normalize_cart_color = local_helpers.normalize_cart_color
+normalize_suv_color = local_helpers.normalize_suv_color
 validate_email = local_helpers.validate_email
 validate_password_strength = local_helpers.validate_password_strength
 mask_email = local_helpers.mask_email
@@ -110,7 +110,7 @@ def _format_firestore_user(doc_data: Dict[str, Any], csrf_token: Optional[str] =
         "email": email_val,
         "maskedEmail": mask_email(email_val),
         "authProvider": str(doc_data.get("authProvider") or "firebase"),
-        "preferredColor": normalize_cart_color(doc_data.get("preferredColor"), "Z1"),
+        "preferredColor": normalize_suv_color(doc_data.get("preferredColor"), "Z1"),
         "settings": merged_settings,
         "isAdmin": is_admin,
         "needsUsernameSetup": needs_uname,
@@ -151,7 +151,7 @@ def _allocate_and_store_user(
 ) -> Tuple[Optional[Dict[str, Any]], Optional[str]]:
     from google.cloud import firestore as gc_firestore
 
-    clean_color = normalize_cart_color(preferred_color, "Z1")
+    clean_color = normalize_suv_color(preferred_color, "Z1")
     now = int(time.time())
     is_admin = (not needs_username_setup) and (username_clean in _admin_usernames())
 
@@ -308,7 +308,7 @@ def authenticate_user(username: str, password: str) -> Tuple[Optional[Dict[str, 
     if not web_api_key:
         return None, "FIREBASE_WEB_API_KEY is required on the server for password verification."
 
-    target_email = str(user_doc["email"]) if user_doc else "nonexistent_timing_guard@invalid.local"
+    target_email = str(user_doc["email"]) if user_doc else "nonexistent_timing_henchman@invalid.local"
     verify_url = (
         "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key="
         + urllib.parse.quote(web_api_key)
@@ -660,9 +660,9 @@ def update_user_profile(
             new_email = clean_email
 
     new_color = (
-        normalize_cart_color(preferred_color, data.get("preferredColor", "Z1"))
+        normalize_suv_color(preferred_color, data.get("preferredColor", "Z1"))
         if preferred_color
-        else normalize_cart_color(data.get("preferredColor"), "Z1")
+        else normalize_suv_color(data.get("preferredColor"), "Z1")
     )
 
     curr_settings = dict(DEFAULT_USER_SETTINGS)
@@ -794,7 +794,7 @@ def _build_summary_from_game_doc(
             "isBot": bool(s.get("isBot")),
             "botStrategy": s.get("botStrategy"),
             "name": str(s.get("name", "")),
-            "color": normalize_cart_color(s.get("color"), "Z1"),
+            "color": normalize_suv_color(s.get("color"), "Z1"),
             "finalWealth": s.get("finalWealth"),
         }
         for s in (g_data.get("seats") or [])
@@ -849,7 +849,7 @@ def _build_summary_from_game_doc(
         "viewerIsInvited": is_invited,
         "canViewerJoin": can_join,
         "maxPlayers": int(g_data.get("maxPlayers", 4)),
-        "season": str(g_data.get("season", "Spring")),
+        "night": str(g_data.get("night", "Thursday")),
         "phase": str(g_data.get("phase", "lobby")),
         "turn": int(g_data.get("turn", 1)),
         "winnerName": g_data.get("winnerName"),
@@ -881,7 +881,7 @@ def create_game_lobby(
             "isBot": False,
             "botStrategy": None,
             "name": host_user["displayName"],
-            "color": normalize_cart_color(host_user.get("preferredColor"), "Z1"),
+            "color": normalize_suv_color(host_user.get("preferredColor"), "Z1"),
             "finalWealth": None,
         }
     ]
@@ -889,9 +889,9 @@ def create_game_lobby(
     for b in initial_bots:
         if len(seats) >= max_p:
             break
-        b_color = normalize_cart_color(b.get("color"), "") if b.get("color") else None
+        b_color = normalize_suv_color(b.get("color"), "") if b.get("color") else None
         if not b_color or b_color in used_colors:
-            b_color = next((c for c in ALL_CART_COLORS if c not in used_colors), "Z3")
+            b_color = next((c for c in ALL_SUV_COLORS if c not in used_colors), "Z3")
         used_colors.add(b_color)
         seats.append(
             {
@@ -928,7 +928,7 @@ def create_game_lobby(
         "inviteMode": clean_mode,
         "invites": invites_docs,
         "maxPlayers": max_p,
-        "season": "Spring",
+        "night": "Thursday",
         "phase": "lobby",
         "turn": 1,
         "winnerName": None,
@@ -1025,10 +1025,10 @@ def join_game_lobby(game_id: str, user: Dict[str, Any], preferred_color: Optiona
             if not allowed:
                 return False, "This game is Invite-Only. Only invited players may claim an empty seat."
 
-        used_colors = {normalize_cart_color(s.get("color"), "Z1") for s in seats}
-        chosen_color = normalize_cart_color(preferred_color or user.get("preferredColor"), "Z1")
+        used_colors = {normalize_suv_color(s.get("color"), "Z1") for s in seats}
+        chosen_color = normalize_suv_color(preferred_color or user.get("preferredColor"), "Z1")
         if chosen_color in used_colors:
-            chosen_color = next((c for c in ALL_CART_COLORS if c not in used_colors), "Z1")
+            chosen_color = next((c for c in ALL_SUV_COLORS if c not in used_colors), "Z1")
 
         seats.append(
             {
@@ -1116,9 +1116,9 @@ def add_bot_to_lobby(game_id: str, user_id: int, bot_info: Dict[str, Any]) -> Tu
         return False, f"Lobby already has the maximum of {max_p} seats."
 
     used_colors = {s["color"] for s in seats}
-    b_color = normalize_cart_color(bot_info.get("color"), "") if bot_info.get("color") else None
+    b_color = normalize_suv_color(bot_info.get("color"), "") if bot_info.get("color") else None
     if not b_color or b_color in used_colors:
-        b_color = next((c for c in ALL_CART_COLORS if c not in used_colors), "Z3")
+        b_color = next((c for c in ALL_SUV_COLORS if c not in used_colors), "Z3")
 
     used_names = {s["name"] for s in seats}
     b_name = bot_info.get("name", "Marcus Mercator")
@@ -1168,13 +1168,13 @@ def update_lobby_bot_seat(
         b_name = f"{b_name} ({seat_index + 1})"
 
     used_colors = {s["color"] for s in other_seats}
-    req_color = normalize_cart_color(bot_info.get("color"), "") if bot_info.get("color") else None
+    req_color = normalize_suv_color(bot_info.get("color"), "") if bot_info.get("color") else None
     if req_color and req_color not in used_colors:
         b_color = req_color
     elif target["color"] not in used_colors:
         b_color = target["color"]
     else:
-        b_color = next((c for c in ALL_CART_COLORS if c not in used_colors), "Z3")
+        b_color = next((c for c in ALL_SUV_COLORS if c not in used_colors), "Z3")
 
     target["botStrategy"] = str(bot_info.get("strategy") or target.get("botStrategy") or "balanced").strip().lower()
     target["name"] = b_name
@@ -1247,7 +1247,7 @@ def save_game_state(game_id: str, state: Dict[str, Any], was_Already_Finished: b
     g_ref.update(
         {
             "status": status,
-            "season": state.get("season", "Spring"),
+            "night": state.get("night", "Thursday"),
             "phase": state.get("phase", "market"),
             "turn": int(state.get("turn", 1)),
             "stateZlib": _serialize_game_state_zlib(state),
@@ -1285,7 +1285,7 @@ def save_game_state(game_id: str, state: Dict[str, Any], was_Already_Finished: b
                     "userId": int(p["userId"]) if p.get("userId") is not None else None,
                     "isBot": is_b,
                     "name": str(p.get("name", f"Player {s_idx + 1}")),
-                    "color": normalize_cart_color(p.get("color"), "Z3"),
+                    "color": normalize_suv_color(p.get("color"), "Z3"),
                     "finalScore": int(p.get("cash", 0)),
                     "rank": rank_by_idx.get(s_idx, i + 1),
                     "won": won_by_idx.get(s_idx, bool(winner and p.get("name") == winner)),
@@ -1297,7 +1297,7 @@ def save_game_state(game_id: str, state: Dict[str, Any], was_Already_Finished: b
                 "gameId": game_id,
                 "gameName": str(g_data.get("name") or f"Convivium {game_id}"),
                 "winnerName": winner,
-                "season": str(state.get("season") or "Fall"),
+                "night": str(state.get("night") or "Saturday"),
                 "completedAt": now,
                 "standingsJson": json.dumps(standings) if isinstance(standings, list) else None,
                 "humanCount": human_cnt,
@@ -1341,7 +1341,7 @@ def get_leaderboard() -> List[Dict[str, Any]]:
             {
                 "userId": uid_i,
                 "displayName": str(ud.get("displayName") or ud["username"]),
-                "preferredColor": normalize_cart_color(ud.get("preferredColor"), "Z1"),
+                "preferredColor": normalize_suv_color(ud.get("preferredColor"), "Z1"),
                 "gamesPlayed": st["gamesPlayed"],
                 "gamesWon": st["gamesWon"],
                 "bestWealth": st["bestWealth"],
@@ -1370,7 +1370,7 @@ def get_user_completed_games(user_id: int) -> List[Dict[str, Any]]:
                 "gameId": gid,
                 "gameName": cg.get("gameName", ""),
                 "winnerName": cg.get("winnerName"),
-                "season": cg.get("season", "Fall"),
+                "night": cg.get("night", "Saturday"),
                 "completedAt": int(cg.get("completedAt") or 0),
                 "userWon": bool(user_p and user_p.get("won")),
                 "userRank": int(user_p["rank"]) if user_p and "rank" in user_p else None,

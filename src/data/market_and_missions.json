@@ -7,7 +7,7 @@
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         8,
         7,
@@ -31,7 +31,7 @@
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         7,
         6,
@@ -55,7 +55,7 @@
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         4,
         3,
@@ -79,7 +79,7 @@
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         11,
         9,
@@ -103,7 +103,7 @@
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         12,
         10,
@@ -127,7 +127,7 @@
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         5,
         4,
@@ -146,12 +146,12 @@
     },
     {
       "id": "grn_7",
-      "name": "Gorilla Glue #4",
+      "name": "Guerilla Glue #4",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         12,
         9,
@@ -175,7 +175,7 @@
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         13,
         10,
@@ -199,7 +199,7 @@
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         5,
         4,
@@ -218,12 +218,12 @@
     },
     {
       "id": "grn_10",
-      "name": "Felix the Cat",
+      "name": "Feline the Cat",
       "category": "Grain",
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         10,
         8,
@@ -247,7 +247,7 @@
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         7,
         6,
@@ -271,7 +271,7 @@
       "subcategory": "Grain",
       "track": "Grain",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         7,
         6,
@@ -295,7 +295,7 @@
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         52,
         34,
@@ -319,7 +319,7 @@
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         47,
         33,
@@ -342,7 +342,7 @@
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         27,
         19,
@@ -366,7 +366,7 @@
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         40,
         27,
@@ -390,7 +390,7 @@
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         43,
         29,
@@ -414,7 +414,7 @@
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         26,
         18,
@@ -438,7 +438,7 @@
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         29,
         19,
@@ -462,7 +462,7 @@
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         35,
         23,
@@ -486,7 +486,7 @@
       "subcategory": "Cheap Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         38,
         26,
@@ -510,7 +510,7 @@
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         78,
         53,
@@ -534,7 +534,7 @@
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         82,
         55,
@@ -558,7 +558,7 @@
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         86,
         59,
@@ -582,7 +582,7 @@
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         91,
         62,
@@ -606,7 +606,7 @@
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         96,
         65,
@@ -630,7 +630,7 @@
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         101,
         70,
@@ -654,7 +654,7 @@
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         106,
         72,
@@ -678,7 +678,7 @@
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         110,
         74,
@@ -702,7 +702,7 @@
       "subcategory": "Fine Wine",
       "track": "Wine",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         116,
         79,
@@ -726,127 +726,7 @@
       "subcategory": "Meat Animals",
       "track": "Animals",
       "blocks": 1,
-      "guards": 0,
-      "sell": [
-        14,
-        11,
-        8,
-        6,
-        5
-      ],
-      "buy": [
-        7,
-        6,
-        4,
-        3,
-        3
-      ],
-      "subtitle": "Ephedrine"
-    },
-    {
-      "id": "ma_2",
-      "name": "Bennies",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
-      "blocks": 1,
-      "guards": 0,
-      "sell": [
-        15,
-        11,
-        9,
-        7,
-        5
-      ],
-      "buy": [
-        8,
-        6,
-        5,
-        4,
-        3
-      ],
-      "subtitle": "Benzedrine"
-    },
-    {
-      "id": "ma_3",
-      "name": "Black Beauties",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
-      "blocks": 1,
-      "guards": 0,
-      "sell": [
-        13,
-        10,
-        8,
-        6,
-        4
-      ],
-      "buy": [
-        7,
-        5,
-        4,
-        3,
-        3
-      ],
-      "subtitle": "Diet Pills"
-    },
-    {
-      "id": "ma_4",
-      "name": "Abu Hilalain",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
-      "blocks": 1,
-      "guards": 0,
-      "sell": [
-        29,
-        22,
-        17,
-        13,
-        9
-      ],
-      "buy": [
-        13,
-        10,
-        8,
-        6,
-        5
-      ],
-      "subtitle": "Captagon"
-    },
-    {
-      "id": "ma_5",
-      "name": "Blue Addys",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
-      "blocks": 1,
-      "guards": 0,
-      "sell": [
-        38,
-        29,
-        22,
-        17,
-        12
-      ],
-      "buy": [
-        16,
-        12,
-        9,
-        7,
-        6
-      ],
-      "subtitle": "Brand Adderall"
-    },
-    {
-      "id": "ma_6",
-      "name": "Dexies",
-      "category": "Animals",
-      "subcategory": "Meat Animals",
-      "track": "Animals",
-      "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         21,
         16,
@@ -855,13 +735,175 @@
         7
       ],
       "buy": [
-        11,
+        7,
+        5,
+        4,
+        3,
+        2
+      ],
+      "subtitle": "Ephedrine",
+      "combatText": "2(R)-3 CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 0,
+        "flat": -3,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "ma_2",
+      "name": "Bennies",
+      "category": "Animals",
+      "subcategory": "Meat Animals",
+      "track": "Animals",
+      "blocks": 1,
+      "henchmen": 0,
+      "sell": [
+        20,
+        15,
+        12,
+        9,
+        6
+      ],
+      "buy": [
+        10,
         8,
         6,
         5,
         4
       ],
-      "subtitle": "Dexedrine"
+      "subtitle": "Benzedrine",
+      "combatText": "(R)-1 CP",
+      "combat": {
+        "dice": 1,
+        "negDice": 0,
+        "flat": -1,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "ma_3",
+      "name": "Black Beauties",
+      "category": "Animals",
+      "subcategory": "Meat Animals",
+      "track": "Animals",
+      "blocks": 1,
+      "henchmen": 0,
+      "sell": [
+        22,
+        17,
+        13,
+        10,
+        7
+      ],
+      "buy": [
+        6,
+        5,
+        3,
+        2,
+        2
+      ],
+      "subtitle": "Diet Pills",
+      "combatText": "2(R)-3(R) CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 3,
+        "flat": 0,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "ma_4",
+      "name": "Abu Hilalain",
+      "category": "Animals",
+      "subcategory": "Meat Animals",
+      "track": "Animals",
+      "blocks": 1,
+      "henchmen": 0,
+      "sell": [
+        24,
+        19,
+        14,
+        11,
+        8
+      ],
+      "buy": [
+        18,
+        14,
+        11,
+        8,
+        6
+      ],
+      "subtitle": "Captagon",
+      "combatText": "2(R)-1 CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 0,
+        "flat": -1,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "ma_5",
+      "name": "Blue Addys",
+      "category": "Animals",
+      "subcategory": "Meat Animals",
+      "track": "Animals",
+      "blocks": 1,
+      "henchmen": 0,
+      "sell": [
+        24,
+        18,
+        14,
+        11,
+        8
+      ],
+      "buy": [
+        16,
+        12,
+        9,
+        7,
+        6
+      ],
+      "subtitle": "Brand Adderall",
+      "combatText": "2(R)-(R) CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 1,
+        "flat": 0,
+        "mandatory": true
+      }
+    },
+    {
+      "id": "ma_6",
+      "name": "Dexies",
+      "category": "Animals",
+      "subcategory": "Meat Animals",
+      "track": "Animals",
+      "blocks": 1,
+      "henchmen": 0,
+      "sell": [
+        22,
+        17,
+        13,
+        10,
+        7
+      ],
+      "buy": [
+        12,
+        9,
+        7,
+        5,
+        4
+      ],
+      "subtitle": "Dexedrine",
+      "combatText": "2(R)-2 CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 0,
+        "flat": -2,
+        "mandatory": true
+      }
     },
     {
       "id": "ma_7",
@@ -870,22 +912,29 @@
       "subcategory": "Meat Animals",
       "track": "Animals",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        18,
-        14,
-        10,
-        8,
+        20,
+        15,
+        12,
+        9,
         6
       ],
       "buy": [
-        9,
-        7,
+        8,
+        6,
         5,
         4,
-        4
+        3
       ],
-      "subtitle": "Ritalin"
+      "subtitle": "Ritalin",
+      "combatText": "(R)-(R) CP",
+      "combat": {
+        "dice": 1,
+        "negDice": 1,
+        "flat": 0,
+        "mandatory": true
+      }
     },
     {
       "id": "ma_8",
@@ -894,13 +943,13 @@
       "subcategory": "Meat Animals",
       "track": "Animals",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        31,
-        24,
-        18,
-        14,
-        10
+        22,
+        17,
+        13,
+        10,
+        7
       ],
       "buy": [
         14,
@@ -909,7 +958,14 @@
         6,
         5
       ],
-      "subtitle": "Adderall"
+      "subtitle": "Adderall",
+      "combatText": "3(R)-2(R) CP",
+      "combat": {
+        "dice": 3,
+        "negDice": 2,
+        "flat": 0,
+        "mandatory": true
+      }
     },
     {
       "id": "ma_9",
@@ -918,22 +974,24 @@
       "subcategory": "Meat Animals",
       "track": "Animals",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        20,
+        19,
         15,
         11,
         8,
         6
       ],
       "buy": [
-        10,
-        8,
-        6,
+        9,
+        7,
         5,
-        4
+        4,
+        3
       ],
-      "subtitle": "Modafinil"
+      "subtitle": "Modafinil",
+      "combatText": null,
+      "combat": null
     },
     {
       "id": "ea_1",
@@ -942,23 +1000,28 @@
       "subcategory": "Exotic Animals",
       "track": "Animals",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        34,
-        26,
-        20,
-        15,
-        11
+        48,
+        37,
+        28,
+        21,
+        15
       ],
       "buy": [
-        17,
-        13,
-        10,
-        8,
-        6
+        21,
+        16,
+        12,
+        9,
+        7
       ],
-      "combatText": null,
-      "combat": null,
+      "combatText": "(R)-(R) CP",
+      "combat": {
+        "dice": 1,
+        "negDice": 1,
+        "flat": 0,
+        "mandatory": true
+      },
       "subtitle": "Bathtub Speed"
     },
     {
@@ -968,23 +1031,28 @@
       "subcategory": "Exotic Animals",
       "track": "Animals",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        44,
-        34,
-        26,
-        19,
-        14
+        56,
+        43,
+        33,
+        25,
+        18
       ],
       "buy": [
-        21,
-        16,
-        12,
-        9,
-        7
+        18,
+        14,
+        10,
+        8,
+        6
       ],
-      "combatText": null,
-      "combat": null,
+      "combatText": "2(R)-3 CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 0,
+        "flat": -3,
+        "mandatory": true
+      },
       "subtitle": "Bath Salts"
     },
     {
@@ -994,26 +1062,26 @@
       "subcategory": "Exotic Animals",
       "track": "Animals",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        45,
-        35,
-        26,
-        20,
-        14
+        52,
+        40,
+        31,
+        23,
+        17
       ],
       "buy": [
-        19,
+        20,
         15,
-        11,
+        12,
         9,
         7
       ],
-      "combatText": "1(R) -1 CP",
+      "combatText": "2(R)-2(R) CP",
       "combat": {
-        "dice": 1,
-        "negDice": 0,
-        "flat": -1,
+        "dice": 2,
+        "negDice": 2,
+        "flat": 0,
         "mandatory": true
       },
       "subtitle": "Meth"
@@ -1025,26 +1093,26 @@
       "subcategory": "Exotic Animals",
       "track": "Animals",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        60,
-        46,
-        35,
-        26,
-        19
+        49,
+        38,
+        29,
+        22,
+        16
       ],
       "buy": [
-        25,
-        19,
+        26,
+        20,
         15,
         12,
         9
       ],
-      "combatText": "1 -1(R) CP",
+      "combatText": "2(R)-2 CP",
       "combat": {
-        "dice": 0,
-        "negDice": 1,
-        "flat": 1,
+        "dice": 2,
+        "negDice": 0,
+        "flat": -2,
         "mandatory": true
       },
       "subtitle": "Cocaine"
@@ -1056,26 +1124,26 @@
       "subcategory": "Exotic Animals",
       "track": "Animals",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        48,
-        37,
-        28,
-        21,
-        15
+        58,
+        45,
+        34,
+        26,
+        19
       ],
       "buy": [
-        28,
-        22,
-        17,
-        13,
-        10
+        16,
+        12,
+        9,
+        7,
+        5
       ],
-      "combatText": "3 -2(R) CP",
+      "combatText": "2(R)-3(R) CP",
       "combat": {
-        "dice": 0,
-        "negDice": 2,
-        "flat": 3,
+        "dice": 2,
+        "negDice": 3,
+        "flat": 0,
         "mandatory": true
       }
     },
@@ -1086,26 +1154,26 @@
       "subcategory": "Exotic Animals",
       "track": "Animals",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        55,
-        43,
-        33,
-        25,
-        18
+        50,
+        39,
+        29,
+        22,
+        16
       ],
       "buy": [
-        34,
-        27,
-        21,
-        16,
-        12
+        24,
+        19,
+        14,
+        11,
+        8
       ],
-      "combatText": "2 -1(R) CP",
+      "combatText": "(R)-1 CP",
       "combat": {
-        "dice": 0,
-        "negDice": 1,
-        "flat": 2,
+        "dice": 1,
+        "negDice": 0,
+        "flat": -1,
         "mandatory": true
       },
       "subtitle": "Crack"
@@ -1117,25 +1185,25 @@
       "subcategory": "Exotic Animals",
       "track": "Animals",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        56,
-        44,
-        34,
-        26,
-        19
+        51,
+        39,
+        30,
+        23,
+        17
       ],
       "buy": [
-        38,
         30,
         23,
         18,
-        13
+        14,
+        11
       ],
-      "combatText": "2(R) -1(R) CP",
+      "combatText": "3(R)-2(R) CP",
       "combat": {
-        "dice": 2,
-        "negDice": 1,
+        "dice": 3,
+        "negDice": 2,
         "flat": 0,
         "mandatory": true
       },
@@ -1148,26 +1216,26 @@
       "subcategory": "Exotic Animals",
       "track": "Animals",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        74,
-        57,
-        43,
-        32,
-        24
-      ],
-      "buy": [
+        51,
+        39,
         30,
         23,
-        18,
-        14,
-        11
+        17
       ],
-      "combatText": "2(R) -2 CP",
+      "buy": [
+        34,
+        26,
+        20,
+        15,
+        12
+      ],
+      "combatText": "2(R)-1 CP",
       "combat": {
         "dice": 2,
         "negDice": 0,
-        "flat": -2,
+        "flat": -1,
         "mandatory": true
       }
     },
@@ -1178,26 +1246,26 @@
       "subcategory": "Exotic Animals",
       "track": "Animals",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        84,
-        65,
-        49,
-        37,
-        27
+        52,
+        40,
+        31,
+        23,
+        17
       ],
       "buy": [
-        32,
-        25,
-        19,
-        15,
-        12
+        38,
+        30,
+        23,
+        18,
+        14
       ],
-      "combatText": "3(R) -4 CP",
+      "combatText": "4(R)-2(R) CP",
       "combat": {
-        "dice": 3,
-        "negDice": 0,
-        "flat": -4,
+        "dice": 4,
+        "negDice": 2,
+        "flat": 0,
         "mandatory": true
       },
       "subtitle": "Cocaine"
@@ -1209,23 +1277,27 @@
       "subcategory": "Weapons",
       "track": "Weapons",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
+        22,
         17,
         13,
         10,
-        7,
-        5
+        7
       ],
       "buy": [
+        10,
         8,
         6,
         5,
-        4,
-        3
+        4
       ],
-      "combatText": null,
-      "combat": null
+      "combatText": "1 CP",
+      "combat": {
+        "dice": 0,
+        "negDice": 0,
+        "flat": 1
+      }
     },
     {
       "id": "wpn_2",
@@ -1234,27 +1306,26 @@
       "subcategory": "Weapons",
       "track": "Weapons",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        12,
-        9,
-        7,
-        5,
-        4
+        24,
+        18,
+        14,
+        11,
+        8
       ],
       "buy": [
+        17,
+        13,
         10,
         8,
-        6,
-        4,
-        3
+        6
       ],
-      "combatText": "Ignore (R) Wounds",
+      "combatText": "2 CP",
       "combat": {
         "dice": 0,
         "negDice": 0,
-        "flat": 0,
-        "ignoreWoundsDice": 1
+        "flat": 2
       }
     },
     {
@@ -1264,51 +1335,51 @@
       "subcategory": "Weapons",
       "track": "Weapons",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        12,
-        9,
-        6,
-        5,
-        3
+        24,
+        18,
+        14,
+        11,
+        8
       ],
       "buy": [
-        9,
-        7,
+        8,
+        6,
         5,
         4,
         3
       ],
-      "combatText": "2 -1(R) CP",
+      "combatText": "(R)-1 CP",
       "combat": {
-        "dice": 0,
-        "negDice": 1,
-        "flat": 2
+        "dice": 1,
+        "negDice": 0,
+        "flat": -1
       }
     },
     {
       "id": "wpn_4",
-      "name": "Glock 19",
+      "name": "Glawk 19",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
-      "blocks": 2,
-      "guards": 0,
+      "blocks": 1,
+      "henchmen": 0,
       "sell": [
-        16,
-        12,
-        9,
-        6,
-        5
+        22,
+        17,
+        13,
+        10,
+        7
       ],
       "buy": [
         13,
         10,
-        7,
-        5,
-        4
+        8,
+        6,
+        5
       ],
-      "combatText": "1(R) CP",
+      "combatText": "(R) CP",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -1322,26 +1393,26 @@
       "subcategory": "Weapons",
       "track": "Weapons",
       "blocks": 3,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
+        32,
         25,
         19,
         14,
-        11,
-        7
+        11
       ],
       "buy": [
-        21,
-        16,
-        12,
-        9,
-        6
+        29,
+        22,
+        17,
+        13,
+        10
       ],
-      "combatText": "2(R) CP",
+      "combatText": "2(R)+1 CP",
       "combat": {
         "dice": 2,
         "negDice": 0,
-        "flat": 0
+        "flat": 1
       }
     },
     {
@@ -1351,22 +1422,22 @@
       "subcategory": "Weapons",
       "track": "Weapons",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        20,
-        16,
+        25,
+        19,
+        15,
         11,
-        8,
-        6
+        8
       ],
       "buy": [
         18,
         14,
-        10,
-        7,
-        5
+        11,
+        8,
+        6
       ],
-      "combatText": "1(R) +1 CP",
+      "combatText": "(R)+1 CP",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -1380,57 +1451,56 @@
       "subcategory": "Weapons",
       "track": "Weapons",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        17,
-        13,
-        10,
-        7,
-        5
+        26,
+        20,
+        15,
+        11,
+        8
+      ],
+      "buy": [
+        8,
+        6,
+        5,
+        4,
+        3
+      ],
+      "combatText": "Use once for (R) CP",
+      "combat": {
+        "dice": 1,
+        "negDice": 0,
+        "flat": 0,
+        "consumable": true
+      }
+    },
+    {
+      "id": "wpn_8",
+      "name": "Ballistic Helmet",
+      "category": "Weapons",
+      "subcategory": "Weapons",
+      "track": "Weapons",
+      "blocks": 2,
+      "henchmen": 0,
+      "sell": [
+        24,
+        18,
+        14,
+        11,
+        8
       ],
       "buy": [
         15,
         12,
         9,
-        6,
-        4
+        7,
+        5
       ],
-      "combatText": "Ignore 1 Wound",
+      "combatText": "2(R)-1 CP",
       "combat": {
-        "dice": 0,
+        "dice": 2,
         "negDice": 0,
-        "flat": 0,
-        "ignoreWoundsFlat": 1
-      }
-    },
-    {
-      "id": "wpn_8",
-      "name": "Kevlar Helmet",
-      "category": "Weapons",
-      "subcategory": "Weapons",
-      "track": "Weapons",
-      "blocks": 1,
-      "guards": 0,
-      "sell": [
-        24,
-        18,
-        13,
-        10,
-        7
-      ],
-      "buy": [
-        21,
-        16,
-        12,
-        9,
-        6
-      ],
-      "combatText": "Ignore 2 Wounds",
-      "combat": {
-        "dice": 0,
-        "negDice": 0,
-        "flat": 0,
-        "ignoreWoundsFlat": 2
+        "flat": -1
       }
     },
     {
@@ -1440,24 +1510,24 @@
       "subcategory": "Weapons",
       "track": "Weapons",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
+        27,
+        21,
+        16,
+        12,
+        9
+      ],
+      "buy": [
         22,
         17,
         13,
-        9,
-        6
+        10,
+        8
       ],
-      "buy": [
-        19,
-        15,
-        11,
-        8,
-        5
-      ],
-      "combatText": "2(R) -1 CP",
+      "combatText": "3(R)-1 CP",
       "combat": {
-        "dice": 2,
+        "dice": 3,
         "negDice": 0,
         "flat": -1
       }
@@ -1468,23 +1538,23 @@
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
-      "blocks": 2,
-      "guards": 0,
+      "blocks": 1,
+      "henchmen": 0,
       "sell": [
-        14,
+        26,
+        20,
+        15,
         11,
-        8,
-        6,
-        4
+        8
       ],
       "buy": [
-        11,
-        8,
-        6,
+        7,
+        5,
         4,
-        3
+        3,
+        2
       ],
-      "combatText": "1 CP (single use)",
+      "combatText": "Use once for 1 CP",
       "combat": {
         "dice": 0,
         "negDice": 0,
@@ -1499,48 +1569,177 @@
       "subcategory": "Weapons",
       "track": "Weapons",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        44,
-        34,
-        26,
+        42,
+        32,
+        25,
         19,
         14
       ],
       "buy": [
-        16,
         12,
         9,
         7,
-        5
+        5,
+        4
       ],
-      "combatText": null,
-      "combat": null
+      "combatText": "Use once for 2(R) CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 0,
+        "flat": 0,
+        "consumable": true
+      }
     },
     {
       "id": "wpn_12",
-      "name": "Kevlar Vest",
+      "name": "Ballistic Vest",
       "category": "Weapons",
       "subcategory": "Weapons",
       "track": "Weapons",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
-        24,
-        19,
-        15,
-        12,
-        10
+        22,
+        17,
+        13,
+        10,
+        7
       ],
       "buy": [
-        22,
-        18,
-        14,
         12,
+        9,
+        7,
+        5,
+        4
+      ],
+      "combatText": "2(R)-(R) CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 1,
+        "flat": 0
+      }
+    },
+    {
+      "id": "wpn_13",
+      "name": "MAC-10",
+      "category": "Weapons",
+      "subcategory": "Weapons",
+      "track": "Weapons",
+      "blocks": 2,
+      "henchmen": 0,
+      "buy": [
+        20,
+        15,
+        12,
+        9,
+        7
+      ],
+      "sell": [
+        26,
+        20,
+        15,
+        11,
+        8
+      ],
+      "combatText": "3(R)-(R) CP",
+      "combat": {
+        "dice": 3,
+        "negDice": 1,
+        "flat": 0
+      },
+      "subtitle": "Submachine Gun"
+    },
+    {
+      "id": "wpn_14",
+      "name": "Mavberg 500",
+      "category": "Weapons",
+      "subcategory": "Weapons",
+      "track": "Weapons",
+      "blocks": 2,
+      "henchmen": 0,
+      "buy": [
+        21,
+        16,
+        12,
+        9,
+        7
+      ],
+      "sell": [
+        26,
+        20,
+        15,
+        11,
+        8
+      ],
+      "combatText": "2(R) CP",
+      "combat": {
+        "dice": 2,
+        "negDice": 0,
+        "flat": 0
+      },
+      "subtitle": "Pump Shotgun"
+    },
+    {
+      "id": "wpn_15",
+      "name": "Draco AK",
+      "category": "Weapons",
+      "subcategory": "Weapons",
+      "track": "Weapons",
+      "blocks": 3,
+      "henchmen": 0,
+      "buy": [
+        25,
+        19,
+        15,
+        11,
+        9
+      ],
+      "sell": [
+        29,
+        22,
+        17,
+        13,
         10
       ],
-      "combatText": null,
-      "combat": null
+      "combatText": "3 CP",
+      "combat": {
+        "dice": 0,
+        "negDice": 0,
+        "flat": 3
+      },
+      "subtitle": "7.62 Shorty"
+    },
+    {
+      "id": "wpn_16",
+      "name": "Bearcat .50 Cal",
+      "category": "Weapons",
+      "subcategory": "Weapons",
+      "track": "Weapons",
+      "blocks": 3,
+      "henchmen": 0,
+      "buy": [
+        27,
+        21,
+        16,
+        12,
+        9
+      ],
+      "sell": [
+        31,
+        24,
+        18,
+        14,
+        10
+      ],
+      "combatText": "(R)+2 CP",
+      "combat": {
+        "dice": 1,
+        "negDice": 0,
+        "flat": 2
+      },
+      "subtitle": "Anti-Materiel Rifle"
     },
     {
       "id": "mrb_1",
@@ -1549,7 +1748,7 @@
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         32,
         24,
@@ -1573,7 +1772,7 @@
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         42,
         32,
@@ -1597,7 +1796,7 @@
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         35,
         26,
@@ -1621,7 +1820,7 @@
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         45,
         35,
@@ -1645,7 +1844,7 @@
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         37,
         28,
@@ -1663,12 +1862,12 @@
     },
     {
       "id": "mrb_6",
-      "name": "Blue Punishers",
+      "name": "Blue Punishas",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         48,
         37,
@@ -1687,12 +1886,12 @@
     },
     {
       "id": "mrb_7",
-      "name": "Pink Teslas",
+      "name": "Pink Tezlas",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         39,
         30,
@@ -1711,12 +1910,12 @@
     },
     {
       "id": "mrb_8",
-      "name": "Red Mitsubishis",
+      "name": "Red Mitsubushis",
       "category": "Marble",
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         51,
         39,
@@ -1740,7 +1939,7 @@
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         42,
         32,
@@ -1764,7 +1963,7 @@
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         54,
         41,
@@ -1788,7 +1987,7 @@
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 1,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         45,
         34,
@@ -1812,7 +2011,7 @@
       "subcategory": "Marble",
       "track": "Marble",
       "blocks": 2,
-      "guards": 0,
+      "henchmen": 0,
       "sell": [
         58,
         44,
@@ -1832,11 +2031,11 @@
     {
       "id": "grd_1",
       "name": "Big Mike",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         12,
@@ -1852,16 +2051,16 @@
         "flat": 0
       },
       "bonusBlocks": 2,
-      "bonusGuards": 0
+      "bonusHenchmen": 0
     },
     {
       "id": "grd_2",
       "name": "Big Tina",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         14,
@@ -1877,16 +2076,16 @@
         "flat": 0
       },
       "bonusBlocks": 0,
-      "bonusGuards": 1
+      "bonusHenchmen": 1
     },
     {
       "id": "grd_3",
       "name": "Rosa \"La Flaca\"",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         10,
@@ -1906,11 +2105,11 @@
     {
       "id": "grd_4",
       "name": "Tank",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         13,
@@ -1929,11 +2128,11 @@
     {
       "id": "grd_5",
       "name": "Doc",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         12,
@@ -1953,11 +2152,11 @@
     {
       "id": "grd_6",
       "name": "Skinny Pete",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         6,
@@ -1976,11 +2175,11 @@
     {
       "id": "grd_7",
       "name": "Twins",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         11,
@@ -1999,11 +2198,11 @@
     {
       "id": "grd_8",
       "name": "Dre",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         8,
@@ -2022,11 +2221,11 @@
     {
       "id": "grd_9",
       "name": "Ex-Marine Gus",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         16,
@@ -2045,11 +2244,11 @@
     {
       "id": "grd_10",
       "name": "Bouncer Sal",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         15,
@@ -2068,11 +2267,11 @@
     {
       "id": "grd_11",
       "name": "Nurse Keisha",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         11,
@@ -2092,11 +2291,11 @@
     {
       "id": "grd_12",
       "name": "Felicia",
-      "category": "Guards",
-      "subcategory": "Guard",
-      "track": "Guards",
+      "category": "Henchmen",
+      "subcategory": "Henchman",
+      "track": "Henchmen",
       "blocks": 0,
-      "guards": 1,
+      "henchmen": 1,
       "sell": null,
       "buy": [
         24,
@@ -2114,7 +2313,7 @@
       }
     }
   ],
-  "missiones": [
+  "missions": [
     {
       "id": "mis_1",
       "kind": "sell",
@@ -2128,10 +2327,10 @@
       ],
       "patronFaction": "DSA",
       "name": "Community Pricing",
-      "category": "Grain",
+      "category": "Weed",
       "modifier": "-",
-      "cell": "A1",
-      "text": "Sell Grain at - Scarcity in A1 (Land's End)."
+      "cell": "C3",
+      "text": "Sell Weed at - in C3 (Civic Center)!"
     },
     {
       "id": "mis_2",
@@ -2147,10 +2346,10 @@
       ],
       "patronFaction": "MAGA",
       "name": "VIP List",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "E1",
-      "text": "Sell Animals at + Scarcity in E1 (Telegraph)."
+      "cell": "B2",
+      "text": "Sell Uppers at + in B2 (Pac Heights)!"
     },
     {
       "id": "mis_3",
@@ -2165,15 +2364,15 @@
       ],
       "patronFaction": "TECH",
       "name": "Bottle Service",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "C6",
-      "text": "Sell Animals at + Scarcity in C6 (Balboa)."
+      "cell": "D4",
+      "text": "Sell Uppers at + in D4 (Mission)!"
     },
     {
       "id": "mis_4",
       "kind": "sell",
-      "rewardText": "Cheapest Party Drugs on Mkt",
+      "rewardText": "Cheapest Party on Mkt",
       "reward": {
         "type": "market_pick",
         "track": "Marble",
@@ -2184,10 +2383,10 @@
       ],
       "patronFaction": "MS13",
       "name": "Markup",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "D5",
-      "text": "Sell Animals at + Scarcity in D5 (Noe)."
+      "cell": "D6",
+      "text": "Sell Uppers at + in D6 (Excelsior)!"
     },
     {
       "id": "mis_5",
@@ -2206,8 +2405,8 @@
       "item": "Ammo Cans",
       "category": "Weapons",
       "blocks": 2,
-      "pickupCell": "A3",
-      "deliverCell": "A4",
+      "pickupCell": "A5",
+      "deliverCell": "A1",
       "fencedSell": [
         42,
         32,
@@ -2215,7 +2414,13 @@
         18,
         12
       ],
-      "text": "Pick up Ammo Cans (Weapons • 2■) in A3 (GG Park), Deliver to A4 (Sunset). [Fenced Sell: 42/32/24/18/12]"
+      "text": "Pick up Ammo Cans (Weapons • 2■) in A5 (Merced), Deliver to A1 (Land's End). [Fenced Sell: 42/32/24/18/12]",
+      "combat": {
+        "dice": 1,
+        "negDice": 0,
+        "flat": 0
+      },
+      "combatText": "1(R) CP"
     },
     {
       "id": "mis_6",
@@ -2223,7 +2428,7 @@
       "rewardText": "Cheapest Henchman on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Guards",
+        "track": "Henchmen",
         "mode": "cheapest"
       },
       "favor": [
@@ -2231,16 +2436,16 @@
       ],
       "patronFaction": "DSA",
       "name": "Community Pricing",
-      "category": "Marble",
+      "category": "Party",
       "modifier": "-",
-      "cell": "C5",
-      "text": "Sell Marble at - Scarcity in C5 (Miraloma)."
+      "cell": "E5",
+      "text": "Sell Party at - in E5 (Bernal)!"
     },
     {
       "id": "mis_7",
       "name": "Paparazzi",
       "kind": "expose",
-      "exposeType": "patricii",
+      "exposeType": "celebrities",
       "exposeCount": 4,
       "description": "Expose 4 Celebrities (individual Celebrities icons visible on exposed tiles)",
       "rewardText": "16(d)",
@@ -2267,10 +2472,10 @@
       ],
       "patronFaction": "MAGA",
       "name": "VIP List",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "A2",
-      "text": "Sell Animals at + Scarcity in A2 (Richmond)."
+      "cell": "F6",
+      "text": "Sell Uppers at + in F6 (Hunter's)!"
     },
     {
       "id": "mis_9",
@@ -2286,10 +2491,10 @@
       ],
       "patronFaction": "TECH",
       "name": "Bottle Service",
-      "category": "Marble",
+      "category": "Party",
       "modifier": "+",
-      "cell": "D2",
-      "text": "Sell Marble at + Scarcity in D2 (Nob Hill)."
+      "cell": "E1",
+      "text": "Sell Party at + in E1 (Telegraph)!"
     },
     {
       "id": "mis_10",
@@ -2305,10 +2510,10 @@
       ],
       "patronFaction": "MS13",
       "name": "Markup",
-      "category": "Wine",
+      "category": "Opiates",
       "modifier": "+",
-      "cell": "A6",
-      "text": "Sell Wine at + Scarcity in A6 (Daly City)."
+      "cell": "A5",
+      "text": "Sell Opiates at + in A5 (Merced)!"
     },
     {
       "id": "mis_11",
@@ -2326,8 +2531,8 @@
       "name": "Bottle Service",
       "category": "Weapons",
       "modifier": "+",
-      "cell": "F4",
-      "text": "Sell Weapons at + Scarcity in F4 (Dogpatch)."
+      "cell": "C6",
+      "text": "Sell Weapons at + in C6 (Sunnyside)!"
     },
     {
       "id": "mis_12",
@@ -2342,10 +2547,10 @@
       ],
       "patronFaction": "DSA",
       "name": "Mutual Aid Drop",
-      "category": "Grain",
+      "category": "Weed",
       "modifier": "-",
-      "cell": "A4",
-      "text": "Sell Grain at - Scarcity in A4 (Sunset)."
+      "cell": "E5",
+      "text": "Sell Weed at - in E5 (Bernal)!"
     },
     {
       "id": "mis_13",
@@ -2361,10 +2566,10 @@
       ],
       "patronFaction": "MAGA",
       "name": "Markup",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "E3",
-      "text": "Sell Animals at + Scarcity in E3 (SoMa)."
+      "cell": "D1",
+      "text": "Sell Uppers at + in D1 (Wharf)!"
     },
     {
       "id": "mis_14",
@@ -2379,15 +2584,15 @@
       ],
       "patronFaction": "TECH",
       "name": "Bottle Service",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "E2",
-      "text": "Sell Animals at + Scarcity in E2 (Chinatown)."
+      "cell": "D3",
+      "text": "Sell Uppers at + in D3 (Tenderloin)!"
     },
     {
       "id": "mis_15",
       "kind": "kill",
-      "rewardText": "Cheapest Party Drugs on Mkt",
+      "rewardText": "Cheapest Party on Mkt",
       "reward": {
         "type": "market_pick",
         "track": "Marble",
@@ -2398,8 +2603,8 @@
       ],
       "patronFaction": "MS13",
       "name": "Make an Example",
-      "targetDeck": "Legiones",
-      "description": "Kill a Cop in Combat",
+      "targetDeck": "Cops",
+      "description": "Kill a Cop",
       "text": "Kill a Cop in Combat"
     },
     {
@@ -2416,8 +2621,8 @@
       ],
       "patronFaction": "ISIS",
       "name": "Hit Job",
-      "targetDeck": "Patricii",
-      "description": "Kill a Celebrity in Combat",
+      "targetDeck": "Celebrities",
+      "description": "Kill a Celebrity",
       "text": "Kill a Celebrity in Combat"
     },
     {
@@ -2426,7 +2631,7 @@
       "rewardText": "Cheapest Henchman on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Guards",
+        "track": "Henchmen",
         "mode": "cheapest"
       },
       "favor": [
@@ -2434,8 +2639,8 @@
       ],
       "patronFaction": "DSA",
       "name": "Hit Job",
-      "targetDeck": "Legiones",
-      "description": "Kill a Cop in Combat",
+      "targetDeck": "Cops",
+      "description": "Kill a Cop",
       "text": "Kill a Cop in Combat"
     },
     {
@@ -2452,10 +2657,10 @@
       ],
       "patronFaction": "MAGA",
       "name": "Markup",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "B3",
-      "text": "Sell Animals at + Scarcity in B3 (Fillmore)."
+      "cell": "C2",
+      "text": "Sell Uppers at + in C2 (Russian)!"
     },
     {
       "id": "mis_19",
@@ -2470,10 +2675,10 @@
       ],
       "patronFaction": "TECH",
       "name": "VIP List",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "A4",
-      "text": "Sell Animals at + Scarcity in A4 (Sunset)."
+      "cell": "B3",
+      "text": "Sell Uppers at + in B3 (Japantown)!"
     },
     {
       "id": "mis_20",
@@ -2489,8 +2694,8 @@
       ],
       "patronFaction": "MS13",
       "name": "Make an Example",
-      "targetDeck": "Legiones",
-      "description": "Kill a Cop in Combat",
+      "targetDeck": "Cops",
+      "description": "Kill a Cop",
       "text": "Kill a Cop in Combat"
     },
     {
@@ -2507,8 +2712,8 @@
       ],
       "patronFaction": "ISIS",
       "name": "Take Out the Trash",
-      "targetDeck": "Legiones",
-      "description": "Kill a Cop in Combat",
+      "targetDeck": "Cops",
+      "description": "Kill a Cop",
       "text": "Kill a Cop in Combat"
     },
     {
@@ -2524,10 +2729,10 @@
       ],
       "patronFaction": "DSA",
       "name": "Mutual Aid Drop",
-      "category": "Marble",
+      "category": "Party",
       "modifier": "-",
-      "cell": "A4",
-      "text": "Sell Marble at - Scarcity in A4 (Sunset)."
+      "cell": "B4",
+      "text": "Sell Party at - in B4 (Haight)!"
     },
     {
       "id": "mis_23",
@@ -2543,8 +2748,8 @@
       ],
       "patronFaction": "MAGA",
       "name": "Make an Example",
-      "targetDeck": "Patricii",
-      "description": "Kill a Celebrity in Combat",
+      "targetDeck": "Celebrities",
+      "description": "Kill a Celebrity",
       "text": "Kill a Celebrity in Combat"
     },
     {
@@ -2561,10 +2766,10 @@
       ],
       "patronFaction": "TECH",
       "name": "Bottle Service",
-      "category": "Grain",
+      "category": "Weed",
       "modifier": "+",
-      "cell": "D4",
-      "text": "Sell Grain at + Scarcity in D4 (Castro)."
+      "cell": "F2",
+      "text": "Sell Weed at + in F2 (Embarcadero)!"
     },
     {
       "id": "mis_25",
@@ -2580,16 +2785,16 @@
       ],
       "patronFaction": "MS13",
       "name": "Bottle Service",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "B6",
-      "text": "Sell Animals at + Scarcity in B6 (Crocker)."
+      "cell": "C6",
+      "text": "Sell Uppers at + in C6 (Sunnyside)!"
     },
     {
       "id": "mis_26",
       "name": "Copwatch",
       "kind": "expose",
-      "exposeType": "legiones",
+      "exposeType": "cops",
       "exposeCount": 12,
       "description": "Expose 12 Cops (individual Cops icons visible on exposed tiles)",
       "rewardText": "40(d)",
@@ -2606,10 +2811,10 @@
     {
       "id": "mis_27",
       "kind": "delivery",
-      "rewardText": "6(d)",
+      "rewardText": "29(d)",
       "reward": {
         "type": "cash",
-        "amount": 6
+        "amount": 29
       },
       "favor": [
         "ISIS"
@@ -2619,8 +2824,8 @@
       "item": "Crate of ARs",
       "category": "Weapons",
       "blocks": 2,
-      "pickupCell": "A1",
-      "deliverCell": "E5",
+      "pickupCell": "F3",
+      "deliverCell": "A4",
       "fencedSell": [
         42,
         32,
@@ -2628,7 +2833,13 @@
         18,
         12
       ],
-      "text": "Pick up Crate of ARs (Weapons • 2■) in A1 (Land's End), Deliver to E5 (Bernal). [Fenced Sell: 42/32/24/18/12]"
+      "text": "Pick up Crate of ARs (Weapons • 2■) in F3 (Ball Park), Deliver to A4 (Sunset). [Fenced Sell: 42/32/24/18/12]",
+      "combat": {
+        "dice": 1,
+        "negDice": 0,
+        "flat": 0
+      },
+      "combatText": "1(R) CP"
     },
     {
       "id": "mis_28",
@@ -2645,10 +2856,10 @@
       "patronFaction": "DSA",
       "name": "Last Mile",
       "item": "Ketamine Jugs",
-      "category": "Marble",
+      "category": "Party",
       "blocks": 1,
-      "pickupCell": "F2",
-      "deliverCell": "E6",
+      "pickupCell": "F1",
+      "deliverCell": "C4",
       "fencedSell": [
         80,
         61,
@@ -2656,7 +2867,7 @@
         35,
         26
       ],
-      "text": "Pick up Ketamine Jugs (Marble • 1■) in F2 (Ballpark), Deliver to E6 (Portola). [Fenced Sell: 80/61/46/35/26]"
+      "text": "Pick up Ketamine Jugs (Party • 1■) in F1 (Treasure), Deliver to C4 (Castro). [Fenced Sell: 80/61/46/35/26]"
     },
     {
       "id": "mis_29",
@@ -2672,10 +2883,10 @@
       ],
       "patronFaction": "MAGA",
       "name": "Mutual Aid Drop",
-      "category": "Wine",
+      "category": "Opiates",
       "modifier": "-",
-      "cell": "E3",
-      "text": "Sell Wine at - Scarcity in E3 (SoMa)."
+      "cell": "B1",
+      "text": "Sell Opiates at - in B1 (Presidio)!"
     },
     {
       "id": "mis_30",
@@ -2692,10 +2903,10 @@
       "patronFaction": "TECH",
       "name": "Last Mile",
       "item": "Coke Brick",
-      "category": "Animals",
+      "category": "Uppers",
       "blocks": 2,
-      "pickupCell": "D4",
-      "deliverCell": "A2",
+      "pickupCell": "A6",
+      "deliverCell": "C1",
       "fencedSell": [
         78,
         60,
@@ -2703,12 +2914,12 @@
         34,
         24
       ],
-      "text": "Pick up Coke Brick (Animals • 2■) in D4 (Castro), Deliver to A2 (Richmond). [Fenced Sell: 78/60/46/34/24]"
+      "text": "Pick up Coke Brick (Uppers • 2■) in A6 (Daly City), Deliver to C1 (Marina). [Fenced Sell: 78/60/46/34/24]"
     },
     {
       "id": "mis_31",
       "kind": "kill",
-      "rewardText": "Cheapest Party Drugs on Mkt",
+      "rewardText": "Cheapest Party on Mkt",
       "reward": {
         "type": "market_pick",
         "track": "Marble",
@@ -2719,8 +2930,8 @@
       ],
       "patronFaction": "MS13",
       "name": "Silence a Witness",
-      "targetDeck": "Legiones",
-      "description": "Kill a Cop in Combat",
+      "targetDeck": "Cops",
+      "description": "Kill a Cop",
       "text": "Kill a Cop in Combat"
     },
     {
@@ -2738,10 +2949,10 @@
       "patronFaction": "ISIS",
       "name": "Curbside Pickup",
       "item": "Oxy Script Haul",
-      "category": "Wine",
+      "category": "Opiates",
       "blocks": 1,
-      "pickupCell": "C4",
-      "deliverCell": "F3",
+      "pickupCell": "A4",
+      "deliverCell": "F1",
       "fencedSell": [
         54,
         37,
@@ -2749,7 +2960,7 @@
         17,
         13
       ],
-      "text": "Pick up Oxy Script Haul (Wine • 1■) in C4 (Diamond), Deliver to F3 (Potrero). [Fenced Sell: 54/37/23/17/13]"
+      "text": "Pick up Oxy Script Haul (Opiates • 1■) in A4 (Sunset), Deliver to F1 (Treasure). [Fenced Sell: 54/37/23/17/13]"
     },
     {
       "id": "mis_33",
@@ -2764,10 +2975,10 @@
       ],
       "patronFaction": "DSA",
       "name": "Harm Reduction",
-      "category": "Grain",
+      "category": "Weed",
       "modifier": "-",
-      "cell": "E6",
-      "text": "Sell Grain at - Scarcity in E6 (Portola)."
+      "cell": "F4",
+      "text": "Sell Weed at - in F4 (Dogpatch)!"
     },
     {
       "id": "mis_34",
@@ -2795,10 +3006,10 @@
       ],
       "patronFaction": "MAGA",
       "name": "Mutual Aid Drop",
-      "category": "Wine",
+      "category": "Opiates",
       "modifier": "-",
-      "cell": "D5",
-      "text": "Sell Wine at - Scarcity in D5 (Noe)."
+      "cell": "D1",
+      "text": "Sell Opiates at - in D1 (Wharf)!"
     },
     {
       "id": "mis_36",
@@ -2813,15 +3024,15 @@
       ],
       "patronFaction": "TECH",
       "name": "Markup",
-      "category": "Marble",
+      "category": "Party",
       "modifier": "+",
       "cell": "E4",
-      "text": "Sell Marble at + Scarcity in E4 (Mission)."
+      "text": "Sell Party at + in E4 (Potrero)!"
     },
     {
       "id": "mis_37",
       "kind": "kill",
-      "rewardText": "Cheapest Party Drugs on Mkt",
+      "rewardText": "Cheapest Party on Mkt",
       "reward": {
         "type": "market_pick",
         "track": "Marble",
@@ -2832,8 +3043,8 @@
       ],
       "patronFaction": "MS13",
       "name": "Make an Example",
-      "targetDeck": "Legiones",
-      "description": "Kill a Cop in Combat",
+      "targetDeck": "Cops",
+      "description": "Kill a Cop",
       "text": "Kill a Cop in Combat"
     },
     {
@@ -2842,7 +3053,7 @@
       "rewardText": "Cheapest Henchman on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Guards",
+        "track": "Henchmen",
         "mode": "cheapest"
       },
       "favor": [
@@ -2852,8 +3063,8 @@
       "name": "VIP List",
       "category": "Weapons",
       "modifier": "+",
-      "cell": "B2",
-      "text": "Sell Weapons at + Scarcity in B2 (Laurel)."
+      "cell": "C4",
+      "text": "Sell Weapons at + in C4 (Castro)!"
     },
     {
       "id": "mis_39",
@@ -2861,7 +3072,7 @@
       "rewardText": "Cheapest Henchman on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Guards",
+        "track": "Henchmen",
         "mode": "cheapest"
       },
       "favor": [
@@ -2869,8 +3080,8 @@
       ],
       "patronFaction": "DSA",
       "name": "Hit Job",
-      "targetDeck": "Legiones",
-      "description": "Kill a Cop in Combat",
+      "targetDeck": "Cops",
+      "description": "Kill a Cop",
       "text": "Kill a Cop in Combat"
     },
     {
@@ -2887,16 +3098,16 @@
       ],
       "patronFaction": "MAGA",
       "name": "Bottle Service",
-      "category": "Grain",
+      "category": "Weed",
       "modifier": "+",
-      "cell": "E5",
-      "text": "Sell Grain at + Scarcity in E5 (Bernal)."
+      "cell": "F6",
+      "text": "Sell Weed at + in F6 (Hunter's)!"
     },
     {
       "id": "mis_41",
       "name": "Neighborhood Watch",
       "kind": "expose",
-      "exposeType": "nefarii",
+      "exposeType": "criminals",
       "exposeCount": 8,
       "description": "Expose 8 Criminals (individual Criminals icons visible on exposed tiles)",
       "rewardText": "26(d)",
@@ -2923,10 +3134,10 @@
       ],
       "patronFaction": "TECH",
       "name": "Markup",
-      "category": "Marble",
+      "category": "Party",
       "modifier": "+",
-      "cell": "D4",
-      "text": "Sell Marble at + Scarcity in D4 (Castro)."
+      "cell": "D3",
+      "text": "Sell Party at + in D3 (Tenderloin)!"
     },
     {
       "id": "mis_43",
@@ -2942,8 +3153,8 @@
       ],
       "patronFaction": "MS13",
       "name": "Take Out the Trash",
-      "targetDeck": "Legiones",
-      "description": "Kill a Cop in Combat",
+      "targetDeck": "Cops",
+      "description": "Kill a Cop",
       "text": "Kill a Cop in Combat"
     },
     {
@@ -2962,8 +3173,8 @@
       "name": "VIP List",
       "category": "Weapons",
       "modifier": "+",
-      "cell": "A6",
-      "text": "Sell Weapons at + Scarcity in A6 (Daly City)."
+      "cell": "A4",
+      "text": "Sell Weapons at + in A4 (Sunset)!"
     },
     {
       "id": "mis_45",
@@ -2978,10 +3189,10 @@
       ],
       "patronFaction": "DSA",
       "name": "Community Pricing",
-      "category": "Marble",
+      "category": "Party",
       "modifier": "-",
-      "cell": "C5",
-      "text": "Sell Marble at - Scarcity in C5 (Miraloma)."
+      "cell": "B4",
+      "text": "Sell Party at - in B4 (Haight)!"
     },
     {
       "id": "mis_46",
@@ -2997,15 +3208,15 @@
       ],
       "patronFaction": "MAGA",
       "name": "Bottle Service",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "D2",
-      "text": "Sell Animals at + Scarcity in D2 (Nob Hill)."
+      "cell": "C2",
+      "text": "Sell Uppers at + in C2 (Russian)!"
     },
     {
       "id": "mis_47",
       "kind": "sell",
-      "rewardText": "Any Party Drugs on Mkt",
+      "rewardText": "Any Party on Mkt",
       "reward": {
         "type": "market_pick",
         "track": "Marble",
@@ -3016,10 +3227,10 @@
       ],
       "patronFaction": "TECH",
       "name": "Bottle Service",
-      "category": "Marble",
+      "category": "Party",
       "modifier": "+",
-      "cell": "D5",
-      "text": "Sell Marble at + Scarcity in D5 (Noe)."
+      "cell": "E4",
+      "text": "Sell Party at + in E4 (Potrero)!"
     },
     {
       "id": "mis_48",
@@ -3035,10 +3246,10 @@
       ],
       "patronFaction": "MS13",
       "name": "VIP List",
-      "category": "Animals",
+      "category": "Uppers",
       "modifier": "+",
-      "cell": "B4",
-      "text": "Sell Animals at + Scarcity in B4 (Haight)."
+      "cell": "A3",
+      "text": "Sell Uppers at + in A3 (GG Park)!"
     },
     {
       "id": "mis_49",
@@ -3046,7 +3257,7 @@
       "rewardText": "Cheapest Henchman on Mkt",
       "reward": {
         "type": "market_pick",
-        "track": "Guards",
+        "track": "Henchmen",
         "mode": "cheapest"
       },
       "favor": [
@@ -3054,8 +3265,8 @@
       ],
       "patronFaction": "ISIS",
       "name": "Take Out the Trash",
-      "targetDeck": "Patricii",
-      "description": "Kill a Celebrity in Combat",
+      "targetDeck": "Celebrities",
+      "description": "Kill a Celebrity",
       "text": "Kill a Celebrity in Combat"
     },
     {
@@ -3072,10 +3283,10 @@
       "patronFaction": "DSA",
       "name": "Curbside Pickup",
       "item": "Molly Stash",
-      "category": "Marble",
+      "category": "Party",
       "blocks": 1,
-      "pickupCell": "B2",
-      "deliverCell": "C1",
+      "pickupCell": "A1",
+      "deliverCell": "E3",
       "fencedSell": [
         80,
         61,
@@ -3083,7 +3294,7 @@
         35,
         26
       ],
-      "text": "Pick up Molly Stash (Marble • 1■) in B2 (Laurel), Deliver to C1 (Marina). [Fenced Sell: 80/61/46/35/26]"
+      "text": "Pick up Molly Stash (Party • 1■) in A1 (Land's End), Deliver to E3 (SoMa). [Fenced Sell: 80/61/46/35/26]"
     },
     {
       "id": "mis_51",
@@ -3112,8 +3323,8 @@
       ],
       "patronFaction": "MAGA",
       "name": "Take Out the Trash",
-      "targetDeck": "Nefarii",
-      "description": "Kill a Criminal in Combat",
+      "targetDeck": "Criminals",
+      "description": "Kill a Criminal",
       "text": "Kill a Criminal in Combat"
     },
     {
@@ -3129,10 +3340,10 @@
       ],
       "patronFaction": "TECH",
       "name": "Bottle Service",
-      "category": "Marble",
+      "category": "Party",
       "modifier": "+",
-      "cell": "E5",
-      "text": "Sell Marble at + Scarcity in E5 (Bernal)."
+      "cell": "D5",
+      "text": "Sell Party at + in D5 (Dolores)!"
     },
     {
       "id": "mis_54",
@@ -3148,8 +3359,8 @@
       ],
       "patronFaction": "MS13",
       "name": "Silence a Witness",
-      "targetDeck": "Nefarii",
-      "description": "Kill a Criminal in Combat",
+      "targetDeck": "Criminals",
+      "description": "Kill a Criminal",
       "text": "Kill a Criminal in Combat"
     },
     {
@@ -3169,8 +3380,8 @@
       "item": "Crate of ARs",
       "category": "Weapons",
       "blocks": 2,
-      "pickupCell": "C2",
-      "deliverCell": "D5",
+      "pickupCell": "B2",
+      "deliverCell": "D6",
       "fencedSell": [
         42,
         32,
@@ -3178,7 +3389,32 @@
         18,
         12
       ],
-      "text": "Pick up Crate of ARs (Weapons • 2■) in C2 (Pac Heights), Deliver to D5 (Noe). [Fenced Sell: 42/32/24/18/12]"
+      "text": "Pick up Crate of ARs (Weapons • 2■) in B2 (Pac Heights), Deliver to D6 (Excelsior). [Fenced Sell: 42/32/24/18/12]",
+      "combat": {
+        "dice": 1,
+        "negDice": 0,
+        "flat": 0
+      },
+      "combatText": "1(R) CP"
+    },
+    {
+      "id": "mis_56",
+      "name": "Influencer",
+      "kind": "hold_influence",
+      "holdCount": 6,
+      "description": "Hold 6 Influence cards in your hand (Influence cards tucked under Schizophrenic jobs don't count)",
+      "rewardText": "1(R) Influence & 2(d)",
+      "reward": {
+        "type": "dice_influence",
+        "dice": 1,
+        "amount": 2
+      },
+      "favor": [
+        "TECH",
+        "-ISIS"
+      ],
+      "patronFaction": "TECH",
+      "text": "Hold 6 Influence cards in your hand (Influence cards tucked under Schizophrenic missions don't count)"
     }
   ]
 }

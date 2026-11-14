@@ -3,7 +3,8 @@
 The card art carries a light title banner at the top and a large blank light panel in the
 lower half. This script finds both areas automatically, then draws on them:
   - the card name and category in the title banner (over any title baked into the art)
-  - a combat-effect line, the SUV space symbols, and the price table in the blank panel
+  - a combat-effect line (with [R] Rome die enclosed in a square), the SUV space symbols,
+    and the price table in the blank panel
 
 Usage:
   python3 scripts/render_goods_cards.py                       # render the six mock-ups
@@ -16,10 +17,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = "/System/Library/Fonts/Supplemental"
 F_TITLE = os.path.join(FONTS, "DIN Condensed Bold.ttf")
 F_BOLD = os.path.join(FONTS, "Arial Bold.ttf")
+F_SERIF_B = os.path.join(FONTS, "Georgia Bold.ttf")
 F_NUM = os.path.join(FONTS, "DIN Alternate Bold.ttf")
 
 CATEGORY_LABEL = {
-    "Grain": "WEED", "Marble": "PARTY", "Weapons": "WEAPONS", "Guards": "HENCHMEN",
+    "Grain": "WEED", "Marble": "PARTY", "Weapons": "WEAPONS", "Henchmen": "HENCHMEN",
     "Meat Animals": "PILL UPPERS", "Exotic Animals": "POWDER UPPERS",
     "Cheap Wine": "STREET OPIATES", "Fine Wine": "PHARMA OPIATES",
 }
@@ -87,13 +89,11 @@ def panel_x_bounds(gray, y, thresh=205):
 def find_zones(img):
     gray = img.convert("L")
     W, H = gray.size
-    # Blank price panel: longest light run in the lower 60%
     ys = int(H * 0.40)
     py0, py1 = longest_run(light_rows(gray, ys, H, int(W * 0.25), int(W * 0.75)), ys)
     px0, px1 = panel_x_bounds(gray, (py0 + py1) // 2)
-    if px1 < W * 0.85:  # right edge hidden by a border flap: mirror the left margin
+    if px1 < W * 0.85:
         px1 = W - px0
-    # Title banner: rows in the top 32% whose left and right margins are both light
     px = gray.load()
     def edge_light(y):
         cols = list(range(int(W * 0.115), int(W * 0.135)))
@@ -146,9 +146,9 @@ def draw_title(img, d, zone, card):
 F_SYM = "/System/Library/Fonts/SFNS.ttf"  # has the Bitcoin glyph
 
 
-def draw_symbols(d, x_left, cy, size, blocks, guards):
+def draw_symbols(d, x_left, cy, size, blocks, henchmen):
     """SUV space counters, anchored to the left edge of the traits line."""
-    items = [("sq", INK)] * blocks + [("tri", (196, 150, 20))] * guards
+    items = [("sq", INK)] * blocks + [("tri", (196, 150, 20))] * henchmen
     gap = size * 0.40
     x = x_left
     for kind, col in items:
@@ -162,11 +162,43 @@ def draw_symbols(d, x_left, cy, size, blocks, guards):
 
 def trait_text(card):
     """Only mechanically relevant text: CP formulas and special abilities (none = no combat effect)."""
-    if card.get("track") == "Guards":
+    if card.get("track") == "Henchmen":
         return card.get("combatText")
     if card.get("combat") or card.get("rarityBonus"):
         return card.get("combatText")
     return None
+
+
+def draw_right_aligned_trait_with_rome_die(d, x_right, cy, text, font, fill):
+    """Draw trait text right-aligned at x_right, replacing '(R)' with a square-enclosed 'R' Rome die icon."""
+    parts = text.split("(R)")
+    box_sz = int(font.size * 1.02)
+    # Measure total width first
+    tot_w = 0
+    for idx, p in enumerate(parts):
+        if p:
+            bb = d.textbbox((0, 0), p, font=font)
+            tot_w += (bb[2] - bb[0])
+        if idx < len(parts) - 1:
+            tot_w += box_sz + 8
+
+    cur_x = int(x_right - tot_w)
+    for idx, p in enumerate(parts):
+        if p:
+            bb = d.textbbox((0, 0), p, font=font)
+            pw, ph = bb[2] - bb[0], bb[3] - bb[1]
+            d.text((cur_x - bb[0], int(cy - ph / 2 - bb[1])), p, font=font, fill=fill)
+            cur_x += pw
+        if idx < len(parts) - 1:
+            cur_x += 4
+            bx0, by0 = cur_x, int(cy - box_sz // 2)
+            bx1, by1 = cur_x + box_sz, by0 + box_sz
+            d.rounded_rectangle((bx0, by0, bx1, by1), radius=max(4, box_sz // 7), fill=(238, 228, 206), outline=fill, width=max(2, box_sz // 11))
+            f_r = ImageFont.truetype(F_SERIF_B, int(box_sz * 0.72))
+            bb_r = d.textbbox((0, 0), "R", font=f_r)
+            rw, rh = bb_r[2] - bb_r[0], bb_r[3] - bb_r[1]
+            d.text((bx0 + (box_sz - rw) / 2 - bb_r[0], by0 + (box_sz - rh) / 2 - bb_r[1]), "R", font=f_r, fill=fill)
+            cur_x += box_sz + 4
 
 
 def price_label(img, box, kind):
@@ -183,7 +215,7 @@ def price_label(img, box, kind):
     except Exception:
         pass
     center_text(ld, (0, 0, w * 2, h), txt, f, col)
-    if kind == "buy":  # italic via shear
+    if kind == "buy":
         layer = layer.transform(layer.size, Image.AFFINE, (1, 0.22, -h * 0.11, 0, 1, 0), resample=Image.BICUBIC)
     layer = layer.crop((w // 2, 0, w // 2 + w, h))
     img.paste(layer, (int(x0), int(y0)), layer)
@@ -193,17 +225,21 @@ def draw_panel(img, d, zone, card):
     x0, y0, x1, y1 = zone
     w, h = x1 - x0, y1 - y0
     pad = w * 0.05
-    # Traits line: SUV space (left) + combat/abilities (right)
+    # Erase existing text in the blank panel first so re-renders are 100% clean
+    panel_bg = tuple(int(v) for v in ImageStat.Stat(img.crop((x0 + 6, y0 + 6, x0 + 36, y0 + 36))).median)
+    d.rectangle((x0 + 3, y0 + 3, x1 - 3, y1 - 3), fill=panel_bg)
+
+    # Traits line: SUV space (left) + combat/abilities with [R] Rome die (right)
     line_h = h * 0.20
     cy = y0 + h * 0.04 + line_h / 2
     sym = line_h * 0.42
-    x_after = draw_symbols(d, x0 + pad, cy, sym, int(card.get("blocks") or 0), int(card.get("guards") or 0))
+    x_after = draw_symbols(d, x0 + pad, cy, sym, int(card.get("blocks") or 0), int(card.get("henchmen") or 0))
     tt = trait_text(card)
     if tt:
         avail = (x1 - pad) - (x_after + pad)
         f = fit_font(F_BOLD, tt, avail, int(line_h * 0.50))
-        bb = d.textbbox((0, 0), tt, font=f)
-        d.text((x1 - pad - (bb[2] - bb[0]) - bb[0], cy - (bb[3] - bb[1]) / 2 - bb[1]), tt, font=f, fill=INK)
+        draw_right_aligned_trait_with_rome_die(d, x1 - pad, cy, tt, f, INK)
+
     # Price table
     tx0, tx1 = x0 + pad, x1 - pad
     ty0 = y0 + h * 0.04 + line_h + h * 0.03
@@ -238,23 +274,57 @@ def draw_panel(img, d, zone, card):
         d.line((cx, ty0, cx, ty1), fill=SELL_GREEN, width=2)
 
 
-def render(card, art, out):
+_ZONE_CACHE = {}
+
+
+def render(card, art, out, crop_art_out=None):
     img = Image.open(art).convert("RGB")
-    title_zone, panel_zone = find_zones(img)
+    if art not in _ZONE_CACHE:
+        _ZONE_CACHE[art] = find_zones(img)
+    title_zone, panel_zone = _ZONE_CACHE[art]
+    if crop_art_out:
+        tx0, ty0, tx1, ty1 = title_zone
+        px0, py0, px1, py1 = panel_zone
+        art_y0 = int(ty1 + (py0 - ty1) * 0.13)
+        art_y1 = int(py0 - 6)
+        art_crop = img.crop((px0, art_y0, px1, art_y1))
+        art_crop.save(crop_art_out, quality=92)
     d = ImageDraw.Draw(img)
     draw_title(img, d, title_zone, card)
     draw_panel(img, d, panel_zone, card)
-    img.save(out)
+    if out.lower().endswith(".jpg") or out.lower().endswith(".jpeg"):
+        img.save(out, quality=90)
+    else:
+        img.save(out)
     return title_zone, panel_zone
 
 
 MOCKUPS = {
-    "grn_?": ("OG Kush", "weed_humboldt_indoor.png"),
-    "mrb_?": ("Champagne Molly", "party_pure_mdma_crystal.png"),
-    "ea_?": ("Peruvian Flake", "uppers_peruvian_flake.png"),
-    "cw_?": ("China White", "opiates_china_white.png"),
-    "wpn_?": ("Glock 19", "weapons_glock_19.png"),
-    "grd_?": ("Big Mike", "henchmen_big_mike.png"),
+    "grn_?": ("OG Kush", "weed_humboldt_indoor.png", "art_weed.jpg"),
+    "mrb_?": ("Champagne Molly", "party_pure_mdma_crystal.png", "art_party.jpg"),
+    "ea_?": ("Peruvian Flake", "uppers_peruvian_flake.png", "art_uppers.jpg"),
+    "cw_?": ("China White", "opiates_china_white.png", "art_opiates.jpg"),
+    "wpn_?": ("Glawk 19", "weapons_glock_19.png", "art_weapons.jpg"),
+    "grd_?": ("Big Mike", "henchmen_big_mike.png", "art_henchmen.jpg"),
+}
+
+TRACK_TO_TEMPLATE = {
+    "Grain": "weed_humboldt_indoor.png",
+    "Weed": "weed_humboldt_indoor.png",
+    "Marble": "party_pure_mdma_crystal.png",
+    "Party": "party_pure_mdma_crystal.png",
+    "Animals": "uppers_peruvian_flake.png",
+    "Meat Animals": "uppers_peruvian_flake.png",
+    "Exotic Animals": "uppers_peruvian_flake.png",
+    "Uppers": "uppers_peruvian_flake.png",
+    "Wine": "opiates_china_white.png",
+    "Cheap Wine": "opiates_china_white.png",
+    "Fine Wine": "opiates_china_white.png",
+    "Opiates": "opiates_china_white.png",
+    "Weapons": "weapons_glock_19.png",
+    "Weapon": "weapons_glock_19.png",
+    "Henchmen": "henchmen_big_mike.png",
+    "Henchman": "henchmen_big_mike.png",
 }
 
 if __name__ == "__main__":
@@ -264,9 +334,24 @@ if __name__ == "__main__":
         sys.exit()
     src = os.path.join(ROOT, "public/assets/fp/mockups")
     dst = os.path.join(src, "rendered")
+    art_dst = os.path.join(ROOT, "public/assets/fp/goods_art")
+    cards_dst = os.path.join(ROOT, "public/assets/fp/cards/goods")
     os.makedirs(dst, exist_ok=True)
+    os.makedirs(art_dst, exist_ok=True)
+    os.makedirs(cards_dst, exist_ok=True)
     by_name = {c["name"]: c for c in cards.values()}
-    for _, (name, art) in MOCKUPS.items():
+    for _, (name, art, crop_name) in MOCKUPS.items():
         card = by_name[name]
         out = os.path.join(dst, art)
-        print(card["id"], name, render(card, os.path.join(src, art), out))
+        crop_out = os.path.join(art_dst, crop_name)
+        print(card["id"], name, render(card, os.path.join(src, art), out, crop_art_out=crop_out))
+
+    # Render all 88 Market & Henchmen cards into public/assets/fp/cards/goods/<id>.jpg
+    count = 0
+    for cid, card in cards.items():
+        trk = card.get("track") or card.get("subcategory") or card.get("category") or "Grain"
+        tpl_name = TRACK_TO_TEMPLATE.get(trk, "weed_humboldt_indoor.png")
+        out_path = os.path.join(cards_dst, f"{cid}.jpg")
+        render(card, os.path.join(src, tpl_name), out_path)
+        count += 1
+    print(f"Rendered {count} market & henchmen cards into {cards_dst}")

@@ -6,7 +6,7 @@
 # International License (CC BY-NC-ND 4.0).
 # https://creativecommons.org/licenses/by-nc-nd/4.0/
 
-"""Syncs the Night Merchant static web frontend (public/ + LICENSE) to dashiellrenaud_site/nightmerchant."""
+"""Syncs the InstantGram SF static web frontend (public/ + LICENSE) to dashiellrenaud_site/instantgram."""
 
 from __future__ import annotations
 
@@ -20,10 +20,10 @@ REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 PUBLIC_DIR = os.path.join(REPO_ROOT, "public")
 LICENSE_PATH = os.path.join(REPO_ROOT, "LICENSE")
 DEFAULT_SITE_TARGET = os.path.abspath(
-    os.path.join(REPO_ROOT, "..", "dashiellrenaud_site", "nightmerchant")
+    os.path.join(REPO_ROOT, "..", "dashiellrenaud_site", "instantgram")
 )
 
-SKIP_NAMES = {".DS_Store", "Thumbs.db"}
+SKIP_NAMES = {".DS_Store", "Thumbs.db", "mockups"}
 
 
 def _ignore_junk(_dir: str, names: list[str]) -> set[str]:

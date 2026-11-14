@@ -1,9 +1,9 @@
 {
-  "patricii": [
+  "celebrities": [
     {
       "id": "pat_1",
       "name": "Procession",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "event",
       "faction": null,
       "bio": null,
@@ -13,26 +13,25 @@
       "hostileFavor": [],
       "combatReward": null,
       "reactions": [],
-      "actionText": "Lose your next turn. Player leaves Cart on present Tile and does not move or transact next hour.",
+      "actionText": "Lose your next turn. Player leaves SUV on present Tile and does not move or transact next hour.",
       "mission": null
     },
     {
       "id": "pat_2",
       "name": "Mark Zuckerberg",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
       "bio": "“He’s actually quite likeable.”",
-      "combatFormula": "6X(R)",
+      "combatFormula": "4(R)+1",
       "friendlyFavor": [
-        "TECH",
-        "-ISIS",
-        "MAGA"
+        "MAGA",
+        "-DSA"
       ],
       "friendlyReward": "45(d) & +1 Influence",
       "hostileFavor": [
-        "-TECH",
-        "-MAGA"
+        "-MAGA",
+        "-TECH"
       ],
       "combatReward": "44(d)",
       "reactions": [
@@ -42,59 +41,65 @@
         },
         {
           "condition": "=-1",
-          "type": "mission_strict",
-          "actionText": "Sell Animals at ++ in F2",
-          "mission": {
-            "kind": "sell",
-            "item": "Animals",
-            "pickupCell": null,
-            "deliverCell": "F2",
-            "category": "Animals",
-            "modifier": "++",
-            "target": null,
-            "name": "Mark Zuckerberg’s Job"
-          }
+          "type": "deck_quest_strict"
         },
         {
-          "condition": "=0",
+          "condition": ">=0",
           "type": "mission_strict",
-          "actionText": "Sell Marble at ++ in B2",
+          "actionText": "Pick up Nuke at F1 and deliver to C3!!",
           "mission": {
-            "kind": "sell",
-            "item": "Marble",
-            "pickupCell": null,
-            "deliverCell": "B2",
-            "category": "Marble",
-            "modifier": "++",
+            "kind": "delivery",
+            "item": "Nuke",
+            "pickupCell": "F1",
+            "deliverCell": "C3",
+            "category": "Weapon",
+            "modifier": null,
             "target": null,
-            "name": "Mark Zuckerberg’s Job"
-          }
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_request",
-          "actionText": "Sell Animals at ++ in D5",
-          "mission": {
-            "kind": "sell",
-            "item": "Animals",
-            "pickupCell": null,
-            "deliverCell": "D5",
-            "category": "Animals",
-            "modifier": "++",
-            "target": null,
+            "blocks": 4,
+            "cargoSize": 4,
+            "payoutTable": [
+              75,
+              60,
+              50,
+              35,
+              30
+            ],
+            "fencedSell": [
+              75,
+              60,
+              50,
+              35,
+              30
+            ],
             "name": "Mark Zuckerberg’s Job"
           }
         }
       ],
-      "actionText": "Sell Marble at ++ in B2",
+      "actionText": "(QUEST_ICON)!! Pick up Nuke at F1 and deliver to C3!!",
       "mission": {
-        "kind": "sell",
-        "item": "Marble",
-        "pickupCell": null,
-        "deliverCell": "B2",
-        "category": "Marble",
-        "modifier": "++",
+        "kind": "delivery",
+        "item": "Nuke",
+        "pickupCell": "F1",
+        "deliverCell": "C3",
+        "category": "Weapon",
+        "modifier": null,
         "target": null,
+        "blocks": 4,
+        "cargoSize": 4,
+        "payoutTable": [
+          75,
+          60,
+          50,
+          35,
+          30
+        ],
+        "fencedSell": [
+          75,
+          60,
+          50,
+          35,
+          30
+        ],
         "name": "Mark Zuckerberg’s Job"
       },
       "tier": "leader"
@@ -102,7 +107,7 @@
     {
       "id": "pat_3",
       "name": "Salve!",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "event",
       "faction": null,
       "bio": null,
@@ -118,40 +123,36 @@
     {
       "id": "pat_4",
       "name": "Donald Trump",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "MAGA",
       "bio": "“‘They let you do it.’”",
-      "combatFormula": "5X(R)+X-1",
+      "combatFormula": "3(R)+3",
       "friendlyFavor": [
-        "MAGA",
-        "-ISIS",
         "-DSA",
-        "-TECH",
-        "-MS13"
+        "-ISIS"
       ],
       "friendlyReward": "34(d) & Cheapest Weapon",
       "hostileFavor": [
-        "-MAGA",
-        "ISIS",
+        "DSA",
         "TECH"
       ],
       "combatReward": "33(d)",
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "combat"
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
           "type": "mission_offer",
-          "actionText": "Sell Grain at ++ in F2",
+          "actionText": "Sell Weed at ++ in B1?",
           "mission": {
             "kind": "sell",
-            "item": "Grain",
+            "item": "Weed",
             "pickupCell": null,
-            "deliverCell": "F2",
-            "category": "Grain",
+            "deliverCell": "B1",
+            "category": "Weed",
             "modifier": "++",
             "target": null,
             "name": "Donald Trump’s Job"
@@ -159,41 +160,27 @@
         },
         {
           "condition": ">=1",
-          "type": "mission_strict",
-          "actionText": "Sell Animals at ++ in A1",
-          "mission": {
-            "kind": "sell",
-            "item": "Animals",
-            "pickupCell": null,
-            "deliverCell": "A1",
-            "category": "Animals",
-            "modifier": "++",
-            "target": null,
-            "name": "Donald Trump’s Job"
-          }
-        },
-        {
-          "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Buy one Animal at + Scarcity",
+          "actionText": "Buy 1 Influence for 5(d)?",
           "mission": {
-            "kind": "sell",
-            "item": null,
+            "kind": "buy_from_npc",
+            "item": "Influence",
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Animals",
-            "modifier": "+",
-            "target": null
+            "category": "Influence",
+            "modifier": "5(d)",
+            "fixedPrice": 5,
+            "target": "Influence deck"
           }
         }
       ],
-      "actionText": "Sell Grain at ++ in F2",
+      "actionText": "(QUEST_ICON)? Sell Weed at ++ in B1? • [?] Buy 1 Influence for 5(d)?",
       "mission": {
         "kind": "sell",
-        "item": "Grain",
+        "item": "Weed",
         "pickupCell": null,
-        "deliverCell": "F2",
-        "category": "Grain",
+        "deliverCell": "B1",
+        "category": "Weed",
         "modifier": "++",
         "target": null,
         "name": "Donald Trump’s Job"
@@ -203,11 +190,11 @@
     {
       "id": "pat_5",
       "name": "Elon Musk",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "MAGA",
       "bio": "“At one point the wealthiest man in the world.”",
-      "combatFormula": "6X(R)+X",
+      "combatFormula": "6(R)",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -229,13 +216,13 @@
         {
           "condition": "=0",
           "type": "mission_request",
-          "actionText": "Sell Wine at - in E6",
+          "actionText": "Sell Opiates at - in F3!",
           "mission": {
             "kind": "sell",
-            "item": "Wine",
+            "item": "Opiates",
             "pickupCell": null,
-            "deliverCell": "E6",
-            "category": "Wine",
+            "deliverCell": "F3",
+            "category": "Opiates",
             "modifier": "-",
             "target": null,
             "name": "Elon Musk’s Job"
@@ -246,13 +233,13 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Wine at - in E6",
+      "actionText": "(QUEST_ICON)! Sell Opiates at - in F3!",
       "mission": {
         "kind": "sell",
-        "item": "Wine",
+        "item": "Opiates",
         "pickupCell": null,
-        "deliverCell": "E6",
-        "category": "Wine",
+        "deliverCell": "F3",
+        "category": "Opiates",
         "modifier": "-",
         "target": null,
         "name": "Elon Musk’s Job"
@@ -262,11 +249,11 @@
     {
       "id": "pat_6",
       "name": "Peter Thiel",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Bets on contrarians. Collects citizenships.”",
-      "combatFormula": "2X(R)+1-1",
+      "combatFormula": "3(R)+2",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -287,24 +274,12 @@
         },
         {
           "condition": "=0",
-          "type": "mission_request",
-          "actionText": "Kill a Criminal in Combat",
-          "mission": {
-            "kind": "kill",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": null,
-            "modifier": null,
-            "target": null,
-            "targetDeck": "Nefarii",
-            "name": "Peter Thiel’s Job"
-          }
+          "type": "deck_quest_demand"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Kill a Criminal in Combat",
+          "actionText": "Kill a Cop?",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -312,13 +287,13 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Nefarii",
+            "target": "Cops",
+            "targetDeck": "Criminals",
             "name": "Peter Thiel’s Job"
           }
         }
       ],
-      "actionText": "Kill a Criminal in Combat",
+      "actionText": "(QUEST_ICON)? Kill a Cop?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -326,8 +301,8 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": null,
-        "targetDeck": "Nefarii",
+        "target": "Cops",
+        "targetDeck": "Criminals",
         "name": "Peter Thiel’s Job"
       },
       "tier": "t1"
@@ -335,7 +310,7 @@
     {
       "id": "pat_7",
       "name": "Ushered Along",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "event",
       "faction": null,
       "bio": null,
@@ -345,17 +320,17 @@
       "hostileFavor": [],
       "combatReward": null,
       "reactions": [],
-      "actionText": "Move Again. Player must move to an accessible Tile. Cannot complete missions or transact on this Tile before proceeding.",
+      "actionText": "Move Again. Player must move to an accessible Tile. Cannot complete jobs or transact on this Tile before proceeding.",
       "mission": null
     },
     {
       "id": "pat_8",
       "name": "Brian Chesky",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
       "bio": "“Spent the $100 million on city parks.”",
-      "combatFormula": "4X(R)-1",
+      "combatFormula": "5(R)",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -376,44 +351,22 @@
         },
         {
           "condition": "=-1",
-          "type": "mission_strict",
-          "actionText": "Sell Marble at + in C3",
-          "mission": {
-            "kind": "sell",
-            "item": "Marble",
-            "pickupCell": null,
-            "deliverCell": "C3",
-            "category": "Marble",
-            "modifier": "+",
-            "target": null,
-            "name": "Brian Chesky’s Job"
-          }
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
-          "type": "mission_request",
-          "actionText": "Sell Marble at + in F4",
-          "mission": {
-            "kind": "sell",
-            "item": "Marble",
-            "pickupCell": null,
-            "deliverCell": "F4",
-            "category": "Marble",
-            "modifier": "+",
-            "target": null,
-            "name": "Brian Chesky’s Job"
-          }
+          "type": "deck_quest_demand"
         },
         {
           "condition": ">=1",
           "type": "mission_request",
-          "actionText": "Pick up a brick of coke in D3 and Deliver to E2",
+          "actionText": "Pick up Brick of Coke at F5 and deliver to B3!",
           "mission": {
             "kind": "delivery",
-            "item": "a brick of coke",
-            "pickupCell": "D3",
-            "deliverCell": "E2",
-            "category": "Animals",
+            "item": "Brick of Coke",
+            "pickupCell": "F5",
+            "deliverCell": "B3",
+            "category": "Uppers",
             "modifier": null,
             "target": null,
             "cargoSize": 2,
@@ -424,31 +377,56 @@
               34,
               24
             ],
-            "name": "Brian Chesky’s Job"
-          }
+            "name": "Brian Chesky’s Job",
+            "blocks": 2,
+            "fencedSell": [
+              78,
+              60,
+              46,
+              34,
+              24
+            ]
+          },
+          "friendlyReward": "42(d)"
         }
       ],
-      "actionText": "Sell Marble at + in F4",
+      "actionText": "(QUEST_ICON)! Pick up Brick of Coke at F5 and deliver to B3!",
       "mission": {
-        "kind": "sell",
-        "item": "Marble",
-        "pickupCell": null,
-        "deliverCell": "F4",
-        "category": "Marble",
-        "modifier": "+",
+        "kind": "delivery",
+        "item": "Brick of Coke",
+        "pickupCell": "F5",
+        "deliverCell": "B3",
+        "category": "Uppers",
+        "modifier": null,
         "target": null,
-        "name": "Brian Chesky’s Job"
+        "cargoSize": 2,
+        "payoutTable": [
+          78,
+          60,
+          46,
+          34,
+          24
+        ],
+        "name": "Brian Chesky’s Job",
+        "blocks": 2,
+        "fencedSell": [
+          78,
+          60,
+          46,
+          34,
+          24
+        ]
       },
       "tier": "t1"
     },
     {
       "id": "pat_9",
       "name": "Dario Amodei",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
       "bio": "“Builds the AI that worries about AI.”",
-      "combatFormula": "X-1",
+      "combatFormula": "3(R)+1",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -463,34 +441,23 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "payoff",
+          "type": "combat",
           "reward": "Cheapest Weed"
         },
         {
           "condition": "=0",
-          "type": "mission_request",
-          "actionText": "Sell Animals at + in C5",
-          "mission": {
-            "kind": "sell",
-            "item": "Animals",
-            "pickupCell": null,
-            "deliverCell": "C5",
-            "category": "Animals",
-            "modifier": "+",
-            "target": null,
-            "name": "Dario Amodei’s Job"
-          }
+          "type": "deck_quest_demand"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Pick up a brick of coke in F2 and Deliver to A1",
+          "actionText": "Pick up Brick of Coke at D6 and deliver to D2?",
           "mission": {
             "kind": "delivery",
-            "item": "a brick of coke",
-            "pickupCell": "F2",
-            "deliverCell": "A1",
-            "category": "Animals",
+            "item": "Brick of Coke",
+            "pickupCell": "D6",
+            "deliverCell": "D2",
+            "category": "Uppers",
             "modifier": null,
             "target": null,
             "cargoSize": 2,
@@ -501,36 +468,62 @@
               34,
               24
             ],
-            "name": "Dario Amodei’s Job"
-          }
+            "name": "Dario Amodei’s Job",
+            "blocks": 2,
+            "fencedSell": [
+              78,
+              60,
+              46,
+              34,
+              24
+            ]
+          },
+          "friendlyReward": "42(d)"
         },
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Move again this turn"
+          "actionText": "Move again this turn?",
+          "mission": null
         }
       ],
-      "actionText": "Sell Animals at + in C5",
+      "actionText": "(QUEST_ICON)? Pick up Brick of Coke at D6 and deliver to D2? • [?] Move again this turn?",
       "mission": {
-        "kind": "sell",
-        "item": "Animals",
-        "pickupCell": null,
-        "deliverCell": "C5",
-        "category": "Animals",
-        "modifier": "+",
+        "kind": "delivery",
+        "item": "Brick of Coke",
+        "pickupCell": "D6",
+        "deliverCell": "D2",
+        "category": "Uppers",
+        "modifier": null,
         "target": null,
-        "name": "Dario Amodei’s Job"
+        "cargoSize": 2,
+        "payoutTable": [
+          78,
+          60,
+          46,
+          34,
+          24
+        ],
+        "name": "Dario Amodei’s Job",
+        "blocks": 2,
+        "fencedSell": [
+          78,
+          60,
+          46,
+          34,
+          24
+        ]
       },
       "tier": "t2"
     },
     {
       "id": "pat_10",
       "name": "Daniela Amodei",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
       "bio": "“Keeps the safety team’s lights on.”",
-      "combatFormula": "X(R)-1-1",
+      "combatFormula": "2(R)+3",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -546,47 +539,36 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "payoff",
+          "type": "combat",
           "reward": "14(d)"
         },
         {
           "condition": "=0",
-          "type": "mission_request",
-          "actionText": "Sell Grain at + in A6",
-          "mission": {
-            "kind": "sell",
-            "item": "Grain",
-            "pickupCell": null,
-            "deliverCell": "A6",
-            "category": "Grain",
-            "modifier": "+",
-            "target": null,
-            "name": "Daniela Amodei’s Job"
-          }
+          "type": "deck_quest_demand"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Grain at + in C2",
+          "actionText": "Sell Weed at + in E3?",
           "mission": {
             "kind": "sell",
-            "item": "Grain",
+            "item": "Weed",
             "pickupCell": null,
-            "deliverCell": "C2",
-            "category": "Grain",
+            "deliverCell": "E3",
+            "category": "Weed",
             "modifier": "+",
             "target": null,
             "name": "Daniela Amodei’s Job"
           }
         }
       ],
-      "actionText": "Sell Grain at + in A6",
+      "actionText": "(QUEST_ICON)? Sell Weed at + in E3?",
       "mission": {
         "kind": "sell",
-        "item": "Grain",
+        "item": "Weed",
         "pickupCell": null,
-        "deliverCell": "A6",
-        "category": "Grain",
+        "deliverCell": "E3",
+        "category": "Weed",
         "modifier": "+",
         "target": null,
         "name": "Daniela Amodei’s Job"
@@ -596,11 +578,11 @@
     {
       "id": "pat_11",
       "name": "Steph Curry",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "MS13",
       "bio": "“Not his fault that he has fans.”",
-      "combatFormula": "2X(R)+2X-1",
+      "combatFormula": "4(R)",
       "friendlyFavor": [
         "MS13"
       ],
@@ -617,23 +599,12 @@
         },
         {
           "condition": "=0",
-          "type": "mission_request",
-          "actionText": "Sell Wine at + in F4",
-          "mission": {
-            "kind": "sell",
-            "item": "Wine",
-            "pickupCell": null,
-            "deliverCell": "F4",
-            "category": "Wine",
-            "modifier": "+",
-            "target": null,
-            "name": "Steph Curry’s Job"
-          }
+          "type": "deck_quest_demand"
         },
         {
           "condition": ">=1",
           "type": "mission_request",
-          "actionText": "Kill a Criminal in Combat",
+          "actionText": "Kill a Cop!",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -641,26 +612,28 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Nefarii",
+            "target": "Cops",
+            "targetDeck": "Criminals",
             "name": "Steph Curry’s Job"
           }
         },
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Move again this turn"
+          "actionText": "Move again this turn?",
+          "mission": null
         }
       ],
-      "actionText": "Sell Wine at + in F4",
+      "actionText": "(QUEST_ICON)! Kill a Cop! • [?] Move again this turn?",
       "mission": {
-        "kind": "sell",
-        "item": "Wine",
+        "kind": "kill",
+        "item": null,
         "pickupCell": null,
-        "deliverCell": "F4",
-        "category": "Wine",
-        "modifier": "+",
-        "target": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "Cops",
+        "targetDeck": "Criminals",
         "name": "Steph Curry’s Job"
       },
       "tier": "t1"
@@ -668,11 +641,11 @@
     {
       "id": "pat_12",
       "name": "Chesa Boudin",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "MS13",
       "bio": "“Recalled, but not forgotten.”",
-      "combatFormula": "X(R)+X-1",
+      "combatFormula": "3(R)-1",
       "friendlyFavor": [
         "MS13",
         "-MAGA"
@@ -691,7 +664,7 @@
         {
           "condition": "=0",
           "type": "mission_offer",
-          "actionText": "Kill a Cop in Combat",
+          "actionText": "Kill a Cop?",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -699,8 +672,8 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Legiones",
+            "target": "Cops",
+            "targetDeck": "Cops",
             "name": "Chesa Boudin’s Job"
           }
         },
@@ -711,19 +684,19 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Buy one Wine at ++ Scarcity",
+          "actionText": "Sell Opiates at ++?",
           "mission": {
             "kind": "sell",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "++",
             "target": null
           }
         }
       ],
-      "actionText": "Kill a Cop in Combat",
+      "actionText": "(QUEST_ICON)? Kill a Cop? • [?] Sell Opiates at ++?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -731,8 +704,8 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": null,
-        "targetDeck": "Legiones",
+        "target": "Cops",
+        "targetDeck": "Cops",
         "name": "Chesa Boudin’s Job"
       },
       "tier": "t2"
@@ -740,11 +713,11 @@
     {
       "id": "pat_13",
       "name": "Alice Huang",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "ISIS",
       "bio": "“At the center of a global news scandal.”",
-      "combatFormula": "2X(R)+2-1",
+      "combatFormula": "3",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -762,24 +735,12 @@
         },
         {
           "condition": "=0",
-          "type": "mission_offer",
-          "actionText": "Kill a Celebrity in Combat",
-          "mission": {
-            "kind": "kill",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": null,
-            "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
-            "name": "Alice Huang’s Job"
-          }
+          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
           "type": "mission_request",
-          "actionText": "Kill a Celebrity in Combat",
+          "actionText": "Kill a Cop!",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -787,27 +748,27 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
+            "target": "Cops",
+            "targetDeck": "Celebrities",
             "name": "Alice Huang’s Job"
           }
         },
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell one Wine from Mkt at > Scarcity",
+          "actionText": "Buy any Mkt Opiate at -?",
           "mission": {
             "kind": "buy_from_npc",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Wine",
-            "modifier": ">",
+            "category": "Opiates",
+            "modifier": "-",
             "target": "Market"
           }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "(QUEST_ICON)! Kill a Cop! • [?] Buy any Mkt Opiate at -?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -815,8 +776,8 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
+        "target": "Cops",
+        "targetDeck": "Celebrities",
         "name": "Alice Huang’s Job"
       },
       "tier": "t1"
@@ -824,11 +785,11 @@
     {
       "id": "pat_14",
       "name": "Dr. Oz",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Miracle cures, now with a studio audience.”",
-      "combatFormula": "X(R)+2-1",
+      "combatFormula": "3(R)-2(R)",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -845,31 +806,13 @@
         },
         {
           "condition": "=0",
-          "type": "mission_request",
-          "actionText": "Pick up a crate of ARs in B6 and Deliver to B2",
-          "mission": {
-            "kind": "delivery",
-            "item": "a crate of ARs",
-            "pickupCell": "B6",
-            "deliverCell": "B2",
-            "category": "Weapons",
-            "modifier": null,
-            "target": null,
-            "cargoSize": 2,
-            "payoutTable": [
-              42,
-              32,
-              24,
-              18,
-              12
-            ],
-            "name": "Dr. Oz’s Job"
-          }
+          "type": "deck_quest_demand",
+          "friendlyReward": "29(d)"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Kill a Cop in Combat",
+          "actionText": "Kill a Cop?",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -877,15 +820,15 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Legiones",
+            "target": "Cops",
+            "targetDeck": "Cops",
             "name": "Dr. Oz’s Job"
           }
         },
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell the top card of the Goods deck for 8(d) (unless Infl, decide without looking)",
+          "actionText": "Buy Cheapest Mkt Weapon for 8(d)?",
           "mission": {
             "kind": "buy_from_npc",
             "item": "Top card of Goods deck",
@@ -893,27 +836,21 @@
             "deliverCell": null,
             "category": "Any",
             "modifier": "8(d)",
-            "target": "Goods deck"
+            "target": "Goods deck",
+            "fixedPrice": 8
           }
         }
       ],
-      "actionText": "Pick up a crate of ARs in B6 and Deliver to B2",
+      "actionText": "(QUEST_ICON)? Kill a Cop? • [?] Buy Cheapest Mkt Weapon for 8(d)?",
       "mission": {
-        "kind": "delivery",
-        "item": "a crate of ARs",
-        "pickupCell": "B6",
-        "deliverCell": "B2",
-        "category": "Weapons",
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
         "modifier": null,
-        "target": null,
-        "cargoSize": 2,
-        "payoutTable": [
-          42,
-          32,
-          24,
-          18,
-          12
-        ],
+        "target": "Cops",
+        "targetDeck": "Cops",
         "name": "Dr. Oz’s Job"
       },
       "tier": "t2"
@@ -921,11 +858,11 @@
     {
       "id": "pat_16",
       "name": "Jensen Huang",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
       "bio": "“Leather jacket, trillion-dollar chips.”",
-      "combatFormula": "X(R)-1-1",
+      "combatFormula": "(R)+2",
       "friendlyFavor": [
         "DSA",
         "-ISIS",
@@ -941,19 +878,19 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "payoff",
+          "type": "combat",
           "reward": "9(d)"
         },
         {
           "condition": "=0",
           "type": "mission_request",
-          "actionText": "Sell Grain at - in C6",
+          "actionText": "Sell Weed at - in C3!",
           "mission": {
             "kind": "sell",
-            "item": "Grain",
+            "item": "Weed",
             "pickupCell": null,
-            "deliverCell": "C6",
-            "category": "Grain",
+            "deliverCell": "C3",
+            "category": "Weed",
             "modifier": "-",
             "target": null,
             "name": "Jensen Huang’s Job"
@@ -964,13 +901,13 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Grain at - in C6",
+      "actionText": "(QUEST_ICON)! Sell Weed at - in C3!",
       "mission": {
         "kind": "sell",
-        "item": "Grain",
+        "item": "Weed",
         "pickupCell": null,
-        "deliverCell": "C6",
-        "category": "Grain",
+        "deliverCell": "C3",
+        "category": "Weed",
         "modifier": "-",
         "target": null,
         "name": "Jensen Huang’s Job"
@@ -980,11 +917,11 @@
     {
       "id": "pat_17",
       "name": "Bernie Sanders",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
       "bio": "“Once again asking.”",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "2(R)+1",
       "friendlyFavor": [
         "DSA",
         "-MAGA"
@@ -997,22 +934,22 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "payoff",
+          "type": "combat",
           "reward": "9(d)"
         },
         {
           "condition": "=0",
           "type": "mission_request",
-          "actionText": "Pick up a cooler of molly in B5 and Deliver to C5",
+          "actionText": "Pick up Cooler of Molly at F1 and deliver to A5!",
           "mission": {
             "kind": "delivery",
-            "item": "a cooler of molly",
-            "pickupCell": "B5",
-            "deliverCell": "C5",
-            "category": "Marble",
+            "item": "Cooler of Molly",
+            "pickupCell": "F1",
+            "deliverCell": "A5",
+            "category": "Party",
             "modifier": null,
             "target": null,
-            "cargoSize": 1,
+            "cargoSize": 2,
             "payoutTable": [
               80,
               61,
@@ -1020,24 +957,33 @@
               35,
               26
             ],
-            "name": "Bernie Sanders’s Job"
-          }
+            "name": "Bernie Sanders’s Job",
+            "blocks": 2,
+            "fencedSell": [
+              80,
+              61,
+              46,
+              35,
+              26
+            ]
+          },
+          "friendlyReward": "35(d)"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Pick up a cooler of molly in B5 and Deliver to C5",
+      "actionText": "(QUEST_ICON)! Pick up Cooler of Molly at F1 and deliver to A5!",
       "mission": {
         "kind": "delivery",
-        "item": "a cooler of molly",
-        "pickupCell": "B5",
-        "deliverCell": "C5",
-        "category": "Marble",
+        "item": "Cooler of Molly",
+        "pickupCell": "F1",
+        "deliverCell": "A5",
+        "category": "Party",
         "modifier": null,
         "target": null,
-        "cargoSize": 1,
+        "cargoSize": 2,
         "payoutTable": [
           80,
           61,
@@ -1045,18 +991,26 @@
           35,
           26
         ],
-        "name": "Bernie Sanders’s Job"
+        "name": "Bernie Sanders’s Job",
+        "blocks": 2,
+        "fencedSell": [
+          80,
+          61,
+          46,
+          35,
+          26
+        ]
       },
       "tier": "t2"
     },
     {
       "id": "pat_18",
       "name": "Cornel West",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
       "bio": "“Philosopher, preacher, perennial candidate.”",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "3(R)",
       "friendlyFavor": [
         "DSA",
         "-MAGA"
@@ -1073,56 +1027,26 @@
         },
         {
           "condition": "=-1",
-          "type": "mission_strict",
-          "actionText": "Kill a Cop in Combat",
-          "mission": {
-            "kind": "kill",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": null,
-            "modifier": null,
-            "target": null,
-            "targetDeck": "Legiones",
-            "name": "Cornel West’s Job"
-          }
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
-          "type": "mission_offer",
-          "actionText": "Pick up a duffel of Humboldt in B5 and Deliver to F6",
-          "mission": {
-            "kind": "delivery",
-            "item": "a duffel of Humboldt",
-            "pickupCell": "B5",
-            "deliverCell": "F6",
-            "category": "Grain",
-            "modifier": null,
-            "target": null,
-            "cargoSize": 1,
-            "payoutTable": [
-              8,
-              7,
-              5,
-              4,
-              3
-            ],
-            "name": "Cornel West’s Job"
-          }
+          "type": "deck_quest_offer",
+          "friendlyReward": "18(d)"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Pick up a cooler of molly in C6 and Deliver to F2",
+          "actionText": "Pick up Cooler of Molly at D1 and deliver to D5?",
           "mission": {
             "kind": "delivery",
-            "item": "a cooler of molly",
-            "pickupCell": "C6",
-            "deliverCell": "F2",
-            "category": "Marble",
+            "item": "Cooler of Molly",
+            "pickupCell": "D1",
+            "deliverCell": "D5",
+            "category": "Party",
             "modifier": null,
             "target": null,
-            "cargoSize": 1,
+            "cargoSize": 2,
             "payoutTable": [
               80,
               61,
@@ -1130,53 +1054,70 @@
               35,
               26
             ],
-            "name": "Cornel West’s Job"
-          }
+            "name": "Cornel West’s Job",
+            "blocks": 2,
+            "fencedSell": [
+              80,
+              61,
+              46,
+              35,
+              26
+            ]
+          },
+          "friendlyReward": "29(d)"
         },
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell one Marble from Mkt at > Scarcity",
+          "actionText": "Buy any Mkt Party at -?",
           "mission": {
             "kind": "buy_from_npc",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Marble",
-            "modifier": ">",
+            "category": "Party",
+            "modifier": "-",
             "target": "Market"
           }
         }
       ],
-      "actionText": "Pick up a duffel of Humboldt in B5 and Deliver to F6",
+      "actionText": "(QUEST_ICON)? Pick up Cooler of Molly at D1 and deliver to D5? • [?] Buy any Mkt Party at -?",
       "mission": {
         "kind": "delivery",
-        "item": "a duffel of Humboldt",
-        "pickupCell": "B5",
-        "deliverCell": "F6",
-        "category": "Grain",
+        "item": "Cooler of Molly",
+        "pickupCell": "D1",
+        "deliverCell": "D5",
+        "category": "Party",
         "modifier": null,
         "target": null,
-        "cargoSize": 1,
+        "cargoSize": 2,
         "payoutTable": [
-          8,
-          7,
-          5,
-          4,
-          3
+          80,
+          61,
+          46,
+          35,
+          26
         ],
-        "name": "Cornel West’s Job"
+        "name": "Cornel West’s Job",
+        "blocks": 2,
+        "fencedSell": [
+          80,
+          61,
+          46,
+          35,
+          26
+        ]
       },
       "tier": "t2"
     },
     {
       "id": "pat_19",
       "name": "Drag Queen",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
       "bio": "“Story hour starts at midnight.”",
-      "combatFormula": "X(R)-1-1",
+      "combatFormula": "2(R)-1",
       "friendlyFavor": [
         "DSA",
         "-ISIS",
@@ -1190,47 +1131,36 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "payoff",
+          "type": "combat",
           "reward": "Cheapest Weed"
         },
         {
           "condition": "=0",
-          "type": "mission_offer",
-          "actionText": "Sell Marble at - in A4",
-          "mission": {
-            "kind": "sell",
-            "item": "Marble",
-            "pickupCell": null,
-            "deliverCell": "A4",
-            "category": "Marble",
-            "modifier": "-",
-            "target": null,
-            "name": "Drag Queen’s Job"
-          }
+          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Grain at - in E2",
+          "actionText": "Sell Weed at - in E5?",
           "mission": {
             "kind": "sell",
-            "item": "Grain",
+            "item": "Weed",
             "pickupCell": null,
-            "deliverCell": "E2",
-            "category": "Grain",
+            "deliverCell": "E5",
+            "category": "Weed",
             "modifier": "-",
             "target": null,
             "name": "Drag Queen’s Job"
           }
         }
       ],
-      "actionText": "Sell Marble at - in A4",
+      "actionText": "(QUEST_ICON)? Sell Weed at - in E5?",
       "mission": {
         "kind": "sell",
-        "item": "Marble",
+        "item": "Weed",
         "pickupCell": null,
-        "deliverCell": "A4",
-        "category": "Marble",
+        "deliverCell": "E5",
+        "category": "Weed",
         "modifier": "-",
         "target": null,
         "name": "Drag Queen’s Job"
@@ -1240,11 +1170,11 @@
     {
       "id": "pat_20",
       "name": "Tenured Professor",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
       "bio": "“Has a theory about you.”",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "(R)+1",
       "friendlyFavor": [
         "DSA",
         "-ISIS"
@@ -1262,39 +1192,16 @@
         },
         {
           "condition": "=-1",
-          "type": "mission_strict",
-          "actionText": "Kill a Celebrity in Combat",
-          "mission": {
-            "kind": "kill",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": null,
-            "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
-            "name": "Tenured Professor’s Job"
-          }
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
-          "type": "mission_request",
-          "actionText": "Sell Marble at - in E4",
-          "mission": {
-            "kind": "sell",
-            "item": "Marble",
-            "pickupCell": null,
-            "deliverCell": "E4",
-            "category": "Marble",
-            "modifier": "-",
-            "target": null,
-            "name": "Tenured Professor’s Job"
-          }
+          "type": "deck_quest_demand"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Kill a Celebrity in Combat",
+          "actionText": "Kill a Cop?",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -1302,21 +1209,22 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
+            "target": "Cops",
+            "targetDeck": "Celebrities",
             "name": "Tenured Professor’s Job"
           }
         }
       ],
-      "actionText": "Sell Marble at - in E4",
+      "actionText": "(QUEST_ICON)? Kill a Cop?",
       "mission": {
-        "kind": "sell",
-        "item": "Marble",
+        "kind": "kill",
+        "item": null,
         "pickupCell": null,
-        "deliverCell": "E4",
-        "category": "Marble",
-        "modifier": "-",
-        "target": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "Cops",
+        "targetDeck": "Celebrities",
         "name": "Tenured Professor’s Job"
       },
       "tier": "gen"
@@ -1324,11 +1232,11 @@
     {
       "id": "pat_21",
       "name": "Indie Podcaster",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
       "bio": "“This episode is sponsored by you.”",
-      "combatFormula": "X(R)+1-1",
+      "combatFormula": "3(R)-(R)",
       "friendlyFavor": [
         "DSA",
         "-ISIS",
@@ -1346,41 +1254,39 @@
         },
         {
           "condition": "=-1",
-          "type": "mission_strict",
-          "actionText": "Sell Grain at - in E1",
-          "mission": {
-            "kind": "sell",
-            "item": "Grain",
-            "pickupCell": null,
-            "deliverCell": "E1",
-            "category": "Grain",
-            "modifier": "-",
-            "target": null,
-            "name": "Indie Podcaster’s Job"
-          }
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
           "type": "mission_offer",
-          "actionText": "Pick up a duffel of Humboldt in C4 and Deliver to C2",
+          "actionText": "Pick up Humboldt Duffel at E6 and deliver to A2?",
           "mission": {
             "kind": "delivery",
-            "item": "a duffel of Humboldt",
-            "pickupCell": "C4",
-            "deliverCell": "C2",
-            "category": "Grain",
+            "item": "Humboldt Duffel",
+            "pickupCell": "E6",
+            "deliverCell": "A2",
+            "category": "Weed",
             "modifier": null,
             "target": null,
             "cargoSize": 1,
             "payoutTable": [
+              12,
+              10,
               8,
-              7,
-              5,
-              4,
-              3
+              6,
+              4
             ],
-            "name": "Indie Podcaster’s Job"
-          }
+            "name": "Indie Podcaster’s Job",
+            "blocks": 1,
+            "fencedSell": [
+              12,
+              10,
+              8,
+              6,
+              4
+            ]
+          },
+          "friendlyReward": "23(d)"
         },
         {
           "condition": ">=1",
@@ -1389,47 +1295,55 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Buy one Marble at ++ Scarcity",
+          "actionText": "Sell Party at ++?",
           "mission": {
             "kind": "sell",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Marble",
+            "category": "Party",
             "modifier": "++",
             "target": null
           }
         }
       ],
-      "actionText": "Pick up a duffel of Humboldt in C4 and Deliver to C2",
+      "actionText": "(QUEST_ICON)? Pick up Humboldt Duffel at E6 and deliver to A2? • [?] Sell Party at ++?",
       "mission": {
         "kind": "delivery",
-        "item": "a duffel of Humboldt",
-        "pickupCell": "C4",
-        "deliverCell": "C2",
-        "category": "Grain",
+        "item": "Humboldt Duffel",
+        "pickupCell": "E6",
+        "deliverCell": "A2",
+        "category": "Weed",
         "modifier": null,
         "target": null,
         "cargoSize": 1,
         "payoutTable": [
+          12,
+          10,
           8,
-          7,
-          5,
-          4,
-          3
+          6,
+          4
         ],
-        "name": "Indie Podcaster’s Job"
+        "name": "Indie Podcaster’s Job",
+        "blocks": 1,
+        "fencedSell": [
+          12,
+          10,
+          8,
+          6,
+          4
+        ]
       },
       "tier": "gen"
     },
     {
       "id": "pat_22",
-      "name": "Burning Man Artist",
-      "deck": "Patricii",
+      "name": "Burning Guy Artist",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
       "bio": "“Still finding playa dust.”",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "2",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -1444,31 +1358,40 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "payoff",
+          "type": "combat",
           "reward": "6(d)"
         },
         {
           "condition": "=0",
           "type": "mission_request",
-          "actionText": "Pick up a duffel of Humboldt in C5 and Deliver to C1",
+          "actionText": "Pick up Humboldt Duffel at E2 and deliver to B4!",
           "mission": {
             "kind": "delivery",
-            "item": "a duffel of Humboldt",
-            "pickupCell": "C5",
-            "deliverCell": "C1",
-            "category": "Grain",
+            "item": "Humboldt Duffel",
+            "pickupCell": "E2",
+            "deliverCell": "B4",
+            "category": "Weed",
             "modifier": null,
             "target": null,
             "cargoSize": 1,
             "payoutTable": [
+              12,
+              10,
               8,
-              7,
-              5,
-              4,
-              3
+              6,
+              4
             ],
-            "name": "Burning Man Artist’s Job"
-          }
+            "name": "Burning Guy Artist’s Job",
+            "blocks": 1,
+            "fencedSell": [
+              12,
+              10,
+              8,
+              6,
+              4
+            ]
+          },
+          "friendlyReward": "18(d)"
         },
         {
           "condition": ">=1",
@@ -1477,47 +1400,55 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Buy one Marble at ++ Scarcity",
+          "actionText": "Sell Party at ++?",
           "mission": {
             "kind": "sell",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Marble",
+            "category": "Party",
             "modifier": "++",
             "target": null
           }
         }
       ],
-      "actionText": "Pick up a duffel of Humboldt in C5 and Deliver to C1",
+      "actionText": "(QUEST_ICON)! Pick up Humboldt Duffel at E2 and deliver to B4! • [?] Sell Party at ++?",
       "mission": {
         "kind": "delivery",
-        "item": "a duffel of Humboldt",
-        "pickupCell": "C5",
-        "deliverCell": "C1",
-        "category": "Grain",
+        "item": "Humboldt Duffel",
+        "pickupCell": "E2",
+        "deliverCell": "B4",
+        "category": "Weed",
         "modifier": null,
         "target": null,
         "cargoSize": 1,
         "payoutTable": [
+          12,
+          10,
           8,
-          7,
-          5,
-          4,
-          3
+          6,
+          4
         ],
-        "name": "Burning Man Artist’s Job"
+        "name": "Burning Guy Artist’s Job",
+        "blocks": 1,
+        "fencedSell": [
+          12,
+          10,
+          8,
+          6,
+          4
+        ]
       },
       "tier": "gen"
     },
     {
       "id": "pat_23",
       "name": "Muralist",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
       "bio": "“Painted your face on a wall. You’re welcome.”",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "2(R)-(R)",
       "friendlyFavor": [
         "DSA",
         "-ISIS",
@@ -1533,19 +1464,19 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "payoff",
+          "type": "combat",
           "reward": "+1 Influence"
         },
         {
           "condition": "=0",
           "type": "mission_request",
-          "actionText": "Sell Grain at - in E3",
+          "actionText": "Sell Weed at - in C4!",
           "mission": {
             "kind": "sell",
-            "item": "Grain",
+            "item": "Weed",
             "pickupCell": null,
-            "deliverCell": "E3",
-            "category": "Grain",
+            "deliverCell": "C4",
+            "category": "Weed",
             "modifier": "-",
             "target": null,
             "name": "Muralist’s Job"
@@ -1558,25 +1489,25 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell one Marble from Mkt at > Scarcity",
+          "actionText": "Buy any Mkt Party at -?",
           "mission": {
             "kind": "buy_from_npc",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Marble",
-            "modifier": ">",
+            "category": "Party",
+            "modifier": "-",
             "target": "Market"
           }
         }
       ],
-      "actionText": "Sell Grain at - in E3",
+      "actionText": "(QUEST_ICON)! Sell Weed at - in C4! • [?] Buy any Mkt Party at -?",
       "mission": {
         "kind": "sell",
-        "item": "Grain",
+        "item": "Weed",
         "pickupCell": null,
-        "deliverCell": "E3",
-        "category": "Grain",
+        "deliverCell": "C4",
+        "category": "Weed",
         "modifier": "-",
         "target": null,
         "name": "Muralist’s Job"
@@ -1586,11 +1517,11 @@
     {
       "id": "pat_24",
       "name": "Climate Activist",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "DSA",
       "bio": "“Glued to the Bay Bridge since Tuesday.”",
-      "combatFormula": "X(R)-1-1",
+      "combatFormula": "2(R)",
       "friendlyFavor": [
         "DSA",
         "-ISIS",
@@ -1610,23 +1541,12 @@
         },
         {
           "condition": "=-1",
-          "type": "mission_strict",
-          "actionText": "Sell Marble at - in B4",
-          "mission": {
-            "kind": "sell",
-            "item": "Marble",
-            "pickupCell": null,
-            "deliverCell": "B4",
-            "category": "Marble",
-            "modifier": "-",
-            "target": null,
-            "name": "Climate Activist’s Job"
-          }
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
           "type": "mission_request",
-          "actionText": "Kill a Celebrity in Combat",
+          "actionText": "Kill a Cop!",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -1634,8 +1554,8 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
+            "target": "Cops",
+            "targetDeck": "Celebrities",
             "name": "Climate Activist’s Job"
           }
         },
@@ -1644,7 +1564,7 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "(QUEST_ICON)! Kill a Cop!",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -1652,8 +1572,8 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
+        "target": "Cops",
+        "targetDeck": "Celebrities",
         "name": "Climate Activist’s Job"
       },
       "tier": "gen"
@@ -1661,11 +1581,11 @@
     {
       "id": "pat_25",
       "name": "Crypto Influencer",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
       "bio": "“This is not financial advice.”",
-      "combatFormula": "X(R)-X-1",
+      "combatFormula": "4",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -1680,47 +1600,36 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "payoff",
+          "type": "combat",
           "reward": "10(d)"
         },
         {
           "condition": "=0",
-          "type": "mission_request",
-          "actionText": "Sell Grain at + in C1",
-          "mission": {
-            "kind": "sell",
-            "item": "Grain",
-            "pickupCell": null,
-            "deliverCell": "C1",
-            "category": "Grain",
-            "modifier": "+",
-            "target": null,
-            "name": "Crypto Influencer’s Job"
-          }
+          "type": "deck_quest_demand"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Marble at + in A3",
+          "actionText": "Sell Party at + in D5?",
           "mission": {
             "kind": "sell",
-            "item": "Marble",
+            "item": "Party",
             "pickupCell": null,
-            "deliverCell": "A3",
-            "category": "Marble",
+            "deliverCell": "D5",
+            "category": "Party",
             "modifier": "+",
             "target": null,
             "name": "Crypto Influencer’s Job"
           }
         }
       ],
-      "actionText": "Sell Grain at + in C1",
+      "actionText": "(QUEST_ICON)? Sell Party at + in D5?",
       "mission": {
         "kind": "sell",
-        "item": "Grain",
+        "item": "Party",
         "pickupCell": null,
-        "deliverCell": "C1",
-        "category": "Grain",
+        "deliverCell": "D5",
+        "category": "Party",
         "modifier": "+",
         "target": null,
         "name": "Crypto Influencer’s Job"
@@ -1730,18 +1639,18 @@
     {
       "id": "pat_26",
       "name": "Startup Founder",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
-      "bio": "“It’s like Uber, but for you.”",
-      "combatFormula": "X(R)-1-1",
+      "bio": "“It’s like Oober, but for you.”",
+      "combatFormula": "(R)+3",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
         "MAGA",
         "-DSA"
       ],
-      "friendlyReward": "Cheapest Party Drugs",
+      "friendlyReward": "Cheapest Party",
       "hostileFavor": [
         "-TECH",
         "DSA"
@@ -1750,13 +1659,13 @@
       "reactions": [
         {
           "condition": "<=-1",
-          "type": "payoff",
+          "type": "combat",
           "reward": "Cheapest Weed"
         },
         {
           "condition": "=0",
           "type": "mission_strict",
-          "actionText": "Kill a Celebrity in Combat",
+          "actionText": "Kill a Cop!!",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -1764,8 +1673,8 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
+            "target": "Cops",
+            "targetDeck": "Celebrities",
             "name": "Startup Founder’s Job"
           }
         },
@@ -1774,7 +1683,7 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "(QUEST_ICON)!! Kill a Cop!!",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -1782,8 +1691,8 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
+        "target": "Cops",
+        "targetDeck": "Celebrities",
         "name": "Startup Founder’s Job"
       },
       "tier": "gen"
@@ -1791,11 +1700,11 @@
     {
       "id": "pat_27",
       "name": "AI Ethicist",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "TECH",
       "bio": "“Concerned, professionally.”",
-      "combatFormula": "X(R)-X-1",
+      "combatFormula": "2(R)+2",
       "friendlyFavor": [
         "TECH"
       ],
@@ -1811,29 +1720,18 @@
         },
         {
           "condition": "=-1",
-          "type": "mission_strict",
-          "actionText": "Sell Animals at + in C5",
-          "mission": {
-            "kind": "sell",
-            "item": "Animals",
-            "pickupCell": null,
-            "deliverCell": "C5",
-            "category": "Animals",
-            "modifier": "+",
-            "target": null,
-            "name": "AI Ethicist’s Job"
-          }
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
           "type": "mission_strict",
-          "actionText": "Sell Marble at + in F6",
+          "actionText": "Sell Party at + in B5!!",
           "mission": {
             "kind": "sell",
-            "item": "Marble",
+            "item": "Party",
             "pickupCell": null,
-            "deliverCell": "F6",
-            "category": "Marble",
+            "deliverCell": "B5",
+            "category": "Party",
             "modifier": "+",
             "target": null,
             "name": "AI Ethicist’s Job"
@@ -1844,13 +1742,13 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Marble at + in F6",
+      "actionText": "(QUEST_ICON)!! Sell Party at + in B5!!",
       "mission": {
         "kind": "sell",
-        "item": "Marble",
+        "item": "Party",
         "pickupCell": null,
-        "deliverCell": "F6",
-        "category": "Marble",
+        "deliverCell": "B5",
+        "category": "Party",
         "modifier": "+",
         "target": null,
         "name": "AI Ethicist’s Job"
@@ -1860,11 +1758,11 @@
     {
       "id": "pat_28",
       "name": "Edgelord Streamer",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Smash that like button.”",
-      "combatFormula": "X(R)-1-1",
+      "combatFormula": "(R)",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -1880,29 +1778,18 @@
         },
         {
           "condition": "=0",
-          "type": "mission_strict",
-          "actionText": "Sell Weapons at + in B2",
-          "mission": {
-            "kind": "sell",
-            "item": "Weapons",
-            "pickupCell": null,
-            "deliverCell": "B2",
-            "category": "Weapons",
-            "modifier": "+",
-            "target": null,
-            "name": "Edgelord Streamer’s Job"
-          }
+          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Pick up a shoebox of fentanyl in E1 and Deliver to E5",
+          "actionText": "Pick up Fentanyl Box at A3 and deliver to F5?",
           "mission": {
             "kind": "delivery",
-            "item": "a shoebox of fentanyl",
-            "pickupCell": "E1",
-            "deliverCell": "E5",
-            "category": "Wine",
+            "item": "Fentanyl Box",
+            "pickupCell": "A3",
+            "deliverCell": "F5",
+            "category": "Opiates",
             "modifier": null,
             "target": null,
             "cargoSize": 1,
@@ -1913,27 +1800,52 @@
               17,
               13
             ],
-            "name": "Edgelord Streamer’s Job"
-          }
+            "name": "Edgelord Streamer’s Job",
+            "blocks": 1,
+            "fencedSell": [
+              54,
+              37,
+              23,
+              17,
+              13
+            ]
+          },
+          "friendlyReward": "52(d)"
         }
       ],
-      "actionText": "Sell Weapons at + in B2",
+      "actionText": "(QUEST_ICON)? Pick up Fentanyl Box at A3 and deliver to F5?",
       "mission": {
-        "kind": "sell",
-        "item": "Weapons",
-        "pickupCell": null,
-        "deliverCell": "B2",
-        "category": "Weapons",
-        "modifier": "+",
+        "kind": "delivery",
+        "item": "Fentanyl Box",
+        "pickupCell": "A3",
+        "deliverCell": "F5",
+        "category": "Opiates",
+        "modifier": null,
         "target": null,
-        "name": "Edgelord Streamer’s Job"
+        "cargoSize": 1,
+        "payoutTable": [
+          54,
+          37,
+          23,
+          17,
+          13
+        ],
+        "name": "Edgelord Streamer’s Job",
+        "blocks": 1,
+        "fencedSell": [
+          54,
+          37,
+          23,
+          17,
+          13
+        ]
       },
       "tier": "gen"
     },
     {
       "id": "pat_29",
       "name": "Brutta Figura",
-      "deck": "Patricii",
+      "deck": "Celebrities",
       "type": "event",
       "faction": null,
       "bio": null,
@@ -1948,12 +1860,12 @@
     },
     {
       "id": "pat_30",
-      "name": "Radicalized YouTuber",
-      "deck": "Patricii",
+      "name": "Radicalized YouToober",
+      "deck": "Celebrities",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Did his own research.”",
-      "combatFormula": "X(R)+1-1",
+      "combatFormula": "1",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -1970,12 +1882,12 @@
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Weapons at + in E3",
+          "actionText": "Sell Weapons at + in F5?",
           "mission": {
             "kind": "sell",
             "item": "Weapons",
             "pickupCell": null,
-            "deliverCell": "E3",
+            "deliverCell": "F5",
             "category": "Weapons",
             "modifier": "+",
             "target": null,
@@ -1985,7 +1897,7 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Buy one Weapon at + Scarcity",
+          "actionText": "Sell Weapons at +?",
           "mission": {
             "kind": "sell",
             "item": null,
@@ -1997,37 +1909,29 @@
           }
         }
       ],
-      "actionText": "Pick up a crate of ARs in F6 and Deliver to E1",
+      "actionText": "(QUEST_ICON)? Sell Weapons at + in F5? • [?] Sell Weapons at +?",
       "mission": {
-        "kind": "delivery",
-        "item": "a crate of ARs",
-        "pickupCell": "F6",
-        "deliverCell": "E1",
+        "kind": "sell",
+        "item": "Weapons",
+        "pickupCell": null,
+        "deliverCell": "F5",
         "category": "Weapons",
-        "modifier": null,
+        "modifier": "+",
         "target": null,
-        "cargoSize": 2,
-        "payoutTable": [
-          42,
-          32,
-          24,
-          18,
-          12
-        ],
         "name": "Radicalized YouTuber’s Job"
       },
       "tier": "gen"
     }
   ],
-  "legiones": [
+  "cops": [
     {
       "id": "leg_1",
       "name": "Mayor Lurie",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "TECH",
       "bio": "“Let’s go, San Francisco.”",
-      "combatFormula": "6X(R)+1",
+      "combatFormula": "3X(R)",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -2048,12 +1952,7 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
-        },
-        {
-          "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
+          "actionText": "Give me all of your Opiates!!"
         },
         {
           "condition": "=0",
@@ -2062,13 +1961,13 @@
         {
           "condition": ">=1",
           "type": "mission_strict",
-          "actionText": "Sell Animals at ++ in E1",
+          "actionText": "Sell Uppers at ++ in E3!!",
           "mission": {
             "kind": "sell",
-            "item": "Animals",
+            "item": "Uppers",
             "pickupCell": null,
-            "deliverCell": "E1",
-            "category": "Animals",
+            "deliverCell": "E3",
+            "category": "Uppers",
             "modifier": "++",
             "target": null,
             "name": "Mayor Lurie’s Job"
@@ -2076,37 +1975,36 @@
         },
         {
           "condition": ">=2",
-          "type": "offer",
-          "actionText": "?: Will Sell one Animal from Mkt at > Scarcity",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Animals",
-            "modifier": ">",
-            "target": "Market"
-          }
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)!! Sell Uppers at ++ in E3!!",
+      "mission": {
+        "kind": "sell",
+        "item": "Uppers",
+        "pickupCell": null,
+        "deliverCell": "E3",
+        "category": "Uppers",
+        "modifier": "++",
+        "target": null,
+        "name": "Mayor Lurie’s Job"
+      },
       "tier": "top"
     },
     {
       "id": "leg_2",
       "name": "Scott Wiener",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "TECH",
       "bio": "“SF’s first openly gay Congressman.”",
-      "combatFormula": "X(R)-X+1",
+      "combatFormula": "X(R)+3",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
         "MAGA"
       ],
-      "friendlyReward": "Cheapest Party Drugs",
+      "friendlyReward": "Cheapest Party",
       "hostileFavor": [
         "-TECH",
         "-MAGA",
@@ -2121,12 +2019,7 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
-        },
-        {
-          "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
+          "actionText": "Give me all of your Uppers!!"
         },
         {
           "condition": "=0",
@@ -2135,7 +2028,7 @@
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Kill a Celebrity in Combat",
+          "actionText": "Kill a Cop?",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -2143,24 +2036,34 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
+            "target": "Cops",
+            "targetDeck": "Celebrities",
             "name": "Scott Wiener’s Job"
           }
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Kill a Cop?",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "Cops",
+        "targetDeck": "Celebrities",
+        "name": "Scott Wiener’s Job"
+      },
       "tier": "t2"
     },
     {
       "id": "leg_3",
       "name": "Paul Graham",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "TECH",
       "bio": "“Has an essay about this.”",
-      "combatFormula": "X(R)-1+1",
+      "combatFormula": "X(R)+X+1",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -2182,12 +2085,7 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
-        },
-        {
-          "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
+          "actionText": "Give me all of your Uppers!!"
         },
         {
           "condition": "=0",
@@ -2196,7 +2094,7 @@
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Kill a Celebrity in Combat",
+          "actionText": "Kill a Cop?",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -2204,24 +2102,34 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
+            "target": "Cops",
+            "targetDeck": "Celebrities",
             "name": "Paul Graham’s Job"
           }
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Kill a Cop?",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "Cops",
+        "targetDeck": "Celebrities",
+        "name": "Paul Graham’s Job"
+      },
       "tier": "t2"
     },
     {
       "id": "leg_4",
       "name": "FBI",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "TECH",
       "bio": "“We’ve been reading your texts.”",
-      "combatFormula": "2X(R)-1+1",
+      "combatFormula": "X(R)+2X",
       "friendlyFavor": [
         "TECH",
         "-ISIS"
@@ -2234,53 +2142,62 @@
       "combatReward": "21(d)",
       "reactions": [
         {
-          "condition": "<=-2",
+          "condition": "<-1",
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "condition": "-1..0",
+          "type": "combat",
+          "ifCarrying": "Weapons or Uppers"
         },
         {
-          "condition": "=0",
+          "condition": "=1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "actionText": "Give me all of your Weapons!!"
         },
         {
-          "condition": ">=1",
+          "condition": ">=2",
           "type": "mission_offer",
-          "actionText": "?: Sell Grain at + in F6",
+          "actionText": "Sell Weed at + in F2?",
           "mission": {
             "kind": "sell",
-            "item": "Grain",
+            "item": "Weed",
             "pickupCell": null,
-            "deliverCell": "F6",
-            "category": "Grain",
+            "deliverCell": "F2",
+            "category": "Weed",
             "modifier": "+",
             "target": null,
             "name": "FBI’s Job"
           }
         }
       ],
-      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Weapons!! • (QUEST_ICON)? Sell Weed at + in F2?",
+      "mission": {
+        "kind": "sell",
+        "item": "Weed",
+        "pickupCell": null,
+        "deliverCell": "F2",
+        "category": "Weed",
+        "modifier": "+",
+        "target": null,
+        "name": "FBI’s Job"
+      },
       "tier": "t1"
     },
     {
       "id": "leg_5",
       "name": "CIA",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "TECH",
       "bio": "“This encounter never happened.”",
-      "combatFormula": "2X(R)-1+1",
+      "combatFormula": "2X(R)+X",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
         "-DSA"
       ],
-      "friendlyReward": "Cheapest Party Drugs",
+      "friendlyReward": "Cheapest Party",
       "hostileFavor": [
         "-TECH",
         "-MAGA",
@@ -2294,13 +2211,7 @@
         },
         {
           "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
-        },
-        {
-          "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
@@ -2309,25 +2220,25 @@
         {
           "condition": "1..2",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "actionText": "Give me all of your Weapons!!"
         },
         {
           "condition": ">=3",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
+      "actionText": "[!!] Give me all of your Weapons!!",
       "mission": null,
       "tier": "t1"
     },
     {
       "id": "leg_6",
       "name": "Meter Maid",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "TECH",
       "bio": "“You can’t park there.”",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "X(R)-X",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -2348,18 +2259,18 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "actionText": "Give me all of your Uppers!!"
         },
         {
           "condition": "=0",
           "type": "mission_strict",
-          "actionText": "Sell Marble at + in E5",
+          "actionText": "Sell Party at + in D3!!",
           "mission": {
             "kind": "sell",
-            "item": "Marble",
+            "item": "Party",
             "pickupCell": null,
-            "deliverCell": "E5",
-            "category": "Marble",
+            "deliverCell": "D3",
+            "category": "Party",
             "modifier": "+",
             "target": null,
             "name": "Meter Maid’s Job"
@@ -2370,13 +2281,13 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Marble at + in E5",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)!! Sell Party at + in D3!!",
       "mission": {
         "kind": "sell",
-        "item": "Marble",
+        "item": "Party",
         "pickupCell": null,
-        "deliverCell": "E5",
-        "category": "Marble",
+        "deliverCell": "D3",
+        "category": "Party",
         "modifier": "+",
         "target": null,
         "name": "Meter Maid’s Job"
@@ -2386,11 +2297,11 @@
     {
       "id": "leg_7",
       "name": "Traffic Cop",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "TECH",
       "bio": "“License and registration.”",
-      "combatFormula": "X(R)-X",
+      "combatFormula": "2X(R)-2",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -2410,57 +2321,52 @@
           "type": "combat"
         },
         {
-          "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)"
+          "condition": "-1..0",
+          "type": "combat",
+          "ifCarrying": "Party"
         },
         {
-          "condition": "=0",
+          "condition": "=1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)"
+          "actionText": "Give me all of your Party!!"
         },
         {
-          "condition": ">=1",
+          "condition": ">=2",
           "type": "mission_offer",
-          "actionText": "?: Sell Animals at + in D1",
+          "actionText": "Sell Uppers at + in C1?",
           "mission": {
             "kind": "sell",
-            "item": "Animals",
+            "item": "Uppers",
             "pickupCell": null,
-            "deliverCell": "D1",
-            "category": "Animals",
+            "deliverCell": "C1",
+            "category": "Uppers",
             "modifier": "+",
             "target": null,
             "name": "Traffic Cop’s Job"
           }
-        },
-        {
-          "condition": ">=2",
-          "type": "offer",
-          "actionText": "?: Will Sell the top card of the Goods deck for 10(d) (unless Infl, decide without looking)",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": "Top card of Goods deck",
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Any",
-            "modifier": "10(d)",
-            "target": "Goods deck"
-          }
         }
       ],
-      "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Party!! • (QUEST_ICON)? Sell Uppers at + in C1?",
+      "mission": {
+        "kind": "sell",
+        "item": "Uppers",
+        "pickupCell": null,
+        "deliverCell": "C1",
+        "category": "Uppers",
+        "modifier": "+",
+        "target": null,
+        "name": "Traffic Cop’s Job"
+      },
       "tier": "traffic"
     },
     {
       "id": "leg_8",
       "name": "Rookie",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "TECH",
       "bio": "“First night on the job.”",
-      "combatFormula": "X",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -2475,18 +2381,19 @@
       "combatReward": "5(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
-        },
-        {
-          "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "condition": "<0",
+          "type": "combat",
+          "ifCarrying": "Weed or Party"
         },
         {
           "condition": "=0",
+          "type": "demand_strict",
+          "actionText": "Give me all of your Uppers!!"
+        },
+        {
+          "condition": "=1",
           "type": "mission_strict",
-          "actionText": "Kill a Celebrity in Combat",
+          "actionText": "Kill a Cop!!",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -2494,17 +2401,17 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
+            "target": "Cops",
+            "targetDeck": "Celebrities",
             "name": "Rookie’s Job"
           }
         },
         {
-          "condition": ">=1",
+          "condition": ">=2",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)!! Kill a Cop!!",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -2512,8 +2419,8 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
+        "target": "Cops",
+        "targetDeck": "Celebrities",
         "name": "Rookie’s Job"
       },
       "tier": "rookie"
@@ -2521,19 +2428,18 @@
     {
       "id": "leg_9",
       "name": "Nayib Bukele",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MS13",
       "bio": "“Zero percent homicide rate, one hundred percent megaprison.”",
-      "combatFormula": "3X(R)+2X+1",
+      "combatFormula": "3X",
       "friendlyFavor": [
         "MS13",
         "-MAGA"
       ],
       "friendlyReward": "29(d) & Cheapest Uppers",
       "hostileFavor": [
-        "-MS13",
-        "-TECH"
+        "-MS13"
       ],
       "combatReward": "29(d)",
       "reactions": [
@@ -2543,46 +2449,33 @@
         },
         {
           "condition": "=0",
-          "type": "mission_strict",
-          "actionText": "Kill a Criminal in Combat",
-          "mission": {
-            "kind": "kill",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": null,
-            "modifier": null,
-            "target": null,
-            "targetDeck": "Nefarii",
-            "name": "Nayib Bukele’s Job"
-          }
+          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
-          "type": "mission_request",
-          "actionText": "Sell Wine at ++ in A4",
+          "type": "mission_offer",
+          "actionText": "Sell Opiates at ++ in E6?",
           "mission": {
             "kind": "sell",
-            "item": "Wine",
+            "item": "Opiates",
             "pickupCell": null,
-            "deliverCell": "A4",
-            "category": "Wine",
+            "deliverCell": "E6",
+            "category": "Opiates",
             "modifier": "++",
             "target": null,
             "name": "Nayib Bukele’s Job"
           }
         }
       ],
-      "actionText": "Kill a Criminal in Combat",
+      "actionText": "(QUEST_ICON)? Sell Opiates at ++ in E6?",
       "mission": {
-        "kind": "kill",
-        "item": null,
+        "kind": "sell",
+        "item": "Opiates",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
+        "deliverCell": "E6",
+        "category": "Opiates",
+        "modifier": "++",
         "target": null,
-        "targetDeck": "Nefarii",
         "name": "Nayib Bukele’s Job"
       },
       "tier": "leader"
@@ -2590,16 +2483,16 @@
     {
       "id": "leg_10",
       "name": "Dirty Cop",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MS13",
       "bio": "“On two payrolls.”",
-      "combatFormula": "X(R)+X+1",
+      "combatFormula": "X(R)+2",
       "friendlyFavor": [
         "MS13",
         "-MAGA"
       ],
-      "friendlyReward": "Cheapest Party Drugs",
+      "friendlyReward": "Cheapest Party",
       "hostileFavor": [
         "-MS13",
         "-TECH"
@@ -2613,7 +2506,7 @@
         {
           "condition": "=0",
           "type": "mission_strict",
-          "actionText": "Kill a Cop in Combat",
+          "actionText": "Kill a Cop!!",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -2621,8 +2514,8 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Legiones",
+            "target": "Cops",
+            "targetDeck": "Cops",
             "name": "Dirty Cop’s Job"
           }
         },
@@ -2633,19 +2526,19 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell one Animal from Mkt at > Scarcity",
+          "actionText": "Buy any Mkt Upper at -?",
           "mission": {
             "kind": "buy_from_npc",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Animals",
-            "modifier": ">",
+            "category": "Uppers",
+            "modifier": "-",
             "target": "Market"
           }
         }
       ],
-      "actionText": "Kill a Cop in Combat",
+      "actionText": "(QUEST_ICON)!! Kill a Cop!! • [?] Buy any Mkt Upper at -?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -2653,8 +2546,8 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": null,
-        "targetDeck": "Legiones",
+        "target": "Cops",
+        "targetDeck": "Cops",
         "name": "Dirty Cop’s Job"
       },
       "tier": "t2"
@@ -2662,121 +2555,69 @@
     {
       "id": "leg_11",
       "name": "Jared Kushner",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "ISIS",
       "bio": "“‘I’ve spoken to every leader in the region.’”",
-      "combatFormula": "3X(R)+X+1",
+      "combatFormula": "2X(R)",
       "friendlyFavor": [
         "ISIS",
-        "MAGA",
-        "DSA",
-        "TECH"
+        "-TECH"
       ],
       "friendlyReward": "23(d)",
       "hostileFavor": [
         "-ISIS",
-        "MAGA"
+        "-MAGA"
       ],
       "combatReward": "17(d)",
       "reactions": [
         {
-          "condition": "<=0",
+          "condition": "<=-1",
           "type": "combat"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=2",
-          "type": "offer",
-          "actionText": "?: Will Sell the top card of the Goods deck for 10(d) (unless Infl, decide without looking)",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": "Top card of Goods deck",
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Any",
-            "modifier": "10(d)",
-            "target": "Goods deck"
-          }
-        }
-      ],
-      "actionText": "?: Will Sell the top card of the Goods deck for 10(d) (unless Infl, decide without looking)",
-      "mission": {
-        "kind": "buy_from_npc",
-        "item": "Top card of Goods deck",
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Any",
-        "modifier": "10(d)",
-        "target": "Goods deck"
-      },
-      "tier": "leader"
-    },
-    {
-      "id": "leg_12",
-      "name": "Ocasio-Cortez",
-      "deck": "Legiones",
-      "type": "character",
-      "faction": "DSA",
-      "bio": "“The Squad’s sharpest elbow.”",
-      "combatFormula": "2X(R)+1+1",
-      "friendlyFavor": [
-        "DSA",
-        "-ISIS",
-        "-MAGA"
-      ],
-      "friendlyReward": "28(d) & +1 Influence",
-      "hostileFavor": [
-        "-DSA",
-        "TECH"
-      ],
-      "combatReward": "27(d)",
-      "reactions": [
-        {
-          "condition": "<=-2",
-          "type": "combat"
-        },
-        {
-          "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
         },
         {
           "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "?: Sell Grain at - in B6",
+          "type": "mission_strict",
+          "actionText": "Kill a Cop!!",
           "mission": {
-            "kind": "sell",
-            "item": "Grain",
+            "kind": "kill",
+            "item": null,
             "pickupCell": null,
-            "deliverCell": "B6",
-            "category": "Grain",
-            "modifier": "-",
-            "target": null,
-            "name": "Ocasio-Cortez’s Job"
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": "Cops",
+            "targetDeck": "Celebrities",
+            "name": "Jared Kushner’s Job"
           }
         }
       ],
-      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
-      "mission": null,
+      "actionText": "(QUEST_ICON)!! Kill a Cop!!",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "Cops",
+        "targetDeck": "Celebrities",
+        "name": "Jared Kushner’s Job"
+      },
       "tier": "leader"
     },
     {
       "id": "leg_13",
       "name": "Dean Preston",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "DSA",
       "bio": "“Never met a rent increase he liked.”",
-      "combatFormula": "X(R)+1+1",
+      "combatFormula": "X+1",
       "friendlyFavor": [
         "DSA",
         "-ISIS",
@@ -2797,12 +2638,7 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
-        },
-        {
-          "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
+          "actionText": "Give me all of your Weapons!!"
         },
         {
           "condition": "=0",
@@ -2813,18 +2649,18 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "actionText": "[!!] Give me all of your Weapons!!",
       "mission": null,
       "tier": "t2"
     },
     {
       "id": "leg_14",
       "name": "Firefighters",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "DSA",
       "bio": "“The only cops the DSA likes.”",
-      "combatFormula": "X(R)-1+1",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "DSA",
         "-ISIS",
@@ -2843,12 +2679,7 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
-        },
-        {
-          "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
+          "actionText": "Give me all of your Uppers!!"
         },
         {
           "condition": "=0",
@@ -2857,13 +2688,13 @@
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Grain at - in C5",
+          "actionText": "Sell Weed at - in C5?",
           "mission": {
             "kind": "sell",
-            "item": "Grain",
+            "item": "Weed",
             "pickupCell": null,
             "deliverCell": "C5",
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-",
             "target": null,
             "name": "Firefighters’s Job"
@@ -2871,31 +2702,30 @@
         },
         {
           "condition": ">=2",
-          "type": "offer",
-          "actionText": "?: Will Sell one Grain from Mkt at > Scarcity",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Grain",
-            "modifier": ">",
-            "target": "Market"
-          }
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Sell Weed at - in C5?",
+      "mission": {
+        "kind": "sell",
+        "item": "Weed",
+        "pickupCell": null,
+        "deliverCell": "C5",
+        "category": "Weed",
+        "modifier": "-",
+        "target": null,
+        "name": "Firefighters’s Job"
+      },
       "tier": "gen"
     },
     {
       "id": "leg_15",
       "name": "Harmeet Dhillon",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Civil rights, selectively.”",
-      "combatFormula": "2X(R)+1+1",
+      "combatFormula": "3X-1",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -2915,29 +2745,18 @@
         },
         {
           "condition": "=0",
-          "type": "mission_strict",
-          "actionText": "Sell Animals at + in C6",
-          "mission": {
-            "kind": "sell",
-            "item": "Animals",
-            "pickupCell": null,
-            "deliverCell": "C6",
-            "category": "Animals",
-            "modifier": "+",
-            "target": null,
-            "name": "Harmeet Dhillon’s Job"
-          }
+          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
           "type": "mission_request",
-          "actionText": "Sell Grain at + in B5",
+          "actionText": "Sell Weed at + in F3!",
           "mission": {
             "kind": "sell",
-            "item": "Grain",
+            "item": "Weed",
             "pickupCell": null,
-            "deliverCell": "B5",
-            "category": "Grain",
+            "deliverCell": "F3",
+            "category": "Weed",
             "modifier": "+",
             "target": null,
             "name": "Harmeet Dhillon’s Job"
@@ -2946,25 +2765,25 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Buy one Animal at ++ Scarcity",
+          "actionText": "Sell Uppers at ++?",
           "mission": {
             "kind": "sell",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "++",
             "target": null
           }
         }
       ],
-      "actionText": "Sell Animals at + in C6",
+      "actionText": "(QUEST_ICON)! Sell Weed at + in F3! • [?] Sell Uppers at ++?",
       "mission": {
         "kind": "sell",
-        "item": "Animals",
+        "item": "Weed",
         "pickupCell": null,
-        "deliverCell": "C6",
-        "category": "Animals",
+        "deliverCell": "F3",
+        "category": "Weed",
         "modifier": "+",
         "target": null,
         "name": "Harmeet Dhillon’s Job"
@@ -2974,11 +2793,11 @@
     {
       "id": "leg_16",
       "name": "Vivek Ramaswamy",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Talks fast. Cuts faster.”",
-      "combatFormula": "X(R)+X+1",
+      "combatFormula": "X(R)+X",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -2999,30 +2818,32 @@
         },
         {
           "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
-        },
-        {
-          "condition": "=0",
           "type": "deck_quest_offer"
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "mission_offer",
+          "actionText": "Sell Opiates at + in C1?",
+          "mission": {
+            "type": "delivery",
+            "targetCell": "C1",
+            "commodity": "Opiates",
+            "modifier": "+"
+          }
         }
       ],
-      "actionText": "",
+      "actionText": "(QUEST_ICON)? Sell Opiates at + in C1?",
       "mission": null,
       "tier": "t2"
     },
     {
       "id": "leg_17",
       "name": "Rudy Giuliani",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "“Live from Four Seasons Total Landscaping.”",
-      "combatFormula": "X(R)+1+1",
+      "bio": "“Live from Four Nights Total Landscaping.”",
+      "combatFormula": "2X+1",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3046,12 +2867,12 @@
         {
           "condition": "=0",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "actionText": "Give me all of your Weapons!!"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Kill a Criminal in Combat",
+          "actionText": "Kill a Cop?",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -3059,24 +2880,34 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Nefarii",
+            "target": "Cops",
+            "targetDeck": "Criminals",
             "name": "Rudy Giuliani’s Job"
           }
         }
       ],
-      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Weapons!! • (QUEST_ICON)? Kill a Cop?",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "Cops",
+        "targetDeck": "Criminals",
+        "name": "Rudy Giuliani’s Job"
+      },
       "tier": "t2"
     },
     {
       "id": "leg_18",
       "name": "SFPD",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Response time: eventually.”",
-      "combatFormula": "X(R)+1+1",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3100,51 +2931,39 @@
         {
           "condition": "=0",
           "type": "combat",
-          "ifCarrying": "Wine"
+          "ifCarrying": "Opiates or Weapons"
         },
         {
-          "condition": "=0",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=1",
+          "condition": "=1",
           "type": "deck_quest_offer"
         },
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell one Weapon from Mkt at > Scarcity",
+          "actionText": "Buy any Mkt Weapon at -?",
           "mission": {
             "kind": "buy_from_npc",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
             "category": "Weapons",
-            "modifier": ">",
+            "modifier": "-",
             "target": "Market"
           }
         }
       ],
-      "actionText": "?: Will Sell one Weapon from Mkt at > Scarcity",
-      "mission": {
-        "kind": "buy_from_npc",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Weapons",
-        "modifier": ">",
-        "target": "Market"
-      },
+      "actionText": "[?] Buy any Mkt Weapon at -?",
+      "mission": null,
       "tier": "gen"
     },
     {
       "id": "leg_19",
       "name": "DEA",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Just say no.”",
-      "combatFormula": "X(R)+1",
+      "combatFormula": "2X(R)-X(R)",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3161,56 +2980,32 @@
       "combatReward": "7(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<-1",
           "type": "combat"
         },
         {
-          "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "condition": "-1..0",
+          "type": "combat",
+          "ifCarrying": "Opiates or Uppers"
         },
         {
           "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "?: Sell Grain at + in A6",
-          "mission": {
-            "kind": "sell",
-            "item": "Grain",
-            "pickupCell": null,
-            "deliverCell": "A6",
-            "category": "Grain",
-            "modifier": "+",
-            "target": null,
-            "name": "DEA’s Job"
-          }
-        },
-        {
-          "condition": ">=2",
-          "type": "offer",
-          "actionText": "?: Will Sell one Weapon from Mkt at > Scarcity",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Weapons",
-            "modifier": ">",
-            "target": "Market"
-          }
+          "type": "demand_strict",
+          "actionText": "Give me all of your Opiates and Uppers!!"
         }
       ],
-      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
+      "actionText": "[!!] Give me all of your Opiates and Uppers!!",
       "mission": null,
       "tier": "gen"
     },
     {
       "id": "leg_20",
       "name": "ICE",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Papers, please.”",
-      "combatFormula": "X(R)-1+1",
+      "combatFormula": "2X-1",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3227,42 +3022,56 @@
       "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<-1",
           "type": "combat"
         },
         {
-          "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Guards (if Player has no Guards, no demand)"
+          "condition": "-1..0",
+          "type": "combat",
+          "ifCarrying": "Henchmen"
         },
         {
-          "condition": ">=1",
+          "condition": "=1",
+          "type": "demand_strict",
+          "actionText": "Give me all of your henchmen!!"
+        },
+        {
+          "condition": ">=2",
           "type": "mission_offer",
-          "actionText": "?: Sell Animals at + in A3",
+          "actionText": "Sell Uppers at + in C3?",
           "mission": {
             "kind": "sell",
-            "item": "Animals",
+            "item": "Uppers",
             "pickupCell": null,
-            "deliverCell": "A3",
-            "category": "Animals",
+            "deliverCell": "C3",
+            "category": "Uppers",
             "modifier": "+",
             "target": null,
             "name": "ICE’s Job"
           }
         }
       ],
-      "actionText": "!!: Give me all of your Guards (if Player has no Guards, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your henchmen!! • (QUEST_ICON)? Sell Uppers at + in C3?",
+      "mission": {
+        "kind": "sell",
+        "item": "Uppers",
+        "pickupCell": null,
+        "deliverCell": "C3",
+        "category": "Uppers",
+        "modifier": "+",
+        "target": null,
+        "name": "ICE’s Job"
+      },
       "tier": "gen"
     },
     {
       "id": "leg_21",
-      "name": "Homeland Security",
-      "deck": "Legiones",
+      "name": "ATF",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
-      "bio": "“If you see something, say something.”",
-      "combatFormula": "X(R)+2+1",
+      "bio": "“Got a tax stamp for that?”",
+      "combatFormula": "2X(R)-X",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3280,50 +3089,43 @@
       "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=-1",
-          "type": "combat"
+          "condition": "<0",
+          "type": "combat",
+          "ifCarrying": "Weapons"
         },
         {
-          "condition": "=0",
-          "type": "mission_strict",
-          "actionText": "Sell Animals at + in B5",
+          "condition": "0..1",
+          "type": "demand_strict",
+          "actionText": "Give me all of your Weapons!!"
+        },
+        {
+          "condition": ">=2",
+          "type": "offer",
+          "actionText": "Buy Cheapest Mkt Weapon at -?",
           "mission": {
-            "kind": "sell",
-            "item": "Animals",
+            "kind": "buy_from_npc",
+            "item": null,
             "pickupCell": null,
-            "deliverCell": "B5",
-            "category": "Animals",
-            "modifier": "+",
-            "target": null,
-            "name": "Homeland Security’s Job"
+            "deliverCell": null,
+            "category": "Weapons",
+            "which": "cheapest",
+            "modifier": "-",
+            "target": "Market"
           }
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Animals at + in B5",
-      "mission": {
-        "kind": "sell",
-        "item": "Animals",
-        "pickupCell": null,
-        "deliverCell": "B5",
-        "category": "Animals",
-        "modifier": "+",
-        "target": null,
-        "name": "Homeland Security’s Job"
-      },
+      "actionText": "[!!] Give me all of your Weapons!! • [?] Buy Cheapest Mkt Weapon at -?",
+      "mission": null,
       "tier": "gen"
     },
     {
       "id": "leg_22",
       "name": "SFPD Narcotics Unit",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“That’s evidence now.”",
-      "combatFormula": "X(R)+2+1",
+      "combatFormula": "2X",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3341,35 +3143,55 @@
       "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<-1",
           "type": "combat"
         },
         {
-          "condition": "=0",
+          "condition": "-1..0",
           "type": "combat",
-          "ifCarrying": "Wine"
+          "ifCarrying": "Opiates or Party"
         },
         {
-          "condition": "=0",
-          "type": "deck_quest_offer"
+          "condition": "=1",
+          "type": "deck_quest_strict"
         },
         {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
+          "condition": ">=2",
+          "type": "mission_strict",
+          "actionText": "Sell Opiates at + in E1!!",
+          "mission": {
+            "kind": "sell",
+            "item": "Opiates",
+            "pickupCell": null,
+            "deliverCell": "E1",
+            "category": "Opiates",
+            "modifier": "+",
+            "target": null,
+            "name": "SFPD Narcotics Unit’s Job"
+          }
         }
       ],
-      "actionText": "",
-      "mission": null,
+      "actionText": "(QUEST_ICON)!! Sell Opiates at + in E1!!",
+      "mission": {
+        "kind": "sell",
+        "item": "Opiates",
+        "pickupCell": null,
+        "deliverCell": "E1",
+        "category": "Opiates",
+        "modifier": "+",
+        "target": null,
+        "name": "SFPD Narcotics Unit’s Job"
+      },
       "tier": "t2"
     },
     {
       "id": "leg_23",
       "name": "DEA Task Force",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Knock knock.”",
-      "combatFormula": "2X(R)+1+1",
+      "combatFormula": "2X(R)+1",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3385,40 +3207,56 @@
       "combatReward": "14(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<-1",
           "type": "combat"
         },
         {
-          "condition": "=0",
+          "condition": "-1..0",
           "type": "combat",
-          "ifCarrying": "Wine"
+          "ifCarrying": "Opiates"
         },
         {
-          "condition": "=0",
-          "type": "deck_quest_offer"
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
+          "condition": "=1",
+          "type": "demand_strict",
+          "actionText": "Give me all of your Opiates!!"
         },
         {
           "condition": ">=2",
-          "type": "offer",
-          "actionText": "?: Move again this turn"
+          "type": "mission_request",
+          "actionText": "Kill an ISIS!",
+          "mission": {
+            "kind": "kill",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": null,
+            "modifier": null,
+            "target": "ISIS",
+            "name": "DEA Task Force’s Job"
+          }
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)! Kill an ISIS!",
+      "mission": {
+        "kind": "kill",
+        "item": null,
+        "pickupCell": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "ISIS",
+        "name": "DEA Task Force’s Job"
+      },
       "tier": "t1"
     },
     {
       "id": "leg_24",
       "name": "ICE Raid Team",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“No warrant needed, apparently.”",
-      "combatFormula": "2X(R)+1+1",
+      "combatFormula": "2X(R)+2",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3436,40 +3274,36 @@
       "combatReward": "15(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<-1",
           "type": "combat"
         },
         {
-          "condition": "=0",
+          "condition": "-1..0",
           "type": "combat",
-          "ifCarrying": "Wine"
-        },
-        {
-          "condition": "=0",
-          "type": "deck_quest_offer"
+          "ifCarrying": "Henchmen or Weapons"
         },
         {
           "condition": "1..2",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "actionText": "Give me all of your Weapons!!"
         },
         {
           "condition": ">=3",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "actionText": "[!!] Give me all of your Weapons!!",
       "mission": null,
       "tier": "t1"
     },
     {
       "id": "leg_25",
       "name": "Border Patrol",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“A long way from the border.”",
-      "combatFormula": "X(R)+2+1",
+      "combatFormula": "2X(R)-3",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3486,41 +3320,38 @@
       "combatReward": "7(d)",
       "reactions": [
         {
-          "condition": "<=-1",
-          "type": "combat"
-        },
-        {
-          "condition": "=0",
+          "condition": "<0",
           "type": "combat",
-          "ifCarrying": "Wine"
+          "ifCarrying": "Opiates or Weed"
         },
         {
           "condition": "=0",
-          "type": "deck_quest_offer"
+          "type": "demand_strict",
+          "actionText": "Give me all of your Weed!!"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Animals at + in E5",
+          "actionText": "Sell Uppers at + in B1?",
           "mission": {
             "kind": "sell",
-            "item": "Animals",
+            "item": "Uppers",
             "pickupCell": null,
-            "deliverCell": "E5",
-            "category": "Animals",
+            "deliverCell": "B1",
+            "category": "Uppers",
             "modifier": "+",
             "target": null,
             "name": "Border Patrol’s Job"
           }
         }
       ],
-      "actionText": "?: Sell Animals at + in E5",
+      "actionText": "[!!] Give me all of your Weed!! • (QUEST_ICON)? Sell Uppers at + in B1?",
       "mission": {
         "kind": "sell",
-        "item": "Animals",
+        "item": "Uppers",
         "pickupCell": null,
-        "deliverCell": "E5",
-        "category": "Animals",
+        "deliverCell": "B1",
+        "category": "Uppers",
         "modifier": "+",
         "target": null,
         "name": "Border Patrol’s Job"
@@ -3530,7 +3361,7 @@
     {
       "id": "leg_26",
       "name": "Road Blocked",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "event",
       "faction": null,
       "bio": null,
@@ -3540,17 +3371,17 @@
       "hostileFavor": [],
       "combatReward": null,
       "reactions": [],
-      "actionText": "Turn Around. Player must move to previously-occupied Tile and end turn. If edge encounter, stay on present tile. If first turn, remove cart from board; can pick any entry gate next turn.",
+      "actionText": "Turn Around. Player must move to previously-occupied Tile and end turn. If edge encounter, stay on present tile. If first turn, remove suv from board; can pick any entry gate next turn.",
       "mission": null
     },
     {
       "id": "leg_27",
       "name": "CHP Trooper",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Do you know how fast you were going?”",
-      "combatFormula": "X(R)+1",
+      "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3567,31 +3398,32 @@
       "combatReward": "8(d)",
       "reactions": [
         {
-          "condition": "<=-1",
+          "condition": "<-1",
           "type": "combat"
         },
         {
-          "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "condition": "-1..0",
+          "type": "combat",
+          "ifCarrying": "Uppers"
         },
         {
           "condition": ">=1",
-          "type": "deck_quest_offer"
+          "type": "demand_strict",
+          "actionText": "Give me all of your Uppers!!"
         }
       ],
-      "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)",
+      "actionText": "[!!] Give me all of your Uppers!!",
       "mission": null,
       "tier": "gen"
     },
     {
       "id": "leg_28",
       "name": "Sheriff’s Deputy",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Not from around here.”",
-      "combatFormula": "X(R)+1+1",
+      "combatFormula": "X(R)+X-1",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3609,66 +3441,38 @@
       "combatReward": "9(d)",
       "reactions": [
         {
-          "condition": "<=-2",
-          "type": "combat"
+          "condition": "<0",
+          "type": "combat",
+          "ifCarrying": "Weapons or Opiates"
         },
         {
-          "condition": "=-1",
+          "condition": "0..1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
-        },
-        {
-          "condition": "=0",
-          "type": "mission_strict",
-          "actionText": "Sell Grain at + in B3",
-          "mission": {
-            "kind": "sell",
-            "item": "Grain",
-            "pickupCell": null,
-            "deliverCell": "B3",
-            "category": "Grain",
-            "modifier": "+",
-            "target": null,
-            "name": "Sheriff’s Deputy’s Job"
-          }
-        },
-        {
-          "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "?: Sell Grain at + in A2",
-          "mission": {
-            "kind": "sell",
-            "item": "Grain",
-            "pickupCell": null,
-            "deliverCell": "A2",
-            "category": "Grain",
-            "modifier": "+",
-            "target": null,
-            "name": "Sheriff’s Deputy’s Job"
-          }
+          "actionText": "Give me all of your Weapons!!"
         },
         {
           "condition": ">=2",
-          "type": "offer",
-          "actionText": "?: Will Sell one Weapon from Mkt at > Scarcity",
+          "type": "mission_offer",
+          "actionText": "Sell Weed at + in D1?",
           "mission": {
-            "kind": "buy_from_npc",
-            "item": null,
+            "kind": "sell",
+            "item": "Weed",
             "pickupCell": null,
-            "deliverCell": null,
-            "category": "Weapons",
-            "modifier": ">",
-            "target": "Market"
+            "deliverCell": "D1",
+            "category": "Weed",
+            "modifier": "+",
+            "target": null,
+            "name": "Sheriff’s Deputy’s Job"
           }
         }
       ],
-      "actionText": "Sell Grain at + in B3",
+      "actionText": "[!!] Give me all of your Weapons!! • (QUEST_ICON)? Sell Weed at + in D1?",
       "mission": {
         "kind": "sell",
-        "item": "Grain",
+        "item": "Weed",
         "pickupCell": null,
-        "deliverCell": "B3",
-        "category": "Grain",
+        "deliverCell": "D1",
+        "category": "Weed",
         "modifier": "+",
         "target": null,
         "name": "Sheriff’s Deputy’s Job"
@@ -3678,7 +3482,7 @@
     {
       "id": "leg_29",
       "name": "Ushered Along",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "event",
       "faction": null,
       "bio": null,
@@ -3688,17 +3492,17 @@
       "hostileFavor": [],
       "combatReward": null,
       "reactions": [],
-      "actionText": "Move Again. Player must move to an accessible Tile. Cannot complete missions or transact on this Tile before proceeding.",
+      "actionText": "Move Again. Player must move to an accessible Tile. Cannot complete jobs or transact on this Tile before proceeding.",
       "mission": null
     },
     {
       "id": "leg_30",
       "name": "Muni Fare Inspector",
-      "deck": "Legiones",
+      "deck": "Cops",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Proof of payment, please.”",
-      "combatFormula": "X(R)+1-1+1",
+      "combatFormula": "X",
       "friendlyFavor": [
         "MAGA",
         "-ISIS",
@@ -3719,30 +3523,18 @@
         },
         {
           "condition": "=0",
-          "type": "mission_request",
-          "actionText": "Kill a Celebrity in Combat",
-          "mission": {
-            "kind": "kill",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": null,
-            "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
-            "name": "Muni Fare Inspector’s Job"
-          }
+          "type": "deck_quest_demand"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Wine at - in C3",
+          "actionText": "Sell Opiates at - in F6?",
           "mission": {
             "kind": "sell",
-            "item": "Wine",
+            "item": "Opiates",
             "pickupCell": null,
-            "deliverCell": "C3",
-            "category": "Wine",
+            "deliverCell": "F6",
+            "category": "Opiates",
             "modifier": "-",
             "target": null,
             "name": "Muni Fare Inspector’s Job"
@@ -3751,42 +3543,88 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell one Animal from Mkt at > Scarcity",
+          "actionText": "Buy any Mkt Upper at -?",
           "mission": {
             "kind": "buy_from_npc",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Animals",
-            "modifier": ">",
+            "category": "Uppers",
+            "modifier": "-",
             "target": "Market"
           }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "(QUEST_ICON)? Sell Opiates at - in F6? • [?] Buy any Mkt Upper at -?",
       "mission": {
-        "kind": "kill",
-        "item": null,
+        "kind": "sell",
+        "item": "Opiates",
         "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
+        "deliverCell": "F6",
+        "category": "Opiates",
+        "modifier": "-",
         "target": null,
-        "targetDeck": "Patricii",
         "name": "Muni Fare Inspector’s Job"
       },
       "tier": "t3"
     }
   ],
-  "nefarii": [
+  "criminals": [
+    {
+      "id": "leg_12",
+      "name": "Ocasio-Cortez",
+      "deck": "Criminals",
+      "type": "character",
+      "faction": "DSA",
+      "bio": "“The Squad’s sharpest elbow.”",
+      "combatFormula": "3X(R)-3",
+      "friendlyFavor": [
+        "DSA",
+        "-MAGA",
+        "-ISIS"
+      ],
+      "friendlyReward": "28(d) & +1 Influence",
+      "hostileFavor": [
+        "-DSA",
+        "TECH"
+      ],
+      "combatReward": "27(d)",
+      "reactions": [
+        {
+          "condition": "<=-1",
+          "type": "combat"
+        },
+        {
+          "condition": "=0",
+          "type": "deck_quest_demand"
+        },
+        {
+          "condition": ">=1",
+          "type": "offer",
+          "actionText": "Sell Weed at ++?",
+          "mission": {
+            "kind": "sell",
+            "item": null,
+            "pickupCell": null,
+            "deliverCell": null,
+            "category": "Weed",
+            "modifier": "++",
+            "target": null
+          }
+        }
+      ],
+      "actionText": "[?] Sell Weed at ++?",
+      "mission": null,
+      "tier": "leader"
+    },
     {
       "id": "nef_1",
       "name": "Sam Altman",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "TECH",
       "bio": "“Big on doomsdays.”",
-      "combatFormula": "4X(R)",
+      "combatFormula": "3X(R)+X",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -3808,12 +3646,7 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
-        },
-        {
-          "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
+          "actionText": "Give me all of your Opiates!!"
         },
         {
           "condition": "=0",
@@ -3822,13 +3655,13 @@
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Marble at ++ in B4",
+          "actionText": "Sell Party at ++ in D3?",
           "mission": {
             "kind": "sell",
-            "item": "Marble",
+            "item": "Party",
             "pickupCell": null,
-            "deliverCell": "B4",
-            "category": "Marble",
+            "deliverCell": "D3",
+            "category": "Party",
             "modifier": "++",
             "target": null,
             "name": "Sam Altman’s Job"
@@ -3836,36 +3669,18 @@
         },
         {
           "condition": ">=2",
-          "type": "offer",
-          "actionText": "?: Will Sell the top card of the Goods deck for 12(d) (unless Infl, decide without looking)",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": "Top card of Goods deck",
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Any",
-            "modifier": "12(d)",
-            "target": "Goods deck"
-          }
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Pick up a cooler of molly in F4 and Deliver to B2",
+      "actionText": "[!!] Give me all of your Opiates!! • (QUEST_ICON)? Sell Party at ++ in D3?",
       "mission": {
-        "kind": "delivery",
-        "item": "a cooler of molly",
-        "pickupCell": "F4",
-        "deliverCell": "B2",
-        "category": "Marble",
-        "modifier": null,
+        "kind": "sell",
+        "item": "Party",
+        "pickupCell": null,
+        "deliverCell": "D3",
+        "category": "Party",
+        "modifier": "++",
         "target": null,
-        "cargoSize": 1,
-        "payoutTable": [
-          80,
-          61,
-          46,
-          35,
-          26
-        ],
         "name": "Sam Altman’s Job"
       },
       "tier": "top"
@@ -3873,11 +3688,11 @@
     {
       "id": "nef_2",
       "name": "Palmer Luckey",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "TECH",
       "bio": "“Hawaiian shirts, autonomous weapons.”",
-      "combatFormula": "2X(R)-1",
+      "combatFormula": "X(R)+2X",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -3899,64 +3714,38 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "actionText": "Give me all of your Uppers!!"
         },
         {
           "condition": "=0",
-          "type": "mission_strict",
-          "actionText": "Pick up a duffel of Humboldt in F2 and Deliver to E5",
-          "mission": {
-            "kind": "delivery",
-            "item": "a duffel of Humboldt",
-            "pickupCell": "F2",
-            "deliverCell": "E5",
-            "category": "Grain",
-            "modifier": null,
-            "target": null,
-            "cargoSize": 1,
-            "payoutTable": [
-              8,
-              7,
-              5,
-              4,
-              3
-            ],
-            "name": "Palmer Luckey’s Job"
-          }
+          "type": "deck_quest_strict",
+          "friendlyReward": "18(d)"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Marble at + in F6",
+          "actionText": "Sell Party at + in F4?",
           "mission": {
             "kind": "sell",
-            "item": "Marble",
+            "item": "Party",
             "pickupCell": null,
-            "deliverCell": "F6",
-            "category": "Marble",
+            "deliverCell": "F4",
+            "category": "Party",
             "modifier": "+",
             "target": null,
             "name": "Palmer Luckey’s Job"
           }
         }
       ],
-      "actionText": "Pick up a duffel of Humboldt in F2 and Deliver to E5",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Sell Party at + in F4?",
       "mission": {
-        "kind": "delivery",
-        "item": "a duffel of Humboldt",
-        "pickupCell": "F2",
-        "deliverCell": "E5",
-        "category": "Grain",
-        "modifier": null,
+        "kind": "sell",
+        "item": "Party",
+        "pickupCell": null,
+        "deliverCell": "F4",
+        "category": "Party",
+        "modifier": "+",
         "target": null,
-        "cargoSize": 1,
-        "payoutTable": [
-          8,
-          7,
-          5,
-          4,
-          3
-        ],
         "name": "Palmer Luckey’s Job"
       },
       "tier": "t1"
@@ -3964,7 +3753,7 @@
     {
       "id": "nef_3",
       "name": "Salve!",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "event",
       "faction": null,
       "bio": null,
@@ -3980,11 +3769,11 @@
     {
       "id": "nef_4",
       "name": "VC Capitalist",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "TECH",
       "bio": "“Two and twenty, and your kidneys.”",
-      "combatFormula": "X",
+      "combatFormula": "2X(R)+1",
       "friendlyFavor": [
         "TECH",
         "-ISIS"
@@ -4003,31 +3792,30 @@
         },
         {
           "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "actionText": "Give me all of your Uppers!!"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)",
+      "actionText": "[!!] Give me all of your Uppers!!",
       "mission": null,
       "tier": "t2"
     },
     {
       "id": "nef_5",
       "name": "Crypto Scammer",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "TECH",
       "bio": "“Rug-pulled three cities so far.”",
-      "combatFormula": "X(R)-X-1",
+      "combatFormula": "X-1",
       "friendlyFavor": [
         "TECH",
         "-ISIS",
@@ -4046,37 +3834,35 @@
         },
         {
           "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Grain (if Player has no Grain, no demand)"
+          "type": "demand",
+          "actionText": "Sell Upper at ++!"
         },
         {
-          "condition": "=0",
-          "type": "mission_strict",
-          "actionText": "Sell Animals at + in D1",
+          "condition": ">=0",
+          "type": "mission_offer",
+          "actionText": "Sell 3 Party at + in C4 in one transaction?",
           "mission": {
             "kind": "sell",
-            "item": "Animals",
+            "item": "Party",
             "pickupCell": null,
-            "deliverCell": "D1",
-            "category": "Animals",
+            "deliverCell": "C4",
+            "category": "Party",
             "modifier": "+",
+            "qty": 3,
             "target": null,
             "name": "Crypto Scammer’s Job"
           }
-        },
-        {
-          "condition": ">=1",
-          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Animals at + in D1",
+      "actionText": "[!] Sell Upper at ++! • (QUEST_ICON)? Sell 3 Party at + in C4 in one transaction?",
       "mission": {
         "kind": "sell",
-        "item": "Animals",
+        "item": "Party",
         "pickupCell": null,
-        "deliverCell": "D1",
-        "category": "Animals",
+        "deliverCell": "C4",
+        "category": "Party",
         "modifier": "+",
+        "qty": 3,
         "target": null,
         "name": "Crypto Scammer’s Job"
       },
@@ -4085,11 +3871,11 @@
     {
       "id": "nef_6",
       "name": "KKK",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "MAGA",
       "bio": "“Not all MAGA are KKK. But—”",
-      "combatFormula": "2X(R)+1",
+      "combatFormula": "3X-1",
       "friendlyFavor": [
         "MAGA",
         "-DSA",
@@ -4113,7 +3899,7 @@
         },
         {
           "condition": "<=0",
-          "type": "combat"
+          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
@@ -4122,38 +3908,30 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Buy one Animal at + Scarcity",
+          "actionText": "Sell Uppers at +?",
           "mission": {
             "kind": "sell",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+",
             "target": null
           }
         }
       ],
-      "actionText": "?: Will Buy one Animal at + Scarcity",
-      "mission": {
-        "kind": "sell",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Animals",
-        "modifier": "+",
-        "target": null
-      },
+      "actionText": "[?] Sell Uppers at +?",
+      "mission": null,
       "tier": "t1"
     },
     {
       "id": "nef_7",
       "name": "Pot Farmers",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "MAGA",
       "bio": "“They didn’t vote for this shit.”",
-      "combatFormula": "X(R)-1-1",
+      "combatFormula": "X(R)-X",
       "friendlyFavor": [
         "MAGA",
         "-DSA",
@@ -4174,38 +3952,46 @@
         },
         {
           "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Grain (if Player has no Grain, no demand)"
+          "type": "mission_request",
+          "actionText": "Sell Weed at -- in A5!",
+          "mission": {
+            "kind": "sell",
+            "item": "Weed",
+            "pickupCell": null,
+            "deliverCell": "A5",
+            "category": "Weed",
+            "modifier": "--",
+            "target": null,
+            "name": "Pot Farmers’ Job"
+          }
         },
         {
           "condition": ">=1",
-          "type": "mission_offer",
-          "actionText": "?: Kill a Criminal in Combat",
-          "mission": {
-            "kind": "kill",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": null,
-            "modifier": null,
-            "target": null,
-            "targetDeck": "Nefarii",
-            "name": "Pot Farmers’s Job"
-          }
+          "type": "offer",
+          "actionText": "Buy Cheapest Mkt Weapon for 9(d)?"
         }
       ],
-      "actionText": "!!: Give me all of your Grain (if Player has no Grain, no demand)",
-      "mission": null,
+      "actionText": "(QUEST_ICON)! Sell Weed at -- in A5! • [?] Buy Cheapest Mkt Weapon for 9(d)?",
+      "mission": {
+        "kind": "sell",
+        "item": "Weed",
+        "pickupCell": null,
+        "deliverCell": "A5",
+        "category": "Weed",
+        "modifier": "--",
+        "target": null,
+        "name": "Pot Farmers’ Job"
+      },
       "tier": "t3"
     },
     {
       "id": "nef_8",
       "name": "International Terrorist",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Came all the way here for this.”",
-      "combatFormula": "2X(R)+1",
+      "combatFormula": "2X-1",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -4223,7 +4009,7 @@
         {
           "condition": ">=1",
           "type": "mission_strict",
-          "actionText": "Kill a Celebrity in Combat",
+          "actionText": "Kill a Cop!!",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -4231,27 +4017,27 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
+            "target": "Cops",
+            "targetDeck": "Celebrities",
             "name": "International Terrorist’s Job"
           }
         },
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell one Wine from Mkt at > Scarcity",
+          "actionText": "Buy any Mkt Opiate at -?",
           "mission": {
             "kind": "buy_from_npc",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Wine",
-            "modifier": ">",
+            "category": "Opiates",
+            "modifier": "-",
             "target": "Market"
           }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "(QUEST_ICON)!! Kill a Cop!! • [?] Buy any Mkt Opiate at -?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -4259,8 +4045,8 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
+        "target": "Cops",
+        "targetDeck": "Celebrities",
         "name": "International Terrorist’s Job"
       },
       "tier": "t1"
@@ -4268,11 +4054,11 @@
     {
       "id": "nef_9",
       "name": "Domestic Terrorist",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Locally radicalized.”",
-      "combatFormula": "X(R)+X",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -4294,7 +4080,7 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell the top card of the Goods deck for 12(d) (unless Infl, decide without looking)",
+          "actionText": "Buy Cheapest Mkt Weapon for 12(d)?",
           "mission": {
             "kind": "buy_from_npc",
             "item": "Top card of Goods deck",
@@ -4302,30 +4088,23 @@
             "deliverCell": null,
             "category": "Any",
             "modifier": "12(d)",
-            "target": "Goods deck"
+            "target": "Goods deck",
+            "fixedPrice": 12
           }
         }
       ],
-      "actionText": "?: Will Sell the top card of the Goods deck for 12(d) (unless Infl, decide without looking)",
-      "mission": {
-        "kind": "buy_from_npc",
-        "item": "Top card of Goods deck",
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Any",
-        "modifier": "12(d)",
-        "target": "Goods deck"
-      },
+      "actionText": "[?] Buy Cheapest Mkt Weapon for 12(d)?",
+      "mission": null,
       "tier": "t2"
     },
     {
       "id": "nef_14",
       "name": "Bashar al-Assad",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Ophthalmologist, between jobs.”",
-      "combatFormula": "2X(R)+2",
+      "combatFormula": "2X(R)-1",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -4343,7 +4122,7 @@
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Kill a Cop in Combat",
+          "actionText": "Kill a Cop?",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -4351,13 +4130,13 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Legiones",
+            "target": "Cops",
+            "targetDeck": "Cops",
             "name": "Bashar al-Assad’s Job"
           }
         }
       ],
-      "actionText": "?: Kill a Cop in Combat",
+      "actionText": "(QUEST_ICON)? Kill a Cop?",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -4365,8 +4144,8 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": null,
-        "targetDeck": "Legiones",
+        "target": "Cops",
+        "targetDeck": "Cops",
         "name": "Bashar al-Assad’s Job"
       },
       "tier": "t1"
@@ -4374,11 +4153,11 @@
     {
       "id": "nef_15",
       "name": "Abu Bakr al-Baghdadi",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Supposedly dead.”",
-      "combatFormula": "2X(R)+1",
+      "combatFormula": "2X(R)-3",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -4401,7 +4180,7 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell the top card of the Goods deck for 12(d) (unless Infl, decide without looking)",
+          "actionText": "Buy Cheapest Mkt Weapon for 12(d)?",
           "mission": {
             "kind": "buy_from_npc",
             "item": "Top card of Goods deck",
@@ -4409,30 +4188,23 @@
             "deliverCell": null,
             "category": "Any",
             "modifier": "12(d)",
-            "target": "Goods deck"
+            "target": "Goods deck",
+            "fixedPrice": 12
           }
         }
       ],
-      "actionText": "?: Will Sell the top card of the Goods deck for 12(d) (unless Infl, decide without looking)",
-      "mission": {
-        "kind": "buy_from_npc",
-        "item": "Top card of Goods deck",
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Any",
-        "modifier": "12(d)",
-        "target": "Goods deck"
-      },
+      "actionText": "[?] Buy Cheapest Mkt Weapon for 12(d)?",
+      "mission": null,
       "tier": "t1"
     },
     {
       "id": "nef_16",
       "name": "Pimp",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
       "bio": "“Talent manager.”",
-      "combatFormula": "2X(R)+1",
+      "combatFormula": "X(R)+X",
       "friendlyFavor": [
         "DSA",
         "-ISIS",
@@ -4451,13 +4223,7 @@
         },
         {
           "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
-        },
-        {
-          "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
@@ -4466,21 +4232,21 @@
         {
           "condition": "1..2",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "actionText": "Give me all of your Weapons!!"
         },
         {
           "condition": ">=3",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)",
+      "actionText": "[!!] Give me all of your Weapons!!",
       "mission": null,
       "tier": "t1"
     },
     {
       "id": "nef_17",
       "name": "Brutta Figura",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "event",
       "faction": null,
       "bio": null,
@@ -4496,11 +4262,11 @@
     {
       "id": "nef_18",
       "name": "London Breed",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
       "bio": "“Former mayor, out after dark.”",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "X+1",
       "friendlyFavor": [
         "DSA",
         "-ISIS"
@@ -4518,31 +4284,30 @@
         },
         {
           "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "actionText": "Give me all of your Uppers!!"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)",
+      "actionText": "[!!] Give me all of your Uppers!!",
       "mission": null,
       "tier": "t2"
     },
     {
       "id": "nef_19",
       "name": "Homeless",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
       "bio": "“Unhoused, but even more so.”",
-      "combatFormula": "X(R)",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "DSA",
         "-MAGA"
@@ -4560,23 +4325,22 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "actionText": "Give me all of your Uppers!!"
         },
         {
           "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Grain at - in C5",
+          "actionText": "Sell Weed at - in D5?",
           "mission": {
             "kind": "sell",
-            "item": "Grain",
+            "item": "Weed",
             "pickupCell": null,
-            "deliverCell": "C5",
-            "category": "Grain",
+            "deliverCell": "D5",
+            "category": "Weed",
             "modifier": "-",
             "target": null,
             "name": "Homeless’s Job"
@@ -4584,22 +4348,30 @@
         },
         {
           "condition": ">=2",
-          "type": "offer",
-          "actionText": "?: Move again this turn"
+          "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Sell Weed at - in D5?",
+      "mission": {
+        "kind": "sell",
+        "item": "Weed",
+        "pickupCell": null,
+        "deliverCell": "D5",
+        "category": "Weed",
+        "modifier": "-",
+        "target": null,
+        "name": "Homeless’s Job"
+      },
       "tier": "t2"
     },
     {
       "id": "nef_20",
       "name": "Illegal",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
       "bio": "“Has committed crimes recently.”",
-      "combatFormula": "X(R)",
+      "combatFormula": "2X(R)-X(R)",
       "friendlyFavor": [
         "DSA",
         "-ISIS",
@@ -4620,18 +4392,18 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Animals (if Player has no Animals, no demand)"
+          "actionText": "Give me all of your Uppers!!"
         },
         {
           "condition": "=0",
           "type": "mission_request",
-          "actionText": "Sell Grain at - in F2",
+          "actionText": "Sell Weed at - in E3!",
           "mission": {
             "kind": "sell",
-            "item": "Grain",
+            "item": "Weed",
             "pickupCell": null,
-            "deliverCell": "F2",
-            "category": "Grain",
+            "deliverCell": "E3",
+            "category": "Weed",
             "modifier": "-",
             "target": null,
             "name": "Illegal’s Job"
@@ -4642,13 +4414,13 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Grain at - in F2",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)! Sell Weed at - in E3!",
       "mission": {
         "kind": "sell",
-        "item": "Grain",
+        "item": "Weed",
         "pickupCell": null,
-        "deliverCell": "F2",
-        "category": "Grain",
+        "deliverCell": "E3",
+        "category": "Weed",
         "modifier": "-",
         "target": null,
         "name": "Illegal’s Job"
@@ -4658,7 +4430,7 @@
     {
       "id": "nef_21",
       "name": "Unhoused",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
       "bio": "“They’re letting him vote with no ID.”",
@@ -4680,31 +4452,30 @@
         },
         {
           "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)"
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)"
+          "actionText": "Give me all of your Party!!"
         },
         {
           "condition": ">=1",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)",
+      "actionText": "[!!] Give me all of your Party!!",
       "mission": null,
       "tier": "t3"
     },
     {
       "id": "nef_22",
       "name": "Undocumented",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "DSA",
       "bio": "“A person is not a crime.”",
-      "combatFormula": "X(R)-1",
+      "combatFormula": "X",
       "friendlyFavor": [
         "DSA",
         "-ISIS",
@@ -4725,18 +4496,18 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Marble (if Player has no Marble, no demand)"
+          "actionText": "Give me all of your Party!!"
         },
         {
           "condition": "=0",
           "type": "mission_strict",
-          "actionText": "Sell Marble at - in F3",
+          "actionText": "Sell Party at - in B4!!",
           "mission": {
             "kind": "sell",
-            "item": "Marble",
+            "item": "Party",
             "pickupCell": null,
-            "deliverCell": "F3",
-            "category": "Marble",
+            "deliverCell": "B4",
+            "category": "Party",
             "modifier": "-",
             "target": null,
             "name": "Undocumented’s Job"
@@ -4747,13 +4518,13 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Sell Marble at - in F3",
+      "actionText": "[!!] Give me all of your Party!! • (QUEST_ICON)!! Sell Party at - in B4!!",
       "mission": {
         "kind": "sell",
-        "item": "Marble",
+        "item": "Party",
         "pickupCell": null,
-        "deliverCell": "F3",
-        "category": "Marble",
+        "deliverCell": "B4",
+        "category": "Party",
         "modifier": "-",
         "target": null,
         "name": "Undocumented’s Job"
@@ -4763,11 +4534,11 @@
     {
       "id": "nef_23",
       "name": "Elmer Rodriguez",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
       "bio": "“Gordo.” Ran the 20th Street clique in the Mission.",
-      "combatFormula": "3X(R)+X",
+      "combatFormula": "2X(R)+X",
       "friendlyFavor": [
         "MS13",
         "-MAGA"
@@ -4784,13 +4555,7 @@
         },
         {
           "condition": "=-1",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
-        },
-        {
-          "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
+          "type": "deck_quest_strict"
         },
         {
           "condition": "=0",
@@ -4803,35 +4568,35 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell one Animal from Mkt at > Scarcity",
+          "actionText": "Buy any Mkt Upper at -?",
           "mission": {
             "kind": "buy_from_npc",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Animals",
-            "modifier": ">",
+            "category": "Uppers",
+            "modifier": "-",
             "target": "Market"
           }
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "actionText": "[?] Buy any Mkt Upper at -?",
       "mission": null,
       "tier": "top"
     },
     {
       "id": "nef_24",
       "name": "Clique Enforcer",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
       "bio": "“Collects for the clique.”",
-      "combatFormula": "2X(R)+2X",
+      "combatFormula": "2X(R)",
       "friendlyFavor": [
         "MS13",
         "-MAGA"
       ],
-      "friendlyReward": "Cheapest Party Drugs",
+      "friendlyReward": "Cheapest Party",
       "hostileFavor": [
         "-MS13"
       ],
@@ -4843,55 +4608,46 @@
         },
         {
           "condition": "=0",
-          "type": "combat",
-          "ifCarrying": "Wine"
-        },
-        {
-          "condition": "=0",
-          "type": "deck_quest_offer"
+          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
-          "type": "mission_request",
-          "actionText": "Sell Animals at + in B5",
-          "mission": {
-            "kind": "sell",
-            "item": "Animals",
-            "pickupCell": null,
-            "deliverCell": "B5",
-            "category": "Animals",
-            "modifier": "+",
-            "target": null,
-            "name": "Clique Enforcer’s Job"
-          }
-        },
-        {
-          "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell one Wine from Mkt at > Scarcity",
-          "mission": {
-            "kind": "buy_from_npc",
-            "item": null,
-            "pickupCell": null,
-            "deliverCell": null,
-            "category": "Wine",
-            "modifier": ">",
-            "target": "Market"
-          }
+          "actionText": "Buy Black Tar Heroin at -?"
         }
       ],
-      "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)",
+      "actionText": "[?] Buy Black Tar Heroin at -?",
       "mission": null,
-      "tier": "t1"
+      "tier": "t1",
+      "offerGood": {
+        "name": "Black Tar Heroin",
+        "category": "Opiates",
+        "blocks": 2,
+        "combatText": null,
+        "sell": [
+          70,
+          50,
+          32,
+          24,
+          15
+        ],
+        "buy": [
+          55,
+          42,
+          26,
+          18,
+          10
+        ]
+      }
     },
     {
       "id": "nef_25",
       "name": "Sicario",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
       "bio": "“Professional. Punctual.”",
-      "combatFormula": "2X(R)+2X",
+      "combatFormula": "X(R)+X+1",
       "friendlyFavor": [
         "MS13",
         "-MAGA"
@@ -4911,7 +4667,7 @@
         {
           "condition": "=0",
           "type": "mission_request",
-          "actionText": "Kill a Criminal in Combat",
+          "actionText": "Kill a Cop!",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -4919,22 +4675,22 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Nefarii",
+            "target": "Cops",
+            "targetDeck": "Criminals",
             "name": "Sicario’s Job"
           }
         },
         {
           "condition": "1..2",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Wine (if Player has no Wine, no demand)"
+          "actionText": "Give me all of your Opiates!!"
         },
         {
           "condition": ">=3",
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "Kill a Criminal in Combat",
+      "actionText": "(QUEST_ICON)! Kill a Cop! • [!!] Give me all of your Opiates!!",
       "mission": {
         "kind": "kill",
         "item": null,
@@ -4942,8 +4698,8 @@
         "deliverCell": null,
         "category": null,
         "modifier": null,
-        "target": null,
-        "targetDeck": "Nefarii",
+        "target": "Cops",
+        "targetDeck": "Criminals",
         "name": "Sicario’s Job"
       },
       "tier": "t1"
@@ -4951,15 +4707,15 @@
     {
       "id": "nef_26",
       "name": "Gang Banger",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
       "bio": "“Repping the set.”",
-      "combatFormula": "X(R)+X",
+      "combatFormula": "2X(R)-X",
       "friendlyFavor": [
         "MS13"
       ],
-      "friendlyReward": "Cheapest Party Drugs",
+      "friendlyReward": "Cheapest Party",
       "hostileFavor": [
         "-MS13",
         "-DSA"
@@ -4972,8 +4728,7 @@
         },
         {
           "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
@@ -4982,26 +4737,26 @@
         {
           "condition": ">=2",
           "type": "offer",
-          "actionText": "?: Will Sell one Animal from Mkt at > Scarcity",
+          "actionText": "Buy any Mkt Upper at -?",
           "mission": {
             "kind": "buy_from_npc",
             "item": null,
             "pickupCell": null,
             "deliverCell": null,
-            "category": "Animals",
-            "modifier": ">",
+            "category": "Uppers",
+            "modifier": "-",
             "target": "Market"
           }
         }
       ],
-      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
+      "actionText": "[?] Buy any Mkt Upper at -?",
       "mission": null,
       "tier": "t2"
     },
     {
       "id": "nef_27",
       "name": "Road Blocked",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "event",
       "faction": null,
       "bio": null,
@@ -5011,17 +4766,17 @@
       "hostileFavor": [],
       "combatReward": null,
       "reactions": [],
-      "actionText": "Turn Around. Player must move to previously-occupied Tile and end turn. If edge encounter, stay on present tile. If first turn, remove cart from board; can pick any entry gate next turn.",
+      "actionText": "Turn Around. Player must move to previously-occupied Tile and end turn. If edge encounter, stay on present tile. If first turn, remove suv from board; can pick any entry gate next turn.",
       "mission": null
     },
     {
       "id": "nef_28",
       "name": "Bad Hombre",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
       "bio": "“As advertised.”",
-      "combatFormula": "X(R)+X",
+      "combatFormula": "2X",
       "friendlyFavor": [
         "MS13",
         "-MAGA"
@@ -5041,46 +4796,54 @@
         {
           "condition": "=-1",
           "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "actionText": "Give me all of your Weapons!!"
         },
         {
           "condition": "=0",
-          "type": "demand_strict",
-          "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)"
+          "type": "deck_quest_strict"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Sell Wine at + in D4",
+          "actionText": "Sell Opiates at + in B6?",
           "mission": {
             "kind": "sell",
-            "item": "Wine",
+            "item": "Opiates",
             "pickupCell": null,
-            "deliverCell": "D4",
-            "category": "Wine",
+            "deliverCell": "B6",
+            "category": "Opiates",
             "modifier": "+",
             "target": null,
             "name": "Bad Hombre’s Job"
           }
         }
       ],
-      "actionText": "!!: Give me all of your Weapons (if Player has no Weapons, no demand)",
-      "mission": null,
+      "actionText": "[!!] Give me all of your Weapons!! • (QUEST_ICON)? Sell Opiates at + in B6?",
+      "mission": {
+        "kind": "sell",
+        "item": "Opiates",
+        "pickupCell": null,
+        "deliverCell": "B6",
+        "category": "Opiates",
+        "modifier": "+",
+        "target": null,
+        "name": "Bad Hombre’s Job"
+      },
       "tier": "t2"
     },
     {
       "id": "nef_29",
       "name": "Coyote",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "MS13",
       "bio": "“Knows every way in and out.”",
-      "combatFormula": "X(R)+X",
+      "combatFormula": "2X(R)-2",
       "friendlyFavor": [
         "MS13",
         "-MAGA"
       ],
-      "friendlyReward": "Cheapest Party Drugs",
+      "friendlyReward": "Cheapest Party",
       "hostileFavor": [
         "-MS13",
         "-DSA"
@@ -5093,23 +4856,12 @@
         },
         {
           "condition": "=0",
-          "type": "mission_request",
-          "actionText": "Sell Marble at = in C6",
-          "mission": {
-            "kind": "sell",
-            "item": "Marble",
-            "pickupCell": null,
-            "deliverCell": "C6",
-            "category": "Marble",
-            "modifier": "=",
-            "target": null,
-            "name": "Coyote’s Job"
-          }
+          "type": "deck_quest_demand"
         },
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "?: Kill a Celebrity in Combat",
+          "actionText": "Kill a Cop?",
           "mission": {
             "kind": "kill",
             "item": null,
@@ -5117,21 +4869,22 @@
             "deliverCell": null,
             "category": null,
             "modifier": null,
-            "target": null,
-            "targetDeck": "Patricii",
+            "target": "Cops",
+            "targetDeck": "Celebrities",
             "name": "Coyote’s Job"
           }
         }
       ],
-      "actionText": "Sell Marble at = in C6",
+      "actionText": "(QUEST_ICON)? Kill a Cop?",
       "mission": {
-        "kind": "sell",
-        "item": "Marble",
+        "kind": "kill",
+        "item": null,
         "pickupCell": null,
-        "deliverCell": "C6",
-        "category": "Marble",
-        "modifier": "=",
-        "target": null,
+        "deliverCell": null,
+        "category": null,
+        "modifier": null,
+        "target": "Cops",
+        "targetDeck": "Celebrities",
         "name": "Coyote’s Job"
       },
       "tier": "t2"
@@ -5149,9 +4902,16 @@
     {
       "id": "inf_2",
       "name": "Patron",
-      "effectText": "Receive 8(d)",
+      "effectText": "Receive 8(d), and lose 1 MAGA Favor (Ruby) and 1 TECH Favor (Diamond)",
       "effectCode": "gain_40d",
-      "favorGain": null,
+      "favorGain": {
+        "faction": null,
+        "cash": 8,
+        "extraFavor": [
+          "-MAGA",
+          "-TECH"
+        ]
+      },
       "sellTable": null
     },
     {
@@ -5165,7 +4925,7 @@
     {
       "id": "inf_5",
       "name": "Procurer",
-      "effectText": "Choose any Good in the Goods deck and buy it onto your Cart at its Common (>) buying price",
+      "effectText": "Choose any Good in the Goods deck and buy it onto your SUV at its Common (>) buying price",
       "effectCode": "buy_from_deck_uncommon",
       "favorGain": null,
       "sellTable": null
@@ -5181,7 +4941,7 @@
     {
       "id": "inf_11",
       "name": "Lucky Break",
-      "effectText": "Add +1 to any Chart Roll after the die roll (Theater Troupe, Death, or Mob) (Cannot be used for Gambling)",
+      "effectText": "Add +1 to any Chart Roll after the die roll (Open Mic, Death, or Mob) (Cannot be used for Gambling)",
       "effectCode": "chart_roll_plus_1",
       "favorGain": null,
       "sellTable": null
@@ -5189,8 +4949,8 @@
     {
       "id": "inf_12",
       "name": "Prophecy",
-      "effectText": "Trigger Soothsayer for any Player.",
-      "effectCode": "trigger_soothsayer",
+      "effectText": "Trigger Schizophrenic for any Player.",
+      "effectCode": "trigger_schizophrenic",
       "favorGain": null,
       "sellTable": null
     },
@@ -5258,15 +5018,15 @@
     },
     {
       "id": "inf_22",
-      "name": "Cartwright",
-      "effectText": "Permanent +2 cubes of Goods storage (place this on your Cart) +2 cubes",
+      "name": "SUVwright",
+      "effectText": "Permanent +2 cubes of Goods storage (place this on your SUV) +2 cubes",
       "effectCode": "permanent_storage_plus_2",
       "favorGain": null,
       "sellTable": null
     },
     {
       "id": "inf_23",
-      "name": "Friend In The City Guard",
+      "name": "Friend In The City Henchman",
       "effectText": "Waive all Edge Tolls this Night, and halve your Daybreak Fine (or eliminate a Gate Fine)",
       "effectCode": "reduce_fine",
       "favorGain": null,
@@ -5298,8 +5058,8 @@
     {
       "id": "inf_28",
       "name": "Thug",
-      "effectText": "Free Guard (place this on your Cart) (R) CP",
-      "effectCode": "free_guard_1r",
+      "effectText": "Free Henchman (place this on your SUV) (R) CP",
+      "effectCode": "free_henchman_1r",
       "favorGain": null,
       "sellTable": null
     },
@@ -5322,7 +5082,7 @@
     {
       "id": "inf_34",
       "name": "Man Of The People",
-      "effectText": "Ignore consequences of one Angry Mob encounter and collect 4(d) from the crowd",
+      "effectText": "Ignore consequences of one Protesters encounter and collect 4(d) from the crowd",
       "effectCode": "ignore_mob",
       "favorGain": null,
       "sellTable": null
@@ -5330,7 +5090,7 @@
     {
       "id": "inf_35",
       "name": "Surprise Shipment",
-      "effectText": "Move the Scarcity for one category of Goods one level to the right for this Season (Place card on Mkt until Season ends)",
+      "effectText": "Move the Scarcity for one category of Goods one level to the right for this Night (Place card on Mkt until Night ends)",
       "effectCode": "shift_category_scarcity_right",
       "favorGain": null,
       "sellTable": null
@@ -5362,15 +5122,22 @@
     {
       "id": "inf_39",
       "name": "Patron",
-      "effectText": "Receive 8(d)",
+      "effectText": "Receive 8(d), and lose 1 ISIS Favor (Emerald) and 1 DSA Favor (Sapphire)",
       "effectCode": "gain_40d",
-      "favorGain": null,
+      "favorGain": {
+        "faction": null,
+        "cash": 8,
+        "extraFavor": [
+          "-ISIS",
+          "-DSA"
+        ]
+      },
       "sellTable": null
     },
     {
       "id": "inf_43",
       "name": "Dramaturge",
-      "effectText": "Turn one Theater Troupe encounter into an automatic III result (ignore penalties and draw (R) Influence cards)",
+      "effectText": "Turn one Open Mic encounter into an automatic III result (ignore penalties and draw (R) Influence cards)",
       "effectCode": "ignore_theater_troupe",
       "favorGain": null,
       "sellTable": null
@@ -5394,7 +5161,7 @@
     {
       "id": "inf_46",
       "name": "Puffery",
-      "effectText": "Increase the Scarcity of all Goods you sell this hour by one level",
+      "effectText": "Increase the Scarcity of all Goods you sell this Night by one level",
       "effectCode": "increase_own_sale_scarcity",
       "favorGain": null,
       "sellTable": null
@@ -5410,7 +5177,7 @@
     {
       "id": "inf_49",
       "name": "Lucky Break",
-      "effectText": "Add +1 to any Chart Roll after the die roll (Theater Troupe, Death, or Mob) (Cannot be used for Gambling)",
+      "effectText": "Add +1 to any Chart Roll after the die roll (Open Mic, Death, or Mob) (Cannot be used for Gambling)",
       "effectCode": "chart_roll_plus_1",
       "favorGain": null,
       "sellTable": null
@@ -5418,7 +5185,7 @@
     {
       "id": "inf_50",
       "name": "Wine Forger",
-      "effectText": "Counts as any one Wine for mission purposes. Or sell: [12, 9, 6, 4, 3]",
+      "effectText": "Counts as any one Opiates for job purposes. Or sell: [12, 9, 6, 4, 3]",
       "effectCode": "wine_forger",
       "favorGain": null,
       "sellTable": [
@@ -5432,7 +5199,7 @@
     {
       "id": "inf_51",
       "name": "Lucky Break",
-      "effectText": "Add +1 to any Chart Roll after the die roll (Theater Troupe, Death, or Mob) (Cannot be used for Gambling)",
+      "effectText": "Add +1 to any Chart Roll after the die roll (Open Mic, Death, or Mob) (Cannot be used for Gambling)",
       "effectCode": "chart_roll_plus_1",
       "favorGain": null,
       "sellTable": null

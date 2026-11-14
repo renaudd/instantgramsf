@@ -20,6 +20,7 @@ env/
 /assets/
 !src/data/
 !public/assets/
+public/assets/fp/mockups/
 server.log
 *.log
 .env

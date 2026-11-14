@@ -1,12 +1,12 @@
 {
   "_note": "Encounter cards removed from InstantGram SF decks but kept for later (e.g. to regrow ISIS). Move a card back into its deck in decks.json to reuse it.",
-  "patricii": [],
-  "legiones": [],
-  "nefarii": [
+  "celebrities": [],
+  "cops": [],
+  "criminals": [
     {
       "id": "nef_10",
       "name": "Hamas",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Tunnels under everything.”",
@@ -27,27 +27,29 @@
         },
         {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "mission_request",
+          "actionText": "Sell Weapons at + in F6!",
+          "mission": {
+            "type": "delivery",
+            "targetCell": "F6",
+            "commodity": "Weapons",
+            "modifier": "+"
+          }
         }
       ],
-      "actionText": "Kill a Celebrity in Combat",
+      "actionText": "(QUEST_ICON)! Sell Weapons at + in F6!",
       "mission": {
-        "kind": "kill",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": null,
-        "modifier": null,
-        "target": null,
-        "targetDeck": "Patricii",
-        "name": "Hamas’s Job"
+        "type": "delivery",
+        "targetCell": "F6",
+        "commodity": "Weapons",
+        "modifier": "+"
       },
       "tier": "t1"
     },
     {
       "id": "nef_11",
       "name": "Hezbollah",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Has a pager. Doesn’t use it.”",
@@ -68,10 +70,6 @@
       "reactions": [
         {
           "condition": "<=0",
-          "type": "combat"
-        },
-        {
-          "condition": "<=0",
           "type": "demand_strict"
         },
         {
@@ -79,14 +77,14 @@
           "type": "deck_quest_offer"
         }
       ],
-      "actionText": "!!: Give me your cheapest Good (if Player has no goods, no demand)",
+      "actionText": "",
       "mission": null,
       "tier": "t1"
     },
     {
       "id": "nef_12",
       "name": "Houthis",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Blockading the Bay, somehow.”",
@@ -113,22 +111,14 @@
           "type": "offer"
         }
       ],
-      "actionText": "?: Will Sell one Marble from Mkt at > Scarcity",
-      "mission": {
-        "kind": "buy_from_npc",
-        "item": null,
-        "pickupCell": null,
-        "deliverCell": null,
-        "category": "Marble",
-        "modifier": ">",
-        "target": "Market"
-      },
+      "actionText": "",
+      "mission": null,
       "tier": "t2"
     },
     {
       "id": "nef_13",
       "name": "Iran",
-      "deck": "Nefarii",
+      "deck": "Criminals",
       "type": "character",
       "faction": "ISIS",
       "bio": "“Enrichment program, very enriched.”",
@@ -152,19 +142,18 @@
         },
         {
           "condition": ">=1",
-          "type": "mission_request"
+          "type": "mission_request",
+          "actionText": "Kill a Cop!",
+          "mission": {
+            "type": "kill",
+            "targetDeck": "cops"
+          }
         }
       ],
-      "actionText": "Sell Weapons at + in D3",
+      "actionText": "(QUEST_ICON)! Kill a Cop!",
       "mission": {
-        "kind": "sell",
-        "item": "Weapons",
-        "pickupCell": null,
-        "deliverCell": "D3",
-        "category": "Weapons",
-        "modifier": "+",
-        "target": null,
-        "name": "Iran’s Job"
+        "type": "kill",
+        "targetDeck": "cops"
       },
       "tier": "t1"
     }

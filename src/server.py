@@ -28,8 +28,9 @@ ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PUBLIC_DIR = os.path.realpath(os.path.join(ROOT_DIR, "public"))
 
 MAX_BODY_BYTES = 65536
-SESSION_COOKIE_NAME = "nm_session"
-SECURE_SESSION_COOKIE_NAME = "__Secure-nm_session"
+SESSION_COOKIE_NAME = "fp_session"
+SECURE_SESSION_COOKIE_NAME = "__Secure-fp_session"
+LEGACY_SESSION_COOKIE_NAMES = ("__Secure-nm_session", "nm_session")
 
 DEFAULT_ALLOWED_ORIGINS: Set[str] = {
     "https://dashiellrenaud.com",
@@ -48,20 +49,20 @@ REFERENCE_CATALOG = [
     {"id": "ExoticAnimals", "title": "Exotic Animals Market Cards", "category": "Market Cards", "url": "./assets/reference/ExoticAnimals.jpg"},
     {"id": "Weapons", "title": "Weapons Market Cards", "category": "Market Cards", "url": "./assets/reference/Weapons.jpg"},
     {"id": "Marble", "title": "Marble Market Cards", "category": "Market Cards", "url": "./assets/reference/Marble.jpg"},
-    {"id": "Guards", "title": "Guards Market Cards", "category": "Market Cards", "url": "./assets/reference/Guards.jpg"},
-    {"id": "Missiones1", "title": "Missiones Deck (Sheet 1)", "category": "Missions & Influence", "url": "./assets/reference/Missiones1.jpg"},
-    {"id": "Missiones2", "title": "Missiones Deck (Sheet 2)", "category": "Missions & Influence", "url": "./assets/reference/Missiones2.jpg"},
-    {"id": "Missiones3", "title": "Missiones Deck (Sheet 3)", "category": "Missions & Influence", "url": "./assets/reference/Missiones3.jpg"},
+    {"id": "Henchmen", "title": "Henchmen Market Cards", "category": "Market Cards", "url": "./assets/reference/Henchmen.jpg"},
+    {"id": "Missions1", "title": "Missions Deck (Sheet 1)", "category": "Missions & Influence", "url": "./assets/reference/Missions1.jpg"},
+    {"id": "Missions2", "title": "Missions Deck (Sheet 2)", "category": "Missions & Influence", "url": "./assets/reference/Missions2.jpg"},
+    {"id": "Missions3", "title": "Missions Deck (Sheet 3)", "category": "Missions & Influence", "url": "./assets/reference/Missions3.jpg"},
     {"id": "InfluenceCards1", "title": "Influence Deck (Sheet 1)", "category": "Missions & Influence", "url": "./assets/reference/InfluenceCards1.jpg"},
     {"id": "InfluenceCards2", "title": "Influence Deck (Sheet 2)", "category": "Missions & Influence", "url": "./assets/reference/InfluenceCards2.jpg"},
     {"id": "InfluenceCards3", "title": "Influence Deck (Sheet 3)", "category": "Missions & Influence", "url": "./assets/reference/InfluenceCards3.jpg"},
     {"id": "InfluenceCards4", "title": "Influence Deck (Sheet 4)", "category": "Missions & Influence", "url": "./assets/reference/InfluenceCards4.jpg"},
-    {"id": "Patricii1", "title": "Patricii Encounters (Sheet 1)", "category": "Encounter Decks", "url": "./assets/reference/Patricii1.jpg"},
-    {"id": "Patricii2", "title": "Patricii Encounters (Sheet 2)", "category": "Encounter Decks", "url": "./assets/reference/Patricii2.jpg"},
-    {"id": "Legionnaires1", "title": "Legiones Encounters (Sheet 1)", "category": "Encounter Decks", "url": "./assets/reference/Legionnaires1.jpg"},
-    {"id": "Legionnaires2", "title": "Legiones Encounters (Sheet 2)", "category": "Encounter Decks", "url": "./assets/reference/Legionnaires2.jpg"},
-    {"id": "Nefarii1", "title": "Nefarii Encounters (Sheet 1)", "category": "Encounter Decks", "url": "./assets/reference/Nefarii1.jpg"},
-    {"id": "Nefarii2", "title": "Nefarii Encounters (Sheet 2)", "category": "Encounter Decks", "url": "./assets/reference/Nefarii2.jpg"},
+    {"id": "Celebrities1", "title": "Celebrities Encounters (Sheet 1)", "category": "Encounter Decks", "url": "./assets/reference/Celebrities1.jpg"},
+    {"id": "Celebrities2", "title": "Celebrities Encounters (Sheet 2)", "category": "Encounter Decks", "url": "./assets/reference/Celebrities2.jpg"},
+    {"id": "Legionnaires1", "title": "Cops Encounters (Sheet 1)", "category": "Encounter Decks", "url": "./assets/reference/Legionnaires1.jpg"},
+    {"id": "Legionnaires2", "title": "Cops Encounters (Sheet 2)", "category": "Encounter Decks", "url": "./assets/reference/Legionnaires2.jpg"},
+    {"id": "Criminals1", "title": "Criminals Encounters (Sheet 1)", "category": "Encounter Decks", "url": "./assets/reference/Criminals1.jpg"},
+    {"id": "Criminals2", "title": "Criminals Encounters (Sheet 2)", "category": "Encounter Decks", "url": "./assets/reference/Criminals2.jpg"},
 ]
 
 _rate_lock = threading.Lock()
@@ -113,18 +114,36 @@ def _build_public_firebase_config() -> Optional[Dict[str, str]]:
     return cfg
 
 
+def _watched_engine_mtime() -> float:
+    src_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(src_dir, "data")
+    candidates = [
+        getattr(game_engine, "__file__", None),
+        getattr(db_defaults, "__file__", None),
+        os.path.join(data_dir, "decks.json"),
+        os.path.join(data_dir, "market_and_missions.json"),
+        os.path.join(data_dir, "tiles.json"),
+    ]
+    mtimes: List[float] = []
+    for p in candidates:
+        if p and os.path.exists(p):
+            try:
+                mtimes.append(os.path.getmtime(p))
+            except OSError:
+                pass
+    return max(mtimes) if mtimes else 0.0
+
+
 def _ensure_fresh_engine() -> None:
     global _engine_last_mtime
-    eng_file = getattr(game_engine, "__file__", None)
-    if not eng_file:
-        return
-    try:
-        cur_mtime = os.path.getmtime(eng_file)
-    except OSError:
+    cur_mtime = _watched_engine_mtime()
+    if cur_mtime <= 0.0:
         return
     if cur_mtime > _engine_last_mtime:
         with _engine_reload_lock:
             if cur_mtime > _engine_last_mtime:
+                importlib.reload(db_defaults)
+                db_defaults.init_db()
                 importlib.reload(game_engine)
                 _engine_last_mtime = cur_mtime
 
@@ -220,20 +239,25 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
         except (UnicodeDecodeError, json.JSONDecodeError):
             return None, "Malformed JSON payload."
 
-    def _get_session_cookie(self) -> Optional[str]:
+    def _get_session_cookies(self) -> List[str]:
         cookie_hdr = self.headers.get("Cookie")
         if not cookie_hdr:
-            return None
+            return []
         jar = http.cookies.SimpleCookie()
         try:
             jar.load(cookie_hdr)
         except http.cookies.CookieError:
-            return None
-        for cname in (SECURE_SESSION_COOKIE_NAME, SESSION_COOKIE_NAME):
+            return []
+        tokens: List[str] = []
+        for cname in (SECURE_SESSION_COOKIE_NAME, SESSION_COOKIE_NAME, *LEGACY_SESSION_COOKIE_NAMES):
             morsel = jar.get(cname)
-            if morsel and morsel.value:
-                return morsel.value
-        return None
+            if morsel and morsel.value and morsel.value not in tokens:
+                tokens.append(morsel.value)
+        return tokens
+
+    def _get_session_cookie(self) -> Optional[str]:
+        tokens = self._get_session_cookies()
+        return tokens[0] if tokens else None
 
     def _format_session_cookie(self, token: str, max_age: int = db_defaults.SESSION_TTL_SECONDS) -> str:
         is_https = self.headers.get("X-Forwarded-Proto", "").lower() == "https"
@@ -265,8 +289,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
             if fb_user and not err:
                 return fb_user, "bearer"
 
-        raw_token = self._get_session_cookie()
-        if raw_token:
+        for raw_token in self._get_session_cookies():
             c_user = store.get_session_user(raw_token)
             if c_user:
                 return c_user, "cookie"
@@ -307,10 +330,12 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
         self._handle_get_or_head(head_only=False)
 
     def _normalize_route_path(self, raw_path: str) -> str:
-        if raw_path == "/nightmerchant":
+        if raw_path in ("/nightmerchant", "/instantgram"):
             return "/"
         if raw_path.startswith("/nightmerchant/"):
             return raw_path[len("/nightmerchant"):]
+        if raw_path.startswith("/instantgram/"):
+            return raw_path[len("/instantgram"):]
         return raw_path
 
     def _handle_get_or_head(self, head_only: bool = False) -> None:
@@ -343,7 +368,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
             return
 
         if not os.path.isfile(candidate):
-            # SPA fallback to index.html for non-asset routes
+            # SPA saturdayback to index.html for non-asset routes
             if not rel_path.startswith("assets/") and "." not in os.path.basename(rel_path):
                 candidate = os.path.join(PUBLIC_DIR, "index.html")
             else:
@@ -365,10 +390,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
 
         self.send_response(200)
         self._apply_security_headers(is_api=False)
-        if candidate.endswith((".html", ".js", ".css")):
-            self.send_header("Cache-Control", "no-cache")
-        else:
-            self.send_header("Cache-Control", "public, max-age=86400")
+        self.send_header("Cache-Control", "no-store, no-cache, must-revalidate")
         self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(data)))
         self.end_headers()
@@ -518,7 +540,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
             email = str(body.get("email", ""))
             display_name = str(body.get("displayName", "") or username)
             password = str(body.get("password", ""))
-            preferred_color = store.normalize_cart_color(str(body.get("preferredColor", "Z1")), "Z1")
+            preferred_color = store.normalize_suv_color(str(body.get("preferredColor", "Z1")), "Z1")
 
             user, c_err = store.create_user(username, display_name, password, preferred_color, email=email)
             if c_err or not user:
@@ -575,7 +597,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
             id_token = str(body.get("idToken") or self._get_bearer_token() or "").strip()
             username_opt = str(body.get("username", "")).strip() or None
             display_opt = str(body.get("displayName", "")).strip() or None
-            pref_color = store.normalize_cart_color(str(body.get("preferredColor", "Z3")), "Z3")
+            pref_color = store.normalize_suv_color(str(body.get("preferredColor", "Z3")), "Z3")
             user, f_err = store.verify_and_sync_firebase_id_token(
                 id_token=id_token,
                 username=username_opt,
@@ -592,7 +614,7 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
             return
 
         if path == "/api/auth/google":
-            preferred_color = store.normalize_cart_color(str(body.get("preferredColor", "Z3")), "Z3")
+            preferred_color = store.normalize_suv_color(str(body.get("preferredColor", "Z3")), "Z3")
             fb_id_token = str(body.get("idToken", "")).strip()
             if fb_id_token and storage.is_firebase_enabled() and hasattr(store, "verify_and_sync_firebase_id_token"):
                 user, g_err = store.verify_and_sync_firebase_id_token(
