@@ -174,11 +174,9 @@ def trait_text(card):
     return None
 
 
-def draw_right_aligned_trait_with_rome_die(d, x_right, cy, text, font, fill):
-    """Draw trait text right-aligned at x_right, replacing '(R)' with a square-enclosed 'R' Rome die icon."""
+def measure_trait_with_rome_die(d, text, font):
     parts = text.split("(R)")
-    box_sz = int(font.size * 1.02)
-    # Measure total width first
+    box_sz = int(font.size * 1.04)
     tot_w = 0
     for idx, p in enumerate(parts):
         if p:
@@ -186,6 +184,24 @@ def draw_right_aligned_trait_with_rome_die(d, x_right, cy, text, font, fill):
             tot_w += (bb[2] - bb[0])
         if idx < len(parts) - 1:
             tot_w += box_sz + 8
+    return tot_w
+
+
+def fit_trait_font(d, path, text, max_w, start, min_size=12):
+    size = start
+    while size > min_size:
+        f = ImageFont.truetype(path, size)
+        if measure_trait_with_rome_die(d, text, f) <= max_w:
+            return f
+        size -= 1
+    return ImageFont.truetype(path, min_size)
+
+
+def draw_right_aligned_trait_with_rome_die(d, x_right, cy, text, font, fill):
+    """Draw trait text right-aligned at x_right, replacing '(R)' with a square-enclosed 'R' Rome die icon."""
+    parts = text.split("(R)")
+    box_sz = int(font.size * 1.04)
+    tot_w = measure_trait_with_rome_die(d, text, font)
 
     cur_x = int(x_right - tot_w)
     for idx, p in enumerate(parts):
@@ -235,19 +251,35 @@ def draw_panel(img, d, zone, card):
     d.rectangle((x0 + 3, y0 + 3, x1 - 3, y1 - 3), fill=panel_bg)
 
     # Traits line: SUV space (left) + combat/abilities with [R] Rome die (right)
-    line_h = h * 0.20
-    cy = y0 + h * 0.04 + line_h / 2
-    sym = line_h * 0.42
-    x_after = draw_symbols(d, x0 + pad, cy, sym, int(card.get("blocks") or 0), int(card.get("henchmen") or 0))
+    line_h = h * 0.275
+    cy = y0 + h * 0.012 + line_h / 2
+    sym = line_h * 0.44
+    x_after = draw_symbols(d, x0 + pad * 0.85, cy, sym, int(card.get("blocks") or 0), int(card.get("henchmen") or 0))
     tt = trait_text(card)
     if tt:
-        avail = (x1 - pad) - (x_after + pad)
-        f = fit_font(F_BOLD, tt, avail, int(line_h * 0.50))
-        draw_right_aligned_trait_with_rome_die(d, x1 - pad, cy, tt, f, INK)
+        avail = (x1 - pad * 0.65) - (x_after + pad * 0.30)
+        max_single_sz = int(line_h * 0.88)
+        f_single = fit_trait_font(d, F_BOLD, tt, avail, max_single_sz)
+        # If a long compound trait (" - " or " & ") shrinks on 1 line, stack it on 2 lines to fill vertical whitespace
+        split_sep = " - " if " - " in tt else (" & " if " & " in tt else None)
+        if split_sep and f_single.size < int(line_h * 0.58):
+            p1, p2 = tt.split(split_sep, 1)
+            line1 = p1.strip()
+            line2 = ("& " + p2.strip()) if split_sep == " & " else p2.strip()
+            target_2l = int(line_h * 0.47)
+            f1 = fit_trait_font(d, F_BOLD, line1, avail, target_2l)
+            f2 = fit_trait_font(d, F_BOLD, line2, avail, target_2l)
+            f_both = f1 if f1.size <= f2.size else f2
+            cy1 = y0 + h * 0.012 + line_h * 0.26
+            cy2 = y0 + h * 0.012 + line_h * 0.76
+            draw_right_aligned_trait_with_rome_die(d, x1 - pad * 0.65, cy1, line1, f_both, INK)
+            draw_right_aligned_trait_with_rome_die(d, x1 - pad * 0.65, cy2, line2, f_both, INK)
+        else:
+            draw_right_aligned_trait_with_rome_die(d, x1 - pad * 0.65, cy, tt, f_single, INK)
 
     # Price table
     tx0, tx1 = x0 + pad, x1 - pad
-    ty0 = y0 + h * 0.04 + line_h + h * 0.03
+    ty0 = y0 + h * 0.012 + line_h + h * 0.014
     ty1 = y1 - h * 0.05
     sell, buy = card.get("sell"), card.get("buy")
     rows = ([("sell", sell)] if sell else []) + [("buy", buy)]
