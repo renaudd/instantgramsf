@@ -110,21 +110,85 @@ def _discover_firebase_web_config_from_gcp(project_id: str) -> Optional[Dict[str
         if not access_token:
             _CACHED_DISCOVERED_FB_CONFIG = {}
             return None
-        cfg_req = urllib.request.Request(
-            f"https://firebase.googleapis.com/v1beta1/projects/{project_id}/webApps/-/config",
-            headers={"Authorization": f"Bearer {access_token}"},
-        )
-        with urllib.request.urlopen(cfg_req, timeout=3.0) as resp:
-            cfg_data = json.loads(resp.read().decode("utf-8"))
-        if isinstance(cfg_data, dict) and cfg_data.get("apiKey"):
-            _CACHED_DISCOVERED_FB_CONFIG = {
-                "apiKey": str(cfg_data["apiKey"]),
-                "authDomain": str(cfg_data.get("authDomain") or f"{project_id}.firebaseapp.com"),
-                "projectId": str(cfg_data.get("projectId") or project_id),
-            }
-            if cfg_data.get("appId"):
-                _CACHED_DISCOVERED_FB_CONFIG["appId"] = str(cfg_data["appId"])
-            return _CACHED_DISCOVERED_FB_CONFIG
+        headers = {"Authorization": f"Bearer {access_token}"}
+
+        # 1. Try default webApp config endpoint
+        try:
+            cfg_req = urllib.request.Request(
+                f"https://firebase.googleapis.com/v1beta1/projects/{project_id}/webApps/-/config",
+                headers=headers,
+            )
+            with urllib.request.urlopen(cfg_req, timeout=3.0) as resp:
+                cfg_data = json.loads(resp.read().decode("utf-8"))
+            if isinstance(cfg_data, dict) and str(cfg_data.get("apiKey", "")).startswith("AIza"):
+                _CACHED_DISCOVERED_FB_CONFIG = {
+                    "apiKey": str(cfg_data["apiKey"]),
+                    "authDomain": str(cfg_data.get("authDomain") or f"{project_id}.firebaseapp.com"),
+                    "projectId": str(cfg_data.get("projectId") or project_id),
+                }
+                if cfg_data.get("appId"):
+                    _CACHED_DISCOVERED_FB_CONFIG["appId"] = str(cfg_data["appId"])
+                return _CACHED_DISCOVERED_FB_CONFIG
+        except Exception:
+            pass
+
+        # 2. Try listing webApps in the project and fetching the first webApp's config
+        try:
+            list_req = urllib.request.Request(
+                f"https://firebase.googleapis.com/v1beta1/projects/{project_id}/webApps",
+                headers=headers,
+            )
+            with urllib.request.urlopen(list_req, timeout=3.0) as resp:
+                list_data = json.loads(resp.read().decode("utf-8"))
+            apps = list_data.get("apps") or []
+            if apps and isinstance(apps[0], dict) and apps[0].get("name"):
+                app_name = apps[0]["name"]
+                cfg_req2 = urllib.request.Request(
+                    f"https://firebase.googleapis.com/v1beta1/{app_name}/config",
+                    headers=headers,
+                )
+                with urllib.request.urlopen(cfg_req2, timeout=3.0) as resp:
+                    cfg_data2 = json.loads(resp.read().decode("utf-8"))
+                if isinstance(cfg_data2, dict) and str(cfg_data2.get("apiKey", "")).startswith("AIza"):
+                    _CACHED_DISCOVERED_FB_CONFIG = {
+                        "apiKey": str(cfg_data2["apiKey"]),
+                        "authDomain": str(cfg_data2.get("authDomain") or f"{project_id}.firebaseapp.com"),
+                        "projectId": str(cfg_data2.get("projectId") or project_id),
+                    }
+                    if cfg_data2.get("appId"):
+                        _CACHED_DISCOVERED_FB_CONFIG["appId"] = str(cfg_data2["appId"])
+                    return _CACHED_DISCOVERED_FB_CONFIG
+        except Exception:
+            pass
+
+        # 3. Fallback: query Google Cloud API Keys API for the project's Browser/Web API key
+        try:
+            keys_req = urllib.request.Request(
+                f"https://apikeys.googleapis.com/v2/projects/{project_id}/locations/global/keys",
+                headers=headers,
+            )
+            with urllib.request.urlopen(keys_req, timeout=3.0) as resp:
+                keys_data = json.loads(resp.read().decode("utf-8"))
+            for key_obj in (keys_data.get("keys") or []):
+                key_name = key_obj.get("name")
+                if not key_name:
+                    continue
+                ks_req = urllib.request.Request(
+                    f"https://apikeys.googleapis.com/v2/{key_name}/keyString",
+                    headers=headers,
+                )
+                with urllib.request.urlopen(ks_req, timeout=3.0) as resp:
+                    ks_data = json.loads(resp.read().decode("utf-8"))
+                key_str = str(ks_data.get("keyString") or "")
+                if key_str.startswith("AIza"):
+                    _CACHED_DISCOVERED_FB_CONFIG = {
+                        "apiKey": key_str,
+                        "authDomain": f"{project_id}.firebaseapp.com",
+                        "projectId": project_id,
+                    }
+                    return _CACHED_DISCOVERED_FB_CONFIG
+        except Exception:
+            pass
     except Exception:
         pass
     _CACHED_DISCOVERED_FB_CONFIG = {}
@@ -134,11 +198,17 @@ def _discover_firebase_web_config_from_gcp(project_id: str) -> Optional[Dict[str
 def _build_public_firebase_config() -> Optional[Dict[str, str]]:
     if not storage.is_firebase_enabled():
         return None
-    api_key = (
+    raw_api_key = (
         os.getenv("FIREBASE_CLIENT_API_KEY", "").strip("<>\"' \t\r\n")
         or os.getenv("FIREBASE_WEB_API_KEY", "").strip("<>\"' \t\r\n")
     )
-    project_id = os.getenv("FIREBASE_PROJECT_ID", "").strip("<>\"' \t\r\n")
+    # Ignore placeholder values like "FIREBASEWEBAPIKEY" or "YOUR_API_KEY";
+    # valid Google/Firebase Web API keys always start with "AIza".
+    api_key = raw_api_key if raw_api_key.startswith("AIza") else ""
+    project_id = (
+        os.getenv("FIREBASE_PROJECT_ID", "").strip("<>\"' \t\r\n")
+        or os.getenv("GOOGLE_CLOUD_PROJECT", "").strip("<>\"' \t\r\n")
+    )
     if not api_key and project_id:
         discovered = _discover_firebase_web_config_from_gcp(project_id)
         if discovered:
