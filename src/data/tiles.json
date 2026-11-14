@@ -11,7 +11,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "red",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "green",
           "SW": "red",
@@ -20,11 +20,11 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -43,15 +43,15 @@
           "N": "red",
           "NE": "red",
           "E": "toll_2",
-          "SE": "red",
-          "S": "cops_1",
+          "SE": "criminals_2",
+          "S": "schizophrenic",
           "SW": "red",
           "W": "red",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           },
           {
@@ -60,7 +60,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": "criminals_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -74,7 +74,7 @@
           "N": "red",
           "NE": "red",
           "E": "toll_2",
-          "SE": "red",
+          "SE": "schizophrenic",
           "S": "green",
           "SW": "red",
           "W": "red",
@@ -82,11 +82,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -104,8 +104,8 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "red",
-          "SE": "cops_1",
+          "E": "mob",
+          "SE": "criminals_2",
           "S": "green",
           "SW": "red",
           "W": "red",
@@ -113,11 +113,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -144,12 +144,12 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "++"
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": "criminals_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -162,7 +162,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_1",
+          "E": "mob",
           "SE": "toll_2",
           "S": "green",
           "SW": "red",
@@ -175,7 +175,7 @@
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -202,11 +202,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -233,16 +233,16 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": "criminals_2",
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -256,7 +256,7 @@
           "N": "red",
           "NE": "red",
           "E": "red",
-          "SE": "cops_1",
+          "SE": "mob",
           "S": "green",
           "SW": "red",
           "W": "red",
@@ -264,11 +264,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -299,7 +299,7 @@
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -326,11 +326,11 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -382,12 +382,12 @@
           "SE": "red",
           "S": "red",
           "SW": "green",
-          "W": "cops_1",
+          "W": "schizophrenic",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -406,7 +406,7 @@
           "N": "cops_1",
           "NE": "red",
           "E": "green",
-          "SE": "cops_2",
+          "SE": "schizophrenic",
           "S": "criminals_1",
           "SW": "green",
           "W": "red",
@@ -433,7 +433,7 @@
           "N": "green",
           "NE": "red",
           "E": "green",
-          "SE": "cops_1",
+          "SE": "mob",
           "S": "red",
           "SW": "green",
           "W": "criminals_1",
@@ -441,7 +441,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -460,7 +460,7 @@
           "N": "toll_1",
           "NE": "red",
           "E": "green",
-          "SE": "cops_2",
+          "SE": "mob",
           "S": "cops_1",
           "SW": "green",
           "W": "cops_2",
@@ -468,7 +468,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -495,7 +495,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -549,7 +549,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -576,7 +576,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -603,7 +603,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -630,11 +630,11 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -665,7 +665,7 @@
             "modifier": "-"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -692,7 +692,7 @@
         },
         "sells": [],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -722,7 +722,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "++"
           }
         ],
@@ -741,7 +741,7 @@
           "N": "red",
           "NE": "red",
           "E": "green",
-          "SE": "cops_1",
+          "SE": "mob",
           "S": "red",
           "SW": "red",
           "W": "green",
@@ -749,7 +749,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -776,7 +776,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -797,13 +797,13 @@
           "E": "green",
           "SE": "red",
           "S": "toll_2",
-          "SW": "green",
+          "SW": "schizophrenic",
           "W": "green",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -824,13 +824,13 @@
           "E": "red",
           "SE": "red",
           "S": "green",
-          "SW": "green",
+          "SW": "schizophrenic",
           "W": "green",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -857,7 +857,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -876,7 +876,7 @@
           "N": "red",
           "NE": "red",
           "E": "mob",
-          "SE": "green",
+          "SE": "mob",
           "S": "green",
           "SW": "criminals_1",
           "W": "green",
@@ -903,7 +903,7 @@
           "N": "red",
           "NE": "red",
           "E": "toll_2",
-          "SE": "green",
+          "SE": "schizophrenic",
           "S": "celebrities_1",
           "SW": "red",
           "W": "green",
@@ -911,7 +911,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -938,7 +938,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -969,7 +969,7 @@
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -996,11 +996,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -1057,7 +1057,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "++"
           }
         ],
@@ -1077,14 +1077,14 @@
           "NE": "red",
           "E": "red",
           "SE": "green",
-          "S": "criminals_1",
-          "SW": "green",
+          "S": "mob",
+          "SW": "schizophrenic",
           "W": "green",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "--"
           }
         ],
@@ -1105,13 +1105,13 @@
           "E": "red",
           "SE": "red",
           "S": "red",
-          "SW": "criminals_1",
+          "SW": "mob",
           "W": "green",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -1138,7 +1138,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -1165,7 +1165,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -1183,7 +1183,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "green",
+          "E": "schizophrenic",
           "SE": "green",
           "S": "red",
           "SW": "red",
@@ -1219,7 +1219,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -1246,7 +1246,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -1273,7 +1273,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -1304,7 +1304,7 @@
             "modifier": "--"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -1331,11 +1331,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -1392,7 +1392,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -1419,7 +1419,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -1446,7 +1446,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -1468,12 +1468,12 @@
           "SE": "red",
           "S": "green",
           "SW": "red",
-          "W": "cops_1",
+          "W": "schizophrenic",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -1491,7 +1491,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_1",
+          "E": "schizophrenic",
           "SE": "cops_1",
           "S": "green",
           "SW": "green",
@@ -1500,7 +1500,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -1548,13 +1548,13 @@
           "E": "red",
           "SE": "green",
           "S": "green",
-          "SW": "cops_1",
+          "SW": "schizophrenic",
           "W": "mob",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -1581,7 +1581,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -1613,7 +1613,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": "schizophrenic",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1639,7 +1639,7 @@
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -1666,11 +1666,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -1727,12 +1727,12 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "++"
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "mob",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1745,7 +1745,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_1",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "green",
           "SW": "cops_1",
@@ -1754,7 +1754,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -1772,7 +1772,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_1",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "cops_1",
           "SW": "red",
@@ -1781,7 +1781,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -1801,14 +1801,14 @@
           "NE": "red",
           "E": "toll_2",
           "SE": "red",
-          "S": "cops_2",
+          "S": "mob",
           "SW": "cops_1",
           "W": "toll_2",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -1826,7 +1826,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_2",
+          "E": "mob",
           "SE": "red",
           "S": "toll_2",
           "SW": "red",
@@ -1835,7 +1835,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -1862,7 +1862,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -1916,7 +1916,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -1943,7 +1943,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -1974,7 +1974,7 @@
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -2001,11 +2001,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -2032,7 +2032,7 @@
         },
         "sells": [],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -2062,7 +2062,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
@@ -2070,7 +2070,7 @@
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -2090,27 +2090,27 @@
           "NE": "green",
           "E": "red",
           "SE": "schizophrenic",
-          "S": "green",
+          "S": "schizophrenic",
           "SW": "red",
           "W": "red",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "criminals_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -2124,7 +2124,7 @@
           "N": "green",
           "NE": "green",
           "E": "red",
-          "SE": "green",
+          "SE": "criminals_2",
           "S": "green",
           "SW": "red",
           "W": "red",
@@ -2136,12 +2136,12 @@
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "cops_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -2152,9 +2152,9 @@
         "id": "A2_4",
         "index": 4,
         "edges": {
-          "N": "cops_1",
+          "N": "mob",
           "NE": "green",
-          "E": "green",
+          "E": "criminals_1",
           "SE": "red",
           "S": "toll_2",
           "SW": "red",
@@ -2163,7 +2163,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
@@ -2183,7 +2183,7 @@
         "id": "A2_5",
         "index": 5,
         "edges": {
-          "N": "cops_1",
+          "N": "criminals_2",
           "NE": "green",
           "E": "red",
           "SE": "theater",
@@ -2194,7 +2194,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
@@ -2203,7 +2203,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": "criminals_2",
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -2225,16 +2225,16 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": true,
         "persistent": false,
         "refresh": false,
@@ -2245,7 +2245,7 @@
         "id": "A2_7",
         "index": 7,
         "edges": {
-          "N": "green",
+          "N": "celebrities_1",
           "NE": "green",
           "E": "green",
           "SE": "red",
@@ -2256,11 +2256,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -2280,23 +2280,23 @@
           "NE": "green",
           "E": "red",
           "SE": "red",
-          "S": "cops_1",
+          "S": "mob",
           "SW": "red",
           "W": "red",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "criminals_1",
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -2318,16 +2318,16 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": "schizophrenic",
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -2349,7 +2349,7 @@
         },
         "sells": [],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": "mob",
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -2375,7 +2375,7 @@
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           }
         ],
@@ -2402,7 +2402,7 @@
         },
         "sells": [],
         "buys": [],
-        "encounter": "mob",
+        "encounter": null,
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -2432,11 +2432,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "++"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -2463,11 +2463,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -2494,7 +2494,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -2521,11 +2521,11 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -2552,11 +2552,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -2583,7 +2583,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           }
         ],
@@ -2610,11 +2610,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -2641,7 +2641,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -2668,11 +2668,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -2699,11 +2699,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "--"
           }
         ],
@@ -2730,11 +2730,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -2786,12 +2786,12 @@
           "SE": "green",
           "S": "red",
           "SW": "red",
-          "W": "green",
+          "W": "mob",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -2809,7 +2809,7 @@
         "edges": {
           "N": "green",
           "NE": "schizophrenic",
-          "E": "green",
+          "E": "mob",
           "SE": "green",
           "S": "celebrities_1",
           "SW": "red",
@@ -2818,7 +2818,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -2845,7 +2845,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -2872,7 +2872,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "++"
           }
         ],
@@ -2926,7 +2926,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -2953,7 +2953,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -2980,7 +2980,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -3007,7 +3007,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -3034,11 +3034,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "--"
           }
         ],
@@ -3065,11 +3065,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -3120,18 +3120,18 @@
           "E": "green",
           "SE": "green",
           "S": "red",
-          "SW": "criminals_1",
+          "SW": "mob",
           "W": "red",
           "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "++"
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "mob",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -3153,7 +3153,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -3180,12 +3180,12 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -3197,7 +3197,7 @@
         "index": 4,
         "edges": {
           "N": "criminals_1",
-          "NE": "green",
+          "NE": "celebrities_1",
           "E": "green",
           "SE": "green",
           "S": "toll_2",
@@ -3207,7 +3207,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -3261,7 +3261,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -3288,7 +3288,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -3315,7 +3315,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           }
         ],
@@ -3342,7 +3342,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -3369,11 +3369,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           }
         ],
@@ -3400,11 +3400,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -3450,18 +3450,18 @@
         "id": "E2_1",
         "index": 1,
         "edges": {
-          "N": "green",
+          "N": "schizophrenic",
           "NE": "celebrities_1",
           "E": "red",
-          "SE": "green",
+          "SE": "schizophrenic",
           "S": "criminals_3",
           "SW": "cops_2",
-          "W": "green",
+          "W": "schizophrenic",
           "NW": "toll_2"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -3480,15 +3480,15 @@
           "N": "red",
           "NE": "red",
           "E": "cops_2",
-          "SE": "green",
+          "SE": "mob",
           "S": "cops_2",
           "SW": "green",
-          "W": "green",
+          "W": "mob",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -3504,7 +3504,7 @@
         "id": "E2_3",
         "index": 3,
         "edges": {
-          "N": "green",
+          "N": "mob",
           "NE": "red",
           "E": "criminals_3",
           "SE": "red",
@@ -3542,7 +3542,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -3596,7 +3596,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -3623,7 +3623,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "--"
           }
         ],
@@ -3650,7 +3650,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           }
         ],
@@ -3677,7 +3677,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "++"
           }
         ],
@@ -3704,11 +3704,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -3735,11 +3735,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -3766,7 +3766,7 @@
         },
         "sells": [],
         "buys": [],
-        "encounter": "mob",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -3792,11 +3792,11 @@
           "S": "red",
           "SW": "cops_1",
           "W": "theater",
-          "NW": "green"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "++"
           }
         ],
@@ -3816,14 +3816,14 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "green",
+          "S": "schizophrenic",
           "SW": "cops_1",
           "W": "green",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -3843,14 +3843,14 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "green",
+          "S": "schizophrenic",
           "SW": "green",
           "W": "cops_1",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -3877,7 +3877,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -3897,14 +3897,14 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "green",
+          "S": "mob",
           "SW": "theater",
           "W": "green",
-          "NW": "green"
+          "NW": "mob"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -3931,7 +3931,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -3958,7 +3958,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -3985,7 +3985,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -4012,7 +4012,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -4039,11 +4039,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -4070,7 +4070,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           },
           {
@@ -4121,7 +4121,7 @@
         "index": 1,
         "edges": {
           "N": "criminals_1",
-          "NE": "green",
+          "NE": "celebrities_1",
           "E": "theater",
           "SE": "red",
           "S": "green",
@@ -4131,15 +4131,15 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           }
         ],
@@ -4156,9 +4156,9 @@
         "index": 2,
         "edges": {
           "N": "green",
-          "NE": "green",
+          "NE": "schizophrenic",
           "E": "green",
-          "SE": "green",
+          "SE": "schizophrenic",
           "S": "red",
           "SW": "red",
           "W": "red",
@@ -4166,7 +4166,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "++"
           },
           {
@@ -4197,11 +4197,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -4242,7 +4242,7 @@
           "N": "green",
           "NE": "red",
           "E": "theater",
-          "SE": "green",
+          "SE": "mob",
           "S": "cops_1",
           "SW": "red",
           "W": "red",
@@ -4250,11 +4250,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -4281,11 +4281,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -4312,11 +4312,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -4343,11 +4343,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -4374,16 +4374,16 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": "schizophrenic",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4427,11 +4427,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           }
         ],
@@ -4488,11 +4488,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -4519,11 +4519,11 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -4550,7 +4550,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -4577,11 +4577,11 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -4608,11 +4608,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -4666,7 +4666,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
@@ -4697,7 +4697,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -4724,7 +4724,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
@@ -4777,11 +4777,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -4827,26 +4827,26 @@
         "id": "C3_1",
         "index": 1,
         "edges": {
-          "N": "green",
+          "N": "celebrities_1",
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "criminals_3",
+          "S": "schizophrenic",
           "SW": "cops_3",
           "W": "criminals_4",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -4867,10 +4867,10 @@
         "id": "C3_2",
         "index": 2,
         "edges": {
-          "N": "green",
+          "N": "celebrities_1",
           "NE": "red",
           "E": "red",
-          "SE": "criminals_3",
+          "SE": "mob",
           "S": "cops_3",
           "SW": "criminals_4",
           "W": "cops_3",
@@ -4878,15 +4878,15 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -4909,7 +4909,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "mob",
           "SE": "cops_3",
           "S": "criminals_4",
           "SW": "cops_3",
@@ -4918,11 +4918,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           },
           {
@@ -4936,7 +4936,7 @@
             "modifier": "-"
           }
         ],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4949,7 +4949,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_3",
+          "E": "mob",
           "SE": "criminals_4",
           "S": "cops_3",
           "SW": "red",
@@ -4958,15 +4958,15 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -4976,7 +4976,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": "schizophrenic",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4987,7 +4987,7 @@
         "id": "C3_5",
         "index": 5,
         "edges": {
-          "N": "criminals_3",
+          "N": "mob",
           "NE": "red",
           "E": "criminals_4",
           "SE": "toll_3",
@@ -4998,7 +4998,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
@@ -5006,17 +5006,17 @@
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
-        "encounter": "cops_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5030,33 +5030,33 @@
           "N": "cops_3",
           "NE": "red",
           "E": "cops_3",
-          "SE": "green",
+          "SE": "celebrities_1",
           "S": "red",
-          "SW": "green",
+          "SW": "schizophrenic",
           "W": "red",
-          "NW": "green"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
         "buys": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
-        "encounter": null,
+        "encounter": "cops_4",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5068,7 +5068,7 @@
         "index": 7,
         "edges": {
           "N": "criminals_4",
-          "NE": "green",
+          "NE": "schizophrenic",
           "E": "red",
           "SE": "green",
           "S": "red",
@@ -5078,25 +5078,25 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
-        "encounter": "criminals_4",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5118,11 +5118,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
@@ -5132,11 +5132,11 @@
         ],
         "buys": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
-        "encounter": "cops_3",
+        "encounter": "mob",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5158,25 +5158,25 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
         "buys": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           }
         ],
-        "encounter": null,
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5198,7 +5198,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
@@ -5206,17 +5206,17 @@
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": "cops_3",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5238,25 +5238,25 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
         "buys": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
-        "encounter": "cops_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5278,7 +5278,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
@@ -5286,13 +5286,13 @@
             "modifier": "="
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -5319,22 +5319,22 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "criminals_3",
+          "S": "mob",
           "SW": "cops_3",
           "W": "criminals_4",
           "NW": "toll_3"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -5359,22 +5359,22 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_3",
+          "S": "mob",
           "SW": "criminals_4",
           "W": "cops_3",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -5397,24 +5397,24 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "mob",
           "SE": "red",
           "S": "criminals_4",
           "SW": "cops_3",
           "W": "red",
-          "NW": "green"
+          "NW": "celebrities_1"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -5424,7 +5424,7 @@
             "modifier": "+"
           }
         ],
-        "encounter": null,
+        "encounter": "schizophrenic",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5436,7 +5436,7 @@
         "index": 4,
         "edges": {
           "N": "red",
-          "NE": "criminals_3",
+          "NE": "mob",
           "E": "cops_3",
           "SE": "red",
           "S": "cops_3",
@@ -5450,11 +5450,11 @@
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -5464,7 +5464,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": "mob",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5478,33 +5478,33 @@
           "N": "red",
           "NE": "cops_3",
           "E": "criminals_4",
-          "SE": "green",
-          "S": "green",
+          "SE": "celebrities_1",
+          "S": "schizophrenic",
           "SW": "red",
           "W": "red",
-          "NW": "green"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
-        "encounter": "cops_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5526,11 +5526,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
@@ -5540,11 +5540,11 @@
         ],
         "buys": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
-        "encounter": null,
+        "encounter": "cops_4",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5557,7 +5557,7 @@
         "edges": {
           "N": "red",
           "NE": "cops_3",
-          "E": "green",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -5566,25 +5566,25 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
-        "encounter": "criminals_4",
+        "encounter": "schizophrenic",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5595,9 +5595,9 @@
         "id": "D3_8",
         "index": 8,
         "edges": {
-          "N": "green",
+          "N": "schizophrenic",
           "NE": "red",
-          "E": "green",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "red",
           "SW": "criminals_4",
@@ -5606,11 +5606,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
@@ -5620,11 +5620,11 @@
         ],
         "buys": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
-        "encounter": "cops_3",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5646,25 +5646,25 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
-        "encounter": null,
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5686,7 +5686,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
@@ -5694,17 +5694,17 @@
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": "cops_3",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5726,11 +5726,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
@@ -5740,11 +5740,11 @@
         ],
         "buys": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
-        "encounter": "cops_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5766,21 +5766,21 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -5807,14 +5807,14 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "green",
+          "S": "celebrities_1",
           "SW": "cops_3",
           "W": "criminals_4",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "++"
           }
         ],
@@ -5834,19 +5834,19 @@
           "NE": "red",
           "E": "red",
           "SE": "criminals_3",
-          "S": "green",
+          "S": "celebrities_1",
           "SW": "criminals_4",
           "W": "cops_3",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5857,23 +5857,23 @@
         "id": "E3_3",
         "index": 3,
         "edges": {
-          "N": "green",
-          "NE": "green",
+          "N": "celebrities_1",
+          "NE": "celebrities_1",
           "E": "red",
           "SE": "cops_3",
-          "S": "green",
+          "S": "schizophrenic",
           "SW": "cops_3",
           "W": "red",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5886,7 +5886,7 @@
         "edges": {
           "N": "red",
           "NE": "criminals_3",
-          "E": "green",
+          "E": "schizophrenic",
           "SE": "criminals_4",
           "S": "red",
           "SW": "red",
@@ -5895,12 +5895,12 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "schizophrenic",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5927,7 +5927,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_4",
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5944,17 +5944,17 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "green",
+          "W": "schizophrenic",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5967,21 +5967,21 @@
         "edges": {
           "N": "criminals_4",
           "NE": "cops_3",
-          "E": "green",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "criminals_4",
-          "NW": "green"
+          "NW": "mob"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5996,19 +5996,19 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "green",
+          "S": "mob",
           "SW": "criminals_4",
           "W": "cops_3",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "mob",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6019,8 +6019,8 @@
         "id": "E3_9",
         "index": 9,
         "edges": {
-          "N": "green",
-          "NE": "green",
+          "N": "mob",
+          "NE": "mob",
           "E": "green",
           "SE": "red",
           "S": "cops_3",
@@ -6057,16 +6057,16 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "--"
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6088,16 +6088,16 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "--"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": "criminals_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -6119,7 +6119,7 @@
         },
         "sells": [],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "cops_4",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -6145,11 +6145,11 @@
           "S": "red",
           "SW": "red",
           "W": "cops_3",
-          "NW": "criminals_3"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -6169,14 +6169,14 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "criminals_3",
-          "SW": "green",
+          "S": "mob",
+          "SW": "celebrities_1",
           "W": "cops_3",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -6192,18 +6192,18 @@
         "id": "F3_3",
         "index": 3,
         "edges": {
-          "N": "criminals_3",
+          "N": "mob",
           "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "cops_3",
-          "SW": "green",
-          "W": "green",
+          "SW": "schizophrenic",
+          "W": "schizophrenic",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -6219,7 +6219,7 @@
         "id": "F3_4",
         "index": 4,
         "edges": {
-          "N": "cops_2",
+          "N": "mob",
           "NE": "red",
           "E": "red",
           "SE": "red",
@@ -6284,7 +6284,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -6311,7 +6311,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "--"
           }
         ],
@@ -6338,7 +6338,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -6365,7 +6365,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -6392,11 +6392,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -6423,11 +6423,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -6484,7 +6484,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -6528,7 +6528,7 @@
         "index": 3,
         "edges": {
           "N": "red",
-          "NE": "green",
+          "NE": "schizophrenic",
           "E": "green",
           "SE": "red",
           "S": "green",
@@ -6538,7 +6538,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -6555,7 +6555,7 @@
         "index": 4,
         "edges": {
           "N": "schizophrenic",
-          "NE": "green",
+          "NE": "mob",
           "E": "green",
           "SE": "red",
           "S": "toll_2",
@@ -6565,7 +6565,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -6582,7 +6582,7 @@
         "index": 5,
         "edges": {
           "N": "cops_1",
-          "NE": "green",
+          "NE": "mob",
           "E": "red",
           "SE": "green",
           "S": "green",
@@ -6592,7 +6592,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -6624,7 +6624,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -6646,7 +6646,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -6673,7 +6673,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -6700,7 +6700,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -6731,7 +6731,7 @@
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -6758,11 +6758,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -6814,21 +6814,21 @@
           "SE": "red",
           "S": "red",
           "SW": "toll_2",
-          "W": "green",
-          "NW": "green"
+          "W": "criminals_1",
+          "NW": "criminals_2"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "++"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "criminals_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -6843,7 +6843,7 @@
           "NE": "celebrities_1",
           "E": "green",
           "SE": "red",
-          "S": "green",
+          "S": "criminals_3",
           "SW": "celebrities_1",
           "W": "mob",
           "NW": "celebrities_1"
@@ -6854,12 +6854,12 @@
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6881,12 +6881,12 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -6900,24 +6900,24 @@
           "N": "red",
           "NE": "criminals_1",
           "E": "mob",
-          "SE": "green",
-          "S": "green",
+          "SE": "schizophrenic",
+          "S": "mob",
           "SW": "green",
           "W": "red",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "schizophrenic",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6939,16 +6939,16 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": "criminals_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6962,11 +6962,11 @@
           "N": "toll_2",
           "NE": "red",
           "E": "red",
-          "SE": "green",
-          "S": "green",
+          "SE": "criminals_1",
+          "S": "criminals_2",
           "SW": "red",
           "W": "green",
-          "NW": "green"
+          "NW": "criminals_3"
         },
         "sells": [
           {
@@ -6975,7 +6975,7 @@
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "mob",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6997,7 +6997,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
@@ -7006,7 +7006,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7018,22 +7018,22 @@
         "index": 8,
         "edges": {
           "N": "red",
-          "NE": "green",
+          "NE": "schizophrenic",
           "E": "green",
           "SE": "red",
-          "S": "green",
+          "S": "mob",
           "SW": "green",
           "W": "green",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7055,7 +7055,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           },
           {
@@ -7064,7 +7064,7 @@
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7082,11 +7082,11 @@
           "S": "cops_1",
           "SW": "cops_1",
           "W": "green",
-          "NW": "green"
+          "NW": "criminals_1"
         },
         "sells": [],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": null,
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7097,7 +7097,7 @@
         "id": "B4_11",
         "index": 11,
         "edges": {
-          "N": "green",
+          "N": "criminals_2",
           "NE": "red",
           "E": "schizophrenic",
           "SE": "red",
@@ -7108,11 +7108,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -7169,7 +7169,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "++"
           }
         ],
@@ -7196,7 +7196,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -7223,7 +7223,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -7250,7 +7250,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           }
         ],
@@ -7304,7 +7304,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -7331,7 +7331,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           }
         ],
@@ -7358,7 +7358,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -7385,7 +7385,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -7412,11 +7412,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -7443,11 +7443,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -7496,23 +7496,23 @@
           "N": "red",
           "NE": "red",
           "E": "red",
-          "SE": "green",
-          "S": "criminals_3",
+          "SE": "celebrities_1",
+          "S": "schizophrenic",
           "SW": "cops_3",
           "W": "criminals_4",
           "NW": "toll_3"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -7536,7 +7536,7 @@
           "N": "red",
           "NE": "red",
           "E": "red",
-          "SE": "criminals_3",
+          "SE": "schizophrenic",
           "S": "cops_3",
           "SW": "criminals_4",
           "W": "cops_3",
@@ -7544,15 +7544,15 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -7576,19 +7576,19 @@
           "N": "red",
           "NE": "red",
           "E": "red",
-          "SE": "cops_3",
+          "SE": "mob",
           "S": "criminals_4",
           "SW": "cops_3",
           "W": "red",
-          "NW": "green"
+          "NW": "celebrities_1"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
@@ -7602,7 +7602,7 @@
             "modifier": "="
           }
         ],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7614,8 +7614,8 @@
         "index": 4,
         "edges": {
           "N": "red",
-          "NE": "criminals_3",
-          "E": "green",
+          "NE": "mob",
+          "E": "celebrities_1",
           "SE": "criminals_4",
           "S": "cops_3",
           "SW": "red",
@@ -7624,15 +7624,15 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -7642,7 +7642,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": "mob",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7653,7 +7653,7 @@
         "id": "D4_5",
         "index": 5,
         "edges": {
-          "N": "criminals_3",
+          "N": "mob",
           "NE": "cops_3",
           "E": "red",
           "SE": "toll_3",
@@ -7664,7 +7664,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
@@ -7672,17 +7672,17 @@
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
         "buys": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           }
         ],
-        "encounter": "cops_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7693,36 +7693,36 @@
         "id": "D4_6",
         "index": 6,
         "edges": {
-          "N": "cops_3",
+          "N": "mob",
           "NE": "criminals_4",
           "E": "red",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "green",
+          "W": "schizophrenic",
           "NW": "criminals_4"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
-        "encounter": null,
+        "encounter": "cops_4",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7735,7 +7735,7 @@
         "edges": {
           "N": "criminals_4",
           "NE": "cops_3",
-          "E": "green",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -7748,21 +7748,21 @@
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
-        "encounter": "criminals_4",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7784,25 +7784,25 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
-        "encounter": "cops_3",
+        "encounter": "schizophrenic",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7824,25 +7824,25 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
-        "encounter": null,
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7864,11 +7864,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
@@ -7878,11 +7878,11 @@
         ],
         "buys": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": "cops_3",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7904,25 +7904,25 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
-        "encounter": "cops_4",
+        "encounter": "criminals_3",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7948,17 +7948,17 @@
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
         "buys": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -7992,11 +7992,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -8023,11 +8023,11 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -8054,7 +8054,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -8081,7 +8081,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           },
           {
@@ -8112,11 +8112,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -8160,7 +8160,7 @@
         "index": 7,
         "edges": {
           "N": "theater",
-          "NE": "green",
+          "NE": "celebrities_1",
           "E": "schizophrenic",
           "SE": "criminals_1",
           "S": "green",
@@ -8170,7 +8170,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
@@ -8201,7 +8201,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "++"
           }
         ],
@@ -8228,11 +8228,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -8281,11 +8281,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -8338,16 +8338,16 @@
           "S": "green",
           "SW": "schizophrenic",
           "W": "red",
-          "NW": "criminals_1"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           }
         ],
         "buys": [],
-        "encounter": "criminals_1",
+        "encounter": "mob",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -8358,7 +8358,7 @@
         "id": "F4_2",
         "index": 2,
         "edges": {
-          "N": "green",
+          "N": "celebrities_1",
           "NE": "red",
           "E": "red",
           "SE": "red",
@@ -8369,7 +8369,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -8385,18 +8385,18 @@
         "id": "F4_3",
         "index": 3,
         "edges": {
-          "N": "green",
+          "N": "schizophrenic",
           "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "green",
-          "SW": "criminals_1",
+          "SW": "mob",
           "W": "green",
           "NW": "green"
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -8450,7 +8450,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -8477,7 +8477,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -8531,7 +8531,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -8558,7 +8558,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -8585,16 +8585,16 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -8616,11 +8616,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -8677,11 +8677,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -8708,7 +8708,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
@@ -8739,7 +8739,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           }
         ],
@@ -8766,11 +8766,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -8797,11 +8797,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -8820,7 +8820,7 @@
           "N": "toll_2",
           "NE": "green",
           "E": "red",
-          "SE": "green",
+          "SE": "schizophrenic",
           "S": "criminals_1",
           "SW": "red",
           "W": "toll_1",
@@ -8855,11 +8855,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -8878,7 +8878,7 @@
           "N": "theater",
           "NE": "green",
           "E": "red",
-          "SE": "green",
+          "SE": "mob",
           "S": "green",
           "SW": "red",
           "W": "cops_2",
@@ -8886,7 +8886,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -8913,7 +8913,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -8944,7 +8944,7 @@
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "--"
           }
         ],
@@ -8971,11 +8971,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -9002,7 +9002,7 @@
         },
         "sells": [],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -9032,11 +9032,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "++"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -9063,11 +9063,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -9094,7 +9094,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -9121,11 +9121,11 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "--"
           }
         ],
@@ -9152,11 +9152,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -9210,11 +9210,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -9241,7 +9241,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -9290,11 +9290,11 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -9321,11 +9321,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -9378,11 +9378,11 @@
           "S": "green",
           "SW": "schizophrenic",
           "W": "red",
-          "NW": "green"
+          "NW": "celebrities_1"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -9405,11 +9405,11 @@
           "S": "green",
           "SW": "green",
           "W": "red",
-          "NW": "green"
+          "NW": "mob"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           }
         ],
@@ -9463,7 +9463,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -9490,7 +9490,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "++"
           }
         ],
@@ -9517,7 +9517,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -9544,7 +9544,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -9571,7 +9571,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -9598,7 +9598,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -9625,11 +9625,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -9656,11 +9656,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -9712,17 +9712,17 @@
           "SE": "green",
           "S": "red",
           "SW": "red",
-          "W": "celebrities_1",
+          "W": "mob",
           "NW": "green"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "++"
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -9737,14 +9737,14 @@
           "NE": "red",
           "E": "mob",
           "SE": "green",
-          "S": "cops_1",
+          "S": "criminals_2",
           "SW": "red",
           "W": "green",
           "NW": "toll_2"
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -9771,12 +9771,12 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": "celebrities_1",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -9787,8 +9787,8 @@
         "id": "D5_4",
         "index": 4,
         "edges": {
-          "N": "celebrities_1",
-          "NE": "green",
+          "N": "criminals_1",
+          "NE": "criminals_1",
           "E": "red",
           "SE": "cops_1",
           "S": "toll_2",
@@ -9798,7 +9798,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           }
         ],
@@ -9843,7 +9843,7 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "cops_1",
+          "E": "criminals_2",
           "SE": "celebrities_1",
           "S": "red",
           "SW": "mob",
@@ -9852,12 +9852,12 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": "cops_1",
+        "encounter": "mob",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -9869,7 +9869,7 @@
         "index": 7,
         "edges": {
           "N": "schizophrenic",
-          "NE": "green",
+          "NE": "criminals_2",
           "E": "green",
           "SE": "green",
           "S": "green",
@@ -9879,7 +9879,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "++"
           }
         ],
@@ -9906,7 +9906,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -9960,11 +9960,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "--"
           }
         ],
@@ -9991,11 +9991,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -10041,10 +10041,10 @@
         "id": "E5_1",
         "index": 1,
         "edges": {
-          "N": "green",
+          "N": "schizophrenic",
           "NE": "red",
           "E": "red",
-          "SE": "cops_2",
+          "SE": "mob",
           "S": "criminals_3",
           "SW": "cops_2",
           "W": "toll_2",
@@ -10052,7 +10052,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -10075,11 +10075,11 @@
           "S": "cops_2",
           "SW": "green",
           "W": "green",
-          "NW": "green"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -10133,7 +10133,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -10153,7 +10153,7 @@
           "NE": "cops_2",
           "E": "toll_2",
           "SE": "toll_2",
-          "S": "green",
+          "S": "schizophrenic",
           "SW": "red",
           "W": "red",
           "NW": "cops_2"
@@ -10181,13 +10181,13 @@
           "E": "green",
           "SE": "red",
           "S": "red",
-          "SW": "green",
+          "SW": "mob",
           "W": "cops_2",
           "NW": "criminals_3"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           }
         ],
@@ -10214,7 +10214,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "--"
           }
         ],
@@ -10231,7 +10231,7 @@
         "index": 8,
         "edges": {
           "N": "red",
-          "NE": "green",
+          "NE": "mob",
           "E": "red",
           "SE": "red",
           "S": "cops_2",
@@ -10241,7 +10241,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -10268,12 +10268,12 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "++"
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "schizophrenic",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10295,11 +10295,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -10326,16 +10326,16 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10414,7 +10414,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           }
         ],
@@ -10437,11 +10437,11 @@
           "S": "cops_2",
           "SW": "toll_2",
           "W": "red",
-          "NW": "green"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -10463,8 +10463,8 @@
           "SE": "red",
           "S": "green",
           "SW": "red",
-          "W": "green",
-          "NW": "green"
+          "W": "schizophrenic",
+          "NW": "mob"
         },
         "sells": [
           {
@@ -10489,13 +10489,13 @@
           "E": "toll_2",
           "SE": "red",
           "S": "red",
-          "SW": "green",
+          "SW": "mob",
           "W": "cops_2",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -10522,7 +10522,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -10549,12 +10549,12 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -10576,7 +10576,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -10603,7 +10603,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -10630,11 +10630,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -10661,7 +10661,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
@@ -10711,9 +10711,9 @@
         "id": "A6_1",
         "index": 1,
         "edges": {
-          "N": "green",
+          "N": "celebrities_1",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "cops_3",
           "SW": "criminals_3",
@@ -10722,11 +10722,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "++"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -10744,7 +10744,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_2",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "green",
           "SW": "green",
@@ -10753,11 +10753,11 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -10773,7 +10773,7 @@
         "id": "A6_3",
         "index": 3,
         "edges": {
-          "N": "criminals_3",
+          "N": "mob",
           "NE": "red",
           "E": "toll_2",
           "SE": "red",
@@ -10784,7 +10784,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -10800,7 +10800,7 @@
         "id": "A6_4",
         "index": 4,
         "edges": {
-          "N": "cops_2",
+          "N": "mob",
           "NE": "red",
           "E": "green",
           "SE": "red",
@@ -10811,16 +10811,16 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10836,17 +10836,17 @@
           "E": "red",
           "SE": "red",
           "S": "red",
-          "SW": "criminals_3",
+          "SW": "mob",
           "W": "cops_2",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -10864,7 +10864,7 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "green",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "criminals_3",
           "SW": "cops_2",
@@ -10900,11 +10900,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -10931,7 +10931,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -10958,7 +10958,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -10989,7 +10989,7 @@
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "--"
           }
         ],
@@ -11016,11 +11016,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -11066,9 +11066,9 @@
         "id": "B6_1",
         "index": 1,
         "edges": {
-          "N": "green",
-          "NE": "green",
-          "E": "criminals_3",
+          "N": "celebrities_1",
+          "NE": "schizophrenic",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -11077,12 +11077,12 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "mob",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11094,17 +11094,17 @@
         "index": 2,
         "edges": {
           "N": "red",
-          "NE": "criminals_3",
+          "NE": "mob",
           "E": "cops_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "green",
-          "NW": "green"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -11121,7 +11121,7 @@
         "index": 3,
         "edges": {
           "N": "red",
-          "NE": "cops_2",
+          "NE": "mob",
           "E": "toll_2",
           "SE": "red",
           "S": "red",
@@ -11131,7 +11131,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -11154,11 +11154,11 @@
           "S": "red",
           "SW": "red",
           "W": "red",
-          "NW": "cops_2"
+          "NW": "mob"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -11185,7 +11185,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -11212,7 +11212,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -11266,12 +11266,12 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11293,7 +11293,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -11324,7 +11324,7 @@
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -11351,11 +11351,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -11403,7 +11403,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "mob",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -11412,12 +11412,12 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "++"
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "mob",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11428,8 +11428,8 @@
         "id": "C6_2",
         "index": 2,
         "edges": {
-          "N": "green",
-          "NE": "criminals_3",
+          "N": "celebrities_1",
+          "NE": "mob",
           "E": "cops_2",
           "SE": "red",
           "S": "red",
@@ -11439,7 +11439,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "--"
           }
         ],
@@ -11461,17 +11461,17 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "green",
+          "W": "schizophrenic",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
         "buys": [],
-        "encounter": null,
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -11493,7 +11493,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -11520,7 +11520,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -11547,7 +11547,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -11563,7 +11563,7 @@
         "id": "C6_7",
         "index": 7,
         "edges": {
-          "N": "green",
+          "N": "schizophrenic",
           "NE": "cops_2",
           "E": "criminals_3",
           "SE": "red",
@@ -11574,7 +11574,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -11628,7 +11628,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "+"
           }
         ],
@@ -11655,11 +11655,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -11675,8 +11675,8 @@
         "id": "C6_11",
         "index": 11,
         "edges": {
-          "N": "green",
-          "NE": "green",
+          "N": "schizophrenic",
+          "NE": "mob",
           "E": "criminals_3",
           "SE": "red",
           "S": "red",
@@ -11686,11 +11686,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -11738,7 +11738,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "mob",
           "SE": "red",
           "S": "celebrities_1",
           "SW": "red",
@@ -11747,7 +11747,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           }
         ],
@@ -11774,7 +11774,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "++"
           }
         ],
@@ -11797,7 +11797,7 @@
           "S": "green",
           "SW": "red",
           "W": "red",
-          "NW": "green"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
@@ -11828,7 +11828,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -11855,7 +11855,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "--"
           }
         ],
@@ -11873,7 +11873,7 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "green",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "toll_2",
           "SW": "red",
@@ -11882,7 +11882,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -11898,7 +11898,7 @@
         "id": "D6_7",
         "index": 7,
         "edges": {
-          "N": "green",
+          "N": "mob",
           "NE": "red",
           "E": "criminals_3",
           "SE": "red",
@@ -11909,7 +11909,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -11936,7 +11936,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -11963,7 +11963,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -11990,11 +11990,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "+"
           }
         ],
@@ -12021,11 +12021,11 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -12052,7 +12052,7 @@
         },
         "sells": [],
         "buys": [],
-        "encounter": "cops_2",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -12073,7 +12073,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "schizophrenic",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -12082,7 +12082,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -12099,13 +12099,13 @@
         "index": 2,
         "edges": {
           "N": "red",
-          "NE": "criminals_3",
+          "NE": "schizophrenic",
           "E": "cops_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "green",
-          "NW": "green"
+          "NW": "celebrities_1"
         },
         "sells": [
           {
@@ -12125,7 +12125,7 @@
         "id": "E6_3",
         "index": 3,
         "edges": {
-          "N": "criminals_3",
+          "N": "schizophrenic",
           "NE": "cops_2",
           "E": "toll_2",
           "SE": "red",
@@ -12136,7 +12136,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -12152,7 +12152,7 @@
         "id": "E6_4",
         "index": 4,
         "edges": {
-          "N": "cops_2",
+          "N": "mob",
           "NE": "green",
           "E": "red",
           "SE": "red",
@@ -12163,7 +12163,7 @@
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "--"
           }
         ],
@@ -12185,12 +12185,12 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "cops_2",
+          "W": "mob",
           "NW": "criminals_3"
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -12208,7 +12208,7 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "cops_2",
+          "E": "mob",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -12217,7 +12217,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "+"
           }
         ],
@@ -12244,7 +12244,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -12271,7 +12271,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "+"
           }
         ],
@@ -12298,7 +12298,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "++"
           }
         ],
@@ -12325,11 +12325,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -12360,7 +12360,7 @@
             "modifier": "-"
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -12417,7 +12417,7 @@
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "="
           }
         ],
@@ -12433,7 +12433,7 @@
         "id": "F6_2",
         "index": 2,
         "edges": {
-          "N": "green",
+          "N": "celebrities_1",
           "NE": "red",
           "E": "red",
           "SE": "cops_4",
@@ -12471,7 +12471,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "="
           }
         ],
@@ -12494,11 +12494,11 @@
           "S": "red",
           "SW": "red",
           "W": "red",
-          "NW": "green"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "="
           }
         ],
@@ -12525,7 +12525,7 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           }
         ],
@@ -12548,11 +12548,11 @@
           "S": "red",
           "SW": "red",
           "W": "cops_4",
-          "NW": "criminals_3"
+          "NW": "schizophrenic"
         },
         "sells": [
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -12568,18 +12568,18 @@
         "id": "F6_7",
         "index": 7,
         "edges": {
-          "N": "green",
+          "N": "schizophrenic",
           "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "cops_4",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "mob",
           "NW": "cops_3"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -12599,14 +12599,14 @@
           "NE": "red",
           "E": "red",
           "SE": "cops_4",
-          "S": "criminals_3",
+          "S": "mob",
           "SW": "red",
           "W": "cops_3",
           "NW": "red"
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "-"
           }
         ],
@@ -12625,7 +12625,7 @@
           "N": "red",
           "NE": "red",
           "E": "cops_4",
-          "SE": "criminals_3",
+          "SE": "mob",
           "S": "toll_3",
           "SW": "red",
           "W": "red",
@@ -12633,7 +12633,7 @@
         },
         "sells": [
           {
-            "category": "Animals",
+            "category": "Uppers",
             "modifier": "="
           }
         ],
@@ -12660,11 +12660,11 @@
         },
         "sells": [
           {
-            "category": "Wine",
+            "category": "Opiates",
             "modifier": "-"
           },
           {
-            "category": "Marble",
+            "category": "Party",
             "modifier": "-"
           }
         ],
@@ -12695,7 +12695,7 @@
             "modifier": "="
           },
           {
-            "category": "Grain",
+            "category": "Weed",
             "modifier": "-"
           }
         ],
@@ -12722,7 +12722,7 @@
         },
         "sells": [],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "celebrities_1",
         "gamble": false,
         "persistent": false,
         "refresh": true,

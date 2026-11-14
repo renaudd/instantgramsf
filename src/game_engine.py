@@ -2316,9 +2316,8 @@ def _fail_mission(
     is_fenced: bool = False,
 ) -> List[str]:
     """Handles failing or voluntarily canceling a mission according to rulebook & Political Climate rules."""
-    is_overflow = reason == "6th Schizophrenic mission overflow"
     fenced_exempt = (is_fenced or "fenced" in reason.lower()) and has_climate_modifier(state, "ms13_3")
-    counts_as_failure = (not is_overflow) and (not fenced_exempt)
+    counts_as_failure = not fenced_exempt
     if counts_as_failure:
         _inc_player_stat(player, "missionsFailed", 1)
         m_fav = m.get("favor") or []
@@ -2363,7 +2362,7 @@ def _fail_mission(
         _recycle_mission_cards(state, m)
         add_log(
             state,
-            f"{player['name']} {'canceled overflow' if is_overflow else 'failed'} Schizophrenic Mission '{m.get('name', 'Mission')}' ({reason}).",
+            f"{player['name']} failed Schizophrenic Job '{m.get('name', 'Mission')}' ({reason}).",
             "mission",
         )
     else:
@@ -3182,8 +3181,13 @@ def _apply_table_encounter_outcome(
         goal["completed"] = False
         goal["underInfluence"] = under_cards
         if len(player["missions"]) >= 5 and player.get("isBot"):
-            replaced = next((m for m in player["missions"] if m.get("source") != "schizophrenic"), player["missions"][0])
-            _fail_mission(state, player, replaced, reason="replaced by Schizophrenic mission")
+            non_sooth = [m for m in player["missions"] if m.get("source") != "schizophrenic"]
+            if non_sooth:
+                replaced = sorted(non_sooth, key=lambda m: (0 if m.get("source") == "starting" else 1))[0]
+                _fail_mission(state, player, replaced, reason="replaced by Schizophrenic mission")
+            else:
+                replaced = player["missions"][0]
+                _fail_mission(state, player, replaced, reason="6th Schizophrenic mission overflow")
         player["missions"].append(goal)
         msg = f"{player['name']} encountered a Schizophrenic! Received mandatory Mission '{goal['name']}' with {len(under_cards)} Influence card(s) sealed beneath it (rolled ®={r_rom})."
         add_log(state, msg, "encounter")
@@ -3523,23 +3527,55 @@ def _sync_mission_and_influence_card_data(state: Dict[str, Any]) -> None:
                 suv_obj["track"] = _legacy_track_remap.get(suv_obj.get("track"), suv_obj.get("track") or _resolve_track_for_category(suv_obj.get("category", "Weed")))
                 suv_obj["category"] = _legacy_cat_remap.get(suv_obj.get("category"), suv_obj.get("category"))
                 suv_obj["subcategory"] = _legacy_cat_remap.get(suv_obj.get("subcategory"), suv_obj.get("subcategory"))
+                if suv_obj.get("missionSource") == "soothsayer":
+                    suv_obj["missionSource"] = "schizophrenic"
+                if suv_obj.get("isMissionCargo") and suv_obj.get("missionSource") != "encounter":
+                    suv_obj["sell"] = []
+        for m_obj in p.get("missions", []):
+            if isinstance(m_obj, dict):
+                if m_obj.get("source") == "soothsayer":
+                    m_obj["source"] = "schizophrenic"
+                if m_obj.get("source") == "schizophrenic":
+                    m_obj.pop("fencedSell", None)
         for rwd in (p.get("pendingMarketReward") or []):
             if isinstance(rwd, dict):
                 rwd["track"] = _legacy_track_remap.get(rwd.get("track"), rwd.get("track"))
                 if rwd.get("subcategory"):
                     rwd["subcategory"] = _legacy_cat_remap.get(rwd["subcategory"], rwd["subcategory"])
     if isinstance(rb, dict):
+        canon_tiles_data = _load_json("tiles.json")
+        canon_tile_by_id: Dict[str, Dict[str, Any]] = {}
+        if isinstance(canon_tiles_data, dict):
+            for c_cell in canon_tiles_data.values():
+                if isinstance(c_cell, dict):
+                    for ct in (c_cell.get("tiles") or []):
+                        if isinstance(ct, dict) and ct.get("id"):
+                            canon_tile_by_id[str(ct["id"])] = ct
         for cell_v in rb.values():
             if not isinstance(cell_v, dict):
                 continue
             tiles_to_fix = list(cell_v.get("stack") or []) + ([cell_v["revealed"]] if isinstance(cell_v.get("revealed"), dict) else [])
             for t_obj in tiles_to_fix:
-                for s_e in (t_obj.get("sells") or []):
-                    if isinstance(s_e, dict) and s_e.get("category") in _legacy_cat_remap:
-                        s_e["category"] = _legacy_cat_remap[s_e["category"]]
-                for b_e in (t_obj.get("buys") or []):
-                    if isinstance(b_e, dict) and b_e.get("category") in _legacy_cat_remap:
-                        b_e["category"] = _legacy_cat_remap[b_e["category"]]
+                tid = str(t_obj.get("id") or "")
+                if tid in canon_tile_by_id:
+                    ct = canon_tile_by_id[tid]
+                    t_obj["encounter"] = ct.get("encounter")
+                    t_obj["edges"] = copy.deepcopy(ct.get("edges") or {})
+                    t_obj["sells"] = copy.deepcopy(ct.get("sells") or [])
+                    t_obj["buys"] = copy.deepcopy(ct.get("buys") or [])
+                else:
+                    if t_obj.get("encounter") == "soothsayer":
+                        t_obj["encounter"] = "schizophrenic"
+                    if isinstance(t_obj.get("edges"), dict):
+                        for ed_k, ed_v in list(t_obj["edges"].items()):
+                            if ed_v == "soothsayer":
+                                t_obj["edges"][ed_k] = "schizophrenic"
+                    for s_e in (t_obj.get("sells") or []):
+                        if isinstance(s_e, dict) and s_e.get("category") in _legacy_cat_remap:
+                            s_e["category"] = _legacy_cat_remap[s_e["category"]]
+                    for b_e in (t_obj.get("buys") or []):
+                        if isinstance(b_e, dict) and b_e.get("category") in _legacy_cat_remap:
+                            b_e["category"] = _legacy_cat_remap[b_e["category"]]
     elif isinstance(mb, list):
         for slot in mb:
             if isinstance(slot, dict) and slot.get("id") in mkt_by_id:
@@ -6598,18 +6634,26 @@ def resolve_pending_encounter_choice(
     m_to_replace: Optional[Dict[str, Any]] = None
     if is_job_assignment_fulfill:
         active_regular_jobs = [m for m in player["missions"] if m.get("source") != "schizophrenic"]
-        if len(active_regular_jobs) >= 5:
-            if player.get("isBot") and not replace_mission_id:
+        if len(player["missions"]) >= 5:
+            if not active_regular_jobs:
+                if player.get("isBot"):
+                    decision = "refuse"
+                else:
+                    return (
+                        False,
+                        "All 5 of your active Jobs are mandatory Schizophrenic Jobs! Schizophrenic Jobs cannot be failed to make room for an NPC Job — you must refuse or fight.",
+                    )
+            elif player.get("isBot") and not replace_mission_id:
                 m_to_replace = sorted(active_regular_jobs, key=lambda m: (0 if m.get("source") == "starting" else 1))[0]
             elif not replace_mission_id:
                 return (
                     False,
-                    "You already have 5 active Jobs! Select one of your 5 active Jobs to fail to make room for this Job (or choose to refuse/fight).",
+                    "You already have 5 active Jobs! Select one of your non-Schizophrenic active Jobs to fail to make room for this Job (or choose to refuse/fight).",
                 )
             else:
                 m_to_replace = next((m for m in active_regular_jobs if str(m.get("id")) == str(replace_mission_id)), None)
                 if not m_to_replace:
-                    return False, "Selected Job to fail was not found among your active regular Jobs."
+                    return False, "Selected Job to fail was not found among your failable (non-Schizophrenic) Jobs."
 
     state["pendingEncounter"] = None
     player["tempFavor"] = 0
@@ -6713,9 +6757,7 @@ def resolve_pending_encounter_choice(
             add_log(state, f"{player['name']} refused {card['name']}'s Deck Quest demand ({pen_str}).", "encounter")
             return True, f"Refused {card['name']}'s Deck Quest demand ({pen_str})."
 
-        sooth_cnt = sum(1 for m in player["missions"] if m.get("source") == "schizophrenic")
-        non_sooth_cnt = len(player["missions"]) - sooth_cnt
-        if state["decks"]["missions"] and non_sooth_cnt < 5:
+        if state["decks"]["missions"] and len(player["missions"]) < 5:
             drawn_m = copy.deepcopy(state["decks"]["missions"].pop(0))
             drawn_m["source"] = "encounter"
             drawn_m["hasDrawnMissionCard"] = True
@@ -6815,10 +6857,8 @@ def resolve_pending_encounter_choice(
             return True, f"Refused {card['name']}'s mission demand ({pen_str})."
 
         # Check if this is a Quest card that draws from the Missions deck (no embedded mission on card)
-        sooth_cnt = sum(1 for m in player["missions"] if m.get("source") == "schizophrenic")
-        non_sooth_cnt = len(player["missions"]) - sooth_cnt
         if not card.get("mission") and not action_text.strip():
-            if state["decks"]["missions"] and non_sooth_cnt < 5:
+            if state["decks"]["missions"] and len(player["missions"]) < 5:
                 drawn_m = copy.deepcopy(state["decks"]["missions"].pop(0))
                 drawn_m["source"] = "encounter"
                 drawn_m["hasDrawnMissionCard"] = True
@@ -6842,7 +6882,7 @@ def resolve_pending_encounter_choice(
         norm_p_cell = normalize_cell_id(m_data.get("pickupCell")) if m_data.get("pickupCell") else None
         norm_d_cell = normalize_cell_id(m_data.get("deliverCell")) if m_data.get("deliverCell") else None
         norm_act_txt = _normalize_relative_scarcity_text(action_text)
-        if non_sooth_cnt < 5:
+        if len(player["missions"]) < 5:
             m_obj = {
                 "id": f"enc_{card['id']}_{secrets.token_hex(2)}",
                 "name": m_data.get("name") or f"{card['name']}'s Task",
@@ -8161,7 +8201,7 @@ def _check_all_cleanups_done(state: Dict[str, Any]) -> None:
             pre_cash_map[p["index"]] = int(p.get("cash", 0))
             for m in list(p.get("missions", [])):
                 if not m.get("completed"):
-                    _fail_mission(state, p, m, reason="unfulfilled at end of 211 A.D.")
+                    _fail_mission(state, p, m, reason="unfulfilled at Sunday Morning Reckoning")
             step1_fine_map[p["index"]] = int(p.get("cash", 0)) - pre_cash_map[p["index"]]
 
         # Step 2: Snapshot combat gear for potential PvP tie-breakers, then liquidate remaining non-mission SUV Goods at Abundant (>>) Sell Price
@@ -9246,10 +9286,11 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
             if sooth_count <= 5:
                 return (
                     False,
-                    "Canceling or failing a Schizophrenic mission is impossible unless you already have 5 active Schizophrenic missions and take on an additional Schizophrenic mission.",
+                    "Canceling or failing a Schizophrenic job is impossible unless you already have 5 active Schizophrenic jobs and trigger a 6th Schizophrenic job.",
                 )
-            _fail_mission(state, target_p, m, reason="6th Schizophrenic mission overflow")
-            return True, f"Canceled Schizophrenic Mission '{m.get('name', 'Mission')}' with no penalty."
+            s_notes = _fail_mission(state, target_p, m, reason="6th Schizophrenic mission overflow")
+            suffix = f" ({' '.join(s_notes)})" if s_notes else ""
+            return True, f"Failed Schizophrenic Job '{m.get('name', 'Mission')}' (6th Schizophrenic job overflow){suffix}."
         if src == "encounter":
             h_notes = _fail_mission(state, target_p, m, reason="voluntarily canceled")
             return True, f"Canceled Encounter Mission '{m.get('name', 'Mission')}' ({' '.join(h_notes) or 'Reputational consequences applied'})."
@@ -9413,6 +9454,8 @@ def _execute_player_action_inner(state: Dict[str, Any], user_id: Optional[int], 
         suv_item = next((x for x in target_p["suv"] if x["id"] == chosen["cardId"]), None)
         if not suv_item:
             return False, "Selected item is no longer on your SUV."
+        if suv_item.get("isMissionCargo") and (suv_item.get("missionSource") != "encounter" or not suv_item.get("sell")):
+            return False, "Cargo from Starting or Schizophrenic jobs cannot be sold or fenced."
         was_fenced_npc = bool(suv_item.get("isMissionCargo"))
         _remove_suv_item(
             state,
