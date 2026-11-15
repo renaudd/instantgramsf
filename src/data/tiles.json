@@ -11,7 +11,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "green",
           "SW": "red",
@@ -44,7 +44,7 @@
           "NE": "red",
           "E": "toll_2",
           "SE": "criminals_1",
-          "S": "schizophrenic",
+          "S": "Prophet",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -74,7 +74,7 @@
           "N": "red",
           "NE": "red",
           "E": "toll_2",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "green",
           "SW": "red",
           "W": "red",
@@ -122,7 +122,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -373,7 +373,7 @@
           "SE": "red",
           "S": "red",
           "SW": "green",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "red"
         },
         "sells": [
@@ -397,7 +397,7 @@
           "N": "cops_1",
           "NE": "red",
           "E": "green",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "criminals_2",
           "SW": "green",
           "W": "red",
@@ -779,7 +779,7 @@
           "E": "green",
           "SE": "red",
           "S": "toll_2",
-          "SW": "schizophrenic",
+          "SW": "Prophet",
           "W": "green",
           "NW": "red"
         },
@@ -806,7 +806,7 @@
           "E": "red",
           "SE": "red",
           "S": "green",
-          "SW": "schizophrenic",
+          "SW": "Prophet",
           "W": "green",
           "NW": "red"
         },
@@ -885,7 +885,7 @@
           "N": "red",
           "NE": "red",
           "E": "toll_2",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "celebrities_1",
           "SW": "red",
           "W": "green",
@@ -969,7 +969,7 @@
         "edges": {
           "N": "toll_1",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "toll_2",
           "S": "green",
           "SW": "toll_2",
@@ -1051,7 +1051,7 @@
           "E": "red",
           "SE": "green",
           "S": "mob",
-          "SW": "schizophrenic",
+          "SW": "Prophet",
           "W": "green",
           "NW": "red"
         },
@@ -1103,7 +1103,7 @@
           "N": "red",
           "NE": "red",
           "E": "red",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "red",
           "SW": "red",
           "W": "criminals_1",
@@ -1156,7 +1156,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "green",
           "S": "red",
           "SW": "red",
@@ -1432,7 +1432,7 @@
           "SE": "red",
           "S": "green",
           "SW": "red",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "red"
         },
         "sells": [
@@ -1455,7 +1455,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "cops_1",
           "S": "green",
           "SW": "green",
@@ -1512,7 +1512,7 @@
           "E": "red",
           "SE": "green",
           "S": "green",
-          "SW": "schizophrenic",
+          "SW": "Prophet",
           "W": "mob",
           "NW": "red"
         },
@@ -1577,7 +1577,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -1700,7 +1700,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "green",
           "SW": "cops_1",
@@ -1727,7 +1727,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "cops_1",
           "SW": "red",
@@ -1997,7 +1997,7 @@
         "id": "A2_1",
         "index": 1,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "green",
           "E": "red",
           "SE": "red",
@@ -2035,8 +2035,8 @@
           "N": "toll_2",
           "NE": "green",
           "E": "red",
-          "SE": "schizophrenic",
-          "S": "schizophrenic",
+          "SE": "Prophet",
+          "S": "Prophet",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -2273,7 +2273,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": true,
         "persistent": true,
         "refresh": false,
@@ -2436,7 +2436,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -2542,7 +2542,7 @@
           "SE": "red",
           "S": "green",
           "SW": "green",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "criminals_1"
         },
         "sells": [
@@ -2572,7 +2572,7 @@
           "E": "toll_2",
           "SE": "red",
           "S": "celebrities_1",
-          "SW": "schizophrenic",
+          "SW": "Prophet",
           "W": "green",
           "NW": "red"
         },
@@ -2628,7 +2628,7 @@
           "N": "red",
           "NE": "green",
           "E": "red",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "theater",
           "SW": "red",
           "W": "green",
@@ -2658,7 +2658,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "green",
           "S": "red",
           "SW": "mob",
@@ -2736,7 +2736,7 @@
         "index": 2,
         "edges": {
           "N": "green",
-          "NE": "schizophrenic",
+          "NE": "Prophet",
           "E": "mob",
           "SE": "green",
           "S": "celebrities_1",
@@ -2819,7 +2819,7 @@
           "N": "green",
           "NE": "celebrities_1",
           "E": "red",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "green",
           "SW": "toll_2",
           "W": "green",
@@ -2870,7 +2870,7 @@
         "id": "C2_7",
         "index": 7,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "red",
           "E": "red",
           "SE": "green",
@@ -2983,7 +2983,7 @@
         "index": 11,
         "edges": {
           "N": "celebrities_1",
-          "NE": "schizophrenic",
+          "NE": "Prophet",
           "E": "toll_2",
           "SE": "green",
           "S": "green",
@@ -3015,7 +3015,7 @@
         "edges": {},
         "sells": [],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -3041,7 +3041,7 @@
           "S": "red",
           "SW": "mob",
           "W": "red",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -3088,7 +3088,7 @@
         "id": "D2_3",
         "index": 3,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "red",
           "E": "red",
           "SE": "red",
@@ -3196,7 +3196,7 @@
         "id": "D2_7",
         "index": 7,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "cops_2",
           "E": "green",
           "SE": "green",
@@ -3283,7 +3283,7 @@
           "SE": "green",
           "S": "green",
           "SW": "mob",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "green"
         },
         "sells": [
@@ -3313,7 +3313,7 @@
           "E": "green",
           "SE": "green",
           "S": "green",
-          "SW": "schizophrenic",
+          "SW": "Prophet",
           "W": "theater",
           "NW": "toll_2"
         },
@@ -3360,13 +3360,13 @@
         "id": "E2_1",
         "index": 1,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "celebrities_1",
           "E": "red",
-          "SE": "schizophrenic",
-          "S": "criminals_3",
+          "SE": "Prophet",
+          "S": "criminals_2",
           "SW": "cops_2",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "toll_2"
         },
         "sells": [
@@ -3580,7 +3580,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "criminals_3",
+          "S": "criminals_1",
           "SW": "cops_2",
           "W": "cops_2",
           "NW": "toll_2"
@@ -3609,7 +3609,7 @@
           "SE": "cops_2",
           "S": "cops_2",
           "SW": "green",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "green"
         },
         "sells": [
@@ -3635,9 +3635,9 @@
         "index": 11,
         "edges": {
           "N": "toll_2",
-          "NE": "cops_3",
+          "NE": "cops_1",
           "E": "criminals_2",
-          "SE": "criminals_3",
+          "SE": "criminals_1",
           "S": "toll_2",
           "SW": "toll_2",
           "W": "toll_2",
@@ -3693,7 +3693,7 @@
           "S": "red",
           "SW": "cops_1",
           "W": "theater",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -3717,7 +3717,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "schizophrenic",
+          "S": "Prophet",
           "SW": "cops_2",
           "W": "green",
           "NW": "red"
@@ -3744,7 +3744,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "schizophrenic",
+          "S": "Prophet",
           "SW": "green",
           "W": "cops_1",
           "NW": "red"
@@ -3891,7 +3891,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4048,9 +4048,9 @@
         "index": 2,
         "edges": {
           "N": "green",
-          "NE": "schizophrenic",
+          "NE": "Prophet",
           "E": "green",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "red",
           "SW": "red",
           "W": "red",
@@ -4109,7 +4109,7 @@
         "id": "A3_4",
         "index": 4,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "red",
           "E": "green",
           "SE": "red",
@@ -4275,7 +4275,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -4544,7 +4544,7 @@
           "SE": "red",
           "S": "green",
           "SW": "toll_2",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "green"
         },
         "sells": [
@@ -4630,7 +4630,7 @@
           "N": "cops_1",
           "NE": "green",
           "E": "red",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "theater",
           "SW": "red",
           "W": "green",
@@ -4651,7 +4651,7 @@
         "edges": {
           "N": "toll_2",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "green",
           "S": "green",
           "SW": "green",
@@ -4682,7 +4682,7 @@
         "edges": {},
         "sells": [],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -4705,7 +4705,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "schizophrenic",
+          "S": "Prophet",
           "SW": "cops_4",
           "W": "criminals_4",
           "NW": "red"
@@ -4745,9 +4745,9 @@
           "NE": "red",
           "E": "red",
           "SE": "mob",
-          "S": "cops_3",
-          "SW": "criminals_3",
-          "W": "cops_4",
+          "S": "cops_1",
+          "SW": "criminals_2",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -4784,9 +4784,9 @@
           "N": "red",
           "NE": "red",
           "E": "mob",
-          "SE": "cops_4",
-          "S": "criminals_4",
-          "SW": "cops_4",
+          "SE": "cops_1",
+          "S": "criminals_2",
+          "SW": "cops_2",
           "W": "red",
           "NW": "red"
         },
@@ -4824,7 +4824,7 @@
           "N": "red",
           "NE": "red",
           "E": "mob",
-          "SE": "criminals_4",
+          "SE": "criminals_1",
           "S": "cops_2",
           "SW": "red",
           "W": "red",
@@ -4850,7 +4850,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4863,7 +4863,7 @@
         "edges": {
           "N": "mob",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "criminals_1",
           "SE": "toll_3",
           "S": "red",
           "SW": "red",
@@ -4890,7 +4890,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -4901,14 +4901,14 @@
         "id": "C3_6",
         "index": 6,
         "edges": {
-          "N": "cops_4",
+          "N": "cops_2",
           "NE": "red",
-          "E": "cops_4",
+          "E": "cops_1",
           "SE": "celebrities_1",
           "S": "red",
-          "SW": "schizophrenic",
+          "SW": "Prophet",
           "W": "red",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -4941,8 +4941,8 @@
         "id": "C3_7",
         "index": 7,
         "edges": {
-          "N": "criminals_4",
-          "NE": "schizophrenic",
+          "N": "criminals_2",
+          "NE": "Prophet",
           "E": "red",
           "SE": "green",
           "S": "red",
@@ -4981,13 +4981,13 @@
         "id": "C3_8",
         "index": 8,
         "edges": {
-          "N": "cops_3",
+          "N": "cops_2",
           "NE": "red",
           "E": "green",
           "SE": "red",
           "S": "red",
-          "SW": "criminals_4",
-          "W": "cops_4",
+          "SW": "criminals_1",
+          "W": "cops_1",
           "NW": "red"
         },
         "sells": [
@@ -5022,13 +5022,13 @@
         "index": 9,
         "edges": {
           "N": "red",
-          "NE": "cops_3",
+          "NE": "cops_1",
           "E": "red",
           "SE": "red",
-          "S": "criminals_3",
-          "SW": "cops_4",
-          "W": "criminals_4",
-          "NW": "cops_4"
+          "S": "criminals_2",
+          "SW": "cops_1",
+          "W": "criminals_2",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -5062,13 +5062,13 @@
         "index": 10,
         "edges": {
           "N": "red",
-          "NE": "criminals_3",
+          "NE": "criminals_1",
           "E": "red",
-          "SE": "criminals_4",
+          "SE": "criminals_2",
           "S": "cops_2",
-          "SW": "criminals_4",
-          "W": "cops_4",
-          "NW": "criminals_4"
+          "SW": "criminals_1",
+          "W": "cops_2",
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -5103,10 +5103,10 @@
         "edges": {
           "N": "red",
           "NE": "toll_2",
-          "E": "criminals_4",
-          "SE": "cops_4",
+          "E": "criminals_2",
+          "SE": "cops_1",
           "S": "criminals_2",
-          "SW": "cops_3",
+          "SW": "cops_2",
           "W": "red",
           "NW": "toll_2"
         },
@@ -5168,7 +5168,7 @@
           "SE": "red",
           "S": "mob",
           "SW": "cops_2",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "toll_3"
         },
         "sells": [
@@ -5207,8 +5207,8 @@
           "E": "red",
           "SE": "red",
           "S": "mob",
-          "SW": "criminals_3",
-          "W": "cops_4",
+          "SW": "criminals_1",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -5246,8 +5246,8 @@
           "NE": "red",
           "E": "mob",
           "SE": "red",
-          "S": "criminals_3",
-          "SW": "cops_4",
+          "S": "criminals_2",
+          "SW": "cops_1",
           "W": "red",
           "NW": "celebrities_1"
         },
@@ -5271,7 +5271,7 @@
             "modifier": "+"
           }
         ],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5286,7 +5286,7 @@
           "NE": "mob",
           "E": "cops_2",
           "SE": "red",
-          "S": "cops_4",
+          "S": "cops_2",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -5323,13 +5323,13 @@
         "index": 5,
         "edges": {
           "N": "red",
-          "NE": "cops_3",
-          "E": "criminals_4",
+          "NE": "cops_1",
+          "E": "criminals_1",
           "SE": "celebrities_1",
-          "S": "schizophrenic",
+          "S": "Prophet",
           "SW": "red",
           "W": "red",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -5363,13 +5363,13 @@
         "index": 6,
         "edges": {
           "N": "red",
-          "NE": "criminals_4",
-          "E": "cops_3",
+          "NE": "criminals_2",
+          "E": "cops_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "red",
-          "NW": "criminals_3"
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -5404,12 +5404,12 @@
         "edges": {
           "N": "red",
           "NE": "cops_4",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
-          "NW": "cops_4"
+          "W": "criminals_2",
+          "NW": "cops_1"
         },
         "sells": [
           {
@@ -5431,7 +5431,7 @@
             "modifier": "+"
           }
         ],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5442,13 +5442,13 @@
         "id": "D3_8",
         "index": 8,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "red",
-          "SW": "criminals_3",
-          "W": "cops_3",
+          "SW": "criminals_1",
+          "W": "cops_1",
           "NW": "criminals_3"
         },
         "sells": [
@@ -5482,11 +5482,11 @@
         "id": "D3_9",
         "index": 9,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_2",
           "NE": "red",
           "E": "red",
-          "SE": "criminals_3",
-          "S": "criminals_3",
+          "SE": "criminals_2",
+          "S": "criminals_1",
           "SW": "cops_3",
           "W": "criminals_2",
           "NW": "toll_3"
@@ -5522,12 +5522,12 @@
         "id": "D3_10",
         "index": 10,
         "edges": {
-          "N": "cops_4",
+          "N": "cops_2",
           "NE": "red",
           "E": "red",
-          "SE": "cops_3",
-          "S": "cops_3",
-          "SW": "criminals_3",
+          "SE": "cops_1",
+          "S": "cops_2",
+          "SW": "criminals_1",
           "W": "cops_2",
           "NW": "green"
         },
@@ -5564,10 +5564,10 @@
         "edges": {
           "N": "toll_2",
           "NE": "red",
-          "E": "criminals_4",
+          "E": "criminals_1",
           "SE": "toll_2",
-          "S": "criminals_4",
-          "SW": "cops_3",
+          "S": "criminals_2",
+          "SW": "cops_2",
           "W": "green",
           "NW": "red"
         },
@@ -5604,7 +5604,7 @@
         "edges": {},
         "sells": [],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -5629,7 +5629,7 @@
           "SE": "red",
           "S": "celebrities_1",
           "SW": "cops_2",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "red"
         },
         "sells": [
@@ -5653,10 +5653,10 @@
           "N": "red",
           "NE": "red",
           "E": "red",
-          "SE": "criminals_4",
+          "SE": "criminals_2",
           "S": "celebrities_1",
-          "SW": "criminals_4",
-          "W": "cops_3",
+          "SW": "criminals_1",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -5680,9 +5680,9 @@
           "N": "celebrities_1",
           "NE": "celebrities_1",
           "E": "red",
-          "SE": "cops_3",
-          "S": "schizophrenic",
-          "SW": "cops_4",
+          "SE": "cops_1",
+          "S": "Prophet",
+          "SW": "cops_1",
           "W": "red",
           "NW": "red"
         },
@@ -5705,9 +5705,9 @@
         "index": 4,
         "edges": {
           "N": "red",
-          "NE": "criminals_3",
-          "E": "schizophrenic",
-          "SE": "criminals_3",
+          "NE": "criminals_1",
+          "E": "Prophet",
+          "SE": "criminals_2",
           "S": "red",
           "SW": "red",
           "W": "red",
@@ -5720,7 +5720,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5731,8 +5731,8 @@
         "id": "E3_5",
         "index": 5,
         "edges": {
-          "N": "criminals_4",
-          "NE": "cops_4",
+          "N": "criminals_2",
+          "NE": "cops_2",
           "E": "red",
           "SE": "toll_3",
           "S": "red",
@@ -5758,13 +5758,13 @@
         "id": "E3_6",
         "index": 6,
         "edges": {
-          "N": "cops_3",
-          "NE": "criminals_4",
+          "N": "cops_2",
+          "NE": "criminals_1",
           "E": "red",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "red"
         },
         "sells": [
@@ -5785,13 +5785,13 @@
         "id": "E3_7",
         "index": 7,
         "edges": {
-          "N": "criminals_3",
-          "NE": "cops_3",
-          "E": "schizophrenic",
+          "N": "criminals_1",
+          "NE": "cops_1",
+          "E": "Prophet",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "mob"
         },
         "sells": [
@@ -5817,7 +5817,7 @@
           "E": "red",
           "SE": "red",
           "S": "mob",
-          "SW": "criminals_4",
+          "SW": "criminals_2",
           "W": "cops_2",
           "NW": "red"
         },
@@ -5843,10 +5843,10 @@
           "NE": "mob",
           "E": "green",
           "SE": "red",
-          "S": "cops_3",
-          "SW": "cops_3",
+          "S": "cops_1",
+          "SW": "cops_2",
           "W": "criminals_2",
-          "NW": "cops_3"
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -5868,10 +5868,10 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_3",
-          "SE": "criminals_4",
-          "S": "criminals_4",
-          "SW": "criminals_4",
+          "E": "cops_1",
+          "SE": "criminals_2",
+          "S": "criminals_1",
+          "SW": "criminals_1",
           "W": "cops_2",
           "NW": "criminals_2"
         },
@@ -5899,10 +5899,10 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "criminals_1",
           "SE": "cops_3",
           "S": "toll_2",
-          "SW": "cops_4",
+          "SW": "cops_1",
           "W": "red",
           "NW": "toll_2"
         },
@@ -5956,7 +5956,7 @@
           "S": "red",
           "SW": "red",
           "W": "cops_2",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -6008,8 +6008,8 @@
           "E": "red",
           "SE": "red",
           "S": "cops_2",
-          "SW": "schizophrenic",
-          "W": "schizophrenic",
+          "SW": "Prophet",
+          "W": "Prophet",
           "NW": "red"
         },
         "sells": [
@@ -6034,7 +6034,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_3",
+          "S": "cops_2",
           "SW": "red",
           "W": "red",
           "NW": "cops_2"
@@ -6046,7 +6046,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": true,
         "persistent": false,
         "refresh": false,
@@ -6063,7 +6063,7 @@
           "SE": "red",
           "S": "red",
           "SW": "criminals_1",
-          "W": "cops_3",
+          "W": "cops_1",
           "NW": "criminals_3"
         },
         "sells": [
@@ -6073,7 +6073,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6115,7 +6115,7 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_3",
+          "S": "cops_2",
           "SW": "green",
           "W": "toll_2",
           "NW": "red"
@@ -6165,14 +6165,14 @@
         "id": "F3_9",
         "index": 9,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_1",
           "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "toll_2",
           "SW": "criminals_2",
           "W": "red",
-          "NW": "criminals_3"
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -6198,7 +6198,7 @@
           "SE": "red",
           "S": "red",
           "SW": "cops_2",
-          "W": "criminals_3",
+          "W": "criminals_1",
           "NW": "cops_2"
         },
         "sells": [
@@ -6229,7 +6229,7 @@
           "SE": "red",
           "S": "red",
           "SW": "toll_2",
-          "W": "cops_3",
+          "W": "cops_1",
           "NW": "toll_2"
         },
         "sells": [
@@ -6330,7 +6330,7 @@
         "index": 3,
         "edges": {
           "N": "red",
-          "NE": "schizophrenic",
+          "NE": "Prophet",
           "E": "green",
           "SE": "red",
           "S": "green",
@@ -6356,7 +6356,7 @@
         "id": "A4_4",
         "index": 4,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "mob",
           "E": "green",
           "SE": "red",
@@ -6551,7 +6551,7 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "toll_2",
           "S": "toll_2",
           "SW": "red",
@@ -6608,7 +6608,7 @@
           "S": "red",
           "SW": "toll_2",
           "W": "criminals_2",
-          "NW": "criminals_3"
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -6691,9 +6691,9 @@
         "index": 4,
         "edges": {
           "N": "red",
-          "NE": "criminals_3",
+          "NE": "criminals_2",
           "E": "mob",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "mob",
           "SW": "green",
           "W": "red",
@@ -6710,7 +6710,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -6722,7 +6722,7 @@
         "index": 5,
         "edges": {
           "N": "toll_2",
-          "NE": "criminals_3",
+          "NE": "criminals_1",
           "E": "green",
           "SE": "red",
           "S": "red",
@@ -6756,7 +6756,7 @@
           "NE": "red",
           "E": "red",
           "SE": "criminals_2",
-          "S": "criminals_3",
+          "S": "criminals_2",
           "SW": "red",
           "W": "green",
           "NW": "criminals_2"
@@ -6779,7 +6779,7 @@
         "id": "B4_7",
         "index": 7,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "red",
           "E": "red",
           "SE": "red",
@@ -6811,7 +6811,7 @@
         "index": 8,
         "edges": {
           "N": "red",
-          "NE": "schizophrenic",
+          "NE": "Prophet",
           "E": "green",
           "SE": "red",
           "S": "mob",
@@ -6841,7 +6841,7 @@
           "NE": "red",
           "E": "theater",
           "SE": "red",
-          "S": "criminals_3",
+          "S": "criminals_1",
           "SW": "green",
           "W": "red",
           "NW": "red"
@@ -6892,7 +6892,7 @@
         "edges": {
           "N": "criminals_2",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "toll_2",
           "SW": "red",
@@ -6946,7 +6946,7 @@
           "NE": "green",
           "E": "green",
           "SE": "mob",
-          "S": "schizophrenic",
+          "S": "Prophet",
           "SW": "red",
           "W": "celebrities_1",
           "NW": "green"
@@ -6970,7 +6970,7 @@
         "index": 2,
         "edges": {
           "N": "green",
-          "NE": "schizophrenic",
+          "NE": "Prophet",
           "E": "green",
           "SE": "green",
           "S": "celebrities_1",
@@ -7053,7 +7053,7 @@
           "N": "celebrities_1",
           "NE": "celebrities_1",
           "E": "red",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "green",
           "SW": "green",
           "W": "green",
@@ -7205,7 +7205,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7223,7 +7223,7 @@
           "S": "red",
           "SW": "toll_2",
           "W": "green",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -7272,9 +7272,9 @@
           "NE": "red",
           "E": "red",
           "SE": "celebrities_1",
-          "S": "schizophrenic",
+          "S": "Prophet",
           "SW": "cops_2",
-          "W": "criminals_4",
+          "W": "criminals_1",
           "NW": "toll_3"
         },
         "sells": [
@@ -7311,10 +7311,10 @@
           "N": "red",
           "NE": "red",
           "E": "red",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "cops_2",
           "SW": "criminals_4",
-          "W": "cops_4",
+          "W": "cops_1",
           "NW": "red"
         },
         "sells": [
@@ -7352,7 +7352,7 @@
           "NE": "red",
           "E": "red",
           "SE": "mob",
-          "S": "criminals_4",
+          "S": "criminals_2",
           "SW": "cops_2",
           "W": "red",
           "NW": "celebrities_1"
@@ -7391,8 +7391,8 @@
           "N": "red",
           "NE": "mob",
           "E": "celebrities_1",
-          "SE": "criminals_3",
-          "S": "cops_3",
+          "SE": "criminals_2",
+          "S": "cops_1",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -7429,7 +7429,7 @@
         "index": 5,
         "edges": {
           "N": "mob",
-          "NE": "cops_3",
+          "NE": "cops_2",
           "E": "red",
           "SE": "toll_3",
           "S": "red",
@@ -7469,13 +7469,13 @@
         "index": 6,
         "edges": {
           "N": "mob",
-          "NE": "criminals_3",
+          "NE": "criminals_1",
           "E": "red",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "schizophrenic",
-          "NW": "criminals_3"
+          "W": "Prophet",
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -7497,7 +7497,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "cops_4",
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7508,14 +7508,14 @@
         "id": "D4_7",
         "index": 7,
         "edges": {
-          "N": "criminals_4",
-          "NE": "cops_3",
-          "E": "schizophrenic",
+          "N": "criminals_1",
+          "NE": "cops_1",
+          "E": "Prophet",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
-          "NW": "cops_3"
+          "W": "criminals_1",
+          "NW": "cops_2"
         },
         "sells": [
           {
@@ -7553,8 +7553,8 @@
           "E": "red",
           "SE": "red",
           "S": "red",
-          "SW": "criminals_4",
-          "W": "cops_4",
+          "SW": "criminals_2",
+          "W": "cops_2",
           "NW": "criminals_2"
         },
         "sells": [
@@ -7577,7 +7577,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7593,8 +7593,8 @@
           "E": "criminals_3",
           "SE": "red",
           "S": "criminals_2",
-          "SW": "cops_3",
-          "W": "criminals_3",
+          "SW": "cops_1",
+          "W": "criminals_2",
           "NW": "toll_3"
         },
         "sells": [
@@ -7631,10 +7631,10 @@
           "N": "red",
           "NE": "red",
           "E": "cops_2",
-          "SE": "criminals_3",
-          "S": "cops_3",
-          "SW": "criminals_4",
-          "W": "cops_3",
+          "SE": "criminals_1",
+          "S": "cops_2",
+          "SW": "criminals_1",
+          "W": "cops_1",
           "NW": "red"
         },
         "sells": [
@@ -7671,9 +7671,9 @@
           "N": "red",
           "NE": "red",
           "E": "toll_2",
-          "SE": "cops_4",
-          "S": "criminals_3",
-          "SW": "cops_4",
+          "SE": "cops_1",
+          "S": "criminals_2",
+          "SW": "cops_2",
           "W": "green",
           "NW": "red"
         },
@@ -7697,7 +7697,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -7734,7 +7734,7 @@
           "E": "green",
           "SE": "criminals_1",
           "S": "green",
-          "SW": "schizophrenic",
+          "SW": "Prophet",
           "W": "red",
           "NW": "green"
         },
@@ -7818,7 +7818,7 @@
         "id": "E4_4",
         "index": 4,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "criminals_1",
           "E": "red",
           "SE": "green",
@@ -7909,7 +7909,7 @@
         "edges": {
           "N": "theater",
           "NE": "celebrities_1",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "criminals_1",
           "S": "green",
           "SW": "green",
@@ -7999,7 +7999,7 @@
           "N": "criminals_1",
           "NE": "cops_1",
           "E": "red",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "theater",
           "SW": "red",
           "W": "green",
@@ -8024,7 +8024,7 @@
           "SE": "red",
           "S": "red",
           "SW": "mob",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "green"
         },
         "sells": [
@@ -8051,7 +8051,7 @@
         "edges": {},
         "sells": [],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": false,
         "refresh": true,
@@ -8075,9 +8075,9 @@
           "E": "red",
           "SE": "red",
           "S": "green",
-          "SW": "schizophrenic",
+          "SW": "Prophet",
           "W": "red",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -8124,7 +8124,7 @@
         "id": "F4_3",
         "index": 3,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "red",
           "E": "red",
           "SE": "red",
@@ -8167,7 +8167,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -8485,7 +8485,7 @@
         "id": "A5_4",
         "index": 4,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "green",
           "E": "red",
           "SE": "red",
@@ -8550,7 +8550,7 @@
           "N": "toll_2",
           "NE": "green",
           "E": "red",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "criminals_1",
           "SW": "red",
           "W": "toll_1",
@@ -8773,7 +8773,7 @@
         "id": "B5_2",
         "index": 2,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "green",
           "E": "green",
           "SE": "red",
@@ -8866,7 +8866,7 @@
           "NE": "red",
           "E": "green",
           "SE": "green",
-          "S": "schizophrenic",
+          "S": "Prophet",
           "SW": "green",
           "W": "criminals_1",
           "NW": "cops_1"
@@ -8920,7 +8920,7 @@
         "id": "B5_7",
         "index": 7,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "green",
           "E": "red",
           "SE": "red",
@@ -8967,7 +8967,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -9000,7 +9000,7 @@
         "id": "B5_10",
         "index": 10,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "green",
           "E": "green",
           "SE": "theater",
@@ -9033,7 +9033,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "green",
           "S": "red",
           "SW": "red",
@@ -9088,7 +9088,7 @@
           "E": "mob",
           "SE": "criminals_1",
           "S": "green",
-          "SW": "schizophrenic",
+          "SW": "Prophet",
           "W": "red",
           "NW": "celebrities_1"
         },
@@ -9137,7 +9137,7 @@
         "id": "C5_3",
         "index": 3,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "green",
           "E": "green",
           "SE": "green",
@@ -9245,7 +9245,7 @@
         "id": "C5_7",
         "index": 7,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "criminals_1",
           "E": "green",
           "SE": "green",
@@ -9361,7 +9361,7 @@
           "NE": "criminals_1",
           "E": "theater",
           "SE": "red",
-          "S": "schizophrenic",
+          "S": "Prophet",
           "SW": "green",
           "W": "toll_2",
           "NW": "red"
@@ -9520,7 +9520,7 @@
           "N": "green",
           "NE": "red",
           "E": "green",
-          "SE": "schizophrenic",
+          "SE": "Prophet",
           "S": "red",
           "SW": "toll_2",
           "W": "green",
@@ -9571,7 +9571,7 @@
         "id": "D5_7",
         "index": 7,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "criminals_2",
           "E": "green",
           "SE": "green",
@@ -9626,7 +9626,7 @@
         "index": 9,
         "edges": {
           "N": "green",
-          "NE": "criminals_3",
+          "NE": "criminals_1",
           "E": "toll_2",
           "SE": "theater",
           "S": "celebrities_1",
@@ -9658,7 +9658,7 @@
           "SE": "red",
           "S": "green",
           "SW": "toll_2",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "green"
         },
         "sells": [
@@ -9672,7 +9672,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -9735,7 +9735,7 @@
         "id": "E5_1",
         "index": 1,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "red",
           "E": "red",
           "SE": "mob",
@@ -9769,7 +9769,7 @@
           "S": "cops_2",
           "SW": "green",
           "W": "green",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -9817,7 +9817,7 @@
         "index": 4,
         "edges": {
           "N": "celebrities_1",
-          "NE": "criminals_3",
+          "NE": "criminals_2",
           "E": "cops_2",
           "SE": "green",
           "S": "green",
@@ -9847,7 +9847,7 @@
           "NE": "cops_2",
           "E": "toll_2",
           "SE": "toll_2",
-          "S": "schizophrenic",
+          "S": "Prophet",
           "SW": "red",
           "W": "red",
           "NW": "cops_2"
@@ -9903,7 +9903,7 @@
           "SE": "red",
           "S": "red",
           "SW": "cops_2",
-          "W": "criminals_3",
+          "W": "criminals_1",
           "NW": "cops_2"
         },
         "sells": [
@@ -9929,8 +9929,8 @@
           "E": "red",
           "SE": "red",
           "S": "cops_2",
-          "SW": "criminals_3",
-          "W": "cops_3",
+          "SW": "criminals_2",
+          "W": "cops_2",
           "NW": "green"
         },
         "sells": [
@@ -9967,7 +9967,7 @@
           }
         ],
         "buys": [],
-        "encounter": "schizophrenic",
+        "encounter": "Prophet",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -9978,10 +9978,10 @@
         "id": "E5_10",
         "index": 10,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_1",
           "NE": "red",
-          "E": "cops_3",
-          "SE": "criminals_3",
+          "E": "cops_1",
+          "SE": "criminals_2",
           "S": "cops_2",
           "SW": "green",
           "W": "green",
@@ -10010,8 +10010,8 @@
         "index": 11,
         "edges": {
           "N": "toll_2",
-          "NE": "cops_3",
-          "E": "criminals_3",
+          "NE": "cops_2",
+          "E": "criminals_1",
           "SE": "cops_2",
           "S": "toll_2",
           "SW": "toll_2",
@@ -10063,10 +10063,10 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "criminals_2",
           "SE": "red",
           "S": "red",
-          "SW": "criminals_3",
+          "SW": "criminals_1",
           "W": "cops_2",
           "NW": "red"
         },
@@ -10093,7 +10093,7 @@
           "E": "cops_2",
           "SE": "red",
           "S": "criminals_2",
-          "SW": "cops_3",
+          "SW": "cops_2",
           "W": "cops_2",
           "NW": "red"
         },
@@ -10122,7 +10122,7 @@
           "S": "cops_2",
           "SW": "toll_2",
           "W": "red",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -10148,7 +10148,7 @@
           "SE": "red",
           "S": "green",
           "SW": "red",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "mob"
         },
         "sells": [
@@ -10201,7 +10201,7 @@
           "E": "theater",
           "SE": "red",
           "S": "red",
-          "SW": "cops_3",
+          "SW": "cops_1",
           "W": "criminals_2",
           "NW": "red"
         },
@@ -10252,7 +10252,7 @@
         "edges": {
           "N": "cops_2",
           "NE": "red",
-          "E": "cops_3",
+          "E": "cops_2",
           "SE": "red",
           "S": "criminals_2",
           "SW": "green",
@@ -10277,7 +10277,7 @@
         "id": "F5_9",
         "index": 9,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_2",
           "NE": "red",
           "E": "celebrities_1",
           "SE": "red",
@@ -10389,7 +10389,7 @@
         "edges": {
           "N": "celebrities_1",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "cops_2",
           "SW": "criminals_2",
@@ -10420,7 +10420,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "green",
           "SW": "green",
@@ -10482,7 +10482,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_2",
           "NW": "red"
         },
         "sells": [
@@ -10540,7 +10540,7 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "criminals_2",
           "SW": "cops_2",
@@ -10567,7 +10567,7 @@
         "edges": {
           "N": "red",
           "NE": "green",
-          "E": "criminals_3",
+          "E": "criminals_1",
           "SE": "red",
           "S": "cops_2",
           "SW": "toll_2",
@@ -10651,7 +10651,7 @@
         "index": 10,
         "edges": {
           "N": "cops_2",
-          "NE": "criminals_3",
+          "NE": "criminals_2",
           "E": "green",
           "SE": "red",
           "S": "red",
@@ -10734,13 +10734,13 @@
         "index": 1,
         "edges": {
           "N": "celebrities_1",
-          "NE": "schizophrenic",
-          "E": "schizophrenic",
+          "NE": "Prophet",
+          "E": "Prophet",
           "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "cops_2",
-          "NW": "criminals_3"
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -10767,7 +10767,7 @@
           "S": "red",
           "SW": "red",
           "W": "green",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -10870,7 +10870,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_3",
+          "E": "cops_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -10897,7 +10897,7 @@
         "edges": {
           "N": "toll_2",
           "NE": "cops_2",
-          "E": "criminals_3",
+          "E": "criminals_1",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -10923,7 +10923,7 @@
         "index": 8,
         "edges": {
           "N": "red",
-          "NE": "criminals_3",
+          "NE": "criminals_2",
           "E": "green",
           "SE": "red",
           "S": "red",
@@ -10982,7 +10982,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_1",
           "NW": "cops_2"
         },
         "sells": [
@@ -11065,7 +11065,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "cops_3",
+          "W": "cops_1",
           "NW": "red"
         },
         "sells": [
@@ -11088,7 +11088,7 @@
         "edges": {
           "N": "celebrities_1",
           "NE": "mob",
-          "E": "cops_3",
+          "E": "cops_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -11113,13 +11113,13 @@
         "id": "C6_3",
         "index": 3,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_2",
           "NE": "cops_2",
           "E": "toll_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "schizophrenic",
+          "W": "Prophet",
           "NW": "red"
         },
         "sells": [
@@ -11200,7 +11200,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_1",
           "NW": "red"
         },
         "sells": [
@@ -11221,7 +11221,7 @@
         "id": "C6_7",
         "index": 7,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "cops_2",
           "E": "criminals_1",
           "SE": "red",
@@ -11275,7 +11275,7 @@
         "id": "C6_9",
         "index": 9,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_2",
           "NE": "toll_2",
           "E": "red",
           "SE": "red",
@@ -11308,8 +11308,8 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
-          "NW": "criminals_3"
+          "W": "criminals_2",
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -11333,9 +11333,9 @@
         "id": "C6_11",
         "index": 11,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "mob",
-          "E": "criminals_3",
+          "E": "criminals_1",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -11446,7 +11446,7 @@
           "S": "green",
           "SW": "red",
           "W": "red",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -11473,7 +11473,7 @@
           "S": "celebrities_1",
           "SW": "red",
           "W": "red",
-          "NW": "criminals_3"
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -11522,7 +11522,7 @@
         "edges": {
           "N": "green",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "toll_2",
           "SW": "red",
@@ -11536,7 +11536,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -11549,7 +11549,7 @@
         "edges": {
           "N": "mob",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "criminals_1",
           "SE": "red",
           "S": "celebrities_1",
           "SW": "red",
@@ -11601,7 +11601,7 @@
         "id": "D6_9",
         "index": 9,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_2",
           "NE": "cops_2",
           "E": "toll_2",
           "SE": "red",
@@ -11628,7 +11628,7 @@
         "id": "D6_10",
         "index": 10,
         "edges": {
-          "N": "cops_3",
+          "N": "cops_2",
           "NE": "green",
           "E": "green",
           "SE": "red",
@@ -11665,7 +11665,7 @@
           "SE": "red",
           "S": "green",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_1",
           "NW": "cops_2"
         },
         "sells": [
@@ -11713,11 +11713,11 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "schizophrenic",
+          "E": "Prophet",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "cops_3",
+          "W": "cops_1",
           "NW": "toll_2"
         },
         "sells": [
@@ -11739,7 +11739,7 @@
         "index": 2,
         "edges": {
           "N": "red",
-          "NE": "schizophrenic",
+          "NE": "Prophet",
           "E": "cops_2",
           "SE": "red",
           "S": "red",
@@ -11765,7 +11765,7 @@
         "id": "E6_3",
         "index": 3,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "cops_2",
           "E": "toll_2",
           "SE": "red",
@@ -11934,7 +11934,7 @@
           "S": "red",
           "SW": "red",
           "W": "red",
-          "NW": "criminals_3"
+          "NW": "criminals_2"
         },
         "sells": [
           {
@@ -11960,7 +11960,7 @@
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "criminals_3",
+          "W": "criminals_1",
           "NW": "cops_2"
         },
         "sells": [
@@ -11987,7 +11987,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "criminals_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -12041,10 +12041,10 @@
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_3",
+          "S": "cops_1",
           "SW": "red",
-          "W": "criminals_4",
-          "NW": "criminals_3"
+          "W": "criminals_2",
+          "NW": "criminals_1"
         },
         "sells": [
           {
@@ -12067,8 +12067,8 @@
           "N": "celebrities_1",
           "NE": "red",
           "E": "red",
-          "SE": "cops_3",
-          "S": "criminals_3",
+          "SE": "cops_2",
+          "S": "criminals_2",
           "SW": "red",
           "W": "cops_2",
           "NW": "red"
@@ -12093,9 +12093,9 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_3",
-          "SE": "criminals_4",
-          "S": "cops_4",
+          "E": "cops_1",
+          "SE": "criminals_1",
+          "S": "cops_2",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -12118,14 +12118,14 @@
         "id": "F6_4",
         "index": 4,
         "edges": {
-          "N": "cops_4",
+          "N": "cops_1",
           "NE": "red",
-          "E": "criminals_3",
-          "SE": "cops_3",
+          "E": "criminals_1",
+          "SE": "cops_2",
           "S": "red",
           "SW": "red",
           "W": "red",
-          "NW": "schizophrenic"
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -12134,7 +12134,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_2",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -12145,9 +12145,9 @@
         "id": "F6_5",
         "index": 5,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_1",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "criminals_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
@@ -12172,14 +12172,14 @@
         "id": "F6_6",
         "index": 6,
         "edges": {
-          "N": "cops_3",
+          "N": "cops_1",
           "NE": "red",
           "E": "red",
           "SE": "red",
           "S": "red",
           "SW": "red",
-          "W": "cops_3",
-          "NW": "schizophrenic"
+          "W": "cops_2",
+          "NW": "Prophet"
         },
         "sells": [
           {
@@ -12199,14 +12199,14 @@
         "id": "F6_7",
         "index": 7,
         "edges": {
-          "N": "schizophrenic",
+          "N": "Prophet",
           "NE": "red",
           "E": "red",
           "SE": "red",
-          "S": "cops_3",
+          "S": "cops_2",
           "SW": "red",
           "W": "mob",
-          "NW": "cops_3"
+          "NW": "cops_1"
         },
         "sells": [
           {
@@ -12229,10 +12229,10 @@
           "N": "green",
           "NE": "red",
           "E": "red",
-          "SE": "cops_3",
+          "SE": "cops_1",
           "S": "mob",
           "SW": "red",
-          "W": "cops_3",
+          "W": "cops_2",
           "NW": "red"
         },
         "sells": [
@@ -12255,7 +12255,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "cops_4",
+          "E": "cops_2",
           "SE": "mob",
           "S": "toll_3",
           "SW": "red",
@@ -12280,10 +12280,10 @@
         "id": "F6_10",
         "index": 10,
         "edges": {
-          "N": "cops_3",
+          "N": "cops_1",
           "NE": "red",
           "E": "criminals_2",
-          "SE": "cops_4",
+          "SE": "cops_1",
           "S": "red",
           "SW": "red",
           "W": "red",
@@ -12311,14 +12311,14 @@
         "id": "F6_11",
         "index": 11,
         "edges": {
-          "N": "criminals_4",
+          "N": "criminals_2",
           "NE": "red",
-          "E": "cops_3",
+          "E": "cops_2",
           "SE": "red",
           "S": "red",
           "SW": "red",
           "W": "red",
-          "NW": "cops_3"
+          "NW": "cops_1"
         },
         "sells": [
           {
@@ -12331,7 +12331,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_4",
+        "encounter": "cops_2",
         "gamble": false,
         "persistent": true,
         "refresh": false,

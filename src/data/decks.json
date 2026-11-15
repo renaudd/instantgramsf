@@ -23,7 +23,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“He’s actually quite likeable.”",
-      "combatFormula": "3(R)+3",
+      "combatFormula": "2(R)+2",
       "friendlyFavor": [
         "MAGA",
         "-DSA"
@@ -196,7 +196,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“At one point the wealthiest man in the world.”",
-      "combatFormula": "3(R)+2",
+      "combatFormula": "2(R)+1",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -254,7 +254,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Bets on contrarians. Collects citizenships.”",
-      "combatFormula": "3(R)+1",
+      "combatFormula": "2(R)",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -330,7 +330,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Spent the $100 million on city parks.”",
-      "combatFormula": "3(R)+1",
+      "combatFormula": "1(R)+2",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -421,7 +421,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Builds the AI that worries about AI.”",
-      "combatFormula": "3(R)+1",
+      "combatFormula": "1(R)+2",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -515,7 +515,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Keeps the safety team’s lights on.”",
-      "combatFormula": "2(R)+3",
+      "combatFormula": "1(R)+1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -541,27 +541,27 @@
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "Sell Weed at + in E3?",
+          "actionText": "Sell Weed at = in E3?",
           "mission": {
             "kind": "sell",
             "item": "Weed",
             "pickupCell": null,
             "deliverCell": "E3",
             "category": "Weed",
-            "modifier": "+",
+            "modifier": "=",
             "target": null,
             "name": "Daniela Amodei’s Job"
           }
         }
       ],
-      "actionText": "(QUEST_ICON)? Sell Weed at + in E3?",
+      "actionText": "(QUEST_ICON)? Sell Weed at = in E3?",
       "mission": {
         "kind": "sell",
         "item": "Weed",
         "pickupCell": null,
         "deliverCell": "E3",
         "category": "Weed",
-        "modifier": "+",
+        "modifier": "=",
         "target": null,
         "name": "Daniela Amodei’s Job"
       },
@@ -574,7 +574,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Not his fault that he has fans.”",
-      "combatFormula": "3(R)",
+      "combatFormula": "2(R)",
       "friendlyFavor": [
         "MS13"
       ],
@@ -633,7 +633,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Recalled, but not forgotten.”",
-      "combatFormula": "3(R)-1",
+      "combatFormula": "1(R)+1",
       "friendlyFavor": [
         "MS13",
         "ISIS",
@@ -702,7 +702,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“At the center of a global news scandal.”",
-      "combatFormula": "3",
+      "combatFormula": "1(R)",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -770,7 +770,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Miracle cures, now with a studio audience.”",
-      "combatFormula": "3(R)-2(R)",
+      "combatFormula": "1(R)",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -895,7 +895,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“Once again asking.”",
-      "combatFormula": "2(R)+1",
+      "combatFormula": "1(R)+1",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -985,7 +985,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“Philosopher, preacher, perennial candidate.”",
-      "combatFormula": "3(R)",
+      "combatFormula": "1(R)+1",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -1080,7 +1080,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“Story hour starts at midnight.”",
-      "combatFormula": "2(R)-1",
+      "combatFormula": "1(R)",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -1179,7 +1179,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“This episode is sponsored by you.”",
-      "combatFormula": "3(R)-(R)",
+      "combatFormula": "1(R)",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -1248,20 +1248,20 @@
         "target": null,
         "cargoSize": 1,
         "payoutTable": [
-          12,
+          18,
+          14,
           10,
           8,
-          6,
-          4
+          5
         ],
         "name": "Indie Podcaster’s Job",
         "blocks": 1,
         "fencedSell": [
-          12,
+          18,
+          14,
           10,
           8,
-          6,
-          4
+          5
         ]
       },
       "tier": "gen"
@@ -1348,20 +1348,20 @@
         "target": null,
         "cargoSize": 1,
         "payoutTable": [
-          12,
+          18,
+          14,
           10,
           8,
-          6,
-          4
+          5
         ],
         "name": "Burning Guy Artist’s Job",
         "blocks": 1,
         "fencedSell": [
-          12,
+          18,
+          14,
           10,
           8,
-          6,
-          4
+          5
         ]
       },
       "tier": "gen"
@@ -1373,7 +1373,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“Painted your face on a wall. You’re welcome.”",
-      "combatFormula": "2(R)-(R)",
+      "combatFormula": "1(R)",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -1440,7 +1440,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“Glued to the Bay Bridge since Tuesday.”",
-      "combatFormula": "2(R)",
+      "combatFormula": "1(R)+1",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -1498,7 +1498,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“This is not financial advice.”",
-      "combatFormula": "4",
+      "combatFormula": "1(R)+1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -1540,7 +1540,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“It’s like Oober, but for you.”",
-      "combatFormula": "(R)+3",
+      "combatFormula": "1(R)+1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -1689,14 +1689,14 @@
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "Sell Weapons at + in F5?",
+          "actionText": "Sell Weapons at = in F5?",
           "mission": {
             "kind": "sell",
             "item": "Weapons",
             "pickupCell": null,
             "deliverCell": "F5",
             "category": "Weapons",
-            "modifier": "+",
+            "modifier": "=",
             "target": null,
             "name": "Radicalized YouTuber’s Job"
           }
@@ -1711,19 +1711,19 @@
             "pickupCell": null,
             "deliverCell": null,
             "category": "Weapons",
-            "modifier": "+",
+            "modifier": "=",
             "target": null
           }
         }
       ],
-      "actionText": "(QUEST_ICON)? Sell Weapons at + in F5? • [?] Sell Weapons at +?",
+      "actionText": "(QUEST_ICON)? Sell Weapons at = in F5? • [?] Sell Weapons at +?",
       "mission": {
         "kind": "sell",
         "item": "Weapons",
         "pickupCell": null,
         "deliverCell": "F5",
         "category": "Weapons",
-        "modifier": "+",
+        "modifier": "=",
         "target": null,
         "name": "Radicalized YouTuber’s Job"
       },
@@ -1736,12 +1736,12 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“VIP booth at the Mission club, entourages four deep.”",
-      "combatFormula": "2(R)+1",
+      "combatFormula": "1(R)+1",
       "friendlyFavor": [
         "MS13",
         "-MAGA"
       ],
-      "friendlyReward": "12(d)",
+      "friendlyReward": "15(d)",
       "hostileFavor": [
         "-MS13"
       ],
@@ -1801,7 +1801,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Chrome hydraulics bouncing down 24th Street.”",
-      "combatFormula": "3(R)",
+      "combatFormula": "2(R)",
       "friendlyFavor": [
         "MS13"
       ],
@@ -1840,7 +1840,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Let’s go, San Francisco.”",
-      "combatFormula": "2X(R)",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -1900,7 +1900,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“SF’s first openly gay Congressman.”",
-      "combatFormula": "X(R)+3",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -1961,7 +1961,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Has an essay about this.”",
-      "combatFormula": "X(R)+2",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -2022,7 +2022,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“We’ve been reading your texts.”",
-      "combatFormula": "2X(R)-1",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -2086,7 +2086,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“This encounter never happened.”",
-      "combatFormula": "2X(R)-1",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -2167,7 +2167,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“License and registration.”",
-      "combatFormula": "2X(R)-2",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "DSA",
         "-MAGA"
@@ -2548,7 +2548,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Civil rights, selectively.”",
-      "combatFormula": "3X-1",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -2616,7 +2616,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Talks fast. Cuts faster.”",
-      "combatFormula": "X(R)+X",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -2674,7 +2674,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Live from Four Nights Total Landscaping.”",
-      "combatFormula": "2X+1",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -2786,7 +2786,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Just say no.”",
-      "combatFormula": "2X(R)-X(R)",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -2821,7 +2821,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Papers, please.”",
-      "combatFormula": "2X-1",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -2852,27 +2852,27 @@
         {
           "condition": ">=2",
           "type": "mission_offer",
-          "actionText": "Sell Uppers at + in C3?",
+          "actionText": "Sell Uppers at = in C3?",
           "mission": {
             "kind": "sell",
             "item": "Uppers",
             "pickupCell": null,
             "deliverCell": "C3",
             "category": "Uppers",
-            "modifier": "+",
+            "modifier": "=",
             "target": null,
             "name": "ICE’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your henchmen!! • (QUEST_ICON)? Sell Uppers at + in C3?",
+      "actionText": "[!!] Give me all of your henchmen!! • (QUEST_ICON)? Sell Uppers at = in C3?",
       "mission": {
         "kind": "sell",
         "item": "Uppers",
         "pickupCell": null,
         "deliverCell": "C3",
         "category": "Uppers",
-        "modifier": "+",
+        "modifier": "=",
         "target": null,
         "name": "ICE’s Job"
       },
@@ -2885,7 +2885,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Got a tax stamp for that?”",
-      "combatFormula": "2X(R)-X",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -2936,13 +2936,13 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“A long way from the border.”",
-      "combatFormula": "2X(R)-3",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "MAGA",
         "TECH",
         "-ISIS"
       ],
-      "friendlyReward": "11(d)",
+      "friendlyReward": "14(d)",
       "hostileFavor": [
         "-MAGA",
         "-TECH",
@@ -3012,7 +3012,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Do you know how fast you were going?”",
-      "combatFormula": "2X(R)-1",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -3047,7 +3047,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Not from around here.”",
-      "combatFormula": "X(R)+X-1",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -3144,14 +3144,14 @@
         {
           "condition": "=0",
           "type": "mission_offer",
-          "actionText": "Sell Opiates at - in F6?",
+          "actionText": "Sell Opiates at = in F6?",
           "mission": {
             "kind": "sell",
             "item": "Opiates",
             "pickupCell": null,
             "deliverCell": "F6",
             "category": "Opiates",
-            "modifier": "-",
+            "modifier": "=",
             "target": null,
             "name": "Muni Fare Inspector’s Job"
           }
@@ -3171,14 +3171,14 @@
           }
         }
       ],
-      "actionText": "(QUEST_ICON)? Sell Opiates at - in F6? • [?] Buy any Mkt Upper at -?",
+      "actionText": "(QUEST_ICON)? Sell Opiates at = in F6? • [?] Buy any Mkt Upper at -?",
       "mission": {
         "kind": "sell",
         "item": "Opiates",
         "pickupCell": null,
         "deliverCell": "F6",
         "category": "Opiates",
-        "modifier": "-",
+        "modifier": "=",
         "target": null,
         "name": "Muni Fare Inspector’s Job"
       },
@@ -3236,7 +3236,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Consulate plates, diplomatic immunity, zero questions.”",
-      "combatFormula": "2X(R)-1",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "ISIS",
         "-MAGA",
@@ -3289,7 +3289,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Badge in the wallet, encrypted Telegram on the burner.”",
-      "combatFormula": "X(R)+X",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "ISIS",
         "MS13",
@@ -3321,7 +3321,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Waves the right shipping containers straight through Pier 80.”",
-      "combatFormula": "2X-1",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
         "ISIS",
         "-TECH"
@@ -3369,7 +3369,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“The Squad’s sharpest elbow.”",
-      "combatFormula": "2X(R)",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -3416,7 +3416,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Big on doomsdays.”",
-      "combatFormula": "2X(R)",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -3476,7 +3476,7 @@
       "type": "character",
       "faction": "TECH",
       "bio": "“Hawaiian shirts, autonomous weapons.”",
-      "combatFormula": "2X(R)-1",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "TECH",
         "MAGA",
@@ -3502,27 +3502,27 @@
         {
           "condition": ">=1",
           "type": "mission_offer",
-          "actionText": "Sell Party at + in F4?",
+          "actionText": "Sell Party at = in F4?",
           "mission": {
             "kind": "sell",
             "item": "Party",
             "pickupCell": null,
             "deliverCell": "F4",
             "category": "Party",
-            "modifier": "+",
+            "modifier": "=",
             "target": null,
             "name": "Palmer Luckey’s Job"
           }
         }
       ],
-      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Sell Party at + in F4?",
+      "actionText": "[!!] Give me all of your Uppers!! • (QUEST_ICON)? Sell Party at = in F4?",
       "mission": {
         "kind": "sell",
         "item": "Party",
         "pickupCell": null,
         "deliverCell": "F4",
         "category": "Party",
-        "modifier": "+",
+        "modifier": "=",
         "target": null,
         "name": "Palmer Luckey’s Job"
       },
@@ -3591,7 +3591,7 @@
         "MAGA",
         "-ISIS"
       ],
-      "friendlyReward": "11(d)",
+      "friendlyReward": "14(d)",
       "hostileFavor": [
         "-TECH",
         "-MAGA",
@@ -3651,7 +3651,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Not all MAGA are KKK. But—”",
-      "combatFormula": "3X-1",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MAGA",
         "TECH",
@@ -3759,7 +3759,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Came all the way here for this.”",
-      "combatFormula": "2X-1",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -3830,7 +3830,7 @@
       "friendlyFavor": [
         "ISIS"
       ],
-      "friendlyReward": "6(d)",
+      "friendlyReward": "10(d)",
       "hostileFavor": [
         "-ISIS",
         "MAGA"
@@ -3873,7 +3873,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Ophthalmologist, between jobs.”",
-      "combatFormula": "2X(R)-1",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -3913,7 +3913,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Supposedly dead.”",
-      "combatFormula": "2X(R)-3",
+      "combatFormula": "X(R)-1",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -3958,7 +3958,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“Talent manager.”",
-      "combatFormula": "X(R)+X",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -4104,7 +4104,7 @@
       "type": "character",
       "faction": "DSA",
       "bio": "“Has committed crimes recently.”",
-      "combatFormula": "2X(R)-X(R)",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "DSA",
         "TECH",
@@ -4220,7 +4220,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Gordo.” Ran the 20th Street clique in the Mission.",
-      "combatFormula": "2X(R)",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MS13",
         "ISIS",
@@ -4263,7 +4263,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Collects for the clique.”",
-      "combatFormula": "X(R)+2",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MS13",
         "ISIS",
@@ -4327,7 +4327,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Professional. Punctual.”",
-      "combatFormula": "X(R)+2",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MS13",
         "ISIS",
@@ -4567,7 +4567,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Tunnels under everything.”",
-      "combatFormula": "2X(R)-1",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "ISIS"
       ],
@@ -4618,7 +4618,7 @@
       "type": "character",
       "faction": "ISIS",
       "bio": "“Enrichment program, very enriched.”",
-      "combatFormula": "X(R)+X",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "ISIS",
         "DSA",
@@ -4673,7 +4673,7 @@
       "type": "character",
       "faction": "MS13",
       "bio": "“Runs the Mission block from a contraband cell phone in Pelican Bay.”",
-      "combatFormula": "2X",
+      "combatFormula": "X(R)+1",
       "friendlyFavor": [
         "MS13",
         "-MAGA"
@@ -4731,7 +4731,7 @@
       "type": "character",
       "faction": "MAGA",
       "bio": "“Drove down from Jefferson State with a trunk full of surplus crates.”",
-      "combatFormula": "2X(R)-1",
+      "combatFormula": "X(R)",
       "friendlyFavor": [
         "MAGA",
         "-DSA",
@@ -4785,11 +4785,11 @@
     {
       "id": "inf_2",
       "name": "Patron",
-      "effectText": "Receive 8(d), and lose 1 MAGA Favor (Ruby) and 1 TECH Favor (Diamond)",
+      "effectText": "Receive 6(d), and lose 1 MAGA Favor (Ruby) and 1 TECH Favor (Diamond)",
       "effectCode": "gain_40d",
       "favorGain": {
         "faction": null,
-        "cash": 8,
+        "cash": 6,
         "extraFavor": [
           "-MAGA",
           "-TECH"
@@ -4832,8 +4832,8 @@
     {
       "id": "inf_12",
       "name": "Prophecy",
-      "effectText": "Trigger Schizophrenic for any Player.",
-      "effectCode": "trigger_schizophrenic",
+      "effectText": "Trigger Prophet for any Player.",
+      "effectCode": "trigger_Prophet",
       "favorGain": null,
       "sellTable": null
     },
@@ -4856,11 +4856,11 @@
     {
       "id": "inf_16",
       "name": "DSA Favor",
-      "effectText": "Receive 6(d), gain 1 DSA Favor (Sapphire), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
+      "effectText": "Receive 4(d), gain 1 DSA Favor (Sapphire), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
       "effectCode": "faction_favor_dsa",
       "favorGain": {
         "faction": "DSA",
-        "cash": 6,
+        "cash": 4,
         "extraFavor": [
           "-MAGA",
           "DSA"
@@ -4879,11 +4879,11 @@
     {
       "id": "inf_18",
       "name": "MS13 Favor",
-      "effectText": "Receive 6(d), gain 1 MS13 Favor (Amethyst), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
+      "effectText": "Receive 4(d), gain 1 MS13 Favor (Amethyst), and lose 1 MAGA Favor (Ruby) (can be played after encounter is revealed)",
       "effectCode": "faction_favor_ms13",
       "favorGain": {
         "faction": "MS13",
-        "cash": 6,
+        "cash": 4,
         "extraFavor": [
           "-MAGA",
           "MS13"
@@ -4965,7 +4965,7 @@
     {
       "id": "inf_34",
       "name": "Man Of The People",
-      "effectText": "Ignore consequences of one Protesters encounter and collect 4(d) from the crowd",
+      "effectText": "Ignore consequences of one Protest encounter and collect 4(d) from the crowd",
       "effectCode": "ignore_mob",
       "favorGain": null,
       "sellTable": null
@@ -5005,11 +5005,11 @@
     {
       "id": "inf_39",
       "name": "Patron",
-      "effectText": "Receive 8(d), and lose 1 ISIS Favor (Emerald) and 1 DSA Favor (Sapphire)",
+      "effectText": "Receive 6(d), and lose 1 ISIS Favor (Emerald) and 1 DSA Favor (Sapphire)",
       "effectCode": "gain_40d",
       "favorGain": {
         "faction": null,
-        "cash": 8,
+        "cash": 6,
         "extraFavor": [
           "-ISIS",
           "-DSA"
@@ -5090,11 +5090,11 @@
     {
       "id": "inf_52",
       "name": "TECH Favor",
-      "effectText": "Receive 6(d), gain 1 TECH Favor (Diamond), and lose 1 DSA Favor (Sapphire) and 1 MS13 Favor (Amethyst) (can be played after encounter is revealed)",
+      "effectText": "Receive 4(d), gain 1 TECH Favor (Diamond), and lose 1 DSA Favor (Sapphire) and 1 MS13 Favor (Amethyst) (can be played after encounter is revealed)",
       "effectCode": "faction_favor_tech",
       "favorGain": {
         "faction": "TECH",
-        "cash": 6,
+        "cash": 4,
         "extraFavor": [
           "-DSA",
           "-MS13",
@@ -5153,14 +5153,6 @@
     },
     {
       "id": "inf_59",
-      "name": "Casus Belli",
-      "effectText": "Initiate combat in an encounter where combat is not being threatened (can be played after encounter is revealed)",
-      "effectCode": "casus_belli",
-      "favorGain": null,
-      "sellTable": null
-    },
-    {
-      "id": "inf_60",
       "name": "Casus Belli",
       "effectText": "Initiate combat in an encounter where combat is not being threatened (can be played after encounter is revealed)",
       "effectCode": "casus_belli",

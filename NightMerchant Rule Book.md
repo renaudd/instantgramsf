@@ -106,9 +106,9 @@ Starting with the Player with the First Dealer Token:
 2) **Move**. Player *may* move once in any available direction (including exiting SF off an open perimeter edge):  
 - **Green**: can pass through.  
 - **Red**: impassable (unless *Shortcut* is played).  
-- **Protesters Icon**: passable, but triggers Protesters table encounter.  
+- **Protest Icon**: passable, but triggers Protest table encounter.  
 - **Open Mic Icon**: passable, but triggers Open Mic table encounter.  
-- **Schizophrenic Icon**: passable, but triggers Schizophrenic table encounter.  
+- **Prophet Icon**: passable, but triggers Prophet table encounter.  
 - **Cops Icon**: passable, but triggers Cops Deck Encounter (`1–4×`).  
 - **Criminals Icon**: passable, but triggers Criminals Deck Encounter (`1–4×`).  
 - **Celebrities Icon**: passable, but triggers Celebrities Deck Encounter (`1×`).  
@@ -142,7 +142,7 @@ Clean-Up Phase is used to prepare for the following night.
 
 2) **Clean Up San Francisco**. Move all non-persistent exposed tiles to the bottom of their respective stack.
 
-3) **Buy Influence**. In turn order, Players can buy Influence cards with Bitcoin. The price of each card depends on the number of Influence Cards currently in Player’s hand (including any face-down Schizophrenic cards):  
+3) **Buy Influence**. In turn order, Players can buy Influence cards with Bitcoin. The price of each card depends on the number of Influence Cards currently in Player’s hand (including any face-down Prophet cards):  
 - 0–1 Cards: **₿0.2**  
 - 2–3 Cards: **₿0.4**  
 - 4 Cards: **₿0.6**  
@@ -189,14 +189,14 @@ DECK TYPES
 **Cops** – SFPD, DEA, ICE, ATF, CHP, and federal agents (`1–4×` icons).  
    
 TABLE ENCOUNTERS  
-**Protesters**:  
+**Protest**:  
 Roll `1(R)`:  
 - `0`: Confiscates all of Player’s **Opiates**  
 - `I`: Loots all of Player’s **Weed**  
 - `II`: Seizes Player’s single most expensive Good  
 - `III`: Clamors noisily (no loss)  
 
-**Schizophrenic**: Player draws the top Job Card as a mandatory Schizophrenic Job and places `1(R)` Influence cards face down under it. Player collects those Influence cards when the job is satisfied. Face-down Schizophrenic cards count as “in Player’s hand” when calculating the price of buying Influence Cards in Clean-Up.  
+**Prophet**: Player draws the top Job Card as a mandatory Prophet Job and places `1(R)` Influence cards face down under it. Player collects those Influence cards when the job is satisfied. Face-down Prophet cards count as “in Player’s hand” when calculating the price of buying Influence Cards in Clean-Up.  
 
 **Open Mic (Stand-Up Comic)**:  
 Roll `1(R)`:  
@@ -236,7 +236,7 @@ A Player can have a **Maximum of five (5) active jobs**. There are three types o
 
 2) **Deck Encounter Jobs**. A character encountered in San Francisco may give the Player a job. Goods picked up for Deck Encounter delivery jobs *can* be fenced to an interested buyer for the Retail Price (`+₿`) on the card, which immediately fails the job and triggers **Hostile Favor Consequences** from the patron *(unless **Clique Fence** is active, in which case fenced cargo sells **1 Scarcity step higher** and does **not** count as a Failed Job, though Patron Hostile Favor still applies)*. If a Deck Encounter Job is failed for any reason (including remaining unfinished at the end of Saturday!), Player receives the **Hostile Favor Consequences** from the patron.  
 
-3) **Schizophrenic Jobs**. Mandatory and cannot be failed voluntarily (unless holding 6 Schizophrenic jobs simultaneously). Goods picked up for Schizophrenic delivery jobs cannot be sold, though they can be stolen.  
+3) **Prophet Jobs**. Mandatory and cannot be failed voluntarily (unless holding 6 Prophet jobs simultaneously). Goods picked up for Prophet delivery jobs cannot be sold, though they can be stolen.  
 
 4) **Special Boss Combat Jobs (*Regime Change* & *Witness Protection*)**. Two high-stakes Jobs carry an **“any Player”** clause when **Donald Trump** or **Jared Kushner** is defeated in combat:  
 - **Regime Change** (`mis_34`): Completed if **any Player** defeats **Donald Trump** or **Jared Kushner** in combat while you hold *Regime Change* (unless canceled by *Witness Protection*). Completing *Regime Change* **immediately ends the game in an instant victory** for the Player holding *Regime Change*!  
@@ -338,7 +338,7 @@ COMBAT BETWEEN PLAYERS
   - **Celebrities** (*Gold Hoodie Silhouette*): Draws 1 card from the Celebrities deck (`X = 1`).
   - **Cops** (*Blue 8-Point Police Hat Silhouette*): Draws 1 card from the Cops deck (`X = 1–4`).
   - **Criminals** (*White Tank-Top Silhouette*): Draws 1 card from the Criminals deck (`X = 1–4`).
-  - **Protesters** (*Orange Megaphone*): Roll `1(R)` (`0`: lose Opiates; `I`: lose Weed; `II`: lose costliest Good; `III`: safe).
+  - **Protest** (*Orange Megaphone*): Roll `1(R)` (`0`: lose Opiates; `I`: lose Weed; `II`: lose costliest Good; `III`: safe).
   - **Open Mic** (*Dark Gray Microphone*): Roll `1(R)` (`0`: undo Positive-outcome gem changes; `I`: undo Hostile-outcome gem changes; `II`: lose rest of turn & next turn; `III`: draw `1(R)` Influence).
-  - **Schizophrenic** (*Purple A-Stance Silhouette*): Draws a mandatory Schizophrenic Job and seals `1(R)` face-down Influence cards beneath it until fulfilled.
+  - **Prophet** (*Purple A-Stance Silhouette*): Draws a mandatory Prophet Job and seals `1(R)` face-down Influence cards beneath it until fulfilled.
   - **Street Dice**: Spend your hourly Transaction to wager `₿0.1–₿2.0` and roll `1(R)` to win `Wager × Roll`.

@@ -104,7 +104,7 @@ Each list runs from most likely to least likely.
 | **MS13** | Sell Opiates at a premium, kill Cops, kill Criminals, kill Celebrities, sell Uppers at a premium, sell Weed, sell Party, deliveries | Opiates, Uppers, Party, Henchmen, cash, Weapons |
 | **ISIS** | Sell Weapons at a premium, deliver Weapons, kill Celebrities, kill Cops, deliver Opiates, deliver Weed | Opiates, cash, Weed, Henchmen, Weapons, Influence |
 
-- **Influencer**: Hold 6 Influence cards in your hand (Influence cards tucked under Schizophrenic jobs don't count). Reward: `1(R)` Influence cards + `₿0.2`, `+Diamond`, `-Emerald`.
+- **Influencer**: Hold 6 Influence cards in your hand (Influence cards tucked under Prophet jobs don't count). Reward: `1(R)` Influence cards + `₿0.2`, `+Diamond`, `-Emerald`.
 - **Regime Change** (`mis_34`, was Regicide): Completed if **Donald Trump** or **Jared Kushner** is defeated in combat by **any Player** while you hold *Regime Change*, immediately winning the game.
 - **Witness Protection** (`mis_51`, was Regime Change): Triggers **first** if **Donald Trump** or **Jared Kushner** is defeated in combat by **any Player**, awarding `₿2` (`20(d)`) and **canceling every active *Regime Change* job** across all players.
 
@@ -115,9 +115,9 @@ Each list runs from most likely to least likely.
 | Celebrities | **Celebrities** (26 Faction Characters + 4 Street Events = 30) |
 | Criminals | **Criminals** (26 Faction Characters + 3 Street Events = 29) |
 | Cops | **Cops** (28 Faction Characters + 2 Street Events = 30) |
-| Protesters | **Protesters** |
+| Protest | **Protest** |
 | Theatre Troupe | **Open Mic / Stand-Up Comic** |
-| Schizophrenic | **Schizophrenic** |
+| Prophet | **Prophet** |
 
 ### Celebrities (30)
 

@@ -66,7 +66,7 @@ SF_TEXT_RULES = [
     (r"\bSUVwright\b", "Body Shop"),
     (r"\bCart\b", "SUV"),
     (r"\bCasus Belli\b", "Doxxing"),
-    (r"\bSoothsayer\b", "Schizophrenic"),
+    (r"\bSoothsayer\b", "Prophet"),
     (r"\bForum\b", "Market"),
     (r"\bPatrons\b", "Celebrities"),
     (r"\bPatron\b", "Sponsor"),
@@ -172,11 +172,11 @@ INFLUENCE_TEMPLATES = [
 
 FACTION_FAVOR_INFLUENCE_SPECS = {
     "DSA Favor": (
-        "Receive ₿0.6, gain 1 DSA Sapphire, and lose 1 MAGA Ruby (may be played after encounter is revealed).",
+        "Receive ₿0.4, gain 1 DSA Sapphire, and lose 1 MAGA Ruby (may be played after encounter is revealed).",
         ["DSA", "-MAGA"],
     ),
     "MS13 Favor": (
-        "Receive ₿0.6, gain 1 MS13 Amethyst, and lose 1 MAGA Ruby (may be played after encounter is revealed).",
+        "Receive ₿0.4, gain 1 MS13 Amethyst, and lose 1 MAGA Ruby (may be played after encounter is revealed).",
         ["MS13", "-MAGA"],
     ),
     "ISIS Favor": (
@@ -184,7 +184,7 @@ FACTION_FAVOR_INFLUENCE_SPECS = {
         ["ISIS", "-MAGA"],
     ),
     "TECH Favor": (
-        "Receive ₿0.6, gain 1 TECH Diamond, and lose 1 DSA Sapphire & 1 MS13 Amethyst (may be played after encounter is revealed).",
+        "Receive ₿0.4, gain 1 TECH Diamond, and lose 1 DSA Sapphire & 1 MS13 Amethyst (may be played after encounter is revealed).",
         ["TECH", "-DSA", "-MS13"],
     ),
     "MAGA Favor": (
@@ -212,10 +212,10 @@ def render_influence_card(card: dict, out_path: str):
         eff_raw, gems = FACTION_FAVOR_INFLUENCE_SPECS[cname_raw]
     elif cname_raw == "Patron":
         if cid == "inf_2":
-            eff_raw = "Receive ₿0.8, and lose 1 MAGA Ruby and 1 TECH Diamond."
+            eff_raw = "Receive ₿0.6, and lose 1 MAGA Ruby and 1 TECH Diamond."
             gems = ["-MAGA", "-TECH"]
         else:
-            eff_raw = "Receive ₿0.8, and lose 1 ISIS Emerald and 1 DSA Sapphire."
+            eff_raw = "Receive ₿0.6, and lose 1 ISIS Emerald and 1 DSA Sapphire."
             gems = ["-ISIS", "-DSA"]
     else:
         fg = card.get("favorGain") or {}
@@ -1397,9 +1397,9 @@ def main():
 
     # 1. Influence cards (preserve user's manual edits on ClockTok & FaceSpace cards)
     MANUALLY_FIXED_INFLUENCE_IDS = {
-        "inf_2", "inf_12", "inf_14", "inf_17", "inf_22",
-        "inf_27", "inf_29", "inf_34", "inf_37", "inf_39",
-        "inf_44", "inf_49", "inf_52", "inf_57", "inf_59",
+        "inf_12", "inf_14", "inf_17", "inf_22",
+        "inf_27", "inf_29", "inf_34", "inf_37",
+        "inf_44", "inf_49", "inf_57", "inf_59",
     }
     inf_count = 0
     for c in dk.get("influence", []):

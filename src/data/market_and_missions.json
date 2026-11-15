@@ -2999,9 +2999,9 @@
       "patronFaction": "TECH",
       "name": "Bottle Service",
       "category": "Uppers",
-      "modifier": "+",
+      "modifier": "=",
       "cell": "D4",
-      "text": "Sell Uppers at + in D4 (Mission)!"
+      "text": "Sell Uppers at = in D4 (Mission)!"
     },
     {
       "id": "mis_4",
@@ -3076,23 +3076,6 @@
       "text": "Sell Party at - in E2 (Chinatown)!"
     },
     {
-      "id": "mis_7",
-      "name": "Paparazzi",
-      "kind": "expose",
-      "exposeType": "celebrities",
-      "exposeCount": 4,
-      "description": "Expose 4 Celebrities (individual Celebrities icons visible on exposed tiles)",
-      "rewardText": "16(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 16
-      },
-      "favor": [
-        "TECH"
-      ],
-      "text": "Expose 4 Celebrities (individual Celebrities icons visible on exposed tiles)"
-    },
-    {
       "id": "mis_8",
       "kind": "sell",
       "rewardText": "Any Weapon on Mkt",
@@ -3114,10 +3097,10 @@
     {
       "id": "mis_9",
       "kind": "sell",
-      "rewardText": "8(d) & 1 Influence Card",
+      "rewardText": "12(d) & 1 Influence Card",
       "reward": {
         "type": "cash_and_influence",
-        "amount": 8,
+        "amount": 12,
         "count": 1
       },
       "favor": [
@@ -3145,9 +3128,9 @@
       "patronFaction": "MS13",
       "name": "Markup",
       "category": "Opiates",
-      "modifier": "-",
+      "modifier": "=",
       "cell": "A5",
-      "text": "Sell Opiates at - in A5 (Merced)!"
+      "text": "Sell Opiates at = in A5 (Merced)!"
     },
     {
       "id": "mis_11",
@@ -3164,16 +3147,17 @@
       "patronFaction": "ISIS",
       "name": "Bottle Service",
       "category": "Weapons",
-      "modifier": "+",
+      "modifier": "=",
       "cell": "E6",
-      "text": "Sell Weapons at + in E6 (Visitacion)!"
+      "text": "Sell Weapons at = in E6 (Visitacion)!"
     },
     {
       "id": "mis_12",
       "kind": "sell",
-      "rewardText": "1 Influence Card",
+      "rewardText": "8(d) & 1 Influence Card",
       "reward": {
-        "type": "influence",
+        "type": "cash_and_influence",
+        "amount": 8,
         "count": 1
       },
       "favor": [
@@ -3219,9 +3203,9 @@
       "patronFaction": "TECH",
       "name": "Bottle Service",
       "category": "Uppers",
-      "modifier": "+",
+      "modifier": "=",
       "cell": "D3",
-      "text": "Sell Uppers at + in D3 (Tenderloin)!"
+      "text": "Sell Uppers at = in D3 (Tenderloin)!"
     },
     {
       "id": "mis_15",
@@ -3364,9 +3348,9 @@
       "patronFaction": "DSA",
       "name": "Mutual Aid Drop",
       "category": "Weapons",
-      "modifier": "+",
+      "modifier": "=",
       "cell": "B4",
-      "text": "Sell Weapons at + in B4 (Haight)!"
+      "text": "Sell Weapons at = in B4 (Haight)!"
     },
     {
       "id": "mis_23",
@@ -3423,24 +3407,6 @@
       "modifier": "++",
       "cell": "C6",
       "text": "Sell Uppers at ++ in C6 (Sunnyside)!"
-    },
-    {
-      "id": "mis_26",
-      "name": "Copwatch",
-      "kind": "expose",
-      "exposeType": "cops",
-      "exposeCount": 12,
-      "description": "Expose 12 Cops (individual Cops icons visible on exposed tiles)",
-      "rewardText": "40(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 40
-      },
-      "favor": [
-        "MAGA",
-        "ISIS"
-      ],
-      "text": "Expose 12 Cops (individual Cops icons visible on exposed tiles)"
     },
     {
       "id": "mis_27",
@@ -3525,10 +3491,10 @@
     {
       "id": "mis_30",
       "kind": "delivery",
-      "rewardText": "7(d) & 1 Influence Card",
+      "rewardText": "12(d) & 1 Influence Card",
       "reward": {
         "type": "cash_and_influence",
-        "amount": 7,
+        "amount": 12,
         "count": 1
       },
       "favor": [
@@ -3648,9 +3614,10 @@
     {
       "id": "mis_36",
       "kind": "sell",
-      "rewardText": "1 Influence Card",
+      "rewardText": "8(d) & 1 Influence Card",
       "reward": {
-        "type": "influence",
+        "type": "cash_and_influence",
+        "amount": 8,
         "count": 1
       },
       "favor": [
@@ -3738,29 +3705,12 @@
       "text": "Sell Weed at - in A4 (Sunset)!"
     },
     {
-      "id": "mis_41",
-      "name": "Neighborhood Watch",
-      "kind": "expose",
-      "exposeType": "criminals",
-      "exposeCount": 8,
-      "description": "Expose 8 Criminals (individual Criminals icons visible on exposed tiles)",
-      "rewardText": "26(d)",
-      "reward": {
-        "type": "cash",
-        "amount": 26
-      },
-      "favor": [
-        "DSA"
-      ],
-      "text": "Expose 8 Criminals (individual Criminals icons visible on exposed tiles)"
-    },
-    {
       "id": "mis_42",
       "kind": "sell",
-      "rewardText": "9(d) & 1 Influence Card",
+      "rewardText": "12(d) & 1 Influence Card",
       "reward": {
         "type": "cash_and_influence",
-        "amount": 9,
+        "amount": 12,
         "count": 1
       },
       "favor": [
@@ -3813,9 +3763,10 @@
     {
       "id": "mis_45",
       "kind": "sell",
-      "rewardText": "1 Influence Card",
+      "rewardText": "8(d) & 1 Influence Card",
       "reward": {
-        "type": "influence",
+        "type": "cash_and_influence",
+        "amount": 8,
         "count": 1
       },
       "favor": [
@@ -3862,9 +3813,9 @@
       "patronFaction": "TECH",
       "name": "Bottle Service",
       "category": "Party",
-      "modifier": "+",
+      "modifier": "=",
       "cell": "E4",
-      "text": "Sell Party at + in E4 (Potrero)!"
+      "text": "Sell Party at = in E4 (Potrero)!"
     },
     {
       "id": "mis_48",
@@ -3975,9 +3926,9 @@
       "patronFaction": "TECH",
       "name": "Bottle Service",
       "category": "Party",
-      "modifier": "+",
+      "modifier": "=",
       "cell": "D5",
-      "text": "Sell Party at + in D5 (Dolores)!"
+      "text": "Sell Party at = in D5 (Dolores)!"
     },
     {
       "id": "mis_54",
@@ -4036,19 +3987,19 @@
       "name": "Influencer",
       "kind": "hold_influence",
       "holdCount": 6,
-      "description": "Hold 6 Influence cards in your hand (Influence cards tucked under Schizophrenic jobs don't count)",
-      "rewardText": "1(R) Influence & 2(d)",
+      "description": "Hold 6 Influence cards in your hand (Influence cards tucked under Prophet jobs don't count)",
+      "rewardText": "1(R) Influence & 12(d)",
       "reward": {
         "type": "dice_influence",
         "dice": 1,
-        "amount": 2
+        "amount": 12
       },
       "favor": [
         "TECH",
         "-ISIS"
       ],
       "patronFaction": "TECH",
-      "text": "Hold 6 Influence cards in your hand (Influence cards tucked under Schizophrenic missions don't count)"
+      "text": "Hold 6 Influence cards in your hand (Influence cards tucked under Prophet missions don't count)"
     }
   ]
 }
