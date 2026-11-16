@@ -9,14 +9,14 @@
         "id": "A1_1",
         "index": 1,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "Prophet",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -40,14 +40,14 @@
         "id": "A1_2",
         "index": 2,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "toll_2",
           "SE": "criminals_1",
           "S": "Prophet",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -71,14 +71,14 @@
         "id": "A1_3",
         "index": 3,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "toll_2",
           "SE": "Prophet",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -102,14 +102,14 @@
         "id": "A1_4",
         "index": 4,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "mob",
           "SE": "criminals_1",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -133,14 +133,14 @@
         "id": "A1_5",
         "index": 5,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "toll_2",
           "SE": "red",
           "S": "toll_2",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -160,14 +160,14 @@
         "id": "A1_6",
         "index": 6,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "mob",
           "SE": "toll_2",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -191,14 +191,14 @@
         "id": "A1_7",
         "index": 7,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "red",
           "SE": "red",
           "S": "celebrities_1",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -222,14 +222,14 @@
         "id": "A1_8",
         "index": 8,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "red",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -253,14 +253,14 @@
         "id": "A1_9",
         "index": 9,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "red",
           "SE": "mob",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -284,14 +284,14 @@
         "id": "A1_10",
         "index": 10,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "criminals_2",
           "SE": "criminals_1",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -315,14 +315,14 @@
         "id": "A1_11",
         "index": 11,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "red",
           "SE": "toll_2",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -368,13 +368,13 @@
         "index": 1,
         "edges": {
           "N": "toll_2",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "red",
           "S": "red",
           "SW": "green",
           "W": "Prophet",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -395,13 +395,13 @@
         "index": 2,
         "edges": {
           "N": "cops_1",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "Prophet",
           "S": "criminals_2",
           "SW": "green",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -422,13 +422,13 @@
         "index": 3,
         "edges": {
           "N": "green",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "mob",
           "S": "red",
           "SW": "green",
           "W": "criminals_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -449,13 +449,13 @@
         "index": 4,
         "edges": {
           "N": "toll_1",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "mob",
           "S": "cops_1",
           "SW": "green",
           "W": "cops_2",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -476,13 +476,13 @@
         "index": 5,
         "edges": {
           "N": "criminals_1",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "toll_2",
           "S": "cops_1",
           "SW": "green",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -503,13 +503,13 @@
         "index": 6,
         "edges": {
           "N": "theater",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "red",
           "S": "red",
           "SW": "green",
           "W": "toll_2",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -530,13 +530,13 @@
         "index": 7,
         "edges": {
           "N": "toll_2",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "red",
           "S": "cops_1",
           "SW": "green",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -557,13 +557,13 @@
         "index": 8,
         "edges": {
           "N": "cops_1",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "red",
           "S": "red",
           "SW": "green",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -584,13 +584,13 @@
         "index": 9,
         "edges": {
           "N": "celebrities_1",
-          "NE": "red",
+          "NE": null,
           "E": "toll_1",
           "SE": "criminals_1",
           "S": "red",
           "SW": "toll_1",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -611,13 +611,13 @@
         "index": 10,
         "edges": {
           "N": "mob",
-          "NE": "red",
+          "NE": null,
           "E": "toll_1",
           "SE": "toll_2",
           "S": "red",
           "SW": "toll_1",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -642,13 +642,13 @@
         "index": 11,
         "edges": {
           "N": "green",
-          "NE": "red",
+          "NE": null,
           "E": "cops_1",
           "SE": "cops_1",
           "S": "red",
           "SW": "cops_1",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -694,13 +694,13 @@
         "index": 1,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "theater",
           "SE": "red",
           "S": "green",
           "SW": "red",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -721,13 +721,13 @@
         "index": 2,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "mob",
           "S": "red",
           "SW": "red",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -748,13 +748,13 @@
         "index": 3,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "red",
           "S": "green",
           "SW": "red",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -775,13 +775,13 @@
         "index": 4,
         "edges": {
           "N": "toll_1",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "red",
           "S": "toll_2",
           "SW": "Prophet",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -802,13 +802,13 @@
         "index": 5,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "red",
           "S": "green",
           "SW": "Prophet",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -829,13 +829,13 @@
         "index": 6,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "celebrities_1",
           "SE": "red",
           "S": "celebrities_1",
           "SW": "red",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -856,13 +856,13 @@
         "index": 7,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "mob",
           "SE": "mob",
           "S": "green",
           "SW": "criminals_1",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -883,13 +883,13 @@
         "index": 8,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "toll_2",
           "SE": "Prophet",
           "S": "celebrities_1",
           "SW": "red",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -910,13 +910,13 @@
         "index": 9,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "green",
           "SE": "cops_1",
           "S": "red",
           "SW": "cops_1",
           "W": "toll_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -937,13 +937,13 @@
         "index": 10,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "criminals_1",
           "S": "green",
           "SW": "criminals_1",
           "W": "toll_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -968,13 +968,13 @@
         "index": 11,
         "edges": {
           "N": "toll_1",
-          "NE": "red",
+          "NE": null,
           "E": "Prophet",
           "SE": "toll_2",
           "S": "green",
           "SW": "toll_2",
           "W": "cops_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1020,13 +1020,13 @@
         "index": 1,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "celebrities_1",
           "SE": "red",
           "S": "red",
           "SW": "theater",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1047,13 +1047,13 @@
         "index": 2,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "green",
           "S": "mob",
           "SW": "Prophet",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1074,13 +1074,13 @@
         "index": 3,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "red",
           "S": "red",
           "SW": "mob",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1101,13 +1101,13 @@
         "index": 4,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "Prophet",
           "S": "red",
           "SW": "red",
           "W": "criminals_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1128,13 +1128,13 @@
         "index": 5,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "green",
           "S": "red",
           "SW": "criminals_2",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1155,13 +1155,13 @@
         "index": 6,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "Prophet",
           "SE": "green",
           "S": "red",
           "SW": "red",
           "W": "criminals_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1182,13 +1182,13 @@
         "index": 7,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "theater",
           "S": "red",
           "SW": "green",
           "W": "celebrities_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1209,13 +1209,13 @@
         "index": 8,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "mob",
           "S": "red",
           "SW": "green",
           "W": "cops_2",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1236,13 +1236,13 @@
         "index": 9,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "criminals_1",
           "SE": "green",
           "S": "criminals_1",
           "SW": "criminals_2",
           "W": "toll_2",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1263,13 +1263,13 @@
         "index": 10,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "cops_1",
           "SE": "green",
           "S": "cops_1",
           "SW": "celebrities_1",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1294,13 +1294,13 @@
         "index": 11,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "toll_2",
           "SE": "red",
           "S": "toll_2",
           "SW": "green",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1346,13 +1346,13 @@
         "index": 1,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "toll_2",
           "SE": "green",
           "S": "green",
           "SW": "red",
           "W": "mob",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1373,13 +1373,13 @@
         "index": 2,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "red",
           "S": "celebrities_1",
           "SW": "red",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1400,13 +1400,13 @@
         "index": 3,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "celebrities_1",
           "S": "green",
           "SW": "red",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1427,13 +1427,13 @@
         "index": 4,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "red",
           "S": "green",
           "SW": "red",
           "W": "Prophet",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1454,13 +1454,13 @@
         "index": 5,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "Prophet",
           "SE": "cops_1",
           "S": "green",
           "SW": "green",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1481,13 +1481,13 @@
         "index": 6,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "green",
           "S": "celebrities_1",
           "SW": "red",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1508,13 +1508,13 @@
         "index": 7,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "green",
           "S": "green",
           "SW": "Prophet",
           "W": "mob",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1535,13 +1535,13 @@
         "index": 8,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "theater",
           "S": "cops_1",
           "SW": "red",
           "W": "celebrities_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1562,13 +1562,13 @@
         "index": 9,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
           "SE": "green",
           "S": "red",
           "SW": "cops_1",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1589,13 +1589,13 @@
         "index": 10,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "toll_3",
           "SE": "green",
           "S": "green",
           "SW": "criminals_1",
           "W": "cops_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1620,13 +1620,13 @@
         "index": 11,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "cops_1",
           "SE": "red",
           "S": "mob",
           "SW": "toll_2",
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1671,14 +1671,14 @@
         "id": "F1_1",
         "index": 1,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "red",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1698,14 +1698,14 @@
         "id": "F1_2",
         "index": 2,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "Prophet",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "cops_1",
           "W": "cops_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1725,14 +1725,14 @@
         "id": "F1_3",
         "index": 3,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "Prophet",
-          "SE": "red",
+          "SE": null,
           "S": "cops_1",
           "SW": "red",
           "W": "toll_2",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1752,14 +1752,14 @@
         "id": "F1_4",
         "index": 4,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "toll_2",
-          "SE": "red",
+          "SE": null,
           "S": "mob",
           "SW": "cops_1",
           "W": "toll_2",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1779,14 +1779,14 @@
         "id": "F1_5",
         "index": 5,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "mob",
-          "SE": "red",
+          "SE": null,
           "S": "toll_2",
           "SW": "red",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1806,14 +1806,14 @@
         "id": "F1_6",
         "index": 6,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "theater",
-          "SE": "red",
+          "SE": null,
           "S": "toll_2",
           "SW": "red",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1833,14 +1833,14 @@
         "id": "F1_7",
         "index": 7,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "toll_2",
           "SW": "celebrities_1",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1860,14 +1860,14 @@
         "id": "F1_8",
         "index": 8,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "criminals_1",
-          "SE": "red",
+          "SE": null,
           "S": "criminals_1",
           "SW": "toll_2",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1887,14 +1887,14 @@
         "id": "F1_9",
         "index": 9,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "celebrities_1",
-          "SE": "red",
+          "SE": null,
           "S": "cops_1",
           "SW": "red",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1914,14 +1914,14 @@
         "id": "F1_10",
         "index": 10,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "mob",
-          "SE": "red",
+          "SE": null,
           "S": "toll_1",
           "SW": "red",
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -1945,14 +1945,14 @@
         "id": "F1_11",
         "index": 11,
         "edges": {
-          "N": "red",
-          "NE": "red",
+          "N": null,
+          "NE": null,
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "toll_1",
           "SW": "toll_3",
           "W": "toll_3",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -2002,9 +2002,9 @@
           "E": "red",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -2037,9 +2037,9 @@
           "E": "red",
           "SE": "Prophet",
           "S": "Prophet",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -2072,9 +2072,9 @@
           "E": "red",
           "SE": "criminals_1",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -2103,9 +2103,9 @@
           "E": "criminals_1",
           "SE": "red",
           "S": "toll_2",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -2134,9 +2134,9 @@
           "E": "red",
           "SE": "theater",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -2165,9 +2165,9 @@
           "E": "red",
           "SE": "green",
           "S": "toll_2",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -2196,9 +2196,9 @@
           "E": "green",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -2227,9 +2227,9 @@
           "E": "red",
           "SE": "red",
           "S": "mob",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -2258,9 +2258,9 @@
           "E": "cops_2",
           "SE": "theater",
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -2289,9 +2289,9 @@
           "E": "criminals_3",
           "SE": "cops_1",
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [],
         "buys": [],
@@ -2311,9 +2311,9 @@
           "E": "toll_2",
           "SE": "red",
           "S": "toll_2",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -3522,7 +3522,7 @@
         "id": "E2_7",
         "index": 7,
         "edges": {
-          "N": "criminals_3",
+          "N": "criminals_4",
           "NE": "red",
           "E": "red",
           "SE": "green",
@@ -3687,9 +3687,9 @@
         "index": 1,
         "edges": {
           "N": "green",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "cops_1",
           "W": "theater",
@@ -3714,9 +3714,9 @@
         "index": 2,
         "edges": {
           "N": "theater",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "Prophet",
           "SW": "cops_2",
           "W": "green",
@@ -3741,9 +3741,9 @@
         "index": 3,
         "edges": {
           "N": "celebrities_1",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "Prophet",
           "SW": "green",
           "W": "cops_1",
@@ -3768,9 +3768,9 @@
         "index": 4,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "red",
           "W": "cops_2",
@@ -3795,9 +3795,9 @@
         "index": 5,
         "edges": {
           "N": "cops_1",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "mob",
           "SW": "theater",
           "W": "green",
@@ -3822,9 +3822,9 @@
         "index": 6,
         "edges": {
           "N": "toll_2",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "red",
           "W": "toll_2",
@@ -3849,9 +3849,9 @@
         "index": 7,
         "edges": {
           "N": "celebrities_1",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "red",
           "W": "red",
@@ -3876,9 +3876,9 @@
         "index": 8,
         "edges": {
           "N": "cops_1",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "green",
           "W": "celebrities_1",
@@ -3903,9 +3903,9 @@
         "index": 9,
         "edges": {
           "N": "toll_2",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "mob",
           "W": "toll_2",
@@ -3930,9 +3930,9 @@
         "index": 10,
         "edges": {
           "N": "cops_2",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "cops_1",
           "SW": "celebrities_1",
           "W": "toll_2",
@@ -3961,9 +3961,9 @@
         "index": 11,
         "edges": {
           "N": "green",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "criminals_1",
           "SW": "red",
           "W": "green",
@@ -4017,9 +4017,9 @@
           "E": "theater",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "toll_8",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -4052,9 +4052,9 @@
           "E": "green",
           "SE": "Prophet",
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -4083,9 +4083,9 @@
           "E": "green",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -4114,9 +4114,9 @@
           "E": "green",
           "SE": "red",
           "S": "toll_2",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [],
         "buys": [],
@@ -4136,9 +4136,9 @@
           "E": "theater",
           "SE": "mob",
           "S": "cops_1",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -4167,9 +4167,9 @@
           "E": "criminals_1",
           "SE": "red",
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -4198,9 +4198,9 @@
           "E": "theater",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -4229,9 +4229,9 @@
           "E": "cops_2",
           "SE": "red",
           "S": "cops_1",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -4260,9 +4260,9 @@
           "E": "green",
           "SE": "red",
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "toll_8",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -4291,9 +4291,9 @@
           "E": "red",
           "SE": "red",
           "S": "mob",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [],
         "buys": [],
@@ -4313,9 +4313,9 @@
           "E": "red",
           "SE": "green",
           "S": "toll_2",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -4747,7 +4747,7 @@
           "SE": "mob",
           "S": "cops_1",
           "SW": "criminals_2",
-          "W": "cops_2",
+          "W": "cops_4",
           "NW": "red"
         },
         "sells": [
@@ -4786,7 +4786,7 @@
           "E": "mob",
           "SE": "cops_1",
           "S": "criminals_2",
-          "SW": "cops_2",
+          "SW": "cops_4",
           "W": "red",
           "NW": "red"
         },
@@ -4825,7 +4825,7 @@
           "NE": "red",
           "E": "mob",
           "SE": "criminals_1",
-          "S": "cops_2",
+          "S": "cops_4",
           "SW": "red",
           "W": "red",
           "NW": "red"
@@ -4901,7 +4901,7 @@
         "id": "C3_6",
         "index": 6,
         "edges": {
-          "N": "cops_2",
+          "N": "cops_4",
           "NE": "red",
           "E": "cops_1",
           "SE": "celebrities_1",
@@ -4981,7 +4981,7 @@
         "id": "C3_8",
         "index": 8,
         "edges": {
-          "N": "cops_2",
+          "N": "cops_4",
           "NE": "red",
           "E": "green",
           "SE": "red",
@@ -5130,7 +5130,7 @@
             "modifier": "+"
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -5391,7 +5391,7 @@
             "modifier": "="
           }
         ],
-        "encounter": "cops_3",
+        "encounter": "cops_4",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5449,7 +5449,7 @@
           "S": "red",
           "SW": "criminals_1",
           "W": "cops_1",
-          "NW": "criminals_3"
+          "NW": "criminals_4"
         },
         "sells": [
           {
@@ -5487,7 +5487,7 @@
           "E": "red",
           "SE": "criminals_2",
           "S": "criminals_1",
-          "SW": "cops_3",
+          "SW": "cops_4",
           "W": "criminals_2",
           "NW": "toll_3"
         },
@@ -5747,7 +5747,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -5900,7 +5900,7 @@
           "N": "red",
           "NE": "red",
           "E": "criminals_1",
-          "SE": "cops_3",
+          "SE": "cops_4",
           "S": "toll_2",
           "SW": "cops_1",
           "W": "red",
@@ -5950,9 +5950,9 @@
         "index": 1,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "red",
           "W": "cops_2",
@@ -5977,9 +5977,9 @@
         "index": 2,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "mob",
           "SW": "celebrities_1",
           "W": "cops_2",
@@ -6004,9 +6004,9 @@
         "index": 3,
         "edges": {
           "N": "mob",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "cops_2",
           "SW": "Prophet",
           "W": "Prophet",
@@ -6031,9 +6031,9 @@
         "index": 4,
         "edges": {
           "N": "mob",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "cops_2",
           "SW": "red",
           "W": "red",
@@ -6058,13 +6058,13 @@
         "index": 5,
         "edges": {
           "N": "toll_2",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "criminals_1",
           "W": "cops_1",
-          "NW": "criminals_3"
+          "NW": "criminals_4"
         },
         "sells": [
           {
@@ -6085,9 +6085,9 @@
         "index": 6,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "red",
           "W": "criminals_2",
@@ -6112,9 +6112,9 @@
         "index": 7,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "cops_2",
           "SW": "green",
           "W": "toll_2",
@@ -6139,9 +6139,9 @@
         "index": 8,
         "edges": {
           "N": "cops_2",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "criminals_2",
           "SW": "red",
           "W": "red",
@@ -6166,9 +6166,9 @@
         "index": 9,
         "edges": {
           "N": "criminals_1",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "toll_2",
           "SW": "criminals_2",
           "W": "red",
@@ -6193,9 +6193,9 @@
         "index": 10,
         "edges": {
           "N": "green",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "cops_2",
           "W": "criminals_1",
@@ -6224,9 +6224,9 @@
         "index": 11,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "toll_2",
           "W": "cops_1",
@@ -6280,9 +6280,9 @@
           "E": "theater",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -6307,9 +6307,9 @@
           "E": "green",
           "SE": "red",
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -6334,9 +6334,9 @@
           "E": "green",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -6361,9 +6361,9 @@
           "E": "green",
           "SE": "red",
           "S": "toll_2",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -6388,9 +6388,9 @@
           "E": "red",
           "SE": "green",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -6415,9 +6415,9 @@
           "E": "cops_2",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -6442,9 +6442,9 @@
           "E": "mob",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -6469,9 +6469,9 @@
           "E": "toll_2",
           "SE": "red",
           "S": "cops_2",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -6496,9 +6496,9 @@
           "E": "green",
           "SE": "cops_1",
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -6523,9 +6523,9 @@
           "E": "red",
           "SE": "criminals_1",
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -6554,9 +6554,9 @@
           "E": "Prophet",
           "SE": "toll_2",
           "S": "toll_2",
-          "SW": "red",
+          "SW": null,
           "W": "red",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -7457,7 +7457,7 @@
             "modifier": "+"
           }
         ],
-        "encounter": "criminals_3",
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -7590,7 +7590,7 @@
         "edges": {
           "N": "red",
           "NE": "red",
-          "E": "criminals_3",
+          "E": "criminals_4",
           "SE": "red",
           "S": "criminals_2",
           "SW": "cops_1",
@@ -8071,9 +8071,9 @@
         "index": 1,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "Prophet",
           "W": "red",
@@ -8098,9 +8098,9 @@
         "index": 2,
         "edges": {
           "N": "celebrities_1",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "green",
           "W": "red",
@@ -8125,9 +8125,9 @@
         "index": 3,
         "edges": {
           "N": "Prophet",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "mob",
           "W": "green",
@@ -8152,9 +8152,9 @@
         "index": 4,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "toll_2",
           "SW": "green",
           "W": "red",
@@ -8179,9 +8179,9 @@
         "index": 5,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "green",
           "W": "red",
@@ -8206,9 +8206,9 @@
         "index": 6,
         "edges": {
           "N": "toll_2",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "criminals_1",
           "SW": "green",
           "W": "red",
@@ -8233,9 +8233,9 @@
         "index": 7,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "red",
           "W": "red",
@@ -8260,9 +8260,9 @@
         "index": 8,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "criminals_1",
           "SW": "criminals_1",
           "W": "red",
@@ -8287,9 +8287,9 @@
         "index": 9,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "mob",
           "W": "criminals_1",
@@ -8314,9 +8314,9 @@
         "index": 10,
         "edges": {
           "N": "cops_1",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "criminals_1",
           "W": "cops_2",
@@ -8345,9 +8345,9 @@
         "index": 11,
         "edges": {
           "N": "criminals_1",
-          "NE": "red",
+          "NE": null,
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "theater",
           "W": "toll_2",
@@ -8401,9 +8401,9 @@
           "E": "red",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "theater",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -8432,9 +8432,9 @@
           "E": "red",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "cops_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -8463,9 +8463,9 @@
           "E": "red",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -8490,9 +8490,9 @@
           "E": "red",
           "SE": "red",
           "S": "toll_2",
-          "SW": "red",
+          "SW": null,
           "W": "theater",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -8521,9 +8521,9 @@
           "E": "red",
           "SE": "celebrities_1",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "criminals_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -8552,9 +8552,9 @@
           "E": "red",
           "SE": "Prophet",
           "S": "criminals_1",
-          "SW": "red",
+          "SW": null,
           "W": "toll_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -8579,9 +8579,9 @@
           "E": "red",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "theater",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -8610,9 +8610,9 @@
           "E": "red",
           "SE": "mob",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "cops_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -8637,9 +8637,9 @@
           "E": "cops_2",
           "SE": "red",
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "celebrities_1",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -8664,9 +8664,9 @@
           "E": "criminals_1",
           "SE": "red",
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "mob",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -8695,9 +8695,9 @@
           "E": "toll_2",
           "SE": "red",
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "green",
-          "NW": "red"
+          "NW": null
         },
         "sells": [
           {
@@ -10062,9 +10062,9 @@
         "index": 1,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "criminals_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "criminals_1",
           "W": "cops_2",
@@ -10089,9 +10089,9 @@
         "index": 2,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "criminals_2",
           "SW": "cops_2",
           "W": "cops_2",
@@ -10116,9 +10116,9 @@
         "index": 3,
         "edges": {
           "N": "criminals_1",
-          "NE": "red",
+          "NE": null,
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "cops_2",
           "SW": "toll_2",
           "W": "red",
@@ -10143,9 +10143,9 @@
         "index": 4,
         "edges": {
           "N": "cops_2",
-          "NE": "red",
+          "NE": null,
           "E": "criminals_2",
-          "SE": "red",
+          "SE": null,
           "S": "green",
           "SW": "red",
           "W": "Prophet",
@@ -10158,7 +10158,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10170,9 +10170,9 @@
         "index": 5,
         "edges": {
           "N": "toll_2",
-          "NE": "red",
+          "NE": null,
           "E": "toll_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "mob",
           "W": "cops_2",
@@ -10185,7 +10185,7 @@
           }
         ],
         "buys": [],
-        "encounter": "cops_3",
+        "encounter": "cops_4",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -10197,9 +10197,9 @@
         "index": 6,
         "edges": {
           "N": "green",
-          "NE": "red",
+          "NE": null,
           "E": "theater",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "cops_1",
           "W": "criminals_2",
@@ -10224,10 +10224,10 @@
         "index": 7,
         "edges": {
           "N": "green",
-          "NE": "red",
+          "NE": null,
           "E": "criminals_1",
-          "SE": "red",
-          "S": "cops_3",
+          "SE": null,
+          "S": "cops_4",
           "SW": "criminals_2",
           "W": "toll_2",
           "NW": "red"
@@ -10251,9 +10251,9 @@
         "index": 8,
         "edges": {
           "N": "cops_2",
-          "NE": "red",
+          "NE": null,
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "criminals_2",
           "SW": "green",
           "W": "red",
@@ -10278,9 +10278,9 @@
         "index": 9,
         "edges": {
           "N": "criminals_2",
-          "NE": "red",
+          "NE": null,
           "E": "celebrities_1",
-          "SE": "red",
+          "SE": null,
           "S": "toll_2",
           "SW": "red",
           "W": "red",
@@ -10305,9 +10305,9 @@
         "index": 10,
         "edges": {
           "N": "green",
-          "NE": "red",
+          "NE": null,
           "E": "mob",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "red",
           "W": "criminals_1",
@@ -10336,9 +10336,9 @@
         "index": 11,
         "edges": {
           "N": "red",
-          "NE": "red",
+          "NE": null,
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "red",
           "SW": "criminals_1",
           "W": "cops_2",
@@ -10390,11 +10390,11 @@
           "N": "celebrities_1",
           "NE": "red",
           "E": "Prophet",
-          "SE": "red",
+          "SE": null,
           "S": "cops_2",
-          "SW": "criminals_2",
-          "W": "toll_2",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10421,11 +10421,11 @@
           "N": "red",
           "NE": "red",
           "E": "Prophet",
-          "SE": "red",
+          "SE": null,
           "S": "green",
-          "SW": "green",
-          "W": "red",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10452,11 +10452,11 @@
           "N": "mob",
           "NE": "red",
           "E": "toll_2",
-          "SE": "red",
+          "SE": null,
           "S": "toll_2",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10479,11 +10479,11 @@
           "N": "mob",
           "NE": "red",
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
-          "W": "criminals_2",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10510,11 +10510,11 @@
           "N": "toll_2",
           "NE": "red",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "mob",
-          "W": "cops_2",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10527,7 +10527,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": false,
         "refresh": false,
@@ -10541,11 +10541,11 @@
           "N": "green",
           "NE": "red",
           "E": "Prophet",
-          "SE": "red",
+          "SE": null,
           "S": "criminals_2",
-          "SW": "cops_2",
-          "W": "green",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10568,11 +10568,11 @@
           "N": "red",
           "NE": "green",
           "E": "criminals_1",
-          "SE": "red",
+          "SE": null,
           "S": "cops_2",
-          "SW": "toll_2",
-          "W": "toll_2",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10599,11 +10599,11 @@
           "N": "red",
           "NE": "red",
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "green",
-          "SW": "green",
-          "W": "red",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10624,13 +10624,13 @@
         "index": 9,
         "edges": {
           "N": "criminals_1",
-          "NE": "cops_3",
+          "NE": "cops_4",
           "E": "toll_2",
-          "SE": "red",
+          "SE": null,
           "S": "toll_2",
-          "SW": "red",
-          "W": "red",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10653,11 +10653,11 @@
           "N": "cops_2",
           "NE": "criminals_2",
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
-          "W": "criminals_2",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10684,11 +10684,11 @@
           "N": "toll_2",
           "NE": "toll_2",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "criminals_2",
-          "W": "cops_2",
-          "NW": "red"
+          "SW": null,
+          "W": null,
+          "NW": null
         },
         "sells": [
           {
@@ -10736,9 +10736,9 @@
           "N": "celebrities_1",
           "NE": "Prophet",
           "E": "Prophet",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "criminals_2"
         },
@@ -10763,9 +10763,9 @@
           "N": "red",
           "NE": "mob",
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "green",
           "NW": "Prophet"
         },
@@ -10790,9 +10790,9 @@
           "N": "red",
           "NE": "mob",
           "E": "toll_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "red"
         },
@@ -10817,9 +10817,9 @@
           "N": "red",
           "NE": "green",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "mob"
         },
@@ -10844,9 +10844,9 @@
           "N": "red",
           "NE": "red",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "criminals_1"
         },
@@ -10871,10 +10871,10 @@
           "N": "red",
           "NE": "red",
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
-          "W": "criminals_3",
+          "SW": null,
+          "W": "criminals_4",
           "NW": "green"
         },
         "sells": [
@@ -10898,9 +10898,9 @@
           "N": "toll_2",
           "NE": "cops_2",
           "E": "criminals_1",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "toll_2",
           "NW": "red"
         },
@@ -10925,9 +10925,9 @@
           "N": "red",
           "NE": "criminals_2",
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "red"
         },
@@ -10952,9 +10952,9 @@
           "N": "criminals_2",
           "NE": "toll_2",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "criminals_2"
         },
@@ -10979,9 +10979,9 @@
           "N": "cops_2",
           "NE": "red",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "criminals_1",
           "NW": "cops_2"
         },
@@ -11010,9 +11010,9 @@
           "N": "toll_2",
           "NE": "red",
           "E": "criminals_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "toll_2"
         },
@@ -11062,9 +11062,9 @@
           "N": "red",
           "NE": "red",
           "E": "mob",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "cops_1",
           "NW": "red"
         },
@@ -11089,9 +11089,9 @@
           "N": "celebrities_1",
           "NE": "mob",
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "red"
         },
@@ -11116,9 +11116,9 @@
           "N": "criminals_2",
           "NE": "cops_2",
           "E": "toll_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "Prophet",
           "NW": "red"
         },
@@ -11143,9 +11143,9 @@
           "N": "cops_2",
           "NE": "green",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "red"
         },
@@ -11170,9 +11170,9 @@
           "N": "toll_2",
           "NE": "red",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "red"
         },
@@ -11197,9 +11197,9 @@
           "N": "red",
           "NE": "red",
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "criminals_1",
           "NW": "red"
         },
@@ -11224,9 +11224,9 @@
           "N": "Prophet",
           "NE": "cops_2",
           "E": "criminals_1",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "toll_2",
           "NW": "red"
         },
@@ -11249,11 +11249,11 @@
         "index": 8,
         "edges": {
           "N": "cops_2",
-          "NE": "criminals_3",
+          "NE": "criminals_4",
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "red"
         },
@@ -11278,9 +11278,9 @@
           "N": "criminals_2",
           "NE": "toll_2",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "cops_2"
         },
@@ -11305,9 +11305,9 @@
           "N": "green",
           "NE": "red",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "criminals_2",
           "NW": "criminals_1"
         },
@@ -11336,9 +11336,9 @@
           "N": "Prophet",
           "NE": "mob",
           "E": "criminals_1",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "toll_2"
         },
@@ -11388,9 +11388,9 @@
           "N": "red",
           "NE": "red",
           "E": "mob",
-          "SE": "red",
+          "SE": null,
           "S": "celebrities_1",
-          "SW": "red",
+          "SW": null,
           "W": "toll_2",
           "NW": "toll_2"
         },
@@ -11415,9 +11415,9 @@
           "N": "red",
           "NE": "criminals_1",
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "cops_2",
-          "SW": "red",
+          "SW": null,
           "W": "green",
           "NW": "red"
         },
@@ -11440,11 +11440,11 @@
         "index": 3,
         "edges": {
           "N": "criminals_2",
-          "NE": "cops_3",
+          "NE": "cops_4",
           "E": "toll_2",
-          "SE": "red",
+          "SE": null,
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "Prophet"
         },
@@ -11469,9 +11469,9 @@
           "N": "cops_2",
           "NE": "green",
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "celebrities_1",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "criminals_2"
         },
@@ -11496,9 +11496,9 @@
           "N": "toll_2",
           "NE": "toll_2",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "criminals_2",
-          "SW": "red",
+          "SW": null,
           "W": "criminals_2",
           "NW": "cops_2"
         },
@@ -11523,9 +11523,9 @@
           "N": "green",
           "NE": "red",
           "E": "Prophet",
-          "SE": "red",
+          "SE": null,
           "S": "toll_2",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "green"
         },
@@ -11550,9 +11550,9 @@
           "N": "mob",
           "NE": "red",
           "E": "criminals_1",
-          "SE": "red",
+          "SE": null,
           "S": "celebrities_1",
-          "SW": "red",
+          "SW": null,
           "W": "toll_2",
           "NW": "toll_2"
         },
@@ -11577,9 +11577,9 @@
           "N": "red",
           "NE": "criminals_2",
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "cops_2",
-          "SW": "red",
+          "SW": null,
           "W": "green",
           "NW": "red"
         },
@@ -11604,9 +11604,9 @@
           "N": "criminals_2",
           "NE": "cops_2",
           "E": "toll_2",
-          "SE": "red",
+          "SE": null,
           "S": "theater",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "green"
         },
@@ -11631,9 +11631,9 @@
           "N": "cops_2",
           "NE": "green",
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "mob",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "criminals_2"
         },
@@ -11662,9 +11662,9 @@
           "N": "toll_2",
           "NE": "toll_2",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "green",
-          "SW": "red",
+          "SW": null,
           "W": "criminals_1",
           "NW": "cops_2"
         },
@@ -11714,9 +11714,9 @@
           "N": "red",
           "NE": "red",
           "E": "Prophet",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "cops_1",
           "NW": "toll_2"
         },
@@ -11741,9 +11741,9 @@
           "N": "red",
           "NE": "Prophet",
           "E": "cops_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "green",
           "NW": "celebrities_1"
         },
@@ -11768,9 +11768,9 @@
           "N": "Prophet",
           "NE": "cops_2",
           "E": "toll_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "red"
         },
@@ -11795,9 +11795,9 @@
           "N": "mob",
           "NE": "green",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "cops_2"
         },
@@ -11822,9 +11822,9 @@
           "N": "toll_2",
           "NE": "red",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "mob",
           "NW": "criminals_2"
         },
@@ -11849,9 +11849,9 @@
           "N": "green",
           "NE": "red",
           "E": "mob",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "criminals_2",
           "NW": "green"
         },
@@ -11876,9 +11876,9 @@
           "N": "red",
           "NE": "cops_2",
           "E": "criminals_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "toll_2",
           "NW": "red"
         },
@@ -11903,9 +11903,9 @@
           "N": "cops_2",
           "NE": "criminals_1",
           "E": "green",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "red"
         },
@@ -11930,9 +11930,9 @@
           "N": "criminals_2",
           "NE": "toll_2",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "criminals_2"
         },
@@ -11957,9 +11957,9 @@
           "N": "green",
           "NE": "red",
           "E": "red",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "criminals_1",
           "NW": "cops_2"
         },
@@ -11988,9 +11988,9 @@
           "N": "red",
           "NE": "red",
           "E": "criminals_2",
-          "SE": "red",
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "toll_2"
         },
@@ -12038,11 +12038,11 @@
         "index": 1,
         "edges": {
           "N": "red",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "cops_1",
-          "SW": "red",
+          "SW": null,
           "W": "criminals_2",
           "NW": "criminals_1"
         },
@@ -12065,11 +12065,11 @@
         "index": 2,
         "edges": {
           "N": "celebrities_1",
-          "NE": "red",
-          "E": "red",
-          "SE": "cops_2",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "criminals_2",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "red"
         },
@@ -12092,11 +12092,11 @@
         "index": 3,
         "edges": {
           "N": "red",
-          "NE": "red",
-          "E": "cops_1",
-          "SE": "criminals_1",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "cops_2",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "red"
         },
@@ -12119,11 +12119,11 @@
         "index": 4,
         "edges": {
           "N": "cops_1",
-          "NE": "red",
-          "E": "criminals_1",
-          "SE": "cops_2",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "Prophet"
         },
@@ -12146,11 +12146,11 @@
         "index": 5,
         "edges": {
           "N": "criminals_1",
-          "NE": "red",
-          "E": "criminals_2",
-          "SE": "red",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "cops_2"
         },
@@ -12161,7 +12161,7 @@
           }
         ],
         "buys": [],
-        "encounter": "criminals_3",
+        "encounter": "criminals_4",
         "gamble": false,
         "persistent": true,
         "refresh": false,
@@ -12173,11 +12173,11 @@
         "index": 6,
         "edges": {
           "N": "cops_1",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "Prophet"
         },
@@ -12200,11 +12200,11 @@
         "index": 7,
         "edges": {
           "N": "Prophet",
-          "NE": "red",
-          "E": "red",
-          "SE": "red",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "cops_2",
-          "SW": "red",
+          "SW": null,
           "W": "mob",
           "NW": "cops_1"
         },
@@ -12227,11 +12227,11 @@
         "index": 8,
         "edges": {
           "N": "green",
-          "NE": "red",
-          "E": "red",
-          "SE": "cops_1",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "mob",
-          "SW": "red",
+          "SW": null,
           "W": "cops_2",
           "NW": "red"
         },
@@ -12254,11 +12254,11 @@
         "index": 9,
         "edges": {
           "N": "red",
-          "NE": "red",
-          "E": "cops_2",
-          "SE": "mob",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "toll_3",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "red"
         },
@@ -12281,11 +12281,11 @@
         "index": 10,
         "edges": {
           "N": "cops_1",
-          "NE": "red",
-          "E": "criminals_2",
-          "SE": "cops_1",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "red"
         },
@@ -12312,11 +12312,11 @@
         "index": 11,
         "edges": {
           "N": "criminals_2",
-          "NE": "red",
-          "E": "cops_2",
-          "SE": "red",
+          "NE": null,
+          "E": null,
+          "SE": null,
           "S": "red",
-          "SW": "red",
+          "SW": null,
           "W": "red",
           "NW": "cops_1"
         },

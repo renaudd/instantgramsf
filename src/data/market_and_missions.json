@@ -2052,7 +2052,7 @@
         4,
         4
       ],
-      "combatText": "(R) CP & +■■ SUV Space",
+      "combatText": "(R) CP & +\u25a0\u25a0 SUV Space",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2077,7 +2077,7 @@
         5,
         4
       ],
-      "combatText": "(R) CP & +▲ SUV Space",
+      "combatText": "(R) CP & +\u25b2 SUV Space",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -2910,7 +2910,7 @@
         6,
         5
       ],
-      "combatText": "2(R) - 1 CP & +■ SUV Space",
+      "combatText": "2(R) - 1 CP & +\u25a0 SUV Space",
       "combat": {
         "dice": 2,
         "negDice": 0,
@@ -3048,7 +3048,7 @@
         18,
         12
       ],
-      "text": "Pick up Ammo Cans (Weapons • 2■) in A5 (Merced), Deliver to A1 (Land's End). [Fenced Sell: 42/32/24/18/12]",
+      "text": "Pick up Ammo Cans (Weapons \u2022 2\u25a0) in A5 (Merced), Deliver to A1 (Land's End). [Fenced Sell: 42/32/24/18/12]",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -3220,10 +3220,13 @@
         "MS13"
       ],
       "patronFaction": "MS13",
-      "name": "Make an Example",
+      "name": "Pig Roast",
       "targetDeck": "Cops",
-      "description": "Kill a Cop",
-      "text": "Kill a Cop in Combat"
+      "description": "Kill a Cop in Combat",
+      "text": "Kill a Cop in Combat",
+      "targetFaction": null,
+      "targetNames": null,
+      "target": "a Cop"
     },
     {
       "id": "mis_16",
@@ -3238,10 +3241,13 @@
         "ISIS"
       ],
       "patronFaction": "ISIS",
-      "name": "Hit Job",
+      "name": "Cancel Culture",
       "targetDeck": "Celebrities",
-      "description": "Kill a Celebrity",
-      "text": "Kill a Celebrity in Combat"
+      "description": "Kill a Celebrity in Combat",
+      "text": "Kill a Celebrity in Combat",
+      "targetFaction": null,
+      "targetNames": null,
+      "target": "a Celebrity"
     },
     {
       "id": "mis_17",
@@ -3256,10 +3262,13 @@
         "DSA"
       ],
       "patronFaction": "DSA",
-      "name": "Hit Job",
-      "targetDeck": "Cops",
-      "description": "Kill a Cop",
-      "text": "Kill a Cop in Combat"
+      "name": "Bash the Fash",
+      "targetDeck": null,
+      "description": "Kill a member of MAGA in Combat",
+      "text": "Kill a member of MAGA in Combat",
+      "targetFaction": "MAGA",
+      "targetNames": null,
+      "target": "a member of MAGA"
     },
     {
       "id": "mis_18",
@@ -3308,13 +3317,16 @@
         "mode": "cheapest"
       },
       "favor": [
-        "MS13"
+        "MAGA"
       ],
       "patronFaction": "MS13",
-      "name": "Make an Example",
-      "targetDeck": "Cops",
-      "description": "Kill a Cop",
-      "text": "Kill a Cop in Combat"
+      "name": "Counter-Terrorism",
+      "targetDeck": null,
+      "description": "Kill a member of ISIS in Combat",
+      "text": "Kill a member of ISIS in Combat",
+      "targetFaction": "ISIS",
+      "targetNames": null,
+      "target": "a member of ISIS"
     },
     {
       "id": "mis_21",
@@ -3326,13 +3338,16 @@
         "mode": "cheapest"
       },
       "favor": [
-        "ISIS"
+        "DSA"
       ],
       "patronFaction": "ISIS",
-      "name": "Take Out the Trash",
-      "targetDeck": "Cops",
-      "description": "Kill a Cop",
-      "text": "Kill a Cop in Combat"
+      "name": "Eat the Rich",
+      "targetDeck": null,
+      "description": "Kill a member of TECH in Combat",
+      "text": "Kill a member of TECH in Combat",
+      "targetFaction": "TECH",
+      "targetNames": null,
+      "target": "a member of TECH"
     },
     {
       "id": "mis_22",
@@ -3362,13 +3377,16 @@
         "mode": "any"
       },
       "favor": [
-        "MAGA"
+        "TECH"
       ],
       "patronFaction": "MAGA",
-      "name": "Make an Example",
-      "targetDeck": "Celebrities",
-      "description": "Kill a Celebrity",
-      "text": "Kill a Celebrity in Combat"
+      "name": "Union Busting",
+      "targetDeck": null,
+      "description": "Kill a member of DSA in Combat",
+      "text": "Kill a member of DSA in Combat",
+      "targetFaction": "DSA",
+      "targetNames": null,
+      "target": "a member of DSA"
     },
     {
       "id": "mis_24",
@@ -3433,7 +3451,7 @@
         18,
         12
       ],
-      "text": "Pick up Crate of ARs (Weapons • 2■) in F3 (Ball Park), Deliver to A4 (Sunset). [Fenced Sell: 42/32/24/18/12]",
+      "text": "Pick up Crate of ARs (Weapons \u2022 2\u25a0) in F3 (Ball Park), Deliver to A4 (Sunset). [Fenced Sell: 42/32/24/18/12]",
       "combat": {
         "dice": 1,
         "negDice": 0,
@@ -3467,7 +3485,7 @@
         35,
         26
       ],
-      "text": "Pick up Ketamine Jugs (Party • 1■) in F1 (Treasure), Deliver to C4 (Castro). [Fenced Sell: 80/61/46/35/26]"
+      "text": "Pick up Ketamine Jugs (Party \u2022 1\u25a0) in F1 (Treasure), Deliver to C4 (Castro). [Fenced Sell: 80/61/46/35/26]"
     },
     {
       "id": "mis_29",
@@ -3514,7 +3532,7 @@
         34,
         24
       ],
-      "text": "Pick up Coke Brick (Uppers • 2■) in A6 (Daly City), Deliver to C1 (Marina). [Fenced Sell: 78/60/46/34/24]"
+      "text": "Pick up Coke Brick (Uppers \u2022 2\u25a0) in A6 (Daly City), Deliver to C1 (Marina). [Fenced Sell: 78/60/46/34/24]"
     },
     {
       "id": "mis_31",
@@ -3526,13 +3544,16 @@
         "mode": "cheapest"
       },
       "favor": [
-        "MS13"
+        "MAGA"
       ],
       "patronFaction": "MS13",
-      "name": "Silence a Witness",
-      "targetDeck": "Cops",
-      "description": "Kill a Cop",
-      "text": "Kill a Cop in Combat"
+      "name": "Turf War",
+      "targetDeck": null,
+      "description": "Kill a member of MS13 in Combat",
+      "text": "Kill a member of MS13 in Combat",
+      "targetFaction": "MS13",
+      "targetNames": null,
+      "target": "a member of MS13"
     },
     {
       "id": "mis_32",
@@ -3560,7 +3581,7 @@
         17,
         13
       ],
-      "text": "Pick up Oxy Script Haul (Opiates • 1■) in C5 (Noe Valley), Deliver to F1 (Treasure). [Fenced Sell: 54/37/23/17/13]"
+      "text": "Pick up Oxy Script Haul (Opiates \u2022 1\u25a0) in C5 (Noe Valley), Deliver to F1 (Treasure). [Fenced Sell: 54/37/23/17/13]"
     },
     {
       "id": "mis_33",
@@ -3640,13 +3661,21 @@
         "mode": "cheapest"
       },
       "favor": [
-        "MS13"
+        "DSA",
+        "ISIS"
       ],
       "patronFaction": "MS13",
-      "name": "Make an Example",
-      "targetDeck": "Cops",
-      "description": "Kill a Cop",
-      "text": "Kill a Cop in Combat"
+      "name": "Boardroom Coup",
+      "targetDeck": null,
+      "description": "Kill Mark Zuckerberg, Elon Musk, or Sam Altman in Combat",
+      "text": "Kill Mark Zuckerberg, Elon Musk, or Sam Altman in Combat",
+      "targetFaction": null,
+      "targetNames": [
+        "Mark Zuckerberg",
+        "Elon Musk",
+        "Sam Altman"
+      ],
+      "target": "Mark Zuckerberg, Elon Musk, or Sam Altman"
     },
     {
       "id": "mis_38",
@@ -3677,13 +3706,20 @@
         "mode": "cheapest"
       },
       "favor": [
-        "DSA"
+        "MAGA"
       ],
       "patronFaction": "DSA",
-      "name": "Hit Job",
-      "targetDeck": "Cops",
-      "description": "Kill a Cop",
-      "text": "Kill a Cop in Combat"
+      "name": "Recall Campaign",
+      "targetDeck": null,
+      "description": "Kill Mayor Lurie, London Breed, or Chesa Boudin in Combat",
+      "text": "Kill Mayor Lurie, London Breed, or Chesa Boudin in Combat",
+      "targetFaction": null,
+      "targetNames": [
+        "Mayor Lurie",
+        "London Breed",
+        "Chesa Boudin"
+      ],
+      "target": "Mayor Lurie, London Breed, or Chesa Boudin"
     },
     {
       "id": "mis_40",
@@ -3736,10 +3772,19 @@
         "MS13"
       ],
       "patronFaction": "MS13",
-      "name": "Take Out the Trash",
-      "targetDeck": "Cops",
-      "description": "Kill a Cop",
-      "text": "Kill a Cop in Combat"
+      "name": "Alphabet Soup",
+      "targetDeck": null,
+      "description": "Kill the FBI, CIA, DEA, ICE, or ATF in Combat",
+      "text": "Kill the FBI, CIA, DEA, ICE, or ATF in Combat",
+      "targetFaction": null,
+      "targetNames": [
+        "FBI",
+        "CIA",
+        "DEA",
+        "ICE",
+        "ATF"
+      ],
+      "target": "FBI, CIA, DEA, ICE, or ATF"
     },
     {
       "id": "mis_44",
@@ -3846,13 +3891,21 @@
         "mode": "cheapest"
       },
       "favor": [
-        "ISIS"
+        "MAGA",
+        "TECH"
       ],
       "patronFaction": "ISIS",
-      "name": "Take Out the Trash",
-      "targetDeck": "Celebrities",
-      "description": "Kill a Celebrity",
-      "text": "Kill a Celebrity in Combat"
+      "name": "Culture War",
+      "targetDeck": null,
+      "description": "Kill Bernie Sanders, Ocasio-Cortez, or Cornel West in Combat",
+      "text": "Kill Bernie Sanders, Ocasio-Cortez, or Cornel West in Combat",
+      "targetFaction": null,
+      "targetNames": [
+        "Bernie Sanders",
+        "Ocasio-Cortez",
+        "Cornel West"
+      ],
+      "target": "Bernie Sanders, Ocasio-Cortez, or Cornel West"
     },
     {
       "id": "mis_50",
@@ -3879,7 +3932,7 @@
         35,
         26
       ],
-      "text": "Pick up Molly Stash (Party • 1■) in A1 (Land's End), Deliver to E3 (SoMa). [Fenced Sell: 80/61/46/35/26]"
+      "text": "Pick up Molly Stash (Party \u2022 1\u25a0) in A1 (Land's End), Deliver to E3 (SoMa). [Fenced Sell: 80/61/46/35/26]"
     },
     {
       "id": "mis_51",
@@ -3907,10 +3960,13 @@
         "MAGA"
       ],
       "patronFaction": "MAGA",
-      "name": "Take Out the Trash",
+      "name": "Vigilante Justice",
       "targetDeck": "Criminals",
-      "description": "Kill a Criminal",
-      "text": "Kill a Criminal in Combat"
+      "description": "Kill a Criminal in Combat",
+      "text": "Kill a Criminal in Combat",
+      "targetFaction": null,
+      "targetNames": null,
+      "target": "a Criminal"
     },
     {
       "id": "mis_53",
@@ -3940,13 +3996,20 @@
         "mode": "cheapest"
       },
       "favor": [
-        "MS13"
+        "ISIS"
       ],
       "patronFaction": "MS13",
-      "name": "Silence a Witness",
-      "targetDeck": "Criminals",
-      "description": "Kill a Criminal",
-      "text": "Kill a Criminal in Combat"
+      "name": "Kingpin Hunt",
+      "targetDeck": null,
+      "description": "Kill Nayib Bukele, Elmer Rodriguez, or Sicario in Combat",
+      "text": "Kill Nayib Bukele, Elmer Rodriguez, or Sicario in Combat",
+      "targetFaction": null,
+      "targetNames": [
+        "Nayib Bukele",
+        "Elmer Rodriguez",
+        "Sicario"
+      ],
+      "target": "Nayib Bukele, Elmer Rodriguez, or Sicario"
     },
     {
       "id": "mis_55",
@@ -3974,7 +4037,7 @@
         18,
         12
       ],
-      "text": "Pick up Crate of ARs (Weapons • 2■) in B2 (Pac Heights), Deliver to D6 (Excelsior). [Fenced Sell: 42/32/24/18/12]",
+      "text": "Pick up Crate of ARs (Weapons \u2022 2\u25a0) in B2 (Pac Heights), Deliver to D6 (Excelsior). [Fenced Sell: 42/32/24/18/12]",
       "combat": {
         "dice": 1,
         "negDice": 0,

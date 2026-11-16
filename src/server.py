@@ -615,6 +615,12 @@ class NightMerchantHandler(BaseHTTPRequestHandler):
                 self._send_json(404, {"ok": False, "error": "Game not found."})
                 return
             summary, state = full
+            if state and "players" in state and isinstance(state.get("pendingEncounter"), dict) and state["pendingEncounter"].get("interveningPlayerIndex") is not None:
+                lock = get_game_lock(game_id)
+                with lock:
+                    if game_engine.check_and_expire_intervention_timeout(state):
+                        store.save_game_state(game_id, state)
+                        summary = store.get_game_summary(game_id, viewer_user=user) or summary
             sanitized = game_engine.sanitize_state_for_player(state, user["id"]) if state and "players" in state else None
             self._send_json(200, {"ok": True, "summary": summary, "state": sanitized})
             return
